@@ -1,0 +1,8 @@
+{
+	"$schema": "https://typedoc.org/schema.json",
+	"cname": "libraries.vangware.com",
+	"entryPoints": ["packages/@vangware/*", "packages/*"],
+	"entryPointStrategy": "packages",
+	"extends": ["@vangware/configs/typedoc.config.json"],
+	"name": "Vangware Libraries"
+}

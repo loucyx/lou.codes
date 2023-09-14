@@ -1,0 +1,50 @@
+{
+	"name": "@vangware/create-package",
+	"description": "🚧 Vangware package scaffolder script",
+	"version": "1.7.1",
+	"author": {
+		"email": "hello@vangware.com",
+		"name": "Vangware",
+		"url": "https://vangware.com"
+	},
+	"bin": "./dist/index.js",
+	"bugs": {
+		"email": "issues@vangware.com",
+		"url": "https://github.com/vangware/create-package/issues"
+	},
+	"dependencies": {
+		"@vangware/ansi": "workspace:*",
+		"@vangware/prompts": "workspace:*",
+		"@vangware/types": "workspace:*"
+	},
+	"engines": {
+		"node": ">=20",
+		"pnpm": ">=8"
+	},
+	"files": [
+		"dist/*",
+		"base/*"
+	],
+	"homepage": "https://libraries.vangware.com/modules/_vangware_create_package.html",
+	"keywords": [
+		"create",
+		"create-package",
+		"package"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vangware/create-package.git"
+	},
+	"scripts": {
+		"clean": "rimraf ./dist",
+		"compile": "tsc",
+		"git:pre-push": "run-s --print-label clean compile lint",
+		"lint": "eslint src",
+		"lint:fix": "eslint src --fix",
+		"prepublishOnly": "run-s --print-label compile prettify",
+		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'"
+	},
+	"sideEffects": false,
+	"type": "module"
+}

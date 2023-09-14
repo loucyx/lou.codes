@@ -1,0 +1,8 @@
+# Build files
+rules/*.d.ts
+*.config.d.cts
+*.config.d.ts
+changelog.d.cts
+dependencies.d.ts
+index.d.ts
+update-peers.d.ts

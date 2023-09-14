@@ -1,0 +1,14 @@
+{
+	"extends": "./typescript.config.json",
+	"compilerOptions": { "emitDeclarationOnly": true },
+	"include": [
+		"./changelog.cjs",
+		"./environment.d.ts",
+		"./eslint.config.js",
+		"./index.js",
+		"./prettier.config.js",
+		"./rules/*.js",
+		"./stylelint.config.cjs",
+		"./update-peers.js"
+	]
+}

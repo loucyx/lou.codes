@@ -51,7 +51,7 @@
 		"changesets:version": "changesets version",
 		"clean": "pnpm --recursive --parallel clean",
 		"compile": "pnpm --recursive compile",
-		"document": "typedoc && cpy --flat ./packages/**/*.svg docs/modules && cpy ./{favicon.ico,logo.svg} docs",
+		"document": "typedoc && cpy --flat ./{packages,packages/@vangware}/**/*.svg docs/modules && cpy ./{favicon.ico,logo.svg} docs",
 		"git:pre-push": "pnpm --recursive git:pre-push",
 		"lint": "pnpm --recursive lint",
 		"prepare": "simple-git-hooks",

@@ -1,13 +1,12 @@
 <img id="logo" alt="@vangware/ansi" src="https://libraries.vangware.com/logo.svg" height="72" />
 
-📚 [Visit our website][Vangware] libraries monorepo
+📚 [Vangware][vangware] libraries monorepo
 
 ## About Vangware
 
-At [Visit our website][Vangware], we passionately embrace bleeding-edge web
-technologies to create high-quality and long-lasting software solutions. Our
-commitment to staying at the forefront of technology is the driving force behind
-our work.
+At [Vangware][vangware], we passionately embrace bleeding-edge web technologies
+to create high-quality and long-lasting software solutions. Our commitment to
+staying at the forefront of technology is the driving force behind our work.
 
 ## Repository Overview
 

@@ -1,4 +1,4 @@
-<img id="logo" alt="@vangware/create-package" src="./vangware__create-package.svg" height="128" />
+<img id="logo" alt="@vangware/create-package" src="https://libraries.vangware.com/modules/vangware__create-package.svg" height="128" />
 
 ![License][license-badge] ![NPM Version][npm-version-badge]
 ![Open Issues][open-issues-badge]

@@ -1,5 +1,15 @@
 # Change log
 
+## 5.1.39
+
+### Patch Changes
+
+-   🍱 update logo source.
+-   ⬆️ upgrade `@vangware/predicates` to `v2.1.33`
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.18`
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.12`
+-   ⬆️ upgrade `@vangware/types` to `v6.2.9`
+
 ## 5.1.38
 
 ### Patch Changes

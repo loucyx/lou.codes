@@ -1,4 +1,4 @@
-<img id="logo" alt="preact-pair" src="./preact-pair.svg" height="128" />
+<img id="logo" alt="preact-pair" src="https://libraries.vangware.com/modules/preact-pair.svg" height="128" />
 
 ![Coverage][coverage-badge] ![License][license-badge]
 ![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]

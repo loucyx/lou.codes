@@ -1,4 +1,4 @@
-<img id="logo" alt="@vangware/configs" src="./vangware__configs.svg" height="128" />
+<img id="logo" alt="@vangware/configs" src="https://libraries.vangware.com/modules/vangware__configs.svg" height="128" />
 
 ![License][license-badge] ![NPM Version][npm-version-badge]
 ![Open Issues][open-issues-badge]

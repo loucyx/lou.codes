@@ -1,4 +1,4 @@
-<img id="logo" alt="react-pair" src="./react-pair.svg" height="128" />
+<img id="logo" alt="react-pair" src="https://libraries.vangware.com/modules/react-pair.svg" height="128" />
 
 ![Coverage][coverage-badge] ![License][license-badge]
 ![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]

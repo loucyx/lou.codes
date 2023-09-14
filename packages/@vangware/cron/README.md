@@ -1,4 +1,4 @@
-<img id="logo" alt="@vangware/cron" src="./vangware__cron.svg" height="128" />
+<img id="logo" alt="@vangware/cron" src="https://libraries.vangware.com/modules/vangware__cron.svg" height="128" />
 
 ![Coverage][coverage-badge] ![License][license-badge]
 ![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]

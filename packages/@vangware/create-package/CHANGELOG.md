@@ -1,5 +1,14 @@
 # Change log
 
+## 1.7.3
+
+### Patch Changes
+
+-   🍱 update logo source.
+-   ⬆️ upgrade `@vangware/prompts` to `v2.2.7`
+-   ⬆️ upgrade `@vangware/types` to `v6.2.9`
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.28`
+
 ## 1.7.2
 
 ### Patch Changes

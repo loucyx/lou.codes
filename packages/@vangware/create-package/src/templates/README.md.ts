@@ -7,7 +7,7 @@ export default ({ name, description }: Answers) => {
 
 	return `<img id="logo" alt="${userClean(
 		name,
-	)} by ${USER}" src="./logo.svg" height="128" />
+	)} by ${USER}" src="https://libraries.vangware.com/logo.svg" height="128" />
 
 ![Coverage][coverage-badge] ![License][license-badge]
 ![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]

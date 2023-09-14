@@ -1,5 +1,14 @@
 # Change log
 
+## 5.1.38
+
+### Patch Changes
+
+-   🚚 move to monorepo
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.17`
+-   ⬆️ upgrade `@vangware/predicates` to `v2.1.32`
+-   ⬆️ upgrade `@vangware/types` to `v6.2.8`
+
 ## 5.1.37
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # Change log
 
+## 1.0.44
+
+### Patch Changes
+
+-   🍱 update logo source.
+-   ⬆️ upgrade `@vangware/types` to `v6.2.9`
+
 ## 1.0.43
 
 ### Patch Changes

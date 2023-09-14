@@ -1,4 +1,4 @@
-<img id="logo" alt="@vangware/window-open-promise" src="./vangware__window-open-promise.svg" height="128" />
+<img id="logo" alt="@vangware/window-open-promise" src="https://libraries.vangware.com/modules/vangware__window-open-promise.svg" height="128" />
 
 ![Coverage][coverage-badge] ![License][license-badge]
 ![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]

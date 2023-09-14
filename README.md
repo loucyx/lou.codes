@@ -1,4 +1,4 @@
-<img id="logo" alt="@vangware/ansi" src="./logo.svg" height="72" />
+<img id="logo" alt="@vangware/ansi" src="https://libraries.vangware.com/logo.svg" height="72" />
 
 📚 Vangware libraries monorepo
 

@@ -1,5 +1,13 @@
 # Change log
 
+## 10.3.26
+
+### Patch Changes
+
+-   🍱 update logo source.
+-   ⬆️ upgrade `@vangware/types` to `v6.2.9`
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.28`
+
 ## 10.3.25
 
 ### Patch Changes

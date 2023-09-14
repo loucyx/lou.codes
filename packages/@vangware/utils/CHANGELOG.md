@@ -1,5 +1,13 @@
 # Change log
 
+## 10.1.19
+
+### Patch Changes
+
+-   🍱 update logo source.
+-   ⬆️ upgrade `@vangware/predicates` to `v2.1.33`
+-   ⬆️ upgrade `@vangware/types` to `v6.2.9`
+
 ## 10.1.18
 
 ### Patch Changes

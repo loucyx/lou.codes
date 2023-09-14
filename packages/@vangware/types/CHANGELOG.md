@@ -1,5 +1,11 @@
 # Change log
 
+## 6.2.9
+
+### Patch Changes
+
+-   🍱 update logo source.
+
 ## 6.2.8
 
 ### Patch Changes

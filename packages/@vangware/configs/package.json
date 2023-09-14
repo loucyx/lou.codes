@@ -106,7 +106,6 @@
 		"dependencies": "node ./update-peers.js",
 		"git:pre-push": "run-s --print-label clean lint",
 		"lint": "eslint .",
-		"postpublish": "run-s clean",
 		"prepublishOnly": "run-s --print-label clean compile prettify",
 		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write '**/*.d.{ts,cts}'"
 	},

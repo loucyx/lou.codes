@@ -1,0 +1,63 @@
+{
+	"name": "preact-pair",
+	"description": "Util to help with the paired hook pattern",
+	"version": "1.0.42",
+	"author": {
+		"email": "hello@vangware.com",
+		"name": "Vangware",
+		"url": "https://vangware.com"
+	},
+	"bugs": {
+		"email": "issues@vangware.com",
+		"url": "https://github.com/vangware/libraries/issues"
+	},
+	"dependencies": {
+		"@vangware/types": "workspace:*"
+	},
+	"devDependencies": {
+		"preact": "^10.17.1",
+		"preact-render-to-string": "^6.2.1"
+	},
+	"engines": {
+		"node": ">=20",
+		"pnpm": ">=8"
+	},
+	"exports": {
+		".": "./dist/index.js",
+		"./*": "./dist/*"
+	},
+	"files": [
+		"dist"
+	],
+	"homepage": "https://libraries.vangware.com/module/preact_pair.html",
+	"keywords": [
+		"hooks",
+		"pair",
+		"preact",
+		"tsx",
+		"typescript",
+		"vangware"
+	],
+	"license": "MIT",
+	"peerDependencies": {
+		"preact": "^10.10.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vangware/libraries.git"
+	},
+	"scripts": {
+		"clean": "rimraf ./dist",
+		"compile": "tsc --project ./tsconfig.dist.json",
+		"git:pre-push": "run-s --print-label clean pre-compile lint test",
+		"lint": "eslint {src,tests}",
+		"lint:fix": "eslint {src,tests} --fix",
+		"pre-compile": "tsc --noEmit --project tsconfig.dist.json",
+		"prepublishOnly": "run-s --print-label clean compile prettify",
+		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'",
+		"test": "NODE_OPTIONS='--loader tsx --no-warnings' c8 test"
+	},
+	"sideEffects": false,
+	"type": "module",
+	"types": "./dist/index.d.ts"
+}

@@ -1,0 +1,66 @@
+{
+	"name": "@vangware/libraries",
+	"description": "📚 Vangware libraries monorepo",
+	"version": "1.0.0",
+	"author": {
+		"email": "hello@vangware.com",
+		"name": "Vangware",
+		"url": "https://vangware.com"
+	},
+	"bugs": {
+		"email": "issues@vangware.com",
+		"url": "https://github.com/vangware/libraries/issues"
+	},
+	"dependencies": {
+		"@vangware/configs": "workspace:*",
+		"@vangware/test": "workspace:*"
+	},
+	"devDependencies": {
+		"@changesets/cli": "^2.26.2",
+		"@types/node": "^20.6.0",
+		"c8": "^8.0.1",
+		"cpy-cli": "^5.0.0",
+		"eslint": "^8.49.0",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^3.0.3",
+		"rimraf": "^5.0.1",
+		"simple-git-hooks": "^2.9.0",
+		"stylelint": "^15.10.3",
+		"tsx": "^3.12.9",
+		"typedoc": "^0.25.1",
+		"typescript": "^5.2.2"
+	},
+	"engines": {
+		"node": ">=20",
+		"pnpm": ">=8"
+	},
+	"homepage": "https://libraries.vangware.com",
+	"keywords": [
+		"libraries",
+		"typescript",
+		"vangware"
+	],
+	"license": "MIT",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vangware/libraries.git"
+	},
+	"scripts": {
+		"changesets": "changesets",
+		"changesets:version": "changesets version",
+		"clean": "pnpm --recursive --parallel clean",
+		"compile": "pnpm --recursive compile",
+		"document": "typedoc && cpy --flat ./packages/**/*.svg docs/modules && cpy ./{favicon.ico,logo.svg} docs",
+		"git:pre-push": "pnpm --recursive git:pre-push",
+		"lint": "pnpm --recursive lint",
+		"prepare": "simple-git-hooks",
+		"publish": "pnpm --recursive publish",
+		"test": "c8 pnpm --recursive test"
+	},
+	"sideEffects": false,
+	"simple-git-hooks": {
+		"pre-push": "pnpm git:pre-push"
+	},
+	"type": "module"
+}

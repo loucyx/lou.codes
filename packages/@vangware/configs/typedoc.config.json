@@ -1,0 +1,10 @@
+{
+	"$schema": "https://typedoc.org/schema.json",
+	"cleanOutputDir": false,
+	"customCss": "./typedoc.css",
+	"entryPointStrategy": "resolve",
+	"gitRevision": "main",
+	"githubPages": true,
+	"hideGenerator": true,
+	"logLevel": "Warn"
+}

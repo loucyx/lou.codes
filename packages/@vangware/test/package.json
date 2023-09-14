@@ -1,0 +1,59 @@
+{
+	"name": "@vangware/test",
+	"description": "✅ Equality test with enforced readability",
+	"version": "10.3.24",
+	"author": {
+		"email": "hello@vangware.com",
+		"name": "Vangware",
+		"url": "https://vangware.com"
+	},
+	"bin": "./dist/bin.js",
+	"bugs": {
+		"email": "issues@vangware.com",
+		"url": "https://github.com/vangware/libraries/issues"
+	},
+	"dependencies": {
+		"@types/deep-diff": "^1.0.2",
+		"@vangware/ansi": "workspace:*",
+		"@vangware/types": "workspace:*",
+		"deep-diff": "^1.0.2"
+	},
+	"engines": {
+		"node": ">=20",
+		"pnpm": ">=8"
+	},
+	"exports": {
+		".": "./dist/index.js",
+		"./*": "./dist/*"
+	},
+	"files": [
+		"dist"
+	],
+	"homepage": "https://libraries.vangware.com/modules/_vangware_test.html",
+	"keywords": [
+		"legibility",
+		"legible",
+		"test",
+		"testing",
+		"tests",
+		"vangware"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vangware/libraries.git"
+	},
+	"scripts": {
+		"clean": "rimraf ./dist",
+		"compile": "tsc --project tsconfig.dist.json",
+		"git:pre-push": "run-s --print-label clean compile lint test",
+		"lint": "eslint {src,tests}",
+		"lint:fix": "eslint {src,tests} --fix",
+		"prepublishOnly": "run-s --print-label compile prettify",
+		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'",
+		"test": "NODE_OPTIONS='--loader tsx --no-warnings' node ./src/bin.ts"
+	},
+	"sideEffects": false,
+	"type": "module",
+	"types": "./dist/index.d.ts"
+}

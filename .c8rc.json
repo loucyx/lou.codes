@@ -1,0 +1,4 @@
+{
+	"exclude": ["**/dist/**", "**/tests/**"],
+	"reporter": ["html", "lcov", "text-summary"]
+}

@@ -47,8 +47,6 @@
 		"url": "https://github.com/vangware/libraries.git"
 	},
 	"scripts": {
-		"changesets": "changesets",
-		"changesets:version": "changesets version",
 		"clean": "pnpm --recursive --parallel clean",
 		"compile": "pnpm --recursive compile",
 		"document": "typedoc && cpy --flat ./{packages,packages/@vangware}/**/*.svg docs/modules && cpy ./{favicon.ico,logo.svg} docs",

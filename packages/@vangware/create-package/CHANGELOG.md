@@ -1,5 +1,14 @@
 # Change log
 
+## 1.7.2
+
+### Patch Changes
+
+-   🚚 move to monorepo
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.27`
+-   ⬆️ upgrade `@vangware/prompts` to `v2.2.6`
+-   ⬆️ upgrade `@vangware/types` to `v6.2.8`
+
 ## 1.7.1
 
 ### Patch Changes

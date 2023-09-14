@@ -1,5 +1,12 @@
 # Change log
 
+## 6.3.27
+
+### Patch Changes
+
+-   🚚 move to monorepo
+-   ⬆️ upgrade `@vangware/types` to `v6.2.8`
+
 ## 6.3.26
 
 ### Patch Changes

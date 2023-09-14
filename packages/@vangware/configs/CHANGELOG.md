@@ -1,5 +1,11 @@
 # Change log
 
+## 6.1.2
+
+### Patch Changes
+
+-   🚚 move to monorepo
+
 ## 6.1.1
 
 ### Patch Changes

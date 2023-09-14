@@ -1,5 +1,13 @@
 # Change log
 
+## 2.1.32
+
+### Patch Changes
+
+-   🚚 move to monorepo
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.11`
+-   ⬆️ upgrade `@vangware/types` to `v6.2.8`
+
 ## 2.1.31
 
 ### Patch Changes

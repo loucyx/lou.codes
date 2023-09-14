@@ -1,7 +1,7 @@
 {
 	"name": "preact-pair",
 	"description": "Util to help with the paired hook pattern",
-	"version": "1.0.42",
+	"version": "1.0.43",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",

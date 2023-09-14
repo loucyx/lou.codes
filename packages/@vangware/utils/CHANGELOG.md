@@ -1,5 +1,13 @@
 # Change log
 
+## 10.1.18
+
+### Patch Changes
+
+-   🚚 move to monorepo
+-   ⬆️ upgrade `@vangware/predicates` to `v2.1.32`
+-   ⬆️ upgrade `@vangware/types` to `v6.2.8`
+
 ## 10.1.17
 
 ### Patch Changes

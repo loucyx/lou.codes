@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/create-package",
 	"description": "🚧 Vangware package scaffolder script",
-	"version": "1.7.1",
+	"version": "1.7.2",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",

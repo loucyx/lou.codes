@@ -1,5 +1,11 @@
 # Change log
 
+## 1.7.4
+
+### Patch Changes
+
+-   🐛 fix copy bug with \_gitignore (that's no longer there)
+
 ## 1.7.3
 
 ### Patch Changes

@@ -8,7 +8,6 @@ import { copyTemplates } from "./copyTemplates.js";
 import { createDirectory } from "./createDirectory.js";
 import { doneMessage } from "./doneMessage.js";
 import { getPackageConfiguration } from "./getPackageVersion.js";
-import { gitIgnoreFix } from "./gitIgnoreFix.js";
 import { hasValidLength } from "./validations/hasValidLength.js";
 import { isValidPackageName } from "./validations/isValidPackageName.js";
 
@@ -39,7 +38,6 @@ export default getPackageConfiguration()
 			.then(name =>
 				createDirectory(name)
 					.then(copyBase(name))
-					.then(gitIgnoreFix(name))
 					.then(_ =>
 						createQuestion({
 							format: (description: string) => description.trim(),

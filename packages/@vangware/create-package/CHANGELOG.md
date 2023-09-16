@@ -1,5 +1,12 @@
 # Change log
 
+## 1.7.5
+
+### Patch Changes
+
+-   ✏️ fix typo in README.md.ts
+-   ✅ fix test script.
+
 ## 1.7.4
 
 ### Patch Changes

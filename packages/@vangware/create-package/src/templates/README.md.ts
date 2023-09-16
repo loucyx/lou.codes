@@ -68,8 +68,8 @@ Import \`${name}\` using [esm.sh][esm.sh], and use it directly:
 
 [changelog]: https://github.com/vangware/libraries/blob/main/packages/${path}/CHANGELOG.md
 [coverage-badge]:
-	https://img.shields.io/coveralls/github/libraries.svg?style=for-the-badge&labelColor=666&color=0a8
-[coverage]: https://coveralls.io/github/${path}
+	https://img.shields.io/coveralls/github/vangware/libraries.svg?style=for-the-badge&labelColor=666&color=0a8
+[coverage]: https://coveralls.io/github/vangware/libraries
 [documentation]: https://libraries.vangware.com/modules/${name.replace(
 		/[-/@]/gu,
 		"_",

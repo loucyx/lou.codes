@@ -1,7 +1,7 @@
 {
 	"name": "react-pair",
 	"description": "Util to help with the paired hook pattern",
-	"version": "3.0.44",
+	"version": "3.0.45",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -58,7 +58,7 @@
 		"pre-compile": "tsc --noEmit --project tsconfig.dist.json",
 		"prepublishOnly": "run-s --print-label clean compile prettify",
 		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'",
-		"test": "NODE_OPTIONS='--loader tsx --no-warnings' c8 test"
+		"test": "NODE_OPTIONS='--loader tsx --no-warnings' pnpm exec test"
 	},
 	"sideEffects": false,
 	"type": "module",

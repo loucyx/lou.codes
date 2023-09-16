@@ -1,5 +1,11 @@
 # Change log
 
+## 3.0.45
+
+### Patch Changes
+
+-   ✅ fix test script.
+
 ## 3.0.44
 
 ### Patch Changes

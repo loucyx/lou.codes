@@ -34,8 +34,8 @@ export default Object.freeze([
 				},
 				// Latest ES version
 				ecmaVersion: "latest",
-				// Required for type dependant rules
-				project: "tsconfig.json",
+				// Luckily now the TypeScript linter can figure out the project by itself
+				project: true,
 				// Using ECMAScript modules
 				sourceType: "module",
 			},

@@ -1,5 +1,11 @@
 # Change log
 
+## 6.1.4
+
+### Patch Changes
+
+-   ⬆️ dependency upgrade.
+
 ## 6.1.3
 
 ### Patch Changes

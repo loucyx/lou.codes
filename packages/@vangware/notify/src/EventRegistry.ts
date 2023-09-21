@@ -13,6 +13,7 @@ import type { EventTypeDictionary } from "./EventTypeDictionary.js";
  * 	example: [() => console.log("example called")],
  * };
  * ```
+ * @template Events Event registry.
  */
 export type EventRegistry<Events extends EventTypeDictionary> = {
 	readonly [Event in KeyOf<Events>]?: ReadOnlyArray<

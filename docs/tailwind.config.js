@@ -1,5 +1,4 @@
 import starlightPlugin from "@astrojs/starlight-tailwind";
-import colors from "tailwindcss/colors";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -21,7 +20,19 @@ export default {
 					900: "#001410",
 					950: "#000A08",
 				},
-				gray: colors.stone,
+				gray: {
+					100: "#E0E0E0",
+					200: "#C2C2C2",
+					300: "#A3A3A3",
+					400: "#858585",
+					50: "#F0F0F0",
+					500: "#666666",
+					600: "#525252",
+					700: "#3D3D3D",
+					800: "#292929",
+					900: "#141414",
+					950: "#0A0A0A",
+				},
 			},
 		},
 	},

@@ -1,5 +1,11 @@
 # Change log
 
+## 2.1.35
+
+### Patch Changes
+
+-   📝 even better docs.
+
 ## 2.1.34
 
 ### Patch Changes

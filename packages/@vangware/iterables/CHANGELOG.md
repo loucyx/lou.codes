@@ -1,5 +1,12 @@
 # Change log
 
+## 3.1.20
+
+### Patch Changes
+
+-   ⬆️ upgrade `@vangware/predicates` to `v2.1.35`
+-   ⬆️ upgrade `@vangware/utils` to `v10.1.21`
+
 ## 3.1.19
 
 ### Patch Changes

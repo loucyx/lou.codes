@@ -17,6 +17,7 @@ import type { EventTypeDictionary } from "./EventTypeDictionary.js";
  * const emitEvent = emitRegistry("event");
  * emitEvent("data");
  * ```
+ * @template Events Event registry.
  * @param eventRegistry Record of event names mapped to an array of listeners.
  * @returns Curried function with `eventRegistry` in context.
  */
@@ -34,6 +35,7 @@ export const emit =
 	 * const emitEvent = emitRegistry("event"); // 👈🏻 You are here
 	 * emitEvent("data");
 	 * ```
+	 * @template Event Event name.
 	 * @param event Event name (has to be a valid key of the `eventRegistry`).
 	 * @returns Curried function with `eventRegistry` and `event` in context.
 	 */

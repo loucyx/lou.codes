@@ -3,12 +3,16 @@
 	"description": "Documentation for @vangware packages",
 	"version": "0.0.1",
 	"devDependencies": {
+		"@astrojs/prefetch": "^0.4.0",
 		"@astrojs/starlight": "^0.10.1",
 		"@astrojs/starlight-tailwind": "^2.0.0",
 		"@astrojs/tailwind": "^5.0.0",
 		"astro": "^3.1.1",
+		"rehype-external-links": "^3.0.0",
+		"rehype-plugin-image-native-lazy-loading": "^1.2.0",
 		"sharp": "^0.32.6",
-		"tailwindcss": "^3.3.3"
+		"tailwindcss": "^3.3.3",
+		"vite-plugin-lightningcss": "^0.0.5"
 	},
 	"private": true,
 	"scripts": {

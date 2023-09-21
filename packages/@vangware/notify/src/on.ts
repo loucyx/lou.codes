@@ -19,6 +19,7 @@ import type { EventTypeDictionary } from "./EventTypeDictionary.js";
  * offEvent();
  * emit(eventRegistry)("event")(); // Nothing happens
  * ```
+ * @template Events Event registry.
  * @param eventRegistry Record of event names mapped to an array of listeners.
  * @returns Curried function with `eventRegistry` in context.
  */
@@ -40,6 +41,7 @@ export const on =
 	 * offEvent();
 	 * emit(eventRegistry)("event")(); // Nothing happens
 	 * ```
+	 * @template Event Event name.
 	 * @param event Event name (has to be a valid key of the `eventRegistry`).
 	 * @returns Curried function with `eventRegistry` and `event` in context.
 	 */

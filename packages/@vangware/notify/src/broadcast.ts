@@ -15,6 +15,7 @@ import { on } from "./on.js";
  * off();
  * emit("event")("Nope"); // Nothing happens
  * ```
+ * @template Events Event registry.
  * @param eventRegistry Optional record of event names mapped to an array of
  * listeners.
  * @returns Object with `emit` and `on` functions.

@@ -87,6 +87,23 @@ const getGroupedFiles = () =>
 		),
 	);
 
+const allUpper = ["ansi"];
+
+/** @param {string} packageName */
+const packageNameToTitle = packageName =>
+	packageName
+		.replace("@vangware/", "")
+		.replaceAll("-", " ")
+		.split(" ")
+		.map(word =>
+			allUpper.includes(word)
+				? word.toUpperCase()
+				: word.replace(/./u, character =>
+						character.toLocaleUpperCase(),
+				  ),
+		)
+		.join(" ");
+
 /**
  * @param {{
  * 	readonly description: string;
@@ -94,8 +111,10 @@ const getGroupedFiles = () =>
  * }} options
  */
 const frontMatter = ({ description, title }) => `---
-title: "${title}"
 description: "${description}"
+sidebar:
+    label: "${packageNameToTitle(title)}"
+title: "${packageNameToTitle(title)} by Vangware"
 ---`;
 
 const formatPairedDocs = () =>
@@ -116,11 +135,16 @@ const formatPairedDocs = () =>
 						.split("\n")
 						.slice(2)
 						.join("\n")
-						.replaceAll(typeDocFile.path.split("/").at(-1), "")
+						.replaceAll(
+							typeDocFile.path.split("/").at(-1) ?? "",
+							"",
+						)
 						.replace(
 							/#### Defined in\n\n\[.+\]\((?<path>.+)\)/gu,
 							"> [View source]($1)",
-						)}`,
+						)}`
+						.replaceAll("https://vangware.com/", "/")
+						.replaceAll("https://vangware.com", "/"),
 				]),
 		),
 	);

@@ -1,5 +1,12 @@
 # Change log
 
+## 5.1.41
+
+### Patch Changes
+
+-   ⬆️ upgrade `@vangware/predicates` to `v2.1.35`
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.20`
+
 ## 5.1.40
 
 ### Patch Changes

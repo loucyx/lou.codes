@@ -9,6 +9,7 @@ export default defineConfig({
 			logo: {
 				src: "./src/assets/logo.svg",
 			},
+			pagination: false,
 			sidebar: [
 				{
 					autogenerate: { directory: "guides" },

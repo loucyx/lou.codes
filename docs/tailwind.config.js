@@ -34,6 +34,16 @@ export default {
 					950: "#0A0A0A",
 				},
 			},
+			fontFamily: {
+				mono: ["FiraCode, monospace"],
+				sans: [
+					"Inter, sans-serif",
+					{
+						fontFeatureSettings: '"cv11", "ss01"',
+						fontVariationSettings: '"opsz" 32',
+					},
+				],
+			},
 		},
 	},
 };

@@ -13,6 +13,7 @@ export default defineConfig({
 			customCss: ["./src/tailwind.css"],
 			logo: {
 				src: "./src/assets/logo.svg",
+				replacesTitle: true,
 			},
 			pagination: false,
 			sidebar: [
@@ -30,7 +31,7 @@ export default defineConfig({
 				linkedin: "https://linkedin.com/company/vangware",
 				youtube: "https://youtube.com/vangware",
 			},
-			title: "Vangware Libraries",
+			title: "Vangware",
 		}),
 		tailwind({ applyBaseStyles: false }),
 	],

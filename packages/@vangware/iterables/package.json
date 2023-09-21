@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/iterables",
-	"description": "🔁 Iterable and AsyncIterable utils.",
-	"version": "3.1.18",
+	"description": "🔁 Iterable and AsyncIterable utils",
+	"version": "3.1.19",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -27,7 +27,7 @@
 	"files": [
 		"dist"
 	],
-	"homepage": "https://libraries.vangware.com/modules/_vangware_iterables.html",
+	"homepage": "https://vangware.com/libraries/vangware_iterables/",
 	"keywords": [
 		"arrays",
 		"asynchronous",

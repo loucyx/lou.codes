@@ -1,5 +1,11 @@
 # Change log
 
+## 6.2.10
+
+### Patch Changes
+
+-   📝 update documentation and URLs.
+
 ## 6.2.9
 
 ### Patch Changes

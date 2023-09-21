@@ -7,7 +7,7 @@ export default ({ name, description }: Answers) => {
 
 	return `<img id="logo" alt="${userClean(
 		name,
-	)} by ${USER}" src="https://libraries.vangware.com/logo.svg" height="128" />
+	)} by ${USER}" src="https://vangware.com/logo.svg" height="128" />
 
 ![Coverage][coverage-badge] ![License][license-badge]
 ![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]
@@ -70,10 +70,9 @@ Import \`${name}\` using [esm.sh][esm.sh], and use it directly:
 [coverage-badge]:
 	https://img.shields.io/coveralls/github/vangware/libraries.svg?style=for-the-badge&labelColor=666&color=0a8
 [coverage]: https://coveralls.io/github/vangware/libraries
-[documentation]: https://libraries.vangware.com/modules/${name.replace(
-		/[-/@]/gu,
-		"_",
-	)}.html
+[documentation]: https://vangware.com/libraries/${name
+		.replace("@", "")
+		.replace(/[-/]/gu, "_")}.html
 [esm.sh]: https://esm.sh
 [license-badge]:
 	https://img.shields.io/npm/l/${name}.svg?style=for-the-badge&labelColor=666&color=0a8

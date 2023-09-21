@@ -1,5 +1,13 @@
 # Change log
 
+## 2.1.34
+
+### Patch Changes
+
+-   📝 update documentation and URLs.
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.13`
+-   ⬆️ upgrade `@vangware/types` to `v6.2.10`
+
 ## 2.1.33
 
 ### Patch Changes

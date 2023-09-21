@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/utils",
 	"description": "⚒️ Vangware curried functional utils",
-	"version": "10.1.19",
+	"version": "10.1.20",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -26,7 +26,7 @@
 	"files": [
 		"dist"
 	],
-	"homepage": "https://libraries.vangware.com/modules/_vangware_utils.html",
+	"homepage": "https://vangware.com/libraries/vangware_utils/",
 	"keywords": [
 		"array",
 		"curried",

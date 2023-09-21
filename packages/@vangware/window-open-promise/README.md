@@ -1,4 +1,4 @@
-<img id="logo" alt="@vangware/window-open-promise" src="https://libraries.vangware.com/modules/vangware__window-open-promise.svg" height="128" />
+<img id="logo" alt="@vangware/window-open-promise" src="https://vangware.com/logos/vangware_window_open_promise.svg" height="128" />
 
 ![Coverage][coverage-badge] ![License][license-badge]
 ![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]
@@ -107,8 +107,7 @@ directly:
 [coverage-badge]:
 	https://img.shields.io/coveralls/github/vangware/libraries.svg?style=for-the-badge&labelColor=666&color=0a8
 [coverage]: https://coveralls.io/github/vangware/libraries
-[documentation]:
-	https://libraries.vangware.com/modules/_vangware_window_open_promise.html
+[documentation]: https://vangware.com/libraries/vangware_window_open_promise/
 [esm.sh]: https://esm.sh
 [license-badge]:
 	https://img.shields.io/npm/l/@vangware/window-open-promise.svg?style=for-the-badge&labelColor=666&color=0a8

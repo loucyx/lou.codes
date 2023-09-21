@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/test",
 	"description": "✅ Equality test with enforced readability",
-	"version": "10.3.26",
+	"version": "10.3.27",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -29,7 +29,7 @@
 	"files": [
 		"dist"
 	],
-	"homepage": "https://libraries.vangware.com/modules/_vangware_test.html",
+	"homepage": "https://vangware.com/libraries/vangware_test/",
 	"keywords": [
 		"legibility",
 		"legible",

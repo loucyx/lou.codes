@@ -1,4 +1,4 @@
-<img id="logo" alt="preact-pair" src="https://libraries.vangware.com/modules/preact-pair.svg" height="128" />
+<img id="logo" alt="preact-pair" src="https://vangware.com/logos/preact_pair.svg" height="128" />
 
 ![Coverage][coverage-badge] ![License][license-badge]
 ![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]
@@ -132,7 +132,7 @@ Import `preact-pair` using [esm.sh][esm.sh], and use it directly:
 [coverage-badge]:
 	https://img.shields.io/coveralls/github/vangware/libraries.svg?style=for-the-badge&labelColor=666&color=0a8
 [coverage]: https://coveralls.io/github/vangware/libraries
-[documentation]: https://libraries.vangware.com/modules/preact_pair.html
+[documentation]: https://vangware.com/libraries/preact_pair/
 [esm.sh]: https://esm.sh
 [license-badge]:
 	https://img.shields.io/npm/l/preact-pair.svg?style=for-the-badge&labelColor=666&color=0a8

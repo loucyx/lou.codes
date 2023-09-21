@@ -1,4 +1,4 @@
-<img id="logo" alt="@vangware/configs" src="https://libraries.vangware.com/modules/vangware__configs.svg" height="128" />
+<img id="logo" alt="@vangware/configs" src="https://vangware.com/logos/vangware_configs.svg" height="128" />
 
 ![License][license-badge] ![NPM Version][npm-version-badge]
 ![Open Issues][open-issues-badge]
@@ -13,7 +13,6 @@ formatting, documentation and so on.
 -   ✨ [prettier.config.cjs][prettier] — Code formatting.
 -   🎨 [stylelint.config.cjs][stylelint] — CSS linting.
 -   🏷️ [typescript.config.json][typescript] — TypeScript configuration (strict).
--   📖 [typedoc.css][typedoc] — Documentation styles.
 -   📖 [typedoc.config.json][typedoc] — Documentation configuration.
 
 ## Usage
@@ -83,8 +82,7 @@ module.exports = require("@vangware/configs/stylelint.config.cjs");
 [changelog]:
 	https://github.com/vangware/libraries/blob/main/packages/@vangware/configs/CHANGELOG.md
 [changesets]: https://github.com/changesets/changesets
-[create-package]:
-	https://libraries.vangware.com/modules/_vangware_create_package.html
+[create-package]: https://vangware.com/libraries/vangware_create_package/
 [eslint]: https://eslint.org/docs/user-guide/configuring/
 [license-badge]:
 	https://img.shields.io/npm/l/@vangware/configs.svg?style=for-the-badge&labelColor=666&color=0a8

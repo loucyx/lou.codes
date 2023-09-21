@@ -17,10 +17,9 @@ export default ({
 			engines,
 			exports: { ".": "./dist/index.js", "./*": "./dist/*" },
 			files: ["dist"],
-			homepage: `https://libraries.vangware.com/modules/${name.replace(
-				/[-/@]/gu,
-				"_",
-			)}.html`,
+			homepage: `https://vangware.com/libraries/${name
+				.replace("@", "")
+				.replace(/[-/]/gu, "_")}`,
 			keywords: ["typescript", "vangware"],
 			license: "MIT",
 			repository,

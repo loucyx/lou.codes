@@ -1,4 +1,4 @@
-<img id="logo" alt="@vangware/create-package" src="https://libraries.vangware.com/modules/vangware__create-package.svg" height="128" />
+<img id="logo" alt="@vangware/create-package" src="https://vangware.com/logos/vangware_create_package.svg" height="128" />
 
 ![License][license-badge] ![NPM Version][npm-version-badge]
 ![Open Issues][open-issues-badge]
@@ -40,7 +40,6 @@ And follow the prompts.
 	https://img.shields.io/npm/v/@vangware/create-package.svg?style=for-the-badge&labelColor=666&color=0a8
 [open-issues-badge]:
 	https://img.shields.io/github/issues/vangware/libraries.svg?style=for-the-badge&labelColor=666&color=0a8
-[site]: https://libraries.vangware.com/modules/_vangware_create_package.html
+[site]: https://vangware.com/libraries/vangware_create_package/
 [vangware]: https://vangware.com
-[vangware-configs]:
-	https://libraries.vangware.com/modules/_vangware_configs.html
+[vangware-configs]: https://vangware.com/libraries/vangware_configs/

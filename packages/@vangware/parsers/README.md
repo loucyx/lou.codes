@@ -1,4 +1,4 @@
-<img id="logo" alt="@vangware/parsers" src="https://libraries.vangware.com/modules/vangware__parsers.svg" height="128" />
+<img id="logo" alt="@vangware/parsers" src="https://vangware.com/logos/vangware_parsers.svg" height="128" />
 
 ![Coverage][coverage-badge] ![License][license-badge]
 ![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]
@@ -7,7 +7,7 @@
 
 Instead of throwing or returning values like `NaN`, the parsers in this library
 either return the expected parsed value or `undefined` (making use of the
-[Maybe](https://libraries.vangware.com/types/_vangware_types.Maybe.html) type).
+[Maybe](https://vangware.com/libraries/vangware_types/#maybe) type).
 
 ## Usage
 
@@ -69,7 +69,7 @@ Import `@vangware/parsers` using [esm.sh][esm.sh], and use it directly:
 [coverage-badge]:
 	https://img.shields.io/coveralls/github/vangware/libraries.svg?style=for-the-badge&labelColor=666&color=0a8
 [coverage]: https://coveralls.io/github/vangware/libraries
-[documentation]: https://libraries.vangware.com/modules/_vangware_parsers.html
+[documentation]: https://vangware.com/libraries/vangware_parsers/
 [esm.sh]: https://esm.sh
 [license-badge]:
 	https://img.shields.io/npm/l/@vangware/parsers.svg?style=for-the-badge&labelColor=666&color=0a8

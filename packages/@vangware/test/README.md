@@ -1,4 +1,4 @@
-<img id="logo" alt="@vangware/test" src="https://libraries.vangware.com/modules/vangware__test.svg" height="128" />
+<img id="logo" alt="@vangware/test" src="https://vangware.com/logos/vangware_test.svg" height="128" />
 
 ![Coverage][coverage-badge] ![License][license-badge]
 ![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]
@@ -237,7 +237,7 @@ test({
 
 `@vangware/tests` provides a default output for the tests. It looks like this:
 
-```text
+```plaintext
 [TEST] ./tests/example.test.ts
 [FAIL] Given a 1 and a 2, must return 3, but...
 	└ it has the wrong value. Wanted 3 but received 4.
@@ -246,7 +246,7 @@ test({
 And if the wanted/received type is more complex, like an object, then the output
 goes into details about the error:
 
-```text
+```plaintext
 [TEST] ./tests/example.test.ts
 [FAIL] Given an object, must add a single property, but...
 	├ foo.bar has the wrong value. Wanted 1 but received 2.
@@ -270,9 +270,8 @@ it was pointed out in the previous section.
 [coverage-badge]:
 	https://img.shields.io/coveralls/github/vangware/libraries.svg?style=for-the-badge&labelColor=666&color=0a8
 [coverage]: https://coveralls.io/github/vangware/libraries
-[create-package]:
-	https://libraries.vangware.com/modules/_vangware_create_package.html
-[documentation]: https://libraries.vangware.com/modules/_vangware_test.html
+[create-package]: https://vangware.com/libraries/vangware_create_package/
+[documentation]: https://vangware.com/libraries/vangware_test/
 [esm.sh]: https://esm.sh
 [license-badge]:
 	https://img.shields.io/npm/l/@vangware/test.svg?style=for-the-badge&labelColor=666&color=0a8

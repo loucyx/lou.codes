@@ -1,4 +1,4 @@
-<img id="logo" alt="@vangware/prompts" src="https://libraries.vangware.com/modules/vangware__prompts.svg" height="128" />
+<img id="logo" alt="@vangware/prompts" src="https://vangware.com/logos/vangware_prompts.svg" height="128" />
 
 ![Coverage][coverage-badge] ![License][license-badge]
 ![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]
@@ -99,7 +99,7 @@ exampleQuestion({
 	https://img.shields.io/coveralls/github/vangware/libraries.svg?style=for-the-badge&labelColor=666&color=0a8
 [coverage]: https://coveralls.io/github/vangware/libraries
 [deno]: https://deno.land/
-[documentation]: https://libraries.vangware.com/modules/_vangware_prompts.html
+[documentation]: https://vangware.com/libraries/vangware_prompts/
 [esm.sh]: https://esm.sh
 [license-badge]:
 	https://img.shields.io/npm/l/@vangware/prompts.svg?style=for-the-badge&labelColor=666&color=0a8

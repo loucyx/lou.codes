@@ -157,8 +157,9 @@ $RECYCLE.BIN/
 # Distribution directory
 dist/
 
-# Documentation
-docs/
+# Generated documentation files
+.typedoc/
+docs/src/content/docs/libraries/
 
 # Lock files
 bun.lockb

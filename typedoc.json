@@ -1,8 +1,17 @@
 {
 	"$schema": "https://typedoc.org/schema.json",
-	"cname": "libraries.vangware.com",
+	"categorizeByGroup": false,
+	"cleanOutputDir": false,
 	"entryPoints": ["packages/@vangware/*", "packages/*"],
 	"entryPointStrategy": "packages",
-	"extends": ["@vangware/configs/typedoc.config.json"],
-	"name": "Vangware Libraries"
+	"excludeTags": ["@category"],
+	"githubPages": false,
+	"gitRevision": "main",
+	"hideBreadcrumbs": true,
+	"hideGenerator": true,
+	"hideInPageTOC": true,
+	"logLevel": "Warn",
+	"name": "Vangware Libraries",
+	"out": "./docs/.typedoc",
+	"plugin": ["typedoc-plugin-markdown"]
 }

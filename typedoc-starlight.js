@@ -115,7 +115,12 @@ const formatPairedDocs = () =>
 					}\n\n<!-- Start of auto-generated code by TypeDoc -->\n\n${typeDocFile.content
 						.split("\n")
 						.slice(2)
-						.join("\n")}`,
+						.join("\n")
+						.replaceAll(typeDocFile.path.split("/").at(-1), "")
+						.replace(
+							/#### Defined in\n\n\[.+\]\((?<path>.+)\)/gu,
+							"> [View source]($1)",
+						)}`,
 				]),
 		),
 	);

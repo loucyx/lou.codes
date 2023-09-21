@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/types",
 	"description": "🏷️ Vangware shared types",
-	"version": "6.2.9",
+	"version": "6.2.10",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -22,7 +22,7 @@
 	"files": [
 		"dist"
 	],
-	"homepage": "https://libraries.vangware.com/modules/_vangware_types.html",
+	"homepage": "https://vangware.com/libraries/vangware_types/",
 	"keywords": [
 		"fp",
 		"functional",

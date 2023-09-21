@@ -1,4 +1,4 @@
-<img id="logo" alt="@vangware/utils" src="https://libraries.vangware.com/modules/vangware__utils.svg" height="128" />
+<img id="logo" alt="@vangware/utils" src="https://vangware.com/logos/vangware_utils.svg" height="128" />
 
 ![Coverage][coverage-badge] ![License][license-badge]
 ![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]
@@ -64,7 +64,7 @@ Import `@vangware/utils` using [esm.sh][esm.sh], and use it directly:
 	https://img.shields.io/coveralls/github/vangware/libraries.svg?style=for-the-badge&labelColor=666&color=0a8
 [coverage]: https://coveralls.io/github/vangware/libraries
 [currying]: https://en.wikipedia.org/wiki/Currying
-[documentation]: https://libraries.vangware.com/modules/_vangware_utils.html
+[documentation]: https://vangware.com/libraries/vangware_utils/
 [esm.sh]: https://esm.sh
 [functional-programming]: https://en.wikipedia.org/wiki/Functional_programming
 [license-badge]:

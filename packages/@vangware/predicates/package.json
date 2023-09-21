@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/predicates",
 	"description": "🧐 Predicate util functions",
-	"version": "2.1.33",
+	"version": "2.1.34",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -26,7 +26,7 @@
 	"files": [
 		"dist"
 	],
-	"homepage": "https://libraries.vangware.com/modules/_vangware_predicates.html",
+	"homepage": "https://vangware.com/libraries/vangware_predicates/",
 	"keywords": [
 		"predicates",
 		"typescript",

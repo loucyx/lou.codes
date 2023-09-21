@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/configs",
 	"description": "⚙️ Project configurations",
-	"version": "6.1.4",
+	"version": "7.0.0",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -65,7 +65,7 @@
 		"*.json",
 		"rules"
 	],
-	"homepage": "https://libraries.vangware.com/modules/_vangware_configs.html",
+	"homepage": "https://vangware.com/libraries/vangware_configs/",
 	"keywords": [
 		"config",
 		"configs",

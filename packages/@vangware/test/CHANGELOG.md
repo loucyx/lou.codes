@@ -1,5 +1,13 @@
 # Change log
 
+## 10.3.27
+
+### Patch Changes
+
+-   📝 update documentation and URLs.
+-   ⬆️ upgrade `@vangware/types` to `v6.2.10`
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.29`
+
 ## 10.3.26
 
 ### Patch Changes

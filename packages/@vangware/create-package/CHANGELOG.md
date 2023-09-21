@@ -1,5 +1,14 @@
 # Change log
 
+## 1.7.6
+
+### Patch Changes
+
+-   📝 update documentation and URLs.
+-   ⬆️ upgrade `@vangware/prompts` to `v2.2.8`
+-   ⬆️ upgrade `@vangware/types` to `v6.2.10`
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.29`
+
 ## 1.7.5
 
 ### Patch Changes

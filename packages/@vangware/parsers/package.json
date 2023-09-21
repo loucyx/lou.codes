@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/parsers",
 	"description": "👁️‍🗨️ Parsers without nonsense",
-	"version": "1.4.12",
+	"version": "1.4.13",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -25,7 +25,7 @@
 	"files": [
 		"dist"
 	],
-	"homepage": "https://libraries.vangware.com/modules/_vangware_parsers.html",
+	"homepage": "https://vangware.com/libraries/vangware_parsers/",
 	"keywords": [
 		"parsers",
 		"typescript",

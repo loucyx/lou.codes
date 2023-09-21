@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/prompts",
 	"description": "⁉️ CLI interactive prompts",
-	"version": "2.2.7",
+	"version": "2.2.8",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -25,7 +25,7 @@
 	"files": [
 		"dist"
 	],
-	"homepage": "https://libraries.vangware.com/modules/_vangware_prompts.html",
+	"homepage": "https://vangware.com/libraries/vangware_prompts/",
 	"keywords": [
 		"ansi",
 		"cli",

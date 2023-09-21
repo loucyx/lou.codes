@@ -28,13 +28,14 @@
 		"stylelint": "^15.10.3",
 		"tsx": "^3.12.10",
 		"typedoc": "^0.25.1",
+		"typedoc-plugin-markdown": "^3.16.0",
 		"typescript": "^5.2.2"
 	},
 	"engines": {
 		"node": ">=20",
 		"pnpm": ">=8"
 	},
-	"homepage": "https://libraries.vangware.com",
+	"homepage": "https://vangware.com",
 	"keywords": [
 		"libraries",
 		"typescript",
@@ -49,10 +50,14 @@
 	"scripts": {
 		"clean": "pnpm --recursive --parallel clean",
 		"compile": "pnpm --recursive compile",
-		"document": "typedoc && cpy --flat ./{packages,packages/@vangware}/**/*.svg docs/modules && cpy ./{favicon.ico,logo.svg} docs",
+		"document": "run-s --print-label document:typedoc prettify:typedoc document:typedoc-patch document:starlight",
+		"document:starlight": "cd docs && pnpm build",
+		"document:typedoc": "typedoc",
+		"document:typedoc-patch": "node ./typedoc-starlight.js",
 		"git:pre-push": "pnpm --recursive git:pre-push",
 		"lint": "pnpm --recursive lint",
 		"prepare": "simple-git-hooks",
+		"prettify:typedoc": "prettier --ignore-path=.prettierignore --log-level=warn --write './docs/.typedoc/**/*.md'",
 		"publish": "pnpm --recursive publish",
 		"test": "c8 pnpm --recursive test"
 	},

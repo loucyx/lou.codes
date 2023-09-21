@@ -1,4 +1,4 @@
-<img id="logo" alt="@vangware/ansi" src="https://libraries.vangware.com/logo.svg" height="72" />
+<img id="logo" alt="@vangware/ansi" src="https://vangware.com/logo.svg" height="72" />
 
 📚 [Vangware][vangware] libraries monorepo
 
@@ -38,21 +38,20 @@ of tools and components.
 
 <!-- Links -->
 
-[react_pair]: https://libraries.vangware.com/modules/react_pair.html
-[preact_pair]: https://libraries.vangware.com/modules/preact_pair.html
-[cron]: https://libraries.vangware.com/modules/_vangware_cron.html
+[react_pair]: https://vangware.com/libraries/react_pair/
+[preact_pair]: https://vangware.com/libraries/preact_pair/
+[cron]: https://vangware.com/libraries/vangware_cron/
 [window-open-promise]:
-	https://libraries.vangware.com/modules/_vangware_window_open_promise.html
-[notify]: https://libraries.vangware.com/modules/_vangware_notify.html
-[iterables]: https://libraries.vangware.com/modules/_vangware_iterables.html
-[parsers]: https://libraries.vangware.com/modules/_vangware_parsers.html
-[predicates]: https://libraries.vangware.com/modules/_vangware_predicates.html
-[utils]: https://libraries.vangware.com/modules/_vangware_utils.html
-[test]: https://libraries.vangware.com/modules/_vangware_test.html
-[ansi]: https://libraries.vangware.com/modules/_vangware_ansi.html
-[prompts]: https://libraries.vangware.com/modules/_vangware_prompts.html
-[create-package]:
-	https://libraries.vangware.com/modules/_vangware_create_package.html
-[configs]: https://libraries.vangware.com/modules/_vangware_configs.html
-[types]: https://libraries.vangware.com/modules/_vangware_types.html
+	https://vangware.com/libraries/vangware_window_open_promise/
+[notify]: https://vangware.com/libraries/vangware_notify/
+[iterables]: https://vangware.com/libraries/vangware_iterables/
+[parsers]: https://vangware.com/libraries/vangware_parsers/
+[predicates]: https://vangware.com/libraries/vangware_predicates/
+[utils]: https://vangware.com/libraries/vangware_utils/
+[test]: https://vangware.com/libraries/vangware_test/
+[ansi]: https://vangware.com/libraries/vangware_ansi/
+[prompts]: https://vangware.com/libraries/vangware_prompts/
+[create-package]: https://vangware.com/libraries/vangware_create_package/
+[configs]: https://vangware.com/libraries/vangware_configs/
+[types]: https://vangware.com/libraries/vangware_types/
 [vangware]: https://vangware.com

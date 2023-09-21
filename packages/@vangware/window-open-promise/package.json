@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/window-open-promise",
 	"description": "🪟 Promised Window.open();",
-	"version": "5.1.39",
+	"version": "5.1.40",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -27,7 +27,7 @@
 	"files": [
 		"dist"
 	],
-	"homepage": "https://libraries.vangware.com/modules/_vangware_window_open_promise.html",
+	"homepage": "https://vangware.com/libraries/vangware_window_open_promise/",
 	"keywords": [
 		"front",
 		"front-end",

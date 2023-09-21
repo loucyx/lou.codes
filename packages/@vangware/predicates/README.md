@@ -1,4 +1,4 @@
-<img alt="@vangware/predicates" src="https://libraries.vangware.com/modules/vangware__predicates.svg" height="128" />
+<img alt="@vangware/predicates" src="https://vangware.com/logos/vangware_predicates.svg" height="128" />
 
 ![Coverage][coverage-badge] ![License][license-badge]
 ![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]
@@ -68,8 +68,7 @@ Import `@vangware/predicates` using [esm.sh][esm.sh], and use it directly:
 [coverage-badge]:
 	https://img.shields.io/coveralls/github/vangware/libraries.svg?style=for-the-badge&labelColor=666&color=0a8
 [coverage]: https://coveralls.io/github/vangware/libraries
-[documentation]:
-	https://libraries.vangware.com/modules/_vangware_predicates.html
+[documentation]: https://vangware.com/libraries/vangware_predicates/
 [esm.sh]: https://esm.sh
 [license-badge]:
 	https://img.shields.io/npm/l/@vangware/predicates.svg?style=for-the-badge&labelColor=666&color=0a8

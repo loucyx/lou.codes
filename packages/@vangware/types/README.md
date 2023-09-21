@@ -1,4 +1,4 @@
-<img id="logo" alt="@vangware/types" src="https://libraries.vangware.com/modules/vangware__types.svg" height="128" />
+<img id="logo" alt="@vangware/types" src="https://vangware.com/logos/vangware_types.svg" height="128" />
 
 ![License][license-badge] ![NPM Version][npm-version-badge]
 ![Open Issues][open-issues-badge]
@@ -43,7 +43,7 @@ import type { Unary } from "npm:@vangware/types";
 
 [changelog]:
 	https://github.com/vangware/libraries/blob/main/packages/@vangware/types/CHANGELOG.md
-[documentation]: https://libraries.vangware.com/modules/_vangware_types.html
+[documentation]: https://vangware.com/libraries/vangware_types/
 [license-badge]:
 	https://img.shields.io/npm/l/@vangware/types.svg?style=for-the-badge&labelColor=666&color=0a8
 [npm-version-badge]:

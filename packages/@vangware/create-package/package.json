@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/create-package",
 	"description": "🚧 Vangware package scaffolder script",
-	"version": "1.7.5",
+	"version": "1.7.6",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -25,7 +25,7 @@
 		"dist/*",
 		"base/*"
 	],
-	"homepage": "https://libraries.vangware.com/modules/_vangware_create_package.html",
+	"homepage": "https://vangware.com/libraries/vangware_create_package/",
 	"keywords": [
 		"create",
 		"create-package",

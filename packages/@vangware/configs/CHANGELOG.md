@@ -1,5 +1,15 @@
 # Change log
 
+## 7.0.0
+
+### Major Changes
+
+-   🔥 Removed `typedoc.css`.
+
+### Patch Changes
+
+-   📝 update documentation and URLs.
+
 ## 6.1.4
 
 ### Patch Changes

@@ -11,9 +11,39 @@ export default defineConfig({
 		prefetch(),
 		starlight({
 			customCss: ["./src/tailwind.css"],
+			head: [
+				{
+					attrs: {
+						content: "same-origin",
+						name: "view-transition",
+					},
+					tag: "meta",
+				},
+				{
+					attrs: {
+						content: "true",
+						name: "astro-view-transitions-enabled",
+					},
+					tag: "meta",
+				},
+				{
+					attrs: {
+						content: "animate",
+						name: "astro-view-transitions-fallback",
+					},
+					tag: "meta",
+				},
+				{
+					attrs: {
+						src: "/view-transitions.js",
+						type: "module",
+					},
+					tag: "script",
+				},
+			],
 			logo: {
-				src: "./src/assets/logo.svg",
 				replacesTitle: true,
+				src: "./src/assets/logo.svg",
 			},
 			pagination: false,
 			sidebar: [

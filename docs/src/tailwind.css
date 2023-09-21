@@ -23,7 +23,19 @@
 }
 
 #logo {
-	@apply max-h-32 mb-6 [&+p]:text-center [&+p_img]:h-8 [&+p_img]:inline-block [&+p_img]:mt-0;
+	@apply max-h-32 mb-6 mx-auto [&+p]:text-center [&+p]:[view-transition-name:badges] [&+p_img]:h-8 [&+p_img]:inline-block [&+p_img]:mt-0 [view-transition-name:logo];
+}
+
+starlight-toc {
+	@apply [view-transition-name:starlight-toc];
+}
+
+#starlight__sidebar {
+	@apply [view-transition-name:starlight-sidebar];
+}
+
+header {
+	@apply [view-transition-name:header];
 }
 
 main .content-panel:first-child:not(:only-child) {

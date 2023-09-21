@@ -3,6 +3,8 @@ title: Getting started
 description: Getting started with Vangware libraries
 ---
 
+<img id="logo" alt="@vangware/ansi" src="https://vangware.com/logo.svg" height="72" />
+
 ## About Vangware
 
 At [Vangware][vangware], we passionately embrace bleeding-edge web technologies
@@ -39,20 +41,19 @@ of tools and components.
 
 <!-- Links -->
 
-[react_pair]: https://vangware.com/libraries/react_pair/
-[preact_pair]: https://vangware.com/libraries/preact_pair/
-[cron]: https://vangware.com/libraries/vangware_cron/
-[window-open-promise]:
-	https://vangware.com/libraries/vangware_window_open_promise/
-[notify]: https://vangware.com/libraries/vangware_notify/
-[iterables]: https://vangware.com/libraries/vangware_iterables/
-[parsers]: https://vangware.com/libraries/vangware_parsers/
-[predicates]: https://vangware.com/libraries/vangware_predicates/
-[utils]: https://vangware.com/libraries/vangware_utils/
-[test]: https://vangware.com/libraries/vangware_test/
-[ansi]: https://vangware.com/libraries/vangware_ansi/
-[prompts]: https://vangware.com/libraries/vangware_prompts/
-[create-package]: https://vangware.com/libraries/vangware_create_package/
-[configs]: https://vangware.com/libraries/vangware_configs/
-[types]: https://vangware.com/libraries/vangware_types/
-[vangware]: https://vangware.com
+[react_pair]: /libraries/react_pair/
+[preact_pair]: /libraries/preact_pair/
+[cron]: /libraries/vangware_cron/
+[window-open-promise]: /libraries/vangware_window_open_promise/
+[notify]: /libraries/vangware_notify/
+[iterables]: /libraries/vangware_iterables/
+[parsers]: /libraries/vangware_parsers/
+[predicates]: /libraries/vangware_predicates/
+[utils]: /libraries/vangware_utils/
+[test]: /libraries/vangware_test/
+[ansi]: /libraries/vangware_ansi/
+[prompts]: /libraries/vangware_prompts/
+[create-package]: /libraries/vangware_create_package/
+[configs]: /libraries/vangware_configs/
+[types]: /libraries/vangware_types/
+[vangware]: /

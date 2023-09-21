@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	--brand-hue: 172;
+#logo {
+	@apply max-h-32 mb-6 [&+p]:text-center [&+p_img]:h-8 [&+p_img]:inline-block [&+p_img]:mt-0;
 }
 
-/* Starlight makes images `display: block`, but that ruins badges 😅 */
-.content img {
-	display: unset;
+main .content-panel:first-child:not(:only-child) {
+	@apply sr-only;
+}
+
+main .content-panel:first-child:not(:only-child) + .content-panel {
+	@apply border-t-0;
 }

@@ -12,4 +12,8 @@ hero:
         - text: Get started
           link: /guides/getting-started/
           icon: right-arrow
+          variant: primary
+        - text: View on GitHub
+          link: https://github.com/vangware/libraries
+          icon: external
 ---

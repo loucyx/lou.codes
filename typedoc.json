@@ -11,7 +11,7 @@
 	"hideGenerator": true,
 	"hideInPageTOC": true,
 	"logLevel": "Warn",
-	"name": "Vangware Libraries",
+	"name": "Vangware",
 	"out": "./docs/.typedoc",
 	"plugin": ["typedoc-plugin-markdown"]
 }

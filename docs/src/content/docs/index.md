@@ -1,11 +1,15 @@
 ---
-title: Vangware Libraries
-description: Monorepo with all Vangware open source libraries
+title: Vangware
+description:
+    We embrace bleeding-edge web technologies to create high-quality and
+    long-lasting software.
 template: splash
 hero:
     title: |
-        <span class="inline-block aspect-[8/1] w-[6em] align-baseline bg-[url(/logo.svg)] bg-center bg-no-repeat text-transparent">Vangware</span> Libraries
-    tagline: Monorepo with all Vangware open source libraries
+        <span class="inline-block aspect-[8/1] w-[6em] align-baseline bg-[url(/logo.svg)] bg-center bg-no-repeat text-transparent">Vangware</span>
+    tagline:
+        We embrace bleeding-edge web technologies to create high-quality and
+        long-lasting software.
     image:
         file: ../../assets/books.svg
     actions:

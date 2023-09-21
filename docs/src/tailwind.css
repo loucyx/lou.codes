@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	@font-face {
+		font-display: swap;
+		font-family: "Inter";
+		font-named-instance: "Regular";
+		font-style: oblique 0deg 10deg;
+		font-weight: 100 900;
+		src: url(./assets/fonts/Inter.woff2) format("woff2");
+	}
+
+	@font-face {
+		font-display: swap;
+		font-family: "FiraCode";
+		font-named-instance: "Regular";
+		font-style: normal;
+		font-weight: 300 700;
+		src: url(./assets/fonts/FiraCode.woff2) format("woff2-variations");
+	}
+}
+
 #logo {
 	@apply max-h-32 mb-6 [&+p]:text-center [&+p_img]:h-8 [&+p_img]:inline-block [&+p_img]:mt-0;
 }

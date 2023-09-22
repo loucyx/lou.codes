@@ -10,7 +10,7 @@ formatting, documentation and so on.
 
 -   🦋 [changelog.cjs][changesets] — Changesets changelog functions.
 -   🚨 [eslint.config.js][eslint] — JavaScript and TypeScript linting.
--   ✨ [prettier.config.cjs][prettier] — Code formatting.
+-   ✨ [prettier.config.js][prettier] — Code formatting.
 -   🎨 [stylelint.config.cjs][stylelint] — CSS linting.
 -   🏷️ [typescript.config.json][typescript] — TypeScript configuration (strict).
 -   📖 [typedoc.config.json][typedoc] — Documentation configuration.
@@ -41,10 +41,10 @@ For manual setup of each file, follow the instructions below.
 export { default } from "@vangware/configs/eslint.config.js";
 ```
 
-### `prettier.config.cjs`
+### `prettier.config.js`
 
 ```typescript
-module.exports = require("@vangware/configs/prettier.config.cjs");
+export { default } from "@vangware/configs/prettier.config.js";
 ```
 
 ### `stylelint.config.cjs`

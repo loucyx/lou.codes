@@ -19,27 +19,6 @@ export default defineConfig({
 					},
 					tag: "meta",
 				},
-				{
-					attrs: {
-						content: "true",
-						name: "astro-view-transitions-enabled",
-					},
-					tag: "meta",
-				},
-				{
-					attrs: {
-						content: "animate",
-						name: "astro-view-transitions-fallback",
-					},
-					tag: "meta",
-				},
-				{
-					attrs: {
-						src: "/view-transitions.js",
-						type: "module",
-					},
-					tag: "script",
-				},
 			],
 			logo: {
 				replacesTitle: true,

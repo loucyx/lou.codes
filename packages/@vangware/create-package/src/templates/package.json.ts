@@ -29,7 +29,6 @@ export default ({
 				"git:pre-push": "run-s --print-label clean compile lint test",
 				lint: "eslint {src,tests}",
 				"lint:fix": "eslint {src,tests} --fix",
-				prepare: "simple-git-hooks",
 				prepublishOnly: "run-s --print-label clean compile prettify",
 				prettify:
 					"prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'",

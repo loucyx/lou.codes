@@ -1,5 +1,11 @@
 # Change log
 
+## 1.7.7
+
+### Patch Changes
+
+-   ✏️ fix bad config in `package.json.ts` scripts.
+
 ## 1.7.6
 
 ### Patch Changes

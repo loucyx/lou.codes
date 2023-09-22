@@ -1,5 +1,12 @@
 # Change log
 
+## 7.0.1
+
+### Patch Changes
+
+-   ⬆️ dependency upgrade.
+-   ✏️ fix typo in `README.md`.
+
 ## 7.0.0
 
 ### Major Changes

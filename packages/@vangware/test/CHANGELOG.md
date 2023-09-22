@@ -1,5 +1,11 @@
 # Change log
 
+## 10.3.28
+
+### Patch Changes
+
+-   ⬆️ dependency upgrade.
+
 ## 10.3.27
 
 ### Patch Changes

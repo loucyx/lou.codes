@@ -2,6 +2,7 @@ import prefetch from "@astrojs/prefetch";
 import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
+import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
 import rehypeExternalLinks from "rehype-external-links";
 import rehypePluginImageNativeLazyLoading from "rehype-plugin-image-native-lazy-loading";
 import vitePluginLightningCSS from "vite-plugin-lightningcss";
@@ -46,6 +47,7 @@ export default defineConfig({
 	],
 	markdown: {
 		rehypePlugins: [
+			rehypeAccessibleEmojis,
 			[
 				rehypeExternalLinks,
 				{ rel: "nofollow noopener noreferrer", target: "_blank" },

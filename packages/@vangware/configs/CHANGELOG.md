@@ -1,5 +1,11 @@
 # Change log
 
+## 7.0.2
+
+### Patch Changes
+
+-   🔧 update stylelint config to use quotes more often.
+
 ## 7.0.1
 
 ### Patch Changes

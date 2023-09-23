@@ -43,7 +43,7 @@ module.exports = Object.freeze(
 			// Disallow scheme-relative urls.
 			"function-url-no-scheme-relative": true,
 			// Disallow quotes for urls.
-			"function-url-quotes": "never",
+			"function-url-quotes": "always",
 			// Specify a list of allowed URL schemes.
 			"function-url-scheme-allowed-list": ["data", "/^http/"],
 			// Degree hues must always use angle notation.
@@ -69,7 +69,7 @@ module.exports = Object.freeze(
 				},
 			],
 			// Attribute values must never be quoted.
-			"selector-attribute-quotes": "never",
+			"selector-attribute-quotes": "always",
 			// Limit the number of ID selectors in a selector.
 			"selector-max-id": 1,
 			// Specify complex notation for :not() pseudo-class selectors.

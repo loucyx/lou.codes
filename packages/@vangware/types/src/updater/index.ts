@@ -33,7 +33,9 @@ import type { ReadOnlyRecord } from "./ReadOnlyRecord.js";
  */
 export type HTMLElementTagGlobalAttributes = ReadOnlyRecord<string, string> & {${generateAttributesType(
 		{
-			attributes: globalAttributes ?? [],
+			attributes: globalAttributes as NonNullable<
+				typeof globalAttributes
+			>,
 			indent: 1,
 		},
 	)}};

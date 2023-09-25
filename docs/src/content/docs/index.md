@@ -11,7 +11,7 @@ hero:
         We embrace bleeding-edge web technologies to create high-quality and
         long-lasting software.
     image:
-        file: ../../assets/books.svg
+        file: ../../assets/logo.svg
     actions:
         - text: Get started
           link: /guides/getting-started/

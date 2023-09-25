@@ -1,5 +1,14 @@
 # Change log
 
+## 5.1.42
+
+### Patch Changes
+
+-   ⬆️ upgrade `@vangware/types` to `v6.3.0`
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.21`
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.14`
+-   ⬆️ upgrade `@vangware/predicates` to `v2.1.36`
+
 ## 5.1.41
 
 ### Patch Changes

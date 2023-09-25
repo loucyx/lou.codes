@@ -19,6 +19,8 @@ export type { Falsy } from "./Falsy.js";
 export type { Filter } from "./Filter.js";
 export type { First } from "./First.js";
 export type { Function } from "./Function.js";
+export type { HTMLElementTagAttributeMap } from "./HTMLElementTagAttributeMap.js";
+export type { HTMLElementTagGlobalAttributes } from "./HTMLElementTagGlobalAttributes.js";
 export type { Head } from "./Head.js";
 export type { HeadAndTail } from "./HeadAndTail.js";
 export type { Hours } from "./Hours.js";

@@ -1,5 +1,13 @@
 # Change log
 
+## 3.1.21
+
+### Patch Changes
+
+-   ⬆️ upgrade `@vangware/types` to `v6.3.0`
+-   ⬆️ upgrade `@vangware/predicates` to `v2.1.36`
+-   ⬆️ upgrade `@vangware/utils` to `v10.1.22`
+
 ## 3.1.20
 
 ### Patch Changes

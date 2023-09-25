@@ -1,5 +1,12 @@
 # Change log
 
+## 2.1.36
+
+### Patch Changes
+
+-   ⬆️ upgrade `@vangware/types` to `v6.3.0`
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.14`
+
 ## 2.1.35
 
 ### Patch Changes

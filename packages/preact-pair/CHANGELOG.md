@@ -1,5 +1,11 @@
 # Change log
 
+## 1.0.47
+
+### Patch Changes
+
+-   ⬆️ upgrade `@vangware/types` to `v6.3.0`
+
 ## 1.0.46
 
 ### Patch Changes

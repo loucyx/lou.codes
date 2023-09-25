@@ -1,5 +1,13 @@
 # Change log
 
+## 1.7.8
+
+### Patch Changes
+
+-   ⬆️ upgrade `@vangware/types` to `v6.3.0`
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.30`
+-   ⬆️ upgrade `@vangware/prompts` to `v2.2.9`
+
 ## 1.7.7
 
 ### Patch Changes

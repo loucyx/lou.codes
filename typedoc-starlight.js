@@ -143,6 +143,12 @@ const formatPairedDocs = () =>
 							/#### Defined in\n\n\[.+\]\((?<path>.+)\)/gu,
 							"> [View source]($1)",
 						)}`
+						// FIXME: TypeDoc is messing some resolutions, this fixes it™️.
+						// Remove it once is fixed in TypeDoc.
+						.replace(
+							/#### Defined in\n\nnode_modules\/(?<packageName>@vangware\/.+)\/dist\/(?<filename>.+)\.d\.ts:\d+/gu,
+							"> [View source](https://github.com/vangware/libraries/blob/main/packages/$1/src/$2.ts)",
+						)
 						.replaceAll("https://vangware.com/", "/")
 						.replaceAll("https://vangware.com", "/"),
 				]),

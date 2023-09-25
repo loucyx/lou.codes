@@ -1,5 +1,11 @@
 # Change log
 
+## 7.0.4
+
+### Patch Changes
+
+-   ⬆️ dependency upgrade.
+
 ## 7.0.3
 
 ### Patch Changes

@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/configs",
 	"description": "⚙️ Project configurations",
-	"version": "7.0.2",
+	"version": "7.0.3",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -17,8 +17,8 @@
 	"dependencies": {
 		"@changesets/types": "^5.2.1",
 		"@eslint/js": "^8.50.0",
-		"@types/eslint": "^8.44.2",
-		"@types/node": "^20.6.3",
+		"@types/eslint": "^8.44.3",
+		"@types/node": "^20.6.5",
 		"@typescript-eslint/eslint-plugin": "^6.7.2",
 		"@typescript-eslint/parser": "^6.7.2",
 		"@typescript-eslint/type-utils": "^6.7.2",

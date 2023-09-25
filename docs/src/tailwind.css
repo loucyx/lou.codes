@@ -62,3 +62,7 @@ main .content-panel:first-child:not(:only-child) + .content-panel {
 .content .astro-code {
 	@apply rounded-xl p-8 [tab-size:4];
 }
+
+.hero img {
+	@apply p-10;
+}

@@ -112,6 +112,15 @@ const packageNameToTitle = packageName =>
  */
 const frontMatter = ({ description, title }) => `---
 description: "${description}"
+head:
+    - attrs:
+          defer: true
+          type: module
+      content:
+          import * as library from "https://esm.sh/${title}";
+          Object.assign(globalThis, library);
+          console.log("${title} loaded in globalThis");
+      tag: script
 sidebar:
     label: "${packageNameToTitle(title)}"
 title: "${packageNameToTitle(title)} by Vangware"

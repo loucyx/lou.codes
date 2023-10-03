@@ -117,7 +117,7 @@ head:
           defer: true
           type: module
       content:
-          import * as library from "https://esm.sh/${title}";
+          import * as library from "https://esm.sh/${title}?bundle";
           Object.assign(globalThis, library);
           console.log("${title} loaded in globalThis");
       tag: script

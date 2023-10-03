@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/parsers",
 	"description": "👁️‍🗨️ Parsers without nonsense",
-	"version": "1.4.15",
+	"version": "1.4.16",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -47,6 +47,7 @@
 		"test": "NODE_OPTIONS='--loader tsx --no-warnings' pnpm exec test"
 	},
 	"sideEffects": false,
+	"size": "0.30",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

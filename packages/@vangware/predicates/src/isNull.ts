@@ -5,7 +5,7 @@ import { isType } from "./isType.js";
  * `"null"` instead (rejected proposal for lack of backwards compatibility, more
  * details [here](https://luke.sh/null-typeof)).
  *
- * @category Primitive
+ * @category Primitives
  * @example
  * ```typescript
  * isNull(null); // true

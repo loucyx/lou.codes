@@ -158,6 +158,10 @@ const formatPairedDocs = () =>
 							/#### Defined in\n\nnode_modules\/(?<packageName>@vangware\/.+)\/dist\/(?<filename>.+)\.d\.ts:\d+/gu,
 							"> [View source](https://github.com/vangware/libraries/blob/main/packages/$1/src/$2.ts)",
 						)
+						.replace(
+							/#### Defined in\npackages\/(?<sourcePackageName>@vangware\/.+)\/node_modules\/(?<packageName>@vangware\/.+)\/dist\/(?<filename>.+)\.d\.ts:\d+/gu,
+							"> [View source](https://github.com/vangware/libraries/blob/main/packages/$1/src/$2.ts)",
+						)
 						.replaceAll("https://vangware.com/", "/")
 						.replaceAll("https://vangware.com", "/"),
 				]),

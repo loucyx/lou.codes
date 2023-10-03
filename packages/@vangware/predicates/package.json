@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/predicates",
 	"description": "🧐 Predicate util functions",
-	"version": "2.2.0",
+	"version": "2.2.1",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -49,6 +49,7 @@
 		"test": "NODE_OPTIONS='--loader tsx --no-warnings' pnpm exec test"
 	},
 	"sideEffects": false,
+	"size": "0.75",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

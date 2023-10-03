@@ -3,7 +3,7 @@ import { isType } from "./isType.js";
 /**
  * `typeof` "number" alias.
  *
- * @category Primitive
+ * @category Primitives
  * @example
  * ```typescript
  * isNumber(1); // true

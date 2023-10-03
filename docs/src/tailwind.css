@@ -23,7 +23,7 @@
 }
 
 #logo {
-	@apply max-h-32 mb-6 mx-auto [&+p]:text-center [&+p]:[view-transition-name:badges] [&+p_img]:h-8 [&+p_img]:inline-block [&+p_img]:mt-0 [view-transition-name:logo];
+	@apply max-h-32 mb-6 mx-auto [&+p]:text-center [&+p]:[view-transition-name:badges] [&+p_img]:inline-block [&+p_img]:mt-0 [view-transition-name:logo];
 }
 
 starlight-toc {

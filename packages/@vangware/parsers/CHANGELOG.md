@@ -1,5 +1,12 @@
 # Change log
 
+## 1.4.16
+
+### Patch Changes
+
+-   📝 smaller badges.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.2`
+
 ## 1.4.15
 
 ### Patch Changes

@@ -5,7 +5,7 @@ import { isString } from "./isString.js";
 /**
  * Given a regular expression and a string, returns `true` if the string matches the regular expression.
  *
- * @category Primitive
+ * @category Primitives
  * @example
  * ```typescript
  * const matchNumbers = match(/\d+/u);

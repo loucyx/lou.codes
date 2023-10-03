@@ -85,11 +85,11 @@ module.exports = require("@vangware/configs/stylelint.config.cjs");
 [create-package]: https://vangware.com/libraries/vangware_create_package/
 [eslint]: https://eslint.org/docs/user-guide/configuring/
 [license-badge]:
-	https://img.shields.io/npm/l/@vangware/configs.svg?style=for-the-badge&labelColor=666&color=0a8
+	https://img.shields.io/npm/l/@vangware/configs.svg?labelColor=666&color=0a8
 [npm-version-badge]:
-	https://img.shields.io/npm/v/@vangware/configs.svg?style=for-the-badge&labelColor=666&color=0a8
+	https://img.shields.io/npm/v/@vangware/configs.svg?labelColor=666&color=0a8
 [open-issues-badge]:
-	https://img.shields.io/github/issues/vangware/libraries.svg?style=for-the-badge&labelColor=666&color=0a8
+	https://img.shields.io/github/issues/vangware/libraries.svg?labelColor=666&color=0a8
 [prettier]: https://prettier.io/docs/en/options.html
 [stylelint]: https://stylelint.io/user-guide/configure/
 [typedoc]: https://typedoc.org/guides/options/

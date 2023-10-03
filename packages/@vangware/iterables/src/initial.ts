@@ -3,6 +3,7 @@ import type {
 	IsomorphicIterable,
 	ReadOnlyArray,
 } from "@vangware/types";
+import { mutate } from "@vangware/utils";
 import { getIterator } from "./getIterator.js";
 import { handleIsomorphicIterable } from "./handleIsomorphicIterable.js";
 import type { GeneratorOutput } from "./types/GeneratorOutput.js";
@@ -32,8 +33,8 @@ export const initial = handleIsomorphicIterable(
 				// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 				next.done ? undefined : yield item.value;
 
-				// eslint-disable-next-line functional/immutable-data, functional/no-expression-statements
-				Object.assign(item, next);
+				// eslint-disable-next-line functional/no-expression-statements
+				mutate(next)(item);
 			}
 		},
 )(
@@ -55,8 +56,8 @@ export const initial = handleIsomorphicIterable(
 				// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 				next.done ? undefined : yield item.value;
 
-				// eslint-disable-next-line functional/immutable-data, functional/no-expression-statements
-				Object.assign(item, next);
+				// eslint-disable-next-line functional/no-expression-statements
+				mutate(next)(item);
 			}
 		},
 ) as <Iterable extends IsomorphicIterable>(

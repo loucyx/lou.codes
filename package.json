@@ -25,7 +25,9 @@
 		"astro": "^3.1.4",
 		"c8": "^8.0.1",
 		"cpy-cli": "^5.0.0",
+		"esbuild": "^0.19.4",
 		"eslint": "^8.50.0",
+		"gzip-size": "^7.0.0",
 		"npm-run-all": "^4.1.5",
 		"prettier": "^3.0.3",
 		"rehype-accessible-emojis": "^0.3.2",
@@ -70,7 +72,8 @@
 		"prepare": "simple-git-hooks",
 		"prettify:typedoc": "prettier --ignore-path=.prettierignore --log-level=warn --write './docs/.typedoc/**/*.md'",
 		"publish": "pnpm --recursive publish",
-		"test": "c8 pnpm --recursive test"
+		"test": "c8 pnpm --recursive test",
+		"update:sizes": "node ./update-sizes.js"
 	},
 	"sideEffects": false,
 	"simple-git-hooks": {

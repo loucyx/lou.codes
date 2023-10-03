@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/window-open-promise",
 	"description": "🪟 Promised Window.open();",
-	"version": "5.1.42",
+	"version": "5.1.43",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -54,6 +54,7 @@
 		"test": "NODE_OPTIONS='--loader tsx --no-warnings' pnpm exec test"
 	},
 	"sideEffects": false,
+	"size": "0.69",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

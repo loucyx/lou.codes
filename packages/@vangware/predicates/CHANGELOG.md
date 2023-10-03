@@ -1,5 +1,18 @@
 # Change log
 
+## 2.2.0
+
+### Minor Changes
+
+-   ✨ add `asyncIteratorSymbol` and `iteratorSymbol` to make bundling and
+    minifying better.
+
+### Patch Changes
+
+-   📝 update to include gzip size.
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.15`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.1`
+
 ## 2.1.36
 
 ### Patch Changes

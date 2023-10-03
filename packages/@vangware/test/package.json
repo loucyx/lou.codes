@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/test",
 	"description": "✅ Equality test with enforced readability",
-	"version": "10.3.29",
+	"version": "10.3.30",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -54,6 +54,7 @@
 		"test": "NODE_OPTIONS='--loader tsx --no-warnings' node ./src/bin.ts"
 	},
 	"sideEffects": false,
+	"size": "4.05",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

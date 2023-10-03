@@ -1,5 +1,16 @@
 # Change log
 
+## 3.1.22
+
+### Patch Changes
+
+-   🏗️ update to use symbols from `@vangware/predicates` and `mutate` from
+    `@vangware/utils`.
+-   📝 update to include gzip size.
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.0`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.1`
+-   ⬆️ upgrade `@vangware/utils` to `v10.1.23`
+
 ## 3.1.21
 
 ### Patch Changes

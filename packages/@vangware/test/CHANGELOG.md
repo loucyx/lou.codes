@@ -1,5 +1,13 @@
 # Change log
 
+## 10.3.30
+
+### Patch Changes
+
+-   📝 update to include gzip size.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.1`
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.31`
+
 ## 10.3.29
 
 ### Patch Changes

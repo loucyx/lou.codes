@@ -2,6 +2,7 @@
 
 ![Coverage][coverage-badge] ![License][license-badge]
 ![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]
+![Size][size-badge]
 
 🖇️ Util to help with the [paired hook pattern][article].
 
@@ -144,3 +145,5 @@ Import `react-pair` using [esm.sh][esm.sh], and use it directly:
 	https://img.shields.io/npm/v/react-pair.svg?style=for-the-badge&labelColor=666&color=0a8
 [open-issues-badge]:
 	https://img.shields.io/github/issues/vangware/libraries.svg?style=for-the-badge&labelColor=666&color=0a8
+[size-badge]:
+	https://img.shields.io/badge/dynamic/json?style=for-the-badge&label=Size&labelColor=666&color=0a8&suffix=KiB&query=%24.size&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvangware%2Flibraries%2Fmain%2Fpackages%2Freact-pair%2Fpackage.json

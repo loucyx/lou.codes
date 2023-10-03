@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/types",
 	"description": "🏷️ Vangware shared types",
-	"version": "6.3.0",
+	"version": "6.3.1",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -52,6 +52,7 @@
 		"updater": "tsx ./src/updater/index.ts"
 	},
 	"sideEffects": false,
+	"size": "0.00",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

@@ -1,5 +1,14 @@
 # Change log
 
+## 2.2.1
+
+### Patch Changes
+
+-   📝 fix typo with categories.
+-   📝 smaller badges.
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.16`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.2`
+
 ## 2.2.0
 
 ### Minor Changes

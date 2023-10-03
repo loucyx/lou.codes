@@ -269,19 +269,19 @@ it was pointed out in the previous section.
 [changelog]:
 	https://github.com/vangware/libraries/blob/main/packages/@vangware/test/CHANGELOG.md
 [coverage-badge]:
-	https://img.shields.io/coveralls/github/vangware/libraries.svg?style=for-the-badge&labelColor=666&color=0a8
+	https://img.shields.io/coveralls/github/vangware/libraries.svg?labelColor=666&color=0a8
 [coverage]: https://coveralls.io/github/vangware/libraries
 [create-package]: https://vangware.com/libraries/vangware_create_package/
 [documentation]: https://vangware.com/libraries/vangware_test/
 [esm.sh]: https://esm.sh
 [license-badge]:
-	https://img.shields.io/npm/l/@vangware/test.svg?style=for-the-badge&labelColor=666&color=0a8
+	https://img.shields.io/npm/l/@vangware/test.svg?labelColor=666&color=0a8
 [npm-version-badge]:
-	https://img.shields.io/npm/v/@vangware/test.svg?style=for-the-badge&labelColor=666&color=0a8
+	https://img.shields.io/npm/v/@vangware/test.svg?labelColor=666&color=0a8
 [open-issues-badge]:
-	https://img.shields.io/github/issues/vangware/libraries.svg?style=for-the-badge&labelColor=666&color=0a8
+	https://img.shields.io/github/issues/vangware/libraries.svg?labelColor=666&color=0a8
 [size-badge]:
-	https://img.shields.io/badge/dynamic/json?style=for-the-badge&label=Size&labelColor=666&color=0a8&suffix=KiB&query=%24.size&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvangware%2Flibraries%2Fmain%2Fpackages%2F%40vangware%2Ftest%2Fpackage.json
+	https://img.shields.io/badge/dynamic/json?label=size&labelColor=666&color=0a8&suffix=KiB&query=%24.size&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvangware%2Flibraries%2Fmain%2Fpackages%2F%40vangware%2Ftest%2Fpackage.json
 [riteway]: https://github.com/ericelliott/riteway
 [tsx]: https://npm.im/tsx
 [uvu]: https://github.com/lukeed/uvu

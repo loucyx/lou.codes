@@ -35,11 +35,11 @@ And follow the prompts.
 [changelog]:
 	https://github.com/vangware/libraries/blob/main/packages/@vangware/create-package/CHANGELOG.md
 [license-badge]:
-	https://img.shields.io/npm/l/@vangware/create-package.svg?style=for-the-badge&labelColor=666&color=0a8
+	https://img.shields.io/npm/l/@vangware/create-package.svg?labelColor=666&color=0a8
 [npm-version-badge]:
-	https://img.shields.io/npm/v/@vangware/create-package.svg?style=for-the-badge&labelColor=666&color=0a8
+	https://img.shields.io/npm/v/@vangware/create-package.svg?labelColor=666&color=0a8
 [open-issues-badge]:
-	https://img.shields.io/github/issues/vangware/libraries.svg?style=for-the-badge&labelColor=666&color=0a8
+	https://img.shields.io/github/issues/vangware/libraries.svg?labelColor=666&color=0a8
 [site]: https://vangware.com/libraries/vangware_create_package/
 [vangware]: https://vangware.com
 [vangware-configs]: https://vangware.com/libraries/vangware_configs/

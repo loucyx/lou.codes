@@ -3,7 +3,7 @@ import { isType } from "./isType.js";
 /**
  * `typeof` "bigint" alias.
  *
- * @category Primitive
+ * @category Primitives
  * @example
  * ```typescript
  * isBigInt(1n); // true

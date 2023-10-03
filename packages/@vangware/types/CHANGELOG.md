@@ -1,5 +1,11 @@
 # Change log
 
+## 6.3.2
+
+### Patch Changes
+
+-   📝 smaller badges.
+
 ## 6.3.1
 
 ### Patch Changes

@@ -65,6 +65,8 @@ void Promise.all(
 		"@vangware/cron",
 		"@vangware/iterables",
 		"@vangware/notify",
+		"@vangware/parsers",
+		"@vangware/predicates",
 		"@vangware/prompts",
 		"@vangware/test",
 		"@vangware/types",

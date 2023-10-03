@@ -3,7 +3,7 @@ import { isType } from "./isType.js";
 /**
  * `typeof` "boolean" alias.
  *
- * @category Primitive
+ * @category Primitives
  * @example
  * ```typescript
  * isBoolean(true); // true

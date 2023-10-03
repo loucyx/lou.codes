@@ -3,7 +3,7 @@ import type { Numeric } from "@vangware/types";
 /**
  * Takes a `start` and `end` and returns a boolean if `value` number or string is between them.
  *
- * @category Primitive
+ * @category Primitives
  * @example
  * ```typescript
  * const between0 = between(0);

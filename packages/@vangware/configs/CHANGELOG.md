@@ -1,5 +1,11 @@
 # Change log
 
+## 7.0.6
+
+### Patch Changes
+
+-   📝 smaller badges.
+
 ## 7.0.5
 
 ### Patch Changes

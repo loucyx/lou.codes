@@ -1,5 +1,13 @@
 # Change log
 
+## 10.3.31
+
+### Patch Changes
+
+-   📝 smaller badges.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.2`
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.32`
+
 ## 10.3.30
 
 ### Patch Changes

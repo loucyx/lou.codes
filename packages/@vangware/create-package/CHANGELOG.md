@@ -1,5 +1,14 @@
 # Change log
 
+## 1.7.10
+
+### Patch Changes
+
+-   📝 smaller badges.
+-   ⬆️ upgrade `@vangware/prompts` to `v2.2.11`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.2`
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.32`
+
 ## 1.7.9
 
 ### Patch Changes

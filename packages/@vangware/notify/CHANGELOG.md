@@ -1,5 +1,15 @@
 # Change log
 
+## 1.0.12
+
+### Patch Changes
+
+-   📝 smaller badges.
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.1`
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.23`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.2`
+-   ⬆️ upgrade `@vangware/utils` to `v10.1.24`
+
 ## 1.0.11
 
 ### Patch Changes

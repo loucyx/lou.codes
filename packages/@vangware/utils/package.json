@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/utils",
 	"description": "⚒️ Vangware curried functional utils",
-	"version": "10.1.22",
+	"version": "10.1.23",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -57,6 +57,7 @@
 		"test": "NODE_OPTIONS='--loader tsx --no-warnings' pnpm exec test"
 	},
 	"sideEffects": false,
+	"size": "1.43",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

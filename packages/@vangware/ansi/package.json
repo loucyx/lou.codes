@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/ansi",
 	"description": "📟 Functional CLI ANSI formatter",
-	"version": "6.3.30",
+	"version": "6.3.31",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -49,6 +49,7 @@
 		"test": "NODE_OPTIONS='--loader tsx --no-warnings' node --test ./tests/*.test.ts"
 	},
 	"sideEffects": false,
+	"size": "1.03",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

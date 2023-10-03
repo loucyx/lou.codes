@@ -1,4 +1,5 @@
 import { has } from "./has.js";
+import { asyncIteratorSymbol } from "./symbols.js";
 
 /**
  * Check if given object has the `Symbol.asyncIterator` symbol.
@@ -13,4 +14,4 @@ import { has } from "./has.js";
  * @returns `true` when given object has the `Symbol.asyncIterator` symbol,
  * `false` otherwise.
  */
-export const hasAsyncIteratorSymbol = has(Symbol.asyncIterator);
+export const hasAsyncIteratorSymbol = has(asyncIteratorSymbol);

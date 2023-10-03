@@ -1,4 +1,8 @@
-import { isIterable } from "@vangware/predicates";
+import {
+	asyncIteratorSymbol,
+	isIterable,
+	iteratorSymbol,
+} from "@vangware/predicates";
 import type { Function } from "@vangware/types";
 import type { IsomorphicGeneratorFunction } from "./types/IsomorphicGeneratorFunction.js";
 import type { ReadOnlyAsyncIterableIterator } from "./types/ReadOnlyAsyncIterableIterator.js";
@@ -39,7 +43,7 @@ export const createIterableIterator = <
 
 	return {
 		...generator,
-		[Symbol[isIterable(generator) ? "iterator" : "asyncIterator"]]:
+		[isIterable(generator) ? iteratorSymbol : asyncIteratorSymbol]:
 			generatorFunction,
 	} as GeneratorFunction extends IsomorphicGeneratorFunction<infer Item>
 		? GeneratorFunction extends Function<never, ReadOnlyAsyncIterator<Item>>

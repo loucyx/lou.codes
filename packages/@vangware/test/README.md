@@ -2,6 +2,7 @@
 
 ![Coverage][coverage-badge] ![License][license-badge]
 ![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]
+![Size][size-badge]
 
 ✅ Equality test with enforced readability, based on the concept of
 [RITEway][riteway] and inspired by [uvu][uvu].
@@ -279,6 +280,8 @@ it was pointed out in the previous section.
 	https://img.shields.io/npm/v/@vangware/test.svg?style=for-the-badge&labelColor=666&color=0a8
 [open-issues-badge]:
 	https://img.shields.io/github/issues/vangware/libraries.svg?style=for-the-badge&labelColor=666&color=0a8
+[size-badge]:
+	https://img.shields.io/badge/dynamic/json?style=for-the-badge&label=Size&labelColor=666&color=0a8&suffix=KiB&query=%24.size&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvangware%2Flibraries%2Fmain%2Fpackages%2F%40vangware%2Ftest%2Fpackage.json
 [riteway]: https://github.com/ericelliott/riteway
 [tsx]: https://npm.im/tsx
 [uvu]: https://github.com/lukeed/uvu

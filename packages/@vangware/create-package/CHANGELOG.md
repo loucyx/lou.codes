@@ -1,5 +1,14 @@
 # Change log
 
+## 1.7.9
+
+### Patch Changes
+
+-   📝 update to include gzip size.
+-   ⬆️ upgrade `@vangware/prompts` to `v2.2.10`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.1`
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.31`
+
 ## 1.7.8
 
 ### Patch Changes

@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/prompts",
 	"description": "⁉️ CLI interactive prompts",
-	"version": "2.2.9",
+	"version": "2.2.10",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -49,6 +49,7 @@
 		"test": "NODE_OPTIONS='--loader tsx --no-warnings' pnpm exec test"
 	},
 	"sideEffects": false,
+	"size": "0.18",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

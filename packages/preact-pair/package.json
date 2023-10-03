@@ -1,7 +1,7 @@
 {
 	"name": "preact-pair",
 	"description": "🖇️ Util to help with the paired hook pattern",
-	"version": "1.0.47",
+	"version": "1.0.48",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -12,7 +12,8 @@
 		"url": "https://github.com/vangware/libraries/issues"
 	},
 	"dependencies": {
-		"@vangware/types": "workspace:*"
+		"@vangware/types": "workspace:*",
+		"@vangware/utils": "workspace:*"
 	},
 	"devDependencies": {
 		"preact": "^10.17.1",
@@ -58,6 +59,7 @@
 		"test": "NODE_OPTIONS='--loader tsx --no-warnings' pnpm exec test"
 	},
 	"sideEffects": false,
+	"size": "0.12",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

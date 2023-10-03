@@ -1,5 +1,14 @@
 # Change log
 
+## 5.1.43
+
+### Patch Changes
+
+-   📝 update to include gzip size.
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.0`
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.22`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.1`
+
 ## 5.1.42
 
 ### Patch Changes

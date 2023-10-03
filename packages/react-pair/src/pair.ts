@@ -1,4 +1,5 @@
 import type { Function } from "@vangware/types";
+import { mutate } from "@vangware/utils";
 import type { FunctionComponent } from "react";
 import type { PairedComponentProperties } from "./PairedComponentProperties.js";
 
@@ -39,12 +40,7 @@ import type { PairedComponentProperties } from "./PairedComponentProperties.js";
  * @param hook Hook to be paired.
  * @returns Component that expects a function as children with the paired hook.
  */
-export const pair = <Hook extends Function>(
-	hook: Hook,
-): FunctionComponent<PairedComponentProperties<Hook>> =>
-	Object.assign(
-		(({ children }) => children(hook)) as FunctionComponent<
-			PairedComponentProperties<Hook>
-		>,
-		{ displayName: `paired(${hook.name})` },
-	);
+export const pair = <Hook extends Function>(hook: Hook) =>
+	mutate({ displayName: `paired(${hook.name})` })(({ children }) =>
+		children(hook),
+	) as FunctionComponent<PairedComponentProperties<Hook>>;

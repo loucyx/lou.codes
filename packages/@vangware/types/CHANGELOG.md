@@ -1,5 +1,11 @@
 # Change log
 
+## 6.3.1
+
+### Patch Changes
+
+-   📝 update to include gzip size.
+
 ## 6.3.0
 
 ### Minor Changes

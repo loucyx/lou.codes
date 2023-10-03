@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/iterables",
 	"description": "🔁 Iterable and AsyncIterable utils",
-	"version": "3.1.21",
+	"version": "3.1.22",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -54,6 +54,7 @@
 		"test": "NODE_OPTIONS='--loader tsx --no-warnings' pnpm exec test"
 	},
 	"sideEffects": false,
+	"size": "1.44",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

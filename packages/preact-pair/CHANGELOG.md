@@ -1,5 +1,14 @@
 # Change log
 
+## 1.0.48
+
+### Patch Changes
+
+-   📝 update to include gzip size.
+-   🏗️ update to use `mutate` from `@vangware/utils`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.1`
+-   ⬆️ upgrade `@vangware/utils` to `v10.1.23`
+
 ## 1.0.47
 
 ### Patch Changes

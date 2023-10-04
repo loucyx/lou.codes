@@ -10,3 +10,10 @@ export const asyncIterateArray = async function* <Item>(
 export const iterateArray = function* <Item>(array: ReadOnlyArray<Item>) {
 	yield* array;
 };
+
+export const infiniteIterable = function* <Item>(item: Item) {
+	// eslint-disable-next-line functional/no-loop-statements, @typescript-eslint/no-unnecessary-condition
+	while (true) {
+		yield item;
+	}
+};

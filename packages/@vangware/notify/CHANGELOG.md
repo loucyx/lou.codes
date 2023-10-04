@@ -1,5 +1,11 @@
 # Change log
 
+## 1.0.13
+
+### Patch Changes
+
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.24`
+
 ## 1.0.12
 
 ### Patch Changes

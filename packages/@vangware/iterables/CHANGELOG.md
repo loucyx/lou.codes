@@ -1,5 +1,11 @@
 # Change log
 
+## 3.1.24
+
+### Patch Changes
+
+-   🐛 fix bug with take and infinite iterables.
+
 ## 3.1.23
 
 ### Patch Changes

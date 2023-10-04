@@ -1,5 +1,11 @@
 # Change log
 
+## 10.3.32
+
+### Patch Changes
+
+-   📝 update docs removing the browser section (for now)
+
 ## 10.3.31
 
 ### Patch Changes

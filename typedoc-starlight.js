@@ -104,6 +104,12 @@ const packageNameToTitle = packageName =>
 		)
 		.join(" ");
 
+const excluded = [
+	"@vangware/create-package",
+	"@vangware/test",
+	"@vangware/types",
+];
+
 /**
  * @param {{
  * 	readonly description: string;
@@ -112,7 +118,10 @@ const packageNameToTitle = packageName =>
  */
 const frontMatter = ({ description, title }) => `---
 description: "${description}"
-head:
+${
+	excluded.includes(title)
+		? ""
+		: `head:
     - attrs:
           defer: true
           type: module
@@ -121,7 +130,8 @@ head:
           Object.assign(globalThis, library);
           console.log("${title} loaded in globalThis");
       tag: script
-sidebar:
+`
+}sidebar:
     label: "${packageNameToTitle(title)}"
 title: "${packageNameToTitle(title)} by Vangware"
 ---`;

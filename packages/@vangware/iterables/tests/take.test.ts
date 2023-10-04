@@ -2,7 +2,7 @@ import type { Tests } from "@vangware/test";
 import type { ReadOnlyArray } from "@vangware/types";
 import { iterableToArray } from "../src/iterableToArray.js";
 import { take } from "../src/take.js";
-import { asyncIterateArray } from "./utils.js";
+import { asyncIterateArray, infiniteIterable } from "./utils.js";
 
 const take2 = take(2);
 const takeNone = take(0);
@@ -47,5 +47,17 @@ export default [
 		received: () =>
 			iterableToArray(takeAll(asyncIterateArray([0, 1, 2, 3, 4]))),
 		wanted: () => [0, 1, 2, 3, 4],
+	},
+	{
+		given: "an iterable of infinite values and a take(2)",
+		must: "return a 2 items without hanging",
+		received: () => iterableToArray(take2(infiniteIterable(0))),
+		wanted: () => [0, 0],
+	},
+	{
+		given: "an iterable of infinite values and a take(0)",
+		must: "return a no items without hanging",
+		received: () => iterableToArray(takeNone(infiniteIterable(0))),
+		wanted: () => [],
 	},
 ] satisfies Tests<ReadOnlyArray<number>>;

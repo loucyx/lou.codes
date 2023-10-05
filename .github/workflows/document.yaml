@@ -22,11 +22,13 @@ jobs:
               uses: pnpm/action-setup@v2
               with:
                   version: 8
-                  run_install:
-                      - recursive: true
+                  run_install: true
 
             - name: Compile code
               run: pnpm compile
+
+            - name: Install documentation dependencies
+              run: cd ./docs && pnpm install
 
             - name: Generate Documentation
               run: pnpm document

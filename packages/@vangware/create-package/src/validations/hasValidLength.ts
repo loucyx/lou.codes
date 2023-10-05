@@ -4,4 +4,4 @@ export const hasValidLength =
 	(minimum: number) => (maximum: number) => (value: string) =>
 		value.length >= minimum && value.length <= maximum
 			? ""
-			: foregroundRed`"${value}" should be between ${minimum} and ${maximum} characters long`;
+			: foregroundRed`"${value}" must be between ${minimum} and ${maximum} characters long`;

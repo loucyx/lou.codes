@@ -2,7 +2,7 @@ import type { Function, Unary } from "@vangware/types";
 import type { h } from "preact";
 
 /**
- * Function that receives the paired hook and should return a `VNode`.
+ * Function that receives the paired hook and must return a `VNode`.
  *
  * @category Internal
  */

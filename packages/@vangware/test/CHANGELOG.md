@@ -1,5 +1,12 @@
 # Change log
 
+## 10.3.33
+
+### Patch Changes
+
+-   ⬆️ upgrade `@vangware/types` to `v6.3.3`
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.33`
+
 ## 10.3.32
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # Change log
 
+## 6.3.3
+
+### Patch Changes
+
+-   📝 small JSDocs improvements.
+
 ## 6.3.2
 
 ### Patch Changes

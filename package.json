@@ -16,13 +16,13 @@
 		"@vangware/test": "workspace:*"
 	},
 	"devDependencies": {
-		"@astrojs/prefetch": "^0.4.0",
+		"@astrojs/prefetch": "^0.4.1",
 		"@astrojs/starlight": "^0.10.4",
 		"@astrojs/starlight-tailwind": "^2.0.0",
-		"@astrojs/tailwind": "^5.0.0",
+		"@astrojs/tailwind": "^5.0.1",
 		"@changesets/cli": "^2.26.2",
 		"@types/node": "^20.8.2",
-		"astro": "^3.2.2",
+		"astro": "^3.2.3",
 		"c8": "^8.0.1",
 		"cpy-cli": "^5.0.0",
 		"esbuild": "^0.19.4",

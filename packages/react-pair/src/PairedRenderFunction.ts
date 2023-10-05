@@ -2,7 +2,7 @@ import type { Function, Unary } from "@vangware/types";
 import type { createElement } from "react";
 
 /**
- * Function that receives the paired hook and should return a `ReactElement`.
+ * Function that receives the paired hook and must return a `ReactElement`.
  *
  * @category Internal
  */

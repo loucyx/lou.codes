@@ -1,5 +1,13 @@
 # Change log
 
+## 3.0.52
+
+### Patch Changes
+
+-   📝 small JSDocs improvements.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.3`
+-   ⬆️ upgrade `@vangware/utils` to `v10.1.25`
+
 ## 3.0.51
 
 ### Patch Changes

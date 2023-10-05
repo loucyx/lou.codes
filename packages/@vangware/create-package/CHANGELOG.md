@@ -1,5 +1,14 @@
 # Change log
 
+## 1.7.11
+
+### Patch Changes
+
+-   📝 small JSDocs improvements.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.3`
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.33`
+-   ⬆️ upgrade `@vangware/prompts` to `v2.2.12`
+
 ## 1.7.10
 
 ### Patch Changes

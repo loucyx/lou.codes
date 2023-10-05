@@ -1,7 +1,7 @@
 {
 	"name": "preact-pair",
 	"description": "🖇️ Util to help with the paired hook pattern",
-	"version": "1.0.49",
+	"version": "1.0.50",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -16,8 +16,8 @@
 		"@vangware/utils": "workspace:*"
 	},
 	"devDependencies": {
-		"preact": "^10.17.1",
-		"preact-render-to-string": "^6.2.1"
+		"preact": "^10.18.1",
+		"preact-render-to-string": "^6.2.2"
 	},
 	"engines": {
 		"node": ">=20",

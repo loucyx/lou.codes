@@ -1,7 +1,7 @@
 {
 	"name": "react-pair",
 	"description": "🖇️ Util to help with the paired hook pattern",
-	"version": "3.0.50",
+	"version": "3.0.51",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -16,8 +16,8 @@
 		"@vangware/utils": "workspace:*"
 	},
 	"devDependencies": {
-		"@types/react": "^18.2.22",
-		"@types/react-dom": "^18.2.7",
+		"@types/react": "^18.2.25",
+		"@types/react-dom": "^18.2.10",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},

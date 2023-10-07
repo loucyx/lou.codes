@@ -1,5 +1,11 @@
 # Change log
 
+## 6.3.4
+
+### Patch Changes
+
+-   🔧 remove types field from `package.json`, it is inferred automatically.
+
 ## 6.3.3
 
 ### Patch Changes

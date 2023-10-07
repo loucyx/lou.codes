@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/test",
 	"description": "✅ Equality test with enforced readability",
-	"version": "10.3.33",
+	"version": "10.3.34",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -55,6 +55,5 @@
 	},
 	"sideEffects": false,
 	"size": "4.05",
-	"type": "module",
-	"types": "./dist/index.d.ts"
+	"type": "module"
 }

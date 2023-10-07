@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/window-open-promise",
 	"description": "🪟 Promised Window.open();",
-	"version": "5.1.47",
+	"version": "5.1.48",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -55,6 +55,5 @@
 	},
 	"sideEffects": false,
 	"size": "0.69",
-	"type": "module",
-	"types": "./dist/index.d.ts"
+	"type": "module"
 }

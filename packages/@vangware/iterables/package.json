@@ -54,6 +54,6 @@
 		"test": "NODE_OPTIONS='--loader tsx --no-warnings' pnpm exec test"
 	},
 	"sideEffects": false,
-	"size": "1.44",
+	"size": "1.42",
 	"type": "module"
 }

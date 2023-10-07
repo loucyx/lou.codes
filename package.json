@@ -62,7 +62,7 @@
 	},
 	"scripts": {
 		"clean": "pnpm --recursive --parallel clean",
-		"compile": "pnpm --recursive compile",
+		"compile": "pnpm --recursive compile && pnpm update:sizes",
 		"document": "run-s --print-label document:typedoc prettify:typedoc document:typedoc-patch document:starlight",
 		"document:starlight": "cd docs && astro build",
 		"document:typedoc": "typedoc",

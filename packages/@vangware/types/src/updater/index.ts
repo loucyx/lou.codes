@@ -41,7 +41,9 @@ export type HTMLElementTagGlobalAttributes = ReadOnlyRecord<string, string> & {$
 	)}};
 `,
 )
+	// eslint-disable-next-line no-console
 	.then(() => console.log("HTMLElementTagGlobalAttributes.ts updated."))
+	// eslint-disable-next-line no-console
 	.catch(console.error);
 
 writeFile(
@@ -86,5 +88,7 @@ export type HTMLElementTagAttributeMap = ReadOnlyRecord<
 `,
 	{ encoding: "utf-8" },
 )
+	// eslint-disable-next-line no-console
 	.then(() => console.log("HTMLElementTagAttributeMap.ts updated."))
+	// eslint-disable-next-line no-console
 	.catch(console.error);

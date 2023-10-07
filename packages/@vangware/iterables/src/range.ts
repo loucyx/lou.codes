@@ -26,13 +26,17 @@ export const range =
 			if (from < to) {
 				// eslint-disable-next-line functional/no-loop-statements
 				while (current + (step as number) <= to) {
-					yield (current += step as number);
+					yield (current += step as number) as Step extends bigint
+						? bigint
+						: number;
 				}
 				// eslint-disable-next-line functional/no-conditional-statements
 			} else {
 				// eslint-disable-next-line functional/no-loop-statements
 				while (current - (step as number) >= to) {
-					yield (current -= step as number);
+					yield (current -= step as number) as Step extends bigint
+						? bigint
+						: number;
 				}
 			}
 		});

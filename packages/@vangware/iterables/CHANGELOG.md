@@ -1,5 +1,11 @@
 # Change log
 
+## 3.1.26
+
+### Patch Changes
+
+-   ⚡ small optimizations.
+
 ## 3.1.25
 
 ### Patch Changes

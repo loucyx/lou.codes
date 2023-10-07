@@ -1,5 +1,14 @@
 # Change log
 
+## 1.7.12
+
+### Patch Changes
+
+-   🔧 remove types field from `package.json`, it is inferred automatically.
+-   ⬆️ upgrade `@vangware/prompts` to `v2.2.13`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.4`
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.34`
+
 ## 1.7.11
 
 ### Patch Changes

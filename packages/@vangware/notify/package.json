@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/notify",
 	"description": "📣 Minimalistic Pub/Sub implementation",
-	"version": "1.0.15",
+	"version": "1.0.16",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -57,6 +57,5 @@
 	},
 	"sideEffects": false,
 	"size": "0.47",
-	"type": "module",
-	"types": "./dist/index.d.ts"
+	"type": "module"
 }

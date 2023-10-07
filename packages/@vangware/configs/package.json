@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/configs",
 	"description": "⚙️ Project configurations",
-	"version": "7.0.7",
+	"version": "7.0.8",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -110,6 +110,5 @@
 		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write '**/*.d.{ts,cts}'"
 	},
 	"sideEffects": false,
-	"type": "module",
-	"types": "./index.d.cts"
+	"type": "module"
 }

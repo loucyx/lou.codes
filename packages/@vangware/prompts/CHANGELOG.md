@@ -1,5 +1,12 @@
 # Change log
 
+## 2.2.13
+
+### Patch Changes
+
+-   🔧 remove types field from `package.json`, it is inferred automatically.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.4`
+
 ## 2.2.12
 
 ### Patch Changes

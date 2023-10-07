@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/parsers",
 	"description": "👁️‍🗨️ Parsers without nonsense",
-	"version": "1.4.17",
+	"version": "1.4.18",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -48,6 +48,5 @@
 	},
 	"sideEffects": false,
 	"size": "0.30",
-	"type": "module",
-	"types": "./dist/index.d.ts"
+	"type": "module"
 }

@@ -1,5 +1,14 @@
 # Change log
 
+## 3.1.27
+
+### Patch Changes
+
+-   🔧 remove types field from `package.json`, it is inferred automatically.
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.3`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.4`
+-   ⬆️ upgrade `@vangware/utils` to `v10.1.26`
+
 ## 3.1.26
 
 ### Patch Changes

@@ -33,8 +33,7 @@ export const initial = handleIsomorphicIterable(
 				// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 				next.done ? undefined : yield item.value;
 
-				// eslint-disable-next-line functional/no-expression-statements
-				mutate(next)(item);
+				void mutate(next)(item);
 			}
 		},
 )(
@@ -56,8 +55,7 @@ export const initial = handleIsomorphicIterable(
 				// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 				next.done ? undefined : yield item.value;
 
-				// eslint-disable-next-line functional/no-expression-statements
-				mutate(next)(item);
+				void mutate(next)(item);
 			}
 		},
 ) as <Iterable extends IsomorphicIterable>(

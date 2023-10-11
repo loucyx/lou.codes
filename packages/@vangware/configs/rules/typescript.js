@@ -3,16 +3,6 @@ import typescriptParser from "@typescript-eslint/parser";
 import { ERROR, OFF } from "./levels.js";
 
 /**
- * Types from native lib that are mutable and making them `readonly` is a pain.
- */
-const mutableLibTypes = /** @type {const} */ ([
-	"Element",
-	"Event",
-	"HTMLElement",
-	"Node",
-]).map(name => /** @type {const} */ ({ from: "lib", name }));
-
-/**
  * ESLint TypeScript rules.
  * @see [@typescript-eslint/eslint-plugin](https://npm.im/@typescript-eslint/eslint-plugin)
  */
@@ -88,10 +78,6 @@ export default Object.freeze([
 						Symbol: {
 							fixWith: "symbol",
 							message: "Use `symbol` instead.",
-						},
-						"{}": {
-							fixWith: "object",
-							message: "Use `object` instead.",
 						},
 					},
 				},
@@ -294,15 +280,8 @@ export default Object.freeze([
 			"@typescript-eslint/prefer-optional-chain": ERROR,
 			// In classes, private members should be read only.
 			"@typescript-eslint/prefer-readonly": ERROR,
-			// Immutability for the win!
-			"@typescript-eslint/prefer-readonly-parameter-types": [
-				ERROR,
-				{
-					allow: [...mutableLibTypes],
-					ignoreInferredTypes: true,
-					treatMethodsAsReadonly: true,
-				},
-			],
+			// Handled by `functional/prefer-immutable-types`.
+			"@typescript-eslint/prefer-readonly-parameter-types": OFF,
 			// Use `startsWith` and `endsWith` instead of the string index.
 			"@typescript-eslint/prefer-string-starts-ends-with": ERROR,
 			// Use `@ts-expect-error` instead of `@ts-ignore`.

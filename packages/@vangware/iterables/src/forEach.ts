@@ -19,13 +19,11 @@ export const forEach = <Item>(callback: Unary<Item, void>) =>
 	whenIsIterable(iterable => {
 		// eslint-disable-next-line functional/no-loop-statements
 		for (const item of iterable) {
-			// eslint-disable-next-line functional/no-expression-statements
 			callback(item as Item);
 		}
 	})(async (iterable: AsyncIterable<Item>) => {
 		// eslint-disable-next-line functional/no-loop-statements
 		for await (const item of iterable) {
-			// eslint-disable-next-line functional/no-expression-statements
 			callback(item);
 		}
 	}) as <Iterable extends IsomorphicIterable<Item>>(

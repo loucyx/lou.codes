@@ -56,7 +56,6 @@ const updateSize = packagePath => {
 		);
 };
 
-// eslint-disable-next-line functional/no-expression-statements
 void Promise.all(
 	[
 		"preact-pair",

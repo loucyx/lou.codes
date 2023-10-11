@@ -1,6 +1,6 @@
 import type { Maybe } from "@vangware/types";
-import { isCronMinutesValue } from "../index.js";
 import type { CronMinutesValue } from "../types/CronMinutesValue.js";
+import { isCronMinutesValue } from "../validations/isCronMinutesValue.js";
 
 /**
  * Parses `CronMinutesValue` into a string.

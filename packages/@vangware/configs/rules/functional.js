@@ -1,5 +1,5 @@
 import eslintPluginFunctional from "eslint-plugin-functional";
-import { ERROR, OFF, WARN } from "./levels.js";
+import { ERROR, WARN } from "./levels.js";
 
 /**
  * ESLint functional programming rules.
@@ -30,6 +30,8 @@ export default Object.freeze([
 						"\\s*yield",
 						// Assignments (handled by other rules)
 						"\\w+\\s*=\\s*.",
+						// Voided values
+						"\\s*void",
 					],
 					ignoreVoid: true,
 				},
@@ -45,8 +47,15 @@ export default Object.freeze([
 					ignoreInferredTypes: true,
 				},
 			],
-			// This is handled by @typescript-eslint/prefer-readonly-parameter-types
-			"functional/prefer-immutable-types": OFF,
+			// Shallow read-only parameters
+			"functional/prefer-immutable-types": [
+				ERROR,
+				{
+					enforcement: "None",
+					ignoreInferredTypes: true,
+					parameters: { enforcement: "ReadonlyShallow" },
+				},
+			],
 		},
 	}),
 ]);

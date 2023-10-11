@@ -1,5 +1,14 @@
 # Change log
 
+## 10.3.35
+
+### Patch Changes
+
+-   🚨 apply linting changes.
+-   🐛 fix bad import.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.5`
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.35`
+
 ## 10.3.34
 
 ### Patch Changes

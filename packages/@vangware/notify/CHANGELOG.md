@@ -1,5 +1,14 @@
 # Change log
 
+## 1.0.17
+
+### Patch Changes
+
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.28`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.5`
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.4`
+-   ⬆️ upgrade `@vangware/utils` to `v10.1.27`
+
 ## 1.0.16
 
 ### Patch Changes

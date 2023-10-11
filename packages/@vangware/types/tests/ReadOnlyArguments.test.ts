@@ -1,11 +1,10 @@
 import type { ReadOnlyArguments } from "../src/ReadOnlyArguments.js";
 
-// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
-const testFunction = (_foo: string, _bar: { foo: string }) => undefined;
+// eslint-disable-next-line functional/no-return-void, functional/prefer-immutable-types
+const testFunction = (_foo: string, _bar: { foo: string }): void => undefined;
 
 type TestFunctionArguments = ReadOnlyArguments<typeof testFunction>;
 
-// eslint-disable-next-line functional/no-expression-statements
 testFunction(...(["test", { foo: "bar" }] as TestFunctionArguments));
 
 export const wrongFunction = (

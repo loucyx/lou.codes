@@ -1,5 +1,13 @@
 # Change log
 
+## 3.0.55
+
+### Patch Changes
+
+-   ⬆️ dependency upgrade.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.5`
+-   ⬆️ upgrade `@vangware/utils` to `v10.1.27`
+
 ## 3.0.54
 
 ### Patch Changes

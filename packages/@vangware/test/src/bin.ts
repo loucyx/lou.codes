@@ -21,13 +21,12 @@ const testsStringsIterable = runAndStringifyTests(testsImportsIterable);
 
 // eslint-disable-next-line functional/no-loop-statements
 for await (const testString of testsStringsIterable) {
-	// eslint-disable-next-line no-console, functional/no-expression-statements
+	// eslint-disable-next-line no-console
 	console.log(testString);
 	hasFailedTests ||= testString === FAILED_TESTS;
 }
 
-// eslint-disable-next-line functional/no-expression-statements
-exit(hasFailedTests ? 1 : 0);
+void exit(hasFailedTests ? 1 : 0);
 
 // eslint-disable-next-line capitalized-comments
 /* c8 ignore end */

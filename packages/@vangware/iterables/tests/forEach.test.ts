@@ -7,7 +7,7 @@ const forEachTest = <Item>(iterable: Iterable<Item>) => {
 	// eslint-disable-next-line functional/no-let, functional/prefer-readonly-type
 	const output: Array<Item> = [];
 
-	// eslint-disable-next-line functional/immutable-data, functional/no-expression-statements
+	// eslint-disable-next-line functional/immutable-data
 	forEach((item: Item) => output.push(item))(iterable);
 
 	return output;

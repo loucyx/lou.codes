@@ -1,5 +1,14 @@
 # Change log
 
+## 7.1.0
+
+### Minor Changes
+
+-   ⬆️ dependency upgrade.
+-   🔧 Remove `@typescript-eslint/prefer-readonly-parameter-types`.
+-   🔧 Add `functional/prefer-immutable-types`.
+-   🔧 update TypeScript rules to stop replacing `{}` with `object`
+
 ## 7.0.8
 
 ### Patch Changes

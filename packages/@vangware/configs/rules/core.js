@@ -164,6 +164,8 @@ export default Object.freeze(
 			"no-undef": OFF,
 			// Disallow initializing to `undefined`
 			"no-undef-init": ERROR,
+			// Handled by Prettier
+			"no-unexpected-multiline": OFF,
 			// Disallow unmodified conditions of loops
 			"no-unmodified-loop-condition": ERROR,
 			// Disallow ternaries like: condition ? true : false

@@ -191,5 +191,5 @@ const writeFormattedDocs = () =>
 		)
 		.then(() => "Docs written");
 
-// eslint-disable-next-line functional/no-expression-statements, no-console
+// eslint-disable-next-line no-console
 void writeFormattedDocs().then(console.log).catch(console.error);

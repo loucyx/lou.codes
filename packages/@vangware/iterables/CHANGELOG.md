@@ -1,5 +1,14 @@
 # Change log
 
+## 3.1.28
+
+### Patch Changes
+
+-   🚨 apply linting changes.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.5`
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.4`
+-   ⬆️ upgrade `@vangware/utils` to `v10.1.27`
+
 ## 3.1.27
 
 ### Patch Changes

@@ -52,8 +52,8 @@ export const runAndStringifyTests = async function* (
 
 		// eslint-disable-next-line functional/no-conditional-statements
 		if (result.differences !== undefined) {
-			// eslint-disable-next-line functional/no-expression-statements, functional/immutable-data
-			fails.push([url, resultString]);
+			// eslint-disable-next-line functional/immutable-data
+			void fails.push([url, resultString]);
 		}
 
 		yield resultString;

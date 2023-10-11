@@ -1,5 +1,11 @@
 # Change log
 
+## 6.3.5
+
+### Patch Changes
+
+-   🚨 apply linting changes.
+
 ## 6.3.4
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import deepDiff from "deep-diff";
-import type { Differences } from "./index.js";
+import type { Differences } from "./types/Differences.js";
 import type { Test } from "./types/Test.js";
 import type { TestResult } from "./types/TestResult.js";
 

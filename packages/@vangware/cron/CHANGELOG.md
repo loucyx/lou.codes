@@ -1,5 +1,15 @@
 # Change log
 
+## 5.1.49
+
+### Patch Changes
+
+-   🐛 fix bad import.
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.28`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.5`
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.19`
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.4`
+
 ## 5.1.48
 
 ### Patch Changes

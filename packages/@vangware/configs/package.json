@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/configs",
 	"description": "⚙️ Project configurations",
-	"version": "7.0.8",
+	"version": "7.1.0",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -18,10 +18,10 @@
 		"@changesets/types": "^5.2.1",
 		"@eslint/js": "^8.51.0",
 		"@types/eslint": "^8.44.3",
-		"@types/node": "^20.8.3",
-		"@typescript-eslint/eslint-plugin": "^6.7.4",
-		"@typescript-eslint/parser": "^6.7.4",
-		"@typescript-eslint/type-utils": "^6.7.4",
+		"@types/node": "^20.8.4",
+		"@typescript-eslint/eslint-plugin": "^6.7.5",
+		"@typescript-eslint/parser": "^6.7.5",
+		"@typescript-eslint/type-utils": "^6.7.5",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-import-resolver-node": "^0.3.9",
 		"eslint-plugin-functional": "6.0.0",
@@ -102,10 +102,10 @@
 	},
 	"scripts": {
 		"clean": "rimraf {index,rules/*,*.config,changelog,update-peers}.d.{ts,cts}",
-		"compile": "rimraf {index,rules/*,*.config,changelog,update-peers}.d.{ts,cts} && tsc",
+		"compile": "run-s clean && tsc",
 		"dependencies": "node ./update-peers.js",
 		"git:pre-push": "run-s --print-label clean lint",
-		"lint": "eslint .",
+		"lint": "eslint {./rules/*.js,./*.{js,cjs}}",
 		"prepublishOnly": "run-s --print-label clean compile prettify",
 		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write '**/*.d.{ts,cts}'"
 	},

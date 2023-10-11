@@ -9,7 +9,6 @@ import { cwd, exit } from "process";
 
 const packageJSONPath = resolve(cwd(), "package.json");
 
-// eslint-disable-next-line functional/no-expression-statements
 void readFile(packageJSONPath, "utf-8")
 	.then(JSON.parse)
 	.then(

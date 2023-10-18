@@ -1,62 +1,36 @@
-import type { ReadOnlyArray } from "@vangware/types";
+import type {
+	CreateDifference,
+	DeleteDifference,
+	UpdateDifference,
+} from "@vangware/diff";
+import type { EXCEPTION } from "../constants.js";
 
 /**
- * Difference object from `deep-diff`, with some customizations on top.
+ * Difference object from `@vangware/diff`, with an added "EXCEPTION" kind.
  *
  * @category Test
  * @example
  * ```typescript
- * const difference: Difference<string> = {
- * 	kind: "E",
+ * const difference: Difference = {
+ * 	kind: "UPDATE",
+ * 	left: "🟢",
  * 	path: ["🟢", "🟩"],
- * 	lhs: "🟢",
- * 	rhs: "🟩",
+ * 	right: "🟩",
  * };
  * ```
- * @see [deep-diff](https://npm.im/deep-diff)
+ * @see [CreateDifference](https://vangware.com/libraries/vangware_diff/#createdifference)
+ * @see [DeleteDifference](https://vangware.com/libraries/vangware_diff/#deletedifference)
+ * @see [UpdateDifference](https://vangware.com/libraries/vangware_diff/#updatedifference)
  *
  * @template Value Type of value being compared.
  */
-export type Difference<Value = unknown> =
-	| {
-			/** Array index. */
-			readonly index: number;
-			/** Difference item kind. */
-			readonly item: Difference<Value>;
-			/** Difference array kind. */
-			readonly kind: "A";
-			/** Difference path. */
-			readonly path?: ReadOnlyArray<string>;
-	  }
-	| {
-			/** Difference delete kind. */
-			readonly kind: "D";
-			/** Original value (left side). */
-			readonly lhs: Value;
-			/** Difference path. */
-			readonly path?: ReadOnlyArray<string>;
-	  }
-	| {
-			/** Difference edit kind. */
-			readonly kind: "E";
-			/** Original value (left side). */
-			readonly lhs: Value;
-			/** Difference path. */
-			readonly path?: ReadOnlyArray<string>;
-			/** New value (right side). */
-			readonly rhs: Value;
-	  }
-	| {
-			/** Difference new kind. */
-			readonly kind: "N";
-			/** Difference path. */
-			readonly path: ReadOnlyArray<string>;
-			/** New value (right side). */
-			readonly rhs: Value;
-	  }
+export type Difference =
+	| CreateDifference
+	| DeleteDifference
+	| UpdateDifference
 	| {
 			/** Error object or message. */
 			readonly error: unknown;
 			/** Difference exception kind. */
-			readonly kind: "X";
+			readonly kind: typeof EXCEPTION;
 	  };

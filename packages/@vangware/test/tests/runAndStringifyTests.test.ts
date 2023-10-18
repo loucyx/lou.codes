@@ -1,8 +1,8 @@
 import { bold, foregroundBrightRed, underlined } from "@vangware/ansi";
 import type { ReadOnlyArray } from "@vangware/types";
+import { relativePath } from "../src/bin/relativePath.js";
+import { runAndStringifyTests } from "../src/bin/runAndStringifyTests.js";
 import { FAIL, FAILED_TESTS, PASS, TEST } from "../src/constants.js";
-import { relativePath } from "../src/relativePath.js";
-import { runAndStringifyTests } from "../src/runAndStringifyTests.js";
 import type { ReadOnlyURL } from "../src/types/ReadOnlyURL.js";
 import type { Tests } from "../src/types/Tests.js";
 import { iterableToArray } from "./utils.js";

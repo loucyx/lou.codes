@@ -3,30 +3,19 @@ import {
 	foregroundCyan,
 	foregroundRed,
 } from "@vangware/ansi";
+import { CREATE, DELETE, UPDATE } from "@vangware/diff";
+import { EXCEPTION } from "../src/constants.js";
 import { stringifyDifference } from "../src/stringifyDifference.js";
 import type { Tests } from "../src/types/Tests.js";
 
 export default [
 	{
-		given: "an array difference",
-		must: `return stringified differences`,
-		received: () =>
-			stringifyDifference({
-				index: 0,
-				item: { kind: "E", lhs: "🟢", rhs: "❌" },
-				kind: "A",
-				path: ["🟢"],
-			}),
-		wanted: () =>
-			`${foregroundCyan`🟢`}.${foregroundCyan`0`} has the wrong value. Wanted ${foregroundBrightRed`"🟢"`} but received ${foregroundBrightRed`"❌"`}.`,
-	},
-	{
 		given: "a deletion difference",
 		must: `return stringified difference`,
 		received: () =>
 			stringifyDifference({
-				kind: "D",
-				lhs: "🟢",
+				kind: DELETE,
+				left: "🟢",
 				path: ["🟢", "🟩"],
 			}),
 		wanted: () => `${foregroundCyan`🟢`}.${foregroundCyan`🟩`} is missing.`,
@@ -36,10 +25,10 @@ export default [
 		must: `return stringified difference`,
 		received: () =>
 			stringifyDifference({
-				kind: "E",
-				lhs: "🟢",
+				kind: UPDATE,
+				left: "🟢",
 				path: ["🟢", "🟩"],
-				rhs: "❌",
+				right: "❌",
 			}),
 		wanted: () =>
 			`${foregroundCyan`🟢`}.${foregroundCyan`🟩`} has the wrong value. Wanted ${foregroundBrightRed`"🟢"`} but received ${foregroundBrightRed`"❌"`}.`,
@@ -49,9 +38,9 @@ export default [
 		must: `return stringified difference`,
 		received: () =>
 			stringifyDifference({
-				kind: "N",
+				kind: CREATE,
 				path: ["🟢", "🟩"],
-				rhs: "🟢",
+				right: "🟢",
 			}),
 		wanted: () =>
 			`${foregroundCyan`🟢`}.${foregroundCyan`🟩`} was set with value ${foregroundBrightRed`"🟢"`}.`,
@@ -62,7 +51,7 @@ export default [
 		received: () =>
 			stringifyDifference({
 				error: new Error("❌"),
-				kind: "X",
+				kind: EXCEPTION,
 			}),
 		wanted: () => foregroundRed`there was an uncaught error: ❌.`,
 	},
@@ -72,7 +61,7 @@ export default [
 		received: () =>
 			stringifyDifference({
 				error: "❌",
-				kind: "X",
+				kind: EXCEPTION,
 			}),
 		wanted: () => foregroundRed`there was an uncaught error: ❌.`,
 	},

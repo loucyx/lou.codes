@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import deepDiff from "deep-diff";
+import { compare } from "@vangware/diff";
+import { EXCEPTION, UNKNOWN_ERROR } from "./constants.js";
 import type { Differences } from "./types/Differences.js";
 import type { Test } from "./types/Test.js";
 import type { TestResult } from "./types/TestResult.js";
@@ -27,25 +27,24 @@ import type { TestResult } from "./types/TestResult.js";
  * @returns A promise with a `TestResult` object.
  */
 export const test = <Value>({ given, must, received, wanted }: Test<Value>) =>
-	new Promise<Differences<Awaited<Value>>>(resolve =>
+	new Promise<Differences>(resolve =>
 		resolve(
-			Promise.all([wanted(), received()]).then(
-				([awaitedWanted, awaitedReceived]) =>
-					(deepDiff
-						.diff(awaitedWanted, awaitedReceived)
-						?.filter(
-							difference =>
-								difference.kind !== "N" ||
-								typeof difference.rhs !== "undefined",
-						) ?? []) as Differences<Awaited<Value>>,
-			),
+			Promise.all([wanted(), received()]).then(([left, right]) => [
+				...compare({ left, right }),
+			]),
 		),
 	)
 		.catch(
 			(error: unknown) =>
 				[
-					{ error: error ?? new Error("Unknown Error"), kind: "X" },
-				] as Differences<Awaited<Value>>,
+					{
+						error:
+							error instanceof Error
+								? `${error.name}: ${error.message}`
+								: error ?? UNKNOWN_ERROR,
+						kind: EXCEPTION,
+					},
+				] satisfies Differences,
 		)
 		.then(
 			differences =>
@@ -53,5 +52,5 @@ export const test = <Value>({ given, must, received, wanted }: Test<Value>) =>
 					...(differences.length > 0 ? { differences } : undefined),
 					given,
 					must,
-				}) as TestResult<Value>,
+				}) as TestResult,
 		);

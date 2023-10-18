@@ -1,3 +1,5 @@
+import { CREATE, UPDATE } from "@vangware/diff";
+import { EXCEPTION, UNKNOWN_ERROR } from "../src/constants.js";
 import { test } from "../src/test.js";
 import type { TestResult } from "../src/types/TestResult.js";
 import type { Tests } from "../src/types/Tests.js";
@@ -26,7 +28,7 @@ export default [
 				wanted: () => "🟩",
 			}),
 		wanted: () => ({
-			differences: [{ kind: "E", lhs: "🟩", rhs: "❌" }],
+			differences: [{ kind: UPDATE, left: "🟩", path: [], right: "❌" }],
 			given: "🟢",
 			must: "🟩",
 		}),
@@ -42,7 +44,7 @@ export default [
 				wanted: () => "🟩",
 			}),
 		wanted: () => ({
-			differences: [{ error: "❌", kind: "X" }],
+			differences: [{ error: "❌", kind: EXCEPTION }],
 			given: "🟢",
 			must: "🟩",
 		}),
@@ -61,7 +63,7 @@ export default [
 				wanted: () => "🟩",
 			}),
 		wanted: () => ({
-			differences: [{ error: new Error("❌"), kind: "X" }],
+			differences: [{ error: "Error: ❌", kind: EXCEPTION }],
 			given: "🟢",
 			must: "🟩",
 		}),
@@ -80,7 +82,7 @@ export default [
 				wanted: () => "🟩",
 			}),
 		wanted: () => ({
-			differences: [{ error: Error("Unknown Error"), kind: "X" }],
+			differences: [{ error: UNKNOWN_ERROR, kind: EXCEPTION }],
 			given: "🟢",
 			must: "🟩",
 		}),
@@ -96,7 +98,7 @@ export default [
 				wanted: () => ({}),
 			}),
 		wanted: () => ({
-			differences: [{ kind: "N", path: ["🟢"], rhs: "🟩" }],
+			differences: [{ kind: CREATE, path: ["🟢"], right: "🟩" }],
 			given: "🟢",
 			must: "🟩",
 		}),

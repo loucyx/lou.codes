@@ -1,5 +1,15 @@
 # Change log
 
+## 11.0.0
+
+### Major Changes
+
+-   🚚 Change `bin` location and move all `bin` related functions.
+-   📝 update `README.md` adding back browser instructions.
+-   ➖ remove `deep-diff`.
+-   ➕ add `@vangware/diff`.
+-   🏷️ update `Difference` matching `Difference` from `@vangware/diff`.
+
 ## 10.3.36
 
 ### Patch Changes

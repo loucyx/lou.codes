@@ -1,11 +1,11 @@
 import { underlined } from "@vangware/ansi";
 import type { IsomorphicIterable } from "@vangware/types";
-import { FAILED_TESTS, TEST } from "./constants.js";
+import { FAILED_TESTS, TEST } from "../constants.js";
+import { stringifyTest } from "../stringifyTest.js";
+import { test } from "../test.js";
+import type { ReadOnlyURL } from "../types/ReadOnlyURL.js";
+import type { TestTuple } from "../types/TestTuple.js";
 import { relativePath } from "./relativePath.js";
-import { stringifyTest } from "./stringifyTest.js";
-import { test } from "./test.js";
-import type { ReadOnlyURL } from "./types/ReadOnlyURL.js";
-import type { TestTuple } from "./types/TestTuple.js";
 
 /**
  * Run tests in given iterable of urls and test objects and return a string with

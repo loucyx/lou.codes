@@ -4,11 +4,11 @@
 /* c8 ignore start */
 import { argv, exit } from "node:process";
 import { pathToFileURL } from "node:url";
-import { FAILED_TESTS } from "./constants.js";
+import { FAILED_TESTS } from "../constants.js";
+import { testsImport } from "../testsImport.js";
 import { filterTestFilePaths } from "./filterTestFilePaths.js";
 import { getFilePaths } from "./getFilePaths.js";
 import { runAndStringifyTests } from "./runAndStringifyTests.js";
-import { testsImport } from "./testsImport.js";
 
 // eslint-disable-next-line functional/no-let
 let hasFailedTests = false;

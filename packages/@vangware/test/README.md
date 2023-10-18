@@ -49,7 +49,7 @@ And update `package.json`:
 ```json
 {
 	"scripts": {
-		"test": "NODE_OPTIONS='--loader tsx --no-warnings' test"
+		"test": "NODE_OPTIONS='--import tsx --no-warnings' test"
 	}
 }
 ```
@@ -86,7 +86,7 @@ And update `package.json`:
 ```json
 {
 	"scripts": {
-		"test": "NODE_OPTIONS='--loader tsx --no-warnings' c8 test"
+		"test": "NODE_OPTIONS='--import tsx --no-warnings' c8 test"
 	}
 }
 ```

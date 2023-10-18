@@ -32,7 +32,7 @@ export default ({
 				prepublishOnly: "run-s --print-label clean compile prettify",
 				prettify:
 					"prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'",
-				test: "NODE_OPTIONS='--loader tsx --no-warnings' pnpm exec test",
+				test: "NODE_OPTIONS='--import tsx --no-warnings' pnpm exec test",
 			},
 			sideEffects: false,
 			type: "module",

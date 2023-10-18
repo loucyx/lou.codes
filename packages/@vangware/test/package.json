@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/test",
 	"description": "✅ Equality test with enforced readability",
-	"version": "10.3.35",
+	"version": "10.3.36",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -13,13 +13,12 @@
 		"url": "https://github.com/vangware/libraries/issues"
 	},
 	"dependencies": {
-		"@types/deep-diff": "^1.0.3",
 		"@vangware/ansi": "workspace:*",
-		"@vangware/types": "workspace:*",
-		"deep-diff": "^1.0.2"
+		"@vangware/diff": "workspace:*",
+		"@vangware/types": "workspace:*"
 	},
 	"engines": {
-		"node": ">=20",
+		"node": ">=21",
 		"pnpm": ">=8"
 	},
 	"exports": {
@@ -54,6 +53,6 @@
 		"test": "NODE_OPTIONS='--loader tsx --no-warnings' node ./src/bin.ts"
 	},
 	"sideEffects": false,
-	"size": "4.05",
+	"size": "2.22",
 	"type": "module"
 }

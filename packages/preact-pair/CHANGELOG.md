@@ -1,5 +1,13 @@
 # Change log
 
+## 1.0.54
+
+### Patch Changes
+
+-   ⬆️ engine upgrade.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.6`
+-   ⬆️ upgrade `@vangware/utils` to `v10.1.28`
+
 ## 1.0.53
 
 ### Patch Changes

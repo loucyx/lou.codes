@@ -1,5 +1,14 @@
 # Change log
 
+## 10.3.36
+
+### Patch Changes
+
+-   ⬆️ engine upgrade.
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.36`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.6`
+-   ⬆️ upgrade `@vangware/diff` to `v1.0.1`
+
 ## 10.3.35
 
 ### Patch Changes

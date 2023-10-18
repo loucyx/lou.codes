@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/prompts",
 	"description": "⁉️ CLI interactive prompts",
-	"version": "2.2.14",
+	"version": "2.2.15",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -15,7 +15,7 @@
 		"@vangware/types": "workspace:*"
 	},
 	"engines": {
-		"node": ">=20",
+		"node": ">=21",
 		"pnpm": ">=8"
 	},
 	"exports": {

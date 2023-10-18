@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/parsers",
 	"description": "👁️‍🗨️ Parsers without nonsense",
-	"version": "1.4.19",
+	"version": "1.4.20",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -15,7 +15,7 @@
 		"@vangware/types": "workspace:*"
 	},
 	"engines": {
-		"node": ">=20",
+		"node": ">=21",
 		"pnpm": ">=8"
 	},
 	"exports": {

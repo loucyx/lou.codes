@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/create-package",
 	"description": "🚧 Vangware package scaffolder script",
-	"version": "1.7.13",
+	"version": "1.7.14",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -10,7 +10,7 @@
 	"bin": "./dist/index.js",
 	"bugs": {
 		"email": "issues@vangware.com",
-		"url": "https://github.com/vangware/create-package/issues"
+		"url": "https://github.com/vangware/libraries/issues"
 	},
 	"dependencies": {
 		"@vangware/ansi": "workspace:*",
@@ -18,7 +18,7 @@
 		"@vangware/types": "workspace:*"
 	},
 	"engines": {
-		"node": ">=20",
+		"node": ">=21",
 		"pnpm": ">=8"
 	},
 	"files": [
@@ -34,7 +34,7 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/vangware/create-package.git"
+		"url": "https://github.com/vangware/libraries.git"
 	},
 	"scripts": {
 		"clean": "rimraf ./dist",

@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/utils",
 	"description": "⚒️ Vangware curried functional utils",
-	"version": "10.1.27",
+	"version": "10.1.28",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -16,7 +16,7 @@
 		"@vangware/types": "workspace:*"
 	},
 	"engines": {
-		"node": ">=20",
+		"node": ">=21",
 		"pnpm": ">=8"
 	},
 	"exports": {

@@ -36,3 +36,17 @@ export const PASS = mix(foregroundBlack, backgroundGreen)`[PASS]`;
 export const FAILED_TESTS = foregroundRed`
 ================================= Failed tests =================================
 `;
+
+/**
+ * Exception difference kind.
+ *
+ * @category Internal
+ */
+export const EXCEPTION = "EXCEPTION";
+
+/**
+ * Unknown error.
+ *
+ * @category Internal
+ */
+export const UNKNOWN_ERROR = "Unknown Error";

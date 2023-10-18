@@ -1,6 +1,6 @@
 import { cwd } from "node:process";
 import { pathToFileURL } from "node:url";
-import type { ReadOnlyURL } from "./types/ReadOnlyURL.js";
+import type { ReadOnlyURL } from "../types/ReadOnlyURL.js";
 
 /** Cached CWD URL's href. */
 const { href: currentWorkingDirectory } = pathToFileURL(cwd());

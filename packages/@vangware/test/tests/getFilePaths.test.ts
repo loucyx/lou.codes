@@ -1,7 +1,7 @@
 import type { ReadOnly, ReadOnlyArray } from "@vangware/types";
 import { resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { getFilePaths } from "../src/getFilePaths.js";
+import { getFilePaths } from "../src/bin/getFilePaths.js";
 import type { ReadOnlyURL } from "../src/types/ReadOnlyURL.js";
 import type { Tests } from "../src/types/Tests.js";
 import { iterableToArray } from "./utils.js";

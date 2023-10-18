@@ -119,6 +119,24 @@ test({
 }).then(console.log);
 ```
 
+### 🌎 Browser
+
+Import `@vangware/test` using [esm.sh][esm.sh], and use it directly:
+
+```html
+<script type="module">
+	import { test } from "https://esm.sh/@vangware/test";
+	import { add } from "../src/add.js";
+
+	test({
+		given: "a 1 and a 2",
+		must: "return 3",
+		received: () => add(2)(1),
+		wanted: () => 3,
+	}).then(console.log);
+</script>
+```
+
 ## Writing tests
 
 ### TypeScript

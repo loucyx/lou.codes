@@ -9,16 +9,18 @@ import type { Difference } from "./Difference.js";
  * ```typescript
  * const differences: Differences<string> = [
  * 	{
- * 		kind: "E",
+ * 		kind: "UPDATE",
+ * 		left: "🟢",
  * 		path: ["🟢", "🟩"],
- * 		lhs: "🟢",
- * 		rhs: "🟩",
+ * 		right: "🟩",
  * 	}
  * ];
  * ```
- * @see [deep-diff](https://npm.im/deep-diff)
  * @see {@link Difference}
+ * @see [CreateDifference](https://vangware.com/libraries/vangware_diff/#createdifference)
+ * @see [DeleteDifference](https://vangware.com/libraries/vangware_diff/#deletedifference)
+ * @see [UpdateDifference](https://vangware.com/libraries/vangware_diff/#updatedifference)
  *
  * @template Value Type of values being compared.
  */
-export type Differences<Value = unknown> = ReadOnlyArray<Difference<Value>>;
+export type Differences = ReadOnlyArray<Difference>;

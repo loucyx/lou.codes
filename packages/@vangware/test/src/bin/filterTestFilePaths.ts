@@ -1,5 +1,5 @@
-import type { ReadOnlyURL } from "./types/ReadOnlyURL.js";
-import type { ReadOnlyURLs } from "./types/ReadOnlyURLs.js";
+import type { ReadOnlyURL } from "../types/ReadOnlyURL.js";
+import type { ReadOnlyURLs } from "../types/ReadOnlyURLs.js";
 
 /**
  * Takes an iterable of URLs and only yields the ones that finish with `.test.*`.

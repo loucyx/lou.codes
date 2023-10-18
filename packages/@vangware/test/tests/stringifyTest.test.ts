@@ -1,5 +1,5 @@
 import { bold, foregroundRed } from "@vangware/ansi";
-import { FAIL, PASS } from "../src/constants.js";
+import { EXCEPTION, FAIL, PASS } from "../src/constants.js";
 import { stringifyTest } from "../src/stringifyTest.js";
 import type { Tests } from "../src/types/Tests.js";
 
@@ -22,7 +22,7 @@ export default [
 		must: "return a FAIL string",
 		received: () =>
 			stringifyTest({
-				differences: [{ error: new Error("❌"), kind: "X" }],
+				differences: [{ error: new Error("❌"), kind: EXCEPTION }],
 				given: "🟢",
 				must: "🟩",
 			}),
@@ -35,8 +35,8 @@ export default [
 		received: () =>
 			stringifyTest({
 				differences: [
-					{ error: new Error("❌"), kind: "X" },
-					{ error: new Error("❌"), kind: "X" },
+					{ error: new Error("❌"), kind: EXCEPTION },
+					{ error: new Error("❌"), kind: EXCEPTION },
 				],
 				given: "🟢",
 				must: "🟩",

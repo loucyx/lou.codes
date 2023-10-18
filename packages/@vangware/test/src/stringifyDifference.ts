@@ -8,21 +8,18 @@ import type { Difference } from "./types/Difference.js";
  * @example
  * ```typescript
  * stringifyDifference({
- * 	kind: "D",
- * 	lhs: "🟢",
+ * 	kind: "DELETE",
+ * 	left: "🟢",
  * 	path: ["🟢", "🟩"],
  * }); // "🟢.🟩 is missing."
  *
  * stringifyDifference({
- * 	kind: "X",
+ * 	kind: "EXCEPTION",
  * 	error: "❌",
  * }); // "there was an uncaught error: ❌."
  * ```
  * @param difference Difference object.
  * @returns Formatted string.
  */
-export const stringifyDifference = <Value>({
-	kind,
-	...difference
-}: Difference<Value>) =>
+export const stringifyDifference = ({ kind, ...difference }: Difference) =>
 	stringifyDifferenceDictionary[kind](difference as never);

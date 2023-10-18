@@ -1,12 +1,15 @@
-export { FAIL, FAILED_TESTS, PASS, TEST } from "./constants.js";
-export { filterTestFilePaths } from "./filterTestFilePaths.js";
+export {
+	EXCEPTION,
+	FAIL,
+	FAILED_TESTS,
+	PASS,
+	TEST,
+	UNKNOWN_ERROR,
+} from "./constants.js";
 export { formatPropertyPath } from "./formatPropertyPath.js";
 export { formatValue } from "./formatValue.js";
 export { formatValueDictionary } from "./formatValueDictionary.js";
-export { getFilePaths } from "./getFilePaths.js";
 export { isTest } from "./isTest.js";
-export { relativePath } from "./relativePath.js";
-export { runAndStringifyTests } from "./runAndStringifyTests.js";
 export { stringifyDifference } from "./stringifyDifference.js";
 export { stringifyDifferenceDictionary } from "./stringifyDifferenceDictionary.js";
 export { stringifyTest } from "./stringifyTest.js";
@@ -19,6 +22,6 @@ export type { ReadOnlyURL } from "./types/ReadOnlyURL.js";
 export type { ReadOnlyURLs } from "./types/ReadOnlyURLs.js";
 export type { Test } from "./types/Test.js";
 export type { TestResult } from "./types/TestResult.js";
+export type { TestTuple } from "./types/TestTuple.js";
 export type { Tests } from "./types/Tests.js";
 export type { TestsImport } from "./types/TestsImport.js";
-export type { TestTuple } from "./types/TestTuple.js";

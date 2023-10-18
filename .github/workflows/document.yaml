@@ -13,10 +13,10 @@ jobs:
             - name: Use Checkout 4
               uses: actions/checkout@v4
 
-            - name: Use Node.js 20
+            - name: Use Node.js 21
               uses: actions/setup-node@v3
               with:
-                  node-version: 20
+                  node-version: 21
 
             - name: Use pnpm 8
               uses: pnpm/action-setup@v2

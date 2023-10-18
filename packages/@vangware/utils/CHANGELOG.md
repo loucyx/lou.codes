@@ -1,5 +1,13 @@
 # Change log
 
+## 10.1.28
+
+### Patch Changes
+
+-   ⬆️ engine upgrade.
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.5`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.6`
+
 ## 10.1.27
 
 ### Patch Changes

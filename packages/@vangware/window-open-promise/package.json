@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/window-open-promise",
 	"description": "🪟 Promised Window.open();",
-	"version": "5.1.49",
+	"version": "5.1.50",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -17,7 +17,7 @@
 		"@vangware/types": "workspace:*"
 	},
 	"engines": {
-		"node": ">=20",
+		"node": ">=21",
 		"pnpm": ">=8"
 	},
 	"exports": {

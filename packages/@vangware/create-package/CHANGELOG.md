@@ -1,5 +1,15 @@
 # Change log
 
+## 1.7.14
+
+### Patch Changes
+
+-   🐛 fix wrong settings in `package.json`.
+-   ⬆️ engine upgrade.
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.36`
+-   ⬆️ upgrade `@vangware/prompts` to `v2.2.15`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.6`
+
 ## 1.7.13
 
 ### Patch Changes

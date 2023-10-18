@@ -45,7 +45,7 @@
 		"vite-plugin-lightningcss": "^0.0.5"
 	},
 	"engines": {
-		"node": ">=20",
+		"node": ">=21",
 		"pnpm": ">=8"
 	},
 	"homepage": "https://vangware.com",

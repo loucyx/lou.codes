@@ -1,5 +1,11 @@
 # Change log
 
+## 7.1.1
+
+### Patch Changes
+
+-   ⬆️ dependency and engine upgrade.
+
 ## 7.1.0
 
 ### Minor Changes

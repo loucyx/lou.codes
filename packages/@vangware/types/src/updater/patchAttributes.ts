@@ -21,13 +21,9 @@ export const patchAttributes = (attributes: ReadOnlyArray<IAttributeData>) =>
 							? {
 									...patchedAttributes[attribute.name],
 									description: `${getDescription(
-										// FIXME: This is not typed correctly in vscode-html-languageservice 🤦🏻
-										// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 										patchedAttributes[attribute.name]
 											?.description,
 									)}\n\n---\n\n${getDescription(
-										// FIXME: This is not typed correctly in vscode-html-languageservice 🤦🏻
-										// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 										attribute.description,
 									)}`,
 							  }

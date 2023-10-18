@@ -6,5 +6,7 @@
  * @returns Description.
  */
 export const getDescription = (
-	description: string | { readonly value: string },
-) => (typeof description === "string" ? description : description.value);
+	description?: string | { readonly value: string },
+	// FIXME: I hate to do this, but the original type has an undefined that is never used.
+	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+) => (typeof description === "string" ? description : description!.value);

@@ -58,10 +58,9 @@ const updateSize = packagePath => {
 
 void Promise.all(
 	[
-		"preact-pair",
-		"react-pair",
 		"@vangware/ansi",
 		"@vangware/cron",
+		"@vangware/diff",
 		"@vangware/iterables",
 		"@vangware/notify",
 		"@vangware/parsers",
@@ -71,6 +70,8 @@ void Promise.all(
 		"@vangware/types",
 		"@vangware/utils",
 		"@vangware/window-open-promise",
+		"preact-pair",
+		"react-pair",
 	].map(updateSize),
 )
 	// eslint-disable-next-line no-console

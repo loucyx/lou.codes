@@ -46,5 +46,6 @@
 		"test": "NODE_OPTIONS='--import tsx --no-warnings' node --test ./tests/*.test.ts"
 	},
 	"sideEffects": false,
+	"size": "0.39",
 	"type": "module"
 }

@@ -1,5 +1,11 @@
 # Change log
 
+## 1.7.16
+
+### Patch Changes
+
+-   ✏️ Fix typos in README.md template.
+
 ## 1.7.15
 
 ### Patch Changes

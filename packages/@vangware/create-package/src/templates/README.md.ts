@@ -2,12 +2,12 @@ import { USER } from "../constants.js";
 import type { Answers } from "../types/Answers.js";
 import { userClean } from "../userClean.js";
 
-export default ({ name, description }: Answers) => {
-	const path = `${USER}/${userClean(name)}`;
-
-	return `<img id="logo" alt="${userClean(
-		name,
-	)} by ${USER}" src="https://vangware.com/logo.svg" height="128" />
+export default ({
+	name,
+	description,
+}: Answers) => `<img id="logo" alt="${userClean(
+	name,
+)} by ${USER}" src="https://vangware.com/logo.svg" height="128" />
 
 ![Coverage][coverage-badge] ![License][license-badge]
 ![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]
@@ -67,13 +67,15 @@ Import \`${name}\` using [esm.sh][esm.sh], and use it directly:
 
 <!-- Reference -->
 
-[changelog]: https://github.com/vangware/libraries/blob/main/packages/${path}/CHANGELOG.md
+[changelog]: https://github.com/vangware/libraries/blob/main/packages/@${USER}/${userClean(
+	name,
+)}/CHANGELOG.md
 [coverage-badge]:
 	https://img.shields.io/coveralls/github/vangware/libraries.svg?labelColor=666&color=0a8
 [coverage]: https://coveralls.io/github/vangware/libraries
 [documentation]: https://vangware.com/libraries/${name
-		.replace("@", "")
-		.replace(/[-/]/gu, "_")}.html
+	.replace("@", "")
+	.replace(/[-/]/gu, "_")}/
 [esm.sh]: https://esm.sh
 [license-badge]:
 	https://img.shields.io/npm/l/${name}.svg?labelColor=666&color=0a8
@@ -85,4 +87,3 @@ Import \`${name}\` using [esm.sh][esm.sh], and use it directly:
 	https://img.shields.io/badge/dynamic/json?label=size&labelColor=666&color=0a8&suffix=KiB&query=%24.size&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvangware%2Flibraries%2Fmain%2Fpackages%2F${name}%2Fpackage.json
 [vangware]: https://vangware.com
 `;
-};

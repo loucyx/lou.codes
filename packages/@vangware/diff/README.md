@@ -59,11 +59,11 @@ Import `@vangware/diff` using [esm.sh][esm.sh], and use it directly:
 <!-- Reference -->
 
 [changelog]:
-	https://github.com/vangware/libraries/blob/main/packages/vangware/diff/CHANGELOG.md
+	https://github.com/vangware/libraries/blob/main/packages/@vangware/diff/CHANGELOG.md
 [coverage-badge]:
 	https://img.shields.io/coveralls/github/vangware/libraries.svg?labelColor=666&color=0a8
 [coverage]: https://coveralls.io/github/vangware/libraries
-[documentation]: https://vangware.com/libraries/vangware_diff.html
+[documentation]: https://vangware.com/libraries/vangware_diff/
 [esm.sh]: https://esm.sh
 [license-badge]:
 	https://img.shields.io/npm/l/@vangware/diff.svg?labelColor=666&color=0a8

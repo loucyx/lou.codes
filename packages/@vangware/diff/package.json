@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/diff",
 	"description": "↔️ Deep diffing utility.",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -51,5 +51,6 @@
 	},
 	"sideEffects": false,
 	"size": "0.40",
-	"type": "module"
+	"type": "module",
+	"types": "./dist/index.d.ts"
 }

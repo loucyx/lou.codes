@@ -1,5 +1,12 @@
 # Change log
 
+## 2.2.16
+
+### Patch Changes
+
+-   🔧 add types field back so that NPM shows it as a TypeScript package.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.7`
+
 ## 2.2.15
 
 ### Patch Changes

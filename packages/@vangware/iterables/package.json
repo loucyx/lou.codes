@@ -51,7 +51,7 @@
 		"lint:fix": "eslint {src,tests} --fix",
 		"prepublishOnly": "run-s --print-label clean compile prettify",
 		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'",
-		"test": "NODE_OPTIONS='--import tsx --no-warnings' pnpm exec test"
+		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
 	},
 	"sideEffects": false,
 	"size": "1.41",

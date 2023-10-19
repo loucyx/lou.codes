@@ -1,5 +1,11 @@
 # Change log
 
+## 1.7.15
+
+### Patch Changes
+
+-   🔧 remove --no-warnings
+
 ## 1.7.14
 
 ### Patch Changes

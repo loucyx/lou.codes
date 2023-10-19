@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/diff",
 	"description": "↔️ Deep diffing utility.",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -43,9 +43,9 @@
 		"lint:fix": "eslint {src,tests} --fix",
 		"prepublishOnly": "run-s --print-label clean compile prettify",
 		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'",
-		"test": "NODE_OPTIONS='--import tsx --no-warnings' node --test ./tests/*.test.ts"
+		"test": "NODE_OPTIONS='--import tsx' node --test ./tests/*.test.ts"
 	},
 	"sideEffects": false,
-	"size": "0.39",
+	"size": "0.40",
 	"type": "module"
 }

@@ -7,6 +7,9 @@ const arrayCompare = (values: UnaryInput<typeof compare>) => [
 	...compare(values),
 ];
 
+const now = Date.now();
+const error = new Error("🟢");
+
 export default test(import.meta.url)(
 	{
 		given: "two equal strings",
@@ -77,5 +80,55 @@ export default test(import.meta.url)(
 				right: [{ foo: "🟢" }],
 			}),
 		wanted: () => [{ kind: DELETE, left: { bar: "❌" }, path: [1] }],
+	},
+	{
+		given: "two equal dates",
+		must: "empty diff",
+		received: () =>
+			arrayCompare({ left: new Date(now), right: new Date(now) }),
+		wanted: () => [],
+	},
+	{
+		given: "two equal RegExps",
+		must: "empty diff",
+		received: () =>
+			arrayCompare({ left: /vangware/gu, right: /vangware/gu }),
+		wanted: () => [],
+	},
+	{
+		given: "two equal URLs",
+		must: "empty diff",
+		received: () =>
+			arrayCompare({
+				left: new URL("https://www.vangware.com"),
+				right: new URL("https://www.vangware.com"),
+			}),
+		wanted: () => [],
+	},
+	{
+		given: "two equal Errors",
+		must: "empty diff",
+		received: () => arrayCompare({ left: error, right: error }),
+		wanted: () => [],
+	},
+	{
+		given: "two equal Maps",
+		must: "empty diff",
+		received: () =>
+			arrayCompare({
+				left: new Map([["foo", "🟢"]]),
+				right: new Map([["foo", "🟢"]]),
+			}),
+		wanted: () => [],
+	},
+	{
+		given: "two equal Sets",
+		must: "empty diff",
+		received: () =>
+			arrayCompare({
+				left: new Set(["🟢"]),
+				right: new Set(["🟢"]),
+			}),
+		wanted: () => [],
 	},
 );

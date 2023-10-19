@@ -25,6 +25,7 @@ of tools and components.
 -   [🖇️ preact-pair][preact_pair] - Util to help with the paired hook pattern in
     Preact.
 -   [⏲️ @vangware/cron][cron] - Cron Quartz and Cron UNIX expression parser.
+-   [↔️ @vangware/diff][diff] - Deep diffing utility.
 -   [🪟 @vangware/window-open-promise][window-open-promise] - Promised
     `globalThis.open()`.
 -   [📣 @vangware/notify][notify] - Minimalistic Pub/Sub implementation.
@@ -44,6 +45,7 @@ of tools and components.
 [react_pair]: /libraries/react_pair/
 [preact_pair]: /libraries/preact_pair/
 [cron]: /libraries/vangware_cron/
+[diff]: /libraries/vangware_diff/
 [window-open-promise]: /libraries/vangware_window_open_promise/
 [notify]: /libraries/vangware_notify/
 [iterables]: /libraries/vangware_iterables/

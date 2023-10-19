@@ -6,7 +6,7 @@ import type { UpdateDifference } from "./types/UpdateDifference.js";
 /**
  * Function to compare a `left` and a `right` value.
  *
- * @category Comparisons
+ * @category Difference
  * @remarks
  * This does a deep comparison and yields the differences found with a
  * descriptive object.
@@ -37,8 +37,8 @@ export const compare = function* (values: {
 	if (left !== right) {
 		// eslint-disable-next-line functional/no-conditional-statements
 		if (Array.isArray(left) && Array.isArray(right)) {
-			const { length: leftLength } = left;
-			const { length: rightLength } = right;
+			const leftLength = left.length;
+			const rightLength = right.length;
 
 			// eslint-disable-next-line functional/no-loop-statements
 			for (
@@ -63,7 +63,8 @@ export const compare = function* (values: {
 				// eslint-disable-next-line no-null/no-null
 				left !== null &&
 				// eslint-disable-next-line no-null/no-null
-				right !== null
+				right !== null &&
+				left.constructor === right.constructor
 				// eslint-disable-next-line functional/no-conditional-statements
 			) {
 				// eslint-disable-next-line functional/no-loop-statements

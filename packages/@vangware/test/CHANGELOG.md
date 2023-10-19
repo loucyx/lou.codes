@@ -1,5 +1,11 @@
 # Change log
 
+## 11.0.1
+
+### Patch Changes
+
+-   ⬆️ upgrade `@vangware/diff` to `v1.0.1`
+
 ## 11.0.0
 
 ### Major Changes

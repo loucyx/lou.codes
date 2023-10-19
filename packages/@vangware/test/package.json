@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/test",
 	"description": "✅ Equality test with enforced readability",
-	"version": "11.0.0",
+	"version": "11.0.1",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -50,7 +50,7 @@
 		"lint:fix": "eslint {src,tests} --fix",
 		"prepublishOnly": "run-s --print-label compile prettify",
 		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'",
-		"test": "NODE_OPTIONS='--import tsx --no-warnings' node ./src/bin/index.ts"
+		"test": "NODE_OPTIONS='--import tsx' node ./src/bin/index.ts"
 	},
 	"sideEffects": false,
 	"size": "1.86",

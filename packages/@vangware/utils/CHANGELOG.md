@@ -1,5 +1,13 @@
 # Change log
 
+## 10.1.29
+
+### Patch Changes
+
+-   🔧 add types field back so that NPM shows it as a TypeScript package.
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.6`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.7`
+
 ## 10.1.28
 
 ### Patch Changes

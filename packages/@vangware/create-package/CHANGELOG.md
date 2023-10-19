@@ -1,5 +1,14 @@
 # Change log
 
+## 1.7.17
+
+### Patch Changes
+
+-   🔧 add types field back so that NPM shows it as a TypeScript package.
+-   ⬆️ upgrade `@vangware/prompts` to `v2.2.16`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.7`
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.37`
+
 ## 1.7.16
 
 ### Patch Changes

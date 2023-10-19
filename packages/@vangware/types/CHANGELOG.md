@@ -1,5 +1,11 @@
 # Change log
 
+## 6.3.7
+
+### Patch Changes
+
+-   🔧 add types field back so that NPM shows it as a TypeScript package.
+
 ## 6.3.6
 
 ### Patch Changes

@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/prompts",
 	"description": "⁉️ CLI interactive prompts",
-	"version": "2.2.15",
+	"version": "2.2.16",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -50,5 +50,6 @@
 	},
 	"sideEffects": false,
 	"size": "0.18",
-	"type": "module"
+	"type": "module",
+	"types": "./dist/index.d.ts"
 }

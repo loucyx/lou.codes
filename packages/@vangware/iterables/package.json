@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/iterables",
 	"description": "🔁 Iterable and AsyncIterable utils",
-	"version": "3.1.29",
+	"version": "3.1.30",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -55,5 +55,6 @@
 	},
 	"sideEffects": false,
 	"size": "1.41",
-	"type": "module"
+	"type": "module",
+	"types": "./dist/index.d.ts"
 }

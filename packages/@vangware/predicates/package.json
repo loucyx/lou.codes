@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/predicates",
 	"description": "🧐 Predicate util functions",
-	"version": "2.2.5",
+	"version": "2.2.6",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -50,5 +50,6 @@
 	},
 	"sideEffects": false,
 	"size": "0.76",
-	"type": "module"
+	"type": "module",
+	"types": "./dist/index.d.ts"
 }

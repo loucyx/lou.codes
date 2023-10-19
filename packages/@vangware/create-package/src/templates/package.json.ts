@@ -36,6 +36,7 @@ export default ({
 			},
 			sideEffects: false,
 			type: "module",
+			types: "./dist/index.d.ts",
 		},
 		undefined,
 		"	",

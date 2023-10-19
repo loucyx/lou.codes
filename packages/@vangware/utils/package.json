@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/utils",
 	"description": "⚒️ Vangware curried functional utils",
-	"version": "10.1.28",
+	"version": "10.1.29",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -58,5 +58,6 @@
 	},
 	"sideEffects": false,
 	"size": "1.43",
-	"type": "module"
+	"type": "module",
+	"types": "./dist/index.d.ts"
 }

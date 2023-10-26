@@ -37,7 +37,7 @@ export default defineConfig({
 				},
 			],
 			social: {
-				github: "https://github.com/loucyx/libraries",
+				github: "https://github.com/loucyx/lou.codes",
 				linkedin: "https://linkedin.com/in/loucyx",
 				youtube: "https://youtube.com/@loucyx",
 			},

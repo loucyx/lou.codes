@@ -269,10 +269,10 @@ it was pointed out in the previous section.
 <!-- Reference -->
 
 [changelog]:
-	https://github.com/loucyx/libraries/blob/main/packages/@lou.codes/test/CHANGELOG.md
+	https://github.com/loucyx/lou.codes/blob/main/packages/@lou.codes/test/CHANGELOG.md
 [coverage-badge]:
-	https://img.shields.io/coveralls/github/loucyx/libraries.svg?labelColor=666&color=0a8
-[coverage]: https://coveralls.io/github/loucyx/libraries
+	https://img.shields.io/coveralls/github/loucyx/lou.codes.svg?labelColor=666&color=0a8
+[coverage]: https://coveralls.io/github/loucyx/lou.codes
 [create-package]: https://lou.codes/libraries/lou_codes_create_package/
 [documentation]: https://lou.codes/libraries/lou_codes_test/
 [esm.sh]: https://esm.sh
@@ -281,9 +281,9 @@ it was pointed out in the previous section.
 [npm-version-badge]:
 	https://img.shields.io/npm/v/@lou.codes/test.svg?labelColor=666&color=0a8
 [open-issues-badge]:
-	https://img.shields.io/github/issues/loucyx/libraries.svg?labelColor=666&color=0a8
+	https://img.shields.io/github/issues/loucyx/lou.codes.svg?labelColor=666&color=0a8
 [size-badge]:
-	https://img.shields.io/badge/dynamic/json?label=size&labelColor=666&color=0a8&suffix=KiB&query=%24.size&url=https%3A%2F%2Fraw.githubusercontent.com%2Floucyx%2Flibraries%2Fmain%2Fpackages%2F%40lou.codes%2Ftest%2Fpackage.json
+	https://img.shields.io/badge/dynamic/json?label=size&labelColor=666&color=0a8&suffix=KiB&query=%24.size&url=https%3A%2F%2Fraw.githubusercontent.com%2Floucyx%2Flou.codes%2Fmain%2Fpackages%2F%40lou.codes%2Ftest%2Fpackage.json
 [riteway]: https://github.com/ericelliott/riteway
 [tsx]: https://npm.im/tsx
 [uvu]: https://github.com/lukeed/uvu

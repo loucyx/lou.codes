@@ -1,5 +1,5 @@
 {
-	"name": "@lou.codes/libraries",
+	"name": "lou.codes",
 	"description": "📚 Lou's libraries monorepo",
 	"version": "1.0.0",
 	"author": {
@@ -9,7 +9,7 @@
 	},
 	"bugs": {
 		"email": "issues@lou.codes",
-		"url": "https://github.com/loucyx/libraries/issues"
+		"url": "https://github.com/loucyx/lou.codes/issues"
 	},
 	"dependencies": {
 		"@lou.codes/configs": "workspace:*",
@@ -59,7 +59,7 @@
 	"private": true,
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/loucyx/libraries.git"
+		"url": "https://github.com/loucyx/lou.codes.git"
 	},
 	"scripts": {
 		"clean": "pnpm --recursive --parallel clean",

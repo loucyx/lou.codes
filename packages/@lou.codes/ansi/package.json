@@ -9,7 +9,7 @@
 	},
 	"bugs": {
 		"email": "issues@lou.codes",
-		"url": "https://github.com/loucyx/libraries/issues"
+		"url": "https://github.com/loucyx/lou.codes/issues"
 	},
 	"dependencies": {
 		"@lou.codes/types": "workspace:*"
@@ -36,7 +36,7 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/loucyx/libraries.git"
+		"url": "https://github.com/loucyx/lou.codes.git"
 	},
 	"scripts": {
 		"clean": "rimraf ./dist",

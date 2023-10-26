@@ -12,7 +12,7 @@
 	},
 	"bugs": {
 		"email": "issues@lou.codes",
-		"url": "https://github.com/loucyx/libraries/issues"
+		"url": "https://github.com/loucyx/lou.codes/issues"
 	},
 	"dependencies": {
 		"@changesets/types": "^5.2.1",
@@ -99,7 +99,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/loucyx/libraries.git"
+		"url": "https://github.com/loucyx/lou.codes.git"
 	},
 	"scripts": {
 		"clean": "rimraf {index,rules/*,*.config,changelog,update-peers}.d.{ts,cts}",

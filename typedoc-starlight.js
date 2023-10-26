@@ -52,7 +52,7 @@ const groupFilePaths = () =>
 							`/${readmeFilePath
 								.replace(`${PACKAGES_DIRECTORY}/`, "")
 								.replace("/README", "")
-								.replace("@", "")
+								.replace("@lou.codes", "lou_codes")
 								.replace(/[-/]/gu, "_")}`,
 						),
 					) ?? "",
@@ -62,10 +62,12 @@ const groupFilePaths = () =>
 
 /** @param {string} path */
 const readFileUTF8 = path =>
-	readFile(path, { encoding: "utf-8" }).then(content => ({
-		content,
-		path,
-	}));
+	readFile(path, { encoding: "utf-8" })
+		.then(content => ({
+			content,
+			path,
+		}))
+		.catch(() => Promise.reject({ path }));
 
 const getGroupedFiles = () =>
 	groupFilePaths().then(filePairs =>

@@ -131,7 +131,7 @@ Import `react-pair` using [esm.sh][esm.sh], and use it directly:
 
 <!-- Reference -->
 
-[article]: https://luke.sh/articles/the-paired-hook-pattern
+[article]: https://lou.cx/articles/the-paired-hook-pattern
 [changelog]:
 	https://github.com/loucyx/libraries/blob/main/packages/react-pair/CHANGELOG.md
 [coverage-badge]:

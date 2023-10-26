@@ -1,14 +1,14 @@
-<img id="logo" alt="@vangware/ansi" src="https://vangware.com/logo.svg" height="72" />
+<img id="logo" alt="@lou.codes/ansi" src="https://lou.codes/logo.svg" height="72" />
 
-📚 [Vangware][vangware] libraries monorepo
+📚 [Lou's][lou.codes] libraries monorepo
 
-## About Vangware
+## About Lou Cyx
 
-At [Vangware][vangware], we passionately embrace bleeding-edge web technologies
-to create high-quality and long-lasting software solutions. Our commitment to
-staying at the forefront of technology is the driving force behind our work.
+TODO: A description.
 
 ## Repository Overview
+
+TODO: Change plurals with singulars.
 
 This monorepo serves as the central hub for our extensive collection of
 libraries and projects. By consolidating our resources here, we aim to
@@ -21,39 +21,39 @@ of tools and components.
     React.
 -   [🖇️ preact-pair][preact_pair] - Util to help with the paired hook pattern in
     Preact.
--   [⏲️ @vangware/cron][cron] - Cron Quartz and Cron UNIX expression parser.
--   [↔️ @vangware/diff][diff] - Deep diffing utility.
--   [🪟 @vangware/window-open-promise][window-open-promise] - Promised
+-   [⏲️ @lou.codes/cron][cron] - Cron Quartz and Cron UNIX expression parser.
+-   [↔️ @lou.codes/diff][diff] - Deep diffing utility.
+-   [🪟 @lou.codes/window-open-promise][window-open-promise] - Promised
     `globalThis.open()`.
--   [📣 @vangware/notify][notify] - Minimalistic Pub/Sub implementation.
--   [🔁 @vangware/iterables][iterables] - Iterable and AsyncIterable utils.
--   [👁️‍🗨️ @vangware/parsers][parsers] - Parsers without nonsense.
--   [🧐 @vangware/predicates][predicates] - Predicate util functions
--   [⚒️ @vangware/utils][utils] - Functional utils.
--   [✅ @vangware/test][test] - Legible deep-equality tests.
--   [📟 @vangware/ansi][ansi] - Functional CLI ANSI formatter.
--   [❓ @vangware/prompts][prompts] - CLI interactive prompts.
--   [🚧 @vangware/create-package][create-package] - Project creation script.
--   [⚙️ @vangware/configs][configs] - Project configurations.
--   [🏷️ @vangware/types][types] - Shared types.
+-   [📣 @lou.codes/notify][notify] - Minimalistic Pub/Sub implementation.
+-   [🔁 @lou.codes/iterables][iterables] - Iterable and AsyncIterable utils.
+-   [👁️‍🗨️ @lou.codes/parsers][parsers] - Parsers without nonsense.
+-   [🧐 @lou.codes/predicates][predicates] - Predicate util functions
+-   [⚒️ @lou.codes/utils][utils] - Functional utils.
+-   [✅ @lou.codes/test][test] - Legible deep-equality tests.
+-   [📟 @lou.codes/ansi][ansi] - Functional CLI ANSI formatter.
+-   [❓ @lou.codes/prompts][prompts] - CLI interactive prompts.
+-   [🚧 @lou.codes/create-package][create-package] - Project creation script.
+-   [⚙️ @lou.codes/configs][configs] - Project configurations.
+-   [🏷️ @lou.codes/types][types] - Shared types.
 
 <!-- Links -->
 
-[react_pair]: https://vangware.com/libraries/react_pair/
-[preact_pair]: https://vangware.com/libraries/preact_pair/
-[cron]: https://vangware.com/libraries/vangware_cron/
-[diff]: https://vangware.com/libraries/vangware_diff/
+[react_pair]: https://lou.codes/libraries/react_pair/
+[preact_pair]: https://lou.codes/libraries/preact_pair/
+[cron]: https://lou.codes/libraries/lou_codes_cron/
+[diff]: https://lou.codes/libraries/lou_codes_diff/
 [window-open-promise]:
-	https://vangware.com/libraries/vangware_window_open_promise/
-[notify]: https://vangware.com/libraries/vangware_notify/
-[iterables]: https://vangware.com/libraries/vangware_iterables/
-[parsers]: https://vangware.com/libraries/vangware_parsers/
-[predicates]: https://vangware.com/libraries/vangware_predicates/
-[utils]: https://vangware.com/libraries/vangware_utils/
-[test]: https://vangware.com/libraries/vangware_test/
-[ansi]: https://vangware.com/libraries/vangware_ansi/
-[prompts]: https://vangware.com/libraries/vangware_prompts/
-[create-package]: https://vangware.com/libraries/vangware_create_package/
-[configs]: https://vangware.com/libraries/vangware_configs/
-[types]: https://vangware.com/libraries/vangware_types/
-[vangware]: https://vangware.com
+	https://lou.codes/libraries/lou_codes_window_open_promise/
+[notify]: https://lou.codes/libraries/lou_codes_notify/
+[iterables]: https://lou.codes/libraries/lou_codes_iterables/
+[parsers]: https://lou.codes/libraries/lou_codes_parsers/
+[predicates]: https://lou.codes/libraries/lou_codes_predicates/
+[utils]: https://lou.codes/libraries/lou_codes_utils/
+[test]: https://lou.codes/libraries/lou_codes_test/
+[ansi]: https://lou.codes/libraries/lou_codes_ansi/
+[prompts]: https://lou.codes/libraries/lou_codes_prompts/
+[create-package]: https://lou.codes/libraries/lou_codes_create_package/
+[configs]: https://lou.codes/libraries/lou_codes_configs/
+[types]: https://lou.codes/libraries/lou_codes_types/
+[lou.codes]: https://lou.codes

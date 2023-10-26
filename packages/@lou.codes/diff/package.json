@@ -1,0 +1,57 @@
+{
+	"name": "@lou.codes/diff",
+	"description": "↔️ Deep diffing utility.",
+	"version": "1.0.2",
+	"author": {
+		"email": "contact@lou.codes",
+		"name": "Lou Cyx",
+		"url": "https://lou.codes"
+	},
+	"bugs": {
+		"email": "issues@lou.codes",
+		"url": "https://github.com/loucyx/libraries/issues"
+	},
+	"dependencies": {
+		"@lou.codes/types": "workspace:*"
+	},
+	"engines": {
+		"node": ">=21",
+		"pnpm": ">=8"
+	},
+	"exports": {
+		".": "./dist/index.js",
+		"./*": "./dist/*"
+	},
+	"files": [
+		"dist"
+	],
+	"homepage": "https://lou.codes/libraries/lou_codes_diff",
+	"keywords": [
+		"compare",
+		"diff",
+		"difference",
+		"diffing",
+		"lou.codes",
+		"loucyx",
+		"typescript"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/loucyx/libraries.git"
+	},
+	"scripts": {
+		"clean": "rimraf ./dist",
+		"compile": "tsc --project ./tsconfig.dist.json",
+		"git:pre-push": "run-s --print-label clean compile lint test",
+		"lint": "eslint {src,tests}",
+		"lint:fix": "eslint {src,tests} --fix",
+		"prepublishOnly": "run-s --print-label clean compile prettify",
+		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'",
+		"test": "NODE_OPTIONS='--import tsx' node --test ./tests/*.test.ts"
+	},
+	"sideEffects": false,
+	"size": "0.40",
+	"type": "module",
+	"types": "./dist/index.d.ts"
+}

@@ -1,0 +1,65 @@
+{
+	"name": "@lou.codes/utils",
+	"description": "⚒️ Lou's curried functional utils",
+	"version": "10.1.29",
+	"author": {
+		"email": "contact@lou.codes",
+		"name": "Lou Cyx",
+		"url": "https://lou.codes"
+	},
+	"bugs": {
+		"email": "issues@lou.codes",
+		"url": "https://github.com/loucyx/libraries/issues"
+	},
+	"dependencies": {
+		"@lou.codes/predicates": "workspace:*",
+		"@lou.codes/types": "workspace:*"
+	},
+	"engines": {
+		"node": ">=21",
+		"pnpm": ">=8"
+	},
+	"exports": {
+		".": "./dist/index.js",
+		"./*": "./dist/*"
+	},
+	"files": [
+		"dist"
+	],
+	"homepage": "https://lou.codes/libraries/lou_codes_utils/",
+	"keywords": [
+		"array",
+		"curried",
+		"deno",
+		"esm",
+		"functional",
+		"lou.codes",
+		"loucyx",
+		"node",
+		"object",
+		"pure",
+		"string",
+		"types",
+		"typescript",
+		"utils"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/loucyx/libraries.git"
+	},
+	"scripts": {
+		"clean": "rimraf ./dist",
+		"compile": "tsc --project tsconfig.dist.json",
+		"git:pre-push": "run-s --print-label clean compile lint test",
+		"lint": "eslint {src,tests}",
+		"lint:fix": "eslint {src,tests} --fix",
+		"prepublishOnly": "run-s compile prettify",
+		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'",
+		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
+	},
+	"sideEffects": false,
+	"size": "1.43",
+	"type": "module",
+	"types": "./dist/index.d.ts"
+}

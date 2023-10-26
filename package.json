@@ -1,19 +1,19 @@
 {
-	"name": "@vangware/libraries",
-	"description": "📚 Vangware libraries monorepo",
+	"name": "@lou.codes/libraries",
+	"description": "📚 Lou's libraries monorepo",
 	"version": "1.0.0",
 	"author": {
-		"email": "hello@vangware.com",
-		"name": "Vangware",
-		"url": "https://vangware.com"
+		"email": "contact@lou.codes",
+		"name": "Lou Cyx",
+		"url": "https://lou.codes"
 	},
 	"bugs": {
-		"email": "issues@vangware.com",
-		"url": "https://github.com/vangware/libraries/issues"
+		"email": "issues@lou.codes",
+		"url": "https://github.com/loucyx/libraries/issues"
 	},
 	"dependencies": {
-		"@vangware/configs": "workspace:*",
-		"@vangware/test": "workspace:*"
+		"@lou.codes/configs": "workspace:*",
+		"@lou.codes/test": "workspace:*"
 	},
 	"devDependencies": {
 		"@astrojs/prefetch": "^0.4.1",
@@ -48,17 +48,18 @@
 		"node": ">=21",
 		"pnpm": ">=8"
 	},
-	"homepage": "https://vangware.com",
+	"homepage": "https://lou.codes",
 	"keywords": [
 		"libraries",
-		"typescript",
-		"vangware"
+		"lou.codes",
+		"loucyx",
+		"typescript"
 	],
 	"license": "MIT",
 	"private": true,
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/vangware/libraries.git"
+		"url": "https://github.com/loucyx/libraries.git"
 	},
 	"scripts": {
 		"clean": "pnpm --recursive --parallel clean",

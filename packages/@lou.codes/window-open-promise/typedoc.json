@@ -1,0 +1,5 @@
+{
+	"$schema": "https://typedoc.org/schema.json",
+	"entryPoints": ["./src"],
+	"extends": ["@lou.codes/configs/typedoc.json"]
+}

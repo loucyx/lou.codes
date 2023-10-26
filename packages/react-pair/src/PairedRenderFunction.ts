@@ -1,4 +1,4 @@
-import type { Function, Unary } from "@vangware/types";
+import type { Function, Unary } from "@lou.codes/types";
 import type { createElement } from "react";
 
 /**

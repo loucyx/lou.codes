@@ -1,0 +1,5 @@
+{
+	"extends": "@lou.codes/configs/typescript.config.json",
+	"compilerOptions": { "outDir": "./dist" },
+	"include": ["src/**/*.ts", "./tests/**/*.ts"]
+}

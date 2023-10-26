@@ -1,0 +1,50 @@
+{
+	"name": "@lou.codes/create-package",
+	"description": "🚧 lou.codes package scaffolder script",
+	"version": "1.7.17",
+	"author": {
+		"email": "contact@lou.codes",
+		"name": "Lou Cyx",
+		"url": "https://lou.codes"
+	},
+	"bin": "./dist/index.js",
+	"bugs": {
+		"email": "issues@lou.codes",
+		"url": "https://github.com/loucyx/libraries/issues"
+	},
+	"dependencies": {
+		"@lou.codes/ansi": "workspace:*",
+		"@lou.codes/prompts": "workspace:*",
+		"@lou.codes/types": "workspace:*"
+	},
+	"engines": {
+		"node": ">=21",
+		"pnpm": ">=8"
+	},
+	"files": [
+		"dist/*",
+		"base/*"
+	],
+	"homepage": "https://lou.codes/libraries/lou_codes_create_package/",
+	"keywords": [
+		"create",
+		"create-package",
+		"package"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/loucyx/libraries.git"
+	},
+	"scripts": {
+		"clean": "rimraf ./dist",
+		"compile": "tsc",
+		"git:pre-push": "run-s --print-label clean compile lint",
+		"lint": "eslint src",
+		"lint:fix": "eslint src --fix",
+		"prepublishOnly": "run-s --print-label compile prettify",
+		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'"
+	},
+	"sideEffects": false,
+	"type": "module"
+}

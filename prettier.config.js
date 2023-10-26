@@ -1,1 +1,1 @@
-export { default } from "@vangware/configs/prettier.config.js";
+export { default } from "@lou.codes/configs/prettier.config.js";

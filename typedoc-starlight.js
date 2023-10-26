@@ -92,7 +92,7 @@ const allUpper = ["ansi"];
 /** @param {string} packageName */
 const packageNameToTitle = packageName =>
 	packageName
-		.replace("@vangware/", "")
+		.replace("@lou.codes/", "")
 		.replaceAll("-", " ")
 		.split(" ")
 		.map(word =>
@@ -105,9 +105,9 @@ const packageNameToTitle = packageName =>
 		.join(" ");
 
 const excluded = [
-	"@vangware/create-package",
-	"@vangware/test",
-	"@vangware/types",
+	"@lou.codes/create-package",
+	"@lou.codes/test",
+	"@lou.codes/types",
 ];
 
 /**
@@ -133,7 +133,7 @@ ${
 `
 }sidebar:
     label: "${packageNameToTitle(title)}"
-title: "${packageNameToTitle(title)} by Vangware"
+title: "${packageNameToTitle(title)} by Lou"
 ---`;
 
 const formatPairedDocs = () =>
@@ -165,15 +165,15 @@ const formatPairedDocs = () =>
 						// FIXME: TypeDoc is messing some resolutions, this fixes it™️.
 						// Remove it once is fixed in TypeDoc.
 						.replace(
-							/#### Defined in\n\nnode_modules\/(?<packageName>@vangware\/.+)\/dist\/(?<filename>.+)\.d\.ts:\d+/gu,
-							"> [View source](https://github.com/vangware/libraries/blob/main/packages/$1/src/$2.ts)",
+							/#### Defined in\n\nnode_modules\/(?<packageName>@lou\.codes\/.+)\/dist\/(?<filename>.+)\.d\.ts:\d+/gu,
+							"> [View source](https://github.com/loucyx/libraries/blob/main/packages/$1/src/$2.ts)",
 						)
 						.replace(
-							/#### Defined in\npackages\/(?<sourcePackageName>@vangware\/.+)\/node_modules\/(?<packageName>@vangware\/.+)\/dist\/(?<filename>.+)\.d\.ts:\d+/gu,
-							"> [View source](https://github.com/vangware/libraries/blob/main/packages/$1/src/$2.ts)",
+							/#### Defined in\npackages\/(?<sourcePackageName>@lou\.codes\/.+)\/node_modules\/(?<packageName>@lou\.codes\/.+)\/dist\/(?<filename>.+)\.d\.ts:\d+/gu,
+							"> [View source](https://github.com/loucyx/libraries/blob/main/packages/$1/src/$2.ts)",
 						)
-						.replaceAll("https://vangware.com/", "/")
-						.replaceAll("https://vangware.com", "/"),
+						.replaceAll("https://lou.codes/", "/")
+						.replaceAll("https://lou.codes", "/"),
 				]),
 		),
 	);

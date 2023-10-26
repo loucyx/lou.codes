@@ -3,17 +3,17 @@
 	"description": "🖇️ Util to help with the paired hook pattern",
 	"version": "3.0.57",
 	"author": {
-		"email": "hello@vangware.com",
-		"name": "Vangware",
-		"url": "https://vangware.com"
+		"email": "contact@lou.codes",
+		"name": "Lou Cyx",
+		"url": "https://lou.codes"
 	},
 	"bugs": {
-		"email": "issues@vangware.com",
-		"url": "https://github.com/vangware/libraries/issues"
+		"email": "issues@lou.codes",
+		"url": "https://github.com/loucyx/libraries/issues"
 	},
 	"dependencies": {
-		"@vangware/types": "workspace:*",
-		"@vangware/utils": "workspace:*"
+		"@lou.codes/types": "workspace:*",
+		"@lou.codes/utils": "workspace:*"
 	},
 	"devDependencies": {
 		"@types/react": "^18.2.33",
@@ -32,14 +32,15 @@
 	"files": [
 		"dist"
 	],
-	"homepage": "https://vangware.com/libraries/react_pair/",
+	"homepage": "https://lou.codes/libraries/react_pair/",
 	"keywords": [
 		"hooks",
+		"lou.codes",
+		"loucyx",
 		"pair",
 		"react",
 		"tsx",
-		"typescript",
-		"vangware"
+		"typescript"
 	],
 	"license": "MIT",
 	"peerDependencies": {
@@ -48,7 +49,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/vangware/libraries.git"
+		"url": "https://github.com/loucyx/libraries.git"
 	},
 	"scripts": {
 		"clean": "rimraf ./dist",

@@ -21,9 +21,13 @@ export const patchAttributes = (attributes: ReadOnlyArray<IAttributeData>) =>
 							? {
 									...patchedAttributes[attribute.name],
 									description: `${getDescription(
+										// FIXME: This keeps going back and forth between broken and working -_-
+										// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 										patchedAttributes[attribute.name]
 											?.description,
 									)}\n\n---\n\n${getDescription(
+										// FIXME: This keeps going back and forth between broken and working -_-
+										// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 										attribute.description,
 									)}`,
 							  }

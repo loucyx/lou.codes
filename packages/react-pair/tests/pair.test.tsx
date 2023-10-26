@@ -1,5 +1,5 @@
 import type { Tests } from "@lou.codes/test";
-import { useState } from "react";
+import { createElement, useState } from "react";
 import { renderToString } from "react-dom/server";
 import type { PairedComponentProperties } from "../src/PairedComponentProperties.js";
 import { pair } from "../src/pair.js";

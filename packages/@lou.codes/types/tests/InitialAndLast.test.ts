@@ -20,12 +20,12 @@ export const emptyArrayInit: EmptyArrayInitialAndLast[0] = [];
 export const emptyArrayLast: EmptyArrayInitialAndLast[1] = undefined;
 export const tripleInit: TripleInitialAndLast[0] = ["🟢", "🟩"];
 export const tripleLast: TripleInitialAndLast[1] = "💚";
-export const stringInit: StringInitialAndLast[0] = "vangwar";
-export const stringLast: StringInitialAndLast[1] = "e";
+export const stringInit: StringInitialAndLast[0] = "Lo";
+export const stringLast: StringInitialAndLast[1] = "u";
 export const emptyStringInit: EmptyStringInitialAndLast[0] = "";
 export const emptyStringLast: EmptyStringInitialAndLast[1] = undefined;
-export const looseStringInit: LooseStringInitialAndLast[0] = "vangwar";
-export const looseStringLast: LooseStringInitialAndLast[1] = "e";
+export const looseStringInit: LooseStringInitialAndLast[0] = "Lo";
+export const looseStringLast: LooseStringInitialAndLast[1] = "u";
 
 // Doesn't throw error because the type is `string[]`.
 export const arrayWrongInitString: ArrayInitialAndLast[0] = ["💚"];

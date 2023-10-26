@@ -1,4 +1,5 @@
 import type { Tests } from "@lou.codes/test";
+import { h } from "preact";
 import { renderToString } from "preact-render-to-string";
 import { useState } from "preact/hooks";
 import type { PairedComponentProperties } from "../src/PairedComponentProperties.js";

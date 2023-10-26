@@ -17,9 +17,9 @@ type LooseStringInitial = Initial<typeof looseString>;
 export const arrayInitial: ArrayInitial = ["💚", "🟩"];
 export const emptyArrayInitial: EmptyArrayInitial = [];
 export const tripleInitial: TripleInitial = ["💚", "🟩"];
-export const stringInitial: StringInitial = "vangwar";
+export const stringInitial: StringInitial = "Lo";
 export const emptyStringInitial: EmptyStringInitial = "";
-export const looseStringInitial: LooseStringInitial = "vangwar";
+export const looseStringInitial: LooseStringInitial = "Lo";
 
 // Doesn't throw error because the type is `string[]`.
 export const arrayWrongInitialString: ArrayInitial = ["💚"];

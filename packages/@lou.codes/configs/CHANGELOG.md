@@ -1,5 +1,11 @@
 # Change log
 
+## 1.0.0
+
+### Major Changes
+
+-   🚚 move from `@vangware` to `@lou.codes`.
+
 ## 7.1.1
 
 ### Patch Changes

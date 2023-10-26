@@ -17,6 +17,4 @@ import type { ReadOnlyRecord } from "@lou.codes/types";
 export const isPropertyOf =
 	<Key extends PropertyKey>(object: ReadOnlyRecord<Key>) =>
 	(key: Key) =>
-		// TODO: Change with `Object.hasOwn(object, key);` once is supported by TypeScript
-		// eslint-disable-next-line, functional/no-conditional-statement
-		Object.prototype.hasOwnProperty.call(object, key);
+		Object.hasOwn(object, key);

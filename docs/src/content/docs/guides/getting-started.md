@@ -7,16 +7,15 @@ description: Getting started with Lou's libraries
 
 ## About Lou Cyx
 
-TODO: Description
+I'm Lou, a web developer, hobbyist DJ and casual gamer based in Chicago,
+Illinois. I love to write open source libraries embracing bleeding-edge web
+technologies to create high-quality and long-lasting solutions.
 
 ## Repository Overview
 
-TODO: Plurals to singulars.
-
-This monorepo serves as the central hub for our extensive collection of
-libraries and projects. By consolidating our resources here, we aim to
-streamline development, enhance collaboration, and maintain a cohesive ecosystem
-of tools and components.
+This monorepo serves as the central hub for my collection of libraries and
+projects. By consolidating my resources here, I aim to streamline development,
+and maintain a cohesive ecosystem of tools and components.
 
 ## Libraries in this monorepo
 

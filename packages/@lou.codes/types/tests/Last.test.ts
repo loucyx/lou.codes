@@ -17,9 +17,9 @@ type LooseStringLast = Last<typeof looseString>;
 export const arrayLast: ArrayLast = "💚";
 export const emptyArrayLast: EmptyArrayLast = undefined;
 export const tripleLast: TripleLast = "💚";
-export const stringLast: StringLast = "e";
+export const stringLast: StringLast = "u";
 export const emptyStringLast: EmptyStringLast = undefined;
-export const looseStringLast: LooseStringLast = "r";
+export const looseStringLast: LooseStringLast = "u";
 
 // Doesn't throw error because the type is `string | undefined`.
 export const arrayWrongLastValues: ArrayLast = "❌";

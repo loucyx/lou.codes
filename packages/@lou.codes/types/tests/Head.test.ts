@@ -17,9 +17,9 @@ type LooseStringHead = Head<typeof looseString>;
 export const arrayHead: ArrayHead = "🟢";
 export const emptyArrayHead: EmptyArrayHead = undefined;
 export const tripleHead: TripleHead = "🟢";
-export const stringHead: StringHead = "v";
+export const stringHead: StringHead = "L";
 export const emptyStringHead: EmptyStringHead = undefined;
-export const looseStringHead: LooseStringHead = "v";
+export const looseStringHead: LooseStringHead = "L";
 
 // Doesn't throw error because the type is `string | undefined`.
 export const arrayWrongHeadString: ArrayHead = "💚";

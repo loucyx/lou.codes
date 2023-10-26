@@ -20,12 +20,12 @@ export const emptyArrayHead: EmptyArrayHeadAndTail[0] = undefined;
 export const emptyArrayTail: EmptyArrayHeadAndTail[1] = [];
 export const tripleHead: TripleHeadAndTail[0] = "🟢";
 export const tripleTail: TripleHeadAndTail[1] = ["🟩", "💚"];
-export const stringHead: StringHeadAndTail[0] = "v";
-export const stringTail: StringHeadAndTail[1] = "angware";
+export const stringHead: StringHeadAndTail[0] = "L";
+export const stringTail: StringHeadAndTail[1] = "ou";
 export const emptyStringHead: EmptyStringHeadAndTail[0] = undefined;
 export const emptyStringTail: EmptyStringHeadAndTail[1] = "";
-export const looseStringHead: LooseStringHeadAndTail[0] = "v";
-export const looseStringTail: LooseStringHeadAndTail[1] = "angware";
+export const looseStringHead: LooseStringHeadAndTail[0] = "L";
+export const looseStringTail: LooseStringHeadAndTail[1] = "ou";
 
 // Doesn't throw error because the type is `string | undefined`.
 export const arrayWrongHeadString: ArrayHeadAndTail[0] = "💚";

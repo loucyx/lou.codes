@@ -17,9 +17,9 @@ type LooseStringTail = Tail<typeof looseString>;
 export const arrayTail: ArrayTail = ["🟩", "💚"];
 export const emptyArrayTail: EmptyArrayTail = [];
 export const tripleTail: TripleTail = ["🟩", "💚"];
-export const stringTail: StringTail = "angware";
+export const stringTail: StringTail = "ou";
 export const emptyStringTail: EmptyStringTail = "";
-export const looseStringTail: LooseStringTail = "angware";
+export const looseStringTail: LooseStringTail = "ou";
 
 // Doesn't throw error because the type is `string[]`.
 export const arrayWrongTailValues: ArrayTail = ["🟢", "❌"];

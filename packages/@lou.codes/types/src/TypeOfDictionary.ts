@@ -13,8 +13,8 @@ import type { Function } from "./Function.js";
  * TypeOfMap["boolean"]; // `boolean`
  * TypeOfMap["function"]; // `GenericFunction`
  * ```
- * @see [typeof null bug](https://luke.sh/null-bug)
- * @see [typeof typeof rejected proposal](https://luke.sh/null-typeof)
+ * @see [typeof null bug](https://lou.cx/null-bug)
+ * @see [typeof typeof rejected proposal](https://lou.cx/null-typeof)
  */
 export type TypeOfDictionary = {
 	/** {@link TypeOfDictionary} key for `BigInt` */

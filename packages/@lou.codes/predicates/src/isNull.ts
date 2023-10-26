@@ -3,7 +3,7 @@ import { isType } from "./isType.js";
 /**
  * `typeof` "null" alias. This "patches" typeof so `null` is not `"object"` but
  * `"null"` instead (rejected proposal for lack of backwards compatibility, more
- * details [here](https://luke.sh/null-typeof)).
+ * details [here](https://lou.cx/null-typeof)).
  *
  * @category Primitives
  * @example

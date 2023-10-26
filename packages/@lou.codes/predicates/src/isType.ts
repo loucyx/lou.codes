@@ -4,7 +4,7 @@ import type { TypeOfDictionary, TypeOfValue } from "@lou.codes/types";
  * Takes a `type` string and checks if given `input` is of that `typeof`. This
  * "patches" typeof so `null` is not `"object"` but `"null"` instead (rejected
  * proposal for lack of backwards compatibility, more details
- * [here](https://luke.sh/null-typeof)).
+ * [here](https://lou.cx/null-typeof)).
  *
  * @category Predicates
  * @example

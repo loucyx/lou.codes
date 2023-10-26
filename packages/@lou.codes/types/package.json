@@ -9,7 +9,7 @@
 	},
 	"bugs": {
 		"email": "issues@lou.codes",
-		"url": "https://github.com/loucyx/libraries/issues"
+		"url": "https://github.com/loucyx/lou.codes/issues"
 	},
 	"devDependencies": {
 		"vscode-html-languageservice": "^5.1.1"
@@ -38,7 +38,7 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/loucyx/libraries.git"
+		"url": "https://github.com/loucyx/lou.codes.git"
 	},
 	"scripts": {
 		"clean": "rimraf ./dist",

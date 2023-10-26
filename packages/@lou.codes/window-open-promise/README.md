@@ -104,10 +104,10 @@ directly:
 <!-- Reference -->
 
 [changelog]:
-	https://github.com/loucyx/libraries/blob/main/packages/@lou.codes/window-open-promise/CHANGELOG.md
+	https://github.com/loucyx/lou.codes/blob/main/packages/@lou.codes/window-open-promise/CHANGELOG.md
 [coverage-badge]:
-	https://img.shields.io/coveralls/github/loucyx/libraries.svg?labelColor=666&color=0a8
-[coverage]: https://coveralls.io/github/loucyx/libraries
+	https://img.shields.io/coveralls/github/loucyx/lou.codes.svg?labelColor=666&color=0a8
+[coverage]: https://coveralls.io/github/loucyx/lou.codes
 [documentation]: https://lou.codes/libraries/lou_codes_window_open_promise/
 [esm.sh]: https://esm.sh
 [license-badge]:
@@ -115,6 +115,6 @@ directly:
 [npm-version-badge]:
 	https://img.shields.io/npm/v/@lou.codes/window-open-promise.svg?labelColor=666&color=0a8
 [open-issues-badge]:
-	https://img.shields.io/github/issues/loucyx/libraries.svg?labelColor=666&color=0a8
+	https://img.shields.io/github/issues/loucyx/lou.codes.svg?labelColor=666&color=0a8
 [size-badge]:
-	https://img.shields.io/badge/dynamic/json?label=size&labelColor=666&color=0a8&suffix=KiB&query=%24.size&url=https%3A%2F%2Fraw.githubusercontent.com%2Floucyx%2Flibraries%2Fmain%2Fpackages%2F%40lou.codes%2Fwindow-open-promise%2Fpackage.json
+	https://img.shields.io/badge/dynamic/json?label=size&labelColor=666&color=0a8&suffix=KiB&query=%24.size&url=https%3A%2F%2Fraw.githubusercontent.com%2Floucyx%2Flou.codes%2Fmain%2Fpackages%2F%40lou.codes%2Fwindow-open-promise%2Fpackage.json

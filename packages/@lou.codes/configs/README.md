@@ -80,7 +80,7 @@ module.exports = require("@lou.codes/configs/stylelint.config.cjs");
 <!-- Reference -->
 
 [changelog]:
-	https://github.com/loucyx/libraries/blob/main/packages/@lou.codes/configs/CHANGELOG.md
+	https://github.com/loucyx/lou.codes/blob/main/packages/@lou.codes/configs/CHANGELOG.md
 [changesets]: https://github.com/changesets/changesets
 [create-package]: https://lou.codes/libraries/lou_codes_create_package/
 [eslint]: https://eslint.org/docs/user-guide/configuring/
@@ -89,7 +89,7 @@ module.exports = require("@lou.codes/configs/stylelint.config.cjs");
 [npm-version-badge]:
 	https://img.shields.io/npm/v/@lou.codes/configs.svg?labelColor=666&color=0a8
 [open-issues-badge]:
-	https://img.shields.io/github/issues/loucyx/libraries.svg?labelColor=666&color=0a8
+	https://img.shields.io/github/issues/loucyx/lou.codes.svg?labelColor=666&color=0a8
 [prettier]: https://prettier.io/docs/en/options.html
 [stylelint]: https://stylelint.io/user-guide/configure/
 [typedoc]: https://typedoc.org/guides/options/

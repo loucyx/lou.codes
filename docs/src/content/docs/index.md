@@ -16,6 +16,6 @@ hero:
           icon: right-arrow
           variant: primary
         - text: View on GitHub
-          link: https://github.com/loucyx/libraries
+          link: https://github.com/loucyx/lou.codes
           icon: external
 ---

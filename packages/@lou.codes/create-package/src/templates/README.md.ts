@@ -67,12 +67,12 @@ Import \`${name}\` using [esm.sh][esm.sh], and use it directly:
 
 <!-- Reference -->
 
-[changelog]: https://github.com/loucyx/libraries/blob/main/packages/@${USER}/${userClean(
+[changelog]: https://github.com/loucyx/lou.codes/blob/main/packages/@${USER}/${userClean(
 	name,
 )}/CHANGELOG.md
 [coverage-badge]:
-	https://img.shields.io/coveralls/github/loucyx/libraries.svg?labelColor=666&color=0a8
-[coverage]: https://coveralls.io/github/loucyx/libraries
+	https://img.shields.io/coveralls/github/loucyx/lou.codes.svg?labelColor=666&color=0a8
+[coverage]: https://coveralls.io/github/loucyx/lou.codes
 [documentation]: https://lou.codes/libraries/${name
 	.replace("@", "")
 	.replace(/[-/]/gu, "_")}/
@@ -82,8 +82,8 @@ Import \`${name}\` using [esm.sh][esm.sh], and use it directly:
 [npm-version-badge]:
 	https://img.shields.io/npm/v/${name}.svg?labelColor=666&color=0a8
 [open-issues-badge]:
-	https://img.shields.io/github/issues/loucyx/libraries.svg?labelColor=666&color=0a8
+	https://img.shields.io/github/issues/loucyx/lou.codes.svg?labelColor=666&color=0a8
 [size-badge]:
-	https://img.shields.io/badge/dynamic/json?label=size&labelColor=666&color=0a8&suffix=KiB&query=%24.size&url=https%3A%2F%2Fraw.githubusercontent.com%loucyx%2Flibraries%2Fmain%2Fpackages%2F${name}%2Fpackage.json
+	https://img.shields.io/badge/dynamic/json?label=size&labelColor=666&color=0a8&suffix=KiB&query=%24.size&url=https%3A%2F%2Fraw.githubusercontent.com%loucyx%2Flou.codes%2Fmain%2Fpackages%2F${name}%2Fpackage.json
 [lou.codes]: https://lou.codes
 `;

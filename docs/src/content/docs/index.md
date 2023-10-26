@@ -1,12 +1,12 @@
 ---
-title: Vangware
+title: Lou's Code
 description:
     We embrace bleeding-edge web technologies to create high-quality and
     long-lasting software.
 template: splash
 hero:
     title: |
-        <span class="inline-block aspect-[8/1] w-[6em] align-baseline bg-[url(/logo.svg)] bg-center bg-no-repeat text-transparent">Vangware</span>
+        <span class="inline-block aspect-[8/1] w-[6em] align-baseline bg-[url(/logo.svg)] bg-center bg-no-repeat text-transparent">Lou's Codes</span>
     tagline:
         We embrace bleeding-edge web technologies to create high-quality and
         long-lasting software.
@@ -18,6 +18,6 @@ hero:
           icon: right-arrow
           variant: primary
         - text: View on GitHub
-          link: https://github.com/vangware/libraries
+          link: https://github.com/loucyx/libraries
           icon: external
 ---

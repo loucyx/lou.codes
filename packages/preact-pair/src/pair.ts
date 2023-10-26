@@ -1,5 +1,5 @@
-import type { Function } from "@vangware/types";
-import { mutate } from "@vangware/utils";
+import type { Function } from "@lou.codes/types";
+import { mutate } from "@lou.codes/utils";
 import type { FunctionComponent } from "preact";
 import type { PairedComponentProperties } from "./PairedComponentProperties.js";
 

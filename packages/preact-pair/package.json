@@ -3,17 +3,17 @@
 	"description": "🖇️ Util to help with the paired hook pattern",
 	"version": "1.0.55",
 	"author": {
-		"email": "hello@vangware.com",
-		"name": "Vangware",
-		"url": "https://vangware.com"
+		"email": "contact@lou.codes",
+		"name": "Lou Cyx",
+		"url": "https://lou.codes"
 	},
 	"bugs": {
-		"email": "issues@vangware.com",
-		"url": "https://github.com/vangware/libraries/issues"
+		"email": "issues@lou.codes",
+		"url": "https://github.com/loucyx/libraries/issues"
 	},
 	"dependencies": {
-		"@vangware/types": "workspace:*",
-		"@vangware/utils": "workspace:*"
+		"@lou.codes/types": "workspace:*",
+		"@lou.codes/utils": "workspace:*"
 	},
 	"devDependencies": {
 		"preact": "^10.18.1",
@@ -30,14 +30,15 @@
 	"files": [
 		"dist"
 	],
-	"homepage": "https://vangware.com/libraries/preact_pair/",
+	"homepage": "https://lou.codes/libraries/preact_pair/",
 	"keywords": [
 		"hooks",
+		"lou.codes",
+		"loucyx",
 		"pair",
 		"preact",
 		"tsx",
-		"typescript",
-		"vangware"
+		"typescript"
 	],
 	"license": "MIT",
 	"peerDependencies": {
@@ -45,7 +46,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/vangware/libraries.git"
+		"url": "https://github.com/loucyx/libraries.git"
 	},
 	"scripts": {
 		"clean": "rimraf ./dist",

@@ -1,0 +1,60 @@
+{
+	"name": "@lou.codes/window-open-promise",
+	"description": "🪟 Promised Window.open();",
+	"version": "5.1.51",
+	"author": {
+		"email": "contact@lou.codes",
+		"name": "Lou Cyx",
+		"url": "https://lou.codes"
+	},
+	"bugs": {
+		"email": "issues@lou.codes",
+		"url": "https://github.com/loucyx/libraries/issues"
+	},
+	"dependencies": {
+		"@lou.codes/iterables": "workspace:*",
+		"@lou.codes/predicates": "workspace:*",
+		"@lou.codes/types": "workspace:*"
+	},
+	"engines": {
+		"node": ">=21",
+		"pnpm": ">=8"
+	},
+	"exports": {
+		".": "./dist/index.js",
+		"./*": "./dist/*"
+	},
+	"files": [
+		"dist"
+	],
+	"homepage": "https://lou.codes/libraries/lou_codes_window_open_promise/",
+	"keywords": [
+		"front",
+		"front-end",
+		"javascript",
+		"open",
+		"promise",
+		"promised",
+		"window"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/loucyx/libraries.git"
+	},
+	"scripts": {
+		"clean": "rimraf ./dist",
+		"compile": "tsc --project tsconfig.dist.json",
+		"git:pre-push": "run-s --print-label clean pre-compile lint test",
+		"lint": "eslint {src,tests}",
+		"lint:fix": "eslint {src,tests} --fix",
+		"pre-compile": "tsc --noemit --project tsconfig.dist.json",
+		"prepublishOnly": "run-s compile prettify",
+		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'",
+		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
+	},
+	"sideEffects": false,
+	"size": "0.67",
+	"type": "module",
+	"types": "./dist/index.d.ts"
+}

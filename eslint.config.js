@@ -1,1 +1,1 @@
-export { default } from "@vangware/configs/eslint.config.js";
+export { default } from "@lou.codes/configs/eslint.config.js";

@@ -1,4 +1,4 @@
-import type { Function } from "@vangware/types";
+import type { Function } from "@lou.codes/types";
 import type { PairedRenderFunction } from "./PairedRenderFunction.js";
 
 /**

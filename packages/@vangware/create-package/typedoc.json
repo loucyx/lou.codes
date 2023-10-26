@@ -1,5 +1,0 @@
-{
-	"$schema": "https://typedoc.org/schema.json",
-	"entryPoints": [],
-	"extends": ["@vangware/configs/typedoc.config.json"]
-}

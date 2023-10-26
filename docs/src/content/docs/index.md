@@ -7,9 +7,7 @@ template: splash
 hero:
     title: |
         <span class="inline-block aspect-[8/1] w-[6em] align-baseline bg-[url(/logo.svg)] bg-center bg-no-repeat text-transparent">Lou's Codes</span>
-    tagline:
-        We embrace bleeding-edge web technologies to create high-quality and
-        long-lasting software.
+    tagline: Lou Cyx open-source libraries monorepo.
     image:
         file: ../../assets/logo.svg
     actions:

@@ -69,7 +69,7 @@ void Promise.all(
 		"@lou.codes/test",
 		"@lou.codes/types",
 		"@lou.codes/utils",
-		"@lou.codes/window-open-promise",
+		"window-open-promise",
 		"preact-pair",
 		"react-pair",
 	].map(updateSize),

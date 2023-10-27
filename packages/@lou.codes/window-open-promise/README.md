@@ -1,4 +1,4 @@
-<img id="logo" alt="@lou.codes/window-open-promise" src="https://lou.codes/logos/lou_codes_window_open_promise.svg" height="128" />
+<img id="logo" alt="window-open-promise" src="https://lou.codes/logos/window_open_promise.svg" height="128" />
 
 ![Coverage][coverage-badge] ![License][license-badge]
 ![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]
@@ -10,20 +10,20 @@
 
 ### 📦 Node
 
-Install `@lou.codes/window-open-promise` as a dependency:
+Install `window-open-promise` as a dependency:
 
 ```bash
-pnpm add @lou.codes/window-open-promise
+pnpm add window-open-promise
 # or
-npm install @lou.codes/window-open-promise
+npm install window-open-promise
 # or
-yarn add @lou.codes/window-open-promise
+yarn add window-open-promise
 ```
 
 Import it and use it:
 
 ```typescript
-import { windowOpenPromise } from "@lou.codes/window-open-promise";
+import { windowOpenPromise } from "window-open-promise";
 
 const windowOpen = windowOpenPromise(globalThis);
 
@@ -45,11 +45,10 @@ windowOpen({
 
 ### 🦕 Deno
 
-Import `@lou.codes/window-open-promise` using the `npm:` prefix, and use it
-directly:
+Import `window-open-promise` using the `npm:` prefix, and use it directly:
 
 ```typescript
-import { windowOpenPromise } from "npm:@lou.codes/window-open-promise";
+import { windowOpenPromise } from "npm:window-open-promise";
 
 const windowOpen = windowOpenPromise(globalThis);
 
@@ -70,12 +69,11 @@ try {
 
 ### 🌎 Browser
 
-Import `@lou.codes/window-open-promise` using [esm.sh][esm.sh], and use it
-directly:
+Import `window-open-promise` using [esm.sh][esm.sh], and use it directly:
 
 ```html
 <script type="module">
-	import { windowOpenPromise } from "https://esm.sh/@lou.codes/window-open-promise";
+	import { windowOpenPromise } from "https://esm.sh/window-open-promise";
 
 	const windowOpen = windowOpenPromise(globalThis);
 
@@ -104,16 +102,16 @@ directly:
 <!-- Reference -->
 
 [changelog]:
-	https://github.com/loucyx/lou.codes/blob/main/packages/@lou.codes/window-open-promise/CHANGELOG.md
+	https://github.com/loucyx/lou.codes/blob/main/packages/window-open-promise/CHANGELOG.md
 [coverage-badge]:
 	https://img.shields.io/coveralls/github/loucyx/lou.codes.svg?labelColor=666&color=0a8
 [coverage]: https://coveralls.io/github/loucyx/lou.codes
-[documentation]: https://lou.codes/libraries/lou_codes_window_open_promise/
+[documentation]: https://lou.codes/libraries/window_open_promise/
 [esm.sh]: https://esm.sh
 [license-badge]:
-	https://img.shields.io/npm/l/@lou.codes/window-open-promise.svg?labelColor=666&color=0a8
+	https://img.shields.io/npm/l/window-open-promise.svg?labelColor=666&color=0a8
 [npm-version-badge]:
-	https://img.shields.io/npm/v/@lou.codes/window-open-promise.svg?labelColor=666&color=0a8
+	https://img.shields.io/npm/v/window-open-promise.svg?labelColor=666&color=0a8
 [open-issues-badge]:
 	https://img.shields.io/github/issues/loucyx/lou.codes.svg?labelColor=666&color=0a8
 [size-badge]:

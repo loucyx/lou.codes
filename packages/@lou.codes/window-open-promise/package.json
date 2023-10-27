@@ -1,5 +1,5 @@
 {
-	"name": "@lou.codes/window-open-promise",
+	"name": "window-open-promise",
 	"description": "🪟 Promised Window.open();",
 	"version": "1.0.0",
 	"author": {
@@ -27,7 +27,7 @@
 	"files": [
 		"dist"
 	],
-	"homepage": "https://lou.codes/libraries/lou_codes_window_open_promise/",
+	"homepage": "https://lou.codes/libraries/window_open_promise/",
 	"keywords": [
 		"front",
 		"front-end",

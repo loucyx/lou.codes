@@ -22,7 +22,7 @@ and maintain a cohesive ecosystem of tools and components.
     Preact.
 -   [⏲️ @lou.codes/cron][cron] - Cron Quartz and Cron UNIX expression parser.
 -   [↔️ @lou.codes/diff][diff] - Deep diffing utility.
--   [🪟 @lou.codes/window-open-promise][window-open-promise] - Promised
+-   [🪟 window-open-promise][window-open-promise] - Promised
     `globalThis.open()`.
 -   [📣 @lou.codes/notify][notify] - Minimalistic Pub/Sub implementation.
 -   [🔁 @lou.codes/iterables][iterables] - Iterable and AsyncIterable utils.
@@ -42,8 +42,7 @@ and maintain a cohesive ecosystem of tools and components.
 [preact_pair]: https://lou.codes/libraries/preact_pair/
 [cron]: https://lou.codes/libraries/lou_codes_cron/
 [diff]: https://lou.codes/libraries/lou_codes_diff/
-[window-open-promise]:
-	https://lou.codes/libraries/lou_codes_window_open_promise/
+[window-open-promise]: https://lou.codes/libraries/window_open_promise/
 [notify]: https://lou.codes/libraries/lou_codes_notify/
 [iterables]: https://lou.codes/libraries/lou_codes_iterables/
 [parsers]: https://lou.codes/libraries/lou_codes_parsers/

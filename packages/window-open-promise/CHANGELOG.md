@@ -4,7 +4,7 @@
 
 ### Major Changes
 
--   🚚 move from `@vangware` to `@lou.codes`.
+-   🚚 rename `@vangware/window-open-promise` to just `window-open-promise`.
 
 ## 5.1.51
 

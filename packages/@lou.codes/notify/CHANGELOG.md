@@ -1,5 +1,11 @@
 # Change log
 
+## 1.0.1
+
+### Patch Changes
+
+-   ✏️ fix typos in README.md
+
 ## 1.0.0
 
 ### Major Changes

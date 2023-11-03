@@ -1,5 +1,11 @@
 # Change log
 
+## 1.0.56
+
+### Patch Changes
+
+-   🏗️ update dependencies (from @vangware to @lou.codes).
+
 ## 1.0.55
 
 ### Patch Changes

@@ -48,7 +48,7 @@ main .content-panel:first-child:not(:only-child) + .content-panel {
 
 /* Based on https://lou.cx/dark-plus-tailwind */
 :root {
-	--astro-code-color-background: theme("colors.neutral.900");
+	--astro-code-color-background: theme("colors.gray.950");
 	--astro-code-token-function: theme("colors.amber.100");
 	--astro-code-color-text: theme("colors.sky.400");
 	--astro-code-token-string: theme("colors.red.300");

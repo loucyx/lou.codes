@@ -64,7 +64,7 @@ Import `@lou.codes/notify` using [esm.sh][esm.sh], and use it directly:
 <script type="module">
 	import { broadcast } from "https://esm.sh/@lou.codes/notify";
 
-	const { emit, on } = broadcast<{ event: string }>();
+	const { emit, on } = broadcast();
 
 	const onEvent = on("event");
 	const offEvent = onEvent(console.log);

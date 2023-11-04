@@ -1,5 +1,11 @@
 # Change log
 
+## 1.0.1
+
+### Patch Changes
+
+-   ⬆️ dependency upgrade.
+
 ## 1.0.0
 
 ### Major Changes

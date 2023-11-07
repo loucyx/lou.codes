@@ -40,7 +40,7 @@
 		"tailwindcss": "^3.3.5",
 		"tsx": "^3.14.0",
 		"typedoc": "^0.25.3",
-		"typedoc-plugin-markdown": "^3.17.0",
+		"typedoc-plugin-markdown": "^3.17.1",
 		"typescript": "^5.2.2",
 		"vite-plugin-lightningcss": "^0.0.5"
 	},

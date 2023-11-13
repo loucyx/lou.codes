@@ -57,9 +57,9 @@ export const windowOpenPromise =
 		// eslint-disable-next-line max-params
 		new Promise<Window>((resolve, reject) =>
 			(newWindow =>
-				isNull(newWindow)
-					? reject(new Error(ERROR_MESSAGE))
-					: resolve(newWindow))(
+				isNull(newWindow) ?
+					reject(new Error(ERROR_MESSAGE))
+				:	resolve(newWindow))(
 				window.open(url, target, featureParser(features)),
 			),
 		);

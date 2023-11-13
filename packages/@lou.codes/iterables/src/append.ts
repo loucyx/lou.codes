@@ -34,12 +34,12 @@ export const append = handleCurriedIsomorphicIterable(
 	tailIterable: TailIterable,
 ) => <InitialIterable extends IsomorphicIterable>(
 	initialIterable: InitialIterable,
-) => TailIterable extends IsomorphicIterable<infer TailItem>
-	? InitialIterable extends IsomorphicIterable<infer InitialItem>
-		? TailIterable extends ReadOnlyAsyncIterable<TailItem>
-			? ReadOnlyAsyncIterableIterator<InitialItem | TailItem>
-			: InitialIterable extends ReadOnlyAsyncIterable<InitialItem>
-			? ReadOnlyAsyncIterableIterator<InitialItem | TailItem>
-			: ReadOnlyIterableIterator<InitialItem | TailItem>
-		: never
-	: never;
+) => TailIterable extends IsomorphicIterable<infer TailItem> ?
+	InitialIterable extends IsomorphicIterable<infer InitialItem> ?
+		TailIterable extends ReadOnlyAsyncIterable<TailItem> ?
+			ReadOnlyAsyncIterableIterator<InitialItem | TailItem>
+		: InitialIterable extends ReadOnlyAsyncIterable<InitialItem> ?
+			ReadOnlyAsyncIterableIterator<InitialItem | TailItem>
+		:	ReadOnlyIterableIterator<InitialItem | TailItem>
+	:	never
+:	never;

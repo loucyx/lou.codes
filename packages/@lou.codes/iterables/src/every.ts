@@ -22,9 +22,8 @@ import type { ReducerOutput } from "./types/ReducerOutput.js";
  * @returns Curried function with `predicate` set in context.
  */
 export const every = <Item, Predicated extends Item = never>(
-	predicate: Single<Predicated> extends Single<never>
-		? Unary<Item, boolean>
-		: Predicate<Item, Predicated>,
+	predicate: Single<Predicated> extends Single<never> ? Unary<Item, boolean>
+	:	Predicate<Item, Predicated>,
 ) =>
 	whenIsIterable(iterable => {
 		// eslint-disable-next-line functional/no-loop-statements

@@ -15,6 +15,6 @@ import { isStringNearestDayOfMonth } from "../validations/isStringNearestDayOfMo
  * @returns A `CronNearestDayOfMonth` or `undefined` if invalid.
  */
 export const parseStringNearestDayOfMonth = (source: string) =>
-	isStringNearestDayOfMonth(source)
-		? ({ nearest: parseDecimal(source) } as CronNearestDayOfMonth)
-		: undefined;
+	isStringNearestDayOfMonth(source) ?
+		({ nearest: parseDecimal(source) } as CronNearestDayOfMonth)
+	:	undefined;

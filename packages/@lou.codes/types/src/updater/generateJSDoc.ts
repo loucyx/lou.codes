@@ -17,13 +17,12 @@ export const generateJSDoc = ({
 	readonly description?: string | { readonly value: string };
 	readonly references?: ReadOnly<ITagData["references"]>;
 }) =>
-	description === undefined
-		? "\n"
-		: `
+	description === undefined ? "\n" : (
+		`
 /**
  * ${normalizeJSDocMarkdown(getDescription(description))}${
-		references
-			? `
+		references ?
+			`
  * 
  * ---
  *
@@ -32,7 +31,8 @@ export const generateJSDoc = ({
  * ${references
 		.map(reference => `@see [${reference.name}](${reference.url})`)
 		.join("\n * ")}`
-			: ""
+		:	""
  }
  */
-`;
+`
+	);

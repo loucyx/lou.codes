@@ -22,40 +22,42 @@ export const formatValueDictionary: ReadOnlyRecord<
 	null: () => foregroundBlue`null`,
 	number: value => foregroundBrightGreen`${value}`,
 	object: value =>
-		Array.isArray(value)
-			? `${foregroundBrightGreen`Array`}([ ${value
-					.map(formatValue)
-					.join(", ")} ])`
-			: value instanceof Date
-			? `${foregroundBrightGreen`Date`}(${foregroundBrightRed`"${value.toISOString()}"`})`
-			: value instanceof RegExp
-			? `${foregroundBrightGreen`RegExp`}(${foregroundBrightRed(
-					value.toString(),
-			  )})`
-			: value instanceof URL
-			? `${foregroundBrightGreen`URL`}(${foregroundBrightRed`"${value.href}"`})`
-			: value instanceof Error
-			? `${foregroundBrightGreen(
-					value.name,
-			  )}(${foregroundBrightRed`"${value.message}"`})`
-			: `${foregroundBrightGreen(
-					(
-						value as {
-							readonly constructor?: { readonly name: string };
-						}
-					).constructor?.name ?? "Object",
-			  )}({ ${(typeof (value as ReadonlyMap<unknown, unknown>)
-					.entries === "function"
-					? [...(value as ReadonlyMap<unknown, unknown>).entries()]
-					: Object.entries(value as ReadOnlyRecord)
-			  )
-					.map(
-						([key, propertyValue]) =>
-							`${foregroundBrightRed`"${
-								key as string
-							}"`}: ${formatValue(propertyValue)}`,
-					)
-					.join(", ")} })`,
+		Array.isArray(value) ?
+			`${foregroundBrightGreen`Array`}([ ${value
+				.map(formatValue)
+				.join(", ")} ])`
+		: value instanceof Date ?
+			`${foregroundBrightGreen`Date`}(${foregroundBrightRed`"${value.toISOString()}"`})`
+		: value instanceof RegExp ?
+			`${foregroundBrightGreen`RegExp`}(${foregroundBrightRed(
+				value.toString(),
+			)})`
+		: value instanceof URL ?
+			`${foregroundBrightGreen`URL`}(${foregroundBrightRed`"${value.href}"`})`
+		: value instanceof Error ?
+			`${foregroundBrightGreen(
+				value.name,
+			)}(${foregroundBrightRed`"${value.message}"`})`
+		:	`${foregroundBrightGreen(
+				(
+					value as {
+						readonly constructor?: { readonly name: string };
+					}
+				).constructor?.name ?? "Object",
+			)}({ ${((
+				typeof (value as ReadonlyMap<unknown, unknown>).entries ===
+				"function"
+			) ?
+				[...(value as ReadonlyMap<unknown, unknown>).entries()]
+			:	Object.entries(value as ReadOnlyRecord)
+			)
+				.map(
+					([key, propertyValue]) =>
+						`${foregroundBrightRed`"${
+							key as string
+						}"`}: ${formatValue(propertyValue)}`,
+				)
+				.join(", ")} })`,
 	string: value =>
 		foregroundBrightRed`"${(value as string).replace(
 			// eslint-disable-next-line no-control-regex
@@ -64,9 +66,9 @@ export const formatValueDictionary: ReadOnlyRecord<
 		)}"`,
 	symbol: value =>
 		foregroundBrightGreen`Symbol${
-			(value as symbol).description !== undefined
-				? `(${foregroundBrightRed`"${(value as symbol).description}"`})`
-				: ""
+			(value as symbol).description !== undefined ?
+				`(${foregroundBrightRed`"${(value as symbol).description}"`})`
+			:	""
 		}`,
 	undefined: () => foregroundBlue`undefined`,
 };

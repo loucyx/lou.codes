@@ -18,6 +18,6 @@ import { isStringDayOfMonthValue } from "../validations/isStringDayOfMonthValue.
 export const parseStringDayOfMonthValue: StringValueParser<
 	CronDayOfMonthValue
 > = source =>
-	isStringDayOfMonthValue(source)
-		? (parseDecimal(source) as CronDayOfMonthValue)
-		: undefined;
+	isStringDayOfMonthValue(source) ?
+		(parseDecimal(source) as CronDayOfMonthValue)
+	:	undefined;

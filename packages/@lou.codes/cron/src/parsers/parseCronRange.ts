@@ -22,7 +22,7 @@ export const parseCronRange =
 		const from = valid ? parser(source.from) : undefined;
 		const to = valid ? parser(source.to) : undefined;
 
-		return valid && !isUndefined(from) && !isUndefined(to)
-			? `${from}-${to}`
-			: undefined;
+		return valid && !isUndefined(from) && !isUndefined(to) ?
+				`${from}-${to}`
+			:	undefined;
 	};

@@ -45,9 +45,9 @@ export const createIterableIterator = <
 		...generator,
 		[isIterable(generator) ? iteratorSymbol : asyncIteratorSymbol]:
 			generatorFunction,
-	} as GeneratorFunction extends IsomorphicGeneratorFunction<infer Item>
-		? GeneratorFunction extends Function<never, ReadOnlyAsyncIterator<Item>>
-			? ReadOnlyAsyncIterableIterator<Item>
-			: ReadOnlyIterableIterator<Item>
-		: never;
+	} as GeneratorFunction extends IsomorphicGeneratorFunction<infer Item> ?
+		GeneratorFunction extends Function<never, ReadOnlyAsyncIterator<Item>> ?
+			ReadOnlyAsyncIterableIterator<Item>
+		:	ReadOnlyIterableIterator<Item>
+	:	never;
 };

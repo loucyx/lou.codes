@@ -16,8 +16,8 @@ import type { ReadOnlyAsyncIterable } from "./ReadOnlyAsyncIterable.js";
 export type ReducerOutput<
 	Iterable extends IsomorphicIterable,
 	Output,
-> = Iterable extends IsomorphicIterable<infer Item>
-	? Iterable extends ReadOnlyAsyncIterable<Item>
-		? Promise<Output>
-		: Output
-	: never;
+> = Iterable extends IsomorphicIterable<infer Item> ?
+	Iterable extends ReadOnlyAsyncIterable<Item> ?
+		Promise<Output>
+	:	Output
+:	never;

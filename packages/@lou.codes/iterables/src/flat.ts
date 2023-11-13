@@ -22,9 +22,9 @@ export const flat = handleIsomorphicIterable(
 			// eslint-disable-next-line functional/no-loop-statements
 			for (const iterableOrItem of iterable) {
 				// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-				isIterable(iterableOrItem)
-					? yield* iterableOrItem
-					: yield iterableOrItem;
+				isIterable(iterableOrItem) ?
+					yield* iterableOrItem
+				:	yield iterableOrItem;
 			}
 		},
 )(
@@ -33,19 +33,19 @@ export const flat = handleIsomorphicIterable(
 			// eslint-disable-next-line functional/no-loop-statements
 			for await (const iterableOrItem of iterable) {
 				// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-				isIsomorphicIterable(iterableOrItem)
-					? yield* iterableOrItem
-					: yield iterableOrItem;
+				isIsomorphicIterable(iterableOrItem) ?
+					yield* iterableOrItem
+				:	yield iterableOrItem;
 			}
 		},
 ) as <Iterable extends IsomorphicIterable>(
 	iterable: Iterable,
-) => Iterable extends IsomorphicIterable<infer Item>
-	? Item extends IsomorphicIterable<infer SubItem>
-		? Item extends ReadOnlyAsyncIterable<SubItem>
-			? ReadOnlyAsyncIterableIterator<SubItem>
-			: ReadOnlyIterableIterator<SubItem>
-		: Iterable extends ReadOnlyAsyncIterable<Item>
-		? ReadOnlyAsyncIterableIterator<Item>
-		: ReadOnlyIterableIterator<Item>
-	: never;
+) => Iterable extends IsomorphicIterable<infer Item> ?
+	Item extends IsomorphicIterable<infer SubItem> ?
+		Item extends ReadOnlyAsyncIterable<SubItem> ?
+			ReadOnlyAsyncIterableIterator<SubItem>
+		:	ReadOnlyIterableIterator<SubItem>
+	: Iterable extends ReadOnlyAsyncIterable<Item> ?
+		ReadOnlyAsyncIterableIterator<Item>
+	:	ReadOnlyIterableIterator<Item>
+:	never;

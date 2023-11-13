@@ -47,18 +47,21 @@ export const question =
 	}: QuestionOptions<FormattedValue>): Promise<FormattedValue> =>
 		Promise.resolve(questionObject.question(`${query} `)).then(value => {
 			const formattedValue = (
-				format !== undefined ? format(value) : value
-			) as FormattedValue;
+				format !== undefined ?
+					format(value)
+				:	value) as FormattedValue;
 			const validationError = validate?.(formattedValue) ?? "";
 
-			return validationError
-				? retry
-					? question(questionObject)({
+			return (
+				validationError ?
+					retry ?
+						question(questionObject)({
 							format,
 							query: validationError,
 							retry,
 							validate,
-					  })
-					: Promise.reject(validationError)
-				: formattedValue;
+						})
+					:	Promise.reject(validationError)
+				:	formattedValue
+			);
 		});

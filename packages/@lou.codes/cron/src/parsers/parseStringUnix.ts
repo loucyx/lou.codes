@@ -90,15 +90,17 @@ export const parseStringUnix = (source: string): Maybe<CronUnix> => {
 	const dayOfWeek =
 		parts && parseStringDayOfWeek(parts[UNIX_DAY_OF_WEEK_POSITION]);
 
-	return [parts, minutes, hours, dayOfMonth, month, dayOfWeek].some(
-		isUndefined,
-	)
-		? undefined
-		: ({
+	return (
+			[parts, minutes, hours, dayOfMonth, month, dayOfWeek].some(
+				isUndefined,
+			)
+		) ?
+			undefined
+		:	({
 				dayOfMonth,
 				dayOfWeek,
 				hours,
 				minutes,
 				month,
-		  } as CronUnix);
+			} as CronUnix);
 };

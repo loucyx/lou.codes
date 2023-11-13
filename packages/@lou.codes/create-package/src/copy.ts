@@ -13,16 +13,13 @@ export const copy = (from: Path) => (to: Path) => {
 		readdir(fromURL, { withFileTypes: true }).then(files =>
 			Promise.all(
 				files.flatMap(file =>
-					file.isDirectory()
-						? createDirectory(createURLTo(file.name)).then(
-								copy(createURLFrom(`${file.name}/`))(
-									createURLTo(`${file.name}/`),
-								),
-						  )
-						: copyFile(
-								createURLFrom(file.name),
-								createURLTo(file.name),
-						  ),
+					file.isDirectory() ?
+						createDirectory(createURLTo(file.name)).then(
+							copy(createURLFrom(`${file.name}/`))(
+								createURLTo(`${file.name}/`),
+							),
+						)
+					:	copyFile(createURLFrom(file.name), createURLTo(file.name)),
 				),
 			).then(() => undefined),
 		);

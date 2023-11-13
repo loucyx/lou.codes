@@ -68,17 +68,17 @@ export const handleCurriedIsomorphicIterable =
 
 				return iterable1 =>
 					createIterableIterator(
-						isAsyncIterable(iterable1)
-							? asyncGenerator2(iterable1)
-							: generator2(iterable1),
+						isAsyncIterable(iterable1) ?
+							asyncGenerator2(iterable1)
+						:	generator2(iterable1),
 					);
 			}
 		}) as <Iterable2 extends IsomorphicIterable<Iterable2Item>>(
 			iterable2: Iterable2,
 		) => <Iterable1 extends IsomorphicIterable<Iterable1Item>>(
 			iterable1: Iterable1,
-		) => Iterable2 extends ReadOnlyAsyncIterable<Iterable2Item>
-			? ReadOnlyAsyncIterableIterator<Output>
-			: Iterable1 extends ReadOnlyAsyncIterable<Iterable1Item>
-			? ReadOnlyAsyncIterableIterator<Output>
-			: ReadOnlyIterableIterator<Output>;
+		) => Iterable2 extends ReadOnlyAsyncIterable<Iterable2Item> ?
+			ReadOnlyAsyncIterableIterator<Output>
+		: Iterable1 extends ReadOnlyAsyncIterable<Iterable1Item> ?
+			ReadOnlyAsyncIterableIterator<Output>
+		:	ReadOnlyIterableIterator<Output>;

@@ -20,10 +20,9 @@ import { FEATURE_DISABLED, FEATURE_ENABLED } from "./constants.js";
 export const featureMap = map(
 	([feature, value = false]: EntryOf<WindowOpenPromiseFeatures>) =>
 		`${feature.toLocaleLowerCase()}=${
-			isBoolean(value)
-				? value
-					? FEATURE_ENABLED
-					: FEATURE_DISABLED
-				: value
+			isBoolean(value) ?
+				value ? FEATURE_ENABLED
+				:	FEATURE_DISABLED
+			:	value
 		}`,
 );

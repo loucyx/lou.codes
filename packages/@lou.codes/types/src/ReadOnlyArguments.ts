@@ -22,6 +22,6 @@ import type { ReadOnlyArray } from "./ReadOnlyArray.js";
  * @template Input Function to extract parameters from.
  */
 export type ReadOnlyArguments<Input extends Function<ReadOnlyArray<never>>> =
-	Input extends (..._arguments: infer Arguments) => infer _Output
-		? ReadOnly<Arguments>
-		: never;
+	Input extends (..._arguments: infer Arguments) => infer _Output ?
+		ReadOnly<Arguments>
+	:	never;

@@ -22,9 +22,9 @@ export const generateAttributesType = ({
 		string: attributes
 			.map(
 				attribute => `${generateJSDoc(attribute)}readonly ${
-					attribute.name.includes("-")
-						? `"${attribute.name}"`
-						: attribute.name
+					attribute.name.includes("-") ?
+						`"${attribute.name}"`
+					:	attribute.name
 				}?: string;
 `,
 			)

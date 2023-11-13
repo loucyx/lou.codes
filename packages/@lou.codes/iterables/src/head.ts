@@ -25,6 +25,6 @@ export const head = <Iterable extends IsomorphicIterable>(iterable: Iterable) =>
 		({
 			value,
 		}: Readonly<Pick<IteratorResult<unknown, unknown>, "value">>) => value,
-	)(getIterator(iterable).next()) as Iterable extends ReadOnlyArray
-		? Head<Iterable>
-		: Maybe<IsomorphicIterableItem<Iterable>>;
+	)(getIterator(iterable).next()) as Iterable extends ReadOnlyArray ?
+		Head<Iterable>
+	:	Maybe<IsomorphicIterableItem<Iterable>>;

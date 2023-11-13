@@ -16,6 +16,6 @@ import { isCronSpecificDayOfWeek } from "../validations/isCronSpecificDayOfWeek.
 export const parseCronSpecificDayOfWeek = (
 	source: CronSpecificDayOfWeek | string,
 ) =>
-	isCronSpecificDayOfWeek(source)
-		? `${source.day}#${source.week}`
-		: undefined;
+	isCronSpecificDayOfWeek(source) ?
+		`${source.day}#${source.week}`
+	:	undefined;

@@ -25,11 +25,14 @@ import { normalizeString } from "./normalizeString.js";
  * @returns Either the formatted string, or just the passed string.
  */
 export const optionalFormat = (({ process: { env = {}, stdout = {} } = {} }) =>
-	(env.NODE_DISABLE_COLORS ?? "") === "" &&
-	env.NO_COLOR === undefined &&
-	env.TERM !== "dumb" &&
-	((env.FORCE_COLOR ?? "1") !== "0" || (stdout.isTTY ?? false))
-		? format
-		: () => () => normalizeString)(
-	(globalThis as Maybe<Partial<typeof globalThis>>) ?? {},
+	(
+		(env.NODE_DISABLE_COLORS ?? "") === "" &&
+		env.NO_COLOR === undefined &&
+		env.TERM !== "dumb" &&
+		((env.FORCE_COLOR ?? "1") !== "0" || (stdout.isTTY ?? false))
+	) ?
+		format
+	:	() => () => normalizeString)(
+	(globalThis as Maybe<Partial<typeof globalThis>>) ??
+		({} as Partial<typeof globalThis>),
 ) as typeof format;

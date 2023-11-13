@@ -5,6 +5,5 @@ import type { Function, Single, Unary } from "@lou.codes/types";
  *
  * @template Data Data type.
  */
-export type Emitter<Data> = Single<Data> extends Single<never>
-	? Function<[], void>
-	: Unary<Data, void>;
+export type Emitter<Data> =
+	Single<Data> extends Single<never> ? Function<[], void> : Unary<Data, void>;

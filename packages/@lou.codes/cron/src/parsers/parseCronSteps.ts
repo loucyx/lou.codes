@@ -32,17 +32,18 @@ export const parseCronSteps =
 	<Value>(parser: CronValueParser<Value>) =>
 	(source: CronSteps<Value>) => {
 		const valid = isCronSteps(source);
-		const start = valid
-			? parseCronEvery(source.start as CronEvery) ??
-			  parseCronRange(parser)(source.start as CronRange<Value>) ??
-			  parser(source.start as Value)
-			: undefined;
+		const start =
+			valid ?
+				parseCronEvery(source.start as CronEvery) ??
+				parseCronRange(parser)(source.start as CronRange<Value>) ??
+				parser(source.start as Value)
+			:	undefined;
 		const every =
-			valid && between(minimum)(maximum)(source.every)
-				? source.every
-				: undefined;
+			valid && between(minimum)(maximum)(source.every) ?
+				source.every
+			:	undefined;
 
-		return valid && !isUndefined(start) && !isUndefined(every)
-			? `${start}/${every}`
-			: undefined;
+		return valid && !isUndefined(start) && !isUndefined(every) ?
+				`${start}/${every}`
+			:	undefined;
 	};

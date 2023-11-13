@@ -16,6 +16,6 @@ import { isStringYearValue } from "../validations/isStringYearValue.js";
  * @returns A `CronYearValue` or `undefined` if invalid.
  */
 export const parseStringYearValue: StringValueParser<CronYearValue> = source =>
-	isStringYearValue(source)
-		? (parseDecimal(source) as CronYearValue)
-		: undefined;
+	isStringYearValue(source) ?
+		(parseDecimal(source) as CronYearValue)
+	:	undefined;

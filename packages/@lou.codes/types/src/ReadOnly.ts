@@ -19,30 +19,27 @@
  */
 export type ReadOnly<Input> =
 	// Maps
-	Input extends Readonly<ReadonlyMap<infer Key, infer Value>>
-		? Readonly<ReadonlyMap<ReadOnly<Key>, ReadOnly<Value>>>
-		: // Sets
-		Input extends Readonly<ReadonlySet<infer Item>>
-		? Readonly<ReadonlySet<ReadOnly<Item>>>
-		: // Tuples
-		Input extends readonly []
-		? readonly []
-		: Input extends readonly [infer Head, ...infer Tail]
-		? readonly [ReadOnly<Head>, ...ReadOnly<Tail>]
-		: // Arrays
-		Input extends ReadonlyArray<infer Item>
-		? ReadonlyArray<ReadOnly<Item>>
-		: // Functions
-		Input extends Function
-		? Input
-		: // Objects
-		Input extends object
-		? {
-				/**
-				 * The original description of this property might get lost when
-				 * {@link ReadOnly} is applied to an object type.
-				 */
-				readonly [Property in keyof Input]: ReadOnly<Input[Property]>;
-		  }
-		: // Others (including primitives)
-		  Input;
+	Input extends Readonly<ReadonlyMap<infer Key, infer Value>> ?
+		Readonly<ReadonlyMap<ReadOnly<Key>, ReadOnly<Value>>>
+	: // Sets
+	Input extends Readonly<ReadonlySet<infer Item>> ?
+		Readonly<ReadonlySet<ReadOnly<Item>>>
+	: // Tuples
+	Input extends readonly [] ? readonly []
+	: Input extends readonly [infer Head, ...infer Tail] ?
+		readonly [ReadOnly<Head>, ...ReadOnly<Tail>]
+	: // Arrays
+	Input extends ReadonlyArray<infer Item> ? ReadonlyArray<ReadOnly<Item>>
+	: // Functions
+	Input extends Function ? Input
+	: // Objects
+	Input extends object ?
+		{
+			/**
+			 * The original description of this property might get lost when
+			 * {@link ReadOnly} is applied to an object type.
+			 */
+			readonly [Property in keyof Input]: ReadOnly<Input[Property]>;
+		}
+	:	// Others (including primitives)
+		Input;

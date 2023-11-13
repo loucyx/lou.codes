@@ -18,6 +18,6 @@ import { isStringSecondsValue } from "../validations/isStringSecondsValue.js";
 export const parseStringSecondsValue: StringValueParser<
 	CronSecondsValue
 > = source =>
-	isStringSecondsValue(source)
-		? (parseDecimal(source) as CronSecondsValue)
-		: undefined;
+	isStringSecondsValue(source) ?
+		(parseDecimal(source) as CronSecondsValue)
+	:	undefined;

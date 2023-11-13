@@ -21,7 +21,7 @@ export const parseStringLastValue = (source: string): Maybe<CronLastValue> => {
 	const valid = isStringLastValue(source);
 	const last = valid ? parseDecimal(source) : undefined;
 
-	return valid && !isUndefined(last) && isCronDayOfWeekValueNumber(last)
-		? { last }
-		: undefined;
+	return valid && !isUndefined(last) && isCronDayOfWeekValueNumber(last) ?
+			{ last }
+		:	undefined;
 };

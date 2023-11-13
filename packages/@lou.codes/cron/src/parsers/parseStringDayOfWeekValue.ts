@@ -25,12 +25,15 @@ export const parseStringDayOfWeekValue: StringValueParser<
 > = source => {
 	const valid = isStringDayOfWeekValue(source);
 	const cronDayOfWeekValueNumber = (
-		valid ? parseDecimal(source) : NaN
-	) as CronDayOfWeekValueNumber;
+		valid ?
+			parseDecimal(source)
+		:	NaN) as CronDayOfWeekValueNumber;
 
-	return valid
-		? isNaN(cronDayOfWeekValueNumber)
-			? (source.toLocaleUpperCase() as CronDayOfWeekValueString)
-			: cronDayOfWeekValueNumber
-		: undefined;
+	return (
+		valid ?
+			isNaN(cronDayOfWeekValueNumber) ?
+				(source.toLocaleUpperCase() as CronDayOfWeekValueString)
+			:	cronDayOfWeekValueNumber
+		:	undefined
+	);
 };

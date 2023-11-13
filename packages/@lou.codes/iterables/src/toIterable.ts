@@ -29,18 +29,18 @@ export const toIterable = <const ValueOrIterable>(
 	valueOrIterable: ValueOrIterable,
 ) =>
 	createIterableIterator(
-		isAsyncIterable(valueOrIterable)
-			? async function* () {
-					yield* valueOrIterable;
-			  }
-			: function* () {
-					// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-					isIterable(valueOrIterable)
-						? yield* valueOrIterable
-						: yield valueOrIterable;
-			  },
-	) as ValueOrIterable extends IsomorphicIterable<infer Item>
-		? Item extends ReadOnlyAsyncIterable<Item>
-			? ReadOnlyAsyncIterableIterator<Item>
-			: ReadOnlyIterableIterator<Item>
-		: ReadOnlyIterableIterator<ValueOrIterable>;
+		isAsyncIterable(valueOrIterable) ?
+			async function* () {
+				yield* valueOrIterable;
+			}
+		:	function* () {
+				// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+				isIterable(valueOrIterable) ?
+					yield* valueOrIterable
+				:	yield valueOrIterable;
+			},
+	) as ValueOrIterable extends IsomorphicIterable<infer Item> ?
+		Item extends ReadOnlyAsyncIterable<Item> ?
+			ReadOnlyAsyncIterableIterator<Item>
+		:	ReadOnlyIterableIterator<Item>
+	:	ReadOnlyIterableIterator<ValueOrIterable>;

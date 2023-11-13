@@ -21,9 +21,8 @@ import { when } from "./when.js";
  * @returns Curried function with `predicate` in context.
  */
 export const whenTruthy = <Value, Predicated extends Value = never>(
-	predicate: Single<Predicated> extends Single<never>
-		? Filter<Value>
-		: Predicate<Value, Predicated>,
+	predicate: Single<Predicated> extends Single<never> ? Filter<Value>
+	:	Predicate<Value, Predicated>,
 ) =>
 	flip(when(predicate))(identity) as <Output>(
 		truthyHandler: Unary<Predicated & Value, Output>,

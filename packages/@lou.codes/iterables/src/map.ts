@@ -37,6 +37,6 @@ export const map = <Item, MappedItem>(mapper: Unary<Item, MappedItem>) =>
 			},
 	) as <Iterable extends IsomorphicIterable<Item>>(
 		iterable: Iterable,
-	) => Iterable extends ReadOnlyAsyncIterable<Item>
-		? ReadOnlyAsyncIterableIterator<MappedItem>
-		: ReadOnlyIterableIterator<MappedItem>;
+	) => Iterable extends ReadOnlyAsyncIterable<Item> ?
+		ReadOnlyAsyncIterableIterator<MappedItem>
+	:	ReadOnlyIterableIterator<MappedItem>;

@@ -175,7 +175,11 @@ const formatPairedDocs = () =>
 							"> [View source](https://github.com/loucyx/lou.codes/blob/main/packages/$1/src/$2.ts)",
 						)
 						.replaceAll("https://lou.codes/", "/")
-						.replaceAll("https://lou.codes", "/"),
+						.replaceAll("https://lou.codes", "/")
+						.replace(
+							/(?<optionalPropertyEnd>\?`)(?<spaces> +\|)/gu,
+							" (optional)`$2",
+						),
 				]),
 		),
 	);

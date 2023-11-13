@@ -1,5 +1,11 @@
 # Change log
 
+## 1.1.0
+
+### Minor Changes
+
+-   🔧 new prettier experimental config.
+
 ## 1.0.4
 
 ### Patch Changes

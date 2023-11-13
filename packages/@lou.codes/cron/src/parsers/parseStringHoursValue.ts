@@ -18,6 +18,6 @@ import { isStringHoursValue } from "../validations/isStringHoursValue.js";
 export const parseStringHoursValue: StringValueParser<
 	CronHoursValue
 > = source =>
-	isStringHoursValue(source)
-		? (parseDecimal(source) as CronHoursValue)
-		: undefined;
+	isStringHoursValue(source) ?
+		(parseDecimal(source) as CronHoursValue)
+	:	undefined;

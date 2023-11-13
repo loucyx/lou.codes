@@ -57,12 +57,12 @@ export const zip = handleCurriedIsomorphicIterable(
 	iterableFirst: FirstIterable,
 ) => <SecondIterable extends IsomorphicIterable>(
 	iterableSecond: SecondIterable,
-) => FirstIterable extends IsomorphicIterable<infer FirstItem>
-	? SecondIterable extends IsomorphicIterable<infer SecondItem>
-		? FirstIterable extends ReadOnlyAsyncIterable<FirstItem>
-			? ReadOnlyAsyncIterableIterator<readonly [FirstItem, SecondItem]>
-			: SecondIterable extends ReadOnlyAsyncIterable<SecondItem>
-			? ReadOnlyAsyncIterableIterator<readonly [FirstItem, SecondItem]>
-			: ReadOnlyIterableIterator<readonly [FirstItem, SecondItem]>
-		: never
-	: never;
+) => FirstIterable extends IsomorphicIterable<infer FirstItem> ?
+	SecondIterable extends IsomorphicIterable<infer SecondItem> ?
+		FirstIterable extends ReadOnlyAsyncIterable<FirstItem> ?
+			ReadOnlyAsyncIterableIterator<readonly [FirstItem, SecondItem]>
+		: SecondIterable extends ReadOnlyAsyncIterable<SecondItem> ?
+			ReadOnlyAsyncIterableIterator<readonly [FirstItem, SecondItem]>
+		:	ReadOnlyIterableIterator<readonly [FirstItem, SecondItem]>
+	:	never
+:	never;

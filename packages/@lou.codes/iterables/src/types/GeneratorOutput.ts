@@ -17,10 +17,9 @@ import type { ReadOnlyIterableIterator } from "./ReadOnlyIterableIterator.js";
  *
  * @template Iterable `IsomorphicIterable` to get the output from.
  */
-export type GeneratorOutput<Iterable> = Iterable extends IsomorphicIterable<
-	infer Item
->
-	? Iterable extends ReadOnlyAsyncIterable<Item>
-		? ReadOnlyAsyncIterableIterator<Item>
-		: ReadOnlyIterableIterator<Item>
-	: never;
+export type GeneratorOutput<Iterable> =
+	Iterable extends IsomorphicIterable<infer Item> ?
+		Iterable extends ReadOnlyAsyncIterable<Item> ?
+			ReadOnlyAsyncIterableIterator<Item>
+		:	ReadOnlyIterableIterator<Item>
+	:	never;

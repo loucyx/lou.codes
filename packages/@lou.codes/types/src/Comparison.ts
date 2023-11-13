@@ -30,7 +30,6 @@ export type Comparison<
 	Predicated extends Left = never,
 > = Unary<
 	Right,
-	Single<Predicated> extends Single<never>
-		? Filter<Left>
-		: Predicate<Left, Predicated>
+	Single<Predicated> extends Single<never> ? Filter<Left>
+	:	Predicate<Left, Predicated>
 >;

@@ -16,11 +16,11 @@ import type { Filter, Predicate, Single, Unary } from "@lou.codes/types";
  * @returns Source function with negated output.
  */
 export const negate = <Item, Predicated extends Item = never>(
-	predicate: Single<Predicated> extends Single<never>
-		? Filter<Item>
-		: Predicate<Item, Predicated>,
+	predicate: Single<Predicated> extends Single<never> ? Filter<Item>
+	:	Predicate<Item, Predicated>,
 ) =>
-	((input: Item) =>
-		!predicate(input)) as Single<Predicated> extends Single<never>
-		? Unary<Item, boolean>
-		: Predicate<Item, Exclude<Item, Predicated>>;
+	((input: Item) => !predicate(input)) as Single<Predicated> extends (
+		Single<never>
+	) ?
+		Unary<Item, boolean>
+	:	Predicate<Item, Exclude<Item, Predicated>>;

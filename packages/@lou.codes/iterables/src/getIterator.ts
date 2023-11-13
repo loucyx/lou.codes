@@ -28,11 +28,11 @@ export const getIterator = <Iterable extends IsomorphicIterable>(
 	iterable: Iterable,
 ) =>
 	(iterable as AsyncIterable<unknown>)[
-		(isIterable(iterable)
-			? iteratorSymbol
-			: asyncIteratorSymbol) as keyof AsyncIterable<unknown>
-	]() as Iterable extends IsomorphicIterable<infer Item>
-		? Iterable extends ReadOnlyAsyncIterable<Item>
-			? ReadOnlyAsyncIterator<Item, Item, Item>
-			: ReadOnlyIterator<Item, Item, Item>
-		: never;
+		(isIterable(iterable) ? iteratorSymbol : (
+			asyncIteratorSymbol
+		)) as keyof AsyncIterable<unknown>
+	]() as Iterable extends IsomorphicIterable<infer Item> ?
+		Iterable extends ReadOnlyAsyncIterable<Item> ?
+			ReadOnlyAsyncIterator<Item, Item, Item>
+		:	ReadOnlyIterator<Item, Item, Item>
+	:	never;

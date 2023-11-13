@@ -17,10 +17,12 @@ export const filterTestFilePaths = async function* (
 	// eslint-disable-next-line functional/no-loop-statements
 	for await (const readOnlyURL of readOnlyURLs) {
 		// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-		/\.(?<testExtensions>spec|test)\.(?<importableExtensions>cjs|cts|js|jsx|mjs|mts|ts|tsx)$/gu.test(
-			readOnlyURL.pathname,
-		)
-			? yield readOnlyURL
-			: undefined;
+		(
+			/\.(?<testExtensions>spec|test)\.(?<importableExtensions>cjs|cts|js|jsx|mjs|mts|ts|tsx)$/gu.test(
+				readOnlyURL.pathname,
+			)
+		) ?
+			yield readOnlyURL
+		:	undefined;
 	}
 };

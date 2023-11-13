@@ -18,8 +18,8 @@ export const iterableToArray = reduce(item => (array: ReadOnlyArray) => [
 	item,
 ])([]) as <Iterable extends IsomorphicIterable>(
 	iterable: Iterable,
-) => Iterable extends IsomorphicIterable<infer Item>
-	? Iterable extends ReadOnlyAsyncIterable<Item>
-		? Promise<ReadOnlyArray<Item>>
-		: ReadOnlyArray<Item>
-	: never;
+) => Iterable extends IsomorphicIterable<infer Item> ?
+	Iterable extends ReadOnlyAsyncIterable<Item> ?
+		Promise<ReadOnlyArray<Item>>
+	:	ReadOnlyArray<Item>
+:	never;

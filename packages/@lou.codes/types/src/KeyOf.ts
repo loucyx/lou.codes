@@ -25,9 +25,10 @@ import type { ReadOnlyCollection } from "./ReadOnlyCollection.js";
  *
  * @template Input The input `ReadOnlyCollection`.
  */
-export type KeyOf<Input extends ReadOnlyCollection> = Input extends ArrayLike
-	? NeverFallback<
+export type KeyOf<Input extends ReadOnlyCollection> =
+	Input extends ArrayLike ?
+		NeverFallback<
 			Defined<Exclude<Partial<Input>["length"], Input["length"]>>,
 			number
-	  >
-	: `${Exclude<keyof Input, symbol>}`;
+		>
+	:	`${Exclude<keyof Input, symbol>}`;

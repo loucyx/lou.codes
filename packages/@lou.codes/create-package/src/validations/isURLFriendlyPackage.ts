@@ -8,10 +8,10 @@ export const isURLFriendlyPackage = (packageName: string) => {
 		) ?? ({} as Partial<RegExpMatchArray>);
 
 	return (
-		namespace !== "" && namespacedPackageName !== ""
-			? [namespace, namespacedPackageName].every(isURLFriendly)
-			: isURLFriendly(packageName)
-	)
-		? ""
-		: foregroundRed`"${packageName}" isn't URL friendly`;
+			namespace !== "" && namespacedPackageName !== "" ?
+				[namespace, namespacedPackageName].every(isURLFriendly)
+			:	isURLFriendly(packageName)
+		) ?
+			""
+		:	foregroundRed`"${packageName}" isn't URL friendly`;
 };

@@ -108,18 +108,20 @@ export const parseStringQuartz = (source: string): Maybe<CronQuartz> => {
 		parts && parseStringDayOfWeek(parts[QUARTZ_DAY_OF_WEEK_POSITION]);
 	const year = parts && parseStringYear(parts[QUARTZ_YEAR_POSITION]);
 
-	return [
-		parts,
-		seconds,
-		minutes,
-		hours,
-		dayOfMonth,
-		month,
-		dayOfWeek,
-		year,
-	].some(isUndefined)
-		? undefined
-		: ({
+	return (
+			[
+				parts,
+				seconds,
+				minutes,
+				hours,
+				dayOfMonth,
+				month,
+				dayOfWeek,
+				year,
+			].some(isUndefined)
+		) ?
+			undefined
+		:	({
 				dayOfMonth,
 				dayOfWeek,
 				hours,
@@ -127,5 +129,5 @@ export const parseStringQuartz = (source: string): Maybe<CronQuartz> => {
 				month,
 				seconds,
 				year,
-		  } as CronQuartz);
+			} as CronQuartz);
 };

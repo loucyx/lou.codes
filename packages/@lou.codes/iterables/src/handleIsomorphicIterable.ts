@@ -49,6 +49,6 @@ export const handleIsomorphicIterable =
 	<Iterable extends IsomorphicIterable<Item>>(iterable: Iterable) =>
 		createIterableIterator(
 			isIterable(iterable) ? iterator(iterable) : asyncIterator(iterable),
-		) as Iterable extends ReadOnlyAsyncIterable<Item>
-			? ReadOnlyAsyncIterableIterator<Output>
-			: ReadOnlyIterableIterator<Output>;
+		) as Iterable extends ReadOnlyAsyncIterable<Item> ?
+			ReadOnlyAsyncIterableIterator<Output>
+		:	ReadOnlyIterableIterator<Output>;

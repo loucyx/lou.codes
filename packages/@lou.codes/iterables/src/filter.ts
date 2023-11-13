@@ -23,9 +23,8 @@ import type { GeneratorOutput } from "./types/GeneratorOutput.js";
  * @returns Curried function with `predicate` set in context.
  */
 export const filter = <Item, Filtered extends Item = never>(
-	predicate: Single<Filtered> extends Single<never>
-		? Unary<Item, boolean>
-		: Predicate<Item, Filtered>,
+	predicate: Single<Filtered> extends Single<never> ? Unary<Item, boolean>
+	:	Predicate<Item, Filtered>,
 ) =>
 	handleIsomorphicIterable<Item, Filtered>(
 		iterable =>

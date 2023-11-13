@@ -25,12 +25,15 @@ export const parseStringMonthValue: StringValueParser<
 > = source => {
 	const valid = isStringMonthValue(source);
 	const cronMonthValueNumber = (
-		valid ? parseDecimal(source) : NaN
-	) as CronMonthValueNumber;
+		valid ?
+			parseDecimal(source)
+		:	NaN) as CronMonthValueNumber;
 
-	return valid
-		? isNaN(cronMonthValueNumber)
-			? (source.toLocaleUpperCase() as CronMonthValueString)
-			: cronMonthValueNumber
-		: undefined;
+	return (
+		valid ?
+			isNaN(cronMonthValueNumber) ?
+				(source.toLocaleUpperCase() as CronMonthValueString)
+			:	cronMonthValueNumber
+		:	undefined
+	);
 };

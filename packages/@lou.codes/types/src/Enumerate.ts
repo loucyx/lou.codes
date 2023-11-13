@@ -16,6 +16,5 @@
 export type Enumerate<
 	To extends number,
 	Accumulator extends Array<number> = [],
-> = Accumulator["length"] extends To
-	? Accumulator[number] | To
-	: Enumerate<To, [...Accumulator, Accumulator["length"]]>;
+> = Accumulator["length"] extends To ? Accumulator[number] | To
+:	Enumerate<To, [...Accumulator, Accumulator["length"]]>;

@@ -25,9 +25,8 @@ const someHandler = awaitableHandler((result: boolean) => !result);
  * @returns Curried function with `predicate` set in context.
  */
 export const some = <Item, Predicated extends Item = never>(
-	predicate: Single<Predicated> extends Single<never>
-		? Unary<Item, boolean>
-		: Predicate<Item, Predicated>,
+	predicate: Single<Predicated> extends Single<never> ? Unary<Item, boolean>
+	:	Predicate<Item, Predicated>,
 ) => {
 	const everyPredicate = every<Item>(item => !predicate(item));
 

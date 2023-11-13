@@ -15,8 +15,8 @@ import { isCronMinutesValue } from "../validations/isCronMinutesValue.js";
  * @returns A string or `undefined` if invalid.
  */
 export const parseCronMinutesValue = <Source extends number>(source: Source) =>
-	(isCronMinutesValue(source)
-		? `${source}`
-		: undefined) as Source extends CronMinutesValue
-		? `${Source}`
-		: Maybe<`${CronMinutesValue}`>;
+	(isCronMinutesValue(source) ? `${source}` : undefined) as Source extends (
+		CronMinutesValue
+	) ?
+		`${Source}`
+	:	Maybe<`${CronMinutesValue}`>;

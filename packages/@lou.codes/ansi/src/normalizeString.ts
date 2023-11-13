@@ -19,8 +19,8 @@ export const normalizeString = <Input extends TemplateStringsArray | string>(
 	input: Input,
 	...expressions: ReadOnlyArray
 ) =>
-	(typeof input === "string"
-		? input
-		: input
-				.flatMap((string, index) => [string, expressions[index] ?? ""])
-				.join("")) as Input extends string ? Input : string;
+	(typeof input === "string" ? input : (
+		input
+			.flatMap((string, index) => [string, expressions[index] ?? ""])
+			.join("")
+	)) as Input extends string ? Input : string;

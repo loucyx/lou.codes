@@ -39,7 +39,7 @@ export const parseCronList =
 				parser(value as Value),
 		)(isCronList<Value>(source) ? source : []);
 
-		return length(list) === 0 || some(isUndefined)(list)
-			? undefined
-			: join(CRON_LIST_SEPARATOR)(list);
+		return length(list) === 0 || some(isUndefined)(list) ?
+				undefined
+			:	join(CRON_LIST_SEPARATOR)(list);
 	};

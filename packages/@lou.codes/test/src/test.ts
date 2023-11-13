@@ -39,9 +39,9 @@ export const test = <Value>({ given, must, received, wanted }: Test<Value>) =>
 				[
 					{
 						error:
-							error instanceof Error
-								? `${error.name}: ${error.message}`
-								: error ?? UNKNOWN_ERROR,
+							error instanceof Error ?
+								`${error.name}: ${error.message}`
+							:	error ?? UNKNOWN_ERROR,
 						kind: EXCEPTION,
 					},
 				] satisfies Differences,

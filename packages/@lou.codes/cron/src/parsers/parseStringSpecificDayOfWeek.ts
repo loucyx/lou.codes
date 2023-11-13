@@ -22,14 +22,13 @@ export const parseStringSpecificDayOfWeek = (
 	source: string,
 ): Maybe<CronSpecificDayOfWeek> => {
 	const valid = isStringSpecificDayOfWeek(source);
-	const [dayString = "", weekString = ""] = valid
-		? source.split(CRON_SPECIFIC_SEPARATOR)
-		: [];
+	const [dayString = "", weekString = ""] =
+		valid ? source.split(CRON_SPECIFIC_SEPARATOR) : [];
 
-	return valid
-		? {
+	return valid ?
+			{
 				day: parseDecimal(dayString) as CronDayOfWeekValueNumber,
 				week: parseDecimal(weekString) as CronWeekValue,
-		  }
-		: undefined;
+			}
+		:	undefined;
 };

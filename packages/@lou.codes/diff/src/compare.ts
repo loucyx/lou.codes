@@ -49,9 +49,9 @@ export const compare = function* (values: {
 				// eslint-disable-next-line functional/no-loop-statements
 				for (const { path, ...itemDiff } of compare({
 					...(index < leftLength ? { left: left[index] } : undefined),
-					...(index < rightLength
-						? { right: right[index] }
-						: undefined),
+					...(index < rightLength ?
+						{ right: right[index] }
+					:	undefined),
 				})) {
 					yield { ...itemDiff, path: [index, ...path] };
 				}
@@ -73,12 +73,12 @@ export const compare = function* (values: {
 				]) {
 					// eslint-disable-next-line functional/no-loop-statements
 					for (const { path, ...valueDiff } of compare({
-						...(key in left
-							? { left: left[key as keyof typeof left] }
-							: undefined),
-						...(key in right
-							? { right: right[key as keyof typeof right] }
-							: undefined),
+						...(key in left ?
+							{ left: left[key as keyof typeof left] }
+						:	undefined),
+						...(key in right ?
+							{ right: right[key as keyof typeof right] }
+						:	undefined),
 					})) {
 						yield { ...valueDiff, path: [key, ...path] };
 					}
@@ -86,11 +86,11 @@ export const compare = function* (values: {
 				// eslint-disable-next-line functional/no-conditional-statements
 			} else {
 				yield {
-					...("left" in values
-						? "right" in values
-							? { kind: UPDATE, left, right }
-							: { kind: DELETE, left }
-						: { kind: CREATE, right }),
+					...("left" in values ?
+						"right" in values ?
+							{ kind: UPDATE, left, right }
+						:	{ kind: DELETE, left }
+					:	{ kind: CREATE, right }),
 					path: [],
 				};
 			}

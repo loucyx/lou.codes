@@ -27,14 +27,12 @@ export const parseStringQuartzExpression = (source: string) => {
 	const missingSecondsOrYear = valid && length === 6;
 	const missingSeconds = missingSecondsOrYear && isStringYearValue(parsed[5]);
 
-	return valid
-		? ((missingSecondsAndYear
-				? ["*", ...parsed, "*"]
-				: missingSecondsOrYear
-				? missingSeconds
-					? ["*", ...parsed]
-					: [...parsed, "*"]
-				: parsed) as unknown as readonly [
+	return valid ?
+			((missingSecondsAndYear ? ["*", ...parsed, "*"]
+			: missingSecondsOrYear ?
+				missingSeconds ? ["*", ...parsed]
+				:	[...parsed, "*"]
+			:	parsed) as unknown as readonly [
 				seconds: string,
 				minutes: string,
 				hours: string,
@@ -42,6 +40,6 @@ export const parseStringQuartzExpression = (source: string) => {
 				month: string,
 				dayOfWeek: string,
 				year: string,
-		  ])
-		: undefined;
+			])
+		:	undefined;
 };

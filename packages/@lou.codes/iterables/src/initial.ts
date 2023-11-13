@@ -60,6 +60,6 @@ export const initial = handleIsomorphicIterable(
 		},
 ) as <Iterable extends IsomorphicIterable>(
 	iterable: Iterable,
-) => Iterable extends ReadOnlyArray
-	? ReadOnlyIterableIterator<Initial<Iterable>[number]>
-	: GeneratorOutput<Iterable>;
+) => Iterable extends ReadOnlyArray ?
+	ReadOnlyIterableIterator<Initial<Iterable>[number]>
+:	GeneratorOutput<Iterable>;

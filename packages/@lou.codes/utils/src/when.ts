@@ -21,9 +21,8 @@ import type { Filter, Predicate, Single, Unary } from "@lou.codes/types";
  */
 export const when =
 	<Value, Predicated extends Value = never>(
-		predicate: Single<Predicated> extends Single<never>
-			? Filter<Value>
-			: Predicate<Value, Predicated>,
+		predicate: Single<Predicated> extends Single<never> ? Filter<Value>
+		:	Predicate<Value, Predicated>,
 	) =>
 	<TrueOutput>(truthyHandler: Unary<Predicated & Value, TrueOutput>) =>
 	<
@@ -33,6 +32,6 @@ export const when =
 		falsyHandler: Unary<FalseInput, FalseOutput>,
 	) =>
 	(value: Value) =>
-		predicate(value)
-			? truthyHandler(value as Predicated)
-			: falsyHandler(value as FalseInput & Value);
+		predicate(value) ?
+			truthyHandler(value as Predicated)
+		:	falsyHandler(value as FalseInput & Value);

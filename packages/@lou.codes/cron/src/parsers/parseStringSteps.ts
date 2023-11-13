@@ -30,26 +30,30 @@ export const parseStringSteps =
 	<Value>(parser: StringValueParser<Value>) =>
 	(source: string): Maybe<CronSteps<Value>> => {
 		const valid = isStringSteps(source);
-		const [startString = "", everyString = ""] = valid
-			? source.split(CRON_STEPS_SEPARATOR)
-			: [];
+		const [startString = "", everyString = ""] =
+			valid ? source.split(CRON_STEPS_SEPARATOR) : [];
 		const everyNumber = parseDecimal(everyString);
 		const every =
-			valid &&
-			isNumber(everyNumber) &&
-			between(minimum)(maximum)(everyNumber)
-				? everyNumber
-				: undefined;
-		const start = valid
-			? parseCronEvery(startString) ??
-			  parseStringRange<Value>(parser)(startString) ??
-			  parser(startString)
-			: undefined;
+			(
+				valid &&
+				isNumber(everyNumber) &&
+				between(minimum)(maximum)(everyNumber)
+			) ?
+				everyNumber
+			:	undefined;
+		const start =
+			valid ?
+				parseCronEvery(startString) ??
+				parseStringRange<Value>(parser)(startString) ??
+				parser(startString)
+			:	undefined;
 
-		return valid &&
-			!isUndefined(every) &&
-			!isUndefined(start) &&
-			(!isNumber(start) || (isNumber(start) && !isNaN(start)))
-			? { every, start }
-			: undefined;
+		return (
+				valid &&
+					!isUndefined(every) &&
+					!isUndefined(start) &&
+					(!isNumber(start) || (isNumber(start) && !isNaN(start)))
+			) ?
+				{ every, start }
+			:	undefined;
 	};

@@ -22,8 +22,8 @@ export const toString = <
 >(
 	input: Input,
 ) =>
-	(input?.toString() ?? `${input as string}`) as Input extends Strigifiable
-		? `${Input}`
-		: Input extends { readonly toString: () => string }
-		? ReturnType<Input["toString"]>
-		: string;
+	(input?.toString() ?? `${input as string}`) as Input extends Strigifiable ?
+		`${Input}`
+	: Input extends { readonly toString: () => string } ?
+		ReturnType<Input["toString"]>
+	:	string;

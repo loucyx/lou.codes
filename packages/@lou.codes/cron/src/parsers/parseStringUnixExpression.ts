@@ -17,13 +17,13 @@ import { splitExpression } from "../utils/splitExpression.js";
 export const parseStringUnixExpression = (source: string) => {
 	const parsed = splitExpression(source);
 
-	return parsed.length === 5
-		? (parsed as unknown as readonly [
+	return parsed.length === 5 ?
+			(parsed as unknown as readonly [
 				minutes: string,
 				hours: string,
 				dayOfMonth: string,
 				month: string,
 				dayOfWeek: string,
-		  ])
-		: undefined;
+			])
+		:	undefined;
 };

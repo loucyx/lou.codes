@@ -38,7 +38,7 @@ export const parseStringList =
 				parser(value),
 		)(isStringList(source) ? source.split(CRON_LIST_SEPARATOR) : []);
 
-		return length(list) === 0 || some(isUndefined)(list)
-			? undefined
-			: (iterableToArray(list) as CronList<Value>);
+		return length(list) === 0 || some(isUndefined)(list) ?
+				undefined
+			:	(iterableToArray(list) as CronList<Value>);
 	};

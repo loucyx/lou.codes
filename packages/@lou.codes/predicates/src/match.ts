@@ -19,13 +19,14 @@ import { isString } from "./isString.js";
 export const match = (
 	regularExpression: ReadOnly<RegExp> | RegularExpression,
 ) => {
-	const { flags, source } = isString(regularExpression)
-		? {
+	const { flags, source } =
+		isString(regularExpression) ?
+			{
 				...(/\/(?<source>.+)\/(?<flags>[gimsu])+$/u.exec(
 					regularExpression,
 				)?.groups as Pick<RegExp, "flags" | "source">),
-		  }
-		: regularExpression;
+			}
+		:	regularExpression;
 	const attemptTest = attempt((text: string) =>
 		new RegExp(source, flags).test(text),
 	);

@@ -29,20 +29,16 @@ import type { Maybe } from "./Maybe.js";
  *
  * @template Input Input `ArrayLike`.
  */
-export type InitialAndLast<Input extends ArrayLike> = Input extends readonly [
-	...infer InitialItems,
-	infer LastItem,
-]
-	? readonly [initial: InitialItems, last: LastItem]
-	: Input extends EmptyArray | EmptyString
-	? readonly [initial: Input, last: undefined]
-	: Input extends `${infer FirstCharacter}${infer RestOfString}`
-	? readonly [
-			initial: `${RestOfString extends EmptyString
-				? EmptyString
-				: FirstCharacter}${Head<InitialAndLast<RestOfString>>}`,
-			last: `${RestOfString extends EmptyString
-				? FirstCharacter
-				: Last<RestOfString>}`,
-	  ]
-	: readonly [initial: Input, last: Maybe<Input[number]>];
+export type InitialAndLast<Input extends ArrayLike> =
+	Input extends readonly [...infer InitialItems, infer LastItem] ?
+		readonly [initial: InitialItems, last: LastItem]
+	: Input extends EmptyArray | EmptyString ?
+		readonly [initial: Input, last: undefined]
+	: Input extends `${infer FirstCharacter}${infer RestOfString}` ?
+		readonly [
+			initial: `${RestOfString extends EmptyString ? EmptyString
+			:	FirstCharacter}${Head<InitialAndLast<RestOfString>>}`,
+			last: `${RestOfString extends EmptyString ? FirstCharacter
+			:	Last<RestOfString>}`,
+		]
+	:	readonly [initial: Input, last: Maybe<Input[number]>];

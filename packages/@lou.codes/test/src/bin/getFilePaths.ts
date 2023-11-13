@@ -25,11 +25,11 @@ export const getFilePaths = async function* (
 			withFileTypes: true,
 		})) {
 			// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-			dirent.isDirectory()
-				? yield* getFilePaths(
-						new URL(`${dirent.name}/`, fileOrDirectoryURL),
-				  )
-				: yield new URL(dirent.name, fileOrDirectoryURL);
+			dirent.isDirectory() ?
+				yield* getFilePaths(
+					new URL(`${dirent.name}/`, fileOrDirectoryURL),
+				)
+			:	yield new URL(dirent.name, fileOrDirectoryURL);
 		}
 		// eslint-disable-next-line functional/no-conditional-statements
 	} else {

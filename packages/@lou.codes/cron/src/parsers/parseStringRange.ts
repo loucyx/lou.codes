@@ -23,13 +23,12 @@ export const parseStringRange =
 	<Value>(parser: StringValueParser<Value>) =>
 	(source: string): Maybe<CronRange<Value>> => {
 		const valid = isStringRange(source);
-		const [fromString = "", toString = ""] = valid
-			? source.split(CRON_RANGE_SEPARATOR)
-			: [];
+		const [fromString = "", toString = ""] =
+			valid ? source.split(CRON_RANGE_SEPARATOR) : [];
 		const from = parser(fromString);
 		const to = parser(toString);
 
-		return valid && !isUndefined(from) && !isUndefined(to)
-			? { from, to }
-			: undefined;
+		return valid && !isUndefined(from) && !isUndefined(to) ?
+				{ from, to }
+			:	undefined;
 	};

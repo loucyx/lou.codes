@@ -19,30 +19,31 @@ void readFile(packageJSONPath, "utf-8")
 					Object.fromEntries(
 						Object.entries(packageJSON).map(([key, value]) => [
 							key,
-							key === "peerDependencies"
-								? Object.fromEntries(
-										/** @type {ReadonlyArray<PackageJSONEntry>} */ (
-											Object.entries(
-												packageJSON.peerDependencies,
-											)
-										).map(([peerDependency, version]) => [
-											peerDependency,
-											`${packageJSON.devDependencies[
-												peerDependency
-											]
-												.split(".")
-												.map((part, index) =>
+							key === "peerDependencies" ?
+								Object.fromEntries(
+									/** @type {ReadonlyArray<PackageJSONEntry>} */ (
+										Object.entries(
+											packageJSON.peerDependencies,
+										)
+									).map(([peerDependency, version]) => [
+										peerDependency,
+										`${packageJSON.devDependencies[
+											peerDependency
+										]
+											.split(".")
+											.map((part, index) =>
+												(
 													index >
-													(version.startsWith("^")
-														? 0
-														: 1)
-														? "0"
-														: part,
-												)
-												.join(".")}`,
-										]),
-								  )
-								: value,
+													(version.startsWith("^") ? 0
+													:	1)
+												) ?
+													"0"
+												:	part,
+											)
+											.join(".")}`,
+									]),
+								)
+							:	value,
 						]),
 					),
 					undefined,

@@ -7,23 +7,23 @@ module.exports = Object.freeze(
 	/** @type {const} @satisfies {import("@changesets/types").ChangelogFunctions} */ ({
 		getDependencyReleaseLine: (_changesets, dependenciesUpdated) =>
 			Promise.resolve(
-				dependenciesUpdated.length === 0
-					? ""
-					: dependenciesUpdated
-							.map(
-								({ name, newVersion }) =>
-									`-   ⬆️ upgrade \`${name}\` to \`v${newVersion}\``,
-							)
-							.join("\n"),
+				dependenciesUpdated.length === 0 ?
+					""
+				:	dependenciesUpdated
+						.map(
+							({ name, newVersion }) =>
+								`-   ⬆️ upgrade \`${name}\` to \`v${newVersion}\``,
+						)
+						.join("\n"),
 			),
 		getReleaseLine: ({ summary }) =>
 			Promise.resolve(
 				summary
 					.split("\n")
 					.map(line =>
-						line.startsWith("-") || line.startsWith("    ")
-							? line
-							: `-   ${line}`,
+						line.startsWith("-") || line.startsWith("    ") ?
+							line
+						:	`-   ${line}`,
 					)
 					.join("\n"),
 			),

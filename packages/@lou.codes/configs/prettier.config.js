@@ -14,6 +14,8 @@ export default Object.freeze(
 		embeddedLanguageFormatting: "auto",
 		// Unix EOL.
 		endOfLine: "lf",
+		// TODO: Remove this once it stops being experimental.
+		experimentalTernaries: true,
 		// Strict whitespace in HTML.
 		htmlWhitespaceSensitivity: "strict",
 		// JSX should use double quote.

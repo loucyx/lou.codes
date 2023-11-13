@@ -66,3 +66,7 @@ main .content-panel:first-child:not(:only-child) + .content-panel {
 .hero img {
 	@apply p-10;
 }
+
+table {
+	@apply whitespace-nowrap;
+}

@@ -24,14 +24,8 @@ export default {
 				gray: colors.gray,
 			},
 			fontFamily: {
-				mono: ["FiraCode, monospace"],
-				sans: [
-					"Inter, sans-serif",
-					{
-						fontFeatureSettings: '"cv11", "ss01"',
-						fontVariationSettings: '"opsz" 32',
-					},
-				],
+				mono: ["MonaspaceArgon, monospace"],
+				sans: ["Inter, sans-serif"],
 			},
 		},
 	},

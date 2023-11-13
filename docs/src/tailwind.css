@@ -6,19 +6,34 @@
 	@font-face {
 		font-display: swap;
 		font-family: "Inter";
+		font-feature-settings: "cv11", "ss01";
 		font-named-instance: "Regular";
 		font-style: oblique 0deg 10deg;
+		font-variation-settings: "opsz" 32;
 		font-weight: 100 900;
 		src: url("./assets/fonts/Inter.woff2") format("woff2");
 	}
 
 	@font-face {
 		font-display: swap;
-		font-family: "FiraCode";
+		font-family: "MonaspaceArgon";
+		font-feature-settings:
+			"calt" 1,
+			"dlig" 1,
+			"ss01" 1,
+			"ss02" 1,
+			"ss03" 1,
+			"ss04" 1,
+			"ss05" 1,
+			"ss06" 1,
+			"ss07" 1,
+			"ss08" 1;
 		font-named-instance: "Regular";
 		font-style: normal;
-		font-weight: 300 700;
-		src: url("./assets/fonts/FiraCode.woff2") format("woff2-variations");
+		font-variation-settings: "wdth" 100; /* 100-125 */
+		font-weight: 200 800;
+		src: url("./assets/fonts/MonaspaceArgon.woff2")
+			format("woff2-variations");
 	}
 }
 

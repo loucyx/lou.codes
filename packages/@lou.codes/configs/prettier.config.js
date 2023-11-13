@@ -14,7 +14,7 @@ export default Object.freeze(
 		embeddedLanguageFormatting: "auto",
 		// Unix EOL.
 		endOfLine: "lf",
-		// TODO: Remove this once it stops being experimental.
+		// @ts-expect-error TODO: Remove this once it stops being experimental.
 		experimentalTernaries: true,
 		// Strict whitespace in HTML.
 		htmlWhitespaceSensitivity: "strict",

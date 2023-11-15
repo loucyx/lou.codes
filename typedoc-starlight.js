@@ -98,11 +98,9 @@ const packageNameToTitle = packageName =>
 		.replaceAll("-", " ")
 		.split(" ")
 		.map(word =>
-			allUpper.includes(word)
-				? word.toUpperCase()
-				: word.replace(/./u, character =>
-						character.toLocaleUpperCase(),
-				  ),
+			allUpper.includes(word) ?
+				word.toUpperCase()
+			:	word.replace(/./u, character => character.toLocaleUpperCase()),
 		)
 		.join(" ");
 
@@ -121,18 +119,27 @@ const excluded = [
 const frontMatter = ({ description, title }) => `---
 description: "${description}"
 ${
-	excluded.includes(title)
-		? ""
-		: `head:
+	excluded.includes(title) ? "" : (
+		`head:
     - attrs:
           defer: true
           type: module
       content:
-          import * as library from "https://esm.sh/${title}?bundle";
-          Object.assign(globalThis, library);
-          console.log("${title} loaded in globalThis");
+          globalThis.addEventListener(
+              "load",
+              () =>
+                  void import("https://esm.sh/${title}?bundle")
+                      .then(
+                          library => (
+                              Object.assign(globalThis, library),
+                              console.log("${title} loaded in globalThis")
+                          ),
+                      )
+                      .catch(() => console.error("${title} couldn't be loaded")),
+          );
       tag: script
 `
+	)
 }sidebar:
     label: "${packageNameToTitle(title)}"
 title: "${packageNameToTitle(title)} by Lou"

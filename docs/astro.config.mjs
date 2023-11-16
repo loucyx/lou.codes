@@ -38,8 +38,10 @@ export default defineConfig({
 			],
 			social: {
 				github: "https://github.com/loucyx/lou.codes",
-				linkedin: "https://linkedin.com/in/loucyx",
+				mastodon: "https://mastodon.social/@loucyx",
 				youtube: "https://youtube.com/@loucyx",
+				// eslint-disable-next-line sort-keys
+				linkedin: "https://linkedin.com/in/loucyx",
 			},
 			title: "Lou's Code",
 		}),

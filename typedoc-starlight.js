@@ -104,11 +104,7 @@ const packageNameToTitle = packageName =>
 		)
 		.join(" ");
 
-const excluded = [
-	"@lou.codes/create-package",
-	"@lou.codes/test",
-	"@lou.codes/types",
-];
+const excluded = ["@lou.codes/create-package", "@lou.codes/types"];
 
 /**
  * @param {{

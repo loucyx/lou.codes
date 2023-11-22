@@ -20,11 +20,10 @@ so on.
 All this configurations are setup automatically by
 [@lou.codes/create-package][create-package] when creating a new package.
 
-For manual setup of each file, follow the instructions below.
-
-### `.changeset/config.json`
+For manual setup of each file, follow use the examples below.
 
 ```json
+// .changeset/config.json
 {
 	"$schema": "https://raw.githubusercontent.com/changesets/changesets/main/packages/config/schema.json",
 	"changelog": "@lou.codes/configs/changelog.cjs",
@@ -35,35 +34,30 @@ For manual setup of each file, follow the instructions below.
 }
 ```
 
-### `eslint.config.js`
-
 ```typescript
+// eslint.config.js
 export { default } from "@lou.codes/configs/eslint.config.js";
 ```
 
-### `prettier.config.js`
-
 ```typescript
+// prettier.config.js
 export { default } from "@lou.codes/configs/prettier.config.js";
 ```
 
-### `stylelint.config.cjs`
-
 ```typescript
+// stylelint.config.cjs
 module.exports = require("@lou.codes/configs/stylelint.config.cjs");
 ```
 
-### `tsconfig.json`
-
 ```json
+// tsconfig.json
 {
 	"extends": "@lou.codes/configs/typescript.config.json"
 }
 ```
 
-### `typedoc.json`
-
 ```json
+// typedoc.json
 {
 	"$schema": "https://typedoc.org/schema.json",
 	"cname": "PUBLIC DOMAIN",

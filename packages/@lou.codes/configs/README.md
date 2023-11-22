@@ -20,7 +20,7 @@ so on.
 All this configurations are setup automatically by
 [@lou.codes/create-package][create-package] when creating a new package.
 
-For manual setup of each file, follow use the examples below.
+For manual setup of each file, use the examples below:
 
 ```json
 // .changeset/config.json

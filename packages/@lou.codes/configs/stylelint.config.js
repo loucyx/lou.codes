@@ -1,18 +1,18 @@
+import stylelintOrder from "stylelint-order";
+
 const KEBAB_CASE = "^[a-z][a-z0-9-]*$";
 const LOWER_CASE = "lower";
-// eslint-disable-next-line @typescript-eslint/no-require-imports, @typescript-eslint/no-var-requires
-const stylelintOrder = require("stylelint-order");
 
 /**
  * Stylelint configuration.
  * @see [Stylelint rules](https://stylelint.io/user-guide/rules)
  */
 // eslint-disable-next-line functional/immutable-data
-module.exports = Object.freeze(
+export default Object.freeze(
 	/** @satisfies {import("stylelint").Config} */ ({
 		defaultSeverity: "error",
 		extends: ["stylelint-prettier/recommended"],
-		plugins: [stylelintOrder],
+		plugins: [/** @type {import("stylelint").Plugin} */ (stylelintOrder)],
 		rules: {
 			// Alpha-values must always use the number notation.
 			"alpha-value-notation": "number",

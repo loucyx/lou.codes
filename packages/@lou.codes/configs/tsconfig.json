@@ -8,7 +8,7 @@
 		"./index.js",
 		"./prettier.config.js",
 		"./rules/*.js",
-		"./stylelint.config.cjs",
+		"./stylelint.config.js",
 		"./update-peers.js"
 	]
 }

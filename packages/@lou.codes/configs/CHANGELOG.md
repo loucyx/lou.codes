@@ -1,5 +1,11 @@
 # Change log
 
+## 2.0.0
+
+### Major Changes
+
+-   🔧 move to Stylelint ESM (only Changesets is still in CJS 😔).
+
 ## 1.1.3
 
 ### Patch Changes

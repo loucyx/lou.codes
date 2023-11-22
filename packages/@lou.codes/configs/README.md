@@ -11,7 +11,7 @@ so on.
 -   🦋 [changelog.cjs][changesets] — Changesets changelog functions.
 -   🚨 [eslint.config.js][eslint] — JavaScript and TypeScript linting.
 -   ✨ [prettier.config.js][prettier] — Code formatting.
--   🎨 [stylelint.config.cjs][stylelint] — CSS linting.
+-   🎨 [stylelint.config.js][stylelint] — CSS linting.
 -   🏷️ [typescript.config.json][typescript] — TypeScript configuration (strict).
 -   📖 [typedoc.config.json][typedoc] — Documentation configuration.
 

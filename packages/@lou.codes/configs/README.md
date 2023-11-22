@@ -45,8 +45,8 @@ export { default } from "@lou.codes/configs/prettier.config.js";
 ```
 
 ```typescript
-// stylelint.config.cjs
-module.exports = require("@lou.codes/configs/stylelint.config.cjs");
+// stylelint.config.js
+export { default } from "@lou.codes/configs/stylelint.config.js";
 ```
 
 ```json

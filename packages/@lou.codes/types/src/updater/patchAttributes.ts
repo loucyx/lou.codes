@@ -11,32 +11,29 @@ import { getDescription } from "./getDescription.js";
  * @returns Patched attributes.
  */
 export const patchAttributes = (attributes: ReadOnlyArray<IAttributeData>) =>
-	[
-		...Object.values(
-			attributes.reduce(
-				(patchedAttributes, attribute) => ({
-					...patchedAttributes,
-					[attribute.name]: {
-						...(patchedAttributes[attribute.name] ?
-							{
-								...patchedAttributes[attribute.name],
-								description: `${getDescription(
-									// FIXME: This keeps going back and forth between broken and working -_-
-									// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-									patchedAttributes[attribute.name]
-										?.description,
-								)}\n\n---\n\n${getDescription(
-									// FIXME: This keeps going back and forth between broken and working -_-
-									// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-									attribute.description,
-								)}`,
-							}
-						:	attribute),
-					} as IAttributeData,
-				}),
-				{} as Record<string, IAttributeData>,
-			),
+	Object.values(
+		attributes.reduce(
+			(patchedAttributes, attribute) => ({
+				...patchedAttributes,
+				[attribute.name]: {
+					...(patchedAttributes[attribute.name] ?
+						{
+							...patchedAttributes[attribute.name],
+							description: `${getDescription(
+								// FIXME: This keeps going back and forth between broken and working -_-
+								// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+								patchedAttributes[attribute.name]?.description,
+							)}\n\n---\n\n${getDescription(
+								// FIXME: This keeps going back and forth between broken and working -_-
+								// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+								attribute.description,
+							)}`,
+						}
+					:	attribute),
+				} as IAttributeData,
+			}),
+			{} as Record<string, IAttributeData>,
 		),
-	].sort((attributeA, attributeB) =>
+	).toSorted((attributeA, attributeB) =>
 		attributeA.name.localeCompare(attributeB.name),
 	);

@@ -75,8 +75,8 @@ import type { ReadOnlyRecord } from "./ReadOnlyRecord.js";
 export type HTMLElementTagAttributeMap = ReadOnlyRecord<
 	\`\${string}-\${string}\`,
 	HTMLElementTagGlobalAttributes
-> & {${[...tags]
-		.sort((tagA, tagB) => tagA.name.localeCompare(tagB.name))
+> & {${tags
+		.toSorted((tagA, tagB) => tagA.name.localeCompare(tagB.name))
 		.map(tag =>
 			generateTagType({
 				...tag,

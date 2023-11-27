@@ -1,5 +1,15 @@
 # Change log
 
+## 1.0.2
+
+### Patch Changes
+
+-   ✏️ show brotli size instead of gzip.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.1`
+-   ⬆️ upgrade `@lou.codes/iterables` to `v1.0.1`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.1`
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.0.1`
+
 ## 1.0.1
 
 ### Patch Changes

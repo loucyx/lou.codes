@@ -1,7 +1,7 @@
 {
 	"name": "react-pair",
 	"description": "🖇️ Util to help with the paired hook pattern",
-	"version": "3.0.62",
+	"version": "3.0.63",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -63,7 +63,7 @@
 		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
 	},
 	"sideEffects": false,
-	"size": "0.12",
+	"size": "0.10",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

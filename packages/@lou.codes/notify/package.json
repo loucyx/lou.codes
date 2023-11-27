@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/notify",
 	"description": "📣 Minimalistic Pub/Sub implementation",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -57,7 +57,7 @@
 		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
 	},
 	"sideEffects": false,
-	"size": "0.47",
+	"size": "0.44",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

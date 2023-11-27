@@ -1,5 +1,11 @@
 # Change log
 
+## 1.0.1
+
+### Patch Changes
+
+-   ✏️ show brotli size instead of gzip.
+
 ## 1.0.0
 
 ### Major Changes

@@ -1,6 +1,8 @@
+import brotli from "brotli-size/dist/index.js";
 import { build } from "esbuild";
-import { gzipSize } from "gzip-size";
 import { readFile, writeFile } from "node:fs/promises";
+
+const { default: size } = brotli;
 
 /** @param {number} bytes */
 const kibSize = bytes => (bytes / 1024).toFixed(2);
@@ -22,7 +24,7 @@ const updateSize = packagePath => {
 		platform: "node",
 	})
 		.then(() => readFile(outFile, "utf-8"))
-		.then(gzipSize)
+		.then(fileContent => size(fileContent))
 		.then(kibSize)
 		.then(
 			size =>

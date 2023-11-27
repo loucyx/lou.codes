@@ -1,5 +1,12 @@
 # Change log
 
+## 1.0.1
+
+### Patch Changes
+
+-   ✏️ show brotli size instead of gzip.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.1`
+
 ## 1.0.0
 
 ### Major Changes

@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/parsers",
 	"description": "👁️‍🗨️ Parsers without nonsense",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -49,7 +49,7 @@
 		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
 	},
 	"sideEffects": false,
-	"size": "0.30",
+	"size": "0.26",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

@@ -1,5 +1,13 @@
 # Change log
 
+## 1.0.1
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/prompts` to `v1.0.1`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.1`
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.1`
+
 ## 1.0.0
 
 ### Major Changes

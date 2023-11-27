@@ -37,6 +37,10 @@
 	}
 }
 
+html {
+	tab-size: 4;
+}
+
 #logo {
 	@apply max-h-24 mb-6 mx-auto [&+p]:text-center [&+p]:[view-transition-name:badges] [&+p_img]:inline-block [&+p_img]:mt-0 [view-transition-name:logo];
 }

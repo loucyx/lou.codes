@@ -1,5 +1,12 @@
 # Change log
 
+## 2.0.1
+
+### Patch Changes
+
+-   ⬆️ dependency upgrade
+-   ✏️ show brotli size instead of gzip.
+
 ## 2.0.0
 
 ### Major Changes

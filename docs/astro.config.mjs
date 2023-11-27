@@ -12,6 +12,13 @@ export default defineConfig({
 		prefetch(),
 		starlight({
 			customCss: ["./src/tailwind.css"],
+			expressiveCode: {
+				styleOverrides: {
+					codeFontFamily: "MonaspaceArgon, monospace",
+					uiFontFamily: "MonaspaceArgon, monospace",
+				},
+				tabWidth: 0,
+			},
 			head: [
 				{
 					attrs: {

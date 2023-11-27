@@ -1,7 +1,7 @@
 {
 	"name": "preact-pair",
 	"description": "🖇️ Util to help with the paired hook pattern",
-	"version": "1.0.60",
+	"version": "1.0.61",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -60,7 +60,7 @@
 		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
 	},
 	"sideEffects": false,
-	"size": "0.12",
+	"size": "0.10",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

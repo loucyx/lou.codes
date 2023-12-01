@@ -1,4 +1,3 @@
-import prefetch from "@astrojs/prefetch";
 import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
@@ -9,7 +8,6 @@ import vitePluginLightningCSS from "vite-plugin-lightningcss";
 
 export default defineConfig({
 	integrations: [
-		prefetch(),
 		starlight({
 			customCss: ["./src/tailwind.css"],
 			expressiveCode: {
@@ -64,6 +62,7 @@ export default defineConfig({
 			rehypePluginImageNativeLazyLoading,
 		],
 	},
+	prefetch: true,
 	site: "https://lou.codes/",
 	srcDir: "./src",
 	vite: {

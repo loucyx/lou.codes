@@ -1,5 +1,11 @@
 # Change log
 
+## 2.0.4
+
+### Patch Changes
+
+-   ⬆️ dependency upgrade.
+
 ## 2.0.3
 
 ### Patch Changes

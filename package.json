@@ -18,10 +18,10 @@
 	"devDependencies": {
 		"@astrojs/starlight": "^0.14.0",
 		"@astrojs/starlight-tailwind": "^2.0.1",
-		"@astrojs/tailwind": "^5.0.2",
+		"@astrojs/tailwind": "^5.0.3",
 		"@changesets/cli": "^2.27.1",
 		"@types/node": "^20.10.3",
-		"astro": "^3.6.4",
+		"astro": "^4.0.2",
 		"brotli-size": "^4.0.0",
 		"c8": "^8.0.1",
 		"cpy-cli": "^5.0.0",
@@ -66,14 +66,14 @@
 		"document": "run-s --print-label document:typedoc prettify:typedoc document:typedoc-patch document:starlight",
 		"document:starlight": "cd docs && astro build",
 		"document:typedoc": "typedoc",
-		"document:typedoc-patch": "node ./typedoc-starlight.js",
+		"document:typedoc-patch": "node ./scripts/writeFormattedDocs.js",
 		"git:pre-push": "pnpm --recursive git:pre-push",
 		"lint": "pnpm --recursive lint",
 		"prepare": "simple-git-hooks",
 		"prettify:typedoc": "prettier --ignore-path=.prettierignore --log-level=warn --write './docs/.typedoc/**/*.md'",
 		"publish": "pnpm --recursive publish",
 		"test": "c8 pnpm --recursive test",
-		"update:sizes": "node ./update-sizes.js"
+		"update:sizes": "node ./scripts/updatePackagesSizes.js"
 	},
 	"sideEffects": false,
 	"simple-git-hooks": {

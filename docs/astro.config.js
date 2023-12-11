@@ -38,7 +38,7 @@ export default defineConfig({
 				},
 				{
 					autogenerate: { directory: "libraries" },
-					label: "Libraries",
+					label: "Reference",
 				},
 			],
 			social: {

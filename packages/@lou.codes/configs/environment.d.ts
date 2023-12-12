@@ -7,6 +7,8 @@ declare module "@eslint/js" {
 	const plugin: ESLint.Plugin & {
 		configs: { recommended: Linter.FlatConfig };
 	};
+
+	// eslint-disable-next-line import/no-default-export
 	export default plugin;
 }
 declare module "@typescript-eslint/eslint-plugin" {
@@ -15,12 +17,15 @@ declare module "@typescript-eslint/eslint-plugin" {
 	const plugin: ESLint.Plugin & {
 		configs: { recommended: Linter.FlatConfig };
 	};
+
+	// eslint-disable-next-line import/no-default-export
 	export default plugin;
 }
 declare module "@typescript-eslint/parser" {
 	import type { Linter } from "eslint";
 	const parserModule: Linter.ParserModule;
 
+	// eslint-disable-next-line import/no-default-export
 	export default parserModule;
 }
 declare module "eslint-plugin-functional" {
@@ -29,6 +34,8 @@ declare module "eslint-plugin-functional" {
 	const plugin: ESLint.Plugin & {
 		configs: { recommended: Linter.FlatConfig };
 	};
+
+	// eslint-disable-next-line import/no-default-export
 	export default plugin;
 }
 declare module "eslint-plugin-import" {
@@ -37,6 +44,8 @@ declare module "eslint-plugin-import" {
 	const plugin: ESLint.Plugin & {
 		configs: { recommended: Linter.FlatConfig };
 	};
+
+	// eslint-disable-next-line import/no-default-export
 	export default plugin;
 }
 declare module "eslint-plugin-no-null" {
@@ -45,6 +54,8 @@ declare module "eslint-plugin-no-null" {
 	const plugin: ESLint.Plugin & {
 		configs: { recommended: Linter.FlatConfig };
 	};
+
+	// eslint-disable-next-line import/no-default-export
 	export default plugin;
 }
 declare module "eslint-plugin-prefer-arrow" {
@@ -53,6 +64,8 @@ declare module "eslint-plugin-prefer-arrow" {
 	const plugin: ESLint.Plugin & {
 		configs: { recommended: Linter.FlatConfig };
 	};
+
+	// eslint-disable-next-line import/no-default-export
 	export default plugin;
 }
 declare module "eslint-plugin-prettier" {
@@ -61,6 +74,8 @@ declare module "eslint-plugin-prettier" {
 	const plugin: ESLint.Plugin & {
 		configs: { recommended: Linter.FlatConfig };
 	};
+
+	// eslint-disable-next-line import/no-default-export
 	export default plugin;
 }
 declare module "eslint-plugin-react-hooks" {
@@ -69,6 +84,8 @@ declare module "eslint-plugin-react-hooks" {
 	const plugin: ESLint.Plugin & {
 		configs: { recommended: Linter.FlatConfig };
 	};
+
+	// eslint-disable-next-line import/no-default-export
 	export default plugin;
 }
 declare module "eslint-plugin-react" {
@@ -77,6 +94,8 @@ declare module "eslint-plugin-react" {
 	const plugin: ESLint.Plugin & {
 		configs: { recommended: Linter.FlatConfig };
 	};
+
+	// eslint-disable-next-line import/no-default-export
 	export default plugin;
 }
 declare module "stylelint-order" {

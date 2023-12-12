@@ -1,5 +1,11 @@
 # Change log
 
+## 3.0.0
+
+### Major Changes
+
+-   🏗️ moved a bunch of stuff around and changed some rules.
+
 ## 2.0.5
 
 ### Patch Changes

@@ -5,13 +5,35 @@ import { OFF } from "./levels.js";
  * ESLint Prettier rules.
  * @see [eslint-plugin-prettier](https://npm.im/eslint-plugin-prettier)
  */
-export default Object.freeze(
-	/** @satisfies {import("eslint").Linter.FlatConfig} */ ({
+export const prettierRules = Object.freeze(
+	/** @type {const} @satisfies {import("eslint").Linter.FlatConfig} */ ({
 		plugins: { prettier: eslintPluginPrettier },
 		rules: {
 			...eslintPluginPrettier.configs.recommended.rules,
-			// Disable this error because prettier uses mix of spaces and tabs
+			/**
+			 * Handled by Prettier's `trailingComma`.
+			 */
+			"comma-dangle": OFF,
+			/**
+			 * Handled by Prettier's `endOfLine`.
+			 */
+			"linebreak-style": OFF,
+			/**
+			 * Handled by Prettier's `printWidth`.
+			 */
+			"max-len": OFF,
+			/**
+			 * Handled by Prettier.
+			 */
+			"newline-per-chained-call": OFF,
+			/**
+			 * Disable this error because prettier uses mix of spaces and tabs.
+			 */
 			"no-mixed-spaces-and-tabs": OFF,
+			/**
+			 * Handled by Prettier.
+			 */
+			"no-unexpected-multiline": OFF,
 		},
 	}),
 );

@@ -1,5 +1,6 @@
 {
 	"$schema": "https://typedoc.org/schema.json",
-	"entryPoints": [],
+	"disableSources": true,
+	"entryPoints": ["./index.js"],
 	"extends": ["./typedoc.config.json"]
 }

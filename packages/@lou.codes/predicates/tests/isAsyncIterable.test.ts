@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { isAsyncIterable } from "../src/isAsyncIterable.js";
 import { wantedFalse, wantedTrue } from "./wanted.js";
 
-export default [
+export const isAsyncIterableTests = [
 	{
 		given: "a BigInt",
 		received: () =>

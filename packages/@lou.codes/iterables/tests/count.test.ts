@@ -5,7 +5,7 @@ import { asyncIterateArray } from "./utils.js";
 const countEvens = count((number: number) => number % 2 === 0);
 const countAll = count(_ => true);
 
-export default [
+export const countTests = [
 	{
 		given: "an array of mixed numbers and an even counter",
 		must: "return amount of even numbers in the array",

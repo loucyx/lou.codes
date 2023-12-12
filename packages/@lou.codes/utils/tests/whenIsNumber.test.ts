@@ -3,7 +3,7 @@ import { whenIsNumber } from "../src/whenIsNumber.js";
 
 const whenIsNumberTest = whenIsNumber(() => "truthy")(() => "falsy");
 
-export default [
+export const whenIsNumberTests = [
 	{
 		given: "a whenIsNumber with a number",
 		must: "receive the truthy value",

@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { isIsomorphicIterable } from "../src/isIsomorphicIterable.js";
 import { wantedFalse, wantedTrue } from "./wanted.js";
 
-export default [
+export const isIsomorphicIterableTests = [
 	{
 		given: "a BigInt",
 		received: () =>

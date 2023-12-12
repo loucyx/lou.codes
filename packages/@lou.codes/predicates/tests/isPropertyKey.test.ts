@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { isPropertyKey } from "../src/isPropertyKey.js";
 import { wantedFalse, wantedTrue } from "./wanted.js";
 
-export default [
+export const isPropertyKeyTests = [
 	{
 		given: "a BigInt",
 		received: () =>

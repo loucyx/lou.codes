@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { isCronDayOfWeekValue } from "../../src/validations/isCronDayOfWeekValue.js";
 
-export default [
+export const isCronDayOfWeekValueTests = [
 	{
 		given: "a valid number value in the range 0-7",
 		must: "return true",

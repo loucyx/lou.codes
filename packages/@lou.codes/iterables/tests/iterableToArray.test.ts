@@ -3,7 +3,7 @@ import type { ReadOnlyArray } from "@lou.codes/types";
 import { iterableToArray } from "../src/iterableToArray.js";
 import { range } from "../src/range.js";
 
-export default [
+export const iterableToArrayTests = [
 	{
 		given: "a string",
 		must: "return an array with every letter of that string",

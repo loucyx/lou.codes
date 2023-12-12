@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { isCronMinutesValue } from "../../src/validations/isCronMinutesValue.js";
 
-export default [
+export const isCronMinutesValueTests = [
 	{
 		given: "a valid number value in the range 0-59",
 		must: "return true",

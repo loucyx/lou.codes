@@ -9,7 +9,7 @@ import { iterableToArray } from "./utils.js";
 const currentDirectoryURLResolve = (...paths: ReadonlyArray<string>) =>
 	pathToFileURL(resolve(fileURLToPath(import.meta.url), ...paths));
 
-export default [
+export const getFilePathsTests = [
 	{
 		given: "a valid directory path",
 		must: "return an array with the files on it",

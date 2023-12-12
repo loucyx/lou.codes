@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { isCronMonthValue } from "../../src/validations/isCronMonthValue.js";
 
-export default [
+export const isCronMonthValueTests = [
 	{
 		given: "a valid number value in the range 1-12",
 		must: "return true",

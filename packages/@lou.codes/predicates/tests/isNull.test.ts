@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { isNull } from "../src/isNull.js";
 import { wantedFalse, wantedTrue } from "./wanted.js";
 
-export default [
+export const isNullTests = [
 	{
 		given: "a BigInt",
 		received: () => isNull(BigInt(1)) && isNull(BigInt("1")) && isNull(1n),

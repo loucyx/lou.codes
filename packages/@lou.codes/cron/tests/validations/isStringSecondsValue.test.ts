@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { isStringSecondsValue } from "../../src/validations/isStringSecondsValue.js";
 
-export default [
+export const isStringSecondsValueTests = [
 	{
 		given: "a valid number value in the range 0-59",
 		must: "return true",

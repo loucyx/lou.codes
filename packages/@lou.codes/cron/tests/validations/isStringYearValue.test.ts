@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { isStringYearValue } from "../../src/validations/isStringYearValue.js";
 
-export default [
+export const isStringYearValueTests = [
 	{
 		given: "a valid number value in the range 1970-2099",
 		must: "return true",

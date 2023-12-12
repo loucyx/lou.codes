@@ -6,7 +6,7 @@ const someNumber = some(
 	(value: unknown): value is number => typeof value === "number",
 );
 
-export default [
+export const someTests = [
 	{
 		given: "an array of numbers",
 		must: "return true",

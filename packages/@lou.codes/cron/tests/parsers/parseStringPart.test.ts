@@ -7,7 +7,7 @@ const parseStringPartSeconds = parseStringPart([0, 59])(
 	parseStringSecondsValue,
 );
 
-export default [
+export const parseStringPartTests = [
 	{
 		given: "a valid *",
 		must: "return CronEvery",

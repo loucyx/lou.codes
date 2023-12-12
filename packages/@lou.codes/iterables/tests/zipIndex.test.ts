@@ -4,7 +4,7 @@ import { iterableToArray } from "../src/iterableToArray.js";
 import { repeat } from "../src/repeat.js";
 import { zipIndex } from "../src/zipIndex.js";
 
-export default [
+export const zipIndexTests = [
 	{
 		given: "an array with two strings",
 		must: "return Iterable of tuples with indexes and strings",

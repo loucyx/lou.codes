@@ -4,7 +4,7 @@ import { get } from "../src/get.js";
 
 const getFoo = get("foo");
 
-export default [
+export const getTests = [
 	{
 		given: "a getter and an object with that property on it",
 		must: "return property value",

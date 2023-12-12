@@ -4,7 +4,7 @@ import { parseStringSecondsValue } from "../../src/parsers/parseStringSecondsVal
 
 const parseStringRangeSeconds = parseStringRange(parseStringSecondsValue);
 
-export default [
+export const parseStringRangeTests = [
 	{
 		given: "a valid range",
 		must: "return CronRange object",

@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { featureParser } from "../src/featureParser.js";
 
-export default [
+export const featureParserTests = [
 	{
 		given: "an object with features",
 		must: "return a string with the proper values",

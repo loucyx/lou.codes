@@ -17,6 +17,15 @@ class UselessClass {
 	}
 }
 
+const callbackFunction = <
+	Arguments extends ReadOnlyArray = ReadOnlyArray<never>,
+>(
+	constructor: Class<Arguments, UselessClass>,
+	...constructorArguments: Arguments
+) => new constructor(...constructorArguments);
+
+void callbackFunction(UselessClass, "hello world");
+
 // eslint-disable-next-line functional/no-classes, @typescript-eslint/no-extraneous-class
 export const simpleGenericConstructor: Class = class {
 	// eslint-disable-next-line @typescript-eslint/no-useless-constructor, @typescript-eslint/explicit-member-accessibility, @typescript-eslint/no-empty-function
@@ -28,15 +37,6 @@ export const complexGenericConstructor: Class<
 	UselessClass
 	// eslint-disable-next-line functional/no-classes, @typescript-eslint/no-extraneous-class
 > = UselessClass;
-
-export const callbackFunction = <
-	Arguments extends ReadOnlyArray = ReadOnlyArray<never>,
->(
-	constructor: Class<Arguments, UselessClass>,
-	...constructorArguments: Arguments
-) => new constructor(...constructorArguments);
-
-void callbackFunction(UselessClass, "hello world");
 
 // @ts-expect-error Function isn't a constructor
 export const functionAsConstructor: Class<

@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { isStringNearestDayOfMonth } from "../../src/validations/isStringNearestDayOfMonth.js";
 
-export default [
+export const isStringNearestDayOfMonthTests = [
 	{
 		given: "a valid near value",
 		must: "return true",

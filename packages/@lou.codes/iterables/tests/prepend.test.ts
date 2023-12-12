@@ -5,7 +5,7 @@ import { prepend } from "../src/prepend.js";
 
 const prependNumbers = prepend([0, 1, 2, 3, 4]);
 
-export default [
+export const prependTests = [
 	{
 		given: "an array of numbers an array of strings",
 		must: "return both arrays concatenated",

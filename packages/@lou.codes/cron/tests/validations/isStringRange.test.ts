@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { isStringRange } from "../../src/validations/isStringRange.js";
 
-export default [
+export const isStringRangeTests = [
 	{
 		given: "a valid range (number-number)",
 		must: "return true",

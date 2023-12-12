@@ -5,7 +5,7 @@ const whenIsAsynchronousIterableTest = whenIsIsomorphicIterable(() => "truthy")(
 	() => "falsy",
 );
 
-export default [
+export const whenIsIsomorphicIterableTests = [
 	{
 		given: "a whenIsAsynchronousIterable with an array",
 		must: "receive the truthy value",

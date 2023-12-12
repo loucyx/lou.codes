@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { isStringLastValue } from "../../src/validations/isStringLastValue.js";
 
-export default [
+export const isStringLastValueTests = [
 	{
 		given: "a valid last value",
 		must: "return true",

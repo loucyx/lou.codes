@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import type { ReadOnlyArray } from "@lou.codes/types";
 import { always } from "../src/always.js";
 
-export default [
+export const alwaysTests = [
 	{
 		given: "always with a string",
 		must: "return said string when called",

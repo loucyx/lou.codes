@@ -8,7 +8,7 @@ const numberKey = 1 as const;
 const symbolKey = Symbol("key");
 const value = "value" as const;
 
-export default [
+export const entriesToObjectTests = [
 	{
 		given: "an array of entries [string, value]",
 		must: "return an object with the shape { string: value }",

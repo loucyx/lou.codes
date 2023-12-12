@@ -1,7 +1,7 @@
 import { format } from "../src/format.js";
 import { test } from "./test.js";
 
-export default test(import.meta.url)(
+export const formatTests = test(import.meta.url)(
 	{
 		given: "a number 1, a number 2 and a string",
 		must: "return that string wrapped with ansi for 1 and for 2",

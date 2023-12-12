@@ -3,7 +3,7 @@ import { whenIsNullish } from "../src/whenIsNullish.js";
 
 const whenIsNullishTest = whenIsNullish(() => "truthy")(() => "falsy");
 
-export default [
+export const whenIsNullishTests = [
 	{
 		given: "a whenIsNullish with nullish value (null)",
 		must: "receive the truthy value",

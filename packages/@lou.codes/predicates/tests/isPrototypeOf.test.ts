@@ -4,7 +4,7 @@ import { wantedFalse, wantedTrue } from "./wanted.js";
 
 const isPrototypeOfObject = isPrototypeOf(Object);
 
-export default [
+export const isPrototypeOfTests = [
 	{
 		given: "an empty object",
 		received: () => isPrototypeOfObject({}),

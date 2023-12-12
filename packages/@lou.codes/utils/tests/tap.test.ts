@@ -7,7 +7,7 @@ const tappedTest = tap((argument: boolean) => (tapped = argument))(
 	(_argument: boolean) => "foo",
 );
 
-export default {
+export const tapTest = {
 	given: "a tapped function",
 	must: "return expected value but run tapper first",
 	received: () => [tappedTest(true), tapped],

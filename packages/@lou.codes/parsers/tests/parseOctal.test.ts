@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import type { Maybe } from "@lou.codes/types";
 import { parseOctal } from "../src/parseOctal.js";
 
-export default [
+export const parseOctalTests = [
 	{
 		given: "a valid octal string",
 		must: "return correct value",

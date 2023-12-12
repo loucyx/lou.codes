@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { splitExpression } from "../../src/utils/splitExpression.js";
 
-export default [
+export const splitExpressionTests = [
 	{
 		given: "a list of values with multiple spaces in between",
 		must: "return array containing the trimmed values",

@@ -5,7 +5,7 @@ const add = (addend2: number) => (addend1: number) => addend1 + addend2;
 const sum = reduce(add);
 const sumFrom0 = sum(0);
 
-export default [
+export const reduceTests = [
 	{
 		given: "an array of numbers and a sum reducer",
 		must: "return the total sum",

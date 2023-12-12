@@ -6,7 +6,7 @@ import { asyncIterateArray, iterateArray } from "./utils.js";
 
 const appendNumbers = append([0, 1, 2, 3, 4]);
 
-export default [
+export const appendTests = [
 	{
 		given: "an array of numbers an array of strings",
 		must: "return both arrays concatenated",

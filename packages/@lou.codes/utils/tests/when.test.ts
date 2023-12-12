@@ -6,7 +6,7 @@ const half = (value: number) => value / 2;
 const double = (value: number) => value * 2;
 const whenIsEven = when(even)(half)(double);
 
-export default [
+export const whenTests = [
 	{
 		given: "a when function that halves even numbers and doubles odd numbers and an even number",
 		must: "receive half the number",

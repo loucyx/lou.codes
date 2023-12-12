@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { parseCronSecondsValue } from "../../src/parsers/parseCronSecondsValue.js";
 import type { CronSecondsValue } from "../../src/types/CronSecondsValue.js";
 
-export default [
+export const parseCronSecondsValueTests = [
 	{
 		given: "A valid seconds value",
 		must: "return it",

@@ -11,7 +11,7 @@ const arrayOfArrays = [
 ];
 const arrayDeeper = [arrayOfArrays, arrayOfArrays];
 
-export default [
+export const flatTests = [
 	{
 		given: "an array that already is flat",
 		must: "return the same array",

@@ -3,7 +3,7 @@ import { whenIsArray } from "../src/whenIsArray.js";
 
 const whenIsArrayTest = whenIsArray(() => "truthy")(() => "falsy");
 
-export default [
+export const whenIsArrayTests = [
 	{
 		given: "a whenIsArray with an array",
 		must: "receive the truthy value",

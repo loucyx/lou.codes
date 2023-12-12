@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import type { Maybe } from "@lou.codes/types";
 import { parseHexadecimal } from "../src/parseHexadecimal.js";
 
-export default [
+export const parseHexadecimalTests = [
 	{
 		given: "a valid hexadecimal string",
 		must: "return correct value",

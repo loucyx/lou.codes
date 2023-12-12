@@ -1,8 +1,8 @@
 import type { Second } from "../src/Second.js";
 
-export const tuple = [1, "🟢"] as const;
-
 type SecondOfTuple = Second<typeof tuple>;
+
+export const tuple = [1, "🟢"] as const;
 
 export const secondOfTuple: SecondOfTuple = "🟢";
 

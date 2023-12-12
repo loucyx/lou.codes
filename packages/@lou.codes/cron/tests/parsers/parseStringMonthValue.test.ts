@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { parseStringMonthValue } from "../../src/parsers/parseStringMonthValue.js";
 
-export default [
+export const parseStringMonthValueTests = [
 	{
 		given: "a valid number between 1 and 12",
 		must: "return that number",

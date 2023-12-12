@@ -3,7 +3,7 @@ import { stringIncludesOnlyOnce } from "../../src/validations/stringIncludesOnly
 
 const includesCommaOnce = stringIncludesOnlyOnce(",");
 
-export default [
+export const stringIncludesOnlyOnceTests = [
 	{
 		given: "valid value with once appearance",
 		must: "return true",

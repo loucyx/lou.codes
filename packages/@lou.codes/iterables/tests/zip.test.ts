@@ -6,7 +6,7 @@ import { asyncIterateArray } from "./utils.js";
 
 const zipFooBar = zip(["foo", "bar"]);
 
-export default [
+export const zipTests = [
 	{
 		given: "zip empty array",
 		must: "return empty array",

@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { isDate } from "../src/isDate.js";
 import { wantedFalse, wantedTrue } from "./wanted.js";
 
-export default [
+export const isDateTests = [
 	{
 		given: "a BigInt",
 		received: () => isDate(BigInt(1)) && isDate(BigInt("1")) && isDate(1n),

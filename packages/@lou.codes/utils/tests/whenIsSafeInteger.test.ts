@@ -3,7 +3,7 @@ import { whenIsSafeInteger } from "../src/whenIsSafeInteger.js";
 
 const whenIsSafeIntegerTest = whenIsSafeInteger(() => "truthy")(() => "falsy");
 
-export default [
+export const whenIsSafeIntegerTests = [
 	{
 		given: "a whenIsSafeInteger with a safe integer",
 		must: "receive the truthy value",

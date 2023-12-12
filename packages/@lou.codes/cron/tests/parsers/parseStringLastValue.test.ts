@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { parseStringLastValue } from "../../src/parsers/parseStringLastValue.js";
 
-export default [
+export const parseStringLastValueTests = [
 	{
 		given: "a valid L with value 5",
 		must: "return CronEvery",

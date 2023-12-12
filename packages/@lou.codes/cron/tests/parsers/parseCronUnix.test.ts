@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { parseCronUnix } from "../../src/parsers/parseCronUnix.js";
 import type { CronDayOfMonth } from "../../src/types/CronDayOfMonth.js";
 
-export default [
+export const parseCronUnixTests = [
 	{
 		given: "A CronUnix object with all set to every",
 		must: "return * * * * *",

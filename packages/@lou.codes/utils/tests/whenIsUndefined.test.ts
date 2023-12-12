@@ -3,7 +3,7 @@ import { whenIsUndefined } from "../src/whenIsUndefined.js";
 
 const whenIsUndefinedTest = whenIsUndefined(() => "truthy")(() => "falsy");
 
-export default [
+export const whenIsUndefinedTests = [
 	{
 		given: "a whenIsUndefined with an undefined value",
 		must: "receive the truthy value",

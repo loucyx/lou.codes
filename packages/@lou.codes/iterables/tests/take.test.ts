@@ -8,7 +8,7 @@ const take2 = take(2);
 const takeNone = take(0);
 const takeAll = take(Infinity);
 
-export default [
+export const takeTests = [
 	{
 		given: "an array of numbers and a take 2 function",
 		must: "return array with only the first 2 elements",

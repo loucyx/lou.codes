@@ -5,7 +5,7 @@ const TEST_EVENT = "test" as const;
 
 type TestRegistry = { [TEST_EVENT]: never };
 
-export default [
+export const emitTests = [
 	{
 		given: "an emit with listeners",
 		must: "call the listeners",

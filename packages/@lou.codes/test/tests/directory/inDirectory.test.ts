@@ -1,6 +1,6 @@
 import type { Test } from "../../src/types/Test.js";
 
-export default {
+export const inDirectoryTest = {
 	given: "a single test in a directory",
 	must: "work",
 	received: () => true,

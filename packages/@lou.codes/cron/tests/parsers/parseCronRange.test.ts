@@ -5,7 +5,7 @@ import type { CronSecondsValue } from "../../src/types/CronSecondsValue.js";
 
 const parseCronRangeSeconds = parseCronRange(parseCronSecondsValue);
 
-export default [
+export const parseCronRangeTests = [
 	{
 		given: "a valid range",
 		must: "return CronRange object",

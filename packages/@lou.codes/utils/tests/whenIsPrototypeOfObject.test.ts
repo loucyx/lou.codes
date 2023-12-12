@@ -6,7 +6,7 @@ const whenIsPrototypeOfObjectTest = whenIsPrototypeOfObject(() => "truthy")(
 	() => "falsy",
 );
 
-export default [
+export const whenIsPrototypeOfObjectTests = [
 	{
 		given: "a whenIsPrototypeOfObject with an object with Object prototype.",
 		must: "receive the truthy value",

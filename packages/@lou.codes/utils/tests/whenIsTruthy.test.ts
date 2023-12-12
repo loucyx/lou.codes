@@ -3,7 +3,7 @@ import { whenIsTruthy } from "../src/whenIsTruthy.js";
 
 const whenIsTruthyTest = whenIsTruthy(() => "truthy")(() => "falsy");
 
-export default [
+export const whenIsTruthyTests = [
 	{
 		given: "a whenIsTruthy with a truthy value (true)",
 		must: "receive the truthy value",

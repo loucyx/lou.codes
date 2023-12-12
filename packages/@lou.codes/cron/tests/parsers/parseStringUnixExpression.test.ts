@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { parseStringUnixExpression } from "../../src/parsers/parseStringUnixExpression.js";
 
-export default [
+export const parseStringUnixExpressionTests = [
 	{
 		given: "an expression with 5 values",
 		must: "return a valid array",

@@ -16,7 +16,7 @@ const manualEmit = () =>
 
 const onTestEvent = on(registry)(TEST_EVENT);
 
-export default [
+export const onTests = [
 	{
 		given: "an on handler that's called manually",
 		must: "call the listener",

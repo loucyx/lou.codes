@@ -14,7 +14,7 @@ const throwingFunction = (shouldThrow: boolean) => {
 
 const safeFunction = attempt(throwingFunction);
 
-export default [
+export const attemptTests = [
 	{
 		given: "a function that could throw, not throwing",
 		must: "return expected value",

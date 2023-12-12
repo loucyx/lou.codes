@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { parseCronDayOfWeekValue } from "../../src/parsers/parseCronDayOfWeekValue.js";
 import type { CronDayOfWeekValue } from "../../src/types/CronDayOfWeekValue.js";
 
-export default [
+export const parseCronDayOfWeekValueTests = [
 	{
 		given: "A valid dayOfWeek value",
 		must: "return that value",

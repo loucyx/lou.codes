@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { parseCronDayOfMonthValue } from "../../src/parsers/parseCronDayOfMonthValue.js";
 import type { CronDayOfMonthValue } from "../../src/types/CronDayOfMonthValue.js";
 
-export default [
+export const parseCronDayOfMonthValueTests = [
 	{
 		given: "A valid dayOfMonth value",
 		must: "return that value",

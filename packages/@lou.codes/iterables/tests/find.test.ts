@@ -7,7 +7,7 @@ const findString = find(
 	(value: number | string): value is string => typeof value === "string",
 );
 
-export default [
+export const findTests = [
 	{
 		given: "an array of numbers and strings containing search matching item",
 		must: "get the first string that matches",

@@ -25,7 +25,7 @@ const testQuestionRetry = question(
 	})(),
 );
 
-export default [
+export const questionTests = [
 	{
 		given: "a plain question with a mock readline interface",
 		must: "get the answer back",

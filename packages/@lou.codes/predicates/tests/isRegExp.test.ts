@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { isRegExp } from "../src/isRegExp.js";
 import { wantedFalse, wantedTrue } from "./wanted.js";
 
-export default [
+export const isRegExpTests = [
 	{
 		given: "a BigInt",
 		received: () =>

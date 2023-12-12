@@ -5,7 +5,7 @@ import { parseCronSecondsValue } from "../../src/parsers/parseCronSecondsValue.j
 
 const parseCronSecondsList = parseCronList([0, 59])(parseCronSecondsValue);
 
-export default [
+export const parseCronListTests = [
 	{
 		given: "a valid list",
 		must: "return CronList",

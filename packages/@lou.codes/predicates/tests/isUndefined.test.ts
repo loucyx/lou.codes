@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { isUndefined } from "../src/isUndefined.js";
 import { wantedFalse, wantedTrue } from "./wanted.js";
 
-export default [
+export const isUndefinedTests = [
 	{
 		given: "a BigInt",
 		received: () => isUndefined(BigInt(1)) && isUndefined(BigInt("1")),

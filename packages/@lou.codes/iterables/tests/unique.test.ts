@@ -5,7 +5,7 @@ import { asyncIterateArray } from "./utils.js";
 
 const array = [0, 1, 2, 3, 4];
 
-export default [
+export const uniqueTests = [
 	{
 		given: "an array with duplicated elements",
 		must: "return same array without duplicated elements",

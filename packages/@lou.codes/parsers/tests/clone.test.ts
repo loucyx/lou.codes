@@ -6,7 +6,7 @@ import type {
 } from "@lou.codes/types";
 import { clone } from "../src/clone.js";
 
-export default [
+export const cloneTests = [
 	{
 		given: "an empty object",
 		must: "return copy of object",

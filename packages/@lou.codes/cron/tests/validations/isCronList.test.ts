@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { isCronList } from "../../src/validations/isCronList.js";
 
-export default [
+export const isCronListTests = [
 	{
 		given: "a value with commas",
 		must: "return true",

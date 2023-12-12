@@ -3,7 +3,7 @@ import { whenIsSymbol } from "../src/whenIsSymbol.js";
 
 const whenIsSymbolTest = whenIsSymbol(() => "truthy")(() => "falsy");
 
-export default [
+export const whenIsSymbolTests = [
 	{
 		given: "a whenIsSymbol with a string",
 		must: "receive the truthy value",

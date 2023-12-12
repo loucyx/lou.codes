@@ -9,7 +9,7 @@ const betweenFooAndFoo = betweenFoo("foo");
 const between1And10 = between1(10);
 const between1AndNegative10 = between1(-10);
 
-export default [
+export const betweenTests = [
 	{
 		given: "between function with the same number twice and receiving that number",
 		received: () => between1And1(1),

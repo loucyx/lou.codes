@@ -4,7 +4,7 @@ import { entryKey } from "../src/entryKey.js";
 
 const entry = ["foo", "bar"] as Entry<string, string>;
 
-export default {
+export const entryKeyTest = {
 	given: "an entry",
 	must: "return entry key",
 	received: () => entryKey(entry),

@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { parseStringMinutesValue } from "../../src/parsers/parseStringMinutesValue.js";
 
-export default [
+export const parseStringMinutesValueTests = [
 	{
 		given: "a valid number between 1 and 59",
 		must: "return that number",

@@ -4,7 +4,7 @@ import { whenIsPromise } from "../src/whenIsPromise.js";
 
 const whenIsPromiseTest = whenIsPromise(() => "truthy")(() => "falsy");
 
-export default [
+export const whenIsPromiseTests = [
 	{
 		given: "a whenIsPromise with a Promise",
 		must: "receive the truthy value",

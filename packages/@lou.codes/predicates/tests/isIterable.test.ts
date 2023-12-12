@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { isIterable } from "../src/isIterable.js";
 import { wantedFalse, wantedTrue } from "./wanted.js";
 
-export default [
+export const isIterableTests = [
 	{
 		given: "a BigInt",
 		received: () =>

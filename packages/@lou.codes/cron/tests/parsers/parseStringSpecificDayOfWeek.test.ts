@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { CRON_SPECIFIC_SEPARATOR } from "../../src/constants.js";
 import { parseStringSpecificDayOfWeek } from "../../src/parsers/parseStringSpecificDayOfWeek.js";
 
-export default [
+export const parseStringSpecificDayOfWeekTests = [
 	{
 		given: "a valid W with value 2",
 		must: "return CronEvery",

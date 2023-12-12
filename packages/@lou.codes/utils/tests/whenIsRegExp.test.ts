@@ -4,7 +4,7 @@ import { whenIsRegExp } from "../src/whenIsRegExp.js";
 
 const whenIsRegExpTest = whenIsRegExp(() => "truthy")(() => "falsy");
 
-export default [
+export const whenIsRegExpTests = [
 	{
 		given: "a whenIsRegExp with a RegExp",
 		must: "receive the truthy value",

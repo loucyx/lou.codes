@@ -1,7 +1,7 @@
 import type { Test } from "@lou.codes/test";
 import { constructProxy } from "../src/constructProxy.js";
 
-export default {
+export const constructProxyTest = {
 	given: "a constructProxy",
 	must: "return new instance of Proxy",
 	received: () => constructProxy({}, {}).constructor.name,

@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { isObject } from "../src/isObject.js";
 import { wantedFalse, wantedTrue } from "./wanted.js";
 
-export default [
+export const isObjectTests = [
 	{
 		given: "a BigInt",
 		received: () =>

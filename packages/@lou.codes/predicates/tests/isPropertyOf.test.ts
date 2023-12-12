@@ -16,7 +16,7 @@ const missingSymbol = Symbol("missingSymbol");
 const missingString = "missingString";
 const missingNumber = 2;
 
-export default [
+export const isPropertyOfTests = [
 	{
 		given: "a symbol that exist in the given object",
 		received: () => isPropertyOfObject(symbol),

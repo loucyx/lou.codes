@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { isSafeInteger } from "../src/isSafeInteger.js";
 import { wantedFalse, wantedTrue } from "./wanted.js";
 
-export default [
+export const isSafeIntegerTests = [
 	{
 		given: "a safe integer",
 		received: () => isSafeInteger(1),

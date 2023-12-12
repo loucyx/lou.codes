@@ -3,7 +3,7 @@ import type { Maybe } from "@lou.codes/types";
 import { parseCronMinutesValue } from "../../src/parsers/parseCronMinutesValue.js";
 import type { CronMinutesValue } from "../../src/types/CronMinutesValue.js";
 
-export default [
+export const parseCronMinutesValueTests = [
 	{
 		given: "A valid minutes value",
 		must: "return it",

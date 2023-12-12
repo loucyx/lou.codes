@@ -4,7 +4,7 @@ import { whenIsDate } from "../src/whenIsDate.js";
 
 const whenIsDateTest = whenIsDate(() => "truthy")(() => "falsy");
 
-export default [
+export const whenIsDateTests = [
 	{
 		given: "a whenIsDate with a Date",
 		must: "receive the truthy value",

@@ -3,7 +3,7 @@ import { whenIsIterable } from "../src/whenIsIterable.js";
 
 const whenIsIterableTest = whenIsIterable(() => "truthy")(() => "falsy");
 
-export default [
+export const whenIsIterableTests = [
 	{
 		given: "a whenIsIterable with an array",
 		must: "receive the truthy value",

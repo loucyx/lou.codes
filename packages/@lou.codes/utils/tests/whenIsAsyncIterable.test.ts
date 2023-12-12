@@ -5,7 +5,7 @@ const whenIsAsyncIterableTest = whenIsAsyncIterable(() => "truthy")(
 	() => "falsy",
 );
 
-export default [
+export const whenIsAsyncIterableTests = [
 	{
 		given: "a whenIsAsyncIterable with an array",
 		must: "receive the truthy value",

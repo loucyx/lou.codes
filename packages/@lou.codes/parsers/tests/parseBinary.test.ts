@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import type { Maybe } from "@lou.codes/types";
 import { parseBinary } from "../src/parseBinary.js";
 
-export default [
+export const parseBinaryTests = [
 	{
 		given: "a valid binary string",
 		must: "return correct value",

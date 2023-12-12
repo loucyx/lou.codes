@@ -12,7 +12,7 @@ const instance = construct(
 	},
 )();
 
-export default {
+export const bindTest = {
 	given: "a binded function",
 	must: "return scoped value",
 	received: bind(instance)(instance.test),

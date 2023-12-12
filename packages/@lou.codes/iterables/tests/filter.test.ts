@@ -9,7 +9,7 @@ const filterEverything = filter(nothing);
 const isEven = (item: number) => item % 2 === 0;
 const filterOdds = filter(isEven);
 
-export default [
+export const filterTests = [
 	{
 		given: "an array of numbers and an always false filter",
 		must: "return an empty array",

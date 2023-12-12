@@ -7,7 +7,7 @@ import {
 import { formatValue } from "../src/formatValue.js";
 import type { Tests } from "../src/types/Tests.js";
 
-export default [
+export const formatValueTests = [
 	{
 		given: "a BigInt",
 		must: "return formatted BigInt",

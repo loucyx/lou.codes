@@ -3,7 +3,7 @@ import { whenIsBoolean } from "../src/whenIsBoolean.js";
 
 const whenIsBooleanTest = whenIsBoolean(() => "truthy")(() => "falsy");
 
-export default [
+export const whenIsBooleanTests = [
 	{
 		given: "a whenIsBoolean with a Boolean",
 		must: "receive the truthy value",

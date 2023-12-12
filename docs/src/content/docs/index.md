@@ -1,8 +1,9 @@
 ---
 title: Lou's Code
 description:
-    We embrace bleeding-edge web technologies to create high-quality and
-    long-lasting software.
+    I'm Lou, a web developer, hobbyist DJ and casual gamer based in Chicago,
+    Illinois. I love to write open source libraries embracing bleeding-edge web
+    technologies to create high-quality and long-lasting solutions.
 template: splash
 hero:
     title: |

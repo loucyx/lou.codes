@@ -1,0 +1,7 @@
+User-Agent: *
+Allow: /
+
+User-Agent: GPTBot
+Disallow: /
+
+Sitemap: https://lou.codes/sitemap-index.xml

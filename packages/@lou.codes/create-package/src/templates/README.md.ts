@@ -2,7 +2,7 @@ import { USER } from "../constants.js";
 import type { Answers } from "../types/Answers.js";
 import { userClean } from "../userClean.js";
 
-export default ({
+export const generateReadMe = ({
 	name,
 	description,
 }: Answers) => `<img id="logo" alt="${userClean(

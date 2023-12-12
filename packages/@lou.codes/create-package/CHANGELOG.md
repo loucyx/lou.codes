@@ -1,5 +1,11 @@
 # Change log
 
+## 1.0.2
+
+### Patch Changes
+
+-   🚨 apply linter fixes and update importer.
+
 ## 1.0.1
 
 ### Patch Changes

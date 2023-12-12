@@ -1,8 +1,8 @@
+import type { ReadOnlyRecord } from "@lou.codes/types";
 import { readdir, writeFile } from "node:fs/promises";
 import { sourceURL } from "./sourceURL.js";
 import { targetURL } from "./targetURL.js";
 import type { Answers } from "./types/Answers.js";
-import type { Template } from "./types/Template.js";
 
 export const copyTemplates = (answers: Answers) =>
 	readdir(sourceURL("./templates/"))
@@ -14,20 +14,28 @@ export const copyTemplates = (answers: Answers) =>
 						import(
 							sourceURL(`./templates/${filename}`).toString()
 						).then(
-							({
-								default: template,
-							}: {
-								readonly default: Template;
-							}) =>
-								writeFile(
-									targetURL(
-										`${answers.name}/${filename.replace(
-											/\.js$/u,
-											"",
-										)}`,
+							(
+								importedTemplate: ReadOnlyRecord<
+									string,
+									(answers: Answers) => string
+								>,
+							) =>
+								Promise.all(
+									Object.values(importedTemplate).map(
+										templateFunction =>
+											writeFile(
+												targetURL(
+													`${
+														answers.name
+													}/${filename.replace(
+														/\.js$/u,
+														"",
+													)}`,
+												),
+												templateFunction(answers),
+												"utf-8",
+											),
 									),
-									template(answers),
-									"utf-8",
 								),
 						),
 					),

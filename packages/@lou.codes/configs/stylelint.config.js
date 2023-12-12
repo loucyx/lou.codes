@@ -7,9 +7,9 @@ const LOWER_CASE = "lower";
  * Stylelint configuration.
  * @see [Stylelint rules](https://stylelint.io/user-guide/rules)
  */
-// eslint-disable-next-line functional/immutable-data
+// eslint-disable-next-line import/no-default-export
 export default Object.freeze(
-	/** @satisfies {import("stylelint").Config} */ ({
+	/** @type {const} @satisfies {import("stylelint").Config} */ ({
 		defaultSeverity: "error",
 		extends: ["stylelint-prettier/recommended"],
 		plugins: [/** @type {import("stylelint").Plugin} */ (stylelintOrder)],

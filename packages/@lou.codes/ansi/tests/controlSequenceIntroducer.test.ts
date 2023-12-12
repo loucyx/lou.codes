@@ -1,7 +1,7 @@
 import { controlSequenceIntroducer } from "../src/controlSequenceIntroducer.js";
 import { test } from "./test.js";
 
-export default test(import.meta.url)(
+export const controlSequenceIntroducerTests = test(import.meta.url)(
 	{
 		given: "a number 13",
 		must: "return that number with the CSI scape sequence",

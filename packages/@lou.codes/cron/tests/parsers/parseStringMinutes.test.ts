@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { CRON_EVERY } from "../../src/constants.js";
 import { parseStringMinutes } from "../../src/parsers/parseStringMinutes.js";
 
-export default [
+export const parseStringMinutesTests = [
 	{
 		given: "during minute 10",
 		must: "return *",

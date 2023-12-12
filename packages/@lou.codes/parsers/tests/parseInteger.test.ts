@@ -4,7 +4,7 @@ import { parseInteger } from "../src/parseInteger.js";
 
 const parseDecimal = parseInteger(10);
 
-export default [
+export const parseIntegerTests = [
 	{
 		given: "a valid decimal string",
 		must: "return correct value",

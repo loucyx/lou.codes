@@ -1,7 +1,7 @@
 import { normalizeString } from "../src/normalizeString.js";
 import { test } from "./test.js";
 
-export default test(import.meta.url)(
+export const normalizeStringTests = test(import.meta.url)(
 	{
 		given: "a plain string",
 		must: "return that same string",

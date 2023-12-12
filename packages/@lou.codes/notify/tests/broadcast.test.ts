@@ -10,7 +10,7 @@ const { emit, on } = broadcast<TestRegistry>();
 const onTestEvent = on(TEST_EVENT);
 const emitTestEvent = emit(TEST_EVENT);
 
-export default [
+export const broadcastTests = [
 	{
 		given: "an emit with listeners",
 		must: "call the listeners",

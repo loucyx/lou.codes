@@ -5,7 +5,7 @@ import { asyncIterateArray, iterateArray } from "./utils.js";
 
 const array = [0, 1, 2];
 
-export default [
+export const lengthTests = [
 	{
 		given: "an array",
 		must: "return length",

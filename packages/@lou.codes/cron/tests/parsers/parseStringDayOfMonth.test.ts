@@ -6,7 +6,7 @@ import {
 } from "../../src/constants.js";
 import { parseStringDayOfMonth } from "../../src/parsers/parseStringDayOfMonth.js";
 
-export default [
+export const parseStringDayOfMonthTests = [
 	{
 		given: "on the 10th day of ...",
 		must: "return 10",

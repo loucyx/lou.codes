@@ -7,7 +7,7 @@ const parseStringListSeconds = parseStringList([0, 59])(
 	parseStringSecondsValue,
 );
 
-export default [
+export const parseStringListTests = [
 	{
 		given: "a valid list",
 		must: "return CronList",

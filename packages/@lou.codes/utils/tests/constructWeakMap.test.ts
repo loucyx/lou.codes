@@ -1,7 +1,7 @@
 import type { Test } from "@lou.codes/test";
 import { constructWeakMap } from "../src/constructWeakMap.js";
 
-export default {
+export const constructWeakMapTest = {
 	given: "a constructWeakMap",
 	must: "return new instance of WeakMap",
 	received: () => constructWeakMap().constructor.name,

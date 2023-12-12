@@ -3,7 +3,7 @@ import { CRON_EVERY } from "../../src/constants.js";
 import { parseCronEvery } from "../../src/parsers/parseCronEvery.js";
 import type { CronEvery } from "../../src/types/CronEvery.js";
 
-export default [
+export const parseCronEveryTests = [
 	{
 		given: "a valid *",
 		must: "return CronEvery",

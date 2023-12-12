@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { isStringList } from "../../src/validations/isStringList.js";
 
-export default [
+export const isStringListTests = [
 	{
 		given: "a value with commas",
 		must: "return true",

@@ -8,7 +8,7 @@ const drop2 = drop(2);
 const dropNone = drop(0);
 const dropAll = drop(Infinity);
 
-export default [
+export const dropTests = [
 	{
 		given: "an iterable of numbers and a drop 2 function",
 		must: "return iterable without the first 2 elements",

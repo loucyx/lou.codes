@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { parseCronYearValue } from "../../src/parsers/parseCronYearValue.js";
 import type { CronYearValue } from "../../src/types/CronYearValue.js";
 
-export default [
+export const parseCronYearValueTests = [
 	{
 		given: "A valid seconds value",
 		must: "return it",

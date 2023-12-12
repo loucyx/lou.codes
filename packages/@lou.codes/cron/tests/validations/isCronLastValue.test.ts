@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { isCronLastValue } from "../../src/validations/isCronLastValue.js";
 
-export default [
+export const isCronLastValueTests = [
 	{
 		given: "a valid last value",
 		must: "return true",

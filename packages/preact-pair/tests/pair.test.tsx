@@ -22,7 +22,7 @@ const key = "TEST";
 
 const PairedState = pair(useState);
 
-export default [
+export const pairTests = [
 	{
 		given: "a paired hook with key",
 		must: "return component wrapping hook and with key",

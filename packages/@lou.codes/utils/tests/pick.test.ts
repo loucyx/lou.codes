@@ -3,7 +3,7 @@ import { pick } from "../src/pick.js";
 
 const pickFoo = pick("foo");
 
-export default [
+export const pickTests = [
 	{
 		given: "a pick for the `foo` property and an object with said property",
 		must: "return the object only with `foo`",

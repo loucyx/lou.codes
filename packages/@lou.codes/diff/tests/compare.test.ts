@@ -10,7 +10,7 @@ const arrayCompare = (values: UnaryInput<typeof compare>) => [
 const now = Date.now();
 const error = new Error("🟢");
 
-export default test(import.meta.url)(
+export const compareTests = test(import.meta.url)(
 	{
 		given: "two equal strings",
 		must: "empty diff",

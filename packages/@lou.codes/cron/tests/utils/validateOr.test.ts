@@ -3,7 +3,7 @@ import { validateOr } from "../../src/utils/validateOr.js";
 
 const value = "1";
 
-export default [
+export const validateOrTests = [
 	{
 		given: "an empty list of validations",
 		must: "return false",

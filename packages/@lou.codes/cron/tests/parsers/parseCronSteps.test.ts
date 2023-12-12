@@ -5,7 +5,7 @@ import { parseCronSteps } from "../../src/parsers/parseCronSteps.js";
 
 const parseCronStepsSeconds = parseCronSteps([0, 59])(parseCronSecondsValue);
 
-export default [
+export const parseCronStepsTests = [
 	{
 		given: "a valid steps value",
 		must: "return CronSteps object",

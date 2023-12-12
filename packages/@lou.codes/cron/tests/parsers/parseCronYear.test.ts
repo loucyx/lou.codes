@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { CRON_EVERY } from "../../src/constants.js";
 import { parseCronYear } from "../../src/parsers/parseCronYear.js";
 
-export default [
+export const parseCronYearTests = [
 	{
 		given: "in 1989",
 		must: "return *",

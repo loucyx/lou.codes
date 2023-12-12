@@ -3,7 +3,7 @@ import { whenIsString } from "../src/whenIsString.js";
 
 const whenIsStringTest = whenIsString(() => "truthy")(() => "falsy");
 
-export default [
+export const whenIsStringTests = [
 	{
 		given: "a whenIsString with a string",
 		must: "receive the truthy value",

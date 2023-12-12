@@ -6,7 +6,7 @@ const value = "foo";
 const valueCopy = value;
 const otherValue = "bar";
 
-export default [
+export const isTests = [
 	{
 		given: "two equal values",
 		received: () => is(value)(valueCopy),

@@ -3,7 +3,7 @@ import { whenIsObject } from "../src/whenIsObject.js";
 
 const whenIsObjectTest = whenIsObject(() => "truthy")(() => "falsy");
 
-export default [
+export const whenIsObjectTests = [
 	{
 		given: "a whenIsObject with an object",
 		must: "receive the truthy value",

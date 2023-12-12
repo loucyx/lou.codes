@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { parseCronHoursValue } from "../../src/parsers/parseCronHoursValue.js";
 import type { CronHoursValue } from "../../src/types/CronHoursValue.js";
 
-export default [
+export const parseCronHoursValueTests = [
 	{
 		given: "A valid hours value",
 		must: "return it",

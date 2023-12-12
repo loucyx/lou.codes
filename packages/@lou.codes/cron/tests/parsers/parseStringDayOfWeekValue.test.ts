@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { parseStringDayOfWeekValue } from "../../src/parsers/parseStringDayOfWeekValue.js";
 
-export default [
+export const parseStringDayOfWeekValueTests = [
 	{
 		given: "a valid number between 0 and 7",
 		must: "return that number",

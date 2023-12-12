@@ -4,7 +4,7 @@ import { asyncIterateArray, iterateArray } from "./utils.js";
 
 const includesFoo = includes("foo");
 
-export default [
+export const includesTests = [
 	{
 		given: "a string and an array of strings containing that string",
 		must: "return true",

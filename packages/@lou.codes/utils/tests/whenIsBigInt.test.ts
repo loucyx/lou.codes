@@ -3,7 +3,7 @@ import { whenIsBigInt } from "../src/whenIsBigInt.js";
 
 const whenIsBigIntTest = whenIsBigInt(() => "truthy")(() => "falsy");
 
-export default [
+export const whenIsBigIntTests = [
 	{
 		given: "a whenIsBigInt with a BigInt",
 		must: "receive the truthy value",

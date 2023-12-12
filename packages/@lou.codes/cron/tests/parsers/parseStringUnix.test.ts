@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { parseStringUnix } from "../../src/parsers/parseStringUnix.js";
 
-export default [
+export const parseStringUnixTests = [
 	{
 		given: "A cron expression * * * * *",
 		must: "return a CronUnix object with all set to every",

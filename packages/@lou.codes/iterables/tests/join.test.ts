@@ -5,7 +5,7 @@ import { asyncIterateArray, iterateArray } from "./utils.js";
 const spaceJoin = join(" ");
 const array = [0, 1, 2, 3];
 
-export default [
+export const joinTests = [
 	{
 		given: "an array of numbers",
 		must: "return those numbers separated by spaces",

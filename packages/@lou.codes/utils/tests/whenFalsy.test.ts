@@ -5,7 +5,7 @@ const even = (value: number) => value % 2 === 0;
 const half = (value: number) => value / 2;
 const whenFalsyIsEven = whenFalsy(even)(half);
 
-export default [
+export const whenFalsyTests = [
 	{
 		given: "a whenFalsy function that halves odd numbers receiving an even number",
 		must: "receive half the number",

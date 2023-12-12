@@ -6,7 +6,7 @@ const string2 = "string2";
 const stringArray = [string1, string2, string1, string2];
 const numberArray = [0, 1, 2, 3];
 
-export default [
+export const groupByTests = [
 	{
 		given: "an array of strings and a grouper by string",
 		must: "group by the string in the array",

@@ -16,7 +16,7 @@ const windowOpenFail = windowOpenPromise({
 	open: _ => null as unknown as Window,
 });
 
-export default [
+export const windowOpenPromiseTests = [
 	{
 		given: "an object with options",
 		must: "return mock with the same options",

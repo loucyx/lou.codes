@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import type { Maybe } from "@lou.codes/types";
 import { undefineNaN } from "../src/undefineNaN.js";
 
-export default [
+export const undefineNaNTests = [
 	{
 		given: "a valid number",
 		must: "return correct value",

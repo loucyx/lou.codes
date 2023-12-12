@@ -4,7 +4,7 @@ import { iterableToArray } from "../src/iterableToArray.js";
 import { toIterable } from "../src/toIterable.js";
 import { asyncIterateArray } from "./utils.js";
 
-export default [
+export const toIterableTests = [
 	{
 		given: "an array",
 		must: "return iterable of array",

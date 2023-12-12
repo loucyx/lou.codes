@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { isCronYearValue } from "../../src/validations/isCronYearValue.js";
 
-export default [
+export const isCronYearValueTests = [
 	{
 		given: "a valid number value in the range 1970-2099",
 		must: "return true",

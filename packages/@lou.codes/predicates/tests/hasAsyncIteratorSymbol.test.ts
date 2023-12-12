@@ -6,7 +6,7 @@ const objectWithAsyncIteratorSymbol = { [Symbol.asyncIterator]: () => void 0 };
 const objectWithoutAsyncIteratorSymbol = {};
 const array = [] as ReadonlyArray<unknown>;
 
-export default [
+export const hasAsyncIteratorSymbolTests = [
 	{
 		given: "an object with an async iterator symbol",
 		received: () => hasAsyncIteratorSymbol(objectWithAsyncIteratorSymbol),

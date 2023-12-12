@@ -6,7 +6,7 @@ import type {
 } from "@lou.codes/types";
 import { parseJSON } from "../src/parseJSON.js";
 
-export default [
+export const parseJSONTests = [
 	{
 		given: "a JSON with a malicious __proto__",
 		must: "return object without __proto__",

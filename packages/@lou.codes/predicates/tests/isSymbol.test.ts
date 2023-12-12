@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { isSymbol } from "../src/isSymbol.js";
 import { wantedFalse, wantedTrue } from "./wanted.js";
 
-export default [
+export const isSymbolTests = [
 	{
 		given: "a BigInt",
 		received: () => isSymbol(BigInt(1)) && isSymbol(BigInt("1")),

@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { CRON_EVERY } from "../../src/constants.js";
 import { parseCronSeconds } from "../../src/parsers/parseCronSeconds.js";
 
-export default [
+export const parseCronSecondsTests = [
 	{
 		given: "at second 10 of...",
 		must: "return *",

@@ -6,7 +6,7 @@ import {
 } from "../../src/constants.js";
 import { parseCronDayOfWeek } from "../../src/parsers/parseCronDayOfWeek.js";
 
-export default [
+export const parseCronDayOfWeekTests = [
 	{
 		given: "every Friday",
 		must: "return 6",

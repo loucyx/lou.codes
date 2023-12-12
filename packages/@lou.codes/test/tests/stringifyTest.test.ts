@@ -3,7 +3,7 @@ import { EXCEPTION, FAIL, PASS } from "../src/constants.js";
 import { stringifyTest } from "../src/stringifyTest.js";
 import type { Tests } from "../src/types/Tests.js";
 
-export default [
+export const stringifyTestTests = [
 	{
 		given: "a passing test",
 		must: "return a PASS string",

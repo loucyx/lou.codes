@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { CRON_EVERY } from "../../src/constants.js";
 import { isCronEvery } from "../../src/validations/isCronEvery.js";
 
-export default [
+export const isCronEveryTests = [
 	{
 		given: "a * value",
 		must: "return true",

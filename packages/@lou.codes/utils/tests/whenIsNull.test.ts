@@ -3,7 +3,7 @@ import { whenIsNull } from "../src/whenIsNull.js";
 
 const whenIsNullTest = whenIsNull(() => "truthy")(() => "falsy");
 
-export default [
+export const whenIsNullTests = [
 	{
 		given: "a whenIsNull with null",
 		must: "receive the truthy value",

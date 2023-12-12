@@ -1,4 +1,4 @@
-import type { Tests } from "@lou.codes/test";
+import { type Tests } from "@lou.codes/test";
 import { createElement, useState } from "react";
 import { renderToString } from "react-dom/server";
 import type { PairedComponentProperties } from "../src/PairedComponentProperties.js";
@@ -21,7 +21,7 @@ const key = "TEST";
 
 const PairedState = pair(useState);
 
-export default [
+export const pairTests = [
 	{
 		given: "a paired hook with key",
 		must: "return component wrapping hook and with key",

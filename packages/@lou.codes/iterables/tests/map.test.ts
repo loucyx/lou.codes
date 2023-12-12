@@ -9,7 +9,7 @@ const array = [0, 1, 2, 3];
 const mapDouble = map((value: number) => value * 2);
 const arrayDouble = mapDouble(array);
 
-export default [
+export const mapTests = [
 	{
 		given: "an array of numbers and a map that doubles",
 		must: "get an array with all values times 2",

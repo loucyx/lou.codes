@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { isArray } from "../src/isArray.js";
 import { wantedFalse, wantedTrue } from "./wanted.js";
 
-export default [
+export const isArrayTests = [
 	{
 		given: "a BigInt",
 		received: () =>

@@ -12,7 +12,7 @@ const isString = isType("string");
 const isSymbol = isType("symbol");
 const isUndefined = isType("undefined");
 
-export default [
+export const isTypeTests = [
 	{
 		given: "a BigInt",
 		received: () =>

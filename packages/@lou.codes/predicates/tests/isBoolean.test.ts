@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { isBoolean } from "../src/isBoolean.js";
 import { wantedFalse, wantedTrue } from "./wanted.js";
 
-export default [
+export const isBooleanTests = [
 	{
 		given: "a BigInt",
 		received: () =>

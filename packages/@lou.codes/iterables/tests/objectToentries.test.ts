@@ -5,7 +5,7 @@ import { objectToEntries } from "../src/objectToEntries.js";
 
 const symbol = Symbol("🟩");
 
-export default [
+export const objectToEntriesTests = [
 	{
 		given: "an empty object",
 		must: "return an empty array",

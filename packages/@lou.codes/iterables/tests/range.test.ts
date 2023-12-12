@@ -8,7 +8,7 @@ const rangeFrom5 = range1(5);
 const range2n = range(2n);
 const rangeFrom0n = range2n(0n);
 
-export default [
+export const rangeTests = [
 	{
 		given: "a range to a bigger number (step 1)",
 		must: "return iterable from small number to big number",

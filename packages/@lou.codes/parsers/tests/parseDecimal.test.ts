@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import type { Maybe } from "@lou.codes/types";
 import { parseDecimal } from "../src/parseDecimal.js";
 
-export default [
+export const parseDecimalTests = [
 	{
 		given: "a valid decimal string",
 		must: "return correct value",

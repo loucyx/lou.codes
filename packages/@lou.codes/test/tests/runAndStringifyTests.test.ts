@@ -10,7 +10,7 @@ import { iterableToArray } from "./utils.js";
 const filenameA: ReadOnlyURL = new URL("file:///example/test-a.js");
 const filenameB: ReadOnlyURL = new URL("file:///example/test-b.js");
 
-export default [
+export const runAndStringifyTestsTests = [
 	{
 		given: "a passing test",
 		must: "return correct string",

@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { parseCronNearestDayOfMonth } from "../../src/parsers/parseCronNearestDayOfMonth.js";
 import type { CronDayOfMonthValue } from "../../src/types/CronDayOfMonthValue.js";
 
-export default [
+export const parseCronNearestDayOfMonthTests = [
 	{
 		given: "a valid W with value 2",
 		must: "return CronEvery",

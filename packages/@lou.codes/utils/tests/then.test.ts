@@ -4,7 +4,7 @@ import { then } from "../src/then.js";
 
 const thenTest = then(() => "then");
 
-export default [
+export const thenTests = [
 	{
 		given: "a then handler that returns a string and a failing promise",
 		must: "receive the error",

@@ -8,7 +8,7 @@ import { asyncIterateArray, iterateArray } from "./utils.js";
 const array = [0, 1, 2];
 const commaIntersperse = intersperse(",");
 
-export default [
+export const intersperseTests = [
 	{
 		given: "an array",
 		must: "return interspersed items",

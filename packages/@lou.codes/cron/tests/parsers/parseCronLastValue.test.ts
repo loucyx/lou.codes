@@ -3,7 +3,7 @@ import { CRON_LAST } from "../../src/constants.js";
 import { parseCronLastValue } from "../../src/parsers/parseCronLastValue.js";
 import type { CronDayOfWeekValueNumber } from "../../src/types/CronDayOfWeekValueNumber.js";
 
-export default [
+export const parseCronLastValueTests = [
 	{
 		given: "a valid L",
 		must: "return CronEvery",

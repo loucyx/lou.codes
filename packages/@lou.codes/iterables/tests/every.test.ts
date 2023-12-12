@@ -8,7 +8,7 @@ const everyNumbers = every(
 const numbersArray = [0, 1, 2, 3];
 const numbersWithStringArray = [0, 1, 2, "foo", 3];
 
-export default [
+export const everyTests = [
 	{
 		given: "an array of numbers",
 		must: "return true",

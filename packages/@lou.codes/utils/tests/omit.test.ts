@@ -3,7 +3,7 @@ import { omit } from "../src/omit.js";
 
 const omitFoo = omit("foo");
 
-export default [
+export const omitTests = [
 	{
 		given: "an omit for the `foo` property and an object with said property",
 		must: "return the object without `foo`",

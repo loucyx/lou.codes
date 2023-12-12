@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { isNullish } from "../src/isNullish.js";
 import { wantedFalse, wantedTrue } from "./wanted.js";
 
-export default [
+export const isNullishTests = [
 	{
 		given: "a BigInt",
 		received: () =>

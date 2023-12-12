@@ -4,7 +4,7 @@ import { awaitableHandler } from "../src/awaitableHandler.js";
 const double = (value: number) => value * 2;
 const maybePromiseNumber = awaitableHandler(double);
 
-export default [
+export const awaitableHandlerTests = [
 	{
 		given: "a maybePromiseHandler that doubles and a non promise number",
 		must: "return the result",

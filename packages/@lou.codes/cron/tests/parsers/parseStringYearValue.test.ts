@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { parseStringYearValue } from "../../src/parsers/parseStringYearValue.js";
 
-export default [
+export const parseStringYearValueTests = [
 	{
 		given: "a valid number between 1970 and 2099",
 		must: "return that number",

@@ -1,7 +1,7 @@
 import type { Test } from "@lou.codes/test";
 import { constructIntlRelativeTimeFormat } from "../src/constructIntlRelativeTimeFormat.js";
 
-export default {
+export const constructIntlRelativeTimeFormatTest = {
 	given: "a constructIntlRelativeTimeFormat",
 	must: "return new instance of Intl.RelativeTimeFormat",
 	received: () => constructIntlRelativeTimeFormat().constructor.name,

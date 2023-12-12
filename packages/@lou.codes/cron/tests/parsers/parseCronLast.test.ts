@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { CRON_LAST } from "../../src/constants.js";
 import { parseCronLast } from "../../src/parsers/parseCronLast.js";
 
-export default [
+export const parseCronLastTests = [
 	{
 		given: "a valid L",
 		must: "return CronEvery",

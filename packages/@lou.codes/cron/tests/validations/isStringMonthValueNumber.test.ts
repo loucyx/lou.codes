@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { isStringMonthValueNumber } from "../../src/validations/isStringMonthValueNumber.js";
 
-export default [
+export const isStringMonthValueNumberTests = [
 	{
 		given: "a valid number value in the range 1-12",
 		must: "return true",

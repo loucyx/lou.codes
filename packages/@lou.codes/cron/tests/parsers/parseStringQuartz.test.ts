@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { parseStringQuartz } from "../../src/parsers/parseStringQuartz.js";
 
-export default [
+export const parseStringQuartzTests = [
 	{
 		given: "A cron expression * * * * * * *",
 		must: "return a CronQuartz object with all set to every",

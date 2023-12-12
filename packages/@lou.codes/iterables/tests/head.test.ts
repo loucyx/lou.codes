@@ -7,7 +7,7 @@ import { asyncIterateArray } from "./utils.js";
 
 const array = [0, 1, 2];
 
-export default [
+export const headTests = [
 	{
 		given: "an array",
 		must: "return array first element",

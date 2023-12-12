@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { isTruthy } from "../src/isTruthy.js";
 import { wantedFalse, wantedTrue } from "./wanted.js";
 
-export default [
+export const isTruthyTests = [
 	{
 		given: "a falsy number",
 		received: () => isTruthy(0) && isTruthy(NaN),

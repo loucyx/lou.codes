@@ -11,7 +11,7 @@ const double = (value: number) => {
 };
 const memoizedDouble = memoize(double);
 
-export default {
+export const memoizeTest = {
 	given: "a memoized double function and several operations duplicated values",
 	must: "run once per value",
 	received: () => ([2, 2, 2, 3, 3, 3, 2, 2, 2].map(memoizedDouble), times),

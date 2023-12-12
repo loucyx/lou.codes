@@ -1,8 +1,8 @@
 import type { First } from "../src/First.js";
 
-export const tuple = [1, "🟢"] as const;
-
 type FirstOfTuple = First<typeof tuple>;
+
+export const tuple = [1, "🟢"] as const;
 
 export const firstOfTuple: FirstOfTuple = 1;
 

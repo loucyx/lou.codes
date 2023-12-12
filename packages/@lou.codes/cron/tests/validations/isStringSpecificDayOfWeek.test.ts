@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { isStringSpecificDayOfWeek } from "../../src/validations/isStringSpecificDayOfWeek.js";
 
-export default [
+export const isStringSpecificDayOfWeekTests = [
 	{
 		given: "a valid specific day of week value",
 		must: "return true",

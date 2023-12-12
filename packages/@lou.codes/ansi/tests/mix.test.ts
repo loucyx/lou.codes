@@ -6,7 +6,7 @@ const first = format(13)(13);
 const second = format(42)(42);
 const mixed = mix(first, second);
 
-export default test(import.meta.url)(
+export const mixTests = test(import.meta.url)(
 	{
 		given: "an string and a mix of 2 functions",
 		must: "return that string surrounded by the expected values",

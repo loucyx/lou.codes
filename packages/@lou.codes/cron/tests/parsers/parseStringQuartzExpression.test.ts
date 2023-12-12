@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { parseStringQuartzExpression } from "../../src/parsers/parseStringQuartzExpression.js";
 
-export default [
+export const parseStringQuartzExpressionTests = [
 	{
 		given: "an expression with 5 values",
 		must: "return a valid array",

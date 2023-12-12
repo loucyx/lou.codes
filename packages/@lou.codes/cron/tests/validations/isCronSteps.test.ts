@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { isCronSteps } from "../../src/validations/isCronSteps.js";
 
-export default [
+export const isCronStepsTests = [
 	{
 		given: "a value with one dash",
 		must: "return true",

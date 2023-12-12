@@ -14,7 +14,7 @@ const arrayWith1Item = [string];
 const emptyObject = {};
 const emptyArray = [] as const;
 
-export default [
+export const hasTests = [
 	{
 		given: "an object with string key when looking for a string key",
 		received: () => has(string)(objectWithString),

@@ -4,7 +4,7 @@ import { entryValue } from "../src/entryValue.js";
 
 const entry = ["foo", "bar"] as Entry<string, string>;
 
-export default {
+export const entryValueTest = {
 	given: "an entry",
 	must: "return entry value",
 	received: () => entryValue(entry),

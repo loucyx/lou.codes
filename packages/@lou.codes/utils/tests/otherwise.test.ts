@@ -3,7 +3,7 @@ import { otherwise } from "../src/otherwise.js";
 
 const otherwiseTest = otherwise(() => "otherwise");
 
-export default [
+export const otherwiseTests = [
 	{
 		given: "an otherwise handler that returns a string and a failing promise",
 		must: "receive the otherwise string",

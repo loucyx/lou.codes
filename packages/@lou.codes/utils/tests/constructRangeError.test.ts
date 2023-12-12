@@ -1,7 +1,7 @@
 import type { Test } from "@lou.codes/test";
 import { constructRangeError } from "../src/constructRangeError.js";
 
-export default {
+export const constructRangeErrorTest = {
 	given: "a constructRangeError",
 	must: "return new instance of RangeError",
 	received: () => constructRangeError().constructor.name,

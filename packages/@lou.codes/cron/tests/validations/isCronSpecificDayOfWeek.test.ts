@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { isCronSpecificDayOfWeek } from "../../src/validations/isCronSpecificDayOfWeek.js";
 
-export default [
+export const isCronSpecificDayOfWeekTests = [
 	{
 		given: "a valid specific day of week value",
 		must: "return true",

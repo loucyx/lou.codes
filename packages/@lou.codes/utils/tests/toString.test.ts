@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { toString } from "../src/toString.js";
 
-export default [
+export const toStringTests = [
 	{
 		given: "a toString for a string",
 		must: "receive same string",

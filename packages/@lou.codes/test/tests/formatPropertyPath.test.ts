@@ -4,7 +4,7 @@ import type { Tests } from "../src/types/Tests.js";
 
 const pathArray = ["a", "property", "path"];
 
-export default [
+export const formatPropertyPathTests = [
 	{
 		given: "an array with a few items",
 		must: 'return a concatenation using "."',

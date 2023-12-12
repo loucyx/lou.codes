@@ -4,7 +4,7 @@ import { test } from "../src/test.js";
 import type { TestResult } from "../src/types/TestResult.js";
 import type { Tests } from "../src/types/Tests.js";
 
-export default [
+export const testTests = [
 	{
 		given: "a passing test",
 		must: "return object with given and must",

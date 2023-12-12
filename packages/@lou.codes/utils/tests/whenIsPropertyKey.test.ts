@@ -3,7 +3,7 @@ import { whenIsPropertyKey } from "../src/whenIsPropertyKey.js";
 
 const whenIsPropertyKeyTest = whenIsPropertyKey(() => "truthy")(() => "falsy");
 
-export default [
+export const whenIsPropertyKeyTests = [
 	{
 		given: "a whenIsPropertyKey with a PropertyKey (string)",
 		must: "receive the truthy value",

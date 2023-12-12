@@ -6,7 +6,7 @@ const objectWithIteratorSymbol = { [Symbol.iterator]: () => void 0 };
 const objectWithoutIteratorSymbol = {};
 const array = [] as ReadonlyArray<unknown>;
 
-export default [
+export const hasIteratorSymbolTests = [
 	{
 		given: "an object with an  iterator symbol",
 		received: () => hasIteratorSymbol(objectWithIteratorSymbol),

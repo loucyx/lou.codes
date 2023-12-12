@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { CRON_EVERY } from "../../src/constants.js";
 import { parseCronMonth } from "../../src/parsers/parseCronMonth.js";
 
-export default [
+export const parseCronMonthTests = [
 	{
 		given: "in October",
 		must: "return 10",

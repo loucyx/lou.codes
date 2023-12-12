@@ -5,7 +5,7 @@ const mutateFoo = mutate({ foo: "bar" });
 const emptyObject = {};
 const fooObject = { foo: "foo" };
 
-export default [
+export const mutateTests = [
 	{
 		given: 'a mutate function that sets a `foo` property to `"bar"` and an empty object',
 		must: "return object with added property",

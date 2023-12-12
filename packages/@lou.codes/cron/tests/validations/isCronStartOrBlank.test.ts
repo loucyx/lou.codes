@@ -2,7 +2,7 @@ import type { Tests } from "@lou.codes/test";
 import { CRON_START_OR_BLANK } from "../../src/constants.js";
 import { isCronStartOrBlank } from "../../src/validations/isCronStartOrBlank.js";
 
-export default [
+export const isCronStartOrBlankTests = [
 	{
 		given: "a ? value",
 		must: "return true",

@@ -13,7 +13,7 @@ const forEachTest = <Item>(iterable: Iterable<Item>) => {
 	return output;
 };
 
-export default [
+export const forEachTests = [
 	{
 		given: "a string",
 		must: "loop over every letter of that string",

@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { isStringSteps } from "../../src/validations/isStringSteps.js";
 
-export default [
+export const isStringStepsTests = [
 	{
 		given: "a value with one dash",
 		must: "return true",

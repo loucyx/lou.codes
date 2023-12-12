@@ -6,7 +6,7 @@ const matchNumbersString = match("/\\d+/u");
 const matchNumbersRegExp = match(/\d+/u);
 const matchWithErrors = match("/('/u");
 
-export default [
+export const matchTests = [
 	{
 		given: "match based on string and a number",
 		received: () => matchNumbersString("123"),

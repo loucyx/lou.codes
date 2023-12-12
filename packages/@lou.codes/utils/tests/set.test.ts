@@ -3,7 +3,7 @@ import { set } from "../src/set.js";
 
 const setFoo = set("foo")(true);
 
-export default [
+export const setTests = [
 	{
 		given: "a setter and an object with that property on it",
 		must: "return object with updated property",

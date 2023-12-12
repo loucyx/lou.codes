@@ -8,7 +8,7 @@ import { EXCEPTION } from "../src/constants.js";
 import { stringifyDifference } from "../src/stringifyDifference.js";
 import type { Tests } from "../src/types/Tests.js";
 
-export default [
+export const stringifyDifferenceTests = [
 	{
 		given: "a deletion difference",
 		must: `return stringified difference`,

@@ -6,7 +6,7 @@ import type { Tests } from "../src/types/Tests.js";
 const currentWorkingDirectory = pathToFileURL(cwd());
 const filename = "lou.test.ts";
 
-export default [
+export const relativePathTests = [
 	{
 		given: "a relative path to CWD",
 		must: "return path without CWD",

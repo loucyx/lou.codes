@@ -1,5 +1,11 @@
 # Change log
 
+## 1.0.2
+
+### Patch Changes
+
+-   🏗️ better usage or utils.
+
 ## 1.0.1
 
 ### Patch Changes

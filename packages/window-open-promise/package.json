@@ -1,7 +1,7 @@
 {
 	"name": "window-open-promise",
 	"description": "🪟 Promised Window.open();",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -14,7 +14,8 @@
 	"dependencies": {
 		"@lou.codes/iterables": "workspace:*",
 		"@lou.codes/predicates": "workspace:*",
-		"@lou.codes/types": "workspace:*"
+		"@lou.codes/types": "workspace:*",
+		"@lou.codes/utils": "workspace:*"
 	},
 	"engines": {
 		"node": ">=21",
@@ -54,7 +55,7 @@
 		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
 	},
 	"sideEffects": false,
-	"size": "0.61",
+	"size": "0.66",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

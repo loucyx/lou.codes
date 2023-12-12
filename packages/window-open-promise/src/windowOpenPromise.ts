@@ -1,4 +1,4 @@
-import { isNull } from "@lou.codes/predicates";
+import { constructPromise, thunk, whenIsNull } from "@lou.codes/utils";
 import type { WindowOpenPromiseOptions } from "./WindowOpenPromiseOptions.js";
 import { ERROR_MESSAGE } from "./constants.js";
 import { featureParser } from "./featureParser.js";
@@ -28,7 +28,7 @@ import { featureParser } from "./featureParser.js";
  * @returns Curried function with `window` in context.
  */
 export const windowOpenPromise =
-	(window: Readonly<Pick<Window, "open">>) =>
+	({ open }: Readonly<Pick<Window, "open">>) =>
 	/**
 	 * Curried function with `window` set.
 	 *
@@ -54,12 +54,8 @@ export const windowOpenPromise =
 	 * @returns Promise with new window.
 	 */
 	({ url = "", target = "", ...features }: WindowOpenPromiseOptions = {}) =>
-		// eslint-disable-next-line max-params
-		new Promise<Window>((resolve, reject) =>
-			(newWindow =>
-				isNull(newWindow) ?
-					reject(new Error(ERROR_MESSAGE))
-				:	resolve(newWindow))(
-				window.open(url, target, featureParser(features)),
+		constructPromise<Window>((resolve, reject) =>
+			whenIsNull(thunk(reject)(new Error(ERROR_MESSAGE)))(resolve)(
+				open(url, target, featureParser(features)),
 			),
 		);

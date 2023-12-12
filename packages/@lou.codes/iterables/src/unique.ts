@@ -1,4 +1,5 @@
 import type { IsomorphicIterable } from "@lou.codes/types";
+import { constructSet } from "@lou.codes/utils";
 import { handleIsomorphicIterable } from "./handleIsomorphicIterable.js";
 import type { GeneratorOutput } from "./types/GeneratorOutput.js";
 
@@ -17,7 +18,7 @@ import type { GeneratorOutput } from "./types/GeneratorOutput.js";
 export const unique = handleIsomorphicIterable(
 	iterable =>
 		function* () {
-			const set = new Set();
+			const set = constructSet();
 
 			// eslint-disable-next-line functional/no-loop-statements
 			for (const item of iterable) {
@@ -28,7 +29,7 @@ export const unique = handleIsomorphicIterable(
 )(
 	iterable =>
 		async function* () {
-			const set = new Set();
+			const set = constructSet();
 
 			// eslint-disable-next-line functional/no-loop-statements
 			for await (const item of iterable) {

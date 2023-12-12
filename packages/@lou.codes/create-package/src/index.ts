@@ -17,7 +17,7 @@ const readlineInterface = createInterface({
 });
 const createQuestion = question(readlineInterface);
 
-export default getPackageConfiguration()
+void getPackageConfiguration()
 	.then(
 		packageConfiguration =>
 			(

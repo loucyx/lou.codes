@@ -1,6 +1,6 @@
 import type { Answers } from "../types/Answers.js";
 
-export default ({
+export const generatePackageJSON = ({
 	name,
 	description,
 	packageConfiguration: { author, bugs, engines, repository },

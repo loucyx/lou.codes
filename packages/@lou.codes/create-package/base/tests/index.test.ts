@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { greet } from "../src/index.js";
 
-export default [
+export const greetTests = [
 	{
 		given: "a name",
 		must: "greet that name",

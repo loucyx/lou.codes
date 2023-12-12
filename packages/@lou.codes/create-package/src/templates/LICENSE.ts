@@ -1,4 +1,4 @@
-export default () => `MIT License
+export const generateLicense = () => `MIT License
 
 Copyright (c) ${new Date().getFullYear()}-present Lou Cyx
 

@@ -3,4 +3,5 @@ export type { WindowOpenPromiseOptions } from "./WindowOpenPromiseOptions.js";
 export { featureJoin } from "./featureJoin.js";
 export { featureMap } from "./featureMap.js";
 export { featureParser } from "./featureParser.js";
+export { featureValueMapper } from "./featureValueMapper.js";
 export { windowOpenPromise } from "./windowOpenPromise.js";

@@ -1,5 +1,11 @@
 # Change log
 
+## 1.1.0
+
+### Minor Changes
+
+-   ✨ add `featureValueMapper` util for performance.
+
 ## 1.0.3
 
 ### Patch Changes

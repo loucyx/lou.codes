@@ -1,5 +1,11 @@
 # Change log
 
+## 1.0.63
+
+### Patch Changes
+
+-   📝 minor documentation update.
+
 ## 1.0.62
 
 ### Patch Changes

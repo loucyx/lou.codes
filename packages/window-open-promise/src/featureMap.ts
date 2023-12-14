@@ -1,8 +1,7 @@
 import { map } from "@lou.codes/iterables";
 import type { EntryOf } from "@lou.codes/types";
-import { always, identity, when, whenIsBoolean } from "@lou.codes/utils";
 import type { WindowOpenPromiseFeatures } from "./WindowOpenPromiseFeatures.js";
-import { FEATURE_DISABLED, FEATURE_ENABLED } from "./constants.js";
+import { featureValueMapper } from "./featureValueMapper.js";
 
 /**
  * Maps array of feature entries to valid values.
@@ -19,7 +18,5 @@ import { FEATURE_DISABLED, FEATURE_ENABLED } from "./constants.js";
  */
 export const featureMap = map(
 	([feature, value = false]: EntryOf<WindowOpenPromiseFeatures>) =>
-		`${feature.toLocaleLowerCase()}=${whenIsBoolean(
-			when(Boolean)(always(FEATURE_ENABLED))(always(FEATURE_DISABLED)),
-		)(identity as (value: number) => number)(value)}`,
+		`${feature.toLocaleLowerCase()}=${featureValueMapper(value)}`,
 );

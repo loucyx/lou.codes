@@ -43,6 +43,10 @@ export const formatPairedDocs = () =>
 						.replace(
 							/(?<optionalPropertyEnd>\?`)(?<spaces> +\|)/gu,
 							" (optional)`$2",
+						)
+						.replaceAll(
+							/(?<symbol>▸|Ƭ) (?<code>[^\n]*(?:\n[^\n]+)*)\n\n/gu,
+							`<div class="font-mono text-sm">\n\n$1 $2\n\n</div>\n\n`,
 						),
 				]),
 		),

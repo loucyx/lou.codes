@@ -5,6 +5,7 @@ import { updatePackageSize } from "./updatePackageSize.js";
 void Promise.all(
 	[
 		"@lou.codes/ansi",
+		"@lou.codes/constants",
 		"@lou.codes/cron",
 		"@lou.codes/diff",
 		"@lou.codes/iterables",
@@ -15,9 +16,9 @@ void Promise.all(
 		"@lou.codes/test",
 		"@lou.codes/types",
 		"@lou.codes/utils",
-		"window-open-promise",
 		"preact-pair",
 		"react-pair",
+		"window-open-promise",
 	].map(updatePackageSize),
 )
 	// eslint-disable-next-line no-console

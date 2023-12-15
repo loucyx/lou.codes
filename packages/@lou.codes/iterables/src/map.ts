@@ -9,7 +9,7 @@ import type { ReadOnlyIterableIterator } from "./types/ReadOnlyIterableIterator.
  *
  * @category Generators
  * @example
- * ```
+ * ```typescript
  * const double = value => value * 2;
  * const mapDouble = map(double);
  *

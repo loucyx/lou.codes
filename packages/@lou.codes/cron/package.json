@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/cron",
 	"description": "⏲️ Cron Quartz and Cron UNIX expression parser",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -55,7 +55,7 @@
 		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
 	},
 	"sideEffects": false,
-	"size": "2.84",
+	"size": "2.86",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

@@ -13,7 +13,7 @@ import type { GeneratorOutput } from "./types/GeneratorOutput.js";
  *
  * @category Generators
  * @example
- * ```
+ * ```typescript
  * const filterEven = filter((number: number) => number % 2 === 0);
  *
  * iterableToArray(filterEven([1, 2, 3, 4])); // [2, 4]

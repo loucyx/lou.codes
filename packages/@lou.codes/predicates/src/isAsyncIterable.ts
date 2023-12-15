@@ -12,7 +12,7 @@ import { asyncIteratorSymbol } from "./symbols.js";
  *
  * @category Iterables
  * @example
- * ```
+ * ```typescript
  * isAsyncIterable((async function * () { yield* [] })()); // true
  * isAsyncIterable([]); // false
  * isAsyncIterable({}); // false

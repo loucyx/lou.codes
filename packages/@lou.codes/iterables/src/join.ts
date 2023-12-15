@@ -1,3 +1,4 @@
+import { EMPTY_STRING } from "@lou.codes/constants";
 import type { IsomorphicIterable, Maybe } from "@lou.codes/types";
 import { awaitableHandler } from "@lou.codes/utils";
 import { reduce } from "./reduce.js";
@@ -20,11 +21,11 @@ import type { ReducerOutput } from "./types/ReducerOutput.js";
 export const join =
 	(separator: string) =>
 	<Iterable extends IsomorphicIterable>(iterable: Iterable) =>
-		awaitableHandler((string: Maybe<string>) => string ?? "")(
+		awaitableHandler((string: Maybe<string>) => string ?? EMPTY_STRING)(
 			reduce<string, Maybe<string>>(
 				item => string =>
-					`${string ?? ""}${
-						string !== undefined ? separator : ""
+					`${string ?? EMPTY_STRING}${
+						string !== undefined ? separator : EMPTY_STRING
 					}${item}`,
 			)(undefined)(iterable as IsomorphicIterable<string>),
 		) as ReducerOutput<Iterable, string>;

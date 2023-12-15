@@ -1,5 +1,11 @@
 # Change log
 
+## 1.0.2
+
+### Patch Changes
+
+-   ➕ add @lou.codes/constants and use it.
+
 ## 1.0.1
 
 ### Patch Changes

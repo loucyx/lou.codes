@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/ansi",
 	"description": "📟 Functional CLI ANSI formatter",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -12,6 +12,7 @@
 		"url": "https://github.com/loucyx/lou.codes/issues"
 	},
 	"dependencies": {
+		"@lou.codes/constants": "workspace:*",
 		"@lou.codes/types": "workspace:*"
 	},
 	"engines": {
@@ -49,7 +50,7 @@
 		"test": "NODE_OPTIONS='--import tsx' node --test ./tests/*.test.ts"
 	},
 	"sideEffects": false,
-	"size": "0.88",
+	"size": "0.91",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

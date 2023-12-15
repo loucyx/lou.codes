@@ -1,3 +1,4 @@
+import { EMPTY_ARRAY } from "@lou.codes/constants";
 import type {
 	Maybe,
 	ReadOnlyArray,
@@ -30,7 +31,7 @@ export const groupBy = <Item, Key extends PropertyKey>(
 				...groups,
 				[group]: [
 					...((groups[group as keyof typeof groups] ??
-						[]) as ReadOnlyArray<Item>),
+						EMPTY_ARRAY) as ReadOnlyArray<Item>),
 					item,
 				],
 			}) as ReadOnlyRecord<Key, ReadOnlyArray<Item>>;

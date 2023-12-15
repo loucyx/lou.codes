@@ -1,3 +1,4 @@
+import { EMPTY_ARRAY, EMPTY_STRING } from "@lou.codes/constants";
 import { isUndefined } from "@lou.codes/predicates";
 import type { Maybe } from "@lou.codes/types";
 import { CRON_RANGE_SEPARATOR } from "../constants.js";
@@ -23,8 +24,8 @@ export const parseStringRange =
 	<Value>(parser: StringValueParser<Value>) =>
 	(source: string): Maybe<CronRange<Value>> => {
 		const valid = isStringRange(source);
-		const [fromString = "", toString = ""] =
-			valid ? source.split(CRON_RANGE_SEPARATOR) : [];
+		const [fromString = EMPTY_STRING, toString = EMPTY_STRING] =
+			valid ? source.split(CRON_RANGE_SEPARATOR) : EMPTY_ARRAY;
 		const from = parser(fromString);
 		const to = parser(toString);
 

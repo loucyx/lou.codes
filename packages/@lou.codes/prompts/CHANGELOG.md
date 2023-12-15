@@ -1,5 +1,12 @@
 # Change log
 
+## 1.0.2
+
+### Patch Changes
+
+-   ➕ add @lou.codes/constants and use it.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.2`
+
 ## 1.0.1
 
 ### Patch Changes

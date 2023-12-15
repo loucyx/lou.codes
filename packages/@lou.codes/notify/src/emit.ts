@@ -1,3 +1,4 @@
+import { EMPTY_ARRAY } from "@lou.codes/constants";
 import { forEach } from "@lou.codes/iterables";
 import type { IsomorphicIterable, KeyOf } from "@lou.codes/types";
 import { applyTo } from "@lou.codes/utils";
@@ -54,7 +55,7 @@ export const emit =
 		 */
 		(data =>
 			void forEach<EventListener<typeof data>>(applyTo(data))(
-				(eventRegistry[event] ?? []) as IsomorphicIterable<
+				(eventRegistry[event] ?? EMPTY_ARRAY) as IsomorphicIterable<
 					EventListener<typeof data>
 				>,
 			)) as Emitter<Events[Event]>;

@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/prompts",
 	"description": "⁉️ CLI interactive prompts",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -12,6 +12,7 @@
 		"url": "https://github.com/loucyx/lou.codes/issues"
 	},
 	"dependencies": {
+		"@lou.codes/constants": "workspace:*",
 		"@lou.codes/types": "workspace:*"
 	},
 	"engines": {

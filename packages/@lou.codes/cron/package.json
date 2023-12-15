@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/cron",
 	"description": "⏲️ Cron Quartz and Cron UNIX expression parser",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -12,6 +12,7 @@
 		"url": "https://github.com/loucyx/lou.codes/issues"
 	},
 	"dependencies": {
+		"@lou.codes/constants": "workspace:*",
 		"@lou.codes/iterables": "workspace:*",
 		"@lou.codes/parsers": "workspace:*",
 		"@lou.codes/predicates": "workspace:*",
@@ -54,7 +55,7 @@
 		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
 	},
 	"sideEffects": false,
-	"size": "2.83",
+	"size": "2.84",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

@@ -1,3 +1,4 @@
+import { EMPTY_ARRAY } from "@lou.codes/constants";
 import { iterableToArray, length, map, some } from "@lou.codes/iterables";
 import { isUndefined } from "@lou.codes/predicates";
 import type { Maybe } from "@lou.codes/types";
@@ -36,7 +37,11 @@ export const parseStringList =
 				parseStringSteps(limit)(parser)(value) ??
 				parseStringRange<Value>(parser)(value) ??
 				parser(value),
-		)(isStringList(source) ? source.split(CRON_LIST_SEPARATOR) : []);
+		)(
+			isStringList(source) ?
+				source.split(CRON_LIST_SEPARATOR)
+			:	EMPTY_ARRAY,
+		);
 
 		return length(list) === 0 || some(isUndefined)(list) ?
 				undefined

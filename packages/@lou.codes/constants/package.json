@@ -1,0 +1,48 @@
+{
+	"name": "@lou.codes/constants",
+	"description": "🔢 Shared constants.",
+	"version": "1.0.0",
+	"author": {
+		"email": "contact@lou.codes",
+		"name": "Lou Cyx",
+		"url": "https://lou.codes"
+	},
+	"bugs": {
+		"email": "issues@lou.codes",
+		"url": "https://github.com/loucyx/lou.codes/issues"
+	},
+	"engines": {
+		"node": ">=21",
+		"pnpm": ">=8"
+	},
+	"exports": {
+		".": "./dist/index.js",
+		"./*": "./dist/*"
+	},
+	"files": [
+		"dist"
+	],
+	"homepage": "https://lou.codes/libraries/lou.codes_constants",
+	"keywords": [
+		"lou.codes",
+		"loucyx",
+		"typescript"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/loucyx/lou.codes.git"
+	},
+	"scripts": {
+		"clean": "rimraf ./dist",
+		"compile": "tsc --project ./tsconfig.dist.json",
+		"git:pre-push": "run-s --print-label clean compile lint",
+		"lint": "eslint src",
+		"lint:fix": "eslint src --fix",
+		"prepublishOnly": "run-s --print-label clean compile prettify",
+		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'"
+	},
+	"sideEffects": false,
+	"type": "module",
+	"types": "./dist/index.d.ts"
+}

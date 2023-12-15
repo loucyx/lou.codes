@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/iterables",
 	"description": "🔁 Iterable and AsyncIterable utils",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -12,6 +12,7 @@
 		"url": "https://github.com/loucyx/lou.codes/issues"
 	},
 	"dependencies": {
+		"@lou.codes/constants": "workspace:*",
 		"@lou.codes/predicates": "workspace:*",
 		"@lou.codes/types": "workspace:*",
 		"@lou.codes/utils": "workspace:*"
@@ -55,7 +56,7 @@
 		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
 	},
 	"sideEffects": false,
-	"size": "1.35",
+	"size": "1.37",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

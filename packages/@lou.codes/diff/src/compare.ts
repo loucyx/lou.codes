@@ -1,3 +1,4 @@
+import { EMPTY_ARRAY } from "@lou.codes/constants";
 import { CREATE, DELETE, UPDATE } from "./constants.js";
 import type { CreateDifference } from "./types/CreateDifference.js";
 import type { DeleteDifference } from "./types/DeleteDifference.js";
@@ -91,7 +92,7 @@ export const compare = function* (values: {
 							{ kind: UPDATE, left, right }
 						:	{ kind: DELETE, left }
 					:	{ kind: CREATE, right }),
-					path: [],
+					path: EMPTY_ARRAY,
 				};
 			}
 		}

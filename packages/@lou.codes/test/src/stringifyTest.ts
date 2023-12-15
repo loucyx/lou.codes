@@ -1,4 +1,5 @@
 import { bold } from "@lou.codes/ansi";
+import { EMPTY_STRING } from "@lou.codes/constants";
 import { FAIL, PASS } from "./constants.js";
 import { stringifyDifference } from "./stringifyDifference.js";
 import type { TestResult } from "./types/TestResult.js";
@@ -33,5 +34,5 @@ export const stringifyTest = ({ differences, given, must }: TestResult) =>
 						index === differences.length - 1 ? "└" : "├"
 					} ${stringifyDifference(difference)}`,
 			)
-			.join("\n") ?? ""
+			.join("\n") ?? EMPTY_STRING
 	}`;

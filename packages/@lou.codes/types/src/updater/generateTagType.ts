@@ -1,3 +1,4 @@
+import { EMPTY_STRING } from "@lou.codes/constants";
 import type { ITagData } from "vscode-html-languageservice/lib/esm/htmlLanguageTypes.js";
 import type { ReadOnly } from "../ReadOnly.js";
 import { addIndent } from "./addIndent.js";
@@ -32,7 +33,7 @@ export const generateTagType = ({
 			description,
 			references,
 		})}readonly ${name}: HTMLElementTagGlobalAttributes${
-			typedAttributes ? ` & {${typedAttributes}}` : ""
+			typedAttributes ? ` & {${typedAttributes}}` : EMPTY_STRING
 		};
 `,
 	});

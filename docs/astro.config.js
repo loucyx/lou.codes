@@ -29,7 +29,7 @@ export default defineConfig({
 			],
 			logo: {
 				replacesTitle: true,
-				src: "./src/assets/logo.svg",
+				src: "./src/assets/lou.webp",
 			},
 			pagination: false,
 			sidebar: [

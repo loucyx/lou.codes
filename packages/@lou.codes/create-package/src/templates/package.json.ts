@@ -20,7 +20,7 @@ export const generatePackageJSON = ({
 			files: ["dist"],
 			homepage: `https://lou.codes/libraries/${name
 				.replace("@", EMPTY_STRING)
-				.replace(/[-/]/gu, "_")}`,
+				.replace(/[.-/]/gu, "_")}`,
 			keywords: ["lou.codes", "loucyx", "typescript"],
 			license: "MIT",
 			repository,

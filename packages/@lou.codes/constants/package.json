@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/constants",
 	"description": "🔢 Shared constants.",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -22,8 +22,9 @@
 	"files": [
 		"dist"
 	],
-	"homepage": "https://lou.codes/libraries/lou.codes_constants",
+	"homepage": "https://lou.codes/libraries/lou_codes_constants",
 	"keywords": [
+		"constants",
 		"lou.codes",
 		"loucyx",
 		"typescript"
@@ -43,6 +44,7 @@
 		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'"
 	},
 	"sideEffects": false,
+	"size": "0.11",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

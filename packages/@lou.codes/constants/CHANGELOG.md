@@ -1,5 +1,11 @@
 # Change log
 
+## 1.0.2
+
+### Patch Changes
+
+-   🔧 fix issues in `package.json`.
+
 ## 1.0.1
 
 ### Patch Changes

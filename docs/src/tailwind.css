@@ -82,8 +82,9 @@ main .content-panel:first-child:not(:only-child) + .content-panel {
 	@apply rounded-xl p-8 [tab-size:4];
 }
 
-.hero img {
-	@apply p-10;
+.hero img,
+.site-title img {
+	@apply rounded-full bg-accent-600 dark:bg-accent-200;
 }
 
 table {

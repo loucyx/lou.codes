@@ -1,5 +1,11 @@
 # Change log
 
+## 1.0.3
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.0.1`
+
 ## 1.0.2
 
 ### Patch Changes

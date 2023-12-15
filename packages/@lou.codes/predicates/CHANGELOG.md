@@ -1,5 +1,12 @@
 # Change log
 
+## 1.0.3
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.3`
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.3`
+
 ## 1.0.2
 
 ### Patch Changes

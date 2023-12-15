@@ -1,4 +1,4 @@
-<img id="logo" alt="@lou.codes/constants" src="https://lou.codes/lou_codes_constants.svg" height="128" />
+<img id="logo" alt="@lou.codes/constants" src="https://lou.codes/logos/lou_codes_constants.svg" height="128" />
 
 ![License][license-badge] ![NPM Version][npm-version-badge]
 ![Open Issues][open-issues-badge] ![Size][size-badge]

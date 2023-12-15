@@ -1,3 +1,4 @@
+import { EMPTY_STRING } from "@lou.codes/constants";
 import type { ReadOnlyArray } from "@lou.codes/types";
 
 /**
@@ -21,6 +22,9 @@ export const normalizeString = <Input extends TemplateStringsArray | string>(
 ) =>
 	(typeof input === "string" ? input : (
 		input
-			.flatMap((string, index) => [string, expressions[index] ?? ""])
-			.join("")
+			.flatMap((string, index) => [
+				string,
+				expressions[index] ?? EMPTY_STRING,
+			])
+			.join(EMPTY_STRING)
 	)) as Input extends string ? Input : string;

@@ -1,3 +1,4 @@
+import { EMPTY_ARRAY } from "@lou.codes/constants";
 import { join, length, map, some } from "@lou.codes/iterables";
 import { isUndefined } from "@lou.codes/predicates";
 import { CRON_LIST_SEPARATOR } from "../constants.js";
@@ -37,7 +38,7 @@ export const parseCronList =
 				parseCronSteps(limit)(parser)(value as CronSteps<Value>) ??
 				parseCronRange(parser)(value as CronRange<Value>) ??
 				parser(value as Value),
-		)(isCronList<Value>(source) ? source : []);
+		)(isCronList<Value>(source) ? source : EMPTY_ARRAY);
 
 		return length(list) === 0 || some(isUndefined)(list) ?
 				undefined

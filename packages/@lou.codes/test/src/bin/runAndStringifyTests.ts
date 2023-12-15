@@ -1,4 +1,5 @@
 import { underlined } from "@lou.codes/ansi";
+import { EMPTY_STRING } from "@lou.codes/constants";
 import type { IsomorphicIterable } from "@lou.codes/types";
 import { FAILED_TESTS, TEST } from "../constants.js";
 import { stringifyTest } from "../stringifyTest.js";
@@ -36,7 +37,7 @@ export const runAndStringifyTests = async function* (
 	// eslint-disable-next-line functional/prefer-immutable-types
 	const fails: Array<[url: ReadOnlyURL, resultString: string]> = [];
 	// eslint-disable-next-line functional/no-let
-	let lastPath = "";
+	let lastPath = EMPTY_STRING as string;
 
 	// eslint-disable-next-line functional/no-loop-statements
 	for await (const [url, testObject] of testTuples) {
@@ -62,7 +63,7 @@ export const runAndStringifyTests = async function* (
 	// eslint-disable-next-line functional/no-conditional-statements
 	if (fails.length > 0) {
 		// eslint-disable-next-line functional/immutable-data
-		lastPath = "";
+		lastPath = EMPTY_STRING;
 		yield FAILED_TESTS;
 		// eslint-disable-next-line functional/no-loop-statements
 		for (const [url, resultString] of fails) {

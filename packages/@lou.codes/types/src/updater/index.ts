@@ -1,3 +1,4 @@
+import { EMPTY_ARRAY, EMPTY_STRING } from "@lou.codes/constants";
 import { writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -6,7 +7,7 @@ import { generateAttributesType } from "./generateAttributesType.js";
 import { generateTagType } from "./generateTagType.js";
 
 const {
-	htmlData: { tags = [], globalAttributes },
+	htmlData: { tags = EMPTY_ARRAY, globalAttributes },
 } = webCustomData;
 
 writeFile(
@@ -84,7 +85,7 @@ export type HTMLElementTagAttributeMap = ReadOnlyRecord<
 				indent: 1,
 			}),
 		)
-		.join("")}};
+		.join(EMPTY_STRING)}};
 `,
 	{ encoding: "utf-8" },
 )

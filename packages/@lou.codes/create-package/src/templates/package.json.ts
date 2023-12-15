@@ -1,3 +1,4 @@
+import { EMPTY_STRING } from "@lou.codes/constants";
 import type { Answers } from "../types/Answers.js";
 
 export const generatePackageJSON = ({
@@ -18,7 +19,7 @@ export const generatePackageJSON = ({
 			exports: { ".": "./dist/index.js", "./*": "./dist/*" },
 			files: ["dist"],
 			homepage: `https://lou.codes/libraries/${name
-				.replace("@", "")
+				.replace("@", EMPTY_STRING)
 				.replace(/[-/]/gu, "_")}`,
 			keywords: ["lou.codes", "loucyx", "typescript"],
 			license: "MIT",

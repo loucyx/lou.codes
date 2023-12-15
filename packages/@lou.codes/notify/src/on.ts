@@ -1,3 +1,4 @@
+import { EMPTY_ARRAY } from "@lou.codes/constants";
 import { filter } from "@lou.codes/iterables";
 import type { KeyOf, ReadOnlyArray } from "@lou.codes/types";
 import { mutate, set } from "@lou.codes/utils";
@@ -65,7 +66,7 @@ export const on =
 	 */
 	(listener: EventListener<Events[Event]>) => (
 		mutate(
-			set(event)([...(eventRegistry[event] ?? []), listener])(
+			set(event)([...(eventRegistry[event] ?? EMPTY_ARRAY), listener])(
 				eventRegistry,
 			),
 		)(eventRegistry),

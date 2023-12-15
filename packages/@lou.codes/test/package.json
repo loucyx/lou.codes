@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/test",
 	"description": "✅ Equality test with enforced readability",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -14,6 +14,7 @@
 	},
 	"dependencies": {
 		"@lou.codes/ansi": "workspace:*",
+		"@lou.codes/constants": "workspace:*",
 		"@lou.codes/diff": "workspace:*",
 		"@lou.codes/types": "workspace:*"
 	},
@@ -56,7 +57,7 @@
 		"test": "NODE_OPTIONS='--import tsx' node ./src/bin/index.ts"
 	},
 	"sideEffects": false,
-	"size": "1.68",
+	"size": "1.72",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

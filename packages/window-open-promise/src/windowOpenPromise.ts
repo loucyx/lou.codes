@@ -1,3 +1,4 @@
+import { EMPTY_OBJECT, EMPTY_STRING } from "@lou.codes/constants";
 import { constructPromise, thunk, whenIsNull } from "@lou.codes/utils";
 import type { WindowOpenPromiseOptions } from "./WindowOpenPromiseOptions.js";
 import { ERROR_MESSAGE } from "./constants.js";
@@ -53,7 +54,11 @@ export const windowOpenPromise =
 	 * @param options WindowOpenPromise options.
 	 * @returns Promise with new window.
 	 */
-	({ url = "", target = "", ...features }: WindowOpenPromiseOptions = {}) =>
+	({
+		url = EMPTY_STRING,
+		target = EMPTY_STRING,
+		...features
+	}: WindowOpenPromiseOptions = EMPTY_OBJECT) =>
 		constructPromise<Window>((resolve, reject) =>
 			whenIsNull(thunk(reject)(new Error(ERROR_MESSAGE)))(resolve)(
 				open(url, target, featureParser(features)),

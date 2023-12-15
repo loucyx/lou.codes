@@ -1,3 +1,4 @@
+import { EMPTY_STRING } from "@lou.codes/constants";
 import type { ITagData } from "vscode-html-languageservice/lib/esm/htmlLanguageTypes.js";
 import type { ReadOnly } from "../ReadOnly.js";
 import { getDescription } from "./getDescription.js";
@@ -31,7 +32,7 @@ export const generateJSDoc = ({
  * ${references
 		.map(reference => `@see [${reference.name}](${reference.url})`)
 		.join("\n * ")}`
-		:	""
+		:	EMPTY_STRING
  }
  */
 `

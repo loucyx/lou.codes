@@ -1,3 +1,4 @@
+import { EMPTY_STRING } from "@lou.codes/constants";
 import type { ReadOnlyRecord } from "@lou.codes/types";
 import { readdir, writeFile } from "node:fs/promises";
 import { sourceURL } from "./sourceURL.js";
@@ -29,7 +30,7 @@ export const copyTemplates = (answers: Answers) =>
 														answers.name
 													}/${filename.replace(
 														/\.js$/u,
-														"",
+														EMPTY_STRING,
 													)}`,
 												),
 												templateFunction(answers),

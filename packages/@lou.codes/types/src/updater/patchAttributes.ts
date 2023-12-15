@@ -1,5 +1,7 @@
+import { EMPTY_OBJECT } from "@lou.codes/constants";
 import type { IAttributeData } from "vscode-html-languageservice/lib/esm/htmlLanguageTypes.js";
 import type { ReadOnlyArray } from "../ReadOnlyArray.js";
+import type { ReadOnlyRecord } from "../ReadOnlyRecord.js";
 import { getDescription } from "./getDescription.js";
 
 /**
@@ -32,7 +34,7 @@ export const patchAttributes = (attributes: ReadOnlyArray<IAttributeData>) =>
 					:	attribute),
 				} as IAttributeData,
 			}),
-			{} as Record<string, IAttributeData>,
+			EMPTY_OBJECT as ReadOnlyRecord<string, IAttributeData>,
 		),
 	).toSorted((attributeA, attributeB) =>
 		attributeA.name.localeCompare(attributeB.name),

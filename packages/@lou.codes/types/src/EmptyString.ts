@@ -1,3 +1,5 @@
+import type { EMPTY_STRING } from "@lou.codes/constants";
+
 /**
  * Empty string.
  *
@@ -10,4 +12,4 @@
  * const emptyString: EmptyString = "";
  * ```
  */
-export type EmptyString = "";
+export type EmptyString = typeof EMPTY_STRING;

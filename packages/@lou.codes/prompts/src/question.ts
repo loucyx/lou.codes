@@ -1,3 +1,4 @@
+import { EMPTY_STRING } from "@lou.codes/constants";
 import type { QuestionObject } from "./QuestionObject.js";
 import type { QuestionOptions } from "./QuestionOptions.js";
 
@@ -50,7 +51,7 @@ export const question =
 				format !== undefined ?
 					format(value)
 				:	value) as FormattedValue;
-			const validationError = validate?.(formattedValue) ?? "";
+			const validationError = validate?.(formattedValue) ?? EMPTY_STRING;
 
 			return (
 				validationError ?

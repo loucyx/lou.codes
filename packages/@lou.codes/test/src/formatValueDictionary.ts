@@ -4,6 +4,7 @@ import {
 	foregroundBrightRed,
 	foregroundYellow,
 } from "@lou.codes/ansi";
+import { EMPTY_STRING } from "@lou.codes/constants";
 import type { ReadOnlyRecord, TypeOfValue } from "@lou.codes/types";
 import { formatValue } from "./formatValue.js";
 
@@ -62,13 +63,13 @@ export const formatValueDictionary: ReadOnlyRecord<
 		foregroundBrightRed`"${(value as string).replace(
 			// eslint-disable-next-line no-control-regex
 			/[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/gu,
-			"",
+			EMPTY_STRING,
 		)}"`,
 	symbol: value =>
 		foregroundBrightGreen`Symbol${
 			(value as symbol).description !== undefined ?
 				`(${foregroundBrightRed`"${(value as symbol).description}"`})`
-			:	""
+			:	EMPTY_STRING
 		}`,
 	undefined: () => foregroundBlue`undefined`,
 };

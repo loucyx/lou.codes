@@ -1,3 +1,4 @@
+import { EMPTY_STRING } from "@lou.codes/constants";
 import { USER } from "../constants.js";
 import type { Answers } from "../types/Answers.js";
 import { userClean } from "../userClean.js";
@@ -74,7 +75,7 @@ Import \`${name}\` using [esm.sh][esm.sh], and use it directly:
 	https://img.shields.io/coveralls/github/loucyx/lou.codes.svg?labelColor=666&color=0a8
 [coverage]: https://coveralls.io/github/loucyx/lou.codes
 [documentation]: https://lou.codes/libraries/${name
-	.replace("@", "")
+	.replace("@", EMPTY_STRING)
 	.replace(/[-/]/gu, "_")}/
 [esm.sh]: https://esm.sh
 [license-badge]:

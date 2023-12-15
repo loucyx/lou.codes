@@ -1,3 +1,4 @@
+import { EMPTY_STRING } from "@lou.codes/constants";
 import { parseDecimal } from "@lou.codes/parsers";
 import type { Maybe } from "@lou.codes/types";
 import { CRON_SPECIFIC_SEPARATOR } from "../constants.js";
@@ -22,7 +23,7 @@ export const parseStringSpecificDayOfWeek = (
 	source: string,
 ): Maybe<CronSpecificDayOfWeek> => {
 	const valid = isStringSpecificDayOfWeek(source);
-	const [dayString = "", weekString = ""] =
+	const [dayString = EMPTY_STRING, weekString = EMPTY_STRING] =
 		valid ? source.split(CRON_SPECIFIC_SEPARATOR) : [];
 
 	return valid ?

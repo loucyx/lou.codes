@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/create-package",
 	"description": "🚧 lou.codes package scaffolder script",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -14,6 +14,7 @@
 	},
 	"dependencies": {
 		"@lou.codes/ansi": "workspace:*",
+		"@lou.codes/constants": "workspace:*",
 		"@lou.codes/prompts": "workspace:*",
 		"@lou.codes/types": "workspace:*"
 	},

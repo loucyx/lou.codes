@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/types",
 	"description": "🏷️ Lou's shared types",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -55,5 +55,8 @@
 	"sideEffects": false,
 	"size": "0.00",
 	"type": "module",
-	"types": "./dist/index.d.ts"
+	"types": "./dist/index.d.ts",
+	"dependencies": {
+		"@lou.codes/constants": "workspace:^"
+	}
 }

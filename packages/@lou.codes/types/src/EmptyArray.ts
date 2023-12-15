@@ -1,3 +1,5 @@
+import type { EMPTY_ARRAY } from "@lou.codes/constants";
+
 /**
  * Empty array.
  *
@@ -10,4 +12,4 @@
  * const emptyArray: EmptyArray = [];
  * ```
  */
-export type EmptyArray = readonly [];
+export type EmptyArray = typeof EMPTY_ARRAY;

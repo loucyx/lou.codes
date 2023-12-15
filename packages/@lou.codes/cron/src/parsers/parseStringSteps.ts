@@ -1,3 +1,4 @@
+import { EMPTY_ARRAY, EMPTY_STRING } from "@lou.codes/constants";
 import { parseDecimal } from "@lou.codes/parsers";
 import { between, isNumber, isUndefined } from "@lou.codes/predicates";
 import type { Maybe } from "@lou.codes/types";
@@ -30,8 +31,8 @@ export const parseStringSteps =
 	<Value>(parser: StringValueParser<Value>) =>
 	(source: string): Maybe<CronSteps<Value>> => {
 		const valid = isStringSteps(source);
-		const [startString = "", everyString = ""] =
-			valid ? source.split(CRON_STEPS_SEPARATOR) : [];
+		const [startString = EMPTY_STRING, everyString = EMPTY_STRING] =
+			valid ? source.split(CRON_STEPS_SEPARATOR) : EMPTY_ARRAY;
 		const everyNumber = parseDecimal(everyString);
 		const every =
 			(

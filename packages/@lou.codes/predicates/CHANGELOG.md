@@ -1,5 +1,13 @@
 # Change log
 
+## 1.0.5
+
+### Patch Changes
+
+-   📝 update some code blocks without language or with wrong language.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.5`
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.5`
+
 ## 1.0.4
 
 ### Patch Changes

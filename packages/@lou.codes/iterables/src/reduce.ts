@@ -8,7 +8,7 @@ import type { ReducerOutput } from "./types/ReducerOutput.js";
  *
  * @category Reducers
  * @example
- * ```
+ * ```typescript
  * const sum = Accumulator<number>(item => total => total + item);
  * const sumFrom0 = sum(0);
  *

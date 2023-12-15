@@ -8,7 +8,7 @@ import type { ReducerOutput } from "./types/ReducerOutput.js";
  *
  * @category Reducers
  * @example
- * ```
+ * ```typescript
  * const findEven = find((number: number) => number % 2 === 0);
  * findEven([1, 2, 3, 4]); // 2
  * findEven([1, 3, 5, 7]); // undefined

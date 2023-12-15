@@ -1,5 +1,11 @@
 # Change log
 
+## 1.1.0
+
+### Minor Changes
+
+-   🏗️ Move `Object.stuff` to its own file.
+
 ## 1.0.2
 
 ### Patch Changes

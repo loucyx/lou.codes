@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/diff",
 	"description": "↔️ Deep diffing utility.",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -52,7 +52,7 @@
 		"test": "NODE_OPTIONS='--import tsx' node --test ./tests/*.test.ts"
 	},
 	"sideEffects": false,
-	"size": "0.36",
+	"size": "0.37",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

@@ -10,7 +10,7 @@ import { iteratorSymbol } from "./symbols.js";
  *
  * @category Iterables
  * @example
- * ```
+ * ```typescript
  * isIterable([]); // true
  * isIterable({}); // false
  * ```

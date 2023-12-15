@@ -12,7 +12,7 @@ import type { ReadOnlyIterableIterator } from "./types/ReadOnlyIterableIterator.
  *
  * @category Generators
  * @example
- * ```
+ * ```typescript
  * const zipNumbers = zip([0, 1, 2]);
  * zipNumbers([3, 4, 5]); // [[0, 3], [1, 4], [2, 5]]
  * ```

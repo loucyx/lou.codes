@@ -7,7 +7,7 @@ import { isSymbol } from "./isSymbol.js";
  *
  * @category Objects
  * @example
- * ```
+ * ```typescript
  * isPropertyKey("Lou"); // true
  * isPropertyKey(1); // true
  * isPropertyKey(Symbol("Lou")); // true

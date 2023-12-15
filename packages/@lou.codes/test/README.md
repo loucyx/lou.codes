@@ -240,7 +240,7 @@ test({
 
 `@lou.codes/tests` provides a default output for the tests. It looks like this:
 
-```plaintext
+```txt
 [TEST] ./tests/example.test.ts
 [FAIL] Given a 1 and a 2, must return 3, but...
 	└ it has the wrong value. Wanted 3 but received 4.
@@ -249,7 +249,7 @@ test({
 And if the wanted/received type is more complex, like an object, then the output
 goes into details about the error:
 
-```plaintext
+```txt
 [TEST] ./tests/example.test.ts
 [FAIL] Given an object, must add a single property, but...
 	├ foo.bar has the wrong value. Wanted 1 but received 2.

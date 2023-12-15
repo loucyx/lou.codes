@@ -11,7 +11,7 @@ import { isIterable } from "./isIterable.js";
  *
  * @category Iterables
  * @example
- * ```
+ * ```typescript
  * isIterable([]); // true
  * isIterable({}); // false
  * ```

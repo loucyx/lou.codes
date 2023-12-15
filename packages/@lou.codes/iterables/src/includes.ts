@@ -8,7 +8,7 @@ import type { ReducerOutput } from "./types/ReducerOutput.js";
  *
  * @category Reducers
  * @example
- * ```
+ * ```typescript
  * const includesTwo = includes(2);
  * includesTwo([1, 2, 3, 4]); // true
  * includesTwo([1, 3, 5, 7]); // false

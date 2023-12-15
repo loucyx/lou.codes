@@ -16,7 +16,7 @@ const someHandler = awaitableHandler((result: boolean) => !result);
  *
  * @category Reducers
  * @example
- * ```
+ * ```typescript
  * const someEven = some((number: number) => number % 2 === 0);
  * someEven([1, 2, 3, 4]); // true
  * someEven([1, 3, 5, 7]); // false

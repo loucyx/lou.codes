@@ -1,8 +1,7 @@
-<img id="logo" alt="@lou.codes/constants by loucyx" src="https://lou.codes/logo.svg" height="128" />
+<img id="logo" alt="@lou.codes/constants" src="https://lou.codes/lou_codes_constants.svg" height="128" />
 
-![Coverage][coverage-badge] ![License][license-badge]
-![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]
-![Size][size-badge]
+![License][license-badge] ![NPM Version][npm-version-badge]
+![Open Issues][open-issues-badge] ![Size][size-badge]
 
 🔢 Shared constants.
 

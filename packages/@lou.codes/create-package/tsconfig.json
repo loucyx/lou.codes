@@ -1,14 +1,5 @@
 {
 	"extends": "@lou.codes/configs/typescript.config.json",
 	"compilerOptions": { "outDir": "./dist" },
-	"include": [
-		"./src/**/*.cjs",
-		"./src/**/*.cts",
-		"./src/**/*.js",
-		"./src/**/*.jsx",
-		"./src/**/*.mjs",
-		"./src/**/*.mts",
-		"./src/**/*.ts",
-		"./src/**/*.tsx"
-	]
+	"include": ["./src/**/*.ts"]
 }

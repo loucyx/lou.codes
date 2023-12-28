@@ -1,11 +1,12 @@
 import eslintJS from "@eslint/js";
+import { freeze } from "../freeze.js";
 import { ERROR, WARN } from "./levels.js";
 
 /**
  * Core ESLint rules.
  * @see [ESLint core rules](https://eslint.org/docs/latest/rules)
  */
-export const coreRules = Object.freeze(
+export const coreRules = freeze(
 	/** @type {const} @satisfies {import("eslint").Linter.FlatConfig} */ ({
 		files: [
 			"**/*.cjs",

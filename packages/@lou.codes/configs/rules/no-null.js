@@ -1,11 +1,12 @@
 import eslintPluginNoNull from "eslint-plugin-no-null";
+import { freeze } from "../freeze.js";
 import { ERROR } from "./levels.js";
 
 /**
  * ESLint `no-null` rules.
  * @see [eslint-plugin-no-null](https://npm.im/eslint-plugin-no-null)
  */
-export const noNullRules = Object.freeze(
+export const noNullRules = freeze(
 	/** @type {const} @satisfies {import("eslint").Linter.FlatConfig} */ ({
 		plugins: { "no-null": eslintPluginNoNull },
 		rules: {

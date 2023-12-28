@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/configs",
 	"description": "⚙️ Project configurations",
-	"version": "3.0.3",
+	"version": "3.0.4",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -46,20 +46,18 @@
 	},
 	"exports": {
 		".": "./index.js",
-		"./*.cjs": "./*.cjs",
-		"./*.d.cts": "./*.d.cts",
+		"./changelog.cjs": "./changelog.cjs",
+		"./changelog.d.cts": "./changelog.d.cts",
 		"./*.js": "./*.js",
 		"./*.d.ts": "./*.d.ts",
 		"./*.css": "./*.css",
 		"./*.json": "./*.json"
 	},
 	"files": [
-		"*.cjs",
-		"*.d.cts",
+		"changelog.cjs",
+		"changelog.d.cts",
 		"*.json",
-		"*.cjs",
 		"*.css",
-		"*.d.cts",
 		"*.d.ts",
 		"*.js",
 		"*.json",
@@ -102,13 +100,13 @@
 		"url": "https://github.com/loucyx/lou.codes.git"
 	},
 	"scripts": {
-		"clean": "rimraf {index,rules/*,*.config,changelog,update-peers}.d.{ts,cts}",
+		"clean": "rimraf {index,rules/*,*.config,changelog,update-peers,freeze}.d.{cts,ts}",
 		"compile": "run-s clean && tsc",
 		"dependencies": "node ./update-peers.js",
 		"git:pre-push": "run-s --print-label clean lint",
-		"lint": "eslint {./rules/*.js,./*.{js,cjs}}",
+		"lint": "eslint {./rules/*.js,./*.{cjs,js}}",
 		"prepublishOnly": "run-s --print-label clean compile prettify",
-		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write '**/*.d.{ts,cts}'"
+		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write '**/*.d.{cts,ts}'"
 	},
 	"sideEffects": false,
 	"type": "module"

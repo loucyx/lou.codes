@@ -5,6 +5,7 @@
 		"./changelog.cjs",
 		"./environment.d.ts",
 		"./eslint.config.js",
+		"./freeze.js",
 		"./index.js",
 		"./prettier.config.js",
 		"./rules/*.js",

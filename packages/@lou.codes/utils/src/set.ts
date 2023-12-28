@@ -1,3 +1,4 @@
+import { freeze } from "@lou.codes/constants";
 import type { ReadOnlyRecord } from "@lou.codes/types";
 
 /**
@@ -18,9 +19,5 @@ export const set =
 	<const Key extends PropertyKey>(key: Key) =>
 	<const Value>(value: Value) =>
 	<const Source extends ReadOnlyRecord>(object: Source) =>
-		Object.defineProperty({ ...object }, key, {
-			configurable: false,
-			enumerable: true,
-			value,
-			writable: false,
-		}) as unknown as Omit<Source, Key> & ReadOnlyRecord<Key, Value>;
+		freeze({ ...object, [key]: value }) as unknown as Omit<Source, Key> &
+			ReadOnlyRecord<Key, Value>;

@@ -1,5 +1,12 @@
 # Change log
 
+## 3.0.4
+
+### Patch Changes
+
+-   🔧 remove unnecessary CJS references.
+-   🏗️ move freeze to a single file to be used everywhere else.
+
 ## 3.0.3
 
 ### Patch Changes

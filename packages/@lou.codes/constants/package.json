@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/constants",
 	"description": "🔢 Shared constants.",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -44,7 +44,7 @@
 		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'"
 	},
 	"sideEffects": false,
-	"size": "0.13",
+	"size": "0.14",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

@@ -1,7 +1,7 @@
 # Build files
 rules/*.d.ts
 *.config.d.ts
-changelog.d.ts
+changelog.d.cts
 dependencies.d.ts
 freeze.d.ts
 index.d.ts

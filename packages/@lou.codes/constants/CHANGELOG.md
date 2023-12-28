@@ -1,5 +1,15 @@
 # Change log
 
+## 1.2.0
+
+### Minor Changes
+
+-   ✨ add export for freeze to use from other libraries.
+
+### Patch Changes
+
+-   🔧 remove unnecessary CJS references.
+
 ## 1.1.0
 
 ### Minor Changes

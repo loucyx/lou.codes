@@ -1,5 +1,13 @@
 # Change log
 
+## 1.0.68
+
+### Patch Changes
+
+-   🔧 remove unnecessary CJS references.
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.0.6`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.6`
+
 ## 1.0.67
 
 ### Patch Changes

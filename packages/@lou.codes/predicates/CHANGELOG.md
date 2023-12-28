@@ -1,5 +1,13 @@
 # Change log
 
+## 1.0.6
+
+### Patch Changes
+
+-   🔧 remove unnecessary CJS references.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.6`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.6`
+
 ## 1.0.5
 
 ### Patch Changes

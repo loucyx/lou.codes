@@ -1,4 +1,5 @@
 import stylelintOrder from "stylelint-order";
+import { freeze } from "./freeze.js";
 
 const KEBAB_CASE = "^[a-z][a-z0-9-]*$";
 const LOWER_CASE = "lower";
@@ -8,7 +9,7 @@ const LOWER_CASE = "lower";
  * @see [Stylelint rules](https://stylelint.io/user-guide/rules)
  */
 // eslint-disable-next-line import/no-default-export
-export default Object.freeze(
+export default freeze(
 	/** @type {const} @satisfies {import("stylelint").Config} */ ({
 		defaultSeverity: "error",
 		extends: ["stylelint-prettier/recommended"],

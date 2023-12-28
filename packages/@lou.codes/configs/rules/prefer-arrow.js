@@ -1,11 +1,12 @@
 import eslintPluginPreferArrow from "eslint-plugin-prefer-arrow";
+import { freeze } from "../freeze.js";
 import { ERROR } from "./levels.js";
 
 /**
  * ESLint `prefer-arrow` rules.
  * @see [eslint-plugin-prefer-arrow](https://npm.im/eslint-plugin-prefer-arrow)
  */
-export const preferArrowRules = Object.freeze(
+export const preferArrowRules = freeze(
 	/** @type {const} @satisfies {import("eslint").Linter.FlatConfig} */ ({
 		plugins: { "prefer-arrow": eslintPluginPreferArrow },
 		rules: {

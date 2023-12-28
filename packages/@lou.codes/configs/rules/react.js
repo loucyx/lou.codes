@@ -1,12 +1,13 @@
 import eslintPluginReact from "eslint-plugin-react";
 import eslintPluginReactHooks from "eslint-plugin-react-hooks";
+import { freeze } from "../freeze.js";
 import { ERROR, OFF, WARN } from "./levels.js";
 
 /**
  * ESLint React rules.
  * @see [eslint-plugin-react](https://npm.im/eslint-plugin-react)
  */
-export const reactRules = Object.freeze(
+export const reactRules = freeze(
 	/** @type {const} @satisfies {import("eslint").Linter.FlatConfig} */ ({
 		plugins: {
 			react: eslintPluginReact,

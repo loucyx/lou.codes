@@ -1,5 +1,21 @@
 # Change log
 
+## 2.0.0
+
+### Major Changes
+
+-   🏗️ rollback to have asynchronous iterable functions in their own sub
+    directory.
+-   🔥 remove unused types (or moved to `@lou.codes/types`).
+-   🔥 remove `handleCurriedIsomorphicIterable`.
+-   🔥 remove `handleIsomorphicIterable`.
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.0`
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.7`
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.0.7`
+
 ## 1.0.7
 
 ### Patch Changes

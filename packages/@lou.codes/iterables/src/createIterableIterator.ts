@@ -1,17 +1,10 @@
-import {
-	asyncIteratorSymbol,
-	isIterable,
-	iteratorSymbol,
-} from "@lou.codes/predicates";
-import type { Function } from "@lou.codes/types";
-import type { IsomorphicGeneratorFunction } from "./types/IsomorphicGeneratorFunction.js";
-import type { ReadOnlyAsyncIterableIterator } from "./types/ReadOnlyAsyncIterableIterator.js";
-import type { ReadOnlyAsyncIterator } from "./types/ReadOnlyAsyncIterator.js";
+import { freeze } from "@lou.codes/constants";
+import { iteratorSymbol } from "@lou.codes/predicates";
 import type { ReadOnlyIterableIterator } from "./types/ReadOnlyIterableIterator.js";
+import type { ReadOnlyIterator } from "./types/ReadOnlyIterator.js";
 
 /**
- * Takes a generator function and returns an iterable iterator or asynchronous
- * iterable iterator object.
+ * Takes a generator function and returns an iterable iterator object.
  *
  * @category Common
  * @example
@@ -34,20 +27,13 @@ import type { ReadOnlyIterableIterator } from "./types/ReadOnlyIterableIterator.
  * @param generatorFunction Generator to be used every time `[Symbol.iterator]` is called.
  * @returns Iterable iterator object.
  */
-export const createIterableIterator = <
-	GeneratorFunction extends IsomorphicGeneratorFunction,
->(
-	generatorFunction: GeneratorFunction,
+export const createIterableIterator = <Item>(
+	generatorFunction: () => ReadOnlyIterator<Item>,
 ) => {
 	const generator = generatorFunction();
 
-	return {
+	return freeze({
 		...generator,
-		[isIterable(generator) ? iteratorSymbol : asyncIteratorSymbol]:
-			generatorFunction,
-	} as GeneratorFunction extends IsomorphicGeneratorFunction<infer Item> ?
-		GeneratorFunction extends Function<never, ReadOnlyAsyncIterator<Item>> ?
-			ReadOnlyAsyncIterableIterator<Item>
-		:	ReadOnlyIterableIterator<Item>
-	:	never;
+		[iteratorSymbol]: generatorFunction,
+	}) as ReadOnlyIterableIterator<Item>;
 };

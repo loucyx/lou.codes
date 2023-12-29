@@ -1,16 +1,16 @@
 import type {
 	Initial,
-	IsomorphicIterable,
+	IsomorphicIterableItem,
 	ReadOnlyArray,
 } from "@lou.codes/types";
 import { mutate } from "@lou.codes/utils";
+import { createIterableIterator } from "./createIterableIterator.js";
 import { getIterator } from "./getIterator.js";
-import { handleIsomorphicIterable } from "./handleIsomorphicIterable.js";
-import type { GeneratorOutput } from "./types/GeneratorOutput.js";
+import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 import type { ReadOnlyIterableIterator } from "./types/ReadOnlyIterableIterator.js";
 
 /**
- * Get all elements except the last one of an iterable or asynchronous iterable.
+ * Get all elements except the last one of an iterable.
  *
  * @category Generators
  * @example
@@ -20,46 +20,30 @@ import type { ReadOnlyIterableIterator } from "./types/ReadOnlyIterableIterator.
  * @param iterable Iterable to get the items from.
  * @returns Iterable with all items except the last one.
  */
-export const initial = handleIsomorphicIterable(
-	iterable =>
-		function* () {
-			const iterator = getIterator(iterable);
-			const item = { done: false, ...iterator.next() };
+export const initial = <Iterable extends ReadOnlyIterable>(
+	iterable: Iterable,
+) =>
+	createIterableIterator(function* () {
+		const iterator = getIterator(iterable);
 
-			// eslint-disable-next-line functional/no-loop-statements
-			while (!item.done) {
-				const next = { done: false, ...iterator.next() };
+		const item = {
+			done: false,
+			...iterator.next(),
+		};
 
-				// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-				next.done ? undefined : yield item.value;
-
-				void mutate(next)(item);
-			}
-		},
-)(
-	iterable =>
-		async function* () {
-			const iterator = getIterator(iterable);
-			const item = {
+		// eslint-disable-next-line functional/no-loop-statements
+		while (!item.done) {
+			const next = {
 				done: false,
-				...(await iterator.next()),
+				...iterator.next(),
 			};
 
-			// eslint-disable-next-line functional/no-loop-statements
-			while (!item.done) {
-				const next = {
-					done: false,
-					...(await iterator.next()),
-				};
+			// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+			next.done ? undefined : yield item.value;
 
-				// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-				next.done ? undefined : yield item.value;
-
-				void mutate(next)(item);
-			}
-		},
-) as <Iterable extends IsomorphicIterable>(
-	iterable: Iterable,
-) => Iterable extends ReadOnlyArray ?
-	ReadOnlyIterableIterator<Initial<Iterable>[number]>
-:	GeneratorOutput<Iterable>;
+			void mutate(next)(item);
+		}
+	}) as ReadOnlyIterableIterator<
+		Iterable extends ReadOnlyArray ? Initial<Iterable>[number]
+		:	IsomorphicIterableItem<Iterable>
+	>;

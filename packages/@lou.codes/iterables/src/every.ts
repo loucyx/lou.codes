@@ -1,15 +1,9 @@
-import type {
-	IsomorphicIterable,
-	Predicate,
-	Single,
-	Unary,
-} from "@lou.codes/types";
-import { whenIsIterable } from "@lou.codes/utils";
-import type { ReducerOutput } from "./types/ReducerOutput.js";
+import type { Predicate, Single, Unary } from "@lou.codes/types";
+import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
- * Evaluates items in an iterable or asynchronous iterable against a predicate
- * and returns `true` if all items evaluates to `true`.
+ * Evaluates items in an iterable against a predicate and returns `true` if all
+ * items evaluates to `true`.
  *
  * @category Reducers
  * @example
@@ -21,23 +15,15 @@ import type { ReducerOutput } from "./types/ReducerOutput.js";
  * @param predicate Predicate function to evaluate each item.
  * @returns Curried function with `predicate` set in context.
  */
-export const every = <Item, Predicated extends Item = never>(
-	predicate: Single<Predicated> extends Single<never> ? Unary<Item, boolean>
-	:	Predicate<Item, Predicated>,
-) =>
-	whenIsIterable(iterable => {
+export const every =
+	<Item, Predicated extends Item = never>(
+		predicate: Single<Predicated> extends Single<never> ?
+			Unary<Item, boolean>
+		:	Predicate<Item, Predicated>,
+	) =>
+	(iterable: ReadOnlyIterable<Item>) => {
 		// eslint-disable-next-line functional/no-loop-statements
 		for (const item of iterable) {
-			// eslint-disable-next-line functional/no-conditional-statements
-			if (!predicate(item as Item)) {
-				return false;
-			}
-		}
-
-		return true;
-	})(async (iterable: AsyncIterable<Item>) => {
-		// eslint-disable-next-line functional/no-loop-statements
-		for await (const item of iterable) {
 			// eslint-disable-next-line functional/no-conditional-statements
 			if (!predicate(item)) {
 				return false;
@@ -45,6 +31,4 @@ export const every = <Item, Predicated extends Item = never>(
 		}
 
 		return true;
-	}) as <Iterable extends IsomorphicIterable<Item>>(
-		iterable: Iterable,
-	) => ReducerOutput<Iterable, boolean>;
+	};

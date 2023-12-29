@@ -1,16 +1,8 @@
-import {
-	asyncIteratorSymbol,
-	isIterable,
-	iteratorSymbol,
-} from "@lou.codes/predicates";
-import type { IsomorphicIterable } from "@lou.codes/types";
-import type { ReadOnlyAsyncIterable } from "./types/ReadOnlyAsyncIterable.js";
-import type { ReadOnlyAsyncIterator } from "./types/ReadOnlyAsyncIterator.js";
-import type { ReadOnlyIterator } from "./types/ReadOnlyIterator.js";
+import { iteratorSymbol } from "@lou.codes/predicates";
+import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
- * Get a `Symbol.iterator` from an iterable or a `Symbol.asyncIterator` from an
- * asynchronous iterable.
+ * Get a `Symbol.iterator` from an iterable.
  *
  * @category Common
  * @example
@@ -24,15 +16,11 @@ import type { ReadOnlyIterator } from "./types/ReadOnlyIterator.js";
  * @param iterable Iterable to get the iterator from.
  * @returns Iterator instance.
  */
-export const getIterator = <Iterable extends IsomorphicIterable>(
+export const getIterator = <Iterable extends ReadOnlyIterable>(
 	iterable: Iterable,
 ) =>
-	(iterable as AsyncIterable<unknown>)[
-		(isIterable(iterable) ? iteratorSymbol : (
-			asyncIteratorSymbol
-		)) as keyof AsyncIterable<unknown>
-	]() as Iterable extends IsomorphicIterable<infer Item> ?
-		Iterable extends ReadOnlyAsyncIterable<Item> ?
-			ReadOnlyAsyncIterator<Item, Item, Item>
-		:	ReadOnlyIterator<Item, Item, Item>
+	iterable[iteratorSymbol]() as Iterable extends (
+		ReadOnlyIterable<infer Item>
+	) ?
+		Iterator<Item, Item, Item>
 	:	never;

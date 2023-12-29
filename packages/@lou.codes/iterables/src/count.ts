@@ -1,10 +1,10 @@
-import type { Filter, IsomorphicIterable } from "@lou.codes/types";
+import type { Filter } from "@lou.codes/types";
 import { filter } from "./filter.js";
 import { length } from "./length.js";
+import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
- * Counts the number of items that satisfy a predicate in the given iterable or
- * asynchronous iterable.
+ * Counts the number of items that satisfy a predicate in the given iterable.
  *
  * @category Reducers
  * @example
@@ -19,6 +19,6 @@ import { length } from "./length.js";
 export const count = <Item>(predicate: Filter<Item>) => {
 	const predicateFilter = filter(predicate);
 
-	return <Iterable extends IsomorphicIterable<Item>>(iterable: Iterable) =>
+	return (iterable: ReadOnlyIterable<Item>) =>
 		length(predicateFilter(iterable));
 };

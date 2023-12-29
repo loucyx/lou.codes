@@ -1,6 +1,6 @@
 import { EMPTY_ARRAY } from "@lou.codes/constants";
-import { forEach } from "@lou.codes/iterables";
-import type { IsomorphicIterable, KeyOf } from "@lou.codes/types";
+import { forEach, type ReadOnlyIterable } from "@lou.codes/iterables";
+import type { KeyOf } from "@lou.codes/types";
 import { applyTo } from "@lou.codes/utils";
 import type { Emitter } from "./Emitter.js";
 import type { EventListener } from "./EventListener.js";
@@ -54,8 +54,8 @@ export const emit =
 		 * @param data Data to pass to the listeners.
 		 */
 		(data =>
-			void forEach<EventListener<typeof data>>(applyTo(data))(
-				(eventRegistry[event] ?? EMPTY_ARRAY) as IsomorphicIterable<
+			forEach<EventListener<typeof data>>(applyTo(data))(
+				(eventRegistry[event] ?? EMPTY_ARRAY) as ReadOnlyIterable<
 					EventListener<typeof data>
 				>,
 			)) as Emitter<Events[Event]>;

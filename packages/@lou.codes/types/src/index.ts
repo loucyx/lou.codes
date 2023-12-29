@@ -36,6 +36,8 @@ export type { Initial } from "./Initial.js";
 export type { InitialAndLast } from "./InitialAndLast.js";
 export type { IsomorphicIterable } from "./IsomorphicIterable.js";
 export type { IsomorphicIterableItem } from "./IsomorphicIterableItem.js";
+export type { IsomorphicIterableIterator } from "./IsomorphicIterableIterator.js";
+export type { IsomorphicIterator } from "./IsomorphicIterator.js";
 export type { JSONValue } from "./JSONValue.js";
 export type { KeyOf } from "./KeyOf.js";
 export type { Last } from "./Last.js";

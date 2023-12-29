@@ -1,16 +1,15 @@
+import { EMPTY_OBJECT, freeze } from "@lou.codes/constants";
 import type {
 	Entry,
 	EntryKey,
 	EntryValue,
-	IsomorphicIterable,
-	IsomorphicIterableItem,
 	ReadOnlyRecord,
 } from "@lou.codes/types";
 import { reduce } from "./reduce.js";
-import type { ReducerOutput } from "./types/ReducerOutput.js";
+import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
- * Takes an entries iterable or asynchronous iterable and returns an object.
+ * Takes an entries iterable and returns an object.
  *
  * @category Reducers
  * @example
@@ -26,16 +25,7 @@ import type { ReducerOutput } from "./types/ReducerOutput.js";
 export const entriesToObject = reduce(
 	<Key extends PropertyKey, Value>([key, value]: Entry<Key, Value>) =>
 		(object: ReadOnlyRecord<Key, Value>) =>
-			({ ...object, [key]: value }) as ReadOnlyRecord<Key, Value>,
-	// eslint-disable-next-line no-null/no-null
-)(Object.create(null) as ReadOnlyRecord) as <
-	Iterable extends IsomorphicIterable<Entry>,
->(
-	iterable: Iterable,
-) => ReducerOutput<
-	Iterable,
-	ReadOnlyRecord<
-		EntryKey<IsomorphicIterableItem<Iterable>>,
-		EntryValue<IsomorphicIterableItem<Iterable>>
-	>
->;
+			freeze({ ...object, [key]: value }) as ReadOnlyRecord<Key, Value>,
+)(EMPTY_OBJECT) as <Item extends Entry>(
+	iterable: ReadOnlyIterable<Item>,
+) => ReadOnlyRecord<EntryKey<Item>, EntryValue<Item>>;

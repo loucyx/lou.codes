@@ -1,10 +1,8 @@
 import { is } from "@lou.codes/predicates";
-import type { IsomorphicIterable } from "@lou.codes/types";
 import { some } from "./some.js";
-import type { ReducerOutput } from "./types/ReducerOutput.js";
 
 /**
- * Tries to find the given `searchItem` in iterable or asynchronous iterable.
+ * Tries to find the given `searchItem` in iterable.
  *
  * @category Reducers
  * @example
@@ -17,7 +15,4 @@ import type { ReducerOutput } from "./types/ReducerOutput.js";
  * @returns Curried function with `searchItem` set in context.
  */
 export const includes = <SearchItem>(searchItem: SearchItem) =>
-	// FIXME: Looks like we need HKT for this -_-
-	some(is(searchItem)) as <Iterable extends IsomorphicIterable>(
-		iterable: Iterable,
-	) => ReducerOutput<Iterable, boolean>;
+	some(is(searchItem));

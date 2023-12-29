@@ -1,15 +1,10 @@
-import type {
-	IsomorphicIterable,
-	Predicate,
-	Single,
-	Unary,
-} from "@lou.codes/types";
-import { handleIsomorphicIterable } from "./handleIsomorphicIterable.js";
-import type { GeneratorOutput } from "./types/GeneratorOutput.js";
+import type { Predicate, Single, Unary } from "@lou.codes/types";
+import { createIterableIterator } from "./createIterableIterator.js";
+import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
- * Filters items in an iterable or asynchronous iterable against a predicate and
- * returns items that evaluated to `true`.
+ * Filters items in an iterable against a predicate and returns items that
+ * evaluated to `true`.
  *
  * @category Generators
  * @example
@@ -22,32 +17,18 @@ import type { GeneratorOutput } from "./types/GeneratorOutput.js";
  * @param predicate Predicate function to evaluate each item.
  * @returns Curried function with `predicate` set in context.
  */
-export const filter = <Item, Filtered extends Item = never>(
-	predicate: Single<Filtered> extends Single<never> ? Unary<Item, boolean>
-	:	Predicate<Item, Filtered>,
-) =>
-	handleIsomorphicIterable<Item, Filtered>(
-		iterable =>
-			function* () {
-				// eslint-disable-next-line functional/no-loop-statements
-				for (const item of iterable) {
-					// eslint-disable-next-line functional/no-conditional-statements
-					if (predicate(item)) {
-						yield item as Filtered;
-					}
+export const filter =
+	<Item, Filtered extends Item = never>(
+		predicate: Single<Filtered> extends Single<never> ? Unary<Item, boolean>
+		:	Predicate<Item, Filtered>,
+	) =>
+	(iterable: ReadOnlyIterable<Item>) =>
+		createIterableIterator(function* () {
+			// eslint-disable-next-line functional/no-loop-statements
+			for (const item of iterable) {
+				// eslint-disable-next-line functional/no-conditional-statements
+				if (predicate(item)) {
+					yield item as Filtered;
 				}
-			},
-	)(
-		iterable =>
-			async function* () {
-				// eslint-disable-next-line functional/no-loop-statements
-				for await (const item of iterable) {
-					// eslint-disable-next-line functional/no-conditional-statements
-					if (predicate(item)) {
-						yield item as Filtered;
-					}
-				}
-			},
-	) as <Iterable extends IsomorphicIterable<Item>>(
-		iterable: Iterable,
-	) => GeneratorOutput<Iterable>;
+			}
+		});

@@ -3,7 +3,7 @@ import type { ReadOnlyArray } from "@lou.codes/types";
 import { intersperse } from "../src/intersperse.js";
 import { iterableToArray } from "../src/iterableToArray.js";
 import { range } from "../src/range.js";
-import { asyncIterateArray, iterateArray } from "./utils.js";
+import { iterateArray } from "./utils.js";
 
 const array = [0, 1, 2];
 const commaIntersperse = intersperse(",");
@@ -31,13 +31,6 @@ export const intersperseTests = [
 		given: "an empty iterable",
 		must: "return empty iterable",
 		received: () => iterableToArray(commaIntersperse(iterateArray([]))),
-		wanted: () => [],
-	},
-	{
-		given: "an empty async iterable",
-		must: "return empty iterable",
-		received: () =>
-			iterableToArray(commaIntersperse(asyncIterateArray([]))),
 		wanted: () => [],
 	},
 ] satisfies Tests<ReadOnlyArray<number | string>>;

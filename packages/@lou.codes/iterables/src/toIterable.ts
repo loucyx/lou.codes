@@ -1,12 +1,13 @@
-import { isAsyncIterable, isIterable } from "@lou.codes/predicates";
-import type { IsomorphicIterable } from "@lou.codes/types";
+import { isIterable } from "@lou.codes/predicates";
+import type {
+	IsomorphicIterable,
+	IsomorphicIterableItem,
+} from "@lou.codes/types";
 import { createIterableIterator } from "./createIterableIterator.js";
-import type { ReadOnlyAsyncIterable } from "./types/ReadOnlyAsyncIterable.js";
-import type { ReadOnlyAsyncIterableIterator } from "./types/ReadOnlyAsyncIterableIterator.js";
-import type { ReadOnlyIterableIterator } from "./types/ReadOnlyIterableIterator.js";
+import type { ReadOnlyIterator } from "./types/ReadOnlyIterator.js";
 
 /**
- * Takes a value, iterable or asynchronous iterable and yields it.
+ * Takes a value, iterable and yields it.
  *
  * @category Generators
  * @example
@@ -17,9 +18,6 @@ import type { ReadOnlyIterableIterator } from "./types/ReadOnlyIterableIterator.
  * iterator.next(); // { value: undefined, done: true }
  * ```
  * @see {@link createIterableIterator}
- * @see {@link ReadOnlyAsyncIterable}
- * @see {@link ReadOnlyAsyncIterableIterator}
- * @see {@link ReadOnlyIterableIterator}
  *
  * @template ValueOrIterable Generic of value or iterable to yield.
  * @param valueOrIterable Vale or iterable to yield.
@@ -28,19 +26,13 @@ import type { ReadOnlyIterableIterator } from "./types/ReadOnlyIterableIterator.
 export const toIterable = <const ValueOrIterable>(
 	valueOrIterable: ValueOrIterable,
 ) =>
-	createIterableIterator(
-		isAsyncIterable(valueOrIterable) ?
-			async function* () {
-				yield* valueOrIterable;
-			}
-		:	function* () {
-				// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-				isIterable(valueOrIterable) ?
-					yield* valueOrIterable
-				:	yield valueOrIterable;
-			},
-	) as ValueOrIterable extends IsomorphicIterable<infer Item> ?
-		Item extends ReadOnlyAsyncIterable<Item> ?
-			ReadOnlyAsyncIterableIterator<Item>
-		:	ReadOnlyIterableIterator<Item>
-	:	ReadOnlyIterableIterator<ValueOrIterable>;
+	createIterableIterator(function* () {
+		// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+		isIterable(valueOrIterable) ?
+			yield* valueOrIterable
+		:	yield valueOrIterable;
+	} as () => ReadOnlyIterator<
+		ValueOrIterable extends IsomorphicIterable ?
+			IsomorphicIterableItem<ValueOrIterable>
+		:	ValueOrIterable
+	>);

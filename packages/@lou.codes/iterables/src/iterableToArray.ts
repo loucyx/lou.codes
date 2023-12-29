@@ -1,14 +1,14 @@
-import { EMPTY_ARRAY } from "@lou.codes/constants";
+import { EMPTY_ARRAY, freeze } from "@lou.codes/constants";
 import type {
 	EmptyArray,
-	IsomorphicIterable,
+	IsomorphicIterableItem,
 	ReadOnlyArray,
 } from "@lou.codes/types";
 import { reduce } from "./reduce.js";
-import type { ReadOnlyAsyncIterable } from "./types/ReadOnlyAsyncIterable.js";
+import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
- * Turns given iterable or asynchronous iterable into an array.
+ * Turns given iterable into an array.
  *
  * @category Reducers
  * @example
@@ -19,11 +19,7 @@ import type { ReadOnlyAsyncIterable } from "./types/ReadOnlyAsyncIterable.js";
  * @returns Array made of iterable items.
  */
 export const iterableToArray = reduce<unknown, ReadOnlyArray | EmptyArray>(
-	item => (array: ReadOnlyArray) => [...array, item],
-)(EMPTY_ARRAY) as <Iterable extends IsomorphicIterable>(
+	item => (array: ReadOnlyArray) => freeze([...array, item]),
+)(EMPTY_ARRAY) as <Iterable extends ReadOnlyIterable>(
 	iterable: Iterable,
-) => Iterable extends IsomorphicIterable<infer Item> ?
-	Iterable extends ReadOnlyAsyncIterable<Item> ?
-		Promise<ReadOnlyArray<Item>>
-	:	ReadOnlyArray<Item>
-:	never;
+) => ReadOnlyArray<IsomorphicIterableItem<Iterable>>;

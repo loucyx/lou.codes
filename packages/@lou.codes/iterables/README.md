@@ -8,6 +8,10 @@
 
 ## Usage
 
+By default, all utils are meant to be used with `Iterable` values, to use
+`AsyncIterable` values the functions have to be imported from
+`@lou.codes/iterables/asynchronous`.
+
 ### 📦 Node
 
 Install `@lou.codes/iterables` as a dependency:

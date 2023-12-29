@@ -1,10 +1,8 @@
-import type { IsomorphicIterable } from "@lou.codes/types";
-import { handleIsomorphicIterable } from "./handleIsomorphicIterable.js";
-import type { GeneratorOutput } from "./types/GeneratorOutput.js";
+import { createIterableIterator } from "./createIterableIterator.js";
+import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
- * Drop the specified amount of items from the given iterable or asynchronous
- * iterable.
+ * Drop the specified amount of items from the given iterable.
  *
  * @category Generators
  * @example
@@ -15,43 +13,22 @@ import type { GeneratorOutput } from "./types/GeneratorOutput.js";
  * @param amount Amount of items to drop.
  * @returns Curried function with `amount` in context.
  */
-export const drop = (amount: bigint | number) =>
-	handleIsomorphicIterable(
-		iterable =>
-			function* () {
-				// eslint-disable-next-line functional/no-let
-				let count = 0n;
+export const drop =
+	(amount: bigint | number) =>
+	<Item>(iterable: ReadOnlyIterable<Item>) =>
+		createIterableIterator(function* () {
+			// eslint-disable-next-line functional/no-let
+			let count = 0n;
 
-				// eslint-disable-next-line functional/no-conditional-statements
-				if (amount > 0) {
-					// eslint-disable-next-line functional/no-loop-statements
-					for (const item of iterable) {
-						// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-						count >= amount ? yield item : (count += 1n);
-					}
-					// eslint-disable-next-line functional/no-conditional-statements
-				} else {
-					yield* iterable;
+			// eslint-disable-next-line functional/no-conditional-statements
+			if (amount > 0) {
+				// eslint-disable-next-line functional/no-loop-statements
+				for (const item of iterable) {
+					// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+					count >= amount ? yield item : (count += 1n);
 				}
-			},
-	)(
-		iterable =>
-			async function* () {
-				// eslint-disable-next-line functional/no-let
-				let count = 0n;
-
 				// eslint-disable-next-line functional/no-conditional-statements
-				if (amount > 0) {
-					// eslint-disable-next-line functional/no-loop-statements
-					for await (const item of iterable) {
-						// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-						count >= amount ? yield item : (count += 1n);
-					}
-					// eslint-disable-next-line functional/no-conditional-statements
-				} else {
-					yield* iterable;
-				}
-			},
-	) as <Iterable extends IsomorphicIterable>(
-		iterable: Iterable,
-	) => GeneratorOutput<Iterable>;
+			} else {
+				yield* iterable;
+			}
+		});

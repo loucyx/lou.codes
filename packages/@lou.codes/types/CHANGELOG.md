@@ -1,5 +1,11 @@
 # Change log
 
+## 1.1.0
+
+### Minor Changes
+
+-   ✨ Add new Isomorphic iterable types.
+
 ## 1.0.6
 
 ### Patch Changes

@@ -1,8 +1,10 @@
-import type { IsomorphicIterable } from "@lou.codes/types";
+import { flip } from "@lou.codes/utils";
 import { append } from "./append.js";
+import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
+import type { ReadOnlyIterableIterator } from "./types/ReadOnlyIterableIterator.js";
 
 /**
- * Prepends one iterable or asynchronous iterable to another.
+ * Prepends one iterable to another.
  *
  * @category Generators
  * @example
@@ -13,9 +15,8 @@ import { append } from "./append.js";
  * @param initialIterable Iterable to be appended.
  * @returns Curried generator function with `initialIterable` set in context.
  */
-export const prepend =
-	<InitialIterable extends IsomorphicIterable>(
-		initialIterable: InitialIterable,
-	) =>
-	<TailIterable extends IsomorphicIterable>(tailIterable: TailIterable) =>
-		append(tailIterable)(initialIterable);
+export const prepend = flip(append) as <InitialItem>(
+	initialIterable: ReadOnlyIterable<InitialItem>,
+) => <TailItem>(
+	tailIterable: ReadOnlyIterable<TailItem>,
+) => ReadOnlyIterableIterator<InitialItem | TailItem>;

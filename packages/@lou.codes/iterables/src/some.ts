@@ -1,18 +1,11 @@
-import type {
-	IsomorphicIterable,
-	Predicate,
-	Single,
-	Unary,
-} from "@lou.codes/types";
-import { awaitableHandler } from "@lou.codes/utils";
+import type { Predicate, Single, Unary } from "@lou.codes/types";
+import { negate } from "@lou.codes/utils";
 import { every } from "./every.js";
-import type { ReducerOutput } from "./types/ReducerOutput.js";
-
-const someHandler = awaitableHandler((result: boolean) => !result);
+import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
- * Evaluates items in an iterable or asynchronous iterable against a predicate
- * and returns `true` if any item evaluates to `true`.
+ * Evaluates items in an iterable against a predicate and returns `true` if any
+ * item evaluates to `true`.
  *
  * @category Reducers
  * @example
@@ -28,11 +21,7 @@ export const some = <Item, Predicated extends Item = never>(
 	predicate: Single<Predicated> extends Single<never> ? Unary<Item, boolean>
 	:	Predicate<Item, Predicated>,
 ) => {
-	const everyPredicate = every<Item>(item => !predicate(item));
+	const everyPredicate = every(negate(predicate) as (item: Item) => boolean);
 
-	return <Iterable extends IsomorphicIterable<Item>>(iterable: Iterable) =>
-		someHandler(everyPredicate(iterable)) as ReducerOutput<
-			Iterable,
-			boolean
-		>;
+	return (iterable: ReadOnlyIterable<Item>) => !everyPredicate(iterable);
 };

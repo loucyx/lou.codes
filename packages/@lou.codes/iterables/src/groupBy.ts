@@ -1,4 +1,4 @@
-import { EMPTY_ARRAY } from "@lou.codes/constants";
+import { EMPTY_ARRAY, EMPTY_OBJECT } from "@lou.codes/constants";
 import type {
 	Maybe,
 	ReadOnlyArray,
@@ -8,8 +8,8 @@ import type {
 import { reduce } from "./reduce.js";
 
 /**
- * Groups values of an iterable or asynchronous iterable in an object based on
- * the output of the `grouper` function.
+ * Groups values of an iterable in an object based on the output of the
+ * `grouper` function.
  *
  * @category Reducers
  * @example
@@ -36,4 +36,4 @@ export const groupBy = <Item, Key extends PropertyKey>(
 				],
 			}) as ReadOnlyRecord<Key, ReadOnlyArray<Item>>;
 		// eslint-disable-next-line no-null/no-null
-	})(Object.create(null) as ReadOnlyRecord<Key, ReadOnlyArray<Item>>);
+	})(EMPTY_OBJECT as ReadOnlyRecord<Key, ReadOnlyArray<Item>>);

@@ -1,4 +1,4 @@
-import { type Tests } from "@lou.codes/test";
+import type { Tests } from "@lou.codes/test";
 import { createElement, useState } from "react";
 import { renderToString } from "react-dom/server";
 import type { PairedComponentProperties } from "../src/PairedComponentProperties.js";

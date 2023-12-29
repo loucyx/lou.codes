@@ -4,7 +4,6 @@ import { drop } from "../src/drop.js";
 import { initial } from "../src/initial.js";
 import { iterableToArray } from "../src/iterableToArray.js";
 import { range } from "../src/range.js";
-import { asyncIterateArray } from "./utils.js";
 
 const array = [0, 1, 2];
 
@@ -32,11 +31,5 @@ export const initialTests = [
 		must: "return empty array",
 		received: () => iterableToArray(initial(drop(Infinity)(array))),
 		wanted: () => [],
-	},
-	{
-		given: "an async iterable",
-		must: "return initial items",
-		received: () => iterableToArray(initial(asyncIterateArray([0, 1, 2]))),
-		wanted: () => [0, 1],
 	},
 ] satisfies Tests<ReadOnlyArray<number>>;

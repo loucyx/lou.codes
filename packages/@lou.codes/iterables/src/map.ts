@@ -1,11 +1,9 @@
-import type { IsomorphicIterable, Unary } from "@lou.codes/types";
-import { handleIsomorphicIterable } from "./handleIsomorphicIterable.js";
-import type { ReadOnlyAsyncIterable } from "./types/ReadOnlyAsyncIterable.js";
-import type { ReadOnlyAsyncIterableIterator } from "./types/ReadOnlyAsyncIterableIterator.js";
-import type { ReadOnlyIterableIterator } from "./types/ReadOnlyIterableIterator.js";
+import type { Unary } from "@lou.codes/types";
+import { createIterableIterator } from "./createIterableIterator.js";
+import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
- * Map for iterables and asynchronous iterables.
+ * Map for iterables.
  *
  * @category Generators
  * @example
@@ -18,25 +16,12 @@ import type { ReadOnlyIterableIterator } from "./types/ReadOnlyIterableIterator.
  * @param mapper Mapper function.
  * @returns Generator function with `mapper` function set in context.
  */
-export const map = <Item, MappedItem>(mapper: Unary<Item, MappedItem>) =>
-	handleIsomorphicIterable<Item, MappedItem>(
-		iterable =>
-			function* () {
-				// eslint-disable-next-line functional/no-loop-statements
-				for (const item of iterable) {
-					yield mapper(item);
-				}
-			},
-	)(
-		iterable =>
-			async function* () {
-				// eslint-disable-next-line functional/no-loop-statements
-				for await (const item of iterable) {
-					yield mapper(item);
-				}
-			},
-	) as <Iterable extends IsomorphicIterable<Item>>(
-		iterable: Iterable,
-	) => Iterable extends ReadOnlyAsyncIterable<Item> ?
-		ReadOnlyAsyncIterableIterator<MappedItem>
-	:	ReadOnlyIterableIterator<MappedItem>;
+export const map =
+	<Item, MappedItem>(mapper: Unary<Item, MappedItem>) =>
+	(iterable: ReadOnlyIterable<Item>) =>
+		createIterableIterator(function* () {
+			// eslint-disable-next-line functional/no-loop-statements
+			for (const item of iterable) {
+				yield mapper(item);
+			}
+		});

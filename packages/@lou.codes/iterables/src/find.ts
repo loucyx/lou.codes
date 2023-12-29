@@ -1,10 +1,9 @@
-import type { IsomorphicIterable, Maybe, Unary } from "@lou.codes/types";
-import { whenIsIterable } from "@lou.codes/utils";
-import type { ReducerOutput } from "./types/ReducerOutput.js";
+import type { Maybe, Unary } from "@lou.codes/types";
+import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
- * Returns the value of the first item in the iterable or asynchronous iterable
- * where predicate is `true`, `undefined` otherwise.
+ * Returns the value of the first item in the iterable where predicate is
+ * `true`, `undefined` otherwise.
  *
  * @category Reducers
  * @example
@@ -17,19 +16,9 @@ import type { ReducerOutput } from "./types/ReducerOutput.js";
  * @returns Curried function with `predicate` set in context.
  */
 export const find = <Item>(predicate: Unary<Item, boolean>) =>
-	whenIsIterable(iterable => {
+	(iterable => {
 		// eslint-disable-next-line functional/no-loop-statements
 		for (const item of iterable) {
-			// eslint-disable-next-line functional/no-conditional-statements
-			if (predicate(item as Item)) {
-				return item;
-			}
-		}
-
-		return undefined;
-	})(async (iterable: AsyncIterable<Item>) => {
-		// eslint-disable-next-line functional/no-loop-statements
-		for await (const item of iterable) {
 			// eslint-disable-next-line functional/no-conditional-statements
 			if (predicate(item)) {
 				return item;
@@ -37,6 +26,4 @@ export const find = <Item>(predicate: Unary<Item, boolean>) =>
 		}
 
 		return undefined;
-	}) as <Iterable extends IsomorphicIterable<Item>>(
-		iterable: Iterable,
-	) => ReducerOutput<Iterable, Maybe<Item>>;
+	}) as (iterable: ReadOnlyIterable<Item>) => Maybe<Item>;

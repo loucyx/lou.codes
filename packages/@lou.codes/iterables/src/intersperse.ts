@@ -1,12 +1,11 @@
-import type { IsomorphicIterable } from "@lou.codes/types";
 import { flat } from "./flat.js";
 import { initial } from "./initial.js";
 import { repeat } from "./repeat.js";
+import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 import { zip } from "./zip.js";
 
 /**
- * Add the given `separator` between each element of the given iterable or
- * asynchronous iterable.
+ * Add the given `separator` between each element of the given iterable.
  *
  * @category Generators
  * @example
@@ -20,6 +19,6 @@ import { zip } from "./zip.js";
 export const intersperse = <Separator>(separator: Separator) => {
 	const repeatSeparator = repeat(Infinity)(separator);
 
-	return <Item>(iterable: IsomorphicIterable<Item>) =>
+	return <Item>(iterable: ReadOnlyIterable<Item>) =>
 		initial(flat(zip(iterable)(repeatSeparator)));
 };

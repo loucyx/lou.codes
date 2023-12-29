@@ -1,9 +1,8 @@
-import type { IsomorphicIterable } from "@lou.codes/types";
-import { handleIsomorphicIterable } from "./handleIsomorphicIterable.js";
-import type { GeneratorOutput } from "./types/GeneratorOutput.js";
+import { createIterableIterator } from "./createIterableIterator.js";
+import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
- * Take the given amount of items from the iterable or asynchronous iterable.
+ * Take the given amount of items from the iterable.
  *
  * @category Generators
  * @example
@@ -14,49 +13,25 @@ import type { GeneratorOutput } from "./types/GeneratorOutput.js";
  * @param amount Amount of items to take.
  * @returns Curried function with `amount` in context.
  */
-export const take = (amount: bigint | number) =>
-	handleIsomorphicIterable(
-		iterable =>
-			function* () {
-				// eslint-disable-next-line functional/no-let
-				let count = 0n;
+export const take =
+	(amount: bigint | number) =>
+	<Item>(iterable: ReadOnlyIterable<Item>) =>
+		createIterableIterator(function* () {
+			// eslint-disable-next-line functional/no-let
+			let count = 0n;
 
-				// eslint-disable-next-line functional/no-conditional-statements
-				if (amount > 0) {
-					// eslint-disable-next-line functional/no-loop-statements
-					for (const item of iterable) {
-						// eslint-disable-next-line @typescript-eslint/no-unused-expressions, functional/no-conditional-statements
-						if (count < amount) {
-							yield item;
-							// eslint-disable-next-line functional/no-expression-statements
-							count += 1n;
-						} else {
-							break;
-						}
+			// eslint-disable-next-line functional/no-conditional-statements
+			if (amount > 0) {
+				// eslint-disable-next-line functional/no-loop-statements
+				for (const item of iterable) {
+					// eslint-disable-next-line @typescript-eslint/no-unused-expressions, functional/no-conditional-statements
+					if (count < amount) {
+						yield item;
+						// eslint-disable-next-line functional/no-expression-statements
+						count += 1n;
+					} else {
+						break;
 					}
 				}
-			},
-	)(
-		iterable =>
-			async function* () {
-				// eslint-disable-next-line functional/no-let
-				let count = 0n;
-
-				// eslint-disable-next-line functional/no-conditional-statements
-				if (amount > 0) {
-					// eslint-disable-next-line functional/no-loop-statements
-					for await (const item of iterable) {
-						// eslint-disable-next-line @typescript-eslint/no-unused-expressions, functional/no-conditional-statements
-						if (count < amount) {
-							yield item;
-							// eslint-disable-next-line functional/no-expression-statements
-							count += 1n;
-						} else {
-							break;
-						}
-					}
-				}
-			},
-	) as <Iterable extends IsomorphicIterable>(
-		iterable: Iterable,
-	) => GeneratorOutput<Iterable>;
+			}
+		});

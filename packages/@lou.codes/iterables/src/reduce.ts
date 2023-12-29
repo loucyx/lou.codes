@@ -1,10 +1,9 @@
-import type { IsomorphicIterable, Reducer } from "@lou.codes/types";
-import { awaitableHandler } from "@lou.codes/utils";
+import type { Reducer } from "@lou.codes/types";
 import { forEach } from "./forEach.js";
-import type { ReducerOutput } from "./types/ReducerOutput.js";
+import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
- * Reducer function for iterables and asynchronous iterables.
+ * Reducer function for iterables.
  *
  * @category Reducers
  * @example
@@ -20,13 +19,14 @@ import type { ReducerOutput } from "./types/ReducerOutput.js";
 export const reduce =
 	<Item, Accumulator>(reducer: Reducer<Item, Accumulator>) =>
 	(initialValue: Accumulator) =>
-	<Iterable extends IsomorphicIterable<Item>>(iterable: Iterable) => {
+	(iterable: ReadOnlyIterable<Item>) => {
 		// eslint-disable-next-line functional/no-let
 		let accumulator: Accumulator = initialValue;
 
-		return awaitableHandler(_ => accumulator)(
+		return (
 			forEach((item: Item) => (accumulator = reducer(item)(accumulator)))(
 				iterable,
 			),
-		) as ReducerOutput<Iterable, Accumulator>;
+			accumulator
+		);
 	};

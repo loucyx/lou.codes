@@ -1,7 +1,7 @@
 import type { ReadOnly } from "./ReadOnly.js";
 
 /**
- * Value might be an `AsyncIterable` or just an `Iterable`.
+ * Value might be an `AsyncIterable` or just an `Iterable` (read-only).
  *
  * @category Iterables
  * @remarks

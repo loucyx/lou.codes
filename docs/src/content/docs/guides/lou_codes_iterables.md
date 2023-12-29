@@ -75,9 +75,9 @@ Over the development of this library I found some challenges like making the
 result of iterators iterable again, so we can map multiple times from the same
 iterator.
 
-Initially it also had an `async` and a regular version of each function, but now
-it goes to `async` automatically if the input is `async`. This was really
-challenging from the type side, but it was worth it.
+I went back and forward with the idea of making utils handle async
+automatically, but the cost in size and performance made me decide to split the
+utils into `@lou.codes/iterables` and `@lou.codes/iterables/asynchronous`.
 
 ## Where
 

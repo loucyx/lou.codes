@@ -20,7 +20,7 @@
 		"@astrojs/starlight-tailwind": "^2.0.1",
 		"@astrojs/tailwind": "^5.1.0",
 		"@changesets/cli": "^2.27.1",
-		"@types/node": "^20.10.5",
+		"@types/node": "^20.10.6",
 		"astro": "^4.0.8",
 		"brotli-size": "^4.0.0",
 		"c8": "^8.0.1",

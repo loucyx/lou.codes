@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/configs",
 	"description": "⚙️ Project configurations",
-	"version": "3.0.4",
+	"version": "3.0.5",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -18,7 +18,7 @@
 		"@changesets/types": "^6.0.0",
 		"@eslint/js": "^8.56.0",
 		"@types/eslint": "^8.56.0",
-		"@types/node": "^20.10.5",
+		"@types/node": "^20.10.6",
 		"@typescript-eslint/eslint-plugin": "^6.16.0",
 		"@typescript-eslint/parser": "^6.16.0",
 		"@typescript-eslint/type-utils": "^6.16.0",

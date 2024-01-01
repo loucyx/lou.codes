@@ -1,5 +1,11 @@
 # Change log
 
+## 1.1.1
+
+### Patch Changes
+
+-   🏗️ use argument destructing less to achieve smaller bundles.
+
 ## 1.1.0
 
 ### Minor Changes

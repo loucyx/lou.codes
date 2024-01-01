@@ -79,11 +79,7 @@ export type HTMLElementTagAttributeMap = ReadOnlyRecord<
 > & {${tags
 		.toSorted((tagA, tagB) => tagA.name.localeCompare(tagB.name))
 		.map(tag =>
-			generateTagType({
-				...tag,
-				attributes: tag.attributes,
-				indent: 1,
-			}),
+			generateTagType({ ...tag, attributes: tag.attributes, indent: 1 }),
 		)
 		.join(EMPTY_STRING)}};
 `,

@@ -1,7 +1,7 @@
 {
 	"name": "window-open-promise",
 	"description": "🪟 Promised Window.open();",
-	"version": "1.1.6",
+	"version": "1.1.7",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -56,7 +56,7 @@
 		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
 	},
 	"sideEffects": false,
-	"size": "0.59",
+	"size": "0.58",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

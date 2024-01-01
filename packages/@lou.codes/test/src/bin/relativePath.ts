@@ -17,5 +17,5 @@ const { href: currentWorkingDirectory } = pathToFileURL(cwd());
  * @param path Path to make relative.
  * @returns Relative path.
  */
-export const relativePath = ({ href }: ReadOnlyURL) =>
-	href.replace(currentWorkingDirectory, ".");
+export const relativePath = (url: ReadOnlyURL) =>
+	url.href.replace(currentWorkingDirectory, ".");

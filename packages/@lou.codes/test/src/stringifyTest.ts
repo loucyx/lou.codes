@@ -23,13 +23,15 @@ import type { TestResult } from "./types/TestResult.js";
  * @param testResult Test result object.
  * @returns Readable string.
  */
-export const stringifyTest = ({ differences, given, must }: TestResult) =>
-	`${differences === undefined ? PASS : FAIL} Given ${bold(
-		given,
-	)}, must ${bold(must)}${differences === undefined ? "." : ", but...\n"}${
-		differences
+export const stringifyTest = (testResult: TestResult) =>
+	`${testResult.differences === undefined ? PASS : FAIL} Given ${bold(
+		testResult.given,
+	)}, must ${bold(testResult.must)}${
+		testResult.differences === undefined ? "." : ", but...\n"
+	}${
+		testResult.differences
 			?.map(
-				(difference, index) =>
+				(difference, index, differences) =>
 					`\t${
 						index === differences.length - 1 ? "└" : "├"
 					} ${stringifyDifference(difference)}`,

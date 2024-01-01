@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/prompts",
 	"description": "⁉️ CLI interactive prompts",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -51,7 +51,7 @@
 		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
 	},
 	"sideEffects": false,
-	"size": "0.15",
+	"size": "0.14",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

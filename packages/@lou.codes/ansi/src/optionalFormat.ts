@@ -25,17 +25,14 @@ import { normalizeString } from "./normalizeString.js";
  * @param process NodeJS `globalThis.process`.
  * @returns Either the formatted string, or just the passed string.
  */
-export const optionalFormat = (({
-	process: {
-		env = EMPTY_OBJECT as Partial<(typeof globalThis)["process"]["env"]>,
-		stdout = { isTTY: false },
-	} = EMPTY_OBJECT as Partial<(typeof globalThis)["process"]>,
-}) =>
+export const optionalFormat = (global =>
 	(
-		(env.NODE_DISABLE_COLORS ?? EMPTY_STRING) === EMPTY_STRING &&
-		env.NO_COLOR === undefined &&
-		env.TERM !== "dumb" &&
-		((env.FORCE_COLOR ?? "1") !== "0" || stdout.isTTY)
+		(global.process?.env.NODE_DISABLE_COLORS ?? EMPTY_STRING) ===
+			EMPTY_STRING &&
+		global.process?.env.NO_COLOR === undefined &&
+		global.process?.env.TERM !== "dumb" &&
+		((global.process?.env.FORCE_COLOR ?? "1") !== "0" ||
+			(global.process?.stdout.isTTY ?? false))
 	) ?
 		format
 	:	() => () => normalizeString)(

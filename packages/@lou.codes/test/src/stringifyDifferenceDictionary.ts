@@ -1,5 +1,4 @@
 import { foregroundRed } from "@lou.codes/ansi";
-import { EMPTY_ARRAY } from "@lou.codes/constants";
 import { CREATE, DELETE, UPDATE } from "@lou.codes/diff";
 import { EXCEPTION } from "./constants.js";
 import { formatPropertyPath } from "./formatPropertyPath.js";
@@ -16,18 +15,22 @@ export const stringifyDifferenceDictionary: {
 		difference: Difference & { readonly kind: Kind },
 	) => string;
 } = {
-	[CREATE]: ({ path = EMPTY_ARRAY, right: received }) =>
-		`${formatPropertyPath(path)} was set with value ${formatValue(
-			received,
-		)}.`,
-	[DELETE]: ({ path = EMPTY_ARRAY }) =>
-		`${formatPropertyPath(path)} is missing.`,
-	[EXCEPTION]: ({ error }) =>
+	[CREATE]: difference =>
+		`${formatPropertyPath(
+			difference.path,
+		)} was set with value ${formatValue(difference.right)}.`,
+	[DELETE]: difference =>
+		`${formatPropertyPath(difference.path)} is missing.`,
+	[EXCEPTION]: difference =>
 		foregroundRed`there was an uncaught error: ${
-			error instanceof Error ? error.message : (error as string)
+			difference.error instanceof Error ?
+				difference.error.message
+			:	(difference.error as string)
 		}.`,
-	[UPDATE]: ({ path = EMPTY_ARRAY, right: received, left: wanted }) =>
-		`${formatPropertyPath(path)} has the wrong value. Wanted ${formatValue(
-			wanted,
-		)} but received ${formatValue(received)}.`,
+	[UPDATE]: difference =>
+		`${formatPropertyPath(
+			difference.path,
+		)} has the wrong value. Wanted ${formatValue(
+			difference.left,
+		)} but received ${formatValue(difference.right)}.`,
 };

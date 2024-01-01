@@ -1,5 +1,15 @@
 # Change log
 
+## 2.0.1
+
+### Patch Changes
+
+-   🏗️ use argument destructing less to achieve smaller bundles.
+-   🐛 fix `forEach` and `reduce` tu support awaitable return types.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.8`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.1`
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.0.8`
+
 ## 2.0.0
 
 ### Major Changes

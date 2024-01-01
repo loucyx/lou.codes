@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/ansi",
 	"description": "📟 Functional CLI ANSI formatter",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -50,7 +50,7 @@
 		"test": "NODE_OPTIONS='--import tsx' node --test ./tests/*.test.ts"
 	},
 	"sideEffects": false,
-	"size": "0.92",
+	"size": "0.91",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

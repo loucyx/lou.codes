@@ -13,26 +13,22 @@ import { patchAttributes } from "./patchAttributes.js";
  * @param options Tag data and indent level.
  * @returns Tag type.
  */
-export const generateTagType = ({
-	attributes,
-	description,
-	references,
-	name,
-	indent,
-}: ReadOnly<ITagData & { indent: number }>) => {
+export const generateTagType = (
+	options: ReadOnly<ITagData & { indent: number }>,
+) => {
 	const typedAttributes = generateAttributesType({
-		attributes: patchAttributes(attributes),
-		indent,
+		attributes: patchAttributes(options.attributes),
+		indent: options.indent,
 	});
 
 	return addIndent({
-		indent,
+		indent: options.indent,
 		string: `${generateJSDoc({
 			// FIXME: This is not typed correctly in vscode-html-languageservice 🤦🏻
 			// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-			description,
-			references,
-		})}readonly ${name}: HTMLElementTagGlobalAttributes${
+			description: options.description,
+			references: options.references,
+		})}readonly ${options.name}: HTMLElementTagGlobalAttributes${
 			typedAttributes ? ` & {${typedAttributes}}` : EMPTY_STRING
 		};
 `,

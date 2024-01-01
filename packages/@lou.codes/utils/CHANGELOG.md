@@ -1,5 +1,14 @@
 # Change log
 
+## 1.0.8
+
+### Patch Changes
+
+-   🏗️ use argument destructing less to achieve smaller bundles.
+-   🐛 fix `set` types to take any object.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.8`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.1`
+
 ## 1.0.7
 
 ### Patch Changes

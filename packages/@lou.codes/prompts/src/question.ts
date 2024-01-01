@@ -29,8 +29,7 @@ import type { QuestionOptions } from "./QuestionOptions.js";
  * @param questionObject Object with a question function that returns a promise.
  * @returns Curried function with `questionObject` set in context.
  */
-export const question =
-	(questionObject: QuestionObject) =>
+export const question = (questionObject: QuestionObject) => {
 	/**
 	 * Interactive question with `questionObject` set in context.
 	 *
@@ -40,29 +39,26 @@ export const question =
 	 * @param options Options object for the question.
 	 * @returns Promise with the question's answer.
 	 */
-	<FormattedValue = string>({
-		format,
-		query,
-		retry = false,
-		validate,
-	}: QuestionOptions<FormattedValue>): Promise<FormattedValue> =>
-		Promise.resolve(questionObject.question(`${query} `)).then(value => {
-			const formattedValue = (
-				format !== undefined ?
-					format(value)
-				:	value) as FormattedValue;
-			const validationError = validate?.(formattedValue) ?? EMPTY_STRING;
+	return async <FormattedValue = string>(
+		options: QuestionOptions<FormattedValue>,
+	): Promise<FormattedValue> => {
+		const value = await questionObject.question(`${options.query} `);
+		const formattedValue = (
+			options.format !== undefined ?
+				options.format(value)
+			:	value) as FormattedValue;
+		const validationError =
+			options.validate?.(formattedValue) ?? EMPTY_STRING;
 
-			return (
-				validationError ?
-					retry ?
-						question(questionObject)({
-							format,
-							query: validationError,
-							retry,
-							validate,
-						})
-					:	Promise.reject(validationError)
-				:	formattedValue
-			);
-		});
+		return (
+			validationError ?
+				options.retry ?? false ?
+					question(questionObject)({
+						...options,
+						query: validationError,
+					})
+				:	Promise.reject(validationError)
+			:	formattedValue
+		);
+	};
+};

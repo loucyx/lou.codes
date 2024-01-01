@@ -1,4 +1,4 @@
-import type { IsomorphicIterable, Reducer } from "@lou.codes/types";
+import type { Awaitable, IsomorphicIterable, Unary } from "@lou.codes/types";
 import { awaitableHandler } from "@lou.codes/utils";
 import { forEach } from "./forEach.js";
 
@@ -17,16 +17,19 @@ import { forEach } from "./forEach.js";
  * @returns Curried function with `reducer` in context.
  */
 export const reduce =
-	<Item, Accumulator>(reducer: Reducer<Item, Accumulator>) =>
+	<Item, Accumulator>(
+		reducer: Unary<Item, Unary<Accumulator, Awaitable<Accumulator>>>,
+	) =>
 	(initialValue: Accumulator) =>
 	<Iterable extends IsomorphicIterable<Item>>(iterable: Iterable) => {
 		// eslint-disable-next-line functional/no-let
 		let accumulator: Accumulator = initialValue;
 
 		return awaitableHandler(_ => accumulator)(
-			forEach((item: Item) => (accumulator = reducer(item)(accumulator)))(
-				iterable,
-			),
+			forEach(
+				async (item: Item) =>
+					void (accumulator = await reducer(item)(accumulator)),
+			)(iterable),
 		) as Iterable extends AsyncIterable<unknown> ? Promise<Accumulator>
 		:	Accumulator;
 	};

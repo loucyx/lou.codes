@@ -1,29 +1,25 @@
 import { EMPTY_STRING } from "@lou.codes/constants";
 import type { Answers } from "../types/Answers.js";
 
-export const generatePackageJSON = ({
-	name,
-	description,
-	packageConfiguration: { author, bugs, engines, repository },
-}: Answers) =>
+export const generatePackageJSON = (answers: Answers) =>
 	JSON.stringify(
 		{
-			name,
+			name: answers.name,
 			// eslint-disable-next-line sort-keys
-			description,
+			description: answers.description,
 			version: "1.0.0",
 			// eslint-disable-next-line sort-keys
-			author,
-			bugs,
-			engines,
+			author: answers.packageConfiguration.author,
+			bugs: answers.packageConfiguration.bugs,
+			engines: answers.packageConfiguration.engines,
 			exports: { ".": "./dist/index.js", "./*": "./dist/*" },
 			files: ["dist"],
-			homepage: `https://lou.codes/libraries/${name
+			homepage: `https://lou.codes/libraries/${answers.name
 				.replace("@", EMPTY_STRING)
 				.replace(/[.-/]/gu, "_")}`,
 			keywords: ["lou.codes", "loucyx", "typescript"],
 			license: "MIT",
-			repository,
+			repository: answers.packageConfiguration.repository,
 			scripts: {
 				clean: "rimraf ./dist",
 				compile: "tsc --project ./tsconfig.dist.json",

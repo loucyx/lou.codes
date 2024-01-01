@@ -11,29 +11,26 @@ import { normalizeJSDocMarkdown } from "./normalizeJSDocMarkdown.js";
  * @param options Description and references to be formatted.
  * @returns Formatted JSDoc.
  */
-export const generateJSDoc = ({
-	description,
-	references,
-}: {
+export const generateJSDoc = (options: {
 	readonly description?: string | { readonly value: string };
 	readonly references?: ReadOnly<ITagData["references"]>;
 }) =>
-	description === undefined ? "\n" : (
-		`
+	options.description === undefined ?
+		"\n"
+	:	`
 /**
- * ${normalizeJSDocMarkdown(getDescription(description))}${
-		references ?
+ * ${normalizeJSDocMarkdown(getDescription(options.description))}${
+		options.references ?
 			`
  * 
  * ---
  *
  * **References**
  * 
- * ${references
+ * ${options.references
 		.map(reference => `@see [${reference.name}](${reference.url})`)
 		.join("\n * ")}`
 		:	EMPTY_STRING
  }
  */
-`
-	);
+`;

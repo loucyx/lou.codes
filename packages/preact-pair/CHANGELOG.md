@@ -1,5 +1,13 @@
 # Change log
 
+## 1.0.70
+
+### Patch Changes
+
+-   🏗️ use argument destructing less to achieve smaller bundles.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.1`
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.0.8`
+
 ## 1.0.69
 
 ### Patch Changes

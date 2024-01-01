@@ -59,19 +59,13 @@ import { parseCronMonth } from "./parseCronMonth.js";
  * @param source `Cron` (UNIX) to be parsed.
  * @returns A string or `undefined` if invalid.
  */
-export const parseCronUnix = ({
-	minutes,
-	hours,
-	dayOfMonth,
-	month,
-	dayOfWeek,
-}: CronUnix) => {
+export const parseCronUnix = (cronUnix: CronUnix) => {
 	const parts = [
-		parseCronMinutes(minutes),
-		parseCronHours(hours),
-		parseCronDayOfMonth(dayOfMonth),
-		parseCronMonth(month),
-		parseCronDayOfWeek(dayOfWeek),
+		parseCronMinutes(cronUnix.minutes),
+		parseCronHours(cronUnix.hours),
+		parseCronDayOfMonth(cronUnix.dayOfMonth),
+		parseCronMonth(cronUnix.month),
+		parseCronDayOfWeek(cronUnix.dayOfWeek),
 	];
 
 	return parts.some(isUndefined) ? undefined : join(" ")(parts);

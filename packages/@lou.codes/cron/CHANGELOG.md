@@ -1,5 +1,15 @@
 # Change log
 
+## 1.0.9
+
+### Patch Changes
+
+-   🏗️ use argument destructing less to achieve smaller bundles.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.8`
+-   ⬆️ upgrade `@lou.codes/iterables` to `v2.0.1`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.1`
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.8`
+
 ## 1.0.8
 
 ### Patch Changes

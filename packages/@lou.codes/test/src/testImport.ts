@@ -28,12 +28,12 @@ import type { TestsImport } from "./types/TestsImport.js";
  * @param path Path to the test file.
  * @yields Imported tests.
  */
-export const testImport = async function* ({ href }: ReadOnlyURL) {
+export const testImport = async function* (url: ReadOnlyURL) {
 	// eslint-disable-next-line functional/no-loop-statements
 	for await (const test of Object.values(
 		// eslint-disable-next-line capitalized-comments
 		/* c8 ignore next */
-		await (import(href) as TestsImport),
+		await (import(url.href) as TestsImport),
 	)) {
 		// eslint-disable-next-line functional/no-conditional-statements
 		if (

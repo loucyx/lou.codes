@@ -15,6 +15,6 @@ import type { Class } from "@lou.codes/types";
  * @returns Returns a curried function with `constructor` in context.
  */
 export const isPrototypeOf =
-	<Constructor extends Class>({ prototype }: Constructor) =>
+	<Constructor extends Class>(constructor: Constructor) =>
 	<Input extends object>(object: Input) =>
-		prototype === Object.getPrototypeOf(object);
+		constructor.prototype === Object.getPrototypeOf(object);

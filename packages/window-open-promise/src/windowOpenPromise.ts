@@ -29,7 +29,7 @@ import { featureParser } from "./featureParser.js";
  * @returns Curried function with `window` in context.
  */
 export const windowOpenPromise =
-	({ open }: Readonly<Pick<Window, "open">>) =>
+	(global: Readonly<Pick<Window, "open">>) =>
 	/**
 	 * Curried function with `window` set.
 	 *
@@ -61,6 +61,6 @@ export const windowOpenPromise =
 	}: WindowOpenPromiseOptions = EMPTY_OBJECT) =>
 		constructPromise<Window>((resolve, reject) =>
 			whenIsNull(thunk(reject)(new Error(ERROR_MESSAGE)))(resolve)(
-				open(url, target, featureParser(features)),
+				global.open(url, target, featureParser(features)),
 			),
 		);

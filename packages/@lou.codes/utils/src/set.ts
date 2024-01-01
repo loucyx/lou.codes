@@ -18,6 +18,6 @@ import type { ReadOnlyRecord } from "@lou.codes/types";
 export const set =
 	<const Key extends PropertyKey>(key: Key) =>
 	<const Value>(value: Value) =>
-	<const Source extends ReadOnlyRecord>(object: Source) =>
+	<const Source extends object>(object: Source) =>
 		freeze({ ...object, [key]: value }) as unknown as Omit<Source, Key> &
 			ReadOnlyRecord<Key, Value>;

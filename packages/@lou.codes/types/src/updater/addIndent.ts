@@ -5,15 +5,12 @@
  * @param options Indent level and string to be indented.
  * @returns Indented string.
  */
-export const addIndent = ({
-	indent,
-	string,
-}: {
+export const addIndent = (options: {
 	readonly indent: number;
 	readonly string: string;
 }) =>
-	string
+	options.string
 		.split("\n")
-		.map(line => `${`\t`.repeat(indent)}${line}`)
+		.map(line => `${`\t`.repeat(options.indent)}${line}`)
 		.map(line => line.trimEnd())
 		.join("\n");

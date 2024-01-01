@@ -1,4 +1,4 @@
-import type { IsomorphicIterable, Unary } from "@lou.codes/types";
+import type { Awaitable, IsomorphicIterable, Unary } from "@lou.codes/types";
 
 /**
  * For each function for iterables and asynchronous iterables.
@@ -14,10 +14,11 @@ import type { IsomorphicIterable, Unary } from "@lou.codes/types";
  * @returns Curried function that expects an iterable to loop over and has `callback` set in context.
  */
 export const forEach =
-	<Item>(callback: Unary<Item, void>) =>
+	<Item>(callback: Unary<Item, Awaitable<void>>) =>
 	async (iterable: IsomorphicIterable<Item>) => {
 		// eslint-disable-next-line functional/no-loop-statements
 		for await (const item of iterable) {
-			callback(item);
+			// eslint-disable-next-line functional/no-expression-statements
+			await callback(item);
 		}
 	};

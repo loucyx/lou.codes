@@ -11,16 +11,13 @@ import { generateJSDoc } from "./generateJSDoc.js";
  * @param options Attributes and indent level.
  * @returns Attributes type.
  */
-export const generateAttributesType = ({
-	attributes,
-	indent,
-}: {
+export const generateAttributesType = (options: {
 	readonly attributes: ReadOnlyArray<IAttributeData>;
 	readonly indent: number;
 }) =>
 	addIndent({
-		indent,
-		string: attributes
+		indent: options.indent,
+		string: options.attributes
 			.map(
 				attribute => `${generateJSDoc(attribute)}readonly ${
 					attribute.name.includes("-") ?

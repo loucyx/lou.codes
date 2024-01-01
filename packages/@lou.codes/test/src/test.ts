@@ -23,34 +23,35 @@ import type { TestResult } from "./types/TestResult.js";
  * 	wanted: () => "🟩",
  * }); // Promise<{ differences: [...], given: "🟢", , must: "🟩" }>
  * ```
- * @param test A `Test` object.
+ * @param testDescription A `Test` object.
  * @returns A promise with a `TestResult` object.
  */
-export const test = <Value>({ given, must, received, wanted }: Test<Value>) =>
-	new Promise<Differences>(resolve =>
-		resolve(
-			Promise.all([wanted(), received()]).then(([left, right]) => [
-				...compare({ left, right }),
-			]),
-		),
-	)
-		.catch(
-			(error: unknown) =>
-				[
-					{
-						error:
-							error instanceof Error ?
-								`${error.name}: ${error.message}`
-							:	error ?? UNKNOWN_ERROR,
-						kind: EXCEPTION,
-					},
-				] satisfies Differences,
-		)
-		.then(
-			differences =>
-				({
-					...(differences.length > 0 ? { differences } : undefined),
-					given,
-					must,
-				}) as TestResult,
-		);
+export const test = async <Value>(testDescription: Test<Value>) => {
+	// eslint-disable-next-line functional/no-let
+	let differences = [] as Differences;
+
+	try {
+		differences = [
+			...compare({
+				left: await testDescription.wanted(),
+				right: await testDescription.received(),
+			}),
+		];
+	} catch (error: unknown) {
+		differences = [
+			{
+				error:
+					error instanceof Error ?
+						`${error.name}: ${error.message}`
+					:	error ?? UNKNOWN_ERROR,
+				kind: EXCEPTION,
+			},
+		];
+	}
+
+	return {
+		...(differences.length > 0 ? { differences } : undefined),
+		given: testDescription.given,
+		must: testDescription.must,
+	} satisfies TestResult;
+};

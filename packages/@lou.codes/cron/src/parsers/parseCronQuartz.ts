@@ -73,23 +73,15 @@ import { parseCronYear } from "./parseCronYear.js";
  * @param source `CronQuartz` to be parsed.
  * @returns A string or `undefined` if invalid.
  */
-export const parseCronQuartz = ({
-	seconds,
-	minutes,
-	hours,
-	dayOfMonth,
-	month,
-	dayOfWeek,
-	year,
-}: CronQuartz) => {
+export const parseCronQuartz = (cronQuartz: CronQuartz) => {
 	const parts = [
-		parseCronSeconds(seconds),
-		parseCronMinutes(minutes),
-		parseCronHours(hours),
-		parseCronDayOfMonth(dayOfMonth),
-		parseCronMonth(month),
-		parseCronDayOfWeek(dayOfWeek),
-		parseCronYear(year),
+		parseCronSeconds(cronQuartz.seconds),
+		parseCronMinutes(cronQuartz.minutes),
+		parseCronHours(cronQuartz.hours),
+		parseCronDayOfMonth(cronQuartz.dayOfMonth),
+		parseCronMonth(cronQuartz.month),
+		parseCronDayOfWeek(cronQuartz.dayOfWeek),
+		parseCronYear(cronQuartz.year),
 	];
 
 	return parts.some(isUndefined) ? undefined : join(" ")(parts);

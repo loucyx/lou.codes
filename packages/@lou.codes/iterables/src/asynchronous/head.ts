@@ -22,9 +22,11 @@ import { getIterator } from "./getIterator.js";
  */
 export const head = <Iterable extends IsomorphicIterable>(iterable: Iterable) =>
 	awaitableHandler(
-		({
-			value,
-		}: Readonly<Pick<IteratorResult<unknown, unknown>, "value">>) => value,
+		(
+			iteratorResult: Readonly<
+				Pick<IteratorResult<unknown, unknown>, "value">
+			>,
+		) => iteratorResult.value,
 	)(getIterator(iterable).next()) as Iterable extends ReadOnlyArray ?
 		Head<Iterable>
 	:	Maybe<IsomorphicIterableItem<Iterable>>;

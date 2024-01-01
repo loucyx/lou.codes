@@ -41,6 +41,6 @@ import type { PairedComponentProperties } from "./PairedComponentProperties.js";
  * @returns Component that expects a function as children with the paired hook.
  */
 export const pair = <Hook extends Function>(hook: Hook) =>
-	mutate({ displayName: `paired(${hook.name})` })(({ children }) =>
-		children(hook),
+	mutate({ displayName: `paired(${hook.name})` })(properties =>
+		properties.children(hook),
 	) as FunctionComponent<PairedComponentProperties<Hook>>;

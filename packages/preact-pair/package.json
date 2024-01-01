@@ -1,7 +1,7 @@
 {
 	"name": "preact-pair",
 	"description": "🖇️ Util to help with the paired hook pattern",
-	"version": "1.0.69",
+	"version": "1.0.70",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",

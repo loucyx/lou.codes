@@ -8,7 +8,7 @@ const forEachTest = <Item>(iterable: IsomorphicIterable<Item>) => {
 	const output: Array<Item> = [];
 
 	// eslint-disable-next-line functional/immutable-data
-	return forEach((item: Item) => output.push(item))(iterable).then(
+	return forEach((item: Item) => void output.push(item))(iterable).then(
 		_ => output,
 	);
 };

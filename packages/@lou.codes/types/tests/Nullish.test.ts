@@ -1,6 +1,6 @@
 import type { Nullish } from "../src/Nullish.js";
 
-// eslint-disable-next-line no-null/no-null
+// eslint-disable-next-line unicorn/no-null
 export const nullValue: Nullish = null;
 export const notDefined: Nullish = undefined;
 export const voidZero: Nullish = void 0;

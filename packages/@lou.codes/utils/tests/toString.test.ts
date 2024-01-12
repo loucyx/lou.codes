@@ -17,7 +17,7 @@ export const toStringTests = [
 	{
 		given: "a toString for a null",
 		must: "receive null as string",
-		// eslint-disable-next-line no-null/no-null
+		// eslint-disable-next-line unicorn/no-null
 		received: () => toString(null),
 		wanted: () => "null",
 	},

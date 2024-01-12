@@ -83,7 +83,7 @@ export const isIsomorphicIterableTests = [
 	},
 	{
 		given: "null",
-		// eslint-disable-next-line no-null/no-null
+		// eslint-disable-next-line unicorn/no-null
 		received: () => isIsomorphicIterable(null),
 		...wantedFalse,
 	},

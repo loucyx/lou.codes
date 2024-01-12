@@ -20,5 +20,5 @@ import type { TypeOfDictionary, TypeOfValue } from "@lou.codes/types";
 export const isType =
 	<Type extends TypeOfValue>(type: Type) =>
 	(input: unknown): input is TypeOfDictionary[Type] =>
-		// eslint-disable-next-line no-null/no-null
+		// eslint-disable-next-line unicorn/no-null
 		(input === null ? "null" : typeof input) === type;

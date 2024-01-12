@@ -7,9 +7,9 @@
 		"./eslint.config.js",
 		"./freeze.js",
 		"./index.js",
+		"./peerDependenciesUpdate.js",
 		"./prettier.config.js",
 		"./rules/*.js",
-		"./stylelint.config.js",
-		"./update-peers.js"
+		"./stylelint.config.js"
 	]
 }

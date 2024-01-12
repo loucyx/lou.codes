@@ -1,5 +1,18 @@
 # Change log
 
+## 4.0.0
+
+### Major Changes
+
+-   ✨ add new `unicorn` plugin and rules.
+-   🔥 remove redundant `no-null/no-null` (use `unicorn/no-null` instead).
+-   🚚 rename `update-peers.js` to `peerDependenciesUpdate.js`.
+
+### Patch Changes
+
+-   🔧 update core config to error on negated conditions.
+-   🚨 update based on linter changes.
+
 ## 3.0.6
 
 ### Patch Changes

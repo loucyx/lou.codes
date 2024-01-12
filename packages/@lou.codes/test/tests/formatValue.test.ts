@@ -35,7 +35,7 @@ export const formatValueTests = [
 	{
 		given: "a null value",
 		must: "return formatted null",
-		// eslint-disable-next-line no-null/no-null
+		// eslint-disable-next-line unicorn/no-null
 		received: () => formatValue(null),
 		wanted: () => foregroundBlue`null`,
 	},

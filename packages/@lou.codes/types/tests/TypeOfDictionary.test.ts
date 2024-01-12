@@ -4,7 +4,7 @@ export const ok: TypeOfDictionary = {
 	bigint: BigInt(0),
 	boolean: true,
 	function: input => input,
-	// eslint-disable-next-line no-null/no-null
+	// eslint-disable-next-line unicorn/no-null
 	null: null,
 	number: 0,
 	object: {},
@@ -26,7 +26,7 @@ export const wrong: TypeOfDictionary = {
 	// @ts-expect-error `"number"` should be a `number`.
 	number: BigInt(0),
 	// @ts-expect-error `"object"` should be an `object`
-	// eslint-disable-next-line no-null/no-null
+	// eslint-disable-next-line unicorn/no-null
 	object: null,
 	// @ts-expect-error `"string"` should be a `string`
 	string: new Date(),

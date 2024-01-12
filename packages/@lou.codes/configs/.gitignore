@@ -5,4 +5,4 @@ changelog.d.cts
 dependencies.d.ts
 freeze.d.ts
 index.d.ts
-update-peers.d.ts
+peerDependenciesUpdate.d.ts

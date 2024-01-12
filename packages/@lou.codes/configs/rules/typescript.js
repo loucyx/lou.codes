@@ -193,7 +193,7 @@ export const typescriptRules = freeze(
 			"@typescript-eslint/naming-convention": [
 				ERROR,
 				{
-					// eslint-disable-next-line no-null/no-null
+					// eslint-disable-next-line unicorn/no-null
 					format: null,
 					leadingUnderscore: "allow",
 					selector: "default",

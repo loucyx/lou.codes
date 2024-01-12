@@ -9,7 +9,7 @@ export const infinity: Primitive = Infinity;
 export const notANumber: Primitive = NaN;
 export const float: Primitive = 0.5;
 export const expression: Primitive = 1 + 1;
-// eslint-disable-next-line no-null/no-null
+// eslint-disable-next-line unicorn/no-null
 export const nullValue: Primitive = null;
 
 export const bigInt: Primitive = BigInt(0);

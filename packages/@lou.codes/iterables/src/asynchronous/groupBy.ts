@@ -35,5 +35,5 @@ export const groupBy = <Item, Key extends PropertyKey>(
 					item,
 				],
 			}) as ReadOnlyRecord<Key, ReadOnlyArray<Item>>;
-		// eslint-disable-next-line no-null/no-null
+		// eslint-disable-next-line unicorn/no-null
 	})(EMPTY_OBJECT as ReadOnlyRecord<Key, ReadOnlyArray<Item>>);

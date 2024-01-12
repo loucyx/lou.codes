@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
-import { readFile, writeFile } from "fs/promises";
-import { resolve } from "path";
-import { cwd, exit } from "process";
+import { readFile, writeFile } from "node:fs/promises";
+import { resolve } from "node:path";
+import { cwd, exit } from "node:process";
 
 /** @typedef {import("./package.json")} PackageJSON */
 /** @typedef {[keyof PackageJSON["peerDependencies"], PackageJSON["peerDependencies"][keyof PackageJSON["peerDependencies"]]]} PackageJSONEntry */
 
 const packageJSONPath = resolve(cwd(), "package.json");
 
-void readFile(packageJSONPath, "utf-8")
+void readFile(packageJSONPath, "utf8")
 	.then(JSON.parse)
 	.then(
 		/** @param {PackageJSON} packageJSON */ packageJSON =>

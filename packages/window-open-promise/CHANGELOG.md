@@ -1,5 +1,16 @@
 # Change log
 
+## 1.1.8
+
+### Patch Changes
+
+-   🚨 update based on linter changes.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.9`
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.2.1`
+-   ⬆️ upgrade `@lou.codes/iterables` to `v2.0.2`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.2`
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.0.9`
+
 ## 1.1.7
 
 ### Patch Changes

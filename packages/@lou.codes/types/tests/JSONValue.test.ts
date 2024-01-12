@@ -7,7 +7,7 @@ export const emptyArray: JSONValue = [];
 export const array: JSONValue = [string, number, boolean];
 export const emptyObject: JSONValue = {};
 export const object: JSONValue = { [string]: number };
-// eslint-disable-next-line no-null/no-null
+// eslint-disable-next-line unicorn/no-null
 export const aNull: JSONValue = null;
 
 // @ts-expect-error Symbols aren't valid JSON values

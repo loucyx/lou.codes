@@ -93,7 +93,7 @@ export const questionTests = [
 				format: value => value.toLocaleUpperCase("en-US"),
 				query: "not ok",
 				retry: true,
-				validate: value => (value !== "OK" ? `Error ${value}` : ""),
+				validate: value => (value === "OK" ? "" : `Error ${value}`),
 			}),
 		wanted: () => "OK",
 	},

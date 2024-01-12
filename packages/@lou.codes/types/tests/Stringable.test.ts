@@ -2,7 +2,7 @@ import type { Strigifiable } from "../src/Strigifiable.js";
 
 export const aString: Strigifiable = "Lou";
 export const aBoolean: Strigifiable = true;
-// eslint-disable-next-line no-null/no-null
+// eslint-disable-next-line unicorn/no-null
 export const aNull: Strigifiable = null;
 export const anUndefined: Strigifiable = undefined;
 export const aNumber: Strigifiable = 1;

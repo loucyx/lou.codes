@@ -22,6 +22,6 @@ export const join =
 		reduce<Item, Maybe<string>>(
 			item => string =>
 				`${string ?? EMPTY_STRING}${
-					string !== undefined ? separator : EMPTY_STRING
+					string === undefined ? EMPTY_STRING : separator
 				}${item}`,
 		)(undefined)(iterable) ?? EMPTY_STRING;

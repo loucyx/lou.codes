@@ -83,7 +83,7 @@ export type HTMLElementTagAttributeMap = ReadOnlyRecord<
 		)
 		.join(EMPTY_STRING)}};
 `,
-	{ encoding: "utf-8" },
+	{ encoding: "utf8" },
 )
 	// eslint-disable-next-line no-console
 	.then(() => console.log("HTMLElementTagAttributeMap.ts updated."))

@@ -4,7 +4,7 @@ export const string: Strigifiable = "🟢";
 export const number: Strigifiable = 1;
 export const bigint: Strigifiable = 1n;
 export const boolean: Strigifiable = true;
-// eslint-disable-next-line no-null/no-null
+// eslint-disable-next-line unicorn/no-null
 export const nullValue: Strigifiable = null;
 export const undefinedValue: Strigifiable = undefined;
 

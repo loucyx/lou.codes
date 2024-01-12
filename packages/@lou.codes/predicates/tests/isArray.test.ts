@@ -64,7 +64,7 @@ export const isArrayTests = [
 	},
 	{
 		given: "null",
-		// eslint-disable-next-line no-null/no-null
+		// eslint-disable-next-line unicorn/no-null
 		received: () => isArray(null),
 		...wantedFalse,
 	},

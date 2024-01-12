@@ -7,7 +7,7 @@ export const whenIsNullishTests = [
 	{
 		given: "a whenIsNullish with nullish value (null)",
 		must: "receive the truthy value",
-		// eslint-disable-next-line no-null/no-null
+		// eslint-disable-next-line unicorn/no-null
 		received: () => whenIsNullishTest(null),
 		wanted: () => "truthy",
 	},

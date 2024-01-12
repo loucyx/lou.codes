@@ -16,7 +16,7 @@ export const stringEmpty: Numeric = "";
 export const stringNotEmpty: Numeric = "Lou";
 
 // @ts-expect-error null is not a numeric type.
-// eslint-disable-next-line no-null/no-null
+// eslint-disable-next-line unicorn/no-null
 export const nullValue: Numeric = null;
 
 // @ts-expect-error Boolean is not a numeric type.

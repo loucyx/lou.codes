@@ -8,5 +8,5 @@ import { create } from "./Object.js";
  */
 // eslint-disable-next-line @typescript-eslint/ban-types
 export const createObject = <OutputType = {}>(prototype?: object) =>
-	// eslint-disable-next-line no-null/no-null
+	// eslint-disable-next-line unicorn/no-null
 	create(prototype ?? null) as OutputType;

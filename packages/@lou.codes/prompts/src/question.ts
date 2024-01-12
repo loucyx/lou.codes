@@ -44,9 +44,9 @@ export const question = (questionObject: QuestionObject) => {
 	): Promise<FormattedValue> => {
 		const value = await questionObject.question(`${options.query} `);
 		const formattedValue = (
-			options.format !== undefined ?
-				options.format(value)
-			:	value) as FormattedValue;
+			options.format === undefined ?
+				value
+			:	options.format(value)) as FormattedValue;
 		const validationError =
 			options.validate?.(formattedValue) ?? EMPTY_STRING;
 

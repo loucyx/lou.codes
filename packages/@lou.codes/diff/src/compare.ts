@@ -61,17 +61,17 @@ export const compare = function* (values: {
 			if (
 				typeof left === "object" &&
 				typeof right === "object" &&
-				// eslint-disable-next-line no-null/no-null
+				// eslint-disable-next-line unicorn/no-null
 				left !== null &&
-				// eslint-disable-next-line no-null/no-null
+				// eslint-disable-next-line unicorn/no-null
 				right !== null &&
 				left.constructor === right.constructor
 				// eslint-disable-next-line functional/no-conditional-statements
 			) {
 				// eslint-disable-next-line functional/no-loop-statements
-				for (const key of [
-					...new Set([left, right].flatMap(Reflect.ownKeys)),
-				]) {
+				for (const key of new Set(
+					[left, right].flatMap(Reflect.ownKeys),
+				)) {
 					// eslint-disable-next-line functional/no-loop-statements
 					for (const { path, ...valueDiff } of compare({
 						...(key in left ?

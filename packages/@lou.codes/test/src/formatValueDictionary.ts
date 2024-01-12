@@ -60,16 +60,16 @@ export const formatValueDictionary: ReadOnlyRecord<
 				)
 				.join(", ")} })`,
 	string: value =>
-		foregroundBrightRed`"${(value as string).replace(
+		foregroundBrightRed`"${(value as string).replaceAll(
 			// eslint-disable-next-line no-control-regex
-			/[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/gu,
+			/[\u001B\u009B][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/gu,
 			EMPTY_STRING,
 		)}"`,
 	symbol: value =>
 		foregroundBrightGreen`Symbol${
-			(value as symbol).description !== undefined ?
-				`(${foregroundBrightRed`"${(value as symbol).description}"`})`
-			:	EMPTY_STRING
+			(value as symbol).description === undefined ?
+				EMPTY_STRING
+			:	`(${foregroundBrightRed`"${(value as symbol).description}"`})`
 		}`,
 	undefined: () => foregroundBlue`undefined`,
 };

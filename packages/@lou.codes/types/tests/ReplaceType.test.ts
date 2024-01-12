@@ -8,7 +8,7 @@ type Robot = ReplaceType<User, "age" | "name", bigint>;
 type WrongUser = ReplaceType<User, "this-property-does-not-exist", bigint>;
 
 export const reallyOldUser: ReallyOldUser = {
-	age: 1234567890123456789n,
+	age: 1_234_567_890_123_456_789n,
 	name: "John",
 };
 
@@ -19,8 +19,8 @@ export const wrongUser: ReallyOldUser = {
 };
 
 export const robot: Robot = {
-	age: 1234567890123456789n,
-	name: 1234567890123456789n,
+	age: 1_234_567_890_123_456_789n,
+	name: 1_234_567_890_123_456_789n,
 };
 
 export const wrongRobot: Robot = {

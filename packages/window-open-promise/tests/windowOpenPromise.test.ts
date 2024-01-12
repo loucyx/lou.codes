@@ -12,7 +12,7 @@ const windowOpen = windowOpenPromise({
 });
 
 const windowOpenFail = windowOpenPromise({
-	// eslint-disable-next-line no-null/no-null
+	// eslint-disable-next-line unicorn/no-null
 	open: _ => null as unknown as Window,
 });
 

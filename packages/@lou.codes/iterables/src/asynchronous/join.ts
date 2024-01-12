@@ -24,7 +24,7 @@ export const join =
 			reduce<string, Maybe<string>>(
 				item => string =>
 					`${string ?? EMPTY_STRING}${
-						string !== undefined ? separator : EMPTY_STRING
+						string === undefined ? EMPTY_STRING : separator
 					}${item}`,
 			)(undefined)(iterable as IsomorphicIterable<string>),
 		) as Iterable extends AsyncIterable<unknown> ? Promise<string> : string;

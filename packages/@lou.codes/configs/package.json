@@ -1,14 +1,14 @@
 {
 	"name": "@lou.codes/configs",
 	"description": "⚙️ Project configurations",
-	"version": "3.0.6",
+	"version": "4.0.0",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
 		"url": "https://lou.codes"
 	},
 	"bin": {
-		"update-peers": "./update-peers.js"
+		"update-peers": "./peerDependenciesUpdate.js"
 	},
 	"bugs": {
 		"email": "issues@lou.codes",
@@ -26,11 +26,11 @@
 		"eslint-import-resolver-node": "^0.3.9",
 		"eslint-plugin-functional": "6.0.0",
 		"eslint-plugin-import": "^2.29.1",
-		"eslint-plugin-no-null": "^1.0.2",
 		"eslint-plugin-prefer-arrow": "^1.2.3",
 		"eslint-plugin-prettier": "^5.1.2",
 		"eslint-plugin-react": "^7.33.2",
 		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-unicorn": "^50.0.1",
 		"stylelint-order": "^6.0.4",
 		"stylelint-prettier": "^5.0.0"
 	},
@@ -100,9 +100,9 @@
 		"url": "https://github.com/loucyx/lou.codes.git"
 	},
 	"scripts": {
-		"clean": "rimraf {index,rules/*,*.config,changelog,update-peers,freeze}.d.{cts,ts}",
+		"clean": "rimraf {index,rules/*,*.config,changelog,peerDependenciesUpdate,freeze}.d.{cts,ts}",
 		"compile": "run-s clean && tsc",
-		"dependencies": "node ./update-peers.js",
+		"dependencies": "node ./peerDependenciesUpdate.js",
 		"git:pre-push": "run-s --print-label clean lint",
 		"lint": "eslint {./rules/*.js,./*.{cjs,js}}",
 		"prepublishOnly": "run-s --print-label clean compile prettify",

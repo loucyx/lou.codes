@@ -15,7 +15,7 @@ import type { Test } from "./types/Test.js";
  * @returns `true` if is a `Test`, `false` otherwise.
  */
 export const isTest = <Actual = unknown>(value: Actual | Test): value is Test =>
-	// eslint-disable-next-line no-null/no-null
+	// eslint-disable-next-line unicorn/no-null
 	value !== null &&
 	typeof value === "object" &&
 	"given" in value &&

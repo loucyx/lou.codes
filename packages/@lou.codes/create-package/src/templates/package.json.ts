@@ -16,7 +16,7 @@ export const generatePackageJSON = (answers: Answers) =>
 			files: ["dist"],
 			homepage: `https://lou.codes/libraries/${answers.name
 				.replace("@", EMPTY_STRING)
-				.replace(/[.-/]/gu, "_")}`,
+				.replaceAll(/[.-/]/gu, "_")}`,
 			keywords: ["lou.codes", "loucyx", "typescript"],
 			license: "MIT",
 			repository: answers.packageConfiguration.repository,

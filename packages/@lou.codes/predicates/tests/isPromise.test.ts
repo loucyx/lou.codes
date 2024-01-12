@@ -65,7 +65,7 @@ export const isPromiseTests = [
 	},
 	{
 		given: "null",
-		// eslint-disable-next-line no-null/no-null
+		// eslint-disable-next-line unicorn/no-null
 		received: () => isPromise(null),
 		...wantedFalse,
 	},

@@ -34,7 +34,7 @@ export const copyTemplates = (answers: Answers) =>
 													)}`,
 												),
 												templateFunction(answers),
-												"utf-8",
+												"utf8",
 											),
 									),
 								),

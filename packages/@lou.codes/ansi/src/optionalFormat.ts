@@ -3,6 +3,8 @@ import type { Maybe } from "@lou.codes/types";
 import { format } from "./format.js";
 import { normalizeString } from "./normalizeString.js";
 
+const thunkedNormalizeString = () => normalizeString;
+
 /**
  * Process dependant `format` function.
  *
@@ -35,7 +37,7 @@ export const optionalFormat = (global =>
 			(global.process?.stdout.isTTY ?? false))
 	) ?
 		format
-	:	() => () => normalizeString)(
+	:	() => thunkedNormalizeString)(
 	(globalThis as Maybe<Partial<typeof globalThis>>) ??
 		(EMPTY_OBJECT as Partial<typeof globalThis>),
 ) as typeof format;

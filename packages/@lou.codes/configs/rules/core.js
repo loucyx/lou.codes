@@ -198,6 +198,10 @@ export const coreRules = freeze(
 			 */
 			"no-multiple-empty-lines": [ERROR, { max: 1 }],
 			/**
+			 * Disallow negated conditions.
+			 */
+			"no-negated-condition": ERROR,
+			/**
 			 * Disallow function constructor (use `class` instead).
 			 */
 			"no-new-func": ERROR,

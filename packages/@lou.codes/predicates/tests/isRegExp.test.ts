@@ -63,7 +63,7 @@ export const isRegExpTests = [
 	},
 	{
 		given: "null",
-		// eslint-disable-next-line no-null/no-null
+		// eslint-disable-next-line unicorn/no-null
 		received: () => isRegExp(null),
 		...wantedFalse,
 	},

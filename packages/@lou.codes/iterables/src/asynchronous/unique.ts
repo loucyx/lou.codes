@@ -21,6 +21,6 @@ export const unique = <Item>(iterable: IsomorphicIterable<Item>) =>
 		// eslint-disable-next-line functional/no-loop-statements
 		for await (const item of iterable) {
 			// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-			!set.has(item) ? (set.add(item), yield item) : undefined;
+			set.has(item) ? undefined : (set.add(item), yield item);
 		}
 	});

@@ -48,16 +48,6 @@ declare module "eslint-plugin-import" {
 	// eslint-disable-next-line import/no-default-export
 	export default plugin;
 }
-declare module "eslint-plugin-no-null" {
-	import type { ESLint, Linter } from "eslint";
-
-	const plugin: ESLint.Plugin & {
-		configs: { recommended: Linter.FlatConfig };
-	};
-
-	// eslint-disable-next-line import/no-default-export
-	export default plugin;
-}
 declare module "eslint-plugin-prefer-arrow" {
 	import type { ESLint, Linter } from "eslint";
 
@@ -89,6 +79,16 @@ declare module "eslint-plugin-react-hooks" {
 	export default plugin;
 }
 declare module "eslint-plugin-react" {
+	import type { ESLint, Linter } from "eslint";
+
+	const plugin: ESLint.Plugin & {
+		configs: { recommended: Linter.FlatConfig };
+	};
+
+	// eslint-disable-next-line import/no-default-export
+	export default plugin;
+}
+declare module "eslint-plugin-unicorn" {
 	import type { ESLint, Linter } from "eslint";
 
 	const plugin: ESLint.Plugin & {

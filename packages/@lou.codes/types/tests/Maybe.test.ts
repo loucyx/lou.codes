@@ -10,7 +10,7 @@ export const maybeStringUndefined: MaybeString = undefined;
 export const wrongMaybeString1: MaybeString = 13;
 
 // @ts-expect-error Type has to be either `string` or `undefined`, not `null`.
-// eslint-disable-next-line no-null/no-null
+// eslint-disable-next-line unicorn/no-null
 export const wrongMaybeString2: MaybeString = null;
 
 export const testValueFunction = (maybeString: MaybeString) =>

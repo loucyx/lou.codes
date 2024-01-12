@@ -1,5 +1,12 @@
 # Change log
 
+## 1.1.2
+
+### Patch Changes
+
+-   🚨 update based on linter changes.
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.2.1`
+
 ## 1.1.1
 
 ### Patch Changes

@@ -17,4 +17,4 @@
  * @returns String with ESC character prepended.
  */
 export const escapeSequence = <const Input extends string>(input: Input) =>
-	`\x1b${input}` as const;
+	`\u001B${input}` as const;

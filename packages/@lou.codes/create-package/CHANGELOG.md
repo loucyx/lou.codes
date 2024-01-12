@@ -1,5 +1,15 @@
 # Change log
 
+## 1.0.11
+
+### Patch Changes
+
+-   🚨 update based on linter changes.
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.2.1`
+-   ⬆️ upgrade `@lou.codes/prompts` to `v1.0.9`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.2`
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.9`
+
 ## 1.0.10
 
 ### Patch Changes

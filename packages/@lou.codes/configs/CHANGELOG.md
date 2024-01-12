@@ -1,5 +1,11 @@
 # Change log
 
+## 4.0.1
+
+### Patch Changes
+
+-   ⬆️ dependency upgrade.
+
 ## 4.0.0
 
 ### Major Changes

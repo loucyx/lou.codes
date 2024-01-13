@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/types",
 	"description": "🏷️ Lou's shared types",
-	"version": "1.1.2",
+	"version": "1.1.3",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -10,6 +10,9 @@
 	"bugs": {
 		"email": "issues@lou.codes",
 		"url": "https://github.com/loucyx/lou.codes/issues"
+	},
+	"dependencies": {
+		"@lou.codes/constants": "workspace:*"
 	},
 	"devDependencies": {
 		"vscode-html-languageservice": "^5.1.1"
@@ -55,8 +58,5 @@
 	"sideEffects": false,
 	"size": "0.00",
 	"type": "module",
-	"types": "./dist/index.d.ts",
-	"dependencies": {
-		"@lou.codes/constants": "workspace:^"
-	}
+	"types": "./dist/index.d.ts"
 }

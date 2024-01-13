@@ -1,5 +1,17 @@
 # Change log
 
+## 2.0.0
+
+### Major Changes
+
+-   💄 update style of output to a more minimalistic one.
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.3`
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.10`
+-   ⬆️ upgrade `@lou.codes/diff` to `v1.0.10`
+
 ## 1.0.9
 
 ### Patch Changes

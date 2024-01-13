@@ -5,7 +5,6 @@
 		"alwaysStrict": true,
 		"checkJs": true,
 		"declaration": true,
-		"diagnostics": true,
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"jsx": "react",

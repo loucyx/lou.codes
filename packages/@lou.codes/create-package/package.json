@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/create-package",
 	"description": "🚧 lou.codes package scaffolder script",
-	"version": "1.0.11",
+	"version": "1.0.12",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",

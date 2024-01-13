@@ -241,20 +241,20 @@ test({
 `@lou.codes/tests` provides a default output for the tests. It looks like this:
 
 ```txt
-[TEST] ./tests/example.test.ts
-[FAIL] Given a 1 and a 2, must return 3, but...
-	└ it has the wrong value. Wanted 3 but received 4.
+❯ ./tests/example.test.ts
+× Given a 1 and a 2, must return 3, but…
+└ it has the wrong value. Wanted 3 but received 4.
 ```
 
 And if the wanted/received type is more complex, like an object, then the output
 goes into details about the error:
 
 ```txt
-[TEST] ./tests/example.test.ts
-[FAIL] Given an object, must add a single property, but...
-	├ foo.bar has the wrong value. Wanted 1 but received 2.
-	├ foo.baz.1 is missing.
-	└ bar was set with the value "bar".
+❯ ./tests/example.test.ts
+× Given an object, must add a single property, but…
+├ foo.bar has the wrong value. Wanted 1 but received 2.
+├ foo.baz.1 is missing.
+└ bar was set with the value "bar".
 ```
 
 But developers can choose to run `test` directly and use their own formatter, as

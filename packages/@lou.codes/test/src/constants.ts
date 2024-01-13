@@ -1,9 +1,9 @@
 import {
-	backgroundGreen,
 	backgroundRed,
-	backgroundWhite,
 	foregroundBlack,
+	foregroundGreen,
 	foregroundRed,
+	foregroundYellow,
 	mix,
 } from "@lou.codes/ansi";
 
@@ -12,29 +12,29 @@ import {
  *
  * @category Output
  */
-export const FAIL = mix(foregroundBlack, backgroundRed)`[FAIL]`;
+export const FAIL = foregroundRed`×`;
 
 /**
  * Test message to be shown next to the test path.
  *
  * @category Output
  */
-export const TEST = mix(foregroundBlack, backgroundWhite)`[TEST]`;
+export const TEST = foregroundYellow`❯`;
 
 /**
  * Pass message with colors.
  *
  * @category Output
  */
-export const PASS = mix(foregroundBlack, backgroundGreen)`[PASS]`;
+export const PASS = foregroundGreen`✓`;
 
 /**
  * Failed test title with colors.
  *
  * @category Output
  */
-export const FAILED_TESTS = foregroundRed`
-================================= Failed tests =================================
+export const FAILED_TESTS = `
+${foregroundRed`⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯`}${mix(backgroundRed, foregroundBlack)`Failed tests`}${foregroundRed`⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯`}
 `;
 
 /**

@@ -64,7 +64,7 @@
 	},
 	"scripts": {
 		"clean": "pnpm --recursive --parallel clean",
-		"compile": "pnpm --recursive compile && pnpm update:sizes",
+		"compile": "pnpm --recursive compile",
 		"dev": "cd docs && astro dev",
 		"document": "run-s --print-label document:typedoc prettify:typedoc document:typedoc-patch document:starlight",
 		"document:starlight": "cd docs && astro build",

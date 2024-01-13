@@ -25,8 +25,8 @@ import { relativePath } from "./relativePath.js";
  * 		wanted: () => "🟩",
  * 	},
  * ]);
- * // [TEST] file:///tests/example.test.ts
- * // [PASS] Given 🟢, must 🟩.
+ * // ❯ file:///tests/example.test.ts
+ * // ✓ Given 🟢, must 🟩.
  * ```
  * @param testTuples Iterable of test tuples.
  * @yields Strings to be shown to the consumer.

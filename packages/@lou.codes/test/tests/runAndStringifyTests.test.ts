@@ -1,14 +1,23 @@
-import { bold, foregroundBrightRed, underlined } from "@lou.codes/ansi";
+import { foregroundBrightRed, underlined } from "@lou.codes/ansi";
 import type { ReadOnlyArray } from "@lou.codes/types";
 import { relativePath } from "../src/bin/relativePath.js";
 import { runAndStringifyTests } from "../src/bin/runAndStringifyTests.js";
-import { FAIL, FAILED_TESTS, PASS, TEST } from "../src/constants.js";
+import { FAILED_TESTS, TEST } from "../src/constants.js";
 import type { ReadOnlyURL } from "../src/types/ReadOnlyURL.js";
 import type { Tests } from "../src/types/Tests.js";
-import { iterableToArray } from "./utils.js";
+import { fail, iterableToArray, pass } from "./utils.js";
 
 const filenameA: ReadOnlyURL = new URL("file:///example/test-a.js");
 const filenameB: ReadOnlyURL = new URL("file:///example/test-b.js");
+
+const genericPass = pass({ given: `🟢`, must: `🟩` });
+const genericFail = fail({
+	errors: [
+		`it has the wrong value. Wanted ${foregroundBrightRed`"🟩"`} but received ${foregroundBrightRed`"❌"`}.`,
+	],
+	given: `🟢`,
+	must: `🟩`,
+});
 
 export const runAndStringifyTestsTests = [
 	{
@@ -30,7 +39,7 @@ export const runAndStringifyTestsTests = [
 			),
 		wanted: () => [
 			`${TEST} ${underlined(relativePath(filenameA))}`,
-			`${PASS} Given ${bold`🟢`}, must ${bold`🟩`}.`,
+			genericPass,
 		],
 	},
 	{
@@ -52,10 +61,10 @@ export const runAndStringifyTestsTests = [
 			),
 		wanted: () => [
 			`${TEST} ${underlined(relativePath(filenameA))}`,
-			`${FAIL} Given ${bold`🟢`}, must ${bold`🟩`}, but...\n\t└ it has the wrong value. Wanted ${foregroundBrightRed`"🟩"`} but received ${foregroundBrightRed`"❌"`}.`,
+			genericFail,
 			FAILED_TESTS,
 			`${TEST} ${underlined(relativePath(filenameA))}`,
-			`${FAIL} Given ${bold`🟢`}, must ${bold`🟩`}, but...\n\t└ it has the wrong value. Wanted ${foregroundBrightRed`"🟩"`} but received ${foregroundBrightRed`"❌"`}.`,
+			genericFail,
 		],
 	},
 	{
@@ -86,12 +95,12 @@ export const runAndStringifyTestsTests = [
 			),
 		wanted: () => [
 			`${TEST} ${underlined(relativePath(filenameA))}`,
-			`${FAIL} Given ${bold`🟢`}, must ${bold`🟩`}, but...\n\t└ it has the wrong value. Wanted ${foregroundBrightRed`"🟩"`} but received ${foregroundBrightRed`"❌"`}.`,
+			genericFail,
 			`${TEST} ${underlined(relativePath(filenameB))}`,
-			`${PASS} Given ${bold`🟢`}, must ${bold`🟩`}.`,
+			genericPass,
 			FAILED_TESTS,
 			`${TEST} ${underlined(relativePath(filenameA))}`,
-			`${FAIL} Given ${bold`🟢`}, must ${bold`🟩`}, but...\n\t└ it has the wrong value. Wanted ${foregroundBrightRed`"🟩"`} but received ${foregroundBrightRed`"❌"`}.`,
+			genericFail,
 		],
 	},
 	{
@@ -122,11 +131,11 @@ export const runAndStringifyTestsTests = [
 			),
 		wanted: () => [
 			`${TEST} ${underlined(relativePath(filenameA))}`,
-			`${FAIL} Given ${bold`🟢`}, must ${bold`🟩`}, but...\n\t└ it has the wrong value. Wanted ${foregroundBrightRed`"🟩"`} but received ${foregroundBrightRed`"❌"`}.`,
-			`${PASS} Given ${bold`🟢`}, must ${bold`🟩`}.`,
+			genericFail,
+			genericPass,
 			FAILED_TESTS,
 			`${TEST} ${underlined(relativePath(filenameA))}`,
-			`${FAIL} Given ${bold`🟢`}, must ${bold`🟩`}, but...\n\t└ it has the wrong value. Wanted ${foregroundBrightRed`"🟩"`} but received ${foregroundBrightRed`"❌"`}.`,
+			genericFail,
 		],
 	},
 	{
@@ -157,12 +166,12 @@ export const runAndStringifyTestsTests = [
 			),
 		wanted: () => [
 			`${TEST} ${underlined(relativePath(filenameA))}`,
-			`${PASS} Given ${bold`🟢`}, must ${bold`🟩`}.`,
+			genericPass,
 			`${TEST} ${underlined(relativePath(filenameB))}`,
-			`${FAIL} Given ${bold`🟢`}, must ${bold`🟩`}, but...\n\t└ it has the wrong value. Wanted ${foregroundBrightRed`"🟩"`} but received ${foregroundBrightRed`"❌"`}.`,
+			genericFail,
 			FAILED_TESTS,
 			`${TEST} ${underlined(relativePath(filenameB))}`,
-			`${FAIL} Given ${bold`🟢`}, must ${bold`🟩`}, but...\n\t└ it has the wrong value. Wanted ${foregroundBrightRed`"🟩"`} but received ${foregroundBrightRed`"❌"`}.`,
+			genericFail,
 		],
 	},
 	{
@@ -193,11 +202,11 @@ export const runAndStringifyTestsTests = [
 			),
 		wanted: () => [
 			`${TEST} ${underlined(relativePath(filenameA))}`,
-			`${PASS} Given ${bold`🟢`}, must ${bold`🟩`}.`,
-			`${FAIL} Given ${bold`🟢`}, must ${bold`🟩`}, but...\n\t└ it has the wrong value. Wanted ${foregroundBrightRed`"🟩"`} but received ${foregroundBrightRed`"❌"`}.`,
+			genericPass,
+			genericFail,
 			FAILED_TESTS,
 			`${TEST} ${underlined(relativePath(filenameA))}`,
-			`${FAIL} Given ${bold`🟢`}, must ${bold`🟩`}, but...\n\t└ it has the wrong value. Wanted ${foregroundBrightRed`"🟩"`} but received ${foregroundBrightRed`"❌"`}.`,
+			genericFail,
 		],
 	},
 	{

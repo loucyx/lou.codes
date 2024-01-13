@@ -17,7 +17,7 @@ export default freeze(
 		embeddedLanguageFormatting: "auto",
 		// Unix EOL.
 		endOfLine: "lf",
-		// @ts-expect-error TODO: Remove this once it stops being experimental.
+		// Use curious ternaries, with the question mark after the condition, instead of on the same line as the consequent.
 		experimentalTernaries: true,
 		// Strict whitespace in HTML.
 		htmlWhitespaceSensitivity: "strict",

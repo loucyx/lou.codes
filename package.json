@@ -16,7 +16,7 @@
 		"@lou.codes/test": "workspace:*"
 	},
 	"devDependencies": {
-		"@astrojs/starlight": "^0.15.4",
+		"@astrojs/starlight": "^0.16.0",
 		"@astrojs/starlight-tailwind": "^2.0.1",
 		"@astrojs/tailwind": "^5.1.0",
 		"@changesets/cli": "^2.27.1",
@@ -35,13 +35,13 @@
 		"rimraf": "^5.0.5",
 		"sharp": "^0.33.2",
 		"simple-git-hooks": "^2.9.0",
-		"stylelint": "16.1.0",
+		"stylelint": "16.2.0",
 		"tailwindcss": "^3.4.1",
 		"tsx": "^4.7.0",
 		"typedoc": "^0.25.7",
 		"typedoc-plugin-markdown": "^3.17.1",
 		"typescript": "^5.3.3",
-		"vite": "^5.0.11",
+		"vite": "^5.0.12",
 		"vite-plugin-lightningcss": "^0.0.5",
 		"yaml": "^2.3.4"
 	},

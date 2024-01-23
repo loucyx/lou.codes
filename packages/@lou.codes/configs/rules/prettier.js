@@ -10,7 +10,6 @@ export const prettierRules = freeze(
 	/** @type {const} @satisfies {import("eslint").Linter.FlatConfig} */ ({
 		plugins: { prettier: eslintPluginPrettier },
 		rules: {
-			...eslintPluginPrettier.configs.recommended.rules,
 			/**
 			 * Handled by Prettier's `trailingComma`.
 			 */

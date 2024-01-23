@@ -27,7 +27,7 @@ export const coreRules = freeze(
 			/**
 			 * Only use braces around an arrow function body when needed.
 			 */
-			"arrow-body-style": [ERROR, "as-needed"],
+			"arrow-body-style": ERROR,
 			/**
 			 * Only use parens in arrow functions when needed.
 			 */
@@ -324,6 +324,10 @@ export const coreRules = freeze(
 					prev: "export",
 				},
 			],
+			/**
+			 * Require using arrow functions for callbacks.
+			 */
+			"prefer-arrow-callback": ERROR,
 			/**
 			 * Suggest using `const` over `let`.
 			 */

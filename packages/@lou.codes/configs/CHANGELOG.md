@@ -1,5 +1,11 @@
 # Change log
 
+## 4.0.8
+
+### Patch Changes
+
+-   🔧 update prettier rules to have better linting for arrow functions.
+
 ## 4.0.7
 
 ### Patch Changes

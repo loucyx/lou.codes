@@ -29,7 +29,8 @@ import type { QuestionOptions } from "./QuestionOptions.js";
  * @param questionObject Object with a question function that returns a promise.
  * @returns Curried function with `questionObject` set in context.
  */
-export const question = (questionObject: QuestionObject) => {
+export const question =
+	(questionObject: QuestionObject) =>
 	/**
 	 * Interactive question with `questionObject` set in context.
 	 *
@@ -39,7 +40,7 @@ export const question = (questionObject: QuestionObject) => {
 	 * @param options Options object for the question.
 	 * @returns Promise with the question's answer.
 	 */
-	return async <FormattedValue = string>(
+	async <FormattedValue = string>(
 		options: QuestionOptions<FormattedValue>,
 	): Promise<FormattedValue> => {
 		const value = await questionObject.question(`${options.query} `);
@@ -61,4 +62,3 @@ export const question = (questionObject: QuestionObject) => {
 			:	formattedValue
 		);
 	};
-};

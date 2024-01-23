@@ -1,3 +1,5 @@
+// eslint-disable-next-line capitalized-comments
+/* c8 ignore start */
 import { isTest } from "./isTest.js";
 import type { ReadOnlyURL } from "./types/ReadOnlyURL.js";
 import type { Tests } from "./types/Tests.js";
@@ -31,14 +33,12 @@ import type { TestsImport } from "./types/TestsImport.js";
 export const testImport = async function* (url: ReadOnlyURL) {
 	// eslint-disable-next-line functional/no-loop-statements
 	for await (const test of Object.values(
-		// eslint-disable-next-line capitalized-comments
-		/* c8 ignore next */
 		await (import(url.href) as TestsImport),
 	)) {
 		// eslint-disable-next-line functional/no-conditional-statements
 		if (
-			(typeof test === "object" && Symbol.iterator in test) ||
-			Symbol.asyncIterator in test
+			typeof test === "object" &&
+			(Symbol.iterator in test || Symbol.asyncIterator in test)
 			// eslint-disable-next-line functional/no-conditional-statements
 		) {
 			// eslint-disable-next-line functional/no-loop-statements
@@ -56,3 +56,5 @@ export const testImport = async function* (url: ReadOnlyURL) {
 		}
 	}
 };
+// eslint-disable-next-line capitalized-comments
+/* c8 ignore stop */

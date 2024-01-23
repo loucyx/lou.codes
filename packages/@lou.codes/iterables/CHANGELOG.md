@@ -1,5 +1,15 @@
 # Change log
 
+## 2.0.4
+
+### Patch Changes
+
+-   ✅ improve coverage for zip.
+-   ✅ add test for `createIterableIterator`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.4`
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.11`
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.0.11`
+
 ## 2.0.3
 
 ### Patch Changes

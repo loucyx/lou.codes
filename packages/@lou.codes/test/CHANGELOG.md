@@ -1,5 +1,14 @@
 # Change log
 
+## 2.0.1
+
+### Patch Changes
+
+-   ✅ better coverage.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.4`
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.11`
+-   ⬆️ upgrade `@lou.codes/diff` to `v1.0.11`
+
 ## 2.0.0
 
 ### Major Changes

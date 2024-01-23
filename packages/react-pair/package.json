@@ -1,7 +1,7 @@
 {
 	"name": "react-pair",
 	"description": "🖇️ Util to help with the paired hook pattern",
-	"version": "3.0.80",
+	"version": "3.0.81",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",

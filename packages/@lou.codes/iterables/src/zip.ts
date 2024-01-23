@@ -23,13 +23,13 @@ export const zip =
 
 			// eslint-disable-next-line functional/no-loop-statements
 			for (const itemFirst of iterableFirst) {
-				const itemSecond = iteratorSecond.next();
+				const { done = false, value } = iteratorSecond.next();
 
 				// eslint-disable-next-line functional/no-conditional-statements
-				if (itemSecond.done ?? false) {
+				if (done) {
 					break;
 				}
 
-				yield [itemFirst, itemSecond.value] as const;
+				yield [itemFirst, value] as const;
 			}
 		});

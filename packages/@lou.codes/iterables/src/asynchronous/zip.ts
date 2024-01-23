@@ -24,13 +24,14 @@ export const zip =
 
 			// eslint-disable-next-line functional/no-loop-statements
 			for await (const itemFirst of iterableFirst) {
-				const itemSecond = await asyncIteratorSecond.next();
+				const { done = false, value } =
+					await asyncIteratorSecond.next();
 
 				// eslint-disable-next-line functional/no-conditional-statements
-				if (itemSecond.done ?? false) {
+				if (done) {
 					break;
 				}
 
-				yield [itemFirst, itemSecond.value] as const;
+				yield [itemFirst, value] as const;
 			}
 		});

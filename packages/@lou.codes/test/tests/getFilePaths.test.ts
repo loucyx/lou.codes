@@ -18,7 +18,16 @@ export const getFilePathsTests = [
 				getFilePaths(currentDirectoryURLResolve("../directory")),
 			),
 		wanted: () => [
+			currentDirectoryURLResolve(
+				"../directory/defaultInDirectory.test.ts",
+			),
 			currentDirectoryURLResolve("../directory/inDirectory.test.ts"),
+			currentDirectoryURLResolve(
+				"../directory/multipleDefaultInDirectory.test.ts",
+			),
+			currentDirectoryURLResolve(
+				"../directory/multipleInDirectory.test.ts",
+			),
 		],
 	},
 	{

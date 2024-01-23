@@ -21,7 +21,7 @@
 		"@astrojs/tailwind": "^5.1.0",
 		"@changesets/cli": "^2.27.1",
 		"@types/node": "^20.11.5",
-		"astro": "^4.2.1",
+		"astro": "^4.2.2",
 		"brotli-size": "^4.0.0",
 		"c8": "^9.1.0",
 		"cpy-cli": "^5.0.0",

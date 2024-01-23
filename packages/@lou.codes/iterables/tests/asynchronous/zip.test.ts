@@ -28,6 +28,15 @@ export const zipTests = [
 		received: () => iterableToArray(zipFooBar(["baz"])),
 		wanted: () => [["foo", "baz"]],
 	},
+	{
+		given: "zip with 2 strings and array with 3 numbers",
+		must: "zip strings to shortests length",
+		received: () => iterableToArray(zipFooBar([1, 2, 3])),
+		wanted: () => [
+			["foo", 1],
+			["bar", 2],
+		],
+	},
 ] satisfies Tests<
 	| ReadOnlyArray<readonly [string, number]>
 	| ReadOnlyArray<readonly [string, string]>

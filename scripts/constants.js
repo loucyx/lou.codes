@@ -1,4 +1,4 @@
-import { resolve } from "path";
+import { resolve } from "node:path";
 
 export const SCRIPTS_DIRECTORY = new URL(".", import.meta.url).pathname;
 export const PACKAGES_DIRECTORY = resolve(SCRIPTS_DIRECTORY, "../packages");

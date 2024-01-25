@@ -24,23 +24,23 @@ export const formatPairedDocs = () =>
 							typeDocFile.path.split("/").at(-1) ?? "",
 							"",
 						)
-						.replace(
+						.replaceAll(
 							/#### Defined in\n\n\[.+\]\((?<path>.+)\)/gu,
 							"> [View source]($1)",
 						)}`
 						// FIXME: TypeDoc is messing some resolutions, this fixes it™️.
 						// Remove it once is fixed in TypeDoc.
-						.replace(
+						.replaceAll(
 							/#### Defined in\n\nnode_modules\/(?<packageName>@lou\.codes\/.+)\/dist\/(?<filename>.+)\.d\.ts:\d+/gu,
 							"> [View source](https://github.com/loucyx/lou.codes/blob/main/packages/$1/src/$2.ts)",
 						)
-						.replace(
+						.replaceAll(
 							/#### Defined in\npackages\/(?<sourcePackageName>@lou\.codes\/.+)\/node_modules\/(?<packageName>@lou\.codes\/.+)\/dist\/(?<filename>.+)\.d\.ts:\d+/gu,
 							"> [View source](https://github.com/loucyx/lou.codes/blob/main/packages/$1/src/$2.ts)",
 						)
 						.replaceAll("https://lou.codes/", "/")
 						.replaceAll("https://lou.codes", "/")
-						.replace(
+						.replaceAll(
 							/(?<optionalPropertyEnd>\?`)(?<spaces> +\|)/gu,
 							" (optional)`$2",
 						)

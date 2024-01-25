@@ -9,7 +9,7 @@ void mkdir(ASTRO_TARGET, { recursive: true })
 		formatPairedDocs().then(formattedPairs =>
 			Promise.all(
 				formattedPairs.map(([path, content]) =>
-					writeFile(path, content, { encoding: "utf-8" }),
+					writeFile(path, content, { encoding: "utf8" }),
 				),
 			),
 		),

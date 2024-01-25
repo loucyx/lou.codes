@@ -22,7 +22,7 @@ export const updatePackageSize = packagePath => {
 		outfile: outFile,
 		platform: "node",
 	})
-		.then(() => readFile(outFile, "utf-8"))
+		.then(() => readFile(outFile, "utf8"))
 		.then(fileContent => size(fileContent))
 		.then(bytesToKibBytes)
 		.then(
@@ -32,7 +32,7 @@ export const updatePackageSize = packagePath => {
 					console.log(`${packagePath}: ${kibByteSize} KiB`),
 					Promise.all([
 						kibByteSize,
-						readFile(packageJsonLocation, "utf-8").then(JSON.parse),
+						readFile(packageJsonLocation, "utf8").then(JSON.parse),
 					])
 				),
 		)
@@ -52,7 +52,7 @@ export const updatePackageSize = packagePath => {
 			writeFile(
 				packageJsonLocation,
 				`${JSON.stringify(packageJson, undefined, "\t")}\n`,
-				"utf-8",
+				"utf8",
 			),
 		);
 };

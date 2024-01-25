@@ -1,7 +1,6 @@
 import { stringify } from "yaml";
 import { NON_BROWSER_SCRIPT } from "./constants.js";
 import { packageNameToTitle } from "./packageNameToTitle.js";
-import {} from "esbuild";
 
 /**
  * @param {{

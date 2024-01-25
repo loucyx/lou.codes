@@ -26,7 +26,7 @@ export const groupFilePaths = () =>
 								.replace(`${PACKAGES_DIRECTORY}/`, "")
 								.replace("/README", "")
 								.replace("@lou.codes", "lou_codes")
-								.replace(/[-/]/gu, "_")}`,
+								.replaceAll(/[-/]/gu, "_")}`,
 						),
 					) ?? "",
 				]),

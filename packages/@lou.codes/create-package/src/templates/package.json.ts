@@ -23,12 +23,13 @@ export const generatePackageJSON = (answers: Answers) =>
 			scripts: {
 				clean: "rimraf ./dist",
 				compile: "tsc --project ./tsconfig.dist.json",
-				"git:pre-push": "run-s --print-label clean compile lint test",
+				"git:pre-push": "run-s clean compile sanitize",
 				lint: "eslint {src,tests}",
 				"lint:fix": "eslint {src,tests} --fix",
-				prepublishOnly: "run-s --print-label clean compile prettify",
+				prepublishOnly: "run-s clean compile prettify",
 				prettify:
 					"prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'",
+				sanitize: "run-p lint test",
 				test: "NODE_OPTIONS='--import tsx' pnpm exec test",
 			},
 			sideEffects: false,

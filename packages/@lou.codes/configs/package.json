@@ -103,9 +103,9 @@
 		"clean": "rimraf {index,rules/*,*.config,changelog,peerDependenciesUpdate,freeze}.d.{cts,ts}",
 		"compile": "run-s clean && tsc",
 		"dependencies": "node ./peerDependenciesUpdate.js",
-		"git:pre-push": "run-s --print-label clean lint",
+		"git:pre-push": "run-s clean lint",
 		"lint": "eslint {./rules/*.js,./*.{cjs,js}}",
-		"prepublishOnly": "run-s --print-label clean compile prettify",
+		"prepublishOnly": "run-s clean compile prettify",
 		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write '**/*.d.{cts,ts}'"
 	},
 	"sideEffects": false,

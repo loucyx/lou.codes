@@ -54,12 +54,13 @@
 	"scripts": {
 		"clean": "rimraf ./dist",
 		"compile": "tsc --project ./tsconfig.dist.json",
-		"git:pre-push": "run-s --print-label clean pre-compile lint test",
+		"git:pre-push": "run-s clean pre-compile sanitize",
 		"lint": "eslint {src,tests}",
 		"lint:fix": "eslint {src,tests} --fix",
 		"pre-compile": "tsc --noEmit --project tsconfig.dist.json",
-		"prepublishOnly": "run-s --print-label clean compile prettify",
+		"prepublishOnly": "run-s clean compile prettify",
 		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'",
+		"sanitize": "run-p lint test",
 		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
 	},
 	"sideEffects": false,

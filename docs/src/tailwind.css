@@ -84,7 +84,7 @@ main .content-panel:first-child:not(:only-child) + .content-panel {
 
 .hero img,
 .site-title img {
-	@apply rounded-full bg-accent-600 dark:bg-accent-200;
+	@apply rounded-full; /* bg-accent-600 dark:bg-accent-200; */
 }
 
 table {

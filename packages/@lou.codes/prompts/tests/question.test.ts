@@ -15,7 +15,6 @@ const testQuestionRetry = question(
 		let tries = 0;
 
 		return {
-			// eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 			question: (response: string) =>
 				Promise.resolve(
 					// eslint-disable-next-line functional/immutable-data, no-plusplus

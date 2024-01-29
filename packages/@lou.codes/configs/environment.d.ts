@@ -48,7 +48,7 @@ declare module "eslint-plugin-import" {
 	// eslint-disable-next-line import/no-default-export
 	export default plugin;
 }
-declare module "eslint-plugin-prefer-arrow" {
+declare module "eslint-plugin-prefer-arrow-functions" {
 	import type { ESLint, Linter } from "eslint";
 
 	const plugin: ESLint.Plugin & {

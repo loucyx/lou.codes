@@ -1,5 +1,12 @@
 # Change log
 
+## 4.1.0
+
+### Minor Changes
+
+-   ➖ remove `eslint-plugin-prefer-arrow`.
+-   ➕ add `eslint-plugin-prefer-arrow-functions`.
+
 ## 4.0.9
 
 ### Patch Changes

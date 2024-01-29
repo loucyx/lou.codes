@@ -1,5 +1,11 @@
 # Change log
 
+## 1.0.15
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/prompts` to `v1.0.12`
+
 ## 1.0.14
 
 ### Patch Changes

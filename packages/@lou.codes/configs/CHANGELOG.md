@@ -1,5 +1,12 @@
 # Change log
 
+## 4.1.2
+
+### Patch Changes
+
+-   📝 improve docs for rules (thanks @tanmdoan).
+-   ⬆️ dependency upgrade.
+
 ## 4.1.1
 
 ### Patch Changes

@@ -15,7 +15,7 @@ writeFile(
 		fileURLToPath(new URL(".", import.meta.url)),
 		"../HTMLElementTagGlobalAttributes.ts",
 	),
-	`/* eslint-disable id-blacklist, max-lines */
+	`/* eslint-disable id-denylist, max-lines */
 /* This file is auto-generated. Don't edit manually */
 
 import type { ReadOnlyRecord } from "./ReadOnlyRecord.js";
@@ -52,7 +52,7 @@ writeFile(
 		fileURLToPath(new URL(".", import.meta.url)),
 		"../HTMLElementTagAttributeMap.ts",
 	),
-	`/* eslint-disable id-blacklist, max-lines */
+	`/* eslint-disable id-denylist, max-lines */
 /* This file is auto-generated. Don't edit manually */
 
 import type { HTMLElementTagGlobalAttributes } from "./HTMLElementTagGlobalAttributes.js";

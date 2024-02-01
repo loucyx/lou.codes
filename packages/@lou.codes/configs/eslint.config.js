@@ -12,12 +12,14 @@ import { unicornRules } from "./rules/unicorn.js";
  */
 // eslint-disable-next-line import/no-default-export
 export default /** @type {const} @satisfies {ReadonlyArray<import("eslint").Linter.FlatConfig>} */ ([
+	// Base rules
 	coreRules,
+	typescriptRules,
+	// Da rest
 	...functionalRules,
 	importRules,
 	preferArrowFunctionsRules,
 	prettierRules,
 	reactRules,
-	typescriptRules,
 	unicornRules,
 ]);

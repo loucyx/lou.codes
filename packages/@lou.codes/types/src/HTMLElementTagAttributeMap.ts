@@ -1,4 +1,4 @@
-/* eslint-disable id-blacklist, max-lines */
+/* eslint-disable id-denylist, max-lines */
 /* This file is auto-generated. Don't edit manually */
 
 import type { HTMLElementTagGlobalAttributes } from "./HTMLElementTagGlobalAttributes.js";

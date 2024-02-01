@@ -12,6 +12,8 @@ export const preferArrowFunctionsRules = freeze(
 		rules: {
 			/**
 			 * Prefer arrow functions over traditional functions.
+			 *
+			 * @see [prefer-arrow-functions/prefer-arrow-functions](https://github.com/JamieMason/eslint-plugin-prefer-arrow-functions?tab=readme-ov-file#-options)
 			 */
 			"prefer-arrow-functions/prefer-arrow-functions": [
 				ERROR,

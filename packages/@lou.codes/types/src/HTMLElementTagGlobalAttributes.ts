@@ -11,7 +11,7 @@ import type { ReadOnlyRecord } from "./ReadOnlyRecord.js";
  * If you need the type of all HTML attributes, this is it.
  * @example
  * ```typescript
- * const getAttribute = (attribute: keyof HTMLElementTagGlobalAttributes) => // ...
+ * const getAttribute = (attribute: keyof HTMLElementTagGlobalAttributes) => // …
  * ```
  * @see {@link ReadOnlyRecord}
  */

@@ -429,7 +429,7 @@
 -   🚚 rename `Stringable` to `Strigifiable`.
 -   🚚 rename `TypeOfMap` to `TypeOfDictionary`.
 -   🔥 remove `Entries` (use `ReadOnlyArray<Entry>` directly).
--   🔥 remove `EntriesOf` (use `ReadOnlyArray<EntryOf<...>>` directly).
+-   🔥 remove `EntriesOf` (use `ReadOnlyArray<EntryOf<…>>` directly).
 -   🔥 remove `KeyOfArray` (use `KeyOf` instead).
 -   🔥 remove `NonPrimitive` (use `object` directly).
 -   🔥 remove `Not` (use `Exclude` directly).

@@ -642,7 +642,7 @@
 
 -   ⬆️ dependency upgrade.
 -   🏗 improve some type checks.
--   🏷 update typed imports/exports to be `import type { ...`.
+-   🏷 update typed imports/exports to be `import type { …`.
 -   ✅ add missing tests (100% coverage ;D).
 
 ## 4.0.6

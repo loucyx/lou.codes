@@ -806,7 +806,7 @@
 ### Patch Changes
 
 -   ⬆️ dependency upgrade.
--   🐛 fix missing `Array.prototype.at` in older Node environments.
+-   🐛 fix missing `Array#at` in older Node environments.
 
 ## 9.0.2
 
@@ -1082,7 +1082,7 @@
 ### Patch Changes
 
 -   ⬆️ dependency upgrade.
--   🏷 update typed imports/exports to be `import type { ...`.
+-   🏷 update typed imports/exports to be `import type { …`.
 
 ## 4.0.4
 

@@ -4,11 +4,11 @@ import { controlSequenceIntroducer } from "./controlSequenceIntroducer.js";
  * Erases the line from cursor to beginning, to end of line, or entire line.
  *
  * @remarks
- * | input | erases...                |
- * |-------|--------------------------|
- * | 0     | ...to end of line.       |
- * | 1     | ...to beginning of line. |
- * | 2     | ...entire line.          |
+ * | input | erases…                |
+ * |-------|------------------------|
+ * | 0     | …to end of line.       |
+ * | 1     | …to beginning of line. |
+ * | 2     | …entire line.          |
  * @category Erase
  * @example
  * ```typescript

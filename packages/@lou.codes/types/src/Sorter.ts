@@ -16,8 +16,8 @@ import type { Unary } from "./Unary.js";
  * const sorter: Sorter<number> = value1 => value2 => value1 - value2;
  * ```
  * @see {@link Unary}
- * @see [Array.prototype.sort](https://mdn.io/Array.prototype.sort)
- * @see [Array.prototype.toSorted](https://mdn.io/Array.prototype.toSorted)
+ * @see [Array#sort](https://mdn.io/Array.prototype.sort)
+ * @see [Array#toSorted](https://mdn.io/Array.prototype.toSorted)
  *
  * @template Item Type of the items to sort.
  */

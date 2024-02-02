@@ -8,7 +8,7 @@ import { parseCronDayOfMonth } from "../../src/parsers/parseCronDayOfMonth.js";
 
 export const parseCronDayOfMonthTest = [
 	{
-		given: "on the 10th day of ...",
+		given: "on the 10th day of …",
 		must: "return 10",
 		received: () => parseCronDayOfMonth(10),
 		wanted: () => "10",

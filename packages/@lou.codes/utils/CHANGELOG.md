@@ -759,7 +759,7 @@
 ### Patch Changes
 
 -   ⬆️ dependency upgrade.
--   🏷 update typed imports/exports to be `import type { ...`.
+-   🏷 update typed imports/exports to be `import type { …`.
 
 ## 5.0.4
 
@@ -1083,7 +1083,7 @@
 -   ⬆️ dependency upgrade.
 -   🔖 version bump.
 -   📝 update docs (they still suck because they are using internal names
-    instead of exported and they don't handle curried functions that well...).
+    instead of exported and they don't handle curried functions that well…).
 
 ## 7.1.0 (deprecated @vangware/micro)
 

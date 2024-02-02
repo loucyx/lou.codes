@@ -14,7 +14,7 @@ import type { ReadOnlyRecord } from "./ReadOnlyRecord.js";
  * ```typescript
  * const getAttribute =
  * 	<Tag extends keyof HTMLElementTagAttributeMap>(tag: Tag) =>
- * 	(attribute: keyof HTMLElementTagAttributeMap[Tag]) => // ...
+ * 	(attribute: keyof HTMLElementTagAttributeMap[Tag]) => // …
  * ```
  * @see {@link HTMLElementTagGlobalAttributes}
  * @see {@link ReadOnlyRecord}

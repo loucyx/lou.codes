@@ -60,7 +60,7 @@ export const unicornRules = freeze(
 			"unicorn/no-abusive-eslint-disable": ERROR,
 
 			/**
-			 * Do not use leading/trailing space between console.log parameters.
+			 * Do not use leading/trailing space between `console.log` parameters.
 			 *
 			 * @see [unicorn/no-console-spaces](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-console-spaces.md)
 			 */
@@ -74,14 +74,14 @@ export const unicornRules = freeze(
 			"unicorn/no-hex-escape": ERROR,
 
 			/**
-			 * Require Array.isArray() instead of instanceof Array.
+			 * Require `Array.isArray` instead of `instanceof Array`.
 			 *
 			 * @see [unicorn/no-instanceof-array](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-instanceof-array.md)
 			 */
 			"unicorn/no-instanceof-array": ERROR,
 
 			/**
-			 * Prevent calling EventTarget#removeEventListener() with the result of an expression.
+			 * Prevent calling `EventTarget#removeEventListener` with the result of an expression.
 			 *
 			 * @see [unicorn/no-invalid-remove-event-listener](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-invalid-remove-event-listener.md)
 			 */
@@ -95,14 +95,14 @@ export const unicornRules = freeze(
 			"unicorn/no-negated-condition": ERROR,
 
 			/**
-			 * Disallow new Array().
+			 * Disallow `new Array()`.
 			 *
 			 * @see [unicorn/no-new-array](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-new-array.md)
 			 */
 			"unicorn/no-new-array": ERROR,
 
 			/**
-			 * Enforce the use of Buffer.from() and Buffer.alloc() instead of the deprecated new Buffer().
+			 * Enforce the use of `Buffer.from` and `Buffer.alloc` instead of the deprecated `new Buffer()`.
 			 *
 			 * @see [unicorn/no-new-buffer](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-new-buffer.md)
 			 */
@@ -110,8 +110,8 @@ export const unicornRules = freeze(
 
 			/**
 			 * Disallow the use of the null literal.
-			 * @see [Reasoning](https://lou.cx/articles/we-]l/)
 			 *
+			 * @see [Reasoning](https://lou.cx/articles/we-don-t-need-null/)
 			 * @see [unicorn/no-null](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-null.md)
 			 */
 			"unicorn/no-null": ERROR,
@@ -166,49 +166,49 @@ export const unicornRules = freeze(
 			"unicorn/numeric-separators-style": ERROR,
 
 			/**
-			 * Prefer .addEventListener() and .removeEventListener() over on-functions.
+			 * Prefer `Element#addEventListener` and `Element#removeEventListener` over on-functions.
 			 *
 			 * @see [unicorn/prefer-add-event-listener](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-add-event-listener.md)
 			 */
 			"unicorn/prefer-add-event-listener": ERROR,
 
 			/**
-			 * Prefer .find(…) and .findLast(…) over the first or last element from .filter(…).
+			 * Prefer `Array#find` and `Array#findLast` over the first or last element from `Array#filter`.
 			 *
 			 * @see [unicorn/prefer-array-find](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-find.md)
 			 */
 			"unicorn/prefer-array-find": ERROR,
 
 			/**
-			 * Prefer Array#flat() over legacy techniques to flatten arrays.
+			 * Prefer `Array#flat` over legacy techniques to flatten arrays.
 			 *
 			 * @see [unicorn/prefer-array-flat](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-flat.md)
 			 */
 			"unicorn/prefer-array-flat": ERROR,
 
 			/**
-			 * Prefer .flatMap(…) over .map(…).flat().
+			 * Prefer `Array#flatMap` over `Array#map(…).flat()`.
 			 *
 			 * @see [unicorn/prefer-array-flat-map](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-flat-map.md)
 			 */
 			"unicorn/prefer-array-flat-map": ERROR,
 
 			/**
-			 * Prefer Array#{indexOf,lastIndexOf}() over Array#{findIndex,findLastIndex}() when looking for the index of an item.
+			 * Prefer `Array#indexOf` and `Array#lastIndexOf` over `Array#findIndex` and `Array#findLastIndex` when looking for the index of an item.
 			 *
 			 * @see [unicorn/prefer-array-index-of](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-index-of.md)
 			 */
 			"unicorn/prefer-array-index-of": ERROR,
 
 			/**
-			 * Prefer .some(…) over .filter(…).length check and .{find,findLast}(…).
+			 * Prefer `Array#some` over `Array#filter(…).length` check and `Array#find` or `Array#findLast`.
 			 *
 			 * @see [unicorn/prefer-array-some](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-some.md)
 			 */
 			"unicorn/prefer-array-some": ERROR,
 
 			/**
-			 * Prefer Date.now() to get the number of milliseconds since the Unix Epoch.
+			 * Prefer `Date.now` to get the number of milliseconds since the Unix Epoch.
 			 *
 			 * @see [unicorn/prefer-date-now](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-date-now.md)
 			 */
@@ -222,28 +222,28 @@ export const unicornRules = freeze(
 			"unicorn/prefer-default-parameters": ERROR,
 
 			/**
-			 * Prefer Node#append() over Node#appendChild().
+			 * Prefer `Node#append` over `Node#appendChild`.
 			 *
 			 * @see [unicorn/prefer-dom-node-append](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-dom-node-append.md)
 			 */
 			"unicorn/prefer-dom-node-append": ERROR,
 
 			/**
-			 * Prefer using .dataset on DOM elements over calling attribute methods.
+			 * Prefer using `Element.dataset` on DOM elements over calling attribute methods.
 			 *
 			 * @see [unicorn/prefer-dom-node-dataset](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-dom-node-dataset.md)
 			 */
 			"unicorn/prefer-dom-node-dataset": ERROR,
 
 			/**
-			 * Prefer childNode.remove() over parentNode.removeChild(childNode).
+			 * Prefer `ChildNode#remove` over `ParentNode#removeChild(childNode)`.
 			 *
 			 * @see [unicorn/prefer-dom-node-remove](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-dom-node-remove.md)
 			 */
 			"unicorn/prefer-dom-node-remove": ERROR,
 
 			/**
-			 * Prefer .textContent over .innerText.
+			 * Prefer `Element#textContent` over `Element#innerText`.
 			 *
 			 * @see [unicorn/prefer-dom-node-text-content](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-dom-node-text-content.md)
 			 */
@@ -257,21 +257,21 @@ export const unicornRules = freeze(
 			"unicorn/prefer-event-target": ERROR,
 
 			/**
-			 * Prefer export…from when re-exporting.
+			 * Prefer `export…from` when re-exporting.
 			 *
 			 * @see [unicorn/prefer-export-from](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-export-from.md)
 			 */
 			"unicorn/prefer-export-from": ERROR,
 
 			/**
-			 * Prefer .includes() over .indexOf() and Array#some() when checking for existence or non-existence.
+			 * Prefer `Array#includes` over `Array.indexOf` and `Array#some` when checking for existence or non-existence.
 			 *
 			 * @see [unicorn/prefer-includes](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-includes.md)
 			 */
 			"unicorn/prefer-includes": ERROR,
 
 			/**
-			 * Prefer KeyboardEvent#key over KeyboardEvent#keyCode.
+			 * Prefer `KeyboardEvent#key` over `KeyboardEvent#keyCode`.
 			 *
 			 * @see [unicorn/prefer-keyboard-event-key](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-keyboard-event-key.md)
 			 */
@@ -285,7 +285,13 @@ export const unicornRules = freeze(
 			"unicorn/prefer-logical-operator-over-ternary": ERROR,
 
 			/**
-			 * Prefer .before() over .insertBefore(), .replaceWith() over .replaceChild(), prefer one of .before(), .after(), .append() or .prepend() over insertAdjacentText() and insertAdjacentElement().
+			 * Modern DOM APIs enforcement:
+			 *
+			 * | Prefer…                                                                  | over…                                                              |
+			 * | ------------------------------------------------------------------------ | ------------------------------------------------------------------ |
+			 * | `Element#before`                                                         | `Element#insertBefore`                                             |
+			 * | `Element#replaceWith`                                                    | `Element#replaceChild`                                             |
+			 * | `Element#before`, `Element#after`, `Element#append` or `Element#prepend` | `Element#insertAdjacentText`() and `Element#insertAdjacentElement` |
 			 *
 			 * @see [unicorn/prefer-modern-dom-apis](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-modern-dom-apis.md)
 			 */
@@ -299,14 +305,14 @@ export const unicornRules = freeze(
 			"unicorn/prefer-modern-math-apis": ERROR,
 
 			/**
-			 * Prefer using the node: protocol when importing Node.js builtin modules.
+			 * Prefer using the `node:` protocol when importing Node.js builtin modules.
 			 *
 			 * @see [unicorn/prefer-node-protocol](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-node-protocol.md)
 			 */
 			"unicorn/prefer-node-protocol": ERROR,
 
 			/**
-			 * Prefer using Object.fromEntries(…) to transform a list of key-value pairs into an object.
+			 * Prefer using `Object.fromEntries` to transform a list of key-value pairs into an object.
 			 *
 			 * @see [unicorn/prefer-object-from-entries](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-object-from-entries.md)
 			 */
@@ -320,42 +326,47 @@ export const unicornRules = freeze(
 			"unicorn/prefer-optional-catch-binding": ERROR,
 
 			/**
-			 * Prefer .querySelector() over .getElementById(), .querySelectorAll() over .getElementsByClassName() and .getElementsByTagName().
+			 * Query selector preference:
+			 *
+			 * | Prefer…                    | over…                                                               |
+			 * | -------------------------- | ------------------------------------------------------------------- |
+			 * | `Element#querySelector`    | `Element#getElementById`                                            |
+			 * | `Element#querySelectorAll` | `Element#getElementsByClassName` and `Element#getElementsByTagName` |
 			 *
 			 * @see [unicorn/prefer-query-selector](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-query-selector.md)
 			 */
 			"unicorn/prefer-query-selector": ERROR,
 
 			/**
-			 * Prefer the spread operator over Array.from(…), Array#concat(…), Array#{slice,toSpliced}() and String#split('').
+			 * Prefer the spread operator over `Array.from`, `Array#concat`, `Array#slice`, `Array#toSpliced` and `String#split`.
 			 *
 			 * @see [unicorn/prefer-spread](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-spread.md)
 			 */
 			"unicorn/prefer-spread": ERROR,
 
 			/**
-			 * Prefer String#replaceAll() over regex searches with the global flag.
+			 * Prefer `String#replaceAll` over regex searches with the global flag.
 			 *
 			 * @see [unicorn/prefer-string-replace-all](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-string-replace-all.md)
 			 */
 			"unicorn/prefer-string-replace-all": ERROR,
 
 			/**
-			 * Prefer String#slice() over String#substr() and String#substring().
+			 * Prefer `String#slice` over `String#substr` and `String#substring`.
 			 *
 			 * @see [unicorn/prefer-string-slice](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-string-slice.md)
 			 */
 			"unicorn/prefer-string-slice": ERROR,
 
 			/**
-			 * Prefer String#startsWith() & String#endsWith() over RegExp#test().
+			 * Prefer `String#startsWith` & `String#endsWith` over `RegExp#test`.
 			 *
 			 * @see [unicorn/prefer-string-starts-ends-with](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-string-starts-ends-with.md)
 			 */
 			"unicorn/prefer-string-starts-ends-with": ERROR,
 
 			/**
-			 * Prefer String#trimStart() / String#trimEnd() over String#trimLeft() / String#trimRight().
+			 * Prefer `String#trimStart` and `String#trimEnd` over `String#trimLeft` and `String#trimRight`.
 			 *
 			 * @see [unicorn/prefer-string-trim-start-end](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-string-trim-start-end.md)
 			 */
@@ -376,7 +387,7 @@ export const unicornRules = freeze(
 			"unicorn/prefer-type-error": ERROR,
 
 			/**
-			 * Enforce using the separator argument with Array#join().
+			 * Enforce using the separator argument with `Array#join`.
 			 *
 			 * @see [unicorn/require-array-join-separator](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/require-array-join-separator.md)
 			 */

@@ -9,7 +9,7 @@ export const notDefined: Falsy = undefined;
 // @ts-expect-error Sadly there is not type for NaN, so it evaluates to `number`
 export const notANumber: Falsy = NaN;
 
-// This is the nasty fix for it...
+// This is the nasty fix for it…
 export const notANumberFixed: Falsy = NaN as Falsy;
 
 // @ts-expect-error True is not falsy.

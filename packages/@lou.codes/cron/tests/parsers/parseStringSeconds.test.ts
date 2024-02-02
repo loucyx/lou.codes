@@ -4,7 +4,7 @@ import { parseStringSeconds } from "../../src/parsers/parseStringSeconds.js";
 
 export const parseStringSecondsTests = [
 	{
-		given: "at second 10 of...",
+		given: "at second 10 of …",
 		must: "return *",
 		received: () => parseStringSeconds("10"),
 		wanted: () => 10,

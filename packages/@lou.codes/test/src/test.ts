@@ -21,7 +21,7 @@ import type { TestResult } from "./types/TestResult.js";
  * 	must: "🟩",
  * 	received: () => "❌",
  * 	wanted: () => "🟩",
- * }); // Promise<{ differences: [...], given: "🟢", , must: "🟩" }>
+ * }); // Promise<{ differences: […], given: "🟢", , must: "🟩" }>
  * ```
  * @param testDescription A `Test` object.
  * @returns A promise with a `TestResult` object.

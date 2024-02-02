@@ -4,7 +4,7 @@ import { parseCronSeconds } from "../../src/parsers/parseCronSeconds.js";
 
 export const parseCronSecondsTests = [
 	{
-		given: "at second 10 of...",
+		given: "at second 10 of …",
 		must: "return *",
 		received: () => parseCronSeconds(10),
 		wanted: () => "10",

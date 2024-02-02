@@ -8,7 +8,7 @@ import { parseStringDayOfMonth } from "../../src/parsers/parseStringDayOfMonth.j
 
 export const parseStringDayOfMonthTests = [
 	{
-		given: "on the 10th day of ...",
+		given: "on the 10th day of …",
 		must: "return 10",
 		received: () => parseStringDayOfMonth("10"),
 		wanted: () => 10,

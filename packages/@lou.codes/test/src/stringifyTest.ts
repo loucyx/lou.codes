@@ -15,7 +15,7 @@ import type { TestResult } from "./types/TestResult.js";
  * 	must: "🟩",
  * }); // "✓ Given 🟢, does 🟩."
  * stringifyTest({
- * 	differences: [...],
+ * 	differences: […],
  * 	given: "🟢",
  * 	must: "🟩",
  * }); // "× Given 🟢, must 🟩, but…"

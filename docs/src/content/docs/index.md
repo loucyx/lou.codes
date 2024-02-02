@@ -10,7 +10,7 @@ hero:
         <span class="inline-block aspect-[8/1] w-[6em] align-baseline bg-[url(/logo.svg)] bg-center bg-no-repeat text-transparent">Lou's Codes</span>
     tagline: Lou Cyx open-source libraries monorepo.
     image:
-        file: ../../assets/lou.webp
+        file: ../../assets/lou.svg
     actions:
         - text: Get started
           link: /guides/getting-started/

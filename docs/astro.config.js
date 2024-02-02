@@ -29,7 +29,8 @@ export default defineConfig({
 			],
 			logo: {
 				replacesTitle: true,
-				src: "./src/assets/lou.webp",
+				// eslint-disable-next-line id-denylist
+				src: "./src/assets/lou.svg",
 			},
 			pagination: false,
 			sidebar: [

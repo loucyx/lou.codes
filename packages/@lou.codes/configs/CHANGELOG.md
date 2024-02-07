@@ -1,5 +1,12 @@
 # Change log
 
+## 4.1.5
+
+### Patch Changes
+
+-   🏗️ change `assert` with `with`. This shouldn't break anything because the
+    required node version is 21 ;D
+
 ## 4.1.4
 
 ### Patch Changes

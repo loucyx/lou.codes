@@ -20,6 +20,7 @@ and maintain a cohesive ecosystem of tools and components.
     React.
 -   [🖇️ preact-pair][preact_pair] - Util to help with the paired hook pattern in
     Preact.
+-   [🔢 @lou.codes/constants][constants] - Shared constants.
 -   [⏲️ @lou.codes/cron][cron] - Cron Quartz and Cron UNIX expression parser.
 -   [↔️ @lou.codes/diff][diff] - Deep diffing utility.
 -   [🪟 window-open-promise][window-open-promise] - Promised
@@ -40,6 +41,7 @@ and maintain a cohesive ecosystem of tools and components.
 
 [react_pair]: https://lou.codes/libraries/react_pair/
 [preact_pair]: https://lou.codes/libraries/preact_pair/
+[constants]: https://lou.codes/libraries/lou_codes_constants/
 [cron]: https://lou.codes/libraries/lou_codes_cron/
 [diff]: https://lou.codes/libraries/lou_codes_diff/
 [window-open-promise]: https://lou.codes/libraries/window_open_promise/

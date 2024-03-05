@@ -6,7 +6,7 @@ import { controlSequenceIntroducer } from "./controlSequenceIntroducer.js";
  * @category Cursor
  * @example
  * ```typescript
- * cursorNextLine(13); // "\x1b[13E"
+ * cursorNextLine(13); // "\u001B[13E"
  * ```
  * @see {@link controlSequenceIntroducer}
  * @see [CSI (Control Sequence Introducer) sequences](https://en.wikipedia.org/wiki/ANSI_escape_code#CSI_.28Control_Sequence_Introducer.29_sequences)

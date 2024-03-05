@@ -9,9 +9,9 @@ import { foregroundColor } from "./foregroundColor.js";
  * **bright white** foreground.
  * @example
  * ```typescript
- * foregroundBrightWhite("Lou"); // "\x1b[97mLou\x1b[39m"
+ * foregroundBrightWhite("Lou"); // "\u001B[97mLou\u001B[39m"
  * // It can also be used as a tag function for tagged templates:
- * foregroundBrightWhite`Lou`; // "\x1b[97mLou\x1b[39m"
+ * foregroundBrightWhite`Lou`; // "\u001B[97mLou\u001B[39m"
  * ```
  * @see {@link foregroundColor}
  * @see [3-bit and 4-bit ANSI colors](https://en.wikipedia.org/wiki/ANSI_escape_code#3-bit_and_4-bit)

@@ -6,9 +6,9 @@ import { optionalFormat } from "./optionalFormat.js";
  * @category Text
  * @example
  * ```typescript
- * underlined("Lou"); // "\x1b[4mLou\x1b[24m"
+ * underlined("Lou"); // "\u001B[4mLou\u001B[24m"
  * // It can also be used as a tag function for tagged templates:
- * underlined`Lou`; // "\x1b[4mLou\x1b[24m"
+ * underlined`Lou`; // "\u001B[4mLou\u001B[24m"
  * ```
  * @see {@link optionalFormat}
  *

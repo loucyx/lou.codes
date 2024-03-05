@@ -9,9 +9,9 @@ import { optionalFormat } from "./optionalFormat.js";
  * **italic** around it.
  * @example
  * ```typescript
- * italic("Lou"); // "\x1b[3mLou\x1b[23m"
+ * italic("Lou"); // "\u001B[3mLou\u001B[23m"
  * // It can also be used as a tag function for tagged templates:
- * italic`Lou`; // "\x1b[3mLou\x1b[23m"
+ * italic`Lou`; // "\u001B[3mLou\u001B[23m"
  * ```
  * @see {@link optionalFormat}
  * @see [SGR (Select Graphic Rendition) parameters](https://en.wikipedia.org/wiki/ANSI_escape_code#SGR_.28Select_Graphic_Rendition.29_parameters)

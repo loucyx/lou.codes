@@ -8,7 +8,7 @@ import { escapeSequence } from "./escapeSequence.js";
  * Resets the entire screen to initial state.
  * @example
  * ```typescript
- * console.log(resetToInitialState); // "\x1b[c"
+ * console.log(resetToInitialState); // "\u001B[c"
  * stdout.write(resetToInitialState); // Resets the entire screen to initial state.
  * ```
  *

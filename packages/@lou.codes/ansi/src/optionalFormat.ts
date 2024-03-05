@@ -15,11 +15,11 @@ const thunkedNormalizeString = () => normalizeString;
  * @example
  * ```typescript
  * // In a environment with color:
- * optionalFormat(42)(13)("Lou"); // "\x1b[42mLou\x1b[13m"
+ * optionalFormat(42)(13)("Lou"); // "\u001B[42mLou\u001B[13m"
  * // In an environment without color:
  * optionalFormat(42)(13)("Lou"); // "Lou"
  * // It also works with tagged templates:
- * optionalFormat(42)(13)`Lou`; // "\x1b[42mLou\x1b[13m"
+ * optionalFormat(42)(13)`Lou`; // "\u001B[42mLou\u001B[13m"
  * ```
  * @see {@link format}
  * @see {@link normalizeString}

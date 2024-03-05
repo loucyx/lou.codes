@@ -9,9 +9,9 @@ import { optionalFormat } from "./optionalFormat.js";
  * **bold** around it.
  * @example
  * ```typescript
- * bold("Lou"); // "\x1b[1mLou\x1b[22m"
+ * bold("Lou"); // "\u001B[1mLou\u001B[22m"
  * // It can also be used as a tag function for tagged templates:
- * bold`Lou`; // "\x1b[1mLou\x1b[22m"
+ * bold`Lou`; // "\u001B[1mLou\u001B[22m"
  * ```
  * @see {@link optionalFormat}
  * @see [SGR (Select Graphic Rendition) parameters](https://en.wikipedia.org/wiki/ANSI_escape_code#SGR_.28Select_Graphic_Rendition.29_parameters)

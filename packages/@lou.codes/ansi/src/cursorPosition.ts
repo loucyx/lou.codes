@@ -6,9 +6,9 @@ import { controlSequenceIntroducer } from "./controlSequenceIntroducer.js";
  * @category Cursor
  * @example
  * ```typescript
- * cursorPosition([13, 42]); // "\x1b[13;42H"
- * cursorPosition([undefined, 42]); // "\x1b[;42H"
- * cursorPosition([13, undefined]); // "\x1b[13;H"
+ * cursorPosition([13, 42]); // "\u001B[13;42H"
+ * cursorPosition([undefined, 42]); // "\u001B[;42H"
+ * cursorPosition([13, undefined]); // "\u001B[13;H"
  * ```
  * @see {@link controlSequenceIntroducer}
  * @see [CSI (Control Sequence Introducer) sequences](https://en.wikipedia.org/wiki/ANSI_escape_code#CSI_.28Control_Sequence_Introducer.29_sequences)

@@ -9,9 +9,9 @@ import { optionalFormat } from "./optionalFormat.js";
  * @category Text
  * @example
  * ```typescript
- * dimmed("Lou"); // "\x1b[2mLou\x1b[22m"
+ * dimmed("Lou"); // "\u001B[2mLou\u001B[22m"
  * // It can also be used as a tag function for tagged templates:
- * dimmed`Lou`; // "\x1b[2mLou\x1b[22m"
+ * dimmed`Lou`; // "\u001B[2mLou\u001B[22m"
  * ```
  * @see {@link optionalFormat}
  * @see [SGR (Select Graphic Rendition) parameters](https://en.wikipedia.org/wiki/ANSI_escape_code#SGR_.28Select_Graphic_Rendition.29_parameters)

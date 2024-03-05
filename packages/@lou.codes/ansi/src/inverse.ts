@@ -9,9 +9,9 @@ import { optionalFormat } from "./optionalFormat.js";
  * **inverse** around it.
  * @example
  * ```typescript
- * inverse("Lou"); // "\x1b[7mLou\x1b[27m"
+ * inverse("Lou"); // "\u001B[7mLou\u001B[27m"
  * // It can also be used as a tag function for tagged templates:
- * inverse`Lou`; // "\x1b[7mLou\x1b[27m"
+ * inverse`Lou`; // "\u001B[7mLou\u001B[27m"
  * ```
  * @see {@link optionalFormat}
  * @see [SGR (Select Graphic Rendition) parameters](https://en.wikipedia.org/wiki/ANSI_escape_code#SGR_.28Select_Graphic_Rendition.29_parameters)

@@ -8,7 +8,7 @@ import { controlSequenceIntroducer } from "./controlSequenceIntroducer.js";
  * If the cursor is already at the edge of the screen, this has no effect.
  * @example
  * ```typescript
- * cursorDown(13); // "\x1b[13B"
+ * cursorDown(13); // "\u001B[13B"
  * ```
  * @see {@link controlSequenceIntroducer}
  * @see [CSI (Control Sequence Introducer) sequences](https://en.wikipedia.org/wiki/ANSI_escape_code#CSI_.28Control_Sequence_Introducer.29_sequences)

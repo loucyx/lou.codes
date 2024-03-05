@@ -6,9 +6,9 @@ import { optionalFormat } from "./optionalFormat.js";
  * @category Text
  * @example
  * ```typescript
- * strikethrough("Lou"); // "\x1b[9mLou\x1b[29m"
+ * strikethrough("Lou"); // "\u001B[9mLou\u001B[29m"
  * // It can also be used as a tag function for tagged templates:
- * strikethrough`Lou`; // "\x1b[9mLou\x1b[29m"
+ * strikethrough`Lou`; // "\u001B[9mLou\u001B[29m"
  * ```
  * @see {@link optionalFormat}
  *

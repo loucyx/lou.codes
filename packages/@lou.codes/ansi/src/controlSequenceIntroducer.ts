@@ -11,8 +11,8 @@ import { escapeSequence } from "./escapeSequence.js";
  * @example
  * ```typescript
  * const selectGraphicRendition = controlSequenceIntroducer("m");
- * selectGraphicRendition(13); // "\x1b[13m"
- * selectGraphicRendition(42); // "\x1b[42m"
+ * selectGraphicRendition(13); // "\u001B[13m"
+ * selectGraphicRendition(42); // "\u001B[42m"
  * ```
  * @see {@link escapeSequence}
  * @see [CSI (Control Sequence Introducer) sequences](https://en.wikipedia.org/wiki/ANSI_escape_code#CSI_.28Control_Sequence_Introducer.29_sequences)

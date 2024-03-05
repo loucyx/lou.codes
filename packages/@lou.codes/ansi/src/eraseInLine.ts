@@ -12,9 +12,9 @@ import { controlSequenceIntroducer } from "./controlSequenceIntroducer.js";
  * @category Erase
  * @example
  * ```typescript
- * eraseInLine(0); // "\x1b[0K" Clear from cursor to end of line.
- * eraseInLine(1); // "\x1b[1K" Clear from cursor to beginning of line.
- * eraseInLine(2); // "\x1b[2K" Clear entire line.
+ * eraseInLine(0); // "\u001B[0K" Clear from cursor to end of line.
+ * eraseInLine(1); // "\u001B[1K" Clear from cursor to beginning of line.
+ * eraseInLine(2); // "\u001B[2K" Clear entire line.
  * ```
  * @see [CSI (Control Sequence Introducer) sequences](https://en.wikipedia.org/wiki/ANSI_escape_code#CSI_.28Control_Sequence_Introducer.29_sequences)
  *

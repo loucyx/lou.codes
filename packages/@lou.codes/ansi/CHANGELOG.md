@@ -1,5 +1,11 @@
 # Change log
 
+## 1.0.12
+
+### Patch Changes
+
+-   📝 better docs of escape sequence.
+
 ## 1.0.11
 
 ### Patch Changes

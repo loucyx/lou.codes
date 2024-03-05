@@ -9,9 +9,9 @@ import { backgroundColor } from "./backgroundColor.js";
  * **bright blue** background around it.
  * @example
  * ```typescript
- * backgroundBrightBlue("Lou"); // "\x1b[104mLou\x1b[49m"
+ * backgroundBrightBlue("Lou"); // "\u001B[104mLou\u001B[49m"
  * // It can also be used as a tag function for tagged templates:
- * backgroundBrightBlue`Lou`; // "\x1b[104mLou\x1b[49m"
+ * backgroundBrightBlue`Lou`; // "\u001B[104mLou\u001B[49m"
  * ```
  * @see {@link backgroundColor}
  * @see [3-bit and 4-bit ANSI colors](https://en.wikipedia.org/wiki/ANSI_escape_code#3-bit_and_4-bit)

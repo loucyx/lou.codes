@@ -11,9 +11,9 @@ import { selectGraphicRendition } from "./selectGraphicRendition.js";
  * `input` (surrounded by `open` and `close`).
  * @example
  * ```typescript
- * format(13)(42)("Lou"); // "\x1b[42mLou\x1b[13m"
+ * format(13)(42)("Lou"); // "\u001B[42mLou\u001B[13m"
  * // It can also be used as a tag function for tagged templates:
- * format(13)(42)`Lou`; // "\x1b[42mLou\x1b[13m"
+ * format(13)(42)`Lou`; // "\u001B[42mLou\u001B[13m"
  * ```
  * @see {@link selectGraphicRendition}
  * @see {@link normalizeString}

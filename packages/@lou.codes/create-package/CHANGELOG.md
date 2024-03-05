@@ -1,5 +1,11 @@
 # Change log
 
+## 1.0.16
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.12`
+
 ## 1.0.15
 
 ### Patch Changes

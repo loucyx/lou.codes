@@ -9,9 +9,9 @@ import { optionalFormat } from "./optionalFormat.js";
  * ANSI codes to that string (for background color).
  * @example
  * ```typescript
- * backgroundColor(13)("Lou"); // "\x1b[13mLou\x1b[49m"
+ * backgroundColor(13)("Lou"); // "\u001B[13mLou\u001B[49m"
  * // It can also be used as a tag function for tagged templates:
- * backgroundColor(13)`Lou`; // "\x1b[13mLou\x1b[49m"
+ * backgroundColor(13)`Lou`; // "\u001B[13mLou\u001B[49m"
  * ```
  * @see {@link optionalFormat}
  * @see [3-bit and 4-bit ANSI colors](https://en.wikipedia.org/wiki/ANSI_escape_code#3-bit_and_4-bit)

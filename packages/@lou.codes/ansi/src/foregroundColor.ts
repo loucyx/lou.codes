@@ -9,9 +9,9 @@ import { optionalFormat } from "./optionalFormat.js";
  * ANSI codes to that string (for foreground color).
  * @example
  * ```typescript
- * foregroundColor(13)("Lou"); // "\x1b[13mLou\x1b[39m"
+ * foregroundColor(13)("Lou"); // "\u001B[13mLou\u001B[39m"
  * // It can also be used as a tag function for tagged templates:
- * foregroundColor(13)`Lou`; // "\x1b[13mLou\x1b[39m"
+ * foregroundColor(13)`Lou`; // "\u001B[13mLou\u001B[39m"
  * ```
  * @see {@link optionalFormat}
  * @see [3-bit and 4-bit ANSI colors](https://en.wikipedia.org/wiki/ANSI_escape_code#3-bit_and_4-bit)

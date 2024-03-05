@@ -1,5 +1,6 @@
 import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
+import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
 import { defineConfig } from "astro/config";
 import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
 import rehypeExternalLinks from "rehype-external-links";
@@ -12,6 +13,10 @@ export default defineConfig({
 		starlight({
 			customCss: ["./src/tailwind.css"],
 			expressiveCode: {
+				defaultProps: {
+					wrap: true,
+				},
+				plugins: [pluginLineNumbers()],
 				styleOverrides: {
 					codeFontFamily: "MonaspaceArgon, monospace",
 					uiFontFamily: "MonaspaceArgon, monospace",

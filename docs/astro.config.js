@@ -13,9 +13,7 @@ export default defineConfig({
 		starlight({
 			customCss: ["./src/tailwind.css"],
 			expressiveCode: {
-				defaultProps: {
-					wrap: true,
-				},
+				defaultProps: { wrap: false },
 				plugins: [pluginLineNumbers()],
 				styleOverrides: {
 					codeFontFamily: "MonaspaceArgon, monospace",

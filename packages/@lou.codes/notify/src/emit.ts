@@ -1,6 +1,5 @@
 import { EMPTY_ARRAY } from "@lou.codes/constants";
 import { forEach, type ReadOnlyIterable } from "@lou.codes/iterables";
-import type { KeyOf } from "@lou.codes/types";
 import { applyTo } from "@lou.codes/utils";
 import type { Emitter } from "./Emitter.js";
 import type { EventListener } from "./EventListener.js";
@@ -40,7 +39,7 @@ export const emit =
 	 * @param event Event name (has to be a valid key of the `eventRegistry`).
 	 * @returns Curried function with `eventRegistry` and `event` in context.
 	 */
-	<Event extends KeyOf<Events>>(event: Event) =>
+	<Event extends keyof Events>(event: Event) =>
 		/**
 		 * Emits the `event` in context of the `eventRegistry` in context.
 		 *

@@ -1,6 +1,6 @@
 import { EMPTY_ARRAY } from "@lou.codes/constants";
 import { filter } from "@lou.codes/iterables";
-import type { KeyOf, ReadOnlyArray } from "@lou.codes/types";
+import type { ReadOnlyArray } from "@lou.codes/types";
 import { mutate, set } from "@lou.codes/utils";
 import type { EventListener } from "./EventListener.js";
 import type { EventRegistry } from "./EventRegistry.js";
@@ -46,7 +46,7 @@ export const on =
 	 * @param event Event name (has to be a valid key of the `eventRegistry`).
 	 * @returns Curried function with `eventRegistry` and `event` in context.
 	 */
-	<Event extends KeyOf<Events>>(event: Event) =>
+	<Event extends keyof Events>(event: Event) =>
 	/**
 	 * Listens for calls of the `event` in context of the `eventRegistry` in
 	 * context.

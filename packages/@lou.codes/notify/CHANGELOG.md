@@ -1,5 +1,12 @@
 # Change log
 
+## 1.0.14
+
+### Patch Changes
+
+-   🐛 `KeyOf` is now bugged in TS. Gotta love breaking changes in minor
+    versions 😑.
+
 ## 1.0.13
 
 ### Patch Changes

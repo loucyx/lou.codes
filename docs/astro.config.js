@@ -9,6 +9,7 @@ import vitePluginLightningCSS from "vite-plugin-lightningcss";
 
 // eslint-disable-next-line import/no-default-export
 export default defineConfig({
+	experimental: { directRenderScript: true },
 	integrations: [
 		starlight({
 			customCss: ["./src/tailwind.css"],

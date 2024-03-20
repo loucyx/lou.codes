@@ -127,31 +127,6 @@ export const coreRules = freeze(
 			complexity: [ERROR, 20],
 
 			/**
-			 * Require functions to either always return, or never.
-			 *
-			 * @example
-			 * ```typescript
-			 * // ❌ Incorrect
-			 * const example = (hi = false) => {
-			 * 	if (hi) {
-			 * 		return "Hello, world!";
-			 * 	}
-			 * }
-			 *
-			 * // ✅ Correct
-			 * const example = (hi = false) => {
-			 * 	if (hi) {
-			 * 		return "Hello, world!";
-			 * 	} else {
-			 * 		return "Goodbye, world!";
-			 * 	}
-			 * }
-			 * ```
-			 * @see [consistent-return](https://eslint.org/docs/latest/rules/consistent-return)
-			 */
-			"consistent-return": ERROR,
-
-			/**
 			 * Require curly around all control statements.
 			 *
 			 * @example

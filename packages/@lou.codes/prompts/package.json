@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/prompts",
 	"description": "⁉️ CLI interactive prompts",
-	"version": "1.0.12",
+	"version": "1.0.13",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",

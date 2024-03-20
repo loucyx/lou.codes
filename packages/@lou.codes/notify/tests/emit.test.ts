@@ -1,7 +1,7 @@
 import type { Tests } from "@lou.codes/test";
 import { emit } from "../src/emit.js";
 
-const TEST_EVENT = "test" as const;
+const TEST_EVENT = "test";
 
 type TestRegistry = { [TEST_EVENT]: never };
 

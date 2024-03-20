@@ -1,7 +1,7 @@
 {
 	"name": "preact-pair",
 	"description": "🖇️ Util to help with the paired hook pattern",
-	"version": "1.0.76",
+	"version": "1.0.77",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -16,8 +16,8 @@
 		"@lou.codes/utils": "workspace:*"
 	},
 	"devDependencies": {
-		"preact": "^10.19.6",
-		"preact-render-to-string": "^6.4.0"
+		"preact": "^10.20.0",
+		"preact-render-to-string": "^6.4.1"
 	},
 	"engines": {
 		"node": ">=21",

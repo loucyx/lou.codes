@@ -48,7 +48,7 @@ export const questionTests = [
 		must: "get the error back",
 		received: () =>
 			testQuestion({ query: "Lou", validate: () => "Error" }).catch(
-				(error: string) => error,
+				(error: unknown) => error as string,
 			),
 		wanted: () => "Error",
 	},
@@ -81,7 +81,7 @@ export const questionTests = [
 				format: value => value.toLocaleUpperCase("en-US"),
 				query: "Lou",
 				validate: value => `Error ${value}`,
-			}).catch((error: string) => error),
+			}).catch((error: unknown) => error as string),
 		wanted: () => "Error LOU",
 	},
 	{

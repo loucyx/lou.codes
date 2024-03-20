@@ -29,7 +29,7 @@ export const windowOpenPromiseTests = [
 				scrollbars: false,
 				target: "target",
 				url: "url",
-			}).catch(_ => "Error"),
+			}).catch((_: unknown) => "Error"),
 		wanted: () =>
 			({
 				features:
@@ -50,7 +50,7 @@ export const windowOpenPromiseTests = [
 				scrollbars: false,
 				target: "target",
 				url: "url",
-			}).catch(_ => "Error"),
+			}).catch((_: unknown) => "Error"),
 		wanted: () => "Error" as unknown as Window,
 	},
 ] satisfies Tests<Window | string>;

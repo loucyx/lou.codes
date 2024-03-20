@@ -1,5 +1,11 @@
 # Change log
 
+## 1.2.2
+
+### Patch Changes
+
+-   🚨 apply new linting rules.
+
 ## 1.2.1
 
 ### Patch Changes

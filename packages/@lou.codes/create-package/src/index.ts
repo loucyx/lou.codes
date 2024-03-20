@@ -44,20 +44,19 @@ void getPackageConfiguration()
 							query: bold`Description:`,
 							retry: true,
 							validate: hasValidLength(1)(58),
-						}),
-					)
-					.then(description =>
-						copyTemplates({
-							description,
-							name,
-							packageConfiguration,
-						}),
+						}).then(description =>
+							copyTemplates({
+								description,
+								name,
+								packageConfiguration,
+							}),
+						),
 					),
 			)
 			.then(doneMessage)
 			// eslint-disable-next-line no-console
 			.then(console.log)
-			// eslint-disable-next-line no-console
+			// eslint-disable-next-line no-console, @typescript-eslint/use-unknown-in-catch-callback-variable
 			.catch(console.error)
 			.finally(() => readlineInterface.close()),
 	);

@@ -3,10 +3,10 @@ import type { ReadOnlyRecord } from "@lou.codes/types";
 import { entriesToObject } from "../src/entriesToObject.js";
 import { iterateArray } from "./utils.js";
 
-const stringKey = "key" as const;
-const numberKey = 1 as const;
+const stringKey = "key";
+const numberKey = 1;
 const symbolKey = Symbol("key");
-const value = "value" as const;
+const value = "value";
 
 export const entriesToObjectTests = [
 	{

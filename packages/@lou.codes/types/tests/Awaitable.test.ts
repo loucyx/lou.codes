@@ -16,7 +16,7 @@ export const testValueFunction = (maybePromise: AwaitableString) =>
 	Promise.resolve(maybePromise)
 		// `value` is a `string` as expected.
 		.then(value => value.charAt(0))
-		// eslint-disable-next-line no-console
+		// eslint-disable-next-line no-console, @typescript-eslint/use-unknown-in-catch-callback-variable
 		.catch(console.error);
 
 export const testArrayFunction = (
@@ -25,5 +25,5 @@ export const testArrayFunction = (
 	Promise.all(promiseArray)
 		// `item` is a `string` as expected.
 		.then(plainArray => plainArray.map(item => item.charAt(0)))
-		// eslint-disable-next-line no-console
+		// eslint-disable-next-line no-console, @typescript-eslint/use-unknown-in-catch-callback-variable
 		.catch(console.error);

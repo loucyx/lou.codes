@@ -14,7 +14,7 @@ import { getDescription } from "./getDescription.js";
  */
 export const patchAttributes = (attributes: ReadOnlyArray<IAttributeData>) =>
 	Object.values(
-		attributes.reduce(
+		attributes.reduce<ReadOnlyRecord<string, IAttributeData>>(
 			(patchedAttributes, attribute) => ({
 				...patchedAttributes,
 				[attribute.name]: {
@@ -34,7 +34,7 @@ export const patchAttributes = (attributes: ReadOnlyArray<IAttributeData>) =>
 					:	attribute),
 				} as IAttributeData,
 			}),
-			EMPTY_OBJECT as ReadOnlyRecord<string, IAttributeData>,
+			EMPTY_OBJECT,
 		),
 	).toSorted((attributeA, attributeB) =>
 		attributeA.name.localeCompare(attributeB.name),

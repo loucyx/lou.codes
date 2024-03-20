@@ -3,7 +3,7 @@ import type { EmptyRecord } from "../src/EmptyRecord.js";
 import type { EmptyString } from "../src/EmptyString.js";
 import type { NotEmpty } from "../src/NotEmpty.js";
 
-export const circle: NotEmpty<EmptyString | "🟢"> = "🟢" as const;
+export const circle: NotEmpty<EmptyString | "🟢"> = "🟢";
 
 // @ts-expect-error `EmptyString` is `Empty`
 export const notEmptyString: NotEmpty<EmptyString> = "";

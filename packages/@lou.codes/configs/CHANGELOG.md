@@ -1,5 +1,16 @@
 # Change log
 
+## 4.2.0
+
+### Minor Changes
+
+-   🔧 add new rules for consistent-return, reduce type parameter and unknown in
+    catch callback.
+
+### Patch Changes
+
+-   ⬆️ dependency upgrade.
+
 ## 4.1.14
 
 ### Patch Changes

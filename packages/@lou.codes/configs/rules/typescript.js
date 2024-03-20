@@ -188,6 +188,46 @@ export const typescriptRules = freeze(
 			],
 
 			/**
+			 * Require `return` statements to either always or never specify values.
+			 *
+			 * @example
+			 * ```typescript
+			 * // ❌ Incorrect
+			 * const foo = (): undefined => {}
+			 * const bar = (flag: boolean): undefined => {
+			 * 	if (flag) {
+			 * 		return foo()
+			 * 	}
+			 * 	return;
+			 * }
+			 * const baz = async (flag: boolean): Promise<undefined> {
+			 * 	if (flag) {
+			 * 		return;
+			 *  }
+			 * 	return foo();
+			 * }
+			 *
+			 * // ✅ Correct
+			 * const foo = (): void => {}
+			 * const bar = (flag: boolean): void => {
+			 * 	if (flag) {
+			 * 		return foo()
+			 * 	}
+			 * 	return;
+			 * }
+			 * const baz = async (flag: boolean): Promise<void | number> {
+			 * 	if (flag) {
+			 * 		return 42;
+			 *  }
+			 * 	return;
+			 * }
+			 * ```
+			 * @see [@typescript-eslint/consistent-return](https://typescript-eslint.io/rules/consistent-return)
+			 * @see [consistent-return](https://eslint.org/docs/latest/rules/consistent-return)
+			 */
+			"@typescript-eslint/consistent-return": ERROR,
+
+			/**
 			 * Use `as` assertion.
 			 *
 			 * @example
@@ -378,7 +418,12 @@ export const typescriptRules = freeze(
 				{
 					format: ["camelCase"],
 					leadingUnderscore: "allow",
-					selector: ["parameter", "classProperty", "classMethod"],
+					selector: [
+						"autoAccessor",
+						"parameter",
+						"classProperty",
+						"classMethod",
+					],
 					trailingUnderscore: "forbid",
 				},
 				{
@@ -1090,19 +1135,52 @@ export const typescriptRules = freeze(
 			"@typescript-eslint/prefer-readonly": ERROR,
 
 			/**
-			 * Use `startsWith` and `endsWith` instead of the string index.
+			 * Enforce using type parameter when calling `Array#reduce` instead of casting.
 			 *
 			 * @example
 			 * ```typescript
 			 * // ❌ Incorrect
-			 * foo[0] === "b";
-			 * foo.indexOf("bar") === 0;
+			 * [1, 2, 3].reduce((array, item) => [...array, item * 2], [] as ReadonlyArray<number>);
 			 *
 			 * // ✅ Correct
-			 * foo.startsWith("b");
-			 * foo.startsWith("bar");
+			 * [1, 2, 3].reduce<ReadonlyArray<number>>((array, item) => [...array, item * 2], []);
 			 * ```
-			 * @see [@typescript-eslint/prefer-string-starts-ends-with](https://typescript-eslint.io/rules/prefer-string-starts-ends-with/)
+			 * @see [@typescript-eslint/prefer-reduce-type-parameter](https://typescript-eslint.io/rules/prefer-reduce-type-parameter)
+			 */
+			"@typescript-eslint/prefer-reduce-type-parameter": ERROR,
+
+			/**
+			 * Enforce using `String#startsWith` and `String#endsWith` over other equivalent methods of checking substrings.
+			 *
+			 * @example
+			 * ```typescript
+			 * // ❌ Incorrect
+			 * // starts with
+			 * foo[0] === 'b';
+			 * foo.charAt(0) === 'b';
+			 * foo.indexOf('bar') === 0;
+			 * foo.slice(0, 3) === 'bar';
+			 * foo.substring(0, 3) === 'bar';
+			 * foo.match(/^bar/) != null;
+			 * /^bar/.test(foo);
+			 *
+			 * // ends with
+			 * foo[foo.length - 1] === 'b';
+			 * foo.charAt(foo.length - 1) === 'b';
+			 * foo.lastIndexOf('bar') === foo.length - 3;
+			 * foo.slice(-3) === 'bar';
+			 * foo.substring(foo.length - 3) === 'bar';
+			 * foo.match(/bar$/) != null;
+			 * /bar$/.test(foo);
+			 *
+			 * // ✅ Correct
+			 * // starts with
+			 * foo.startsWith('bar');
+			 *
+			 * // ends with
+			 * foo.endsWith('bar');
+			 * ```
+			 * @see [@typescript-eslint/prefer-string-starts-ends-with](https://typescript-eslint.io/rules/prefer-string-starts-ends-with)
 			 */
 			"@typescript-eslint/prefer-string-starts-ends-with": ERROR,
 
@@ -1242,12 +1320,47 @@ export const typescriptRules = freeze(
 			"@typescript-eslint/unified-signatures": ERROR,
 
 			/**
+			 * Enforce typing arguments in `.catch()` callbacks as `unknown`.
+			 *
+			 * @example
+			 * ```typescript
+			 * // ❌ Incorrect
+			 * Promise.reject(new Error('I will reject!')).catch(error => {
+			 * 	console.log(error);
+			 * });
+			 *
+			 * Promise.reject(new Error('I will reject!')).catch((error: any) => {
+			 * 	console.log(error);
+			 * });
+			 *
+			 * Promise.reject(new Error('I will reject!')).catch((error: Error) => {
+			 * 	console.log(error);
+			 * });
+			 *
+			 * // ✅ Correct
+			 * Promise.reject(new Error('I will reject!')).catch((error: unknown) => {
+			 * 	console.log(error);
+			 * });
+			 * ```
+			 * @see [@typescript-eslint/use-unknown-in-catch-callback-variable](https://typescript-eslint.io/rules/use-unknown-in-catch-callback-variable/)
+			 */
+			"@typescript-eslint/use-unknown-in-catch-callback-variable": ERROR,
+
+			/**
 			 * Handled by `@typescript-eslint/naming-convention`.
 			 *
 			 * @see [@typescript-eslint/naming-convention](https://typescript-eslint.io/rules/naming-convention/)
 			 * @see [camelcase](https://eslint.org/docs/rules/camelcase)
 			 */
 			camelcase: OFF,
+
+			/**
+			 * Handled by `@typescript-eslint/consistent-return`.
+			 *
+			 * @see [@typescript-eslint/consistent-return](https://typescript-eslint.io/rules/consistent-return/)
+			 * @see [consistent-return](https://eslint.org/docs/rules/consistent-return)
+			 */
+			"consistent-return": OFF,
 
 			/**
 			 * Handled by `@typescript-eslint/dot-notation`.

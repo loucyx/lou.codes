@@ -3,7 +3,7 @@ import type { InitialAndLast } from "../src/InitialAndLast.js";
 const array = ["🟢", "🟩", "💚"];
 const emptyArray = [] as const;
 const triple = ["🟢", "🟩", "💚"] as const;
-const string = "Lou" as const;
+const string = "Lou";
 const emptyString = "";
 const looseString = "Lou" as string;
 

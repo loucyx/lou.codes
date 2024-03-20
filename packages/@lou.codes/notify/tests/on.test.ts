@@ -5,7 +5,7 @@ import type { EventListener } from "../src/EventListener.js";
 import type { EventRegistry } from "../src/EventRegistry.js";
 import { on } from "../src/on.js";
 
-const TEST_EVENT = "test" as const;
+const TEST_EVENT = "test";
 
 const registry: EventRegistry<{ [TEST_EVENT]: never }> = {};
 

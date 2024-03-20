@@ -8,10 +8,10 @@ export const emptyRecord: Empty = {} as const;
 export const number: Empty = 0;
 
 // @ts-expect-error String should be empty
-export const circle: Empty = "🟢" as const;
+export const circle: Empty = "🟢";
 
 // @ts-expect-error String should be empty
-export const space: Empty = " " as const;
+export const space: Empty = " ";
 
 // @ts-expect-error Array should be empty
 export const numberArray: Empty = [0, 1, 2] as const;

@@ -52,5 +52,7 @@ void readFile(packageJSONPath, "utf8")
 			),
 	)
 	.then(() => exit(0))
-	// eslint-disable-next-line no-console
-	.catch(error => (console.error(error), exit(1)));
+	.catch(
+		// eslint-disable-next-line no-console
+		/** @param {unknown} error */ error => (console.error(error), exit(1)),
+	);

@@ -1,4 +1,4 @@
-import type { ReadOnly, ReadOnlyArray } from "@lou.codes/types";
+import type { ReadOnlyArray } from "@lou.codes/types";
 import { resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { getFilePaths } from "../src/bin/getFilePaths.js";
@@ -51,7 +51,7 @@ export const getFilePathsTests = [
 		received: () =>
 			iterableToArray(
 				getFilePaths(currentDirectoryURLResolve("../nope")),
-			).catch((error: ReadOnly<Error>) => error.message),
+			).catch((error: unknown) => (error as Error).message),
 		wanted: () =>
 			`ENOENT: no such file or directory, stat '${currentDirectoryURLResolve(
 				"../nope",

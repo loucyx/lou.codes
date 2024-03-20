@@ -44,7 +44,7 @@ export type HTMLElementTagGlobalAttributes = ReadOnlyRecord<string, string> & {$
 )
 	// eslint-disable-next-line no-console
 	.then(() => console.log("HTMLElementTagGlobalAttributes.ts updated."))
-	// eslint-disable-next-line no-console
+	// eslint-disable-next-line no-console, @typescript-eslint/use-unknown-in-catch-callback-variable
 	.catch(console.error);
 
 writeFile(
@@ -87,5 +87,5 @@ export type HTMLElementTagAttributeMap = ReadOnlyRecord<
 )
 	// eslint-disable-next-line no-console
 	.then(() => console.log("HTMLElementTagAttributeMap.ts updated."))
-	// eslint-disable-next-line no-console
+	// eslint-disable-next-line no-console, @typescript-eslint/use-unknown-in-catch-callback-variable
 	.catch(console.error);

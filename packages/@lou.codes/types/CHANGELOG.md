@@ -1,5 +1,12 @@
 # Change log
 
+## 1.1.5
+
+### Patch Changes
+
+-   🚨 apply new linting rules.
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.2.2`
+
 ## 1.1.4
 
 ### Patch Changes

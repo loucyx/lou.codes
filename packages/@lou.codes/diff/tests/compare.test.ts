@@ -21,7 +21,9 @@ export const compareTests = test(import.meta.url)(
 		given: "two different strings",
 		must: "return differences",
 		received: () => arrayCompare({ left: "🟢", right: "❌" }),
-		wanted: () => [{ kind: UPDATE, left: "🟢", path: [], right: "❌" }],
+		wanted: () => [
+			{ kind: UPDATE, left: "🟢", path: [], right: "❌" } as const,
+		],
 	},
 	{
 		given: "two equal arrays",
@@ -33,7 +35,9 @@ export const compareTests = test(import.meta.url)(
 		given: "two different arrays",
 		must: "return differences",
 		received: () => arrayCompare({ left: ["🟢"], right: ["❌"] }),
-		wanted: () => [{ kind: UPDATE, left: "🟢", path: [0], right: "❌" }],
+		wanted: () => [
+			{ kind: UPDATE, left: "🟢", path: [0], right: "❌" } as const,
+		],
 	},
 	{
 		given: "two equal objects",
@@ -48,7 +52,7 @@ export const compareTests = test(import.meta.url)(
 		received: () =>
 			arrayCompare({ left: { foo: "🟢" }, right: { foo: "❌" } }),
 		wanted: () => [
-			{ kind: UPDATE, left: "🟢", path: ["foo"], right: "❌" },
+			{ kind: UPDATE, left: "🟢", path: ["foo"], right: "❌" } as const,
 		],
 	},
 	{
@@ -57,8 +61,8 @@ export const compareTests = test(import.meta.url)(
 		received: () =>
 			arrayCompare({ left: { foo: "🟢" }, right: { bar: "🟢" } }),
 		wanted: () => [
-			{ kind: DELETE, left: "🟢", path: ["foo"] },
-			{ kind: CREATE, path: ["bar"], right: "🟢" },
+			{ kind: DELETE, left: "🟢", path: ["foo"] } as const,
+			{ kind: CREATE, path: ["bar"], right: "🟢" } as const,
 		],
 	},
 	{
@@ -69,7 +73,9 @@ export const compareTests = test(import.meta.url)(
 				left: [{ foo: "🟢" }],
 				right: [{ foo: "🟢" }, { bar: "❌" }],
 			}),
-		wanted: () => [{ kind: CREATE, path: [1], right: { bar: "❌" } }],
+		wanted: () => [
+			{ kind: CREATE, path: [1], right: { bar: "❌" } } as const,
+		],
 	},
 	{
 		given: "left array with an extra item",
@@ -79,7 +85,9 @@ export const compareTests = test(import.meta.url)(
 				left: [{ foo: "🟢" }, { bar: "❌" }],
 				right: [{ foo: "🟢" }],
 			}),
-		wanted: () => [{ kind: DELETE, left: { bar: "❌" }, path: [1] }],
+		wanted: () => [
+			{ kind: DELETE, left: { bar: "❌" }, path: [1] } as const,
+		],
 	},
 	{
 		given: "two equal dates",

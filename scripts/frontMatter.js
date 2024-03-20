@@ -8,7 +8,14 @@ import { packageNameToTitle } from "./packageNameToTitle.js";
  * 	readonly title: string;
  * }} options
  */
-export const frontMatter = ({ description, title }) => `---
+export const frontMatter = ({ description, title }) => {
+	const camelCaseTitle = title
+		.replace("@lou.codes/", "")
+		.replaceAll(/(?<hyphenLetter>-.)/gu, hyphenLetter =>
+			hyphenLetter.replace("-", "").toLocaleUpperCase(),
+		);
+
+	return `---
 ${stringify(
 	{
 		description,
@@ -23,9 +30,9 @@ ${stringify(
 								() =>
 									void import("https://esm.sh/${title}?bundle")
 										.then(
-											library => (
-												Object.assign(globalThis, library),
-												console.log("${title} loaded in globalThis")
+											${camelCaseTitle} => (
+												Object.assign(globalThis, { ${camelCaseTitle} }),
+												console.log("${title} loaded in globalThis.${camelCaseTitle}")
 											),
 										)
 										.catch(() => console.error("${title} couldn't be loaded")),
@@ -44,3 +51,4 @@ ${stringify(
 	{ indent: 4 },
 )}
 ---`;
+};

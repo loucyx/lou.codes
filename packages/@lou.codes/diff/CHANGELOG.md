@@ -1,5 +1,13 @@
 # Change log
 
+## 1.0.13
+
+### Patch Changes
+
+-   🚨 fix linting issues.
+-   ⬆️ dependency upgrade.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.6`
+
 ## 1.0.12
 
 ### Patch Changes

@@ -28,7 +28,8 @@ declare module "@typescript-eslint/parser" {
 	// eslint-disable-next-line import/no-default-export
 	export default parserModule;
 }
-declare module "eslint-plugin-functional" {
+// FIXME: eslint-plugin-functional provides its own types, but they are broken af
+declare module "eslint-plugin-functional/flat" {
 	import type { ESLint, Linter } from "eslint";
 
 	const plugin: ESLint.Plugin & {

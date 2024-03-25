@@ -16,6 +16,7 @@ import type { Function } from "./Function.js";
  * @see [typeof null bug](https://lou.cx/null-bug)
  * @see [typeof typeof rejected proposal](https://lou.cx/null-typeof)
  */
+// eslint-disable-next-line functional/no-mixed-types
 export type TypeOfDictionary = {
 	/** {@link TypeOfDictionary} key for `BigInt` */
 	readonly bigint: bigint;

@@ -16,7 +16,7 @@ export default /** @type {const} @satisfies {ReadonlyArray<import("eslint").Lint
 	coreRules,
 	typescriptRules,
 	// Da rest
-	...functionalRules,
+	functionalRules,
 	importRules,
 	preferArrowFunctionsRules,
 	prettierRules,

@@ -1,5 +1,12 @@
 # Change log
 
+## 1.1.6
+
+### Patch Changes
+
+-   🚨 fix linting issues.
+-   ⬆️ dependency upgrade.
+
 ## 1.1.5
 
 ### Patch Changes

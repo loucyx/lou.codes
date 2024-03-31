@@ -76,7 +76,7 @@ export const testTests = [
 				given: "🟢",
 				must: "🟩",
 				received: () => {
-					// eslint-disable-next-line functional/no-throw-statements, no-throw-literal, @typescript-eslint/no-throw-literal
+					// eslint-disable-next-line functional/no-throw-statements, @typescript-eslint/only-throw-error
 					throw undefined;
 				},
 				wanted: () => "🟩",

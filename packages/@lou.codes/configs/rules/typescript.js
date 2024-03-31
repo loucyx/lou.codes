@@ -836,22 +836,6 @@ export const typescriptRules = freeze(
 			"@typescript-eslint/no-this-alias": ERROR,
 
 			/**
-			 * If you'll throw, throw errors, not literals.
-			 *
-			 * @example
-			 * ```typescript
-			 * // ❌ Incorrect
-			 * throw 'foo';
-			 *
-			 * // ✅ Correct
-			 * throw new Error('foo');
-			 * ```
-			 * @see [@typescript-eslint/no-throw-literal](https://typescript-eslint.io/rules/no-throw-literal/)
-			 * @see [no-throw-literal](https://eslint.org/docs/latest/rules/no-throw-literal)
-			 */
-			"@typescript-eslint/no-throw-literal": ERROR,
-
-			/**
 			 * If it's a `boolean`, use it as such.
 			 *
 			 * @example
@@ -1009,6 +993,22 @@ export const typescriptRules = freeze(
 			 * @see [@typescript-eslint/no-var-requires](https://typescript-eslint.io/rules/no-var-requires/)
 			 */
 			"@typescript-eslint/no-var-requires": ERROR,
+
+			/**
+			 * If you'll throw, throw errors, not literals.
+			 *
+			 * @example
+			 * ```typescript
+			 * // ❌ Incorrect
+			 * throw 'foo';
+			 *
+			 * // ✅ Correct
+			 * throw new Error('foo');
+			 * ```
+			 * @see [@typescript-eslint/only-throw-error](https://typescript-eslint.io/rules/only-throw-error/)
+			 * @see [no-throw-literal](https://eslint.org/docs/latest/rules/no-throw-literal)
+			 */
+			"@typescript-eslint/only-throw-error": ERROR,
 
 			/**
 			 * Use `as const` instead of writing `"value" as "value"`.

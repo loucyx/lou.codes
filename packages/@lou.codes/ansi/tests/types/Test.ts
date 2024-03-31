@@ -1,5 +1,6 @@
 import type { Awaitable } from "@lou.codes/types";
 
+// eslint-disable-next-line functional/no-mixed-types
 export type Test<Value = unknown> = {
 	/** Given description. */
 	readonly given: string;

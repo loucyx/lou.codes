@@ -1,5 +1,9 @@
 {
 	"extends": "@lou.codes/configs/typescript.config.json",
-	"compilerOptions": { "jsxFactory": "h", "outDir": "./dist" },
+	"compilerOptions": {
+		"jsx": "react",
+		"jsxFactory": "h",
+		"outDir": "./dist"
+	},
 	"include": ["./src/**/*.ts", "./tests/**/*.tsx"]
 }

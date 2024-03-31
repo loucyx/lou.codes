@@ -9,7 +9,7 @@ import type { Difference } from "./Difference.js";
  * @example
  * ```typescript
  * const deleteDifference: DeleteDifference<string> = {
- * 	kind: "DELETE",
+ * 	kind: 2,
  * 	path: ["foo", "bar"],
  * 	left: "Lou"
  * };

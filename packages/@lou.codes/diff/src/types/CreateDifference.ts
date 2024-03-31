@@ -9,7 +9,7 @@ import type { Difference } from "./Difference.js";
  * @example
  * ```typescript
  * const createDifference: CreateDifference<string> = {
- * 	kind: "CREATE",
+ * 	kind: 1,
  * 	path: ["foo", "bar"],
  * 	right: "Lou"
  * };

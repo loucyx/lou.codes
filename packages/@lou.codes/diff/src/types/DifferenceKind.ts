@@ -6,9 +6,9 @@ import type { CREATE, DELETE, UPDATE } from "../constants.js";
  * @category Difference
  * @example
  * ```typescript
- * const create: DifferenceKind = "CREATE";
- * const delete: DifferenceKind = "DELETE";
- * const update: DifferenceKind = "UPDATE";
+ * const create: DifferenceKind = 1;
+ * const delete: DifferenceKind = 2;
+ * const update: DifferenceKind = 4;
  * ```
  */
 export type DifferenceKind = typeof CREATE | typeof DELETE | typeof UPDATE;

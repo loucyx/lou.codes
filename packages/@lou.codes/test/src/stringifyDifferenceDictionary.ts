@@ -10,11 +10,7 @@ import type { Difference } from "./types/Difference.js";
  *
  * @category Output
  */
-export const stringifyDifferenceDictionary: {
-	readonly [Kind in Difference["kind"]]: (
-		difference: Difference & { readonly kind: Kind },
-	) => string;
-} = {
+export const stringifyDifferenceDictionary = {
 	[CREATE]: difference =>
 		`${formatPropertyPath(
 			difference.path,
@@ -33,4 +29,8 @@ export const stringifyDifferenceDictionary: {
 		)} has the wrong value. Wanted ${formatValue(
 			difference.left,
 		)} but received ${formatValue(difference.right)}.`,
+} as const satisfies {
+	readonly [Kind in Difference["kind"]]: (
+		difference: Difference & { readonly kind: Kind },
+	) => string;
 };

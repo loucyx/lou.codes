@@ -1,14 +1,14 @@
 /**
  * Create difference kind.
  */
-export const CREATE = "CREATE";
+export const CREATE = 1;
 
 /**
  * Delete difference kind.
  */
-export const DELETE = "DELETE";
+export const DELETE = 2;
 
 /**
  * Update difference kind.
  */
-export const UPDATE = "UPDATE";
+export const UPDATE = 4;

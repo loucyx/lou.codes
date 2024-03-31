@@ -1,5 +1,16 @@
 # Change log
 
+## 3.0.0
+
+### Major Changes
+
+-   🏗️ use number for EXCEPTION instead of string for better performance and
+    smaller size.
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/diff` to `v2.0.0`
+
 ## 2.0.4
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # Change log
 
+## 5.0.0
+
+### Major Changes
+
+-   🔧 update TypeScript and enum configurations (might break for some).
+
 ## 4.2.2
 
 ### Patch Changes

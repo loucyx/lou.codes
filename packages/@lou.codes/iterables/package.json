@@ -59,7 +59,7 @@
 		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
 	},
 	"sideEffects": false,
-	"size": "1.08",
+	"size": "1.07",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

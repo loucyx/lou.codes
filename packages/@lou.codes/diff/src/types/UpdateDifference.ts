@@ -10,7 +10,7 @@ import type { Difference } from "./Difference.js";
  * @example
  * ```typescript
  * const updateDifference: UpdateDifference<string, number> = {
- * 	kind: "UPDATE",
+ * 	kind: 4,
  * 	path: ["foo", "bar"],
  * 	left: "Lou",
  * 	right: 42

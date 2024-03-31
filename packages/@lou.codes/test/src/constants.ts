@@ -42,7 +42,7 @@ ${foregroundRed`⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯�
  *
  * @category Internal
  */
-export const EXCEPTION = "EXCEPTION";
+export const EXCEPTION = 8;
 
 /**
  * Unknown error.

@@ -14,7 +14,7 @@ import type { Difference } from "./types/Difference.js";
  * }); // "🟢.🟩 is missing."
  *
  * stringifyDifference({
- * 	kind: "EXCEPTION",
+ * 	kind: 8,
  * 	error: "❌",
  * }); // "there was an uncaught error: ❌."
  * ```

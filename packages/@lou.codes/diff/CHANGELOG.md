@@ -1,5 +1,12 @@
 # Change log
 
+## 2.0.0
+
+### Major Changes
+
+-   🏗️ use numbers for constants instead of strings for better performance and
+    smaller size.
+
 ## 1.0.13
 
 ### Patch Changes

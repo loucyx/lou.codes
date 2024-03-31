@@ -25,7 +25,7 @@ Import it and use it:
 ```typescript
 import { compare } from "@lou.codes/diff";
 
-compare({ left: "Lou", right: "Nope" }); // [{ kind: "UPDATE", left: "Lou", right: "Nope", path: [] }]
+compare({ left: "Lou", right: "Nope" }); // [{ kind: 4, left: "Lou", right: "Nope", path: [] }]
 ```
 
 ### 🦕 Deno
@@ -35,7 +35,7 @@ Import `@lou.codes/diff` using the `npm:` prefix, and use it directly:
 ```typescript
 import { compare } from "npm:@lou.codes/diff";
 
-compare({ left: "Lou", right: "Nope" }); // [{ kind: "UPDATE", left: "Lou", right: "Nope", path: [] }]
+compare({ left: "Lou", right: "Nope" }); // [{ kind: 4, left: "Lou", right: "Nope", path: [] }]
 ```
 
 ### 🌎 Browser
@@ -46,7 +46,7 @@ Import `@lou.codes/diff` using [esm.sh][esm.sh], and use it directly:
 <script type="module">
 	import { compare } from "https://esm.sh/@lou.codes/diff";
 
-	compare({ left: "Lou", right: "Nope" }); // [{ kind: "UPDATE", left: "Lou", right: "Nope", path: [] }]
+	compare({ left: "Lou", right: "Nope" }); // [{ kind: 4, left: "Lou", right: "Nope", path: [] }]
 </script>
 ```
 

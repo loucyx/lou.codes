@@ -478,6 +478,27 @@ export const typescriptRules = freeze(
 			"@typescript-eslint/no-dupe-class-members": OFF,
 
 			/**
+			 * Disallow duplicate enum member values.
+			 *
+			 * @example
+			 * ```typescript
+			 * // ❌ Incorrect
+			 * const enum E {
+			 * 	A = 0,
+			 * 	B = 0,
+			 * }
+			 *
+			 * // ✅ Correct
+			 * const enum E {
+			 * 	A = 0,
+			 * 	B = 1,
+			 * }
+			 * ```
+			 * @see [@typescript-eslint/no-duplicate-enum-values](https://typescript-eslint.io/rules/no-duplicate-enum-values/)
+			 */
+			"@typescript-eslint/no-duplicate-enum-values": ERROR,
+
+			/**
 			 * Avoid `delete` of dynamic properties.
 			 *
 			 * @see [@typescript-eslint/no-dynamic-delete](https://typescript-eslint.io/rules/no-dynamic-delete/)
@@ -730,6 +751,31 @@ export const typescriptRules = freeze(
 			"@typescript-eslint/no-misused-promises": ERROR,
 
 			/**
+			 * Disallow enums from having both number and string members.
+			 *
+			 * @example
+			 * ```typescript
+			 * const aPromise = Promise.resolve("foo");
+			 *
+			 * // ❌ Incorrect
+			 * const enum Status {
+			 * 	Unknown,
+			 * 	Closed = 1,
+			 * 	Open = 'open',
+			 * }
+			 *
+			 * // ✅ Correct
+			 * const enum Status {
+			 * 	Unknown = 0,
+			 * 	Closed = 2,
+			 * 	Open = 4,
+			 * }
+			 * ```
+			 * @see [@typescript-eslint/no-mixed-enums](https://typescript-eslint.io/rules/no-mixed-enums/)
+			 */
+			"@typescript-eslint/no-mixed-enums": ERROR,
+
+			/**
 			 * Old TypeScript.
 			 *
 			 * @see [@typescript-eslint/no-namespace](https://typescript-eslint.io/rules/no-namespace/)
@@ -927,6 +973,33 @@ export const typescriptRules = freeze(
 			"@typescript-eslint/no-unsafe-call": ERROR,
 
 			/**
+			 * Disallow comparing an enum value with a non-enum value.
+			 *
+			 * @example
+			 * ```typescript
+			 * // ❌ Incorrect
+			 * const enum Fruit {
+			 * 	Apple = 0,
+			 * }
+			 *
+			 * declare let fruit: Fruit;
+			 *
+			 * fruit === 0;
+			 *
+			 * // ✅ Correct
+			 * const enum Fruit {
+			 * 	Apple = 0,
+			 * }
+			 *
+			 * declare let fruit: Fruit;
+			 *
+			 * fruit === Fruit.Apple;
+			 * ```
+			 * @see [@typescript-eslint/no-unsafe-enum-comparison](https://typescript-eslint.io/rules/no-unsafe-enum-comparison/)
+			 */
+			"@typescript-eslint/no-unsafe-enum-comparison": ERROR,
+
+			/**
 			 * Avoid accessing `any` members.
 			 *
 			 * @see [@typescript-eslint/no-unsafe-member-access](https://typescript-eslint.io/rules/no-unsafe-member-access/)
@@ -1028,6 +1101,37 @@ export const typescriptRules = freeze(
 			"@typescript-eslint/prefer-as-const": ERROR,
 
 			/**
+			 * Require each enum member value to be explicitly initialized.
+			 *
+			 * @example
+			 * ```typescript
+			 * // ❌ Incorrect
+			 * const enum Status {
+			 * 	Open = 1,
+			 * 	Close,
+			 * }
+			 *
+			 * const enum Direction {
+			 * 	Up,
+			 * 	Down,
+			 * }
+			 *
+			 * // ✅ Correct
+			 * const enum Status {
+			 * 	Open = 0,
+			 * 	Close = 1,
+			 * }
+			 *
+			 * const enum Direction {
+			 * 	Up = 0,
+			 * 	Down = 1,
+			 * }
+			 * ```
+			 * @see [@typescript-eslint/prefer-enum-initializers](https://typescript-eslint.io/rules/prefer-enum-initializers/)
+			 */
+			"@typescript-eslint/prefer-enum-initializers": ERROR,
+
+			/**
 			 * If you'll use a `for` loop on an array, use `for/of`.
 			 *
 			 * @example
@@ -1077,6 +1181,37 @@ export const typescriptRules = freeze(
 			 * @see [@typescript-eslint/prefer-includes](https://typescript-eslint.io/rules/prefer-includes/)
 			 */
 			"@typescript-eslint/prefer-includes": ERROR,
+
+			/**
+			 * Require all enum members to be literal values.
+			 *
+			 * @example
+			 * ```typescript
+			 * // ❌ Incorrect
+			 * const str = "Test";
+			 * const enum Invalid {
+			 * 	A = str, // Variable assignment
+			 * 	B = {}, // Object assignment
+			 * 	C = `A template literal string`, // Template literal
+			 * 	D = new Set(1, 2, 3), // Constructor in assignment
+			 * 	E = 2 + 2, // Expression assignment
+			 * }
+			 *
+			 * // ✅ Correct
+			 * const enum Valid {
+			 * 	A,
+			 * 	B = "TestStr", // A regular string
+			 * 	C = 4, // A number
+			 * 	D = null,
+			 * 	E = /some_regex/,
+			 * }
+			 * ```
+			 * @see [@typescript-eslint/prefer-includes](https://typescript-eslint.io/rules/prefer-includes/)
+			 */
+			"@typescript-eslint/prefer-literal-enum-member": [
+				ERROR,
+				{ allowBitwiseExpressions: true },
+			],
 
 			/**
 			 * Old TypeScript. Use `namespace` instead of `module`.

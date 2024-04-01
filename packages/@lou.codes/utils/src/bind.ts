@@ -1,5 +1,3 @@
-import type { Function } from "@lou.codes/types";
-
 /**
  * Bounds the given context to the given method.
  *

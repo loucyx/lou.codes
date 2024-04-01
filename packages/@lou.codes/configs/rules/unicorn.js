@@ -152,13 +152,6 @@ export const unicornRules = freeze(
 			"unicorn/no-useless-switch-case": ERROR,
 
 			/**
-			 * Enforce proper case for numeric literals.
-			 *
-			 * @see [unicorn/number-literal-case](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/number-literal-case.md)
-			 */
-			"unicorn/number-literal-case": ERROR,
-
-			/**
 			 * Enforce the style of numeric separators by correctly grouping digits.
 			 *
 			 * @see [unicorn/numeric-separators-style](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/numeric-separators-style.md)

@@ -8,7 +8,7 @@ import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
  * @category Reducers
  * @example
  * ```typescript
- * const sum = Accumulator<number>(item => total => total + item);
+ * const sum = reduce<number>(item => total => total + item);
  * const sumFrom0 = sum(0);
  *
  * sumFrom0([1, 2, 3]); // 6

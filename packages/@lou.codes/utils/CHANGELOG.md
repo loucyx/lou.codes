@@ -1,5 +1,15 @@
 # Change log
 
+## 1.1.0
+
+### Minor Changes
+
+-   ✨ add `cryptoNumber` util.
+-   ✨ add `constructDataView` util.
+-   ✨ add `constructTextEncoder` util.
+-   📝 update `toString` outdated docs.
+-   🐛 fix `bind` type for `Method` function.
+
 ## 1.0.13
 
 ### Patch Changes

@@ -19,6 +19,7 @@ export { length } from "./length.js";
 export { map } from "./map.js";
 export { objectToEntries } from "./objectToEntries.js";
 export { prepend } from "./prepend.js";
+export { random } from "./random.js";
 export { range } from "./range.js";
 export { reduce } from "./reduce.js";
 export { repeat } from "./repeat.js";

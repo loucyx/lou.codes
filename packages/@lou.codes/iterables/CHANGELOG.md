@@ -1,5 +1,16 @@
 # Change log
 
+## 2.1.0
+
+### Minor Changes
+
+-   ✨ add new `random` util (only available as `async` because of underlying
+    tech).
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.1.0`
+
 ## 2.0.6
 
 ### Patch Changes

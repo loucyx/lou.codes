@@ -1,5 +1,11 @@
 # Change log
 
+## 5.0.1
+
+### Patch Changes
+
+-   🔧 remove `unicorn/number-literal-case` due to conflict with Prettier.
+
 ## 5.0.0
 
 ### Major Changes

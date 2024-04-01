@@ -58,7 +58,7 @@
 		"test": "NODE_OPTIONS='--import tsx' node ./src/bin/index.ts"
 	},
 	"sideEffects": false,
-	"size": "1.68",
+	"size": "1.70",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

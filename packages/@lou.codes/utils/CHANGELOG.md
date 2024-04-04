@@ -1,5 +1,13 @@
 # Change log
 
+## 2.0.1
+
+### Patch Changes
+
+-   🐛 fix issues with `constructPromise`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.2.1`
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.15`
+
 ## 2.0.0
 
 ### Major Changes

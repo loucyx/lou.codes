@@ -1,5 +1,11 @@
 # Change log
 
+## 1.2.1
+
+### Patch Changes
+
+-   🐛 fix incompatibility `Unbound` incompatibility with Arrays (I hate this).
+
 ## 1.2.0
 
 ### Minor Changes

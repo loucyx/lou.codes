@@ -74,6 +74,7 @@
 		"git:pre-push": "pnpm --recursive git:pre-push",
 		"lint": "pnpm --recursive lint",
 		"prepare": "simple-git-hooks",
+		"prettify:changelogs": "prettier --ignore-path=.prettierignore --log-level=warn --write '**/CHANGELOG.md'",
 		"prettify:typedoc": "prettier --ignore-path=.prettierignore --log-level=warn --write './docs/.typedoc/**/*.md'",
 		"publish": "pnpm --recursive publish",
 		"test": "c8 pnpm --recursive test",

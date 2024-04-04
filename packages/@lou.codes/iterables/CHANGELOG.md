@@ -1,5 +1,13 @@
 # Change log
 
+## 2.1.2
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/utils` to `v2.0.1`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.2.1`
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.15`
+
 ## 2.1.1
 
 ### Patch Changes

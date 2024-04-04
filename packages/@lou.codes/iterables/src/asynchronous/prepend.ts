@@ -6,7 +6,7 @@ import type { createIterableIterator } from "./createIterableIterator.js";
 /**
  * Prepends one iterable or asynchronous iterable to another.
  *
- * @category Generators
+ * @category Asynchronous Generators
  * @example
  * ```typescript
  * const prependNumbers = prepend([0, 1, 2, 3, 4]);

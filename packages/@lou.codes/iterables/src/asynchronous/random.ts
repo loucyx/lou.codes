@@ -7,7 +7,7 @@ import { createIterableIterator } from "./createIterableIterator.js";
  *
  * **⚠️ IMPORTANT:** This only works in secure contexts (HTTPS/Node).
  *
- * @category Generators
+ * @category Asynchronous Generators
  * @example
  * ```typescript
  * const seededRandom = random("some seed");

@@ -1,5 +1,11 @@
 # Change log
 
+## 2.1.3
+
+### Patch Changes
+
+-   📝 update docs with bad categories.
+
 ## 2.1.2
 
 ### Patch Changes

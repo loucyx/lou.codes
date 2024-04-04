@@ -1,5 +1,16 @@
 # Change log
 
+## 2.0.0
+
+### Major Changes
+
+-   🏗️ change `construct` to have all the methods unbounded.
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/types` to `v1.2.0`
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.14`
+
 ## 1.1.0
 
 ### Minor Changes

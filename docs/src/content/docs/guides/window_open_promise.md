@@ -1,6 +1,7 @@
 ---
 title: Window Open Promise Background
 description: Intro about Window Open Promise, reasoning and usage.
+prev: true
 ---
 
 # Window Open Promise Background

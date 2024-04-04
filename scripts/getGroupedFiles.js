@@ -5,7 +5,7 @@ export const getGroupedFiles = () =>
 	groupFilePaths().then(filePairs =>
 		Promise.all(
 			filePairs.map(
-				([readmeFilePath, packageFilePath, typeDocFilePath]) =>
+				([readmeFilePath, packageFilePath, typeDocFilePaths]) =>
 					Promise.all([
 						readFileUTF8(readmeFilePath),
 						readFileUTF8(packageFilePath).then(
@@ -15,7 +15,11 @@ export const getGroupedFiles = () =>
 									JSON.parse(content)
 								),
 						),
-						readFileUTF8(typeDocFilePath),
+						Promise.all(
+							/** @type {[index: ReturnType<typeof readFileUTF8>, ...modules: ReadonlyArray<ReturnType<typeof readFileUTF8>>]} */ (
+								typeDocFilePaths.map(readFileUTF8)
+							),
+						),
 					]),
 			),
 		),

@@ -24,6 +24,7 @@ import { createIterableIterator } from "./createIterableIterator.js";
 export const random =
 	(seed: Numeric | string) => (from: number) => (to: number) =>
 		createIterableIterator(async function* () {
+			// eslint-disable-next-line functional/no-let
 			let state: typeof seed = seed;
 			const min = from < to ? from : to;
 			const max = from > to ? from : to;

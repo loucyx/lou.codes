@@ -10,6 +10,7 @@ export const functionalRules = freeze(
 	/** @type {const} @satisfies {import("eslint").Linter.FlatConfig} */ ({
 		...eslintPluginFunctional.configs.recommended,
 		rules: {
+			...eslintPluginFunctional.configs.recommended.rules,
 			/**
 			 * Handled by `functional/prefer-immutable-types`.
 			 *

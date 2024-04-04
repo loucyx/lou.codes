@@ -1,5 +1,13 @@
 # Change log
 
+## 1.0.19
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/types` to `v1.2.0`
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.15`
+-   ⬆️ upgrade `@lou.codes/prompts` to `v1.0.15`
+
 ## 1.0.18
 
 ### Patch Changes

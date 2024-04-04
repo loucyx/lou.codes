@@ -1,3 +1,7 @@
+/**
+ * Synchronous utils (Default import).
+ * @module Synchronous
+ */
 export { append } from "./append.js";
 export { count } from "./count.js";
 export { createIterableIterator } from "./createIterableIterator.js";

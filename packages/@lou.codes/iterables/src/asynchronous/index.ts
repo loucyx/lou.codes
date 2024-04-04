@@ -1,3 +1,7 @@
+/**
+ * Asynchronous utils (Default import).
+ * @module Asynchronous
+ */
 export { append } from "./append.js";
 export { count } from "./count.js";
 export { createIterableIterator } from "./createIterableIterator.js";

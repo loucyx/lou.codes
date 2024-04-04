@@ -1,6 +1,8 @@
 ---
 title: ANSI Background
 description: Intro about ANSI, reasoning and usage.
+next: true
+prev: true
 ---
 
 # ANSI Background

@@ -1,14 +1,14 @@
 #! /usr/bin/env node
 
 import { mkdir, writeFile } from "node:fs/promises";
-import { ASTRO_TARGET } from "./constants.js";
+import { dirname } from "node:path";
 import { formatPairedDocs } from "./formatPairedDocs.js";
 
-void mkdir(ASTRO_TARGET, { recursive: true })
-	.then(() =>
-		formatPairedDocs().then(formattedPairs =>
-			Promise.all(
-				formattedPairs.map(([path, content]) =>
+void formatPairedDocs()
+	.then(formattedPairs =>
+		Promise.all(
+			formattedPairs.map(([path, content]) =>
+				mkdir(dirname(path), { recursive: true }).then(() =>
 					writeFile(path, content, { encoding: "utf8" }),
 				),
 			),
@@ -16,5 +16,5 @@ void mkdir(ASTRO_TARGET, { recursive: true })
 	)
 	// eslint-disable-next-line no-console
 	.then(() => console.log("Docs written"))
-	// eslint-disable-next-line no-console
+	// eslint-disable-next-line no-console, @typescript-eslint/use-unknown-in-catch-callback-variable
 	.catch(console.error);

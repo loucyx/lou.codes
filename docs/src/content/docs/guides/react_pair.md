@@ -1,6 +1,8 @@
 ---
 title: React Pair Background
 description: Intro about react Pair, reasoning and usage.
+next: true
+prev: true
 ---
 
 # React Pair Background

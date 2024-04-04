@@ -1,6 +1,8 @@
 ---
 title: Constants Background
 description: Intro about Constants, reasoning and usage.
+next: true
+prev: true
 ---
 
 # Constants Background

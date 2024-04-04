@@ -1,6 +1,8 @@
 ---
 title: Configs Background
 description: Intro about Configs, reasoning and usage.
+next: true
+prev: true
 ---
 
 # Configs Background

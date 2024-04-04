@@ -1,6 +1,8 @@
 ---
 title: Diff Background
 description: Intro about Diff, reasoning and usage.
+next: true
+prev: true
 ---
 
 # Diff Background

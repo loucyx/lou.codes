@@ -2,16 +2,18 @@
 	"$schema": "https://json.schemastore.org/tsconfig",
 	"compilerOptions": {
 		"allowJs": true,
-		"alwaysStrict": true,
 		"checkJs": true,
 		"declaration": true,
-		"esModuleInterop": true,
+		"exactOptionalPropertyTypes": true,
 		"forceConsistentCasingInFileNames": true,
 		"jsx": "react-jsx",
 		"module": "NodeNext",
 		"moduleResolution": "NodeNext",
 		"newLine": "LF",
 		"noEmitOnError": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
 		"noUncheckedIndexedAccess": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
@@ -20,7 +22,6 @@
 		"skipLibCheck": true,
 		"strict": true,
 		"target": "ESNext",
-		"useUnknownInCatchVariables": true,
 		"verbatimModuleSyntax": true
 	}
 }

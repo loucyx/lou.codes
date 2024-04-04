@@ -1,6 +1,8 @@
 ---
 title: Notify Background
 description: Intro about Notify, reasoning and usage.
+next: true
+prev: true
 ---
 
 # Notify Background

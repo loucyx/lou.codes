@@ -20,15 +20,32 @@ export const groupFilePaths = () =>
 								.replace("/README.md", "/package.json")}`,
 						),
 					) ?? "",
-					typeDocFilePaths.find(typeDocFilePath =>
-						typeDocFilePath.endsWith(
-							`/${readmeFilePath
-								.replace(`${PACKAGES_DIRECTORY}/`, "")
-								.replace("/README", "")
-								.replace("@lou.codes", "lou_codes")
-								.replaceAll(/[-/]/gu, "_")}`,
+					typeDocFilePaths
+						// Find all the files for this package
+						.filter(typeDocFilePath =>
+							typeDocFilePath.includes(
+								readmeFilePath
+									.replace(`${PACKAGES_DIRECTORY}/`, "")
+									.replace("/README", "")
+									.replace("@lou.codes", "lou_codes")
+									.replaceAll(/[-/]/gu, "_")
+									.replace(".md", ""),
+							),
+						)
+						// Sort with the index first, the other modules later
+						.sort(typeDocFilePath =>
+							(
+								typeDocFilePath.endsWith(
+									readmeFilePath
+										.replace(`${PACKAGES_DIRECTORY}/`, "")
+										.replace("/README", "")
+										.replace("@lou.codes", "lou_codes")
+										.replaceAll(/[-/]/gu, "_"),
+								)
+							) ?
+								-1
+							:	1,
 						),
-					) ?? "",
 				]),
 		),
 	);

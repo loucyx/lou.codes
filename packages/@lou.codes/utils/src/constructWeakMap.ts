@@ -1,3 +1,4 @@
+import type { Unbound } from "@lou.codes/types";
 import { construct } from "./construct.js";
 
 /**
@@ -11,4 +12,4 @@ export const constructWeakMap = construct(WeakMap) as <
 >(
 	iterable?: Iterable<readonly [Key, Value]>,
 	// eslint-disable-next-line functional/prefer-readonly-type
-) => WeakMap<Key, Value>;
+) => Unbound<WeakMap<Key, Value>>;

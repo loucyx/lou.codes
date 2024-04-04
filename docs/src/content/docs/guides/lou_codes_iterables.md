@@ -1,6 +1,8 @@
 ---
 title: Iterables Background
 description: Intro about Iterables, reasoning and usage.
+next: true
+prev: true
 ---
 
 # Iterables Background

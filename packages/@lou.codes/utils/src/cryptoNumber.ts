@@ -1,8 +1,13 @@
 import type { Numeric } from "@lou.codes/types";
 import { constructDataView } from "./constructDataView.js";
 import { constructTextEncoder } from "./constructTextEncoder.js";
+import { then } from "./then.js";
 
-const textEncoder = constructTextEncoder();
+const { encode } = constructTextEncoder();
+const thenSha256ToNumber = then(
+	(sha256: ArrayBuffer) =>
+		constructDataView(sha256).getUint32(0, true) / 0xff_ff_ff_ff,
+);
 
 /**
  * Generates `number` using `SubtleCrypto#digest` and the given seed.
@@ -24,9 +29,4 @@ const textEncoder = constructTextEncoder();
  * @returns Pseudo-random number from seed.
  */
 export const cryptoNumber = async (seed: Numeric | string) =>
-	crypto.subtle
-		.digest("SHA-256", textEncoder.encode(`${seed}`))
-		.then(
-			stateHash =>
-				constructDataView(stateHash).getUint32(0, true) / 0xff_ff_ff_ff,
-		);
+	thenSha256ToNumber(crypto.subtle.digest("SHA-256", encode(`${seed}`)));

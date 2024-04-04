@@ -1,3 +1,4 @@
+import type { Unbound } from "@lou.codes/types";
 import { construct } from "./construct.js";
 
 /**
@@ -13,4 +14,4 @@ export const constructPromise = construct(Promise) as <Value>(
 		reject: (reason?: unknown) => void,
 		// eslint-disable-next-line functional/no-return-void
 	) => void,
-) => Promise<Value>;
+) => Unbound<Promise<Value>>;

@@ -1,4 +1,4 @@
-import type { LocaleIdentifier, ReadOnly } from "@lou.codes/types";
+import type { LocaleIdentifier, ReadOnly, Unbound } from "@lou.codes/types";
 import { construct } from "./construct.js";
 
 /**
@@ -11,4 +11,4 @@ import { construct } from "./construct.js";
 export const constructIntlLocale = construct(Intl.Locale) as (
 	tag: ReadOnly<Intl.Locale | LocaleIdentifier>,
 	options?: ReadOnly<Intl.LocaleOptions>,
-) => Intl.Locale;
+) => Unbound<Intl.Locale>;

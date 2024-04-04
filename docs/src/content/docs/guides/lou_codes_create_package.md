@@ -1,6 +1,8 @@
 ---
 title: Create Package Background
 description: Intro about Create Package, reasoning and usage.
+next: true
+prev: true
 ---
 
 # Create Package Background

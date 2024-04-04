@@ -1,0 +1,86 @@
+---
+title: Getting started
+description: Getting started with Lou's libraries
+next: true
+---
+
+import { Card, CardGrid, Steps } from "@astrojs/starlight/components";
+import { Image } from "astro:assets";
+
+<Image
+	alt="lou.codes logo"
+	height="72"
+	id="logo"
+	loading="eager"
+	src="https://lou.codes/logo.svg"
+	width="660"
+/>
+
+## About this site
+
+Lou's code (lou.codes) is a monorepo I ([Lou Cyx](https://lou.cx)) created. It
+is the central hub for all my libraries, consolidating resources while
+streamlining development and maintaining a cohesive ecosystem of tools and
+components.
+
+To make the documentation easy to consume for others, this site relies on
+combining the power of two open-source technologies:
+
+<CardGrid>
+	<Card title="Starlight" icon="starlight">
+		It makes this site a reality using the power of [Astro][astro] under the
+		hood. Check it out [here][starlight].
+	</Card>
+	<Card title="TypeDoc" icon="document">
+		It generates markdown files from the inline documentation of each
+		library. Check it out [here][typedoc].
+	</Card>
+</CardGrid>
+
+I wish it was as easy as plug-and-play, but I had to write a bunch of custom
+logic for that combination to work. Nevertheless, the end result is one I'm
+quite happy with.
+
+You'll notice two main sections in the sidebar: **Guides** and **Reference**.
+
+### Guides
+
+**Guides** has the background of each library, separated into 3 sections written
+manually by me:
+
+<Steps>
+
+1.  **Why:** My reasoning for creating that library.
+2.  **How:** How did I do it (tech used, architecture, etc.).
+3.  **Where:** Where I use that particular library.
+
+</Steps>
+
+### Reference
+
+**Reference**, on the other hand, has the auto-generated documentation of each
+library. Because it's auto-generated, I must say _🐉 here be dragons 🐉_ mainly
+because the inline documentation in the libraries is meant to be used directly
+in your editor of choice.
+
+[react_pair]: /libraries/react_pair/
+[preact_pair]: /libraries/preact_pair/
+[constants]: /libraries/lou_codes_constants/
+[cron]: /libraries/lou_codes_cron/
+[diff]: /libraries/lou_codes_diff/
+[window-open-promise]: /libraries/window_open_promise/
+[notify]: /libraries/lou_codes_notify/
+[iterables]: /libraries/lou_codes_iterables/
+[parsers]: /libraries/lou_codes_parsers/
+[predicates]: /libraries/lou_codes_predicates/
+[utils]: /libraries/lou_codes_utils/
+[test]: /libraries/lou_codes_test/
+[ansi]: /libraries/lou_codes_ansi/
+[prompts]: /libraries/lou_codes_prompts/
+[create-package]: /libraries/lou_codes_create_package/
+[configs]: /libraries/lou_codes_configs/
+[types]: /libraries/lou_codes_types/
+[lou.codes]: /
+[typedoc]: https://typedoc.org/
+[starlight]: https://starlight.astro.build/
+[astro]: https://astro.build/

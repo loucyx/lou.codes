@@ -1,5 +1,11 @@
 # Change log
 
+## 1.2.0
+
+### Minor Changes
+
+-   ✨ add `Unbound` type.
+
 ## 1.1.6
 
 ### Patch Changes

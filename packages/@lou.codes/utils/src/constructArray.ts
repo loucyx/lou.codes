@@ -1,4 +1,4 @@
-import type { ReadOnlyArray } from "@lou.codes/types";
+import type { ReadOnlyArray, Unbound } from "@lou.codes/types";
 import { construct } from "./construct.js";
 
 /**
@@ -8,7 +8,9 @@ import { construct } from "./construct.js";
  */
 export const constructArray = construct(Array) as {
 	// eslint-disable-next-line functional/prefer-readonly-type
-	<Item>(length: number): Array<Item>;
+	<Item>(length: number): Unbound<Array<Item>>;
 	// eslint-disable-next-line functional/prefer-readonly-type
-	<Items extends ReadOnlyArray>(...items: Items): Array<Items[number]>;
+	<Items extends ReadOnlyArray>(
+		...items: Items
+	): Unbound<Array<Items[number]>>;
 };

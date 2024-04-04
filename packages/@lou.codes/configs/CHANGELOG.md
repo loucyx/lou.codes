@@ -1,5 +1,13 @@
 # Change log
 
+## 5.0.2
+
+### Patch Changes
+
+-   🔧 update TypeScript config.
+-   🔧 fix functional linting.
+-   ⬆️ dependency upgrade.
+
 ## 5.0.1
 
 ### Patch Changes

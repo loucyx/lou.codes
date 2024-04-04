@@ -1,6 +1,8 @@
 ---
 title: Preact Pair Background
 description: Intro about Preact Pair, reasoning and usage.
+next: true
+prev: true
 ---
 
 # Preact Pair Background

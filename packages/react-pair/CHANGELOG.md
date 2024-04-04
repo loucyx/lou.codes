@@ -1,5 +1,13 @@
 # Change log
 
+## 3.0.95
+
+### Patch Changes
+
+-   ⬆️ dependency upgrade.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.2.0`
+-   ⬆️ upgrade `@lou.codes/utils` to `v2.0.0`
+
 ## 3.0.94
 
 ### Patch Changes

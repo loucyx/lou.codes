@@ -1,6 +1,8 @@
 ---
 title: Types Background
 description: Intro about Types, reasoning and usage.
+next: true
+prev: true
 ---
 
 # Types Background

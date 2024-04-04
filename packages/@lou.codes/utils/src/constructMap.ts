@@ -1,3 +1,4 @@
+import type { Unbound } from "@lou.codes/types";
 import { construct } from "./construct.js";
 
 /**
@@ -8,4 +9,4 @@ import { construct } from "./construct.js";
 export const constructMap = construct(Map) as <Key, Value>(
 	iterable?: Iterable<readonly [Key, Value]>,
 	// eslint-disable-next-line functional/prefer-readonly-type
-) => Map<Key, Value>;
+) => Unbound<Map<Key, Value>>;

@@ -1,5 +1,11 @@
 # Change log
 
+## 1.0.82
+
+### Patch Changes
+
+-   ✏️ Fix typo in browser example in README.md.
+
 ## 1.0.81
 
 ### Patch Changes

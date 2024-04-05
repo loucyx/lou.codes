@@ -11,6 +11,7 @@ export const functionalRules = freeze(
 		...eslintPluginFunctional.configs.recommended,
 		rules: {
 			...eslintPluginFunctional.configs.recommended.rules,
+
 			/**
 			 * Handled by `functional/prefer-immutable-types`.
 			 *

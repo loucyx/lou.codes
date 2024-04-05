@@ -20,6 +20,7 @@ export const coreRules = freeze(
 		],
 		rules: {
 			...eslintJS.configs.recommended.rules,
+
 			/**
 			 * Mapping functions should always return a value explicitly.
 			 *

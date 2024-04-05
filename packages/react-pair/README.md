@@ -105,21 +105,21 @@ Import `react-pair` using [esm.sh][esm.sh], and use it directly:
 
 	const PairedCount = pair(useCount);
 
-	const Component = ({ array = [] }) => (
-		<ul>
-			{array.map(key =>
-				createElement(PairedCount, { key }, usePairedCount => {
-					const props = usePairedCount(key);
+	const Component = ({ array = [] }) =>
+		createElement("ul", {
+			children: array.map(key =>
+				createElement(PairedCount, {
+					key,
+					children: usePairedCount => {
+						const props = usePairedCount(key);
 
-					return createElement(
-						"li",
-						null,
-						createElement("button", props),
-					);
+						return createElement("li", {
+							children: createElement("button", props),
+						});
+					},
 				}),
-			)}
-		</ul>
-	);
+			),
+		});
 </script>
 ```
 

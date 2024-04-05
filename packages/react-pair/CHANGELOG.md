@@ -1,5 +1,12 @@
 # Change log
 
+## 3.0.97
+
+### Patch Changes
+
+-   ⬆️ Dependency upgrade.
+-   ✏️ Fix typo in browser example in README.md.
+
 ## 3.0.96
 
 ### Patch Changes

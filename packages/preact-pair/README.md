@@ -105,17 +105,19 @@ Import `preact-pair` using [esm.sh][esm.sh], and use it directly:
 
 	const PairedCount = pair(useCount);
 
-	const Component = ({ array = [] }) => (
-		<ul>
-			{array.map(key =>
-				h(PairedCount, { key }, usePairedCount => {
-					const props = usePairedCount(key);
+	const Component = ({ array = [] }) =>
+		h("ul", {
+			children: array.map(key =>
+				h(PairedCount, {
+					key,
+					children: usePairedCount => {
+						const props = usePairedCount(key);
 
-					return h("li", null, h("button", props));
+						return h("li", { children: h("button", props) });
+					},
 				}),
-			)}
-		</ul>
-	);
+			),
+		});
 </script>
 ```
 

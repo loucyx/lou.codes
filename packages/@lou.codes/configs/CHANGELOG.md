@@ -1,5 +1,12 @@
 # Change log
 
+## 5.0.3
+
+### Patch Changes
+
+-   ⬆️ Dependency upgrade.
+-   🔧 add new linting rules from latest version of ESLint Unicorn.
+
 ## 5.0.2
 
 ### Patch Changes

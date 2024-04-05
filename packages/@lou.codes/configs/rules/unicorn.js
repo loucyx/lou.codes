@@ -60,6 +60,20 @@ export const unicornRules = freeze(
 			"unicorn/no-abusive-eslint-disable": ERROR,
 
 			/**
+			 * Disallow anonymous functions and classes as the default export.
+			 *
+			 * @see [unicorn/no-anonymous-default-export](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-anonymous-default-export.md)
+			 */
+			"unicorn/no-anonymous-default-export": ERROR,
+
+			/**
+			 * Disallow using await in Promise method parameters.
+			 *
+			 * @see [unicorn/no-await-in-promise-methods](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-await-in-promise-methods.md)
+			 */
+			"unicorn/no-await-in-promise-methods": ERROR,
+
+			/**
 			 * Do not use leading/trailing space between `console.log` parameters.
 			 *
 			 * @see [unicorn/no-console-spaces](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-console-spaces.md)
@@ -115,6 +129,13 @@ export const unicornRules = freeze(
 			 * @see [unicorn/no-null](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-null.md)
 			 */
 			"unicorn/no-null": ERROR,
+
+			/**
+			 * Disallow passing single-element arrays to Promise methods.
+			 *
+			 * @see [unicorn/no-single-promise-in-promise-methods](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-single-promise-in-promise-methods.md)
+			 */
+			"unicorn/no-single-promise-in-promise-methods": ERROR,
 
 			/**
 			 * Enforce the use of built-in methods instead of unnecessary polyfills.

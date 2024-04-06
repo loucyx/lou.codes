@@ -1,12 +1,11 @@
 import eslintPluginPrettier from "eslint-plugin-prettier";
-import { freeze } from "../freeze.js";
 import { OFF } from "./levels.js";
 
 /**
  * ESLint Prettier rules.
  * @see [eslint-plugin-prettier](https://npm.im/eslint-plugin-prettier)
  */
-export const prettierRules = freeze(
+export const prettierRules =
 	/** @type {const} @satisfies {import("eslint").Linter.FlatConfig} */ ({
 		plugins: { prettier: eslintPluginPrettier },
 		rules: {
@@ -81,5 +80,4 @@ export const prettierRules = freeze(
 			 */
 			"quote-props": OFF,
 		},
-	}),
-);
+	});

@@ -1,4 +1,4 @@
-import { EMPTY_OBJECT, EMPTY_STRING } from "@lou.codes/constants";
+import { EMPTY_OBJECT, EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import type { Maybe } from "@lou.codes/types";
 import { format } from "./format.js";
 import { normalizeString } from "./normalizeString.js";

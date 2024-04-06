@@ -1,4 +1,4 @@
-import { EMPTY_STRING } from "@lou.codes/constants";
+import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import type { Maybe, Strigifiable } from "@lou.codes/types";
 import { reduce } from "./reduce.js";
 import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";

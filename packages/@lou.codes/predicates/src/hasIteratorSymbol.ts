@@ -1,5 +1,5 @@
+import { iterator } from "@lou.codes/constants/Symbol.js";
 import { has } from "./has.js";
-import { iteratorSymbol } from "./symbols.js";
 
 /**
  * Check if given object has the `Symbol.iterator` symbol.
@@ -14,4 +14,4 @@ import { iteratorSymbol } from "./symbols.js";
  * @returns `true` when given object has the `Symbol.iterator` symbol, `false`
  * otherwise.
  */
-export const hasIteratorSymbol = has(iteratorSymbol);
+export const hasIteratorSymbol = has(iterator);

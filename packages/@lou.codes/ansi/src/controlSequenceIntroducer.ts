@@ -1,4 +1,4 @@
-import { EMPTY_STRING } from "@lou.codes/constants";
+import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import type { EmptyString, First, Maybe, Second } from "@lou.codes/types";
 import { escapeSequence } from "./escapeSequence.js";
 
@@ -43,9 +43,7 @@ export const controlSequenceIntroducer =
 		escapeSequence(
 			`[${
 				typeof input === "number" ? input : (
-					(`${input[0] ?? EMPTY_STRING};${
-						input[1] ?? EMPTY_STRING
-					}` as const)
+					(`${input[0] ?? EMPTY_STRING};${input[1] ?? EMPTY_STRING}` as const)
 				)
 			}${code}` as `[${Input extends (
 				readonly [open: Maybe<number>, close: Maybe<number>]

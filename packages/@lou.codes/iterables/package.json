@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/iterables",
 	"description": "🔁 Iterable and AsyncIterable utils",
-	"version": "2.1.3",
+	"version": "2.1.4",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -23,9 +23,9 @@
 	},
 	"exports": {
 		".": "./dist/index.js",
+		"./*": "./dist/*",
 		"./asynchronous": "./dist/asynchronous/index.js",
-		"./asynchronous/*": "./dist/asynchronous/*",
-		"./dist/*": "./dist/*"
+		"./asynchronous/*": "./dist/asynchronous/*"
 	},
 	"files": [
 		"dist"
@@ -59,7 +59,7 @@
 		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
 	},
 	"sideEffects": false,
-	"size": "1.21",
+	"size": "1.24",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

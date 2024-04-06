@@ -1,5 +1,3 @@
-import type { Function } from "@lou.codes/types";
-import { mutate } from "@lou.codes/utils";
 import type { FunctionComponent } from "preact";
 import type { PairedComponentProperties } from "./PairedComponentProperties.js";
 
@@ -40,7 +38,14 @@ import type { PairedComponentProperties } from "./PairedComponentProperties.js";
  * @param hook Hook to be paired.
  * @returns Component that expects a function as children with the paired hook.
  */
-export const pair = <Hook extends Function>(hook: Hook) =>
-	mutate({ displayName: `paired(${hook.name})` })(properties =>
-		properties.children(hook),
-	) as FunctionComponent<PairedComponentProperties<Hook>>;
+export const pair = <Hook extends Function>(hook: Hook) => {
+	const PairedComponent = (properties =>
+		properties.children(hook)) as FunctionComponent<
+		PairedComponentProperties<Hook>
+	> & { displayName: `paired(${Hook["name"]})` };
+
+	return (
+		// eslint-disable-next-line functional/immutable-data
+		(PairedComponent.displayName = `paired(${hook.name})`), PairedComponent
+	);
+};

@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/cron",
 	"description": "⏲️ Cron Quartz and Cron UNIX expression parser",
-	"version": "1.0.18",
+	"version": "1.0.19",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -46,17 +46,16 @@
 	"scripts": {
 		"clean": "rimraf ./dist",
 		"compile": "tsc --project tsconfig.dist.json",
-		"git:pre-push": "run-s clean pre-compile sanitize",
+		"git:pre-push": "run-s clean compile sanitize",
 		"lint": "eslint {src,tests}/**/*.ts",
 		"lint:fix": "eslint {src,tests}/**/*.ts --fix",
-		"pre-compile": "tsc --noemit --project tsconfig.dist.json",
 		"prepublishOnly": "run-s compile prettify",
 		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'",
 		"sanitize": "run-p lint test",
 		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
 	},
 	"sideEffects": false,
-	"size": "2.68",
+	"size": "2.60",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

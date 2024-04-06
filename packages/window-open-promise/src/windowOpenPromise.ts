@@ -1,4 +1,4 @@
-import { EMPTY_OBJECT, EMPTY_STRING } from "@lou.codes/constants";
+import { EMPTY_OBJECT, EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import { constructPromise, thunk, whenIsNull } from "@lou.codes/utils";
 import type { WindowOpenPromiseOptions } from "./WindowOpenPromiseOptions.js";
 import { ERROR_MESSAGE } from "./constants.js";

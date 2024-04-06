@@ -16,12 +16,12 @@
 		"@lou.codes/test": "workspace:*"
 	},
 	"devDependencies": {
-		"@astrojs/starlight": "^0.21.3",
+		"@astrojs/starlight": "^0.21.4",
 		"@astrojs/starlight-tailwind": "^2.0.1",
 		"@astrojs/tailwind": "^5.1.0",
 		"@changesets/cli": "^2.27.1",
 		"@expressive-code/plugin-line-numbers": "^0.33.5",
-		"@types/node": "^20.12.4",
+		"@types/node": "^20.12.5",
 		"astro": "^4.5.16",
 		"brotli-size": "^4.0.0",
 		"c8": "^9.1.0",
@@ -38,6 +38,7 @@
 		"simple-git-hooks": "^2.11.1",
 		"stylelint": "16.3.1",
 		"tailwindcss": "^3.4.3",
+		"terser": "^5.30.3",
 		"tsx": "^4.7.2",
 		"typedoc": "^0.25.12",
 		"typedoc-plugin-markdown": "^3.17.1",

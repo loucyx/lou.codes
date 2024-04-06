@@ -1,4 +1,4 @@
-import { EMPTY_STRING } from "@lou.codes/constants";
+import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import type { QuestionObject } from "./QuestionObject.js";
 import type { QuestionOptions } from "./QuestionOptions.js";
 

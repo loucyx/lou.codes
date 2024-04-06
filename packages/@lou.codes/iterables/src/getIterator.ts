@@ -1,4 +1,4 @@
-import { iteratorSymbol } from "@lou.codes/predicates";
+import { iterator } from "@lou.codes/constants/Symbol.js";
 import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
@@ -19,8 +19,6 @@ import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 export const getIterator = <Iterable extends ReadOnlyIterable>(
 	iterable: Iterable,
 ) =>
-	iterable[iteratorSymbol]() as Iterable extends (
-		ReadOnlyIterable<infer Item>
-	) ?
+	iterable[iterator]() as Iterable extends ReadOnlyIterable<infer Item> ?
 		Iterator<Item, Item, Item>
 	:	never;

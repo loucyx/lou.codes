@@ -3,7 +3,7 @@
 ![License][license-badge] ![NPM Version][npm-version-badge]
 ![Open Issues][open-issues-badge] ![Size][size-badge]
 
-🔢 Shared constants.
+🔢 Shared constants and aliases to static methods, values and symbols.
 
 ## Usage
 
@@ -22,9 +22,9 @@ yarn add @lou.codes/constants
 Import it and use it:
 
 ```typescript
-import { EMPTY_OBJECT } from "@lou.codes/constants";
+import { iterator } from "@lou.codes/constants/Symbol.js";
 
-console.log(EMPTY_OBJECT); // {}
+console.log(iterator); // {}
 ```
 
 ### 🦕 Deno
@@ -32,9 +32,9 @@ console.log(EMPTY_OBJECT); // {}
 Import `@lou.codes/constants` using the `npm:` prefix, and use it directly:
 
 ```typescript
-import { EMPTY_OBJECT } from "npm:@lou.codes/constants";
+import { iterator } from "npm:@lou.codes/constants/Symbol.js";
 
-console.log(EMPTY_OBJECT); // {}
+console.log(iterator); // {}
 ```
 
 ### 🌎 Browser
@@ -43,9 +43,9 @@ Import `@lou.codes/constants` using [esm.sh][esm.sh], and use it directly:
 
 ```html
 <script type="module">
-	import { EMPTY_OBJECT } from "https://esm.sh/@lou.codes/constants";
+	import { iterator } from "https://esm.sh/@lou.codes/constants/Symbol.js";
 
-	console.log(EMPTY_OBJECT); // {}
+	console.log(iterator); // {}
 </script>
 ```
 

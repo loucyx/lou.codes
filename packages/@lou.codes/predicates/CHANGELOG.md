@@ -1,114 +1,127 @@
 # Change log
 
+## 2.0.0
+
+### Major Changes
+
+-   🔥 removed symbols (moved to `@lou.codes/constants`).
+
+### Patch Changes
+
+-   ➕ add `@lou.codes/constants`.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.0.0`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.2.2`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.16`.
+
 ## 1.0.15
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.2.1`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.15`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.2.1`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.15`.
 
 ## 1.0.14
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.2.0`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.14`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.2.0`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.14`.
 
 ## 1.0.13
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.6`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.13`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.6`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.13`.
 
 ## 1.0.12
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.5`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.12`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.5`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.12`.
 
 ## 1.0.11
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.4`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.11`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.4`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.11`.
 
 ## 1.0.10
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.3`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.10`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.3`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.10`.
 
 ## 1.0.9
 
 ### Patch Changes
 
 -   🚨 update based on linter changes.
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.9`
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.2`
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.9`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.2`.
 
 ## 1.0.8
 
 ### Patch Changes
 
 -   🏗️ use argument destructing less to achieve smaller bundles.
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.1`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.8`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.1`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.8`.
 
 ## 1.0.7
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.0`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.7`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.0`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.7`.
 
 ## 1.0.6
 
 ### Patch Changes
 
 -   🔧 remove unnecessary CJS references.
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.6`
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.6`
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.6`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.6`.
 
 ## 1.0.5
 
 ### Patch Changes
 
 -   📝 update some code blocks without language or with wrong language.
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.5`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.5`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.5`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.5`.
 
 ## 1.0.4
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.4`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.4`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.4`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.4`.
 
 ## 1.0.3
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.3`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.3`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.3`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.3`.
 
 ## 1.0.2
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.2`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.2`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.2`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.2`.
 
 ## 1.0.1
 
 ### Patch Changes
 
 -   ✏️ show brotli size instead of gzip.
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.1`
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.1`
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.1`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.1`.
 
 ## 1.0.0
 
@@ -121,38 +134,38 @@
 ### Patch Changes
 
 -   🔧 add types field back so that NPM shows it as a TypeScript package.
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.21`
--   ⬆️ upgrade `@vangware/types` to `v6.3.7`
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.21`.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.7`.
 
 ## 2.2.5
 
 ### Patch Changes
 
 -   ⬆️ engine upgrade.
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.20`
--   ⬆️ upgrade `@vangware/types` to `v6.3.6`
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.20`.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.6`.
 
 ## 2.2.4
 
 ### Patch Changes
 
--   ⬆️ upgrade `@vangware/types` to `v6.3.5`
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.19`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.5`.
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.19`.
 
 ## 2.2.3
 
 ### Patch Changes
 
 -   🔧 remove types field from `package.json`, it is inferred automatically.
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.18`
--   ⬆️ upgrade `@vangware/types` to `v6.3.4`
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.18`.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.4`.
 
 ## 2.2.2
 
 ### Patch Changes
 
--   ⬆️ upgrade `@vangware/types` to `v6.3.3`
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.17`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.3`.
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.17`.
 
 ## 2.2.1
 
@@ -160,28 +173,28 @@
 
 -   📝 fix typo with categories.
 -   📝 smaller badges.
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.16`
--   ⬆️ upgrade `@vangware/types` to `v6.3.2`
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.16`.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.2`.
 
 ## 2.2.0
 
 ### Minor Changes
 
--   ✨ add `asyncIteratorSymbol` and `iteratorSymbol` to make bundling and
+-   ✨ add `asyncIteratorSymbol` and `iteratorSymbol` to make bundling and.
     minifying better.
 
 ### Patch Changes
 
 -   📝 update to include gzip size.
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.15`
--   ⬆️ upgrade `@vangware/types` to `v6.3.1`
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.15`.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.1`.
 
 ## 2.1.36
 
 ### Patch Changes
 
--   ⬆️ upgrade `@vangware/types` to `v6.3.0`
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.14`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.0`.
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.14`.
 
 ## 2.1.35
 
@@ -194,24 +207,24 @@
 ### Patch Changes
 
 -   📝 update documentation and URLs.
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.13`
--   ⬆️ upgrade `@vangware/types` to `v6.2.10`
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.13`.
+-   ⬆️ upgrade `@vangware/types` to `v6.2.10`.
 
 ## 2.1.33
 
 ### Patch Changes
 
 -   🍱 update logo source.
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.12`
--   ⬆️ upgrade `@vangware/types` to `v6.2.9`
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.12`.
+-   ⬆️ upgrade `@vangware/types` to `v6.2.9`.
 
 ## 2.1.32
 
 ### Patch Changes
 
--   🚚 move to monorepo
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.11`
--   ⬆️ upgrade `@vangware/types` to `v6.2.8`
+-   🚚 move to monorepo.
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.11`.
+-   ⬆️ upgrade `@vangware/types` to `v6.2.8`.
 
 ## 2.1.31
 

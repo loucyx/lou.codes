@@ -12,7 +12,7 @@ module.exports = Object.freeze(
 				:	dependenciesUpdated
 						.map(
 							({ name, newVersion }) =>
-								`-   ⬆️ upgrade \`${name}\` to \`v${newVersion}\``,
+								`-   ⬆️ upgrade \`${name}\` to \`v${newVersion}\`.`,
 						)
 						.join("\n"),
 			),

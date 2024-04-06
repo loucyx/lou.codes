@@ -1,20 +1,30 @@
 # Change log
 
+## 3.0.3
+
+### Patch Changes
+
+-   🏗️ make changes related to latest `@lou.codes/constants`.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.0.0`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.2.2`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.17`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v2.0.3`.
+
 ## 3.0.2
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.2.1`
--   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.16`
--   ⬆️ upgrade `@lou.codes/diff` to `v2.0.2`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.2.1`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.16`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v2.0.2`.
 
 ## 3.0.1
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.2.0`
--   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.15`
--   ⬆️ upgrade `@lou.codes/diff` to `v2.0.1`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.2.0`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.15`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v2.0.1`.
 
 ## 3.0.0
 
@@ -25,39 +35,39 @@
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/diff` to `v2.0.0`
+-   ⬆️ upgrade `@lou.codes/diff` to `v2.0.0`.
 
 ## 2.0.4
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.6`
--   ⬆️ upgrade `@lou.codes/diff` to `v1.0.13`
--   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.14`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.6`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v1.0.13`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.14`.
 
 ## 2.0.3
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/constants` to `v1.2.2`
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.5`
--   ⬆️ upgrade `@lou.codes/diff` to `v1.0.12`
--   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.13`
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.2.2`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.5`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v1.0.12`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.13`.
 
 ## 2.0.2
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.12`
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.12`.
 
 ## 2.0.1
 
 ### Patch Changes
 
 -   ✅ better coverage.
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.4`
--   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.11`
--   ⬆️ upgrade `@lou.codes/diff` to `v1.0.11`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.4`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.11`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v1.0.11`.
 
 ## 2.0.0
 
@@ -67,19 +77,19 @@
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.3`
--   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.10`
--   ⬆️ upgrade `@lou.codes/diff` to `v1.0.10`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.3`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.10`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v1.0.10`.
 
 ## 1.0.9
 
 ### Patch Changes
 
 -   🚨 update based on linter changes.
--   ⬆️ upgrade `@lou.codes/constants` to `v1.2.1`
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.2`
--   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.9`
--   ⬆️ upgrade `@lou.codes/diff` to `v1.0.9`
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.2.1`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.2`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.9`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v1.0.9`.
 
 ## 1.0.8
 
@@ -87,72 +97,72 @@
 
 -   🏗️ use argument destructing less to achieve smaller bundles.
 -   🏗️ use `async` for smaller bundle size.
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.1`
--   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.8`
--   ⬆️ upgrade `@lou.codes/diff` to `v1.0.8`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.1`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.8`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v1.0.8`.
 
 ## 1.0.7
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.7`
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.0`
--   ⬆️ upgrade `@lou.codes/diff` to `v1.0.7`
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.7`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.0`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v1.0.7`.
 
 ## 1.0.6
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/constants` to `v1.2.0`
--   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.6`
--   ⬆️ upgrade `@lou.codes/diff` to `v1.0.6`
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.6`
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.2.0`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.6`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v1.0.6`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.6`.
 
 ## 1.0.5
 
 ### Patch Changes
 
 -   📝 update some code blocks without language or with wrong language.
--   ⬆️ upgrade `@lou.codes/constants` to `v1.1.0`
--   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.5`
--   ⬆️ upgrade `@lou.codes/diff` to `v1.0.5`
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.5`
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.1.0`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.5`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v1.0.5`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.5`.
 
 ## 1.0.4
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/constants` to `v1.0.2`
--   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.4`
--   ⬆️ upgrade `@lou.codes/diff` to `v1.0.4`
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.4`
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.0.2`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.4`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v1.0.4`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.4`.
 
 ## 1.0.3
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/constants` to `v1.0.1`
--   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.3`
--   ⬆️ upgrade `@lou.codes/diff` to `v1.0.3`
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.3`
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.0.1`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.3`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v1.0.3`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.3`.
 
 ## 1.0.2
 
 ### Patch Changes
 
 -   ➕ add @lou.codes/constants and use it.
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.2`
--   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.2`
--   ⬆️ upgrade `@lou.codes/diff` to `v1.0.2`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.2`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.2`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v1.0.2`.
 
 ## 1.0.1
 
 ### Patch Changes
 
 -   ✏️ show brotli size instead of gzip.
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.1`
--   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.1`
--   ⬆️ upgrade `@lou.codes/diff` to `v1.0.1`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.1`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.1`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v1.0.1`.
 
 ## 1.0.0
 
@@ -165,15 +175,15 @@
 ### Patch Changes
 
 -   🔧 add types field back so that NPM shows it as a TypeScript package.
--   ⬆️ upgrade `@vangware/types` to `v6.3.7`
--   ⬆️ upgrade `@vangware/ansi` to `v6.3.37`
--   ⬆️ upgrade `@vangware/diff` to `v1.0.2`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.7`.
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.37`.
+-   ⬆️ upgrade `@vangware/diff` to `v1.0.2`.
 
 ## 11.0.1
 
 ### Patch Changes
 
--   ⬆️ upgrade `@vangware/diff` to `v1.0.1`
+-   ⬆️ upgrade `@vangware/diff` to `v1.0.1`.
 
 ## 11.0.0
 
@@ -190,9 +200,9 @@
 ### Patch Changes
 
 -   ⬆️ engine upgrade.
--   ⬆️ upgrade `@vangware/ansi` to `v6.3.36`
--   ⬆️ upgrade `@vangware/types` to `v6.3.6`
--   ⬆️ upgrade `@vangware/diff` to `v1.0.1`
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.36`.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.6`.
+-   ⬆️ upgrade `@vangware/diff` to `v1.0.1`.
 
 ## 10.3.35
 
@@ -200,52 +210,52 @@
 
 -   🚨 apply linting changes.
 -   🐛 fix bad import.
--   ⬆️ upgrade `@vangware/types` to `v6.3.5`
--   ⬆️ upgrade `@vangware/ansi` to `v6.3.35`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.5`.
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.35`.
 
 ## 10.3.34
 
 ### Patch Changes
 
 -   🔧 remove types field from `package.json`, it is inferred automatically.
--   ⬆️ upgrade `@vangware/types` to `v6.3.4`
--   ⬆️ upgrade `@vangware/ansi` to `v6.3.34`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.4`.
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.34`.
 
 ## 10.3.33
 
 ### Patch Changes
 
--   ⬆️ upgrade `@vangware/types` to `v6.3.3`
--   ⬆️ upgrade `@vangware/ansi` to `v6.3.33`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.3`.
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.33`.
 
 ## 10.3.32
 
 ### Patch Changes
 
--   📝 update docs removing the browser section (for now)
+-   📝 update docs removing the browser section (for now).
 
 ## 10.3.31
 
 ### Patch Changes
 
 -   📝 smaller badges.
--   ⬆️ upgrade `@vangware/types` to `v6.3.2`
--   ⬆️ upgrade `@vangware/ansi` to `v6.3.32`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.2`.
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.32`.
 
 ## 10.3.30
 
 ### Patch Changes
 
 -   📝 update to include gzip size.
--   ⬆️ upgrade `@vangware/types` to `v6.3.1`
--   ⬆️ upgrade `@vangware/ansi` to `v6.3.31`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.1`.
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.31`.
 
 ## 10.3.29
 
 ### Patch Changes
 
--   ⬆️ upgrade `@vangware/types` to `v6.3.0`
--   ⬆️ upgrade `@vangware/ansi` to `v6.3.30`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.0`.
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.30`.
 
 ## 10.3.28
 
@@ -258,24 +268,24 @@
 ### Patch Changes
 
 -   📝 update documentation and URLs.
--   ⬆️ upgrade `@vangware/types` to `v6.2.10`
--   ⬆️ upgrade `@vangware/ansi` to `v6.3.29`
+-   ⬆️ upgrade `@vangware/types` to `v6.2.10`.
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.29`.
 
 ## 10.3.26
 
 ### Patch Changes
 
 -   🍱 update logo source.
--   ⬆️ upgrade `@vangware/types` to `v6.2.9`
--   ⬆️ upgrade `@vangware/ansi` to `v6.3.28`
+-   ⬆️ upgrade `@vangware/types` to `v6.2.9`.
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.28`.
 
 ## 10.3.25
 
 ### Patch Changes
 
--   🚚 move to monorepo
--   ⬆️ upgrade `@vangware/ansi` to `v6.3.27`
--   ⬆️ upgrade `@vangware/types` to `v6.2.8`
+-   🚚 move to monorepo.
+-   ⬆️ upgrade `@vangware/ansi` to `v6.3.27`.
+-   ⬆️ upgrade `@vangware/types` to `v6.2.8`.
 
 ## 10.3.24
 
@@ -976,10 +986,10 @@
 
 -   ⬆️ dependency upgrade.
 -   🐛 fix bug with exposed bin.
--   ➖ remove `husky` :tada:
+-   ➖ remove `husky` :tada:.
 -   ➕ add `@arkweid/lefthook`.
 -   🏗 change markdown files to use references.
--   🍱 update logo in `README.md`
+-   🍱 update logo in `README.md`.
 -   🏗 update outDir to single `dist` directory.
 
 ## 7.0.0

@@ -1,4 +1,5 @@
-import { EMPTY_STRING } from "@lou.codes/constants";
+import { values } from "@lou.codes/constants/Object.js";
+import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import type { ReadOnlyRecord } from "@lou.codes/types";
 import { readdir, writeFile } from "node:fs/promises";
 import { sourceURL } from "./sourceURL.js";
@@ -22,7 +23,7 @@ export const copyTemplates = (answers: Answers) =>
 								>,
 							) =>
 								Promise.all(
-									Object.values(importedTemplate).map(
+									values(importedTemplate).map(
 										templateFunction =>
 											writeFile(
 												targetURL(

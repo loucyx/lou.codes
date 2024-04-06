@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/test",
 	"description": "✅ Equality test with enforced readability",
-	"version": "3.0.2",
+	"version": "3.0.3",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -52,13 +52,14 @@
 		"git:pre-push": "run-s clean compile sanitize",
 		"lint": "eslint {src,tests}",
 		"lint:fix": "eslint {src,tests} --fix",
+		"prepare": "run-s compile",
 		"prepublishOnly": "run-s compile prettify",
 		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'",
 		"sanitize": "run-p lint test",
 		"test": "NODE_OPTIONS='--import tsx' node ./src/bin/index.ts"
 	},
 	"sideEffects": false,
-	"size": "1.70",
+	"size": "1.65",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

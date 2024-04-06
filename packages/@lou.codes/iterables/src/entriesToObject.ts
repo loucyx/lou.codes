@@ -1,4 +1,5 @@
-import { EMPTY_OBJECT, freeze } from "@lou.codes/constants";
+import { freeze } from "@lou.codes/constants/Object.js";
+import { EMPTY_OBJECT } from "@lou.codes/constants/empty.js";
 import type {
 	Entry,
 	EntryKey,

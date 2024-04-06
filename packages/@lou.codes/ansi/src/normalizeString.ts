@@ -1,4 +1,4 @@
-import { EMPTY_STRING } from "@lou.codes/constants";
+import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import type { ReadOnlyArray } from "@lou.codes/types";
 
 /**

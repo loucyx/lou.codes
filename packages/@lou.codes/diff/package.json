@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/diff",
 	"description": "↔️ Deep diffing utility.",
-	"version": "2.0.2",
+	"version": "2.0.3",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -47,7 +47,7 @@
 		"git:pre-push": "run-s clean compile sanitize",
 		"lint": "eslint {src,tests}",
 		"lint:fix": "eslint {src,tests} --fix",
-		"prepublishOnly": "run-s clean compile prettify",
+		"prepare": "run-s clean compile prettify",
 		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'",
 		"sanitize": "run-p lint test",
 		"test": "NODE_OPTIONS='--import tsx' node --test ./tests/*.test.ts"

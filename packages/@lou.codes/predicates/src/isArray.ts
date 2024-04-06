@@ -1,3 +1,4 @@
+import { isArray as arrayIsArray } from "@lou.codes/constants/Array.js";
 import type { ReadOnlyArray } from "@lou.codes/types";
 
 /**
@@ -11,6 +12,6 @@ import type { ReadOnlyArray } from "@lou.codes/types";
  * ```
  * @returns `true` if the given value is an array, `false` otherwise.
  */
-export const isArray = Array.isArray as <Item>(
+export const isArray = arrayIsArray as <Item>(
 	input: unknown,
 ) => input is ReadOnlyArray<Item>;

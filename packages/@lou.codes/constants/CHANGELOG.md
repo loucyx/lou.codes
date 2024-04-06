@@ -1,5 +1,11 @@
 # Change log
 
+## 2.0.0
+
+### Major Changes
+
+-   🏗️ restructured to have shared static methods as well.
+
 ## 1.2.2
 
 ### Patch Changes

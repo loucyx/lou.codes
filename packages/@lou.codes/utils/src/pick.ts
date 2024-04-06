@@ -1,3 +1,4 @@
+import { entries, fromEntries } from "@lou.codes/constants/Object.js";
 import type { ReadOnlyArray, ReadOnlyRecord } from "@lou.codes/types";
 import { entryKey } from "./entryKey.js";
 
@@ -19,8 +20,8 @@ export const pick =
 		...properties: Properties
 	) =>
 	<Source extends ReadOnlyRecord>(object: Source) =>
-		Object.fromEntries(
-			Object.entries(object).filter(entry =>
+		fromEntries(
+			entries(object).filter(entry =>
 				properties.includes(entryKey(entry)),
 			),
 		) as Pick<Source, Properties[number]>;

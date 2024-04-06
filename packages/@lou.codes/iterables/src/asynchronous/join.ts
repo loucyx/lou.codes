@@ -1,4 +1,4 @@
-import { EMPTY_STRING } from "@lou.codes/constants";
+import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import type { IsomorphicIterable, Maybe } from "@lou.codes/types";
 import { awaitableHandler } from "@lou.codes/utils";
 import { reduce } from "./reduce.js";

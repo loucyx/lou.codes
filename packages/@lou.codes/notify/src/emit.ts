@@ -1,4 +1,4 @@
-import { EMPTY_ARRAY } from "@lou.codes/constants";
+import { EMPTY_ARRAY } from "@lou.codes/constants/empty.js";
 import { forEach, type ReadOnlyIterable } from "@lou.codes/iterables";
 import { applyTo } from "@lou.codes/utils";
 import type { Emitter } from "./Emitter.js";

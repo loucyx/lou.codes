@@ -1,12 +1,11 @@
 import eslintPluginPreferArrowFunctions from "eslint-plugin-prefer-arrow-functions";
-import { freeze } from "../freeze.js";
 import { ERROR } from "./levels.js";
 
 /**
  * ESLint `prefer-arrow` rules.
  * @see [eslint-plugin-prefer-arrow-functions](https://npm.im/eslint-plugin-prefer-arrow-functions)
  */
-export const preferArrowFunctionsRules = freeze(
+export const preferArrowFunctionsRules =
 	/** @type {const} @satisfies {import("eslint").Linter.FlatConfig} */ ({
 		plugins: { "prefer-arrow-functions": eslintPluginPreferArrowFunctions },
 		rules: {
@@ -26,5 +25,4 @@ export const preferArrowFunctionsRules = freeze(
 				},
 			],
 		},
-	}),
-);
+	});

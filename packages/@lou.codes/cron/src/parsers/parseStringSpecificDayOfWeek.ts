@@ -1,4 +1,4 @@
-import { EMPTY_STRING } from "@lou.codes/constants";
+import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import { parseDecimal } from "@lou.codes/parsers";
 import type { Maybe } from "@lou.codes/types";
 import { CRON_SPECIFIC_SEPARATOR } from "../constants.js";

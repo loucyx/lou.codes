@@ -1,4 +1,4 @@
-import type { Function, Unary } from "@lou.codes/types";
+import type { Unary } from "@lou.codes/types";
 import type { h } from "preact";
 
 /**

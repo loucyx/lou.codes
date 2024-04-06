@@ -1,7 +1,7 @@
 {
 	"name": "react-pair",
 	"description": "🖇️ Util to help with the paired hook pattern",
-	"version": "3.0.97",
+	"version": "4.0.0",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -13,7 +13,7 @@
 	},
 	"dependencies": {
 		"@lou.codes/types": "workspace:*",
-		"@lou.codes/utils": "workspace:*"
+		"preact-pair": "workspace:*"
 	},
 	"devDependencies": {
 		"@types/react": "^18.2.74",
@@ -54,17 +54,16 @@
 	"scripts": {
 		"clean": "rimraf ./dist",
 		"compile": "tsc --project ./tsconfig.dist.json",
-		"git:pre-push": "run-s clean pre-compile sanitize",
+		"git:pre-push": "run-s clean compile sanitize",
 		"lint": "eslint {src,tests}",
 		"lint:fix": "eslint {src,tests} --fix",
-		"pre-compile": "tsc --noEmit --project tsconfig.dist.json",
 		"prepublishOnly": "run-s clean compile prettify",
 		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'",
 		"sanitize": "run-p lint test",
 		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
 	},
 	"sideEffects": false,
-	"size": "0.10",
+	"size": "0.09",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

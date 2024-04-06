@@ -1,4 +1,4 @@
-import { EMPTY_ARRAY } from "@lou.codes/constants";
+import { EMPTY_ARRAY } from "@lou.codes/constants/empty.js";
 import { filter } from "@lou.codes/iterables";
 import type { ReadOnlyArray } from "@lou.codes/types";
 import { mutate, set } from "@lou.codes/utils";

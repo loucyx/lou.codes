@@ -1,4 +1,4 @@
-import type { EMPTY_ARRAY } from "@lou.codes/constants";
+import type { EMPTY_ARRAY } from "@lou.codes/constants/empty.js";
 
 /**
  * Empty array.

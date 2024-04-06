@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/predicates",
 	"description": "🧐 Predicate util functions",
-	"version": "1.0.15",
+	"version": "2.0.0",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -12,6 +12,7 @@
 		"url": "https://github.com/loucyx/lou.codes/issues"
 	},
 	"dependencies": {
+		"@lou.codes/constants": "workspace:*",
 		"@lou.codes/parsers": "workspace:*",
 		"@lou.codes/types": "workspace:*"
 	},
@@ -52,7 +53,7 @@
 		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
 	},
 	"sideEffects": false,
-	"size": "0.72",
+	"size": "0.66",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

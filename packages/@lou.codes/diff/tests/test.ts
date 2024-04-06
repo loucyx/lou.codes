@@ -1,4 +1,4 @@
-import { EMPTY_STRING } from "@lou.codes/constants";
+import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import type { Maybe } from "@lou.codes/types";
 import { deepEqual } from "node:assert/strict";
 import { describe, it } from "node:test";

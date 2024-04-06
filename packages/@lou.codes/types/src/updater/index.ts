@@ -1,4 +1,4 @@
-import { EMPTY_ARRAY, EMPTY_STRING } from "@lou.codes/constants";
+import { EMPTY_ARRAY, EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import { writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";

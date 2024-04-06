@@ -1,5 +1,5 @@
 import { underlined } from "@lou.codes/ansi";
-import { EMPTY_STRING } from "@lou.codes/constants";
+import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import type { IsomorphicIterable } from "@lou.codes/types";
 import { FAILED_TESTS, TEST } from "../constants.js";
 import { stringifyTest } from "../stringifyTest.js";

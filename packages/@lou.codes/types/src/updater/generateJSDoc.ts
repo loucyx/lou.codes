@@ -1,4 +1,4 @@
-import { EMPTY_STRING } from "@lou.codes/constants";
+import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import type { ITagData } from "vscode-html-languageservice/lib/esm/htmlLanguageTypes.js";
 import type { ReadOnly } from "../ReadOnly.js";
 import { getDescription } from "./getDescription.js";

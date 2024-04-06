@@ -4,6 +4,7 @@ import {
 	foregroundBrightRed,
 	foregroundYellow,
 } from "@lou.codes/ansi";
+import { defineProperty } from "@lou.codes/constants/Object.js";
 import { formatValue } from "../src/formatValue.js";
 import type { Tests } from "../src/types/Tests.js";
 
@@ -72,7 +73,7 @@ export const formatValueTests = [
 		must: "return formatted Object",
 		received: () =>
 			formatValue(
-				Object.defineProperty({ "🟢": "🟩" }, "constructor", {
+				defineProperty({ "🟢": "🟩" }, "constructor", {
 					value: undefined,
 				}),
 			),

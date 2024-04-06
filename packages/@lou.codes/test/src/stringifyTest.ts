@@ -1,5 +1,5 @@
 import { dimmed, foregroundRed } from "@lou.codes/ansi";
-import { EMPTY_STRING } from "@lou.codes/constants";
+import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import { FAIL, PASS } from "./constants.js";
 import { stringifyDifference } from "./stringifyDifference.js";
 import type { TestResult } from "./types/TestResult.js";

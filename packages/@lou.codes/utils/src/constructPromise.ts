@@ -16,7 +16,7 @@ export const constructPromise = construct(Promise) as <Value>(
 	) => void,
 ) => {
 	/**
-	 * @see [Promise#then](https://mdn.io/Promise#then)
+	 * @see [Promise#then](https://mdn.io/Promise.prototype.then)
 	 */
 	then: <ResolvedValue = Value, RejectedValue = unknown>(
 		// eslint-disable-next-line @typescript-eslint/no-invalid-void-type
@@ -26,7 +26,7 @@ export const constructPromise = construct(Promise) as <Value>(
 	) => Promise<ResolvedValue | RejectedValue>;
 
 	/**
-	 * @see [Promise#then](https://mdn.io/Promise#catch)
+	 * @see [Promise#then](https://mdn.io/Promise.prototype.catch)
 	 */
 	catch: <RejectedValue = unknown>(
 		// eslint-disable-next-line @typescript-eslint/no-invalid-void-type

@@ -4,7 +4,9 @@ import {
 	foregroundBrightRed,
 	foregroundYellow,
 } from "@lou.codes/ansi";
-import { EMPTY_STRING } from "@lou.codes/constants";
+import { isArray } from "@lou.codes/constants/Array.js";
+import { entries } from "@lou.codes/constants/Object.js";
+import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import type { ReadOnlyRecord, TypeOfValue } from "@lou.codes/types";
 import { formatValue } from "./formatValue.js";
 
@@ -23,7 +25,7 @@ export const formatValueDictionary: ReadOnlyRecord<
 	null: () => foregroundBlue`null`,
 	number: value => foregroundBrightGreen`${value}`,
 	object: value =>
-		Array.isArray(value) ?
+		isArray(value) ?
 			`${foregroundBrightGreen`Array`}([ ${value
 				.map(formatValue)
 				.join(", ")} ])`
@@ -50,7 +52,7 @@ export const formatValueDictionary: ReadOnlyRecord<
 				"function"
 			) ?
 				[...(value as ReadonlyMap<unknown, unknown>).entries()]
-			:	Object.entries(value as ReadOnlyRecord)
+			:	entries(value as ReadOnlyRecord)
 			)
 				.map(
 					([key, propertyValue]) =>

@@ -1,12 +1,11 @@
 import eslintPluginImport from "eslint-plugin-import";
-import { freeze } from "../freeze.js";
 import { ERROR, OFF } from "./levels.js";
 
 /**
  * ESLint import rules.
  * @see [eslint-plugin-import](https://npm.im/eslint-plugin-import)
  */
-export const importRules = freeze(
+export const importRules =
 	/** @type {const} @satisfies {import("eslint").Linter.FlatConfig} */ ({
 		plugins: { import: eslintPluginImport },
 		rules: {
@@ -89,5 +88,4 @@ export const importRules = freeze(
 			 */
 			"import/no-webpack-loader-syntax": ERROR,
 		},
-	}),
-);
+	});

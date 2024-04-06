@@ -1,3 +1,4 @@
+import { ownKeys } from "@lou.codes/constants/Reflect.js";
 import type { Entry, ReadOnlyRecord } from "@lou.codes/types";
 import { createIterableIterator } from "./createIterableIterator.js";
 
@@ -20,7 +21,7 @@ export const objectToEntries = <Key extends PropertyKey, Value>(
 ) =>
 	createIterableIterator(async function* () {
 		// eslint-disable-next-line functional/no-loop-statements
-		for await (const key of Reflect.ownKeys(input)) {
+		for await (const key of ownKeys(input)) {
 			yield [
 				key as Key,
 				input[key as keyof ReadOnlyRecord<Key, Value>],

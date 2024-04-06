@@ -1,12 +1,11 @@
 import eslintJS from "@eslint/js";
-import { freeze } from "../freeze.js";
 import { ERROR, WARN } from "./levels.js";
 
 /**
  * Core ESLint rules.
  * @see [ESLint core rules](https://eslint.org/docs/latest/rules)
  */
-export const coreRules = freeze(
+export const coreRules =
 	/** @type {const} @satisfies {import("eslint").Linter.FlatConfig} */ ({
 		files: [
 			"**/*.cjs",
@@ -969,5 +968,4 @@ export const coreRules = freeze(
 			 */
 			yoda: ERROR,
 		},
-	}),
-);
+	});

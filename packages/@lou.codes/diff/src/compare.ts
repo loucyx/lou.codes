@@ -1,4 +1,6 @@
-import { EMPTY_ARRAY } from "@lou.codes/constants";
+import { isArray } from "@lou.codes/constants/Array.js";
+import { ownKeys } from "@lou.codes/constants/Reflect.js";
+import { EMPTY_ARRAY } from "@lou.codes/constants/empty.js";
 import { CREATE, DELETE, UPDATE } from "./constants.js";
 import type { CreateDifference } from "./types/CreateDifference.js";
 import type { DeleteDifference } from "./types/DeleteDifference.js";
@@ -37,7 +39,7 @@ export const compare = function* (values: {
 
 	if (left !== right) {
 		// eslint-disable-next-line functional/no-conditional-statements
-		if (Array.isArray(left) && Array.isArray(right)) {
+		if (isArray(left) && isArray(right)) {
 			const leftLength = left.length;
 			const rightLength = right.length;
 
@@ -69,9 +71,7 @@ export const compare = function* (values: {
 				// eslint-disable-next-line functional/no-conditional-statements
 			) {
 				// eslint-disable-next-line functional/no-loop-statements
-				for (const key of new Set(
-					[left, right].flatMap(Reflect.ownKeys),
-				)) {
+				for (const key of new Set([left, right].flatMap(ownKeys))) {
 					// eslint-disable-next-line functional/no-loop-statements
 					for (const { path, ...valueDiff } of compare({
 						...(key in left ?

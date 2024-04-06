@@ -1,4 +1,4 @@
-import { EMPTY_ARRAY } from "@lou.codes/constants";
+import { EMPTY_ARRAY } from "@lou.codes/constants/empty.js";
 import { join, length, map, some } from "@lou.codes/iterables";
 import { isUndefined } from "@lou.codes/predicates";
 import { CRON_LIST_SEPARATOR } from "../constants.js";

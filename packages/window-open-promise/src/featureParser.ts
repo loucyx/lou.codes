@@ -1,4 +1,4 @@
-import { EMPTY_STRING } from "@lou.codes/constants";
+import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import { objectToEntries } from "@lou.codes/iterables";
 import { always, whenIsUndefined } from "@lou.codes/utils";
 import type { WindowOpenPromiseFeatures } from "./WindowOpenPromiseFeatures.js";

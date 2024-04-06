@@ -1,4 +1,4 @@
-import { EMPTY_ARRAY, EMPTY_STRING } from "@lou.codes/constants";
+import { EMPTY_ARRAY, EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import { parseDecimal } from "@lou.codes/parsers";
 import { between, isNumber, isUndefined } from "@lou.codes/predicates";
 import type { Maybe } from "@lou.codes/types";

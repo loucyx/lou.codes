@@ -1,3 +1,4 @@
+import { hasOwn } from "@lou.codes/constants/Object.js";
 import type { ReadOnlyRecord } from "@lou.codes/types";
 
 /**
@@ -17,4 +18,4 @@ import type { ReadOnlyRecord } from "@lou.codes/types";
 export const isPropertyOf =
 	<Key extends PropertyKey>(object: ReadOnlyRecord<Key>) =>
 	(key: Key) =>
-		Object.hasOwn(object, key);
+		hasOwn(object, key);

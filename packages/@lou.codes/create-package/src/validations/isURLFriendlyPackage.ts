@@ -1,5 +1,5 @@
 import { foregroundRed } from "@lou.codes/ansi";
-import { EMPTY_OBJECT, EMPTY_STRING } from "@lou.codes/constants";
+import { EMPTY_OBJECT, EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import { isURLFriendly } from "./isURLFriendly.js";
 
 export const isURLFriendlyPackage = (packageName: string) => {

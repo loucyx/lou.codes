@@ -1,4 +1,4 @@
-import { createObject } from "@lou.codes/constants";
+import { create } from "@lou.codes/constants/Object.js";
 import type { EventRegistry } from "./EventRegistry.js";
 import type { EventTypeDictionary } from "./EventTypeDictionary.js";
 import { emit } from "./emit.js";
@@ -22,5 +22,5 @@ import { on } from "./on.js";
  * @returns Object with `emit` and `on` functions.
  */
 export const broadcast = <Events extends EventTypeDictionary>(
-	eventRegistry = createObject<EventRegistry<Events>>(),
+	eventRegistry = create<EventRegistry<Events>>(),
 ) => ({ emit: emit(eventRegistry), on: on(eventRegistry) });

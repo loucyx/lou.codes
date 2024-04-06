@@ -1,3 +1,4 @@
+import { getPrototypeOf } from "@lou.codes/constants/Object.js";
 import type { Class } from "@lou.codes/types";
 
 /**
@@ -17,4 +18,4 @@ import type { Class } from "@lou.codes/types";
 export const isPrototypeOf =
 	<Constructor extends Class>(constructor: Constructor) =>
 	<Input extends object>(object: Input) =>
-		constructor.prototype === Object.getPrototypeOf(object);
+		constructor.prototype === getPrototypeOf(object);

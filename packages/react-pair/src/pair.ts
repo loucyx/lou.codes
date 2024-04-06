@@ -1,5 +1,4 @@
-import type { Function } from "@lou.codes/types";
-import { mutate } from "@lou.codes/utils";
+import { pair as preactPair } from "preact-pair";
 import type { FunctionComponent } from "react";
 import type { PairedComponentProperties } from "./PairedComponentProperties.js";
 
@@ -40,7 +39,8 @@ import type { PairedComponentProperties } from "./PairedComponentProperties.js";
  * @param hook Hook to be paired.
  * @returns Component that expects a function as children with the paired hook.
  */
-export const pair = <Hook extends Function>(hook: Hook) =>
-	mutate({ displayName: `paired(${hook.name})` })(properties =>
-		properties.children(hook),
-	) as FunctionComponent<PairedComponentProperties<Hook>>;
+export const pair = preactPair as <Hook extends Function>(
+	hook: Hook,
+) => FunctionComponent<PairedComponentProperties<Hook>> & {
+	readonly displayName: `paired(${string})`;
+};

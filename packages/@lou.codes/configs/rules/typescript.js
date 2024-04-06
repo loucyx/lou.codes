@@ -1,13 +1,12 @@
 import typescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
 import typescriptParser from "@typescript-eslint/parser";
-import { freeze } from "../freeze.js";
 import { ERROR, OFF } from "./levels.js";
 
 /**
  * ESLint TypeScript rules.
  * @see [@typescript-eslint/eslint-plugin](https://npm.im/@typescript-eslint/eslint-plugin)
  */
-export const typescriptRules = freeze(
+export const typescriptRules =
 	/** @type {const} @satisfies {import("eslint").Linter.FlatConfig} */ ({
 		languageOptions: {
 			parser: typescriptParser,
@@ -1611,5 +1610,4 @@ export const typescriptRules = freeze(
 			 */
 			"require-await": OFF,
 		},
-	}),
-);
+	});

@@ -1,12 +1,27 @@
 # Change log
 
+## 2.1.0
+
+### Minor Changes
+
+-   ✨ add new `intercept` util that proxies values to avoid mutations.
+-   🏗️ update construct to use `intercept` instead of `mutate`.
+-   📝 update docs for `mutate` to add a warning to use `intercept` instead.
+
+### Patch Changes
+
+-   🏗️ make changes related to latest `@lou.codes/constants`.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.0.0`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v2.0.0`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.2.2`.
+
 ## 2.0.1
 
 ### Patch Changes
 
 -   🐛 fix issues with `constructPromise`.
--   ⬆️ upgrade `@lou.codes/types` to `v1.2.1`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.15`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.2.1`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.15`.
 
 ## 2.0.0
 
@@ -16,8 +31,8 @@
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.2.0`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.14`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.2.0`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.14`.
 
 ## 1.1.0
 
@@ -33,39 +48,39 @@
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.6`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.13`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.6`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.13`.
 
 ## 1.0.12
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/constants` to `v1.2.2`
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.5`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.12`
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.2.2`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.5`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.12`.
 
 ## 1.0.11
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.4`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.11`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.4`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.11`.
 
 ## 1.0.10
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.3`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.10`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.3`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.10`.
 
 ## 1.0.9
 
 ### Patch Changes
 
 -   🚨 update based on linter changes.
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.9`
--   ⬆️ upgrade `@lou.codes/constants` to `v1.2.1`
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.2`
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.9`.
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.2.1`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.2`.
 
 ## 1.0.8
 
@@ -73,15 +88,15 @@
 
 -   🏗️ use argument destructing less to achieve smaller bundles.
 -   🐛 fix `set` types to take any object.
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.8`
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.1`
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.8`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.1`.
 
 ## 1.0.7
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.0`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.7`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.0`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.7`.
 
 ## 1.0.6
 
@@ -89,45 +104,45 @@
 
 -   🔧 remove unnecessary CJS references.
 -   🏗️ use freeze from `@lou.codes/constants`.
--   ⬆️ upgrade `@lou.codes/constants` to `v1.2.0`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.6`
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.6`
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.2.0`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.6`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.6`.
 
 ## 1.0.5
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.5`
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.5`
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.5`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.5`.
 
 ## 1.0.4
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.4`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.4`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.4`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.4`.
 
 ## 1.0.3
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.3`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.3`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.3`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.3`.
 
 ## 1.0.2
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.2`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.2`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.2`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.2`.
 
 ## 1.0.1
 
 ### Patch Changes
 
 -   ✏️ show brotli size instead of gzip.
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.1`
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.1`
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.1`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.1`.
 
 ## 1.0.0
 
@@ -140,91 +155,91 @@
 ### Patch Changes
 
 -   🔧 add types field back so that NPM shows it as a TypeScript package.
--   ⬆️ upgrade `@vangware/predicates` to `v2.2.6`
--   ⬆️ upgrade `@vangware/types` to `v6.3.7`
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.6`.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.7`.
 
 ## 10.1.28
 
 ### Patch Changes
 
 -   ⬆️ engine upgrade.
--   ⬆️ upgrade `@vangware/predicates` to `v2.2.5`
--   ⬆️ upgrade `@vangware/types` to `v6.3.6`
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.5`.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.6`.
 
 ## 10.1.27
 
 ### Patch Changes
 
--   ⬆️ upgrade `@vangware/types` to `v6.3.5`
--   ⬆️ upgrade `@vangware/predicates` to `v2.2.4`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.5`.
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.4`.
 
 ## 10.1.26
 
 ### Patch Changes
 
 -   🔧 remove types field from `package.json`, it is inferred automatically.
--   ⬆️ upgrade `@vangware/predicates` to `v2.2.3`
--   ⬆️ upgrade `@vangware/types` to `v6.3.4`
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.3`.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.4`.
 
 ## 10.1.25
 
 ### Patch Changes
 
--   ⬆️ upgrade `@vangware/types` to `v6.3.3`
--   ⬆️ upgrade `@vangware/predicates` to `v2.2.2`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.3`.
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.2`.
 
 ## 10.1.24
 
 ### Patch Changes
 
 -   📝 smaller badges.
--   ⬆️ upgrade `@vangware/predicates` to `v2.2.1`
--   ⬆️ upgrade `@vangware/types` to `v6.3.2`
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.1`.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.2`.
 
 ## 10.1.23
 
 ### Patch Changes
 
 -   📝 update to include gzip size.
--   ⬆️ upgrade `@vangware/predicates` to `v2.2.0`
--   ⬆️ upgrade `@vangware/types` to `v6.3.1`
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.0`.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.1`.
 
 ## 10.1.22
 
 ### Patch Changes
 
--   ⬆️ upgrade `@vangware/types` to `v6.3.0`
--   ⬆️ upgrade `@vangware/predicates` to `v2.1.36`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.0`.
+-   ⬆️ upgrade `@vangware/predicates` to `v2.1.36`.
 
 ## 10.1.21
 
 ### Patch Changes
 
--   ⬆️ upgrade `@vangware/predicates` to `v2.1.35`
+-   ⬆️ upgrade `@vangware/predicates` to `v2.1.35`.
 
 ## 10.1.20
 
 ### Patch Changes
 
 -   📝 update documentation and URLs.
--   ⬆️ upgrade `@vangware/predicates` to `v2.1.34`
--   ⬆️ upgrade `@vangware/types` to `v6.2.10`
+-   ⬆️ upgrade `@vangware/predicates` to `v2.1.34`.
+-   ⬆️ upgrade `@vangware/types` to `v6.2.10`.
 
 ## 10.1.19
 
 ### Patch Changes
 
 -   🍱 update logo source.
--   ⬆️ upgrade `@vangware/predicates` to `v2.1.33`
--   ⬆️ upgrade `@vangware/types` to `v6.2.9`
+-   ⬆️ upgrade `@vangware/predicates` to `v2.1.33`.
+-   ⬆️ upgrade `@vangware/types` to `v6.2.9`.
 
 ## 10.1.18
 
 ### Patch Changes
 
--   🚚 move to monorepo
--   ⬆️ upgrade `@vangware/predicates` to `v2.1.32`
--   ⬆️ upgrade `@vangware/types` to `v6.2.8`
+-   🚚 move to monorepo.
+-   ⬆️ upgrade `@vangware/predicates` to `v2.1.32`.
+-   ⬆️ upgrade `@vangware/types` to `v6.2.8`.
 
 ## 10.1.17
 
@@ -328,7 +343,7 @@
 ### Patch Changes
 
 -   🐛 fix some type bugs.
--   📄 typedoc is still broken -\_-
+-   📄 typedoc is still broken -\_-.
 
 ## 10.1.0
 
@@ -657,10 +672,10 @@
 ### Major Changes
 
 -   ⬆️ dependency upgrade.
--   ➖ remove `husky` :tada:
+-   ➖ remove `husky` :tada:.
 -   ➕ add `@arkweid/lefthook`.
 -   🏗 change markdown files to use references.
--   🍱 update logo in `README.md`
+-   🍱 update logo in `README.md`.
 -   🏗 update imports to have extension.
 -   🏗 update outDir to single `dist` directory.
 
@@ -712,7 +727,7 @@
 ### Patch Changes
 
 -   ⬆️ dependency upgrade.
--   🎨 new prettier config🚨
+-   🎨 new prettier config🚨.
 
 ## 6.2.0
 
@@ -914,7 +929,7 @@
 -   ⬆️ major dependency upgrade (new TS version!).
 -   🏗 improve tuples making use of the new TS feature.
 -   🔥 remove `Tuple` type.
--   🎨 logo update🚨
+-   🎨 logo update🚨.
 
 ## 3.1.1
 
@@ -946,7 +961,7 @@
 
 ### Major Changes
 
--   ⬆️ dependency upgrade
+-   ⬆️ dependency upgrade.
 -   💥 change types of filter functions to use `is`.
 -   💥 change order of params for `arrayInsert` util.
 -   💥 change order of params for `arrayReplace` util.
@@ -1201,8 +1216,8 @@
 -   ✨ add arrayUnshift.
 -   ✨ add functionNot.
 -   ✨ add isType.
--   ✨ add numberBetween
--   ✨ add numberBoundary
+-   ✨ add numberBetween.
+-   ✨ add numberBoundary.
 -   🏗 change everything to curried.
 -   🏗 change folder structure.
 -   🏗 change the way tests are done (inspired by RITEway).
@@ -1330,10 +1345,10 @@
 -   ⬆️ dependency upgrade.
 -   🔧 update settings.json.
 -   🔖 version bump.
--   🔀 Merge branch 'master' of github.com:vangware/micro
+-   🔀 Merge branch 'master' of github.com:vangware/micro.
 -   🚚 move docs and url to https://micro.vangware.com.
--   ✨ Create CNAME
--   🚚 move docs to html in docs directory (for GH Pages)
+-   ✨ Create CNAME.
+-   🚚 move docs to html in docs directory (for GH Pages).
 
 ## 4.0.2 (deprecated @vangware/micro)
 
@@ -1362,7 +1377,7 @@
 -   🔥 remove jsonParse (use JSON.parse).
 -   🔥 remove primitive class wrappers.
 -   🔥 remove tryCatch (avoid try/catch).
--   🚚 rename arraySplitFilter -> arrayFilterTuple
+-   🚚 rename arraySplitFilter -> arrayFilterTuple.
 -   ✅ update test to not use random.
 -   🏗 change arrayInsert to insert only one element.
 -   🏗 change arrayPush to insert only one element.
@@ -1383,13 +1398,13 @@
 
 ### Major Changes
 
--   🔖 version 3.0.0
+-   🔖 version 3.0.0.
 -   🏗 change when to work with nullish instead of falsy.
 -   🏗 simplified stringMapReplace.
 -   🏗 change tslint with eslint.
 -   ✨ add isNullish util.
 -   ✨ add arrayPush util.
--   🚚 rename config files (Prettier, linter, etc)
+-   🚚 rename config files (Prettier, linter, etc).
 -   📝 update documentation.
 
 ## 2.1.1 (deprecated @vangware/micro)
@@ -1403,7 +1418,7 @@
 
 ### Minor Changes
 
--   🎨 improve objectMap to work with no object🚨
+-   🎨 improve objectMap to work with no object🚨.
 
 ## 2.0.0 (deprecated @vangware/micro)
 

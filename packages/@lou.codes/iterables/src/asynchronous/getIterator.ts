@@ -1,8 +1,5 @@
-import {
-	asyncIteratorSymbol,
-	isIterable,
-	iteratorSymbol,
-} from "@lou.codes/predicates";
+import { asyncIterator, iterator } from "@lou.codes/constants/Symbol.js";
+import { isIterable } from "@lou.codes/predicates";
 import type { IsomorphicIterable } from "@lou.codes/types";
 
 /**
@@ -25,8 +22,8 @@ export const getIterator = <Iterable extends IsomorphicIterable>(
 	iterable: Iterable,
 ) =>
 	(iterable as AsyncIterable<unknown>)[
-		(isIterable(iterable) ? iteratorSymbol : (
-			asyncIteratorSymbol
+		(isIterable(iterable) ? iterator : (
+			asyncIterator
 		)) as keyof AsyncIterable<unknown>
 	]() as Iterable extends IsomorphicIterable<infer Item> ?
 		Iterable extends AsyncIterable<Item> ?

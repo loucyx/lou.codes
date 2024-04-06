@@ -1,4 +1,3 @@
-import type { Function } from "@lou.codes/types";
 import type { PairedRenderFunction } from "./PairedRenderFunction.js";
 
 /**

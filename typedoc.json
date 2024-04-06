@@ -1,7 +1,7 @@
 {
 	"$schema": "https://typedoc.org/schema.json",
 	"categorizeByGroup": false,
-	"cleanOutputDir": false,
+	"cleanOutputDir": true,
 	"entryPoints": ["packages/@lou.codes/*", "packages/*"],
 	"entryPointStrategy": "packages",
 	"excludeTags": ["@category"],

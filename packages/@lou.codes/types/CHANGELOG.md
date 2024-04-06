@@ -1,5 +1,12 @@
 # Change log
 
+## 1.2.2
+
+### Patch Changes
+
+-   🏗️ make changes related to latest `@lou.codes/constants`.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.0.0`.
+
 ## 1.2.1
 
 ### Patch Changes
@@ -24,7 +31,7 @@
 ### Patch Changes
 
 -   🚨 apply new linting rules.
--   ⬆️ upgrade `@lou.codes/constants` to `v1.2.2`
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.2.2`.
 
 ## 1.1.4
 
@@ -43,7 +50,7 @@
 ### Patch Changes
 
 -   🚨 update based on linter changes.
--   ⬆️ upgrade `@lou.codes/constants` to `v1.2.1`
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.2.1`.
 
 ## 1.1.1
 
@@ -61,25 +68,25 @@
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/constants` to `v1.2.0`
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.2.0`.
 
 ## 1.0.5
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/constants` to `v1.1.0`
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.1.0`.
 
 ## 1.0.4
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/constants` to `v1.0.2`
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.0.2`.
 
 ## 1.0.3
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/constants` to `v1.0.1`
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.0.1`.
 
 ## 1.0.2
 
@@ -163,7 +170,7 @@
 
 ### Patch Changes
 
--   🚚 move to monorepo
+-   🚚 move to monorepo.
 
 ## 6.2.7
 
@@ -1071,10 +1078,10 @@
 ### Patch Changes
 
 -   ⬆️ dependency upgrade.
--   ➖ remove `husky` :tada:
+-   ➖ remove `husky` :tada:.
 -   ➕ add `@arkweid/lefthook`.
 -   🏗 change markdown files to use references.
--   🍱 update logo in `README.md`
+-   🍱 update logo in `README.md`.
 
 ## 1.0.7
 

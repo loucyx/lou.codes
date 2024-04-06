@@ -1,4 +1,5 @@
-import { EMPTY_OBJECT } from "@lou.codes/constants";
+import { values } from "@lou.codes/constants/Object.js";
+import { EMPTY_OBJECT } from "@lou.codes/constants/empty.js";
 import type { IAttributeData } from "vscode-html-languageservice/lib/esm/htmlLanguageTypes.js";
 import type { ReadOnlyArray } from "../ReadOnlyArray.js";
 import type { ReadOnlyRecord } from "../ReadOnlyRecord.js";
@@ -13,7 +14,7 @@ import { getDescription } from "./getDescription.js";
  * @returns Patched attributes.
  */
 export const patchAttributes = (attributes: ReadOnlyArray<IAttributeData>) =>
-	Object.values(
+	values(
 		attributes.reduce<ReadOnlyRecord<string, IAttributeData>>(
 			(patchedAttributes, attribute) => ({
 				...patchedAttributes,

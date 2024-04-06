@@ -1,12 +1,11 @@
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
-import { freeze } from "../freeze.js";
 import { ERROR } from "./levels.js";
 
 /**
  * ESLint `unicorn` rules.
  * @see [eslint-plugin-unicorn](https://npm.im/eslint-plugin-unicorn)
  */
-export const unicornRules = freeze(
+export const unicornRules =
 	/** @type {const} @satisfies {import("eslint").Linter.FlatConfig} */ ({
 		plugins: { unicorn: eslintPluginUnicorn },
 		rules: {
@@ -414,5 +413,4 @@ export const unicornRules = freeze(
 			 */
 			"unicorn/text-encoding-identifier-case": ERROR,
 		},
-	}),
-);
+	});

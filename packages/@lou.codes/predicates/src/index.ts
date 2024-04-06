@@ -30,4 +30,3 @@ export { isTruthy } from "./isTruthy.js";
 export { isType } from "./isType.js";
 export { isUndefined } from "./isUndefined.js";
 export { match } from "./match.js";
-export { asyncIteratorSymbol, iteratorSymbol } from "./symbols.js";

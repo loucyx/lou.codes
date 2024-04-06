@@ -1,5 +1,15 @@
 # Change log
 
+## 5.0.4
+
+### Patch Changes
+
+-   ⬆️ dependency upgrade (not latest because ESLint 9 is kinda breaking
+    everything for me at the moment).
+-   🔥 Remove `freeze`.
+-   🔧 update `changelog.cjs` to add dots at the end of version upgrade
+    messages.
+
 ## 5.0.3
 
 ### Patch Changes
@@ -282,7 +292,7 @@
 
 ### Patch Changes
 
--   ⬆️ dependency upgrade
+-   ⬆️ dependency upgrade.
 -   ✏️ show brotli size instead of gzip.
 
 ## 2.0.0
@@ -358,7 +368,7 @@
 -   ⬆️ dependency upgrade.
 -   🔧 Remove `@typescript-eslint/prefer-readonly-parameter-types`.
 -   🔧 Add `functional/prefer-immutable-types`.
--   🔧 update TypeScript rules to stop replacing `{}` with `object`
+-   🔧 update TypeScript rules to stop replacing `{}` with `object`.
 
 ## 7.0.8
 
@@ -435,7 +445,7 @@
 
 ### Patch Changes
 
--   🚚 move to monorepo
+-   🚚 move to monorepo.
 
 ## 6.1.1
 
@@ -769,7 +779,7 @@
 
 ### Patch Changes
 
--   🔧 update `package.json` homepage.`
+-   🔧 update `package.json` homepage.
 
 ## 3.4.5
 
@@ -1117,7 +1127,7 @@
 
 ### Patch Changes
 
--   🐛 fix another bug with react rules 🤦🏻
+-   🐛 fix another bug with react rules 🤦🏻.
 
 ## 2.0.8
 

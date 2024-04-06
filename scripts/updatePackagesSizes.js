@@ -23,5 +23,5 @@ void Promise.all(
 )
 	// eslint-disable-next-line no-console
 	.then(() => console.log("All Done"))
-	// eslint-disable-next-line no-console
+	// eslint-disable-next-line no-console, @typescript-eslint/use-unknown-in-catch-callback-variable
 	.catch(console.error);

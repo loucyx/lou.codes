@@ -1,5 +1,16 @@
 # Change log
 
+## 4.0.0
+
+### Major Changes
+
+-   🏗️ use `preact-pair` code instead of duplicating.
+
+### Patch Changes
+
+-   ⬆️ upgrade `preact-pair` to `v1.1.0`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.2.2`.
+
 ## 3.0.97
 
 ### Patch Changes
@@ -11,22 +22,22 @@
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/utils` to `v2.0.1`
--   ⬆️ upgrade `@lou.codes/types` to `v1.2.1`
+-   ⬆️ upgrade `@lou.codes/utils` to `v2.0.1`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.2.1`.
 
 ## 3.0.95
 
 ### Patch Changes
 
 -   ⬆️ dependency upgrade.
--   ⬆️ upgrade `@lou.codes/types` to `v1.2.0`
--   ⬆️ upgrade `@lou.codes/utils` to `v2.0.0`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.2.0`.
+-   ⬆️ upgrade `@lou.codes/utils` to `v2.0.0`.
 
 ## 3.0.94
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/utils` to `v1.1.0`
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.1.0`.
 
 ## 3.0.93
 
@@ -39,16 +50,16 @@
 ### Patch Changes
 
 -   ⬆️ dependency upgrade.
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.6`
--   ⬆️ upgrade `@lou.codes/utils` to `v1.0.13`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.6`.
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.0.13`.
 
 ## 3.0.91
 
 ### Patch Changes
 
 -   ⬆️ dependency upgrade.
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.5`
--   ⬆️ upgrade `@lou.codes/utils` to `v1.0.12`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.5`.
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.0.12`.
 
 ## 3.0.90
 
@@ -108,8 +119,8 @@
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.4`
--   ⬆️ upgrade `@lou.codes/utils` to `v1.0.11`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.4`.
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.0.11`.
 
 ## 3.0.80
 
@@ -121,15 +132,15 @@
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.3`
--   ⬆️ upgrade `@lou.codes/utils` to `v1.0.10`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.3`.
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.0.10`.
 
 ## 3.0.78
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.2`
--   ⬆️ upgrade `@lou.codes/utils` to `v1.0.9`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.2`.
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.0.9`.
 
 ## 3.0.77
 
@@ -142,24 +153,24 @@
 ### Patch Changes
 
 -   🏗️ use argument destructing less to achieve smaller bundles.
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.1`
--   ⬆️ upgrade `@lou.codes/utils` to `v1.0.8`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.1`.
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.0.8`.
 
 ## 3.0.75
 
 ### Patch Changes
 
 -   ⬆️ dependency upgrade.
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.0`
--   ⬆️ upgrade `@lou.codes/utils` to `v1.0.7`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.0`.
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.0.7`.
 
 ## 3.0.74
 
 ### Patch Changes
 
 -   🔧 remove unnecessary CJS references.
--   ⬆️ upgrade `@lou.codes/utils` to `v1.0.6`
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.6`
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.0.6`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.6`.
 
 ## 3.0.73
 
@@ -171,29 +182,29 @@
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/utils` to `v1.0.5`
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.5`
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.0.5`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.5`.
 
 ## 3.0.71
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.4`
--   ⬆️ upgrade `@lou.codes/utils` to `v1.0.4`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.4`.
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.0.4`.
 
 ## 3.0.70
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.3`
--   ⬆️ upgrade `@lou.codes/utils` to `v1.0.3`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.3`.
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.0.3`.
 
 ## 3.0.69
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.2`
--   ⬆️ upgrade `@lou.codes/utils` to `v1.0.2`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.2`.
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.0.2`.
 
 ## 3.0.68
 
@@ -230,8 +241,8 @@
 ### Patch Changes
 
 -   ✏️ show brotli size instead of gzip.
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.1`
--   ⬆️ upgrade `@lou.codes/utils` to `v1.0.1`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.1`.
+-   ⬆️ upgrade `@lou.codes/utils` to `v1.0.1`.
 
 ## 3.0.62
 
@@ -268,32 +279,32 @@
 ### Patch Changes
 
 -   🔧 add types field back so that NPM shows it as a TypeScript package.
--   ⬆️ upgrade `@vangware/types` to `v6.3.7`
--   ⬆️ upgrade `@vangware/utils` to `v10.1.29`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.7`.
+-   ⬆️ upgrade `@vangware/utils` to `v10.1.29`.
 
 ## 3.0.56
 
 ### Patch Changes
 
 -   ⬆️ engine upgrade.
--   ⬆️ upgrade `@vangware/types` to `v6.3.6`
--   ⬆️ upgrade `@vangware/utils` to `v10.1.28`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.6`.
+-   ⬆️ upgrade `@vangware/utils` to `v10.1.28`.
 
 ## 3.0.55
 
 ### Patch Changes
 
 -   ⬆️ dependency upgrade.
--   ⬆️ upgrade `@vangware/types` to `v6.3.5`
--   ⬆️ upgrade `@vangware/utils` to `v10.1.27`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.5`.
+-   ⬆️ upgrade `@vangware/utils` to `v10.1.27`.
 
 ## 3.0.54
 
 ### Patch Changes
 
 -   🔧 remove types field from `package.json`, it is inferred automatically.
--   ⬆️ upgrade `@vangware/types` to `v6.3.4`
--   ⬆️ upgrade `@vangware/utils` to `v10.1.26`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.4`.
+-   ⬆️ upgrade `@vangware/utils` to `v10.1.26`.
 
 ## 3.0.53
 
@@ -306,8 +317,8 @@
 ### Patch Changes
 
 -   📝 small JSDocs improvements.
--   ⬆️ upgrade `@vangware/types` to `v6.3.3`
--   ⬆️ upgrade `@vangware/utils` to `v10.1.25`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.3`.
+-   ⬆️ upgrade `@vangware/utils` to `v10.1.25`.
 
 ## 3.0.51
 
@@ -320,8 +331,8 @@
 ### Patch Changes
 
 -   📝 smaller badges.
--   ⬆️ upgrade `@vangware/types` to `v6.3.2`
--   ⬆️ upgrade `@vangware/utils` to `v10.1.24`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.2`.
+-   ⬆️ upgrade `@vangware/utils` to `v10.1.24`.
 
 ## 3.0.49
 
@@ -329,21 +340,21 @@
 
 -   📝 update to include gzip size.
 -   🏗️ update to use `mutate` from `@vangware/utils`.
--   ⬆️ upgrade `@vangware/types` to `v6.3.1`
--   ⬆️ upgrade `@vangware/utils` to `v10.1.23`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.1`.
+-   ⬆️ upgrade `@vangware/utils` to `v10.1.23`.
 
 ## 3.0.48
 
 ### Patch Changes
 
--   ⬆️ upgrade `@vangware/types` to `v6.3.0`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.0`.
 
 ## 3.0.47
 
 ### Patch Changes
 
 -   📝 update documentation and URLs.
--   ⬆️ upgrade `@vangware/types` to `v6.2.10`
+-   ⬆️ upgrade `@vangware/types` to `v6.2.10`.
 
 ## 3.0.46
 
@@ -362,14 +373,14 @@
 ### Patch Changes
 
 -   🍱 update logo source.
--   ⬆️ upgrade `@vangware/types` to `v6.2.9`
+-   ⬆️ upgrade `@vangware/types` to `v6.2.9`.
 
 ## 3.0.43
 
 ### Patch Changes
 
--   🚚 move to monorepo
--   ⬆️ upgrade `@vangware/types` to `v6.2.8`
+-   🚚 move to monorepo.
+-   ⬆️ upgrade `@vangware/types` to `v6.2.8`.
 
 ## 3.0.42
 

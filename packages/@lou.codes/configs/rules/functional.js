@@ -1,12 +1,11 @@
 import eslintPluginFunctional from "eslint-plugin-functional/flat";
-import { freeze } from "../freeze.js";
 import { ERROR, OFF, WARN } from "./levels.js";
 
 /**
  * ESLint functional programming rules.
  * @see [eslint-plugin-functional](https://npm.im/eslint-plugin-functional)
  */
-export const functionalRules = freeze(
+export const functionalRules =
 	/** @type {const} @satisfies {import("eslint").Linter.FlatConfig} */ ({
 		...eslintPluginFunctional.configs.recommended,
 		rules: {
@@ -91,5 +90,4 @@ export const functionalRules = freeze(
 				},
 			],
 		},
-	}),
-);
+	});

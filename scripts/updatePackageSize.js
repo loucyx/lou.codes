@@ -1,28 +1,90 @@
 import brotli from "brotli-size/dist/index.js";
 import { build } from "esbuild";
-import { readFile, writeFile } from "node:fs/promises";
+import {
+	access,
+	constants,
+	readFile,
+	readdir,
+	writeFile,
+} from "node:fs/promises";
+import { minify } from "terser";
 import { bytesToKibBytes } from "./bytesToKibBytes.js";
 import { PACKAGES_DIRECTORY } from "./constants.js";
 
 const { default: size } = brotli;
 
+const sharedConfiguration =
+	/** @type {const} @satisfies {Parameters<typeof build>[0]} */ ({
+		allowOverwrite: true,
+		bundle: true,
+		format: "esm",
+		minify: true,
+		platform: "node",
+		treeShaking: true,
+	});
+
+/** @param {string} outFile */
+const terser =
+	outFile =>
+	/**
+	 * @param {string} content */ content =>
+		minify(content, {
+			compress: { pure_getters: true },
+			ecma: 2020,
+			mangle: true,
+			module: true,
+		})
+			.then(({ code = "" }) => (writeFile(outFile, code, "utf8"), code))
+			.catch(() => Promise.reject(outFile));
+
 /**
  * @param {string} packagePath
  */
 export const updatePackageSize = packagePath => {
-	const outFile = `${PACKAGES_DIRECTORY}/${packagePath}/dist/index.bundle.js`;
+	const distDirectory = `${PACKAGES_DIRECTORY}/${packagePath}/dist`;
+	const index = `${distDirectory}/index.js`;
+	const outFile = `${distDirectory}/index.bundle.js`;
+	const outDir = `${distDirectory}/bundle`;
 	const packageJsonLocation = `${PACKAGES_DIRECTORY}/${packagePath}/package.json`;
 
-	return build({
-		allowOverwrite: true,
-		bundle: true,
-		entryPoints: [`${PACKAGES_DIRECTORY}/${packagePath}/dist/index.js`],
-		format: "esm",
-		minify: true,
-		outfile: outFile,
-		platform: "node",
-	})
-		.then(() => readFile(outFile, "utf8"))
+	return access(index, constants.F_OK)
+		.then(() =>
+			build({
+				...sharedConfiguration,
+				entryPoints: [index],
+				outfile: outFile,
+			})
+				.then(() => readFile(outFile, "utf8"))
+				.then(terser(outFile)),
+		)
+		.catch(() =>
+			readdir(distDirectory)
+				.then(entryPoints =>
+					entryPoints.filter(
+						entryPoint =>
+							entryPoint.endsWith(".js") &&
+							!entryPoint.endsWith("/index.bundle.js"),
+					),
+				)
+				.then(entryPoints =>
+					build({
+						...sharedConfiguration,
+						entryPoints: entryPoints.map(
+							entryPoint => `${distDirectory}/${entryPoint}`,
+						),
+						outdir: outDir,
+					}).then(() =>
+						Promise.all(
+							entryPoints.map(entryPoint =>
+								readFile(
+									`${outDir}/${entryPoint}`,
+									"utf8",
+								).then(terser(`${outDir}/${entryPoint}`)),
+							),
+						).then(filesContent => filesContent.join("")),
+					),
+				),
+		)
 		.then(fileContent => size(fileContent))
 		.then(bytesToKibBytes)
 		.then(

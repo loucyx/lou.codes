@@ -1,3 +1,5 @@
+import { is as objectIs } from "@lou.codes/constants/Object.js";
+
 /**
  * Curried wrapper for `Object.is`. Given and `expected` value and an `actual`
  * value, returns `true` if those values are equal, or `false` if not.
@@ -15,4 +17,4 @@
 export const is =
 	<Expected>(expected: Expected) =>
 	(actual: unknown): actual is Expected =>
-		Object.is(expected, actual);
+		objectIs(expected, actual);

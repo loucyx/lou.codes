@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/types",
 	"description": "🏷️ Lou's shared types",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -50,7 +50,7 @@
 		"git:pre-push": "run-p lint test",
 		"lint": "eslint {src,tests}",
 		"lint:fix": "eslint {src,tests} --fix",
-		"prepublishOnly": "run-s clean compile prettify",
+		"prepare": "run-s clean compile prettify",
 		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/*.ts'",
 		"test": "run-s compile",
 		"updater": "tsx ./src/updater/index.ts"

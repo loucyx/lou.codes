@@ -32,6 +32,7 @@ export { entryValue } from "./entryValue.js";
 export { flip } from "./flip.js";
 export { get } from "./get.js";
 export { identity } from "./identity.js";
+export { intercept } from "./intercept.js";
 export { memoize } from "./memoize.js";
 export { mutate } from "./mutate.js";
 export { negate } from "./negate.js";

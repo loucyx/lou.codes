@@ -1,4 +1,4 @@
-import { freeze } from "@lou.codes/constants";
+import { freeze } from "@lou.codes/constants/Object.js";
 import type { ReadOnlyRecord } from "@lou.codes/types";
 
 /**

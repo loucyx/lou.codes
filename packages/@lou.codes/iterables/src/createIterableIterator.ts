@@ -1,5 +1,5 @@
-import { freeze } from "@lou.codes/constants";
-import { iteratorSymbol } from "@lou.codes/predicates";
+import { freeze } from "@lou.codes/constants/Object.js";
+import { iterator } from "@lou.codes/constants/Symbol.js";
 import type { ReadOnlyIterableIterator } from "./types/ReadOnlyIterableIterator.js";
 import type { ReadOnlyIterator } from "./types/ReadOnlyIterator.js";
 
@@ -34,6 +34,6 @@ export const createIterableIterator = <Item>(
 
 	return freeze({
 		...generator,
-		[iteratorSymbol]: generatorFunction,
+		[iterator]: generatorFunction,
 	}) as ReadOnlyIterableIterator<Item>;
 };

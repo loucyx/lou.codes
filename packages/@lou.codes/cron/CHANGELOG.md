@@ -1,167 +1,178 @@
 # Change log
 
+## 1.0.19
+
+### Patch Changes
+
+-   🏗️ make changes related to latest `@lou.codes/constants`.
+-   ⬆️ upgrade `@lou.codes/iterables` to `v2.1.4`.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.0.0`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v2.0.0`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.2.2`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.16`.
+
 ## 1.0.18
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/iterables` to `v2.1.3`
+-   ⬆️ upgrade `@lou.codes/iterables` to `v2.1.3`.
 
 ## 1.0.17
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.2.1`
--   ⬆️ upgrade `@lou.codes/iterables` to `v2.1.2`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.15`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.15`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.2.1`.
+-   ⬆️ upgrade `@lou.codes/iterables` to `v2.1.2`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.15`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.15`.
 
 ## 1.0.16
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.2.0`
--   ⬆️ upgrade `@lou.codes/iterables` to `v2.1.1`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.14`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.14`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.2.0`.
+-   ⬆️ upgrade `@lou.codes/iterables` to `v2.1.1`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.14`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.14`.
 
 ## 1.0.15
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/iterables` to `v2.1.0`
+-   ⬆️ upgrade `@lou.codes/iterables` to `v2.1.0`.
 
 ## 1.0.14
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.6`
--   ⬆️ upgrade `@lou.codes/iterables` to `v2.0.6`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.13`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.13`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.6`.
+-   ⬆️ upgrade `@lou.codes/iterables` to `v2.0.6`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.13`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.13`.
 
 ## 1.0.13
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/constants` to `v1.2.2`
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.5`
--   ⬆️ upgrade `@lou.codes/iterables` to `v2.0.5`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.12`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.12`
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.2.2`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.5`.
+-   ⬆️ upgrade `@lou.codes/iterables` to `v2.0.5`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.12`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.12`.
 
 ## 1.0.12
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/iterables` to `v2.0.4`
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.4`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.11`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.11`
+-   ⬆️ upgrade `@lou.codes/iterables` to `v2.0.4`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.4`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.11`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.11`.
 
 ## 1.0.11
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.3`
--   ⬆️ upgrade `@lou.codes/iterables` to `v2.0.3`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.10`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.10`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.3`.
+-   ⬆️ upgrade `@lou.codes/iterables` to `v2.0.3`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.10`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.10`.
 
 ## 1.0.10
 
 ### Patch Changes
 
 -   🚨 update based on linter changes.
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.9`
--   ⬆️ upgrade `@lou.codes/constants` to `v1.2.1`
--   ⬆️ upgrade `@lou.codes/iterables` to `v2.0.2`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.9`
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.2`
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.9`.
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.2.1`.
+-   ⬆️ upgrade `@lou.codes/iterables` to `v2.0.2`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.9`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.2`.
 
 ## 1.0.9
 
 ### Patch Changes
 
 -   🏗️ use argument destructing less to achieve smaller bundles.
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.8`
--   ⬆️ upgrade `@lou.codes/iterables` to `v2.0.1`
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.1`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.8`
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.8`.
+-   ⬆️ upgrade `@lou.codes/iterables` to `v2.0.1`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.1`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.8`.
 
 ## 1.0.8
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/types` to `v1.1.0`
--   ⬆️ upgrade `@lou.codes/iterables` to `v2.0.0`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.7`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.7`
+-   ⬆️ upgrade `@lou.codes/types` to `v1.1.0`.
+-   ⬆️ upgrade `@lou.codes/iterables` to `v2.0.0`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.7`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.7`.
 
 ## 1.0.7
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/constants` to `v1.2.0`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.6`
--   ⬆️ upgrade `@lou.codes/iterables` to `v1.0.7`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.6`
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.6`
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.2.0`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.6`.
+-   ⬆️ upgrade `@lou.codes/iterables` to `v1.0.7`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.6`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.6`.
 
 ## 1.0.6
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.5`
--   ⬆️ upgrade `@lou.codes/iterables` to `v1.0.6`
--   ⬆️ upgrade `@lou.codes/constants` to `v1.1.0`
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.5`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.5`
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.5`.
+-   ⬆️ upgrade `@lou.codes/iterables` to `v1.0.6`.
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.1.0`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.5`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.5`.
 
 ## 1.0.5
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/constants` to `v1.0.2`
--   ⬆️ upgrade `@lou.codes/iterables` to `v1.0.5`
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.4`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.4`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.4`
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.0.2`.
+-   ⬆️ upgrade `@lou.codes/iterables` to `v1.0.5`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.4`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.4`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.4`.
 
 ## 1.0.4
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/constants` to `v1.0.1`
--   ⬆️ upgrade `@lou.codes/iterables` to `v1.0.4`
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.3`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.3`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.3`
+-   ⬆️ upgrade `@lou.codes/constants` to `v1.0.1`.
+-   ⬆️ upgrade `@lou.codes/iterables` to `v1.0.4`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.3`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.3`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.3`.
 
 ## 1.0.3
 
 ### Patch Changes
 
 -   ➕ add @lou.codes/constants and use it.
--   ⬆️ upgrade `@lou.codes/iterables` to `v1.0.3`
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.2`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.2`
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.2`
+-   ⬆️ upgrade `@lou.codes/iterables` to `v1.0.3`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.2`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.2`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.2`.
 
 ## 1.0.2
 
 ### Patch Changes
 
--   ⬆️ upgrade `@lou.codes/iterables` to `v1.0.2`
+-   ⬆️ upgrade `@lou.codes/iterables` to `v1.0.2`.
 
 ## 1.0.1
 
 ### Patch Changes
 
 -   ✏️ show brotli size instead of gzip.
--   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.1`
--   ⬆️ upgrade `@lou.codes/iterables` to `v1.0.1`
--   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.1`
--   ⬆️ upgrade `@lou.codes/types` to `v1.0.1`
+-   ⬆️ upgrade `@lou.codes/predicates` to `v1.0.1`.
+-   ⬆️ upgrade `@lou.codes/iterables` to `v1.0.1`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.1`.
+-   ⬆️ upgrade `@lou.codes/types` to `v1.0.1`.
 
 ## 1.0.0
 
@@ -174,127 +185,127 @@
 ### Patch Changes
 
 -   🔧 add types field back so that NPM shows it as a TypeScript package.
--   ⬆️ upgrade `@vangware/predicates` to `v2.2.6`
--   ⬆️ upgrade `@vangware/iterables` to `v3.1.30`
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.21`
--   ⬆️ upgrade `@vangware/types` to `v6.3.7`
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.6`.
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.30`.
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.21`.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.7`.
 
 ## 5.1.50
 
 ### Patch Changes
 
 -   ⬆️ engine upgrade.
--   ⬆️ upgrade `@vangware/iterables` to `v3.1.29`
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.20`
--   ⬆️ upgrade `@vangware/predicates` to `v2.2.5`
--   ⬆️ upgrade `@vangware/types` to `v6.3.6`
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.29`.
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.20`.
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.5`.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.6`.
 
 ## 5.1.49
 
 ### Patch Changes
 
 -   🐛 fix bad import.
--   ⬆️ upgrade `@vangware/iterables` to `v3.1.28`
--   ⬆️ upgrade `@vangware/types` to `v6.3.5`
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.19`
--   ⬆️ upgrade `@vangware/predicates` to `v2.2.4`
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.28`.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.5`.
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.19`.
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.4`.
 
 ## 5.1.48
 
 ### Patch Changes
 
 -   🔧 remove types field from `package.json`, it is inferred automatically.
--   ⬆️ upgrade `@vangware/predicates` to `v2.2.3`
--   ⬆️ upgrade `@vangware/iterables` to `v3.1.27`
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.18`
--   ⬆️ upgrade `@vangware/types` to `v6.3.4`
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.3`.
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.27`.
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.18`.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.4`.
 
 ## 5.1.47
 
 ### Patch Changes
 
--   ⬆️ upgrade `@vangware/iterables` to `v3.1.26`
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.26`.
 
 ## 5.1.46
 
 ### Patch Changes
 
--   ⬆️ upgrade `@vangware/types` to `v6.3.3`
--   ⬆️ upgrade `@vangware/iterables` to `v3.1.25`
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.17`
--   ⬆️ upgrade `@vangware/predicates` to `v2.2.2`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.3`.
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.25`.
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.17`.
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.2`.
 
 ## 5.1.45
 
 ### Patch Changes
 
--   ⬆️ upgrade `@vangware/iterables` to `v3.1.24`
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.24`.
 
 ## 5.1.44
 
 ### Patch Changes
 
 -   📝 smaller badges.
--   ⬆️ upgrade `@vangware/predicates` to `v2.2.1`
--   ⬆️ upgrade `@vangware/iterables` to `v3.1.23`
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.16`
--   ⬆️ upgrade `@vangware/types` to `v6.3.2`
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.1`.
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.23`.
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.16`.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.2`.
 
 ## 5.1.43
 
 ### Patch Changes
 
 -   📝 update to include gzip size.
--   ⬆️ upgrade `@vangware/predicates` to `v2.2.0`
--   ⬆️ upgrade `@vangware/iterables` to `v3.1.22`
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.15`
--   ⬆️ upgrade `@vangware/types` to `v6.3.1`
+-   ⬆️ upgrade `@vangware/predicates` to `v2.2.0`.
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.22`.
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.15`.
+-   ⬆️ upgrade `@vangware/types` to `v6.3.1`.
 
 ## 5.1.42
 
 ### Patch Changes
 
--   ⬆️ upgrade `@vangware/types` to `v6.3.0`
--   ⬆️ upgrade `@vangware/iterables` to `v3.1.21`
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.14`
--   ⬆️ upgrade `@vangware/predicates` to `v2.1.36`
+-   ⬆️ upgrade `@vangware/types` to `v6.3.0`.
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.21`.
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.14`.
+-   ⬆️ upgrade `@vangware/predicates` to `v2.1.36`.
 
 ## 5.1.41
 
 ### Patch Changes
 
--   ⬆️ upgrade `@vangware/predicates` to `v2.1.35`
--   ⬆️ upgrade `@vangware/iterables` to `v3.1.20`
+-   ⬆️ upgrade `@vangware/predicates` to `v2.1.35`.
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.20`.
 
 ## 5.1.40
 
 ### Patch Changes
 
 -   📝 update documentation and URLs.
--   ⬆️ upgrade `@vangware/predicates` to `v2.1.34`
--   ⬆️ upgrade `@vangware/iterables` to `v3.1.19`
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.13`
--   ⬆️ upgrade `@vangware/types` to `v6.2.10`
+-   ⬆️ upgrade `@vangware/predicates` to `v2.1.34`.
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.19`.
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.13`.
+-   ⬆️ upgrade `@vangware/types` to `v6.2.10`.
 
 ## 5.1.39
 
 ### Patch Changes
 
 -   🍱 update logo source.
--   ⬆️ upgrade `@vangware/predicates` to `v2.1.33`
--   ⬆️ upgrade `@vangware/iterables` to `v3.1.18`
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.12`
--   ⬆️ upgrade `@vangware/types` to `v6.2.9`
+-   ⬆️ upgrade `@vangware/predicates` to `v2.1.33`.
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.18`.
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.12`.
+-   ⬆️ upgrade `@vangware/types` to `v6.2.9`.
 
 ## 5.1.38
 
 ### Patch Changes
 
--   🚚 move to monorepo
--   ⬆️ upgrade `@vangware/iterables` to `v3.1.17`
--   ⬆️ upgrade `@vangware/parsers` to `v1.4.11`
--   ⬆️ upgrade `@vangware/predicates` to `v2.1.32`
--   ⬆️ upgrade `@vangware/types` to `v6.2.8`
+-   🚚 move to monorepo.
+-   ⬆️ upgrade `@vangware/iterables` to `v3.1.17`.
+-   ⬆️ upgrade `@vangware/parsers` to `v1.4.11`.
+-   ⬆️ upgrade `@vangware/predicates` to `v2.1.32`.
+-   ⬆️ upgrade `@vangware/types` to `v6.2.8`.
 
 ## 5.1.37
 
@@ -580,10 +591,10 @@
 ### Patch Changes
 
 -   ⬆️ dependency upgrade.
--   ➖ remove `husky` :tada:
+-   ➖ remove `husky` :tada:.
 -   ➕ add `@arkweid/lefthook`.
 -   🏗 change markdown files to use references.
--   🍱 update logo in `README.md`
+-   🍱 update logo in `README.md`.
 -   🏗 update outDir to single `dist` directory.
 
 ## 4.1.6

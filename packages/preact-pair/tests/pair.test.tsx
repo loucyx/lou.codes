@@ -36,4 +36,10 @@ export const pairTests = [
 		received: () => renderToString(<PairedState>{Render}</PairedState>),
 		wanted: () => renderToString(<Wanted>{Render}</Wanted>),
 	},
+	{
+		given: "a paired hook",
+		must: "have a displayName that reflects it's a paired hook",
+		received: () => PairedState.displayName,
+		wanted: () => `paired(${useState.name})`,
+	},
 ] satisfies Tests<string>;

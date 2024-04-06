@@ -1,4 +1,4 @@
-import { EMPTY_ARRAY, EMPTY_OBJECT } from "@lou.codes/constants";
+import { EMPTY_ARRAY, EMPTY_OBJECT } from "@lou.codes/constants/empty.js";
 import type {
 	Maybe,
 	ReadOnlyArray,

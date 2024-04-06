@@ -1,5 +1,6 @@
 // eslint-disable-next-line capitalized-comments
 /* c8 ignore start */
+import { values } from "@lou.codes/constants/Object.js";
 import { isTest } from "./isTest.js";
 import type { ReadOnlyURL } from "./types/ReadOnlyURL.js";
 import type { Tests } from "./types/Tests.js";
@@ -32,9 +33,7 @@ import type { TestsImport } from "./types/TestsImport.js";
  */
 export const testImport = async function* (url: ReadOnlyURL) {
 	// eslint-disable-next-line functional/no-loop-statements
-	for await (const test of Object.values(
-		await (import(url.href) as TestsImport),
-	)) {
+	for await (const test of values(await (import(url.href) as TestsImport))) {
 		// eslint-disable-next-line functional/no-conditional-statements
 		if (
 			typeof test === "object" &&

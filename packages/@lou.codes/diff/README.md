@@ -61,16 +61,16 @@ Import `@lou.codes/diff` using [esm.sh][esm.sh], and use it directly:
 [changelog]:
 	https://github.com/loucyx/lou.codes/blob/main/packages/@lou.codes/diff/CHANGELOG.md
 [coverage-badge]:
-	https://img.shields.io/coveralls/github/loucyx/lou.codes.svg?labelColor=666&color=0a8
+	https://img.shields.io/coveralls/github/loucyx/lou.codes.svg?label=Test+Coverage&labelColor=666&color=0a8
 [coverage]: https://coveralls.io/github/loucyx/lou.codes
 [documentation]: https://lou.codes/libraries/lou_codes_diff/
 [esm.sh]: https://esm.sh
 [license-badge]:
-	https://img.shields.io/npm/l/@lou.codes/diff.svg?labelColor=666&color=0a8
+	https://img.shields.io/npm/l/@lou.codes/diff.svg?label=License&labelColor=666&color=0a8
 [npm-version-badge]:
-	https://img.shields.io/npm/v/@lou.codes/diff.svg?labelColor=666&color=0a8
+	https://img.shields.io/npm/v/@lou.codes/diff.svg?label=NPM+Version&labelColor=666&color=0a8
 [open-issues-badge]:
-	https://img.shields.io/github/issues/loucyx/lou.codes.svg?labelColor=666&color=0a8
+	https://img.shields.io/github/issues/loucyx/lou.codes.svg?label=Issues&labelColor=666&color=0a8
 [size-badge]:
-	https://img.shields.io/badge/dynamic/json?label=brotli&labelColor=666&color=0a8&suffix=KiB&query=%24.size&url=https%3A%2F%2Fraw.githubusercontent.com%2Floucyx%2Flou.codes%2Fmain%2Fpackages%2F%40lou.codes%2Fdiff%2Fpackage.json
+	https://img.shields.io/badge/dynamic/json?label=Size+(min%2Bbrotli)&labelColor=666&color=0a8&suffix=KiB&query=%24.size&url=https%3A%2F%2Fraw.githubusercontent.com%2Floucyx%2Flou.codes%2Fmain%2Fpackages%2F%40lou.codes%2Fdiff%2Fpackage.json
 [lou.codes]: https://lou.codes

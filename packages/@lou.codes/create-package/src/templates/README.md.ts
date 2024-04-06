@@ -71,20 +71,20 @@ Import \`${answers.name}\` using [esm.sh][esm.sh], and use it directly:
 	answers.name,
 )}/CHANGELOG.md
 [coverage-badge]:
-	https://img.shields.io/coveralls/github/loucyx/lou.codes.svg?labelColor=666&color=0a8
+	https://img.shields.io/coveralls/github/loucyx/lou.codes.svg?label=Test+Coverage&labelColor=666&color=0a8
 [coverage]: https://coveralls.io/github/loucyx/lou.codes
 [documentation]: https://lou.codes/libraries/${answers.name
 	.replace("@", EMPTY_STRING)
 	.replaceAll(/[-/]/gu, "_")}/
 [esm.sh]: https://esm.sh
 [license-badge]:
-	https://img.shields.io/npm/l/${answers.name}.svg?labelColor=666&color=0a8
+	https://img.shields.io/npm/l/${answers.name}.svg?label=License&labelColor=666&color=0a8
 [npm-version-badge]:
-	https://img.shields.io/npm/v/${answers.name}.svg?labelColor=666&color=0a8
+	https://img.shields.io/npm/v/${answers.name}.svg?label=NPM+Version&labelColor=666&color=0a8
 [open-issues-badge]:
-	https://img.shields.io/github/issues/loucyx/lou.codes.svg?labelColor=666&color=0a8
+	https://img.shields.io/github/issues/loucyx/lou.codes.svg?label=Issues&labelColor=666&color=0a8
 [size-badge]:
-	https://img.shields.io/badge/dynamic/json?label=brotli&labelColor=666&color=0a8&suffix=KiB&query=%24.size&url=https%3A%2F%2Fraw.githubusercontent.com%2Floucyx%2Flou.codes%2Fmain%2Fpackages%2F${
+	https://img.shields.io/badge/dynamic/json?label=Size+(min%2Bbrotli)&labelColor=666&color=0a8&suffix=KiB&query=%24.size&url=https%3A%2F%2Fraw.githubusercontent.com%2Floucyx%2Flou.codes%2Fmain%2Fpackages%2F${
 		answers.name
 	}%2Fpackage.json
 [lou.codes]: https://lou.codes

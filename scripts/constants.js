@@ -13,5 +13,6 @@ export const ASTRO_TARGET = resolve(
 export const ALL_UPPER = ["ansi"];
 export const NON_BROWSER_SCRIPT = [
 	"@lou.codes/create-package",
+	"@lou.codes/constants",
 	"@lou.codes/types",
 ];

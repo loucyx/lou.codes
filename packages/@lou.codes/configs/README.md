@@ -79,11 +79,11 @@ export { default } from "@lou.codes/configs/stylelint.config.js";
 [create-package]: https://lou.codes/libraries/lou_codes_create_package/
 [eslint]: https://eslint.org/docs/user-guide/configuring/
 [license-badge]:
-	https://img.shields.io/npm/l/@lou.codes/configs.svg?labelColor=666&color=0a8
+	https://img.shields.io/npm/l/@lou.codes/configs.svg?label=License&labelColor=666&color=0a8
 [npm-version-badge]:
-	https://img.shields.io/npm/v/@lou.codes/configs.svg?labelColor=666&color=0a8
+	https://img.shields.io/npm/v/@lou.codes/configs.svg?label=NPM+Version&labelColor=666&color=0a8
 [open-issues-badge]:
-	https://img.shields.io/github/issues/loucyx/lou.codes.svg?labelColor=666&color=0a8
+	https://img.shields.io/github/issues/loucyx/lou.codes.svg?label=Issues&labelColor=666&color=0a8
 [prettier]: https://prettier.io/docs/en/options.html
 [stylelint]: https://stylelint.io/user-guide/configure/
 [typedoc]: https://typedoc.org/guides/options/

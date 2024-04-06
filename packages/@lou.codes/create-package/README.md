@@ -35,11 +35,11 @@ And follow the prompts.
 [changelog]:
 	https://github.com/loucyx/lou.codes/blob/main/packages/@lou.codes/create-package/CHANGELOG.md
 [license-badge]:
-	https://img.shields.io/npm/l/@lou.codes/create-package.svg?labelColor=666&color=0a8
+	https://img.shields.io/npm/l/@lou.codes/create-package.svg?label=License&labelColor=666&color=0a8
 [npm-version-badge]:
-	https://img.shields.io/npm/v/@lou.codes/create-package.svg?labelColor=666&color=0a8
+	https://img.shields.io/npm/v/@lou.codes/create-package.svg?label=NPM+Version&labelColor=666&color=0a8
 [open-issues-badge]:
-	https://img.shields.io/github/issues/loucyx/lou.codes.svg?labelColor=666&color=0a8
+	https://img.shields.io/github/issues/loucyx/lou.codes.svg?label=Issues&labelColor=666&color=0a8
 [site]: https://lou.codes/libraries/lou_codes_create_package/
 [lou.codes]: https://lou.codes
 [lou.codes-configs]: https://lou.codes/libraries/lou_codes_configs/

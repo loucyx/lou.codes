@@ -97,18 +97,18 @@ exampleQuestion({
 [changelog]:
 	https://github.com/loucyx/lou.codes/blob/main/packages/@lou.codes/prompts/CHANGELOG.md
 [coverage-badge]:
-	https://img.shields.io/coveralls/github/loucyx/lou.codes.svg?labelColor=666&color=0a8
+	https://img.shields.io/coveralls/github/loucyx/lou.codes.svg?label=Test+Coverage&labelColor=666&color=0a8
 [coverage]: https://coveralls.io/github/loucyx/lou.codes
 [deno]: https://deno.land/
 [documentation]: https://lou.codes/libraries/lou_codes_prompts/
 [esm.sh]: https://esm.sh
 [license-badge]:
-	https://img.shields.io/npm/l/@lou.codes/prompts.svg?labelColor=666&color=0a8
+	https://img.shields.io/npm/l/@lou.codes/prompts.svg?label=License&labelColor=666&color=0a8
 [npm-version-badge]:
-	https://img.shields.io/npm/v/@lou.codes/prompts.svg?labelColor=666&color=0a8
+	https://img.shields.io/npm/v/@lou.codes/prompts.svg?label=NPM+Version&labelColor=666&color=0a8
 [open-issues-badge]:
-	https://img.shields.io/github/issues/loucyx/lou.codes.svg?labelColor=666&color=0a8
+	https://img.shields.io/github/issues/loucyx/lou.codes.svg?label=Issues&labelColor=666&color=0a8
 [size-badge]:
-	https://img.shields.io/badge/dynamic/json?label=brotli&labelColor=666&color=0a8&suffix=KiB&query=%24.size&url=https%3A%2F%2Fraw.githubusercontent.com%2Floucyx%2Flou.codes%2Fmain%2Fpackages%2F%40lou.codes%2Fprompts%2Fpackage.json
+	https://img.shields.io/badge/dynamic/json?label=Size+(min%2Bbrotli)&labelColor=666&color=0a8&suffix=KiB&query=%24.size&url=https%3A%2F%2Fraw.githubusercontent.com%2Floucyx%2Flou.codes%2Fmain%2Fpackages%2F%40lou.codes%2Fprompts%2Fpackage.json
 [typedoc]: https://typedoc.org/
 [vscode]: https://code.visualstudio.com/

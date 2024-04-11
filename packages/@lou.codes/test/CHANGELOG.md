@@ -1,5 +1,11 @@
 # Change log
 
+## 4.0.1
+
+### Patch Changes
+
+-   🐛 fix naming bug (ugh).
+
 ## 4.0.0
 
 ### Major Changes

@@ -1,6 +1,7 @@
 import { ASTRO_TARGET, TYPE_DOC_FILES_DIRECTORY } from "./constants.js";
 import { frontMatter } from "./frontMatter.js";
 import { getGroupedFiles } from "./getGroupedFiles.js";
+import { incrementHeadingLevels } from "./incrementHeadingLevels.js";
 
 export const formatPairedDocs = () =>
 	getGroupedFiles().then(filePairs =>
@@ -34,16 +35,9 @@ export const formatPairedDocs = () =>
 						isModule ? "" : readmeFile.content
 					}\n\n<!-- Start of auto-generated code by TypeDoc -->\n\n${[
 						typeDocFile.content,
-						...moduleTypeDocFiles
-							.filter(
-								moduleTypeDocFile =>
-									!moduleTypeDocFile.content.startsWith(
-										"# Namespace:",
-									),
-							)
-							.map(
-								moduleTypeDocFile => moduleTypeDocFile.content,
-							),
+						...moduleTypeDocFiles.map(moduleTypeDocFile =>
+							incrementHeadingLevels(moduleTypeDocFile.content),
+						),
 					]
 						.join("\n")
 						.split("\n")
@@ -82,15 +76,11 @@ export const formatPairedDocs = () =>
 							/(?<symbol>▸|Ƭ) (?<code>[^\n]*(?:\n[^\n]+)*)\n\n/gu,
 							`<div class="font-mono text-sm">\n\n$1 $2\n\n</div>\n\n`,
 						)
-						// Remove modules links because we are inlining them
+						// Remove modules and namespaces links because we are inlining them
 						.replaceAll(
-							/## Modules\n\n-(?<moduleLink>.+\n)+\n/gu,
+							/## (?:Modules|Namespaces)\n\n-(?<moduleLink>.+\n)+\n/gu,
 							"",
-						)
-						// Remove module title/description
-						.replaceAll(/(?<moduleTitle># Module:.+\n)\n.+/gu, "")
-						// Remove namespaces list
-						.replaceAll(/## Namespaces(?:\n+-.+\n+)+## /gu, "## "),
+						),
 				]);
 			},
 		),

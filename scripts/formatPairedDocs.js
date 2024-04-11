@@ -34,9 +34,16 @@ export const formatPairedDocs = () =>
 						isModule ? "" : readmeFile.content
 					}\n\n<!-- Start of auto-generated code by TypeDoc -->\n\n${[
 						typeDocFile.content,
-						...moduleTypeDocFiles.map(
-							moduleTypeDocFile => moduleTypeDocFile.content,
-						),
+						...moduleTypeDocFiles
+							.filter(
+								moduleTypeDocFile =>
+									!moduleTypeDocFile.content.startsWith(
+										"# Namespace:",
+									),
+							)
+							.map(
+								moduleTypeDocFile => moduleTypeDocFile.content,
+							),
 					]
 						.join("\n")
 						.split("\n")
@@ -81,7 +88,9 @@ export const formatPairedDocs = () =>
 							"",
 						)
 						// Remove module title/description
-						.replaceAll(/(?<moduleTitle># Module:.+\n)\n.+/gu, ""),
+						.replaceAll(/(?<moduleTitle># Module:.+\n)\n.+/gu, "")
+						// Remove namespaces list
+						.replaceAll(/## Namespaces(?:\n+-.+\n+)+## /gu, "## "),
 				]);
 			},
 		),

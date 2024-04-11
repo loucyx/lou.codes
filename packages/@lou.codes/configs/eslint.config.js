@@ -9,6 +9,7 @@ import { unicornRules } from "./rules/unicorn.js";
 
 /**
  * ESLint configuration.
+ * @see [ESLint configuration](https://eslint.org/docs/latest/use/configure/)
  */
 // eslint-disable-next-line import/no-default-export
 export default /** @type {const} @satisfies {ReadonlyArray<import("eslint").Linter.FlatConfig>} */ ([

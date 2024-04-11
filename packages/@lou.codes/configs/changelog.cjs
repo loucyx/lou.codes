@@ -3,7 +3,7 @@
  * @see [Changeset documentation](https://github.com/changesets/changesets/blob/main/docs/modifying-changelog-format.md)
  */
 // eslint-disable-next-line functional/immutable-data
-module.exports = Object.freeze(
+module.exports =
 	/** @type {const} @satisfies {import("@changesets/types").ChangelogFunctions} */ ({
 		getDependencyReleaseLine: (_changesets, dependenciesUpdated) =>
 			Promise.resolve(
@@ -27,5 +27,4 @@ module.exports = Object.freeze(
 					)
 					.join("\n"),
 			),
-	}),
-);
+	});

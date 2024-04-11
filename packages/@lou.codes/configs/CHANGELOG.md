@@ -1,5 +1,11 @@
 # Change log
 
+## 5.0.6
+
+### Patch Changes
+
+-   📝 better documentation.
+
 ## 5.0.5
 
 ### Patch Changes

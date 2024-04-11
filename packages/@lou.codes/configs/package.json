@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/configs",
 	"description": "⚙️ Project configurations",
-	"version": "5.0.5",
+	"version": "5.0.6",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -45,7 +45,6 @@
 		"pnpm": ">=8"
 	},
 	"exports": {
-		".": "./index.js",
 		"./changelog.cjs": "./changelog.cjs",
 		"./changelog.d.cts": "./changelog.d.cts",
 		"./*.js": "./*.js",
@@ -100,7 +99,7 @@
 		"url": "https://github.com/loucyx/lou.codes.git"
 	},
 	"scripts": {
-		"clean": "rimraf {index,rules/*,*.config,changelog,peerDependenciesUpdate,freeze}.d.{cts,ts}",
+		"clean": "rimraf {rules/*,*.config,changelog,peerDependenciesUpdate,freeze}.d.{cts,ts}",
 		"compile": "run-s clean && tsc",
 		"dependencies": "node ./peerDependenciesUpdate.js",
 		"git:pre-push": "run-s clean lint",

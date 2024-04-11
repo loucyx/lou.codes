@@ -5,7 +5,6 @@ const LOWER_CASE = "lower";
 
 /**
  * Stylelint configuration.
- *
  * @see [Stylelint rules](https://stylelint.io/user-guide/rules)
  */
 // eslint-disable-next-line import/no-default-export

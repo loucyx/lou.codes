@@ -1,10 +1,9 @@
+import { isNumber } from "@lou.codes/predicates";
 import type { Tests } from "@lou.codes/test";
 import { some } from "../../src/asynchronous/some.js";
 import { toIterable } from "../../src/asynchronous/toIterable.js";
 
-const someNumber = some(
-	(value: unknown): value is number => typeof value === "number",
-);
+const someNumber = some(isNumber);
 
 export const someTests = [
 	{

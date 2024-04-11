@@ -1,5 +1,4 @@
 import type { KeyOf } from "./KeyOf.js";
-import type { ReadOnlyCollection } from "./ReadOnlyCollection.js";
 
 /**
  * Generic key for either object or array.
@@ -17,9 +16,9 @@ import type { ReadOnlyCollection } from "./ReadOnlyCollection.js";
  * };
  * const key: ValueOf<typeof object> = 1;
  * ```
- * @see {@link ReadOnlyCollection}
+ * @see {@link KeyOf}
  *
- * @template Input Type of the collection.
+ * @template Type Object or array type.
  */
-export type ValueOf<Input extends ReadOnlyCollection> = Input[KeyOf<Input> &
-	keyof Input];
+export type ValueOf<Type extends object> =
+	KeyOf<Type> extends keyof Type ? Type[KeyOf<Type>] : never;

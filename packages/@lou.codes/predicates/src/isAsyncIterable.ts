@@ -1,5 +1,4 @@
 import { asyncIterator } from "@lou.codes/constants/Symbol.js";
-import type { ReadOnly } from "@lou.codes/types";
 import { hasAsyncIteratorSymbol } from "./hasAsyncIteratorSymbol.js";
 import { isFunction } from "./isFunction.js";
 import { isObject } from "./isObject.js";
@@ -22,7 +21,7 @@ import { isObject } from "./isObject.js";
  */
 export const isAsyncIterable = <Item>(
 	input: unknown,
-): input is ReadOnly<AsyncIterable<Item>> =>
+): input is Readonly<AsyncIterable<Item>> =>
 	isObject(input) &&
 	hasAsyncIteratorSymbol(input) &&
 	isFunction(input[asyncIterator]);

@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/test",
 	"description": "✅ Equality test with enforced readability",
-	"version": "3.0.3",
+	"version": "4.0.0",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -59,7 +59,7 @@
 		"test": "NODE_OPTIONS='--import tsx' node ./src/bin/index.ts"
 	},
 	"sideEffects": false,
-	"size": "1.65",
+	"size": "1.67",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

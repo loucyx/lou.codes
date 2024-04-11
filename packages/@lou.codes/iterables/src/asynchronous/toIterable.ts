@@ -2,7 +2,6 @@ import { isIsomorphicIterable } from "@lou.codes/predicates";
 import type {
 	IsomorphicIterable,
 	IsomorphicIterableItem,
-	ReadOnly,
 } from "@lou.codes/types";
 import { createIterableIterator } from "./createIterableIterator.js";
 
@@ -31,7 +30,7 @@ export const toIterable = <const ValueOrAsyncIterable>(
 		isIsomorphicIterable(valueOrIterable) ?
 			yield* valueOrIterable
 		:	yield valueOrIterable;
-	} as () => ReadOnly<
+	} as () => Readonly<
 		AsyncIterator<
 			ValueOrAsyncIterable extends IsomorphicIterable ?
 				IsomorphicIterableItem<ValueOrAsyncIterable>

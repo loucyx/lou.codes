@@ -1,7 +1,7 @@
+import type { ReadOnlyIterable } from "@lou.codes/types";
 import { flat } from "./flat.js";
 import { initial } from "./initial.js";
 import { repeat } from "./repeat.js";
-import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 import { zip } from "./zip.js";
 
 /**

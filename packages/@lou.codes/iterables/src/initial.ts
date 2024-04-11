@@ -2,12 +2,12 @@ import type {
 	Initial,
 	IsomorphicIterableItem,
 	ReadOnlyArray,
+	ReadOnlyIterable,
+	ReadOnlyIterableIterator,
 } from "@lou.codes/types";
 import { mutate } from "@lou.codes/utils";
 import { createIterableIterator } from "./createIterableIterator.js";
 import { getIterator } from "./getIterator.js";
-import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
-import type { ReadOnlyIterableIterator } from "./types/ReadOnlyIterableIterator.js";
 
 /**
  * Get all elements except the last one of an iterable.

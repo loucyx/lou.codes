@@ -1,5 +1,4 @@
 import type { ArrayLike } from "./ArrayLike.js";
-import type { First } from "./First.js";
 import type { HeadAndTail } from "./HeadAndTail.js";
 
 /**
@@ -16,9 +15,8 @@ import type { HeadAndTail } from "./HeadAndTail.js";
  * const head: Head<typeof array> = "🟢";
  * ```
  * @see {@link ArrayLike}
- * @see {@link First}
  * @see {@link HeadAndTail}
  *
  * @template Input `ArrayLike` value (such as `Array` or `string`).
  */
-export type Head<Input extends ArrayLike> = First<HeadAndTail<Input>>;
+export type Head<Input extends ArrayLike> = HeadAndTail<Input>[0];

@@ -1,6 +1,5 @@
-import type { Unary } from "@lou.codes/types";
+import type { ReadOnlyIterable, Unary } from "@lou.codes/types";
 import { createIterableIterator } from "./createIterableIterator.js";
-import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
  * Map for iterables.

@@ -1,5 +1,5 @@
+import type { Difference } from "./Difference.js";
 import { stringifyDifferenceDictionary } from "./stringifyDifferenceDictionary.js";
-import type { Difference } from "./types/Difference.js";
 
 /**
  * Takes a `Difference` object and returns a string using `stringifyDifferenceDictionary`.

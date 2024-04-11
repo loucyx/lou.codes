@@ -108,10 +108,10 @@ yarn test
 Import `@lou.codes/test` using the `npm:` prefix, and use it directly:
 
 ```typescript
-import { test } from "npm:@lou.codes/test";
+import { evaluate } from "npm:@lou.codes/test";
 import { add } from "../src/add.js";
 
-test({
+evaluate({
 	given: "a 1 and a 2",
 	must: "return 3",
 	received: () => add(2)(1),
@@ -125,10 +125,10 @@ Import `@lou.codes/test` using [esm.sh][esm.sh], and use it directly:
 
 ```html
 <script type="module">
-	import { test } from "https://esm.sh/@lou.codes/test";
+	import { evaluate } from "https://esm.sh/@lou.codes/test";
 	import { add } from "../src/add.js";
 
-	test({
+	evaluate({
 		given: "a 1 and a 2",
 		must: "return 3",
 		received: () => add(2)(1),
@@ -225,10 +225,10 @@ It can also be used directly without the `test` bin by importing the different
 utils directly (like with the Deno and Browser examples above):
 
 ```typescript
-import { test } from "@lou.codes/test";
+import { evaluate } from "@lou.codes/test";
 import { customFormatter } from "./customFormatter.js";
 
-test({
+evaluate({
 	given: "a 1 and a 2",
 	must: "return 3",
 	received: () => add(2)(1),

@@ -1,11 +1,10 @@
+import { isString } from "@lou.codes/predicates";
 import type { Tests } from "@lou.codes/test";
 import type { Maybe } from "@lou.codes/types";
 import { find } from "../src/find.js";
 import { iterateArray } from "./utils.js";
 
-const findString = find(
-	(value: number | string): value is string => typeof value === "string",
-);
+const findString = find<number | string>(isString);
 
 export const findTests = [
 	{

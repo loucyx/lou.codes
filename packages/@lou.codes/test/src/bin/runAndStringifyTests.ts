@@ -1,11 +1,11 @@
 import { underlined } from "@lou.codes/ansi";
 import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import type { IsomorphicIterable } from "@lou.codes/types";
+import type { ReadOnlyURL } from "../ReadOnlyURL.js";
+import type { TestTuple } from "../TestTuple.js";
 import { FAILED_TESTS, TEST } from "../constants.js";
+import { evaluate } from "../evaluate.js";
 import { stringifyTest } from "../stringifyTest.js";
-import { test } from "../test.js";
-import type { ReadOnlyURL } from "../types/ReadOnlyURL.js";
-import type { TestTuple } from "../types/TestTuple.js";
 import { relativePath } from "./relativePath.js";
 
 /**
@@ -41,7 +41,7 @@ export const runAndStringifyTests = async function* (
 
 	// eslint-disable-next-line functional/no-loop-statements
 	for await (const [url, testObject] of testTuples) {
-		const result = await test(testObject);
+		const result = await evaluate(testObject);
 		const resultString = stringifyTest(result);
 
 		// eslint-disable-next-line functional/no-conditional-statements

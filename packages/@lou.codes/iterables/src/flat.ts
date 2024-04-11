@@ -1,7 +1,9 @@
 import { isIterable } from "@lou.codes/predicates";
+import type {
+	ReadOnlyIterable,
+	ReadOnlyIterableIterator,
+} from "@lou.codes/types";
 import { createIterableIterator } from "./createIterableIterator.js";
-import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
-import type { ReadOnlyIterableIterator } from "./types/ReadOnlyIterableIterator.js";
 
 /**
  * Flattens one level of the given iterable.

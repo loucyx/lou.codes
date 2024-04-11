@@ -1,10 +1,9 @@
+import { isNumber } from "@lou.codes/predicates";
 import type { Tests } from "@lou.codes/test";
 import { every } from "../../src/asynchronous/every.js";
 import { toIterable } from "../../src/asynchronous/toIterable.js";
 
-const everyNumbers = every(
-	(value: unknown): value is number => typeof value === "number",
-);
+const everyNumbers = every(isNumber);
 const numbersArray = [0, 1, 2, 3];
 const numbersWithStringArray = [0, 1, 2, "foo", 3];
 

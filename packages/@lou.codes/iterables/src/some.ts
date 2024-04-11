@@ -1,7 +1,11 @@
-import type { Predicate, Single, Unary } from "@lou.codes/types";
+import type {
+	Predicate,
+	ReadOnlyIterable,
+	Single,
+	Unary,
+} from "@lou.codes/types";
 import { negate } from "@lou.codes/utils";
 import { every } from "./every.js";
-import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
  * Evaluates items in an iterable against a predicate and returns `true` if any

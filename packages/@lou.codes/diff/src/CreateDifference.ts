@@ -1,4 +1,4 @@
-import type { CREATE } from "../constants.js";
+import type { CREATE } from "./constants.js";
 import type { Difference } from "./Difference.js";
 
 /**

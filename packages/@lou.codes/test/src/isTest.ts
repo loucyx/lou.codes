@@ -1,4 +1,4 @@
-import type { Test } from "./types/Test.js";
+import type { Test } from "./Test.js";
 
 /**
  * Check if given value is a `Test`.

@@ -1,15 +1,15 @@
 import { CREATE, UPDATE } from "@lou.codes/diff";
+import type { TestResult } from "../src/TestResult.js";
+import type { Tests } from "../src/Tests.js";
 import { EXCEPTION, UNKNOWN_ERROR } from "../src/constants.js";
-import { test } from "../src/test.js";
-import type { TestResult } from "../src/types/TestResult.js";
-import type { Tests } from "../src/types/Tests.js";
+import { evaluate } from "../src/evaluate.js";
 
 export const testTests = [
 	{
 		given: "a passing test",
 		must: "return object with given and must",
 		received: () =>
-			test({
+			evaluate({
 				given: "🟢",
 				must: "🟩",
 				received: () => "🟩",
@@ -21,7 +21,7 @@ export const testTests = [
 		given: "a failing test",
 		must: "return object with given, must, and differences",
 		received: () =>
-			test({
+			evaluate({
 				given: "🟢",
 				must: "🟩",
 				received: () => "❌",
@@ -37,7 +37,7 @@ export const testTests = [
 		given: "a promise throwing test",
 		must: "return object with error",
 		received: () =>
-			test({
+			evaluate({
 				given: "🟢",
 				must: "🟩",
 				received: () => Promise.reject("❌"),
@@ -53,7 +53,7 @@ export const testTests = [
 		given: "a throwing test",
 		must: "return object with error",
 		received: () =>
-			test({
+			evaluate({
 				given: "🟢",
 				must: "🟩",
 				received: () => {
@@ -72,7 +72,7 @@ export const testTests = [
 		given: "a unexpected error throwing test",
 		must: "return object with error",
 		received: () =>
-			test({
+			evaluate({
 				given: "🟢",
 				must: "🟩",
 				received: () => {
@@ -91,7 +91,7 @@ export const testTests = [
 		given: "a unexpected error throwing test",
 		must: "return object with error",
 		received: () =>
-			test({
+			evaluate({
 				given: "🟢",
 				must: "🟩",
 				received: () => ({ "🟢": "🟩" }),

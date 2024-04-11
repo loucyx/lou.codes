@@ -1,11 +1,11 @@
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
-import { testImport } from "../src/testImport.js";
-import type { Test } from "../src/types/Test.js";
-import type { Tests } from "../src/types/Tests.js";
+import type { Test } from "../src/Test.js";
+import type { Tests } from "../src/Tests.js";
+import { importTest } from "../src/importTest.js";
 
 const relativeTestImport = (file: string) => async () => {
-	const importedTest = testImport(
+	const importedTest = importTest(
 		pathToFileURL(resolve(import.meta.dirname, "./testImport", file)),
 	);
 	const output: Array<Test> = [];

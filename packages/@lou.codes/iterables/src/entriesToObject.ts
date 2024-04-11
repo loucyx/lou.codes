@@ -4,10 +4,10 @@ import type {
 	Entry,
 	EntryKey,
 	EntryValue,
+	ReadOnlyIterable,
 	ReadOnlyRecord,
 } from "@lou.codes/types";
 import { reduce } from "./reduce.js";
-import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
  * Takes an entries iterable and returns an object.

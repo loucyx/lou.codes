@@ -1,50 +1,63 @@
-import type { ReadOnly, ReadOnlyArray } from "@lou.codes/types";
+import type { ReadOnlyArray } from "@lou.codes/types";
 
 /**
  * If we import `package.json` directly, the compiled code ends up nested,
  * so this file needs to stay in sync with `package.json` manually 😞
  */
-export type PackageConfiguration = ReadOnly<{
-	name: string;
-	description: string;
-	version: string;
-	author: { email: string; name: string; url: string };
-	bin: string;
-	bugs: { email: string; url: string };
-	dependencies: {
-		"@lou.codes/ansi": string;
-		"@lou.codes/prompts": string;
+export type PackageConfiguration = {
+	readonly name: string;
+	readonly description: string;
+	readonly version: string;
+	readonly author: {
+		readonly email: string;
+		readonly name: string;
+		readonly url: string;
 	};
-	devDependencies: {
-		"@types/node": string;
-		"@lou.codes/configs": string;
-		"@lou.codes/test": string;
-		"@lou.codes/types": string;
-		c8: string;
-		eslint: string;
-		"npm-run-all": string;
-		prettier: string;
-		rimraf: string;
-		"simple-git-hooks": string;
-		stylelint: string;
-		tsx: string;
-		typescript: string;
+	readonly bin: string;
+	readonly bugs: {
+		readonly email: string;
+		readonly url: string;
 	};
-	engines: { node: string; pnpm: string };
-	files: ReadOnlyArray<string>;
-	homepage: string;
-	keywords: ReadOnlyArray<string>;
-	license: string;
-	repository: { type: string; url: string };
-	scripts: {
-		clean: string;
-		compile: string;
-		lint: string;
-		"lint:fix": string;
-		prepare: string;
-		prepublishOnly: string;
-		prettify: string;
+	readonly dependencies: {
+		readonly "@lou.codes/ansi": string;
+		readonly "@lou.codes/prompts": string;
 	};
-	sideEffects: false;
-	type: string;
-}>;
+	readonly devDependencies: {
+		readonly "@types/node": string;
+		readonly "@lou.codes/configs": string;
+		readonly "@lou.codes/test": string;
+		readonly "@lou.codes/types": string;
+		readonly c8: string;
+		readonly eslint: string;
+		readonly "npm-run-all": string;
+		readonly prettier: string;
+		readonly rimraf: string;
+		readonly "simple-git-hooks": string;
+		readonly stylelint: string;
+		readonly tsx: string;
+		readonly typescript: string;
+	};
+	readonly engines: {
+		readonly node: string;
+		readonly pnpm: string;
+	};
+	readonly files: ReadOnlyArray<string>;
+	readonly homepage: string;
+	readonly keywords: ReadOnlyArray<string>;
+	readonly license: string;
+	readonly repository: {
+		readonly type: string;
+		readonly url: string;
+	};
+	readonly scripts: {
+		readonly clean: string;
+		readonly compile: string;
+		readonly lint: string;
+		readonly "lint:fix": string;
+		readonly prepare: string;
+		readonly prepublishOnly: string;
+		readonly prettify: string;
+	};
+	readonly sideEffects: false;
+	readonly type: string;
+};

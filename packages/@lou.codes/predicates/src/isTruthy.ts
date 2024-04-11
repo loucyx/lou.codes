@@ -1,4 +1,4 @@
-import type { ReadOnly, Truthy } from "@lou.codes/types";
+import type { Truthy } from "@lou.codes/types";
 import { isFalsy } from "./isFalsy.js";
 
 /**
@@ -16,5 +16,5 @@ import { isFalsy } from "./isFalsy.js";
  * @returns Returns `true` if truthy, `false` otherwise.
  */
 export const isTruthy = <Input>(
-	input: Input | Truthy<ReadOnly<Input>>,
-): input is Truthy<ReadOnly<Input>> => !isFalsy(input);
+	input: Input | Truthy<Readonly<Input>>,
+): input is Truthy<Readonly<Input>> => !isFalsy(input);

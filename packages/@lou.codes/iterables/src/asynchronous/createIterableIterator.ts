@@ -1,7 +1,7 @@
 import { freeze } from "@lou.codes/constants/Object.js";
 import { asyncIterator, iterator } from "@lou.codes/constants/Symbol.js";
 import { isIterable } from "@lou.codes/predicates";
-import type { Function, IsomorphicIterator, ReadOnly } from "@lou.codes/types";
+import type { IsomorphicIterator } from "@lou.codes/types";
 
 /**
  * Takes a generator function and returns an iterable iterator or asynchronous
@@ -39,8 +39,10 @@ export const createIterableIterator = <
 		...generator,
 		[isIterable(generator) ? iterator : asyncIterator]: generatorFunction,
 	}) as GeneratorFunction extends () => IsomorphicIterator<infer Item> ?
-		ReadOnly<
-			GeneratorFunction extends Function<never, AsyncIterator<Item>> ?
+		Readonly<
+			GeneratorFunction extends (
+				(..._arguments: infer _Arguments) => AsyncIterator<Item>
+			) ?
 				AsyncIterableIterator<Item>
 			:	IterableIterator<Item>
 		>

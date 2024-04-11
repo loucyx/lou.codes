@@ -1,5 +1,3 @@
-import type { ReadOnly } from "./ReadOnly.js";
-
 /**
  * Value might be an `AsyncIterable` or just an `Iterable` (read-only).
  *
@@ -26,6 +24,6 @@ import type { ReadOnly } from "./ReadOnly.js";
  *
  * @template Item Type of the items in the iterable.
  */
-export type IsomorphicIterable<Item = unknown> = ReadOnly<
+export type IsomorphicIterable<Item = unknown> = Readonly<
 	AsyncIterable<Item> | Iterable<Item>
 >;

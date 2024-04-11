@@ -1,7 +1,6 @@
 import type { ArrayLike } from "./ArrayLike.js";
-import type { Defined } from "./Defined.js";
+import type { Just } from "./Just.js";
 import type { NeverFallback } from "./NeverFallback.js";
-import type { ReadOnlyCollection } from "./ReadOnlyCollection.js";
 
 /**
  * Generic key for either object or array.
@@ -9,7 +8,7 @@ import type { ReadOnlyCollection } from "./ReadOnlyCollection.js";
  * @category Array
  * @category Object
  * @remarks
- * Type to represent the type of the key in an {@link ReadOnlyCollection}. It
+ * Type to represent the type of the key in an array or object. It
  * automatically omits `symbol` keys from objects, and uses `number` for arrays
  * with dynamic `length`.
  *
@@ -21,14 +20,13 @@ import type { ReadOnlyCollection } from "./ReadOnlyCollection.js";
  * const arrayKey: KeyOf<typeof array> = 0;
  * const objectKey: KeyOf<typeof object> = "🟢";
  * ```
- * @see {@link ReadOnlyCollection}
  *
- * @template Input The input `ReadOnlyCollection`.
+ * @template Type Object or array type.
  */
-export type KeyOf<Input extends ReadOnlyCollection> =
-	Input extends ArrayLike ?
+export type KeyOf<Type extends object> =
+	Type extends ArrayLike ?
 		NeverFallback<
-			Defined<Exclude<Partial<Input>["length"], Input["length"]>>,
+			Just<Exclude<Partial<Type>["length"], Type["length"]>>,
 			number
 		>
-	:	`${Exclude<keyof Input, symbol>}`;
+	:	`${Exclude<keyof Type, symbol>}`;

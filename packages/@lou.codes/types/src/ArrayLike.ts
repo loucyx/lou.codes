@@ -1,6 +1,10 @@
+import type { Enumerate } from "./Enumerate.js";
+import type { NeverFallback } from "./NeverFallback.js";
+import type { ReadOnlyRecord } from "./ReadOnlyRecord.js";
+
 /**
  * An alternative for TypeScript's `ArrayLike` type, with its type set to
- * `unknown` by default.
+ * `unknown` by default. It also makes it shallowly read-only.
  *
  * @category Array
  * @remarks
@@ -17,10 +21,13 @@
  */
 
 // eslint-disable-next-line functional/no-mixed-types
-export type ArrayLike<Item = unknown> = {
-	/** Item of the  {@link ArrayLike}. */
-	readonly [index: number]: Item;
-
+export type ArrayLike<
+	Item = unknown,
+	Length extends number = number,
+> = ReadOnlyRecord<
+	NeverFallback<Exclude<Enumerate<Length>, Length>, number>,
+	Item
+> & {
 	/**	Amount of items in the {@link ArrayLike}. */
-	readonly length: number;
+	readonly length: Length;
 };

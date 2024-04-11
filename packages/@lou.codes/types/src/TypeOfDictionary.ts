@@ -1,5 +1,3 @@
-import type { Function } from "./Function.js";
-
 /**
  * `typeof` dictionary.
  *

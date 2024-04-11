@@ -1,4 +1,4 @@
-import type { DELETE } from "../constants.js";
+import type { DELETE } from "./constants.js";
 import type { Difference } from "./Difference.js";
 
 /**

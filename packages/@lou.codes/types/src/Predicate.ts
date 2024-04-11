@@ -14,7 +14,6 @@
  * 	numberOrString,
  * ): numberOrString is string => typeof numberOrString === "string";
  * ```
- * @see {Unary}
  *
  * @template Input The type of the input value.
  * @template Predicated The subset of `Input` for which the predicate holds.

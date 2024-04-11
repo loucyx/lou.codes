@@ -1,5 +1,4 @@
 import type { ArrayLike } from "./ArrayLike.js";
-import type { First } from "./First.js";
 import type { InitialAndLast } from "./InitialAndLast.js";
 
 /**
@@ -16,9 +15,8 @@ import type { InitialAndLast } from "./InitialAndLast.js";
  * const initial: Initial<typeof array> = ["🟢", "🟩"];
  * ```
  * @see {@link ArrayLike}
- * @see {@link First}
  * @see {@link InitialAndLast}
  *
  * @template Input `ArrayLike` value (such as `Array` or `string`).
  */
-export type Initial<Input extends ArrayLike> = First<InitialAndLast<Input>>;
+export type Initial<Input extends ArrayLike> = InitialAndLast<Input>[0];

@@ -1,6 +1,6 @@
 import { foregroundCyan } from "@lou.codes/ansi";
+import type { Tests } from "../src/Tests.js";
 import { formatPropertyPath } from "../src/formatPropertyPath.js";
-import type { Tests } from "../src/types/Tests.js";
 
 const pathArray = ["a", "property", "path"];
 

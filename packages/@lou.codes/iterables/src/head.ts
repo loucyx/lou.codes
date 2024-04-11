@@ -3,9 +3,9 @@ import type {
 	IsomorphicIterableItem,
 	Maybe,
 	ReadOnlyArray,
+	ReadOnlyIterable,
 } from "@lou.codes/types";
 import { getIterator } from "./getIterator.js";
-import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
  * Get first element of an iterable (`undefined` if it is empty).

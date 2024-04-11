@@ -1,5 +1,12 @@
 # Change log
 
+## 1.1.1
+
+### Patch Changes
+
+-   ⬆️ dependency upgrade (holding eslint because plugins are outdated yet).
+-   ⬆️ upgrade `@lou.codes/types` to `v2.0.0`.
+
 ## 1.1.0
 
 ### Minor Changes

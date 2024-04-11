@@ -1,4 +1,3 @@
-import type { Function } from "./Function.js";
 import type { Single } from "./Single.js";
 
 /**
@@ -17,4 +16,4 @@ import type { Single } from "./Single.js";
  * @template Input Type of the input value.
  * @template Output Type of the output value.
  */
-export type Unary<Input, Output> = Function<Single<Input>, Output>;
+export type Unary<Input, Output> = (input: Input) => Output;

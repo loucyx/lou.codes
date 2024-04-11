@@ -1,5 +1,4 @@
 import { iterator } from "@lou.codes/constants/Symbol.js";
-import type { ReadOnly } from "@lou.codes/types";
 import { hasIteratorSymbol } from "./hasIteratorSymbol.js";
 import { isFunction } from "./isFunction.js";
 import { isObject } from "./isObject.js";
@@ -19,7 +18,7 @@ import { isString } from "./isString.js";
  */
 export const isIterable = <Item>(
 	input: unknown,
-): input is ReadOnly<Iterable<Item>> =>
+): input is Readonly<Iterable<Item>> =>
 	isString(input) ||
 	(isObject(input) &&
 		hasIteratorSymbol(input) &&

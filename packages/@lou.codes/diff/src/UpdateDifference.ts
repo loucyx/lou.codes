@@ -1,4 +1,4 @@
-import type { UPDATE } from "../constants.js";
+import type { UPDATE } from "./constants.js";
 import type { Difference } from "./Difference.js";
 
 /**

@@ -1,6 +1,5 @@
-import type { Reducer } from "@lou.codes/types";
+import type { ReadOnlyIterable, Reducer } from "@lou.codes/types";
 import { forEach } from "./forEach.js";
-import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
  * Reducer function for iterables.

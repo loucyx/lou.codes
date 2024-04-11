@@ -1,4 +1,4 @@
-import type { EmptyString } from "./EmptyString.js";
+import type { MaybeEmpty } from "./MaybeEmpty.js";
 
 /**
  * Possible combinations of regular expression flags (with mandatory `u` flag).
@@ -16,6 +16,5 @@ import type { EmptyString } from "./EmptyString.js";
  * ```
  * @see [Regular Expressions](https://mdn.io/Regular%20expressions)
  */
-export type RegularExpressionFlags = `${EmptyString | "g"}${EmptyString | "i"}${
-	| EmptyString
-	| "m"}${EmptyString | "s"}u`;
+export type RegularExpressionFlags =
+	`${MaybeEmpty<"g">}${MaybeEmpty<"i">}${MaybeEmpty<"m">}${MaybeEmpty<"s">}u`;

@@ -5,7 +5,7 @@
 import { argv, exit } from "node:process";
 import { pathToFileURL } from "node:url";
 import { FAILED_TESTS } from "../constants.js";
-import { testsImport } from "../testsImport.js";
+import { importTests } from "../importTests.js";
 import { filterTestFilePaths } from "./filterTestFilePaths.js";
 import { getFilePaths } from "./getFilePaths.js";
 import { runAndStringifyTests } from "./runAndStringifyTests.js";
@@ -16,7 +16,7 @@ let hasFailedTests = false;
 const testPath = pathToFileURL(argv[2] ?? "./tests/");
 const pathsIterable = getFilePaths(testPath);
 const testsPathsIterable = filterTestFilePaths(pathsIterable);
-const testsImportsIterable = testsImport(testsPathsIterable);
+const testsImportsIterable = importTests(testsPathsIterable);
 const testsStringsIterable = runAndStringifyTests(testsImportsIterable);
 
 // eslint-disable-next-line functional/no-loop-statements

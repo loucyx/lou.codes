@@ -1,5 +1,3 @@
-import type { ReadOnly } from "./ReadOnly.js";
-
 /**
  * Read-only record.
  *
@@ -7,7 +5,7 @@ import type { ReadOnly } from "./ReadOnly.js";
  * @remarks
  * There's already a native `Readonly` and `Record` type, but this type has
  * default type parameters to make it easier to use when the type of a record is
- * `unknown`, plus it recursively makes all the values in the record read-only.
+ * `unknown`.
  * @example
  * ```typescript
  * const record: ReadOnlyRecord<string, Array<number>> = {
@@ -16,7 +14,6 @@ import type { ReadOnly } from "./ReadOnly.js";
  * };
  * record["🟢"][0] = 7; // Error
  * ```
- * @see {@link ReadOnly}
  *
  * @template Key Type of the keys in the record.
  * @template Value Type of the values in the record.
@@ -24,4 +21,4 @@ import type { ReadOnly } from "./ReadOnly.js";
 export type ReadOnlyRecord<
 	Key extends PropertyKey = PropertyKey,
 	Value = unknown,
-> = ReadOnly<Record<Key, Value>>;
+> = Readonly<Record<Key, Value>>;

@@ -1,4 +1,4 @@
-import type { Function, ReadOnlyArray } from "@lou.codes/types";
+import type { ReadOnlyArray } from "@lou.codes/types";
 
 /**
  * Formatter function that takes a string or a tagged template.
@@ -25,10 +25,7 @@ import type { Function, ReadOnlyArray } from "@lou.codes/types";
  * followed by an array of expressions (if any).
  * @returns A plain string.
  */
-export type Formatter = Function<
-	readonly [
-		input: TemplateStringsArray | string,
-		...expressions: ReadOnlyArray,
-	],
-	string
->;
+export type Formatter = (
+	templateStrings: TemplateStringsArray | string,
+	...expressions: ReadOnlyArray
+) => string;

@@ -1,7 +1,7 @@
 import { cwd } from "node:process";
 import { pathToFileURL } from "node:url";
+import type { Tests } from "../src/Tests.js";
 import { relativePath } from "../src/bin/relativePath.js";
-import type { Tests } from "../src/types/Tests.js";
 
 const currentWorkingDirectory = pathToFileURL(cwd());
 const filename = "lou.test.ts";

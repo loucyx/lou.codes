@@ -1,5 +1,4 @@
 import type { Entry } from "./Entry.js";
-import type { Second } from "./Second.js";
 
 /**
  * Value of an {@link Entry}.
@@ -14,8 +13,7 @@ import type { Second } from "./Second.js";
  * const entryValue: EntryValue<typeof entry> = entry[1];
  * ```
  * @see {@link Entry}
- * @see {@link Second}
  *
  * @template Input Entry type.
  */
-export type EntryValue<Input extends Entry> = Second<Input>;
+export type EntryValue<Input extends Entry> = Input[1];

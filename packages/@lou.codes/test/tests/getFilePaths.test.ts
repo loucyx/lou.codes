@@ -1,9 +1,9 @@
 import type { ReadOnlyArray } from "@lou.codes/types";
 import { resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import type { ReadOnlyURL } from "../src/ReadOnlyURL.js";
+import type { Tests } from "../src/Tests.js";
 import { getFilePaths } from "../src/bin/getFilePaths.js";
-import type { ReadOnlyURL } from "../src/types/ReadOnlyURL.js";
-import type { Tests } from "../src/types/Tests.js";
 import { iterableToArray } from "./utils.js";
 
 const currentDirectoryURLResolve = (...paths: ReadonlyArray<string>) =>

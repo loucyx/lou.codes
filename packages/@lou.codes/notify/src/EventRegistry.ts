@@ -1,4 +1,4 @@
-import type { ReadOnly, ReadOnlyArray } from "@lou.codes/types";
+import type { ReadOnlyArray } from "@lou.codes/types";
 import type { EventListener } from "./EventListener.js";
 import type { EventTypeDictionary } from "./EventTypeDictionary.js";
 
@@ -17,6 +17,6 @@ import type { EventTypeDictionary } from "./EventTypeDictionary.js";
  */
 export type EventRegistry<Events extends EventTypeDictionary> = {
 	readonly [Event in keyof Events]?: ReadOnlyArray<
-		EventListener<ReadOnly<Events[Event]>>
+		EventListener<Readonly<Events[Event]>>
 	>;
 };

@@ -5,6 +5,7 @@ import type {
 	ReadOnlyRecord,
 	Unary,
 } from "@lou.codes/types";
+import { set } from "@lou.codes/utils";
 import { reduce } from "./reduce.js";
 
 /**
@@ -26,14 +27,8 @@ export const groupBy = <Item, Key extends PropertyKey>(
 	reduce((item: Item) => {
 		const group = grouper(item);
 
-		return (groups: ReadOnlyRecord<Key, Maybe<ReadOnlyArray<Item>>>) =>
-			({
-				...groups,
-				[group]: [
-					...((groups[group as keyof typeof groups] ??
-						EMPTY_ARRAY) as ReadOnlyArray<Item>),
-					item,
-				],
-			}) as ReadOnlyRecord<Key, ReadOnlyArray<Item>>;
-		// eslint-disable-next-line unicorn/no-null
+		return ((groups: ReadOnlyRecord<Key, Maybe<ReadOnlyArray<Item>>>) =>
+			set(group)([...(groups[group] ?? EMPTY_ARRAY), item])(groups)) as (
+			groups: ReadOnlyRecord<Key, Maybe<ReadOnlyArray<Item>>>,
+		) => ReadOnlyRecord<Key, ReadOnlyArray<Item>>;
 	})(EMPTY_OBJECT as ReadOnlyRecord<Key, ReadOnlyArray<Item>>);

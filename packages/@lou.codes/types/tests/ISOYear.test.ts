@@ -2,9 +2,12 @@ import type { ISOYear } from "../src/ISOYear.js";
 
 export const year1989: ISOYear = "1989";
 
-export const yearNegative1989: ISOYear = "-1989";
+export const yearNegative1989: ISOYear = "-001989";
 
-// Sadly we can't enforce string length for the type (so it has a length of 4)
+// @ts-expect-error Invalid ISO negative year
+export const yearNegative1989Invalid: ISOYear = "-1989";
+
+// @ts-expect-error ISO year has to have at least 2 characters
 export const year0: ISOYear = "0";
 
 // @ts-expect-error Decimals aren't valid year values

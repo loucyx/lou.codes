@@ -1,6 +1,5 @@
 import type { ArrayLike } from "./ArrayLike.js";
 import type { InitialAndLast } from "./InitialAndLast.js";
-import type { Second } from "./Second.js";
 
 /**
  * Last value of an `ArrayLike`.
@@ -16,8 +15,7 @@ import type { Second } from "./Second.js";
  * ```
  * @see {@link ArrayLike}
  * @see {@link InitialAndLast}
- * @see {@link Second}
  *
  * @template Input The input `ArrayLike`.
  */
-export type Last<Input extends ArrayLike> = Second<InitialAndLast<Input>>;
+export type Last<Input extends ArrayLike> = InitialAndLast<Input>[1];

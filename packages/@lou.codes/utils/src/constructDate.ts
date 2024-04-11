@@ -1,4 +1,4 @@
-import type { ReadOnly, Unbound } from "@lou.codes/types";
+import type { Unbound } from "@lou.codes/types";
 import { construct } from "./construct.js";
 
 /**
@@ -7,5 +7,5 @@ import { construct } from "./construct.js";
  * @category Classes
  */
 export const constructDate = construct(Date) as (
-	date?: ReadOnly<Date> | number | string,
+	date?: Readonly<Date> | number | string,
 ) => Unbound<Date>;

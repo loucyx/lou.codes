@@ -1,6 +1,6 @@
+import type { ReadOnlyIterable } from "@lou.codes/types";
 import { createIterableIterator } from "./createIterableIterator.js";
 import { getIterator } from "./getIterator.js";
-import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
  * Takes two iterables and returns a new iterable with the length of the

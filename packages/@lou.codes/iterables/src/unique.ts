@@ -1,6 +1,6 @@
+import type { ReadOnlyIterable } from "@lou.codes/types";
 import { constructSet } from "@lou.codes/utils";
 import { createIterableIterator } from "./createIterableIterator.js";
-import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
  * Returns a single instance of each item in the iterable.

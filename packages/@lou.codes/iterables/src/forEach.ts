@@ -1,5 +1,4 @@
-import type { Unary } from "@lou.codes/types";
-import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
+import type { ReadOnlyIterable, Unary } from "@lou.codes/types";
 
 /**
  * For each function for iterables.

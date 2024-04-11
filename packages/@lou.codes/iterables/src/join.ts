@@ -1,7 +1,6 @@
 import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
-import type { Maybe, Strigifiable } from "@lou.codes/types";
+import type { Maybe, ReadOnlyIterable, Strigifiable } from "@lou.codes/types";
 import { reduce } from "./reduce.js";
-import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
  * Takes a `separator` string and a iterable and returns a string with the

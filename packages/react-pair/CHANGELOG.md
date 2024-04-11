@@ -1,5 +1,13 @@
 # Change log
 
+## 4.0.1
+
+### Patch Changes
+
+-   ⬆️ dependency upgrade (holding eslint because plugins are outdated yet).
+-   ⬆️ upgrade `preact-pair` to `v1.1.1`.
+-   ⬆️ upgrade `@lou.codes/types` to `v2.0.0`.
+
 ## 4.0.0
 
 ### Major Changes

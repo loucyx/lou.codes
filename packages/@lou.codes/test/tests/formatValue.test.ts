@@ -5,8 +5,8 @@ import {
 	foregroundYellow,
 } from "@lou.codes/ansi";
 import { defineProperty } from "@lou.codes/constants/Object.js";
+import type { Tests } from "../src/Tests.js";
 import { formatValue } from "../src/formatValue.js";
-import type { Tests } from "../src/types/Tests.js";
 
 export const formatValueTests = [
 	{

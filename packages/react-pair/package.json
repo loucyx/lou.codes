@@ -1,7 +1,7 @@
 {
 	"name": "react-pair",
 	"description": "🖇️ Util to help with the paired hook pattern",
-	"version": "4.0.0",
+	"version": "4.0.1",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -16,7 +16,7 @@
 		"preact-pair": "workspace:*"
 	},
 	"devDependencies": {
-		"@types/react": "^18.2.74",
+		"@types/react": "^18.2.75",
 		"@types/react-dom": "^18.2.24",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"

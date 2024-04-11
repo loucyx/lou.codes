@@ -1,5 +1,5 @@
+import type { ReadOnlyIterable } from "@lou.codes/types";
 import { createIterableIterator } from "./createIterableIterator.js";
-import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
  * Drop the specified amount of items from the given iterable.

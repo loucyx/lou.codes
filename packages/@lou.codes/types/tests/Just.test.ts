@@ -1,8 +1,8 @@
-import type { Defined } from "../src/Defined.js";
+import type { Just } from "../src/Just.js";
 import type { Maybe } from "../src/Maybe.js";
 
 type MaybeNumber = Maybe<number>;
-type DefinedNumber = Defined<MaybeNumber>;
+type DefinedNumber = Just<MaybeNumber>;
 
 export const maybeNumber: MaybeNumber = 1;
 export const maybeUndefined: MaybeNumber = undefined;

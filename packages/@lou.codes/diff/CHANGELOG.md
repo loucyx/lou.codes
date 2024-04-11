@@ -1,5 +1,15 @@
 # Change log
 
+## 3.0.0
+
+### Major Changes
+
+-   🚚 move type files to the root.
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/types` to `v2.0.0`.
+
 ## 2.0.3
 
 ### Patch Changes

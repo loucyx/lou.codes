@@ -1,8 +1,8 @@
 import { dimmed, foregroundRed } from "@lou.codes/ansi";
 import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
+import type { TestResult } from "./TestResult.js";
 import { FAIL, PASS } from "./constants.js";
 import { stringifyDifference } from "./stringifyDifference.js";
-import type { TestResult } from "./types/TestResult.js";
 
 /**
  * Takes a `TestResult` and returns a readable string..

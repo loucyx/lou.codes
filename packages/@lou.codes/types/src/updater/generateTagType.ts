@@ -1,6 +1,5 @@
 import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import type { ITagData } from "vscode-html-languageservice/lib/esm/htmlLanguageTypes.js";
-import type { ReadOnly } from "../ReadOnly.js";
 import { addIndent } from "./addIndent.js";
 import { generateAttributesType } from "./generateAttributesType.js";
 import { generateJSDoc } from "./generateJSDoc.js";
@@ -14,7 +13,7 @@ import { patchAttributes } from "./patchAttributes.js";
  * @returns Tag type.
  */
 export const generateTagType = (
-	options: ReadOnly<ITagData & { indent: number }>,
+	options: Readonly<ITagData> & { readonly indent: number },
 ) => {
 	const typedAttributes = generateAttributesType({
 		attributes: patchAttributes(options.attributes),

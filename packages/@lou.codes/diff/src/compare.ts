@@ -1,10 +1,10 @@
 import { isArray } from "@lou.codes/constants/Array.js";
 import { ownKeys } from "@lou.codes/constants/Reflect.js";
 import { EMPTY_ARRAY } from "@lou.codes/constants/empty.js";
+import type { CreateDifference } from "./CreateDifference.js";
+import type { DeleteDifference } from "./DeleteDifference.js";
+import type { UpdateDifference } from "./UpdateDifference.js";
 import { CREATE, DELETE, UPDATE } from "./constants.js";
-import type { CreateDifference } from "./types/CreateDifference.js";
-import type { DeleteDifference } from "./types/DeleteDifference.js";
-import type { UpdateDifference } from "./types/UpdateDifference.js";
 
 /**
  * Function to compare a `left` and a `right` value.

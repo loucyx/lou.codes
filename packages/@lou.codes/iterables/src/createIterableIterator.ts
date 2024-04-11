@@ -1,7 +1,9 @@
 import { freeze } from "@lou.codes/constants/Object.js";
 import { iterator } from "@lou.codes/constants/Symbol.js";
-import type { ReadOnlyIterableIterator } from "./types/ReadOnlyIterableIterator.js";
-import type { ReadOnlyIterator } from "./types/ReadOnlyIterator.js";
+import type {
+	ReadOnlyIterableIterator,
+	ReadOnlyIterator,
+} from "@lou.codes/types";
 
 /**
  * Takes a generator function and returns an iterable iterator object.

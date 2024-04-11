@@ -1,4 +1,4 @@
-import type { Function, Maybe, ReadOnlyArray } from "@lou.codes/types";
+import type { Just, Maybe, ReadOnlyArray } from "@lou.codes/types";
 
 /**
  * Wrapper for `try`/`catch`.
@@ -23,12 +23,12 @@ import type { Function, Maybe, ReadOnlyArray } from "@lou.codes/types";
  */
 export const attempt =
 	<Arguments extends ReadOnlyArray, Output>(
-		wrappedFunction: Function<Arguments, Output>,
+		wrappedFunction: (...wrappedArguments: Arguments) => Output,
 	) =>
 	(...parameters: Arguments): Maybe<Output> => {
 		// eslint-disable-next-line functional/no-try-statements
 		try {
-			return wrappedFunction(...parameters);
+			return wrappedFunction(...parameters) as Just<Output>;
 		} catch {
 			return undefined;
 		}

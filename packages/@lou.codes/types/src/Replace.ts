@@ -1,6 +1,3 @@
-import type { ReadOnly } from "./ReadOnly.js";
-import type { ReadOnlyRecord } from "./ReadOnlyRecord.js";
-
 /**
  * Intersection that replaces the type of some keys in given object type.
  *
@@ -11,17 +8,15 @@ import type { ReadOnlyRecord } from "./ReadOnlyRecord.js";
  * @example
  * ```typescript
  * type User = { name: string; age: number };
- * type ReallyOldUser = ReplaceType<User, "age", bigint>;
+ * type ReallyOldUser = Replace<User, "age", bigint>;
  * ```
- * @see {@link ReadOnly}
- * @see {@link ReadOnlyRecord}
  *
  * @template Type Type to replace the type of some keys in.
  * @template Keys Keys to replace the type of.
  * @template NewType New type to replace the old type with.
  */
-export type ReplaceType<
+export type Replace<
 	Type extends object,
 	Keys extends keyof Type,
 	NewType,
-> = ReadOnly<Omit<Type, Keys>> & ReadOnlyRecord<Keys, NewType>;
+> = Omit<Type, Keys> & { readonly [Property in Keys]: NewType };

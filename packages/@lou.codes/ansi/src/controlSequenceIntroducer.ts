@@ -1,5 +1,5 @@
 import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
-import type { EmptyString, First, Maybe, Second } from "@lou.codes/types";
+import type { EmptyString, Maybe } from "@lou.codes/types";
 import { escapeSequence } from "./escapeSequence.js";
 
 /**
@@ -48,8 +48,8 @@ export const controlSequenceIntroducer =
 			}${code}` as `[${Input extends (
 				readonly [open: Maybe<number>, close: Maybe<number>]
 			) ?
-				`${First<Input> extends number ? First<Input>
-				:	EmptyString};${Second<Input> extends number ? Second<Input>
+				`${Input[0] extends number ? Input[0]
+				:	EmptyString};${Input[1] extends number ? Input[1]
 				:	EmptyString}`
 			:	`${Input & number}`}${Code}`,
 		);

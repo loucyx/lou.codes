@@ -1,4 +1,4 @@
-import type { CREATE, DELETE, UPDATE } from "../constants.js";
+import type { CREATE, DELETE, UPDATE } from "./constants.js";
 
 /**
  * Kinds of differences (create, delete or update).

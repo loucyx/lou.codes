@@ -4,9 +4,9 @@ import type {
 	EmptyArray,
 	IsomorphicIterableItem,
 	ReadOnlyArray,
+	ReadOnlyIterable,
 } from "@lou.codes/types";
 import { reduce } from "./reduce.js";
-import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
  * Turns given iterable into an array.

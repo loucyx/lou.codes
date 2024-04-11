@@ -1,6 +1,10 @@
-import type { Predicate, Single, Unary } from "@lou.codes/types";
+import type {
+	Predicate,
+	ReadOnlyIterable,
+	Single,
+	Unary,
+} from "@lou.codes/types";
 import { createIterableIterator } from "./createIterableIterator.js";
-import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
  * Filters items in an iterable against a predicate and returns items that

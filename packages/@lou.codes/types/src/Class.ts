@@ -21,4 +21,4 @@ import type { ReadOnlyArray } from "./ReadOnlyArray.js";
 export type Class<
 	Arguments extends ReadOnlyArray = ReadOnlyArray,
 	Instance = unknown,
-> = new (...classArguments: Arguments) => Instance;
+> = new (...constructorArguments: Arguments) => Instance;

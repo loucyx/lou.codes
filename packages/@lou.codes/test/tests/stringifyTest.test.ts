@@ -1,7 +1,7 @@
 import { foregroundRed } from "@lou.codes/ansi";
+import type { Tests } from "../src/Tests.js";
 import { EXCEPTION } from "../src/constants.js";
 import { stringifyTest } from "../src/stringifyTest.js";
-import type { Tests } from "../src/types/Tests.js";
 import { fail, pass } from "./utils.js";
 
 export const stringifyTestTests = [

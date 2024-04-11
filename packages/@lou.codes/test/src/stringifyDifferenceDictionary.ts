@@ -1,9 +1,9 @@
 import { foregroundRed } from "@lou.codes/ansi";
 import { CREATE, DELETE, UPDATE } from "@lou.codes/diff";
+import type { Difference } from "./Difference.js";
 import { EXCEPTION } from "./constants.js";
 import { formatPropertyPath } from "./formatPropertyPath.js";
 import { formatValue } from "./formatValue.js";
-import type { Difference } from "./types/Difference.js";
 
 /**
  * Dictionary `Difference` kind->formatter.

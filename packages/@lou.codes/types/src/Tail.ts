@@ -1,6 +1,5 @@
 import type { ArrayLike } from "./ArrayLike.js";
 import type { HeadAndTail } from "./HeadAndTail.js";
-import type { Second } from "./Second.js";
 
 /**
  * Last values of an {@link ArrayLike} (omitting the first).
@@ -17,8 +16,7 @@ import type { Second } from "./Second.js";
  * ```
  * @see {@link ArrayLike}
  * @see {@link HeadAndTail}
- * @see {@link Second}
  *
  * @template Input Type of the array to get the tail.
  */
-export type Tail<Input extends ArrayLike> = Second<HeadAndTail<Input>>;
+export type Tail<Input extends ArrayLike> = HeadAndTail<Input>[1];

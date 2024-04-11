@@ -1,5 +1,4 @@
-import type { Maybe, Unary } from "@lou.codes/types";
-import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
+import type { Maybe, ReadOnlyIterable, Unary } from "@lou.codes/types";
 
 /**
  * Returns the value of the first item in the iterable where predicate is

@@ -1,5 +1,3 @@
-import type { Function } from "./Function.js";
-import type { ReadOnly } from "./ReadOnly.js";
 import type { ReadOnlyArray } from "./ReadOnlyArray.js";
 
 /**
@@ -16,8 +14,6 @@ import type { ReadOnlyArray } from "./ReadOnlyArray.js";
  * const intParser: Tagger<number> = strings => parseInt(strings.join(""), 10);
  * intParser`100`; // 100
  * ```
- * @see {@link Function}
- * @see {@link ReadOnly}
  * @see {@link ReadOnlyArray}
  *
  * @template Output Type of the output value.
@@ -26,10 +22,7 @@ import type { ReadOnlyArray } from "./ReadOnlyArray.js";
 export type Tagger<
 	Output = string,
 	Expressions extends ReadOnlyArray = ReadOnlyArray,
-> = Function<
-	readonly [
-		templateStrings: TemplateStringsArray,
-		...expressions: Expressions,
-	],
-	Output
->;
+> = (
+	templateStrings: TemplateStringsArray,
+	...expressions: Expressions
+) => Output;

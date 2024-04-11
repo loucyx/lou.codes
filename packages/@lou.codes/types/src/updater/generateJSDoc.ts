@@ -1,6 +1,5 @@
 import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import type { ITagData } from "vscode-html-languageservice/lib/esm/htmlLanguageTypes.js";
-import type { ReadOnly } from "../ReadOnly.js";
 import { getDescription } from "./getDescription.js";
 import { normalizeJSDocMarkdown } from "./normalizeJSDocMarkdown.js";
 
@@ -13,7 +12,7 @@ import { normalizeJSDocMarkdown } from "./normalizeJSDocMarkdown.js";
  */
 export const generateJSDoc = (options: {
 	readonly description?: string | { readonly value: string };
-	readonly references?: ReadOnly<ITagData["references"]>;
+	readonly references?: Readonly<ITagData["references"]>;
 }) =>
 	options.description === undefined ?
 		"\n"

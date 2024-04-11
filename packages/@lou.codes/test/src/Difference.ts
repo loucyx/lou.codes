@@ -3,7 +3,7 @@ import type {
 	DeleteDifference,
 	UpdateDifference,
 } from "@lou.codes/diff";
-import type { EXCEPTION } from "../constants.js";
+import type { EXCEPTION } from "./constants.js";
 
 /**
  * Difference object from `@lou.codes/diff`, with an added "EXCEPTION" kind.

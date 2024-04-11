@@ -1,5 +1,5 @@
 import { iterator } from "@lou.codes/constants/Symbol.js";
-import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
+import type { ReadOnlyIterable } from "@lou.codes/types";
 
 /**
  * Get a `Symbol.iterator` from an iterable.

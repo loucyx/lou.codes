@@ -17,4 +17,4 @@
  *
  * @template Type The type to await.
  */
-export type Awaitable<Type = unknown> = Promise<Type> | Type;
+export type Awaitable<Type = unknown> = PromiseLike<Type> | Type;

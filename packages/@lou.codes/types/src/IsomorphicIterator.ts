@@ -1,5 +1,3 @@
-import type { ReadOnly } from "./ReadOnly.js";
-
 /**
  * Value might be an `AsyncIterator` or just an `Iterator` (read-only).
  *
@@ -20,4 +18,4 @@ export type IsomorphicIterator<
 	Item = unknown,
 	Return = void,
 	Next = void,
-> = ReadOnly<AsyncIterator<Item, Return, Next> | Iterator<Item, Return, Next>>;
+> = Readonly<AsyncIterator<Item, Return, Next> | Iterator<Item, Return, Next>>;

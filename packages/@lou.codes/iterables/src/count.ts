@@ -1,7 +1,6 @@
-import type { Filter } from "@lou.codes/types";
+import type { Filter, ReadOnlyIterable } from "@lou.codes/types";
 import { filter } from "./filter.js";
 import { length } from "./length.js";
-import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
 
 /**
  * Counts the number of items that satisfy a predicate in the given iterable.

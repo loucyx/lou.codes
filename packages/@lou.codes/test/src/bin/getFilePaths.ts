@@ -1,5 +1,5 @@
 import { readdir, stat } from "node:fs/promises";
-import type { ReadOnlyURL } from "../types/ReadOnlyURL.js";
+import type { ReadOnlyURL } from "../ReadOnlyURL.js";
 
 /**
  * Recursively search for files in the given directory and yields every file. If

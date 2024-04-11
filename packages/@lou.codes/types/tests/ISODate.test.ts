@@ -2,7 +2,7 @@ import type { ISODate } from "../src/ISODate.js";
 
 export const validDate: ISODate = "1989-10-13T10:15:13.123Z";
 
-export const validDateNegativeYear: ISODate = "-1989-10-13T10:15:13.123Z";
+export const validDateNegativeYear: ISODate = "-001989-10-13T10:15:13.123Z";
 
 // @ts-expect-error Invalid month value (must be between 01 and 12).
 export const invalidMonthDate: ISODate = "1989-99-13T10:15:13.123Z";

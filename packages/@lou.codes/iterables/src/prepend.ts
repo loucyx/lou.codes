@@ -1,7 +1,9 @@
+import type {
+	ReadOnlyIterable,
+	ReadOnlyIterableIterator,
+} from "@lou.codes/types";
 import { flip } from "@lou.codes/utils";
 import { append } from "./append.js";
-import type { ReadOnlyIterable } from "./types/ReadOnlyIterable.js";
-import type { ReadOnlyIterableIterator } from "./types/ReadOnlyIterableIterator.js";
 
 /**
  * Prepends one iterable to another.

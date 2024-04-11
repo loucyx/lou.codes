@@ -1,5 +1,3 @@
-import type { Function } from "./Function.js";
-
 /**
  * Type that replaces adds the `this: void` argument to all the methods in the
  * given `Type`.
@@ -18,7 +16,9 @@ export type Unbound<Type = unknown> =
 	Type extends ReadonlyArray<infer Item> ?
 		{
 			[Property in keyof ReadonlyArray<Item>]: ReadonlyArray<Item>[Property] extends (
-				Function<infer MethodArguments, infer MethodReturn>
+				(
+					...methodArguments: infer MethodArguments
+				) => infer MethodReturn
 			) ?
 				(
 					// eslint-disable-next-line @typescript-eslint/no-invalid-void-type
@@ -29,7 +29,9 @@ export type Unbound<Type = unknown> =
 		}
 	:	{
 			[Property in keyof Type]: Type[Property] extends (
-				Function<infer MethodArguments, infer MethodReturn>
+				(
+					...methodArguments: infer MethodArguments
+				) => infer MethodReturn
 			) ?
 				(
 					// eslint-disable-next-line @typescript-eslint/no-invalid-void-type

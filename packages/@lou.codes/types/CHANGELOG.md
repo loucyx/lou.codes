@@ -1,5 +1,37 @@
 # Change log
 
+## 2.0.0
+
+### Major Changes
+
+-   🏗️ rework `ArrayLike` to include a type for the length as well.
+-   🏗️ change `Awaitable` to take `PromiseLike` instead of `Promise`.
+-   🏗️ change `ISODate` to be less strict.
+-   🏗️ change `ISOYear` to be support negative dates better.
+-   🏗️ update `KeyOf` to take any `object`, not only `Collections` like before.
+-   🏗️ update `LocaleIdentifier` with a little cleaner code using
+    `LocaleString`.
+-   🏗️ update `Maybe` to use `Either` internally and `Just` for the value.
+-   🏗️ change `ReadOnlyArray` to be shallow.
+-   🏗️ change `ReadOnlyRecord` to be shallow.
+-   🏗️ change `ReadOnlyArguments` to be shallow.
+-   🚚 Rename `Defined` to `Just`.
+-   🚚 Rename `ReplaceType` to `Replace`.
+-   🚚 Moved `ReadOnlyIterable` from `@lou.codes/iterables`.
+-   🚚 Moved `ReadOnlyIterableIterator` from `@lou.codes/iterables`.
+-   🚚 Moved `ReadOnlyIterator` from `@lou.codes/iterables`.
+-   ✨ Add new `Either` type.
+-   ✨ Add new `LocaleString` type.
+-   ✨ Add new `MaybeEmpty` type.
+-   ✨ Add new `MultiDigitNumberString` type.
+-   🔥 Delete `Comparison`.
+-   🔥 Delete `First` in favor of `Type[0]`.
+-   🔥 Delete `Function` in favor of `(...) => Type`.
+-   🔥 Delete `ReadOnlyCollection`.
+-   🔥 Delete `Second` in favor of `Type[1]`.
+-   🔥 Delete `Sorter`.
+-   🔥 Delete `ReadOnly` in favor of native shallow `Readonly`.
+
 ## 1.2.2
 
 ### Patch Changes

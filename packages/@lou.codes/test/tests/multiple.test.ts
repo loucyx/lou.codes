@@ -1,4 +1,4 @@
-import type { Tests } from "../src/types/Tests.js";
+import type { Tests } from "../src/Tests.js";
 
 export const multiple = [
 	{

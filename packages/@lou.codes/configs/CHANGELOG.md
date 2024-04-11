@@ -1,5 +1,11 @@
 # Change log
 
+## 5.0.5
+
+### Patch Changes
+
+-   ⬆️ dependency upgrade (holding eslint because plugins are outdated yet).
+
 ## 5.0.4
 
 ### Patch Changes

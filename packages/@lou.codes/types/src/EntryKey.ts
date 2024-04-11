@@ -1,5 +1,4 @@
 import type { Entry } from "./Entry.js";
-import type { First } from "./First.js";
 
 /**
  * Key of an {@link Entry}.
@@ -14,8 +13,7 @@ import type { First } from "./First.js";
  * const entryKey: EntryKey<typeof entry> = entry[0];
  * ```
  * @see {@link Entry}
- * @see {@link First}
  *
  * @template Input Entry type.
  */
-export type EntryKey<Input extends Entry> = First<Input>;
+export type EntryKey<Input extends Entry> = Input[0];

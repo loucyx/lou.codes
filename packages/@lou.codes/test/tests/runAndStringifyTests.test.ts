@@ -1,10 +1,10 @@
 import { foregroundBrightRed, underlined } from "@lou.codes/ansi";
 import type { ReadOnlyArray } from "@lou.codes/types";
+import type { ReadOnlyURL } from "../src/ReadOnlyURL.js";
+import type { Tests } from "../src/Tests.js";
 import { relativePath } from "../src/bin/relativePath.js";
 import { runAndStringifyTests } from "../src/bin/runAndStringifyTests.js";
 import { FAILED_TESTS, TEST } from "../src/constants.js";
-import type { ReadOnlyURL } from "../src/types/ReadOnlyURL.js";
-import type { Tests } from "../src/types/Tests.js";
 import { fail, iterableToArray, pass } from "./utils.js";
 
 const filenameA: ReadOnlyURL = new URL("file:///example/test-a.js");

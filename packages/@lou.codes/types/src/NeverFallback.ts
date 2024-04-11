@@ -14,6 +14,7 @@ import type { Single } from "./Single.js";
  * NeverFallback<typeof value, number>; // Will be number
  * ```
  *
+ * @see {@link Single}
  * @template MaybeNever The type that may or may not be `never`.
  * @template Fallback The fallback type to use if `MaybeNever` is `never`.
  */

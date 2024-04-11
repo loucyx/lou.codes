@@ -10,8 +10,9 @@ import type { Maybe } from "./Maybe.js";
  * @example
  * ```typescript
  * const maybeUndefined: string | undefined = "🟢";
- * const definitelyDefined: Defined<typeof maybeUndefined> = "🟢";
+ * const defined: Just<typeof maybeUndefined> = "🟢"; // ok
+ * const noDefined: Just<typeof maybeUndefined> = undefined; // error
  * ```
  * @see {@link Maybe}
  */
-export type Defined<Input> = Exclude<Input, undefined>;
+export type Just<Input> = Exclude<Input, undefined>;

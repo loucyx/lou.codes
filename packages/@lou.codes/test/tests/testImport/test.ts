@@ -1,4 +1,4 @@
-import type { Test } from "../../src/types/Test.js";
+import type { Test } from "../../src/Test.js";
 
 export const test = {
 	given: "a single test",

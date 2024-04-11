@@ -1,5 +1,5 @@
 import { attempt } from "@lou.codes/parsers";
-import type { ReadOnly, RegularExpression } from "@lou.codes/types";
+import type { RegularExpression } from "@lou.codes/types";
 import { isString } from "./isString.js";
 
 /**
@@ -17,7 +17,7 @@ import { isString } from "./isString.js";
  * @returns `true` if the string matches the regular expression, `false` otherwise.
  */
 export const match = (
-	regularExpression: ReadOnly<RegExp> | RegularExpression,
+	regularExpression: Readonly<RegExp> | RegularExpression,
 ) => {
 	const { flags, source } =
 		isString(regularExpression) ?

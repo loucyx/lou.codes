@@ -1,5 +1,5 @@
 import { isIsomorphicIterable } from "@lou.codes/predicates";
-import type { IsomorphicIterable, ReadOnly } from "@lou.codes/types";
+import type { IsomorphicIterable } from "@lou.codes/types";
 import { createIterableIterator } from "./createIterableIterator.js";
 
 /**
@@ -23,7 +23,7 @@ export const flat = <Iterable extends IsomorphicIterable>(iterable: Iterable) =>
 			:	yield iterableOrItem;
 		}
 	}) as Iterable extends IsomorphicIterable<infer Item> ?
-		ReadOnly<
+		Readonly<
 			Item extends IsomorphicIterable<infer SubItem> ?
 				AsyncIterableIterator<SubItem>
 			:	AsyncIterableIterator<Item>

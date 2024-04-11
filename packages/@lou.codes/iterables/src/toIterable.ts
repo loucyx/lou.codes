@@ -2,9 +2,9 @@ import { isIterable } from "@lou.codes/predicates";
 import type {
 	IsomorphicIterable,
 	IsomorphicIterableItem,
+	ReadOnlyIterator,
 } from "@lou.codes/types";
 import { createIterableIterator } from "./createIterableIterator.js";
-import type { ReadOnlyIterator } from "./types/ReadOnlyIterator.js";
 
 /**
  * Takes a value, iterable and yields it.

@@ -1,5 +1,6 @@
 import { EMPTY_ARRAY } from "@lou.codes/constants/empty.js";
-import { forEach, type ReadOnlyIterable } from "@lou.codes/iterables";
+import { forEach } from "@lou.codes/iterables";
+import type { ReadOnlyIterable } from "@lou.codes/types";
 import { applyTo } from "@lou.codes/utils";
 import type { Emitter } from "./Emitter.js";
 import type { EventListener } from "./EventListener.js";

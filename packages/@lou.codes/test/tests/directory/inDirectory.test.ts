@@ -1,4 +1,4 @@
-import type { Test } from "../../src/types/Test.js";
+import type { Test } from "../../src/Test.js";
 
 export const inDirectoryTest = {
 	given: "a single test in a directory",

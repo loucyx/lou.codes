@@ -1,3 +1,6 @@
+import type { Either } from "./Either.js";
+import type { Just } from "./Just.js";
+
 /**
  * Value that can be `undefined`.
  *
@@ -13,7 +16,8 @@
  * const maybeNumber: MaybeNumber = 1;
  * const notNumber: MaybeNumber = undefined;
  * ```
+ * @see {@link Just}
  *
- * @template Value The type of the value to make optional.
+ * @template Input The type of the value to make optional.
  */
-export type Maybe<Value> = Value | undefined;
+export type Maybe<Input> = Either<Just<Input>, undefined>;

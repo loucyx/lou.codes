@@ -1,11 +1,11 @@
-import type { ReplaceType } from "../src/ReplaceType.js";
+import type { Replace } from "../src/Replace.js";
 
 type User = { readonly name: string; readonly age: number };
 
-type ReallyOldUser = ReplaceType<User, "age", bigint>;
-type Robot = ReplaceType<User, "age" | "name", bigint>;
+type ReallyOldUser = Replace<User, "age", bigint>;
+type Robot = Replace<User, "age" | "name", bigint>;
 // @ts-expect-error Only properties that exist in User should be used
-type WrongUser = ReplaceType<User, "this-property-does-not-exist", bigint>;
+type WrongUser = Replace<User, "this-property-does-not-exist", bigint>;
 
 export const reallyOldUser: ReallyOldUser = {
 	age: 1_234_567_890_123_456_789n,

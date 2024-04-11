@@ -44,6 +44,5 @@
 	},
 	"sideEffects": false,
 	"size": "0.31",
-	"type": "module",
-	"types": "./dist/index.d.ts"
+	"type": "module"
 }

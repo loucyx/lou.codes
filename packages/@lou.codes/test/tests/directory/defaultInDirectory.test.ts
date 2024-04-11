@@ -1,4 +1,4 @@
-import type { Test } from "../../src/types/Test.js";
+import type { Test } from "../../src/Test.js";
 
 // eslint-disable-next-line import/no-default-export
 export default {

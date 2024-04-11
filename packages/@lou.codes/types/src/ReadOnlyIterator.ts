@@ -1,9 +1,7 @@
-import type { ReadOnly } from "@lou.codes/types";
-
 /**
  * Read-only `Iterator`.
  *
- * @category Generators
+ * @category Iterables
  * @remarks
  * This is just an read-only alternative to `Iterator` to avoid unwanted
  * mutations.
@@ -16,4 +14,4 @@ export type ReadOnlyIterator<
 	Item = unknown,
 	Return = void,
 	Next = void,
-> = ReadOnly<Iterator<Item, Return, Next>>;
+> = Readonly<Iterator<Item, Return, Next>>;

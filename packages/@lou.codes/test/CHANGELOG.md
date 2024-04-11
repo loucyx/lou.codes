@@ -1,5 +1,20 @@
 # Change log
 
+## 4.0.0
+
+### Major Changes
+
+-   🚚 move type files to the root.
+-   🚚 rename `test` to `evaluate`.
+-   🚚 rename `testImport` to `importTest`.
+-   🚚 rename `testsImport` to `importTests`.
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/types` to `v2.0.0`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v3.0.0`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.18`.
+
 ## 3.0.3
 
 ### Patch Changes

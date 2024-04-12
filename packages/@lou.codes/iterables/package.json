@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/iterables",
 	"description": "🔁 Iterable and AsyncIterable utils",
-	"version": "3.0.0",
+	"version": "3.0.1",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",

@@ -46,6 +46,7 @@ export type { MaybeEmpty } from "./MaybeEmpty.js";
 export type { Milliseconds } from "./Milliseconds.js";
 export type { Minutes } from "./Minutes.js";
 export type { Month } from "./Month.js";
+export type { MultiCharacterString } from "./MultiCharacterString.js";
 export type { MultiDigitNumberString } from "./MultiDigitNumberString.js";
 export type { NeverFallback } from "./NeverFallback.js";
 export type { NotEmpty } from "./NotEmpty.js";

@@ -1,5 +1,6 @@
 import type { LocaleIdentifier } from "./LocaleIdentifier.js";
 import type { MaybeEmpty } from "./MaybeEmpty.js";
+import type { MultiCharacterString } from "./MultiCharacterString.js";
 
 /**
  * String for locales such as "en-US".
@@ -18,7 +19,7 @@ import type { MaybeEmpty } from "./MaybeEmpty.js";
  * @template CountryCodes Union of country codes.
  */
 export type LocaleString<
-	LanguageCode extends `${string}${string}`,
-	CountryCodes extends `${string}${string}`,
+	LanguageCode extends MultiCharacterString,
+	CountryCodes extends MultiCharacterString,
 	Separator extends "-" | "_" = "-",
 > = `${LanguageCode}${MaybeEmpty<`${Separator}${CountryCodes}`>}`;

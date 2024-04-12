@@ -1,5 +1,11 @@
 # Change log
 
+## 2.0.1
+
+### Patch Changes
+
+-   📝 better docs.
+
 ## 2.0.0
 
 ### Major Changes

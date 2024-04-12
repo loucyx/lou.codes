@@ -50,7 +50,7 @@ export const formatPairedDocs = () =>
 						)
 						// Make the "defined in" nicer.
 						.replaceAll(
-							/#### Defined in\n\n\[.+\]\((?<path>.+)\)/gu,
+							/#####? Defined in\n\n\[.+\]\((?<path>.+)\)/gu,
 							"> [View source]($1)",
 						)}`
 						// FIXME: TypeDoc is messing some resolutions, this fixes it™️.

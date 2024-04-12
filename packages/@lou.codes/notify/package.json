@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/notify",
 	"description": "📣 Minimalistic Pub/Sub implementation",
-	"version": "1.0.23",
+	"version": "1.0.24",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",

@@ -53,16 +53,12 @@ Import `@lou.codes/constants` using [esm.sh][esm.sh], and use it directly:
 
 -   📝 [Documentation][documentation]: TypeDoc generated documentation.
 -   ⏳ [Changelog][changelog]: List of changes between versions.
--   ✅ [Tests Coverage][coverage]: Coveralls page with tests coverage.
 
 <!-- Reference -->
 
 [changelog]:
 	https://github.com/loucyx/lou.codes/blob/main/packages/@loucyx/@lou.codes/constants/CHANGELOG.md
-[coverage-badge]:
-	https://img.shields.io/coveralls/github/loucyx/lou.codes.svg?label=Test+Coverage&labelColor=666&color=0a8
-[coverage]: https://coveralls.io/github/loucyx/lou.codes
-[documentation]: https://lou.codes/libraries/lou.codes_constants/
+[documentation]: https://lou.codes/libraries/lou_codes_constants/
 [esm.sh]: https://esm.sh
 [license-badge]:
 	https://img.shields.io/npm/l/@lou.codes/constants.svg?label=License&labelColor=666&color=0a8

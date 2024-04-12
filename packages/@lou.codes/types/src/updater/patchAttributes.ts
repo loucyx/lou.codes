@@ -1,6 +1,6 @@
 import { values } from "@lou.codes/constants/Object.js";
 import { EMPTY_OBJECT } from "@lou.codes/constants/empty.js";
-import type { IAttributeData } from "vscode-html-languageservice/lib/esm/htmlLanguageTypes.js";
+import type { IAttributeData } from "vscode-html-languageservice";
 import type { ReadOnlyArray } from "../ReadOnlyArray.js";
 import type { ReadOnlyRecord } from "../ReadOnlyRecord.js";
 import { getDescription } from "./getDescription.js";
@@ -23,12 +23,8 @@ export const patchAttributes = (attributes: ReadOnlyArray<IAttributeData>) =>
 						{
 							...patchedAttributes[attribute.name],
 							description: `${getDescription(
-								// FIXME: This keeps going back and forth between broken and working -_-
-								// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 								patchedAttributes[attribute.name]?.description,
 							)}\n\n---\n\n${getDescription(
-								// FIXME: This keeps going back and forth between broken and working -_-
-								// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 								attribute.description,
 							)}`,
 						}

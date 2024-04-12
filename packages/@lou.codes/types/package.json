@@ -15,7 +15,8 @@
 		"@lou.codes/constants": "workspace:*"
 	},
 	"devDependencies": {
-		"vscode-html-languageservice": "^5.2.0"
+		"vscode-html-languageservice": "^5.2.0",
+		"vscode-languageserver-types": "^3.17.5"
 	},
 	"engines": {
 		"node": ">=21",

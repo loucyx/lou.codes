@@ -1,5 +1,5 @@
 import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
-import type { ITagData } from "vscode-html-languageservice/lib/esm/htmlLanguageTypes.js";
+import type { ITagData } from "vscode-html-languageservice";
 import { getDescription } from "./getDescription.js";
 import { normalizeJSDocMarkdown } from "./normalizeJSDocMarkdown.js";
 
@@ -10,10 +10,9 @@ import { normalizeJSDocMarkdown } from "./normalizeJSDocMarkdown.js";
  * @param options Description and references to be formatted.
  * @returns Formatted JSDoc.
  */
-export const generateJSDoc = (options: {
-	readonly description?: string | { readonly value: string };
-	readonly references?: Readonly<ITagData["references"]>;
-}) =>
+export const generateJSDoc = (
+	options: Readonly<Pick<ITagData, "description" | "references">>,
+) =>
 	options.description === undefined ?
 		"\n"
 	:	`

@@ -1,5 +1,5 @@
 import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
-import type { IAttributeData } from "vscode-html-languageservice/lib/esm/htmlLanguageTypes.js";
+import type { IAttributeData } from "vscode-html-languageservice";
 import type { ReadOnlyArray } from "../ReadOnlyArray.js";
 import { addIndent } from "./addIndent.js";
 import { generateJSDoc } from "./generateJSDoc.js";

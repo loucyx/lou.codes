@@ -2,7 +2,6 @@
  * Prettier configuration.
  * @see [Prettier options](https://prettier.io/docs/en/options.html)
  */
-// eslint-disable-next-line import/no-default-export
 export default /** @type {const} @satisfies {import("prettier").Options} */ ({
 	/**
 	 * Avoid parentheses around a sole arrow function parameter.

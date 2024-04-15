@@ -7,7 +7,6 @@ import rehypeExternalLinks from "rehype-external-links";
 import rehypePluginImageNativeLazyLoading from "rehype-plugin-image-native-lazy-loading";
 import vitePluginLightningCSS from "vite-plugin-lightningcss";
 
-// eslint-disable-next-line import/no-default-export
 export default defineConfig({
 	integrations: [
 		starlight({

@@ -38,13 +38,6 @@ export const importRules =
 			"import/no-cycle": ERROR,
 
 			/**
-			 * Named exports FTW!
-			 *
-			 * @see [import/no-default-export](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-default-export.md)
-			 */
-			"import/no-default-export": ERROR,
-
-			/**
 			 * Forbid import of modules that aren't declared in `package.json`.
 			 *
 			 * @see [import/no-extraneous-dependencies](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md)

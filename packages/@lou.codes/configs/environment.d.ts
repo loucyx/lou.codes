@@ -8,7 +8,6 @@ declare module "@eslint/js" {
 		configs: { recommended: Linter.FlatConfig };
 	};
 
-	// eslint-disable-next-line import/no-default-export
 	export default plugin;
 }
 declare module "@typescript-eslint/eslint-plugin" {
@@ -18,14 +17,12 @@ declare module "@typescript-eslint/eslint-plugin" {
 		configs: { recommended: Linter.FlatConfig };
 	};
 
-	// eslint-disable-next-line import/no-default-export
 	export default plugin;
 }
 declare module "@typescript-eslint/parser" {
 	import type { Linter } from "eslint";
 	const parserModule: Linter.ParserModule;
 
-	// eslint-disable-next-line import/no-default-export
 	export default parserModule;
 }
 // FIXME: eslint-plugin-functional provides its own types, but they are broken af
@@ -36,7 +33,6 @@ declare module "eslint-plugin-functional/flat" {
 		configs: { recommended: Linter.FlatConfig };
 	};
 
-	// eslint-disable-next-line import/no-default-export
 	export default plugin;
 }
 declare module "eslint-plugin-import" {
@@ -46,7 +42,6 @@ declare module "eslint-plugin-import" {
 		configs: { recommended: Linter.FlatConfig };
 	};
 
-	// eslint-disable-next-line import/no-default-export
 	export default plugin;
 }
 declare module "eslint-plugin-prefer-arrow-functions" {
@@ -56,7 +51,6 @@ declare module "eslint-plugin-prefer-arrow-functions" {
 		configs: { recommended: Linter.FlatConfig };
 	};
 
-	// eslint-disable-next-line import/no-default-export
 	export default plugin;
 }
 declare module "eslint-plugin-prettier" {
@@ -66,7 +60,6 @@ declare module "eslint-plugin-prettier" {
 		configs: { recommended: Linter.FlatConfig };
 	};
 
-	// eslint-disable-next-line import/no-default-export
 	export default plugin;
 }
 declare module "eslint-plugin-react-hooks" {
@@ -76,7 +69,6 @@ declare module "eslint-plugin-react-hooks" {
 		configs: { recommended: Linter.FlatConfig };
 	};
 
-	// eslint-disable-next-line import/no-default-export
 	export default plugin;
 }
 declare module "eslint-plugin-react" {
@@ -86,7 +78,6 @@ declare module "eslint-plugin-react" {
 		configs: { recommended: Linter.FlatConfig };
 	};
 
-	// eslint-disable-next-line import/no-default-export
 	export default plugin;
 }
 declare module "eslint-plugin-unicorn" {
@@ -96,7 +87,6 @@ declare module "eslint-plugin-unicorn" {
 		configs: { recommended: Linter.FlatConfig };
 	};
 
-	// eslint-disable-next-line import/no-default-export
 	export default plugin;
 }
 declare module "stylelint-order" {

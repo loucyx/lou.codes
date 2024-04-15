@@ -2,7 +2,6 @@ import starlightPlugin from "@astrojs/starlight-tailwind";
 import colors from "tailwindcss/colors.js";
 
 /** @type {import('tailwindcss').Config} */
-// eslint-disable-next-line import/no-default-export
 export default {
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 	plugins: [starlightPlugin()],

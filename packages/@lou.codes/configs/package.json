@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/configs",
 	"description": "⚙️ Project configurations",
-	"version": "5.0.8",
+	"version": "5.0.9",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -42,7 +42,7 @@
 	},
 	"engines": {
 		"node": ">=21",
-		"pnpm": ">=8"
+		"pnpm": ">=9"
 	},
 	"exports": {
 		"./changelog.cjs": "./changelog.cjs",

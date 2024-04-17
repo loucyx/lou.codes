@@ -1,5 +1,14 @@
 # Change log
 
+## 2.0.4
+
+### Patch Changes
+
+-   ⬆️ update `pnpm` to v9.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.0.2`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.20`.
+-   ⬆️ upgrade `@lou.codes/types` to `v2.0.3`.
+
 ## 2.0.3
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # Change log
 
+## 4.0.5
+
+### Patch Changes
+
+-   ⬆️ update `pnpm` to v9.
+-   ⬆️ upgrade `@lou.codes/types` to `v2.0.3`.
+-   ⬆️ upgrade `preact-pair` to `v1.1.4`.
+
 ## 4.0.4
 
 ### Patch Changes

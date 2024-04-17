@@ -1,5 +1,12 @@
 # Change log
 
+## 1.0.20
+
+### Patch Changes
+
+-   ⬆️ update `pnpm` to v9.
+-   ⬆️ upgrade `@lou.codes/types` to `v2.0.3`.
+
 ## 1.0.19
 
 ### Patch Changes

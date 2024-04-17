@@ -1,5 +1,11 @@
 # Change log
 
+## 2.0.2
+
+### Patch Changes
+
+-   ⬆️ update `pnpm` to v9.
+
 ## 2.0.1
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # Change log
 
+## 2.0.3
+
+### Patch Changes
+
+-   ⬆️ update `pnpm` to v9.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.0.2`.
+
 ## 2.0.2
 
 ### Patch Changes

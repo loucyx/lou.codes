@@ -1,5 +1,16 @@
 # Change log
 
+## 1.0.23
+
+### Patch Changes
+
+-   ⬆️ update `pnpm` to v9.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v2.0.4`.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.0.2`.
+-   ⬆️ upgrade `@lou.codes/iterables` to `v3.0.3`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.20`.
+-   ⬆️ upgrade `@lou.codes/types` to `v2.0.3`.
+
 ## 1.0.22
 
 ### Patch Changes

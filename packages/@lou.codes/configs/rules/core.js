@@ -591,6 +591,35 @@ export const coreRules =
 			"no-proto": ERROR,
 
 			/**
+			 * Disallow specified modules when loaded by `import`.
+			 *
+			 * @see [no-restricted-imports](https://eslint.org/docs/latest/rules/no-restricted-imports)
+			 */
+			"no-restricted-imports": [
+				ERROR,
+				{
+					patterns: [
+						{
+							group: [
+								"axios",
+								"jquery",
+								"lodash",
+								"lodash-es",
+								"lodash.*",
+								"lodash/*",
+								"underscore",
+							],
+							message: "Just use vanilla JavaScript.",
+						},
+						{
+							group: ["jquery-ui", "moment"],
+							message: "Use a modern dependency instead.",
+						},
+					],
+				},
+			],
+
+			/**
 			 * Disallows unnecessary return await.
 			 *
 			 * @example

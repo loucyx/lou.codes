@@ -1,5 +1,14 @@
 # Change log
 
+## 2.1.4
+
+### Patch Changes
+
+-   ⬆️ update `pnpm` to v9.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v2.0.4`.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.0.2`.
+-   ⬆️ upgrade `@lou.codes/types` to `v2.0.3`.
+
 ## 2.1.3
 
 ### Patch Changes

@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/ansi",
 	"description": "📟 Functional CLI ANSI formatter",
-	"version": "1.0.20",
+	"version": "1.0.21",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -17,7 +17,7 @@
 	},
 	"engines": {
 		"node": ">=21",
-		"pnpm": ">=8"
+		"pnpm": ">=9"
 	},
 	"exports": {
 		".": "./dist/index.js",

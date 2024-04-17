@@ -1,5 +1,15 @@
 # Change log
 
+## 4.0.4
+
+### Patch Changes
+
+-   ⬆️ update `pnpm` to v9.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.0.2`.
+-   ⬆️ upgrade `@lou.codes/types` to `v2.0.3`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.21`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v3.0.3`.
+
 ## 4.0.3
 
 ### Patch Changes

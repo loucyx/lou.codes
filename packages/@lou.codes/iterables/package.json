@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/iterables",
 	"description": "🔁 Iterable and AsyncIterable utils",
-	"version": "3.0.2",
+	"version": "3.0.3",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -19,7 +19,7 @@
 	},
 	"engines": {
 		"node": ">=21",
-		"pnpm": ">=8"
+		"pnpm": ">=9"
 	},
 	"exports": {
 		".": "./dist/index.js",

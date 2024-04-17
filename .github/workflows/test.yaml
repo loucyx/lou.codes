@@ -10,30 +10,27 @@ jobs:
         name: Build
         runs-on: ubuntu-latest
         steps:
-            - name: Use Checkout 4
+            - name: Checkout
               uses: actions/checkout@v4
 
-            - name: Use Node.js 21
-              uses: actions/setup-node@v3
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
               with:
                   node-version: 21
 
-            - name: Use pnpm 8
-              uses: pnpm/action-setup@v2
+            - name: Setup pnpm
+              uses: pnpm/action-setup@v3
               with:
-                  version: 8
+                  version: 9
                   run_install: true
 
             - name: Compile
               run: pnpm compile
 
-            - name: Install again (to fix binary links) # Horrible, but tbh IDK how to make this better for now
-              run: pnpm install
-
-            - name: Run tests
+            - name: Test
               run: pnpm test
 
-            - name: Use Coveralls
-              uses: coverallsapp/github-action@master
+            - name: Coverage
+              uses: coverallsapp/github-action@v2
               with:
                   github-token: ${{ secrets.GITHUB_TOKEN }}

@@ -10,31 +10,28 @@ jobs:
         name: Build
         runs-on: ubuntu-latest
         steps:
-            - name: Use Checkout 4
+            - name: Checkout
               uses: actions/checkout@v4
 
-            - name: Use Node.js 21
-              uses: actions/setup-node@v3
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
               with:
                   node-version: 21
 
-            - name: Use pnpm 8
-              uses: pnpm/action-setup@v2
+            - name: Setup pnpm
+              uses: pnpm/action-setup@v3
               with:
-                  version: 8
+                  version: 9
                   run_install: true
 
-            - name: Compile code
+            - name: Compile
               run: pnpm compile
 
-            - name: Install documentation dependencies
-              run: cd ./docs && pnpm install
-
-            - name: Generate Documentation
+            - name: Document
               run: pnpm document
 
-            - name: Upload Pages Artifact
-              uses: actions/upload-pages-artifact@v1
+            - name: Upload pages artifact
+              uses: actions/upload-pages-artifact@v3
               with:
                   path: ./docs/dist
                   name: github-pages
@@ -52,4 +49,4 @@ jobs:
         steps:
             - name: Deploy to GitHub Pages
               id: deployment
-              uses: actions/deploy-pages@v1
+              uses: actions/deploy-pages@v4

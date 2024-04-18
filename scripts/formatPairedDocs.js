@@ -15,7 +15,6 @@ export const formatPairedDocs = () =>
 					typeDocFile.path.match(
 						/\/(?<packageName>[^/\\]+)\.(?<moduleName>[^/\\]+)\.md/u,
 					) ?? {};
-				const isModule = moduleName !== "";
 
 				return /** @type {const} */ ([
 					typeDocFile.path
@@ -27,12 +26,10 @@ export const formatPairedDocs = () =>
 						.toLocaleLowerCase(),
 					`${frontMatter({
 						description: packageFile.description,
-						title:
-							isModule ?
-								`${packageFile.name} (${moduleName})`
-							:	packageFile.name,
+						title: packageFile.name,
+						isModule: moduleTypeDocFiles.length > 0,
 					})}\n\n${
-						isModule ? "" : readmeFile.content
+						readmeFile.content
 					}\n\n<!-- Start of auto-generated code by TypeDoc -->\n\n${[
 						typeDocFile.content,
 						...moduleTypeDocFiles.map(moduleTypeDocFile =>

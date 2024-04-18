@@ -21,4 +21,4 @@ export const isType =
 	<Type extends TypeOfValue>(type: Type) =>
 	(input: unknown): input is TypeOfDictionary[Type] =>
 		// eslint-disable-next-line unicorn/no-null
-		(input === null ? "null" : typeof input) === type;
+		(input === null ? `${input}` : typeof input) === type;

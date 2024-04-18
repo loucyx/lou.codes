@@ -1,5 +1,12 @@
 # Change log
 
+## 3.0.4
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/predicates` to `v2.0.5`.
+-   ⬆️ upgrade `@lou.codes/utils` to `v2.1.5`.
+
 ## 3.0.3
 
 ### Patch Changes

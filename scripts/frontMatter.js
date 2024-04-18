@@ -5,10 +5,11 @@ import { packageNameToTitle } from "./packageNameToTitle.js";
 /**
  * @param {{
  * 	readonly description: string;
+ * 	readonly isModule: boolean;
  * 	readonly title: string;
  * }} options
  */
-export const frontMatter = ({ description, title }) => {
+export const frontMatter = ({ description, isModule = false, title }) => {
 	const camelCaseTitle = title
 		.replace("@lou.codes/", "")
 		.replaceAll(/(?<hyphenLetter>-.)/gu, hyphenLetter =>
@@ -46,6 +47,7 @@ ${stringify(
 				],
 			}
 		)),
+		tableOfContents: { maxHeadingLevel: isModule ? 4 : 3 },
 		title: `${packageNameToTitle(title)} Reference`,
 	},
 	{ indent: 4 },

@@ -2,6 +2,7 @@ import type { HTMLElementTagGlobalAttributes } from "../src/HTMLElementTagGlobal
 
 export const validProperties: HTMLElementTagGlobalAttributes = {
 	"aria-label": "A description for accessibility",
+	// @ts-expect-error Custom properties no longer allowed
 	"custom-property": "A custom property",
 };
 

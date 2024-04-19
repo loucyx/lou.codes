@@ -1,5 +1,12 @@
 # Change log
 
+## 3.0.0
+
+### Major Changes
+
+-   🏗️ update `HTMLElementTagGlobalAttributes` so it doesn't allow custom
+    attributes (add them when needed).
+
 ## 2.0.3
 
 ### Patch Changes

@@ -32,14 +32,10 @@ import type { ReadOnlyRecord } from "./ReadOnlyRecord.js";
  * \`\`\`
  * @see {@link ReadOnlyRecord}
  */
-export type HTMLElementTagGlobalAttributes = ReadOnlyRecord<string, string> & {${generateAttributesType(
-		{
-			attributes: globalAttributes as NonNullable<
-				typeof globalAttributes
-			>,
-			indent: 1,
-		},
-	)}};
+export type HTMLElementTagGlobalAttributes = {${generateAttributesType({
+		attributes: globalAttributes as NonNullable<typeof globalAttributes>,
+		indent: 1,
+	})}};
 `,
 )
 	// eslint-disable-next-line no-console

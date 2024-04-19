@@ -15,7 +15,7 @@ import type { ReadOnlyRecord } from "./ReadOnlyRecord.js";
  * ```
  * @see {@link ReadOnlyRecord}
  */
-export type HTMLElementTagGlobalAttributes = ReadOnlyRecord<string, string> & {
+export type HTMLElementTagGlobalAttributes = {
 	/**
 	 * Provides a hint for generating a keyboard shortcut for the current element. This attribute consists of a space-separated list of characters. The browser should use the first one that exists on the computer keyboard layout.
 	 *

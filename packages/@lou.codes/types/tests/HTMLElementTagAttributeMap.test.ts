@@ -9,6 +9,7 @@ export const validCustomElement: keyof HTMLElementTagAttributeMap =
 export const validTagProperties: Partial<HTMLElementTagAttributeMap> = {
 	strong: {
 		"aria-label": "A description for accessibility",
+		// @ts-expect-error Custom properties are no longer allowed
 		"custom-property": "A custom property",
 	},
 };

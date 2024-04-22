@@ -3,6 +3,8 @@ title: Types Background
 description: Intro about Types, reasoning and usage.
 next: true
 prev: true
+sidebar:
+    label: 🏷️ Types Background
 ---
 
 # Types Background

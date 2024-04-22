@@ -3,6 +3,8 @@ title: Constants Background
 description: Intro about Constants, reasoning and usage.
 next: true
 prev: true
+sidebar:
+    label: 🔢 Constants Background
 ---
 
 # Constants Background

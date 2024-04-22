@@ -3,6 +3,8 @@ title: ANSI Background
 description: Intro about ANSI, reasoning and usage.
 next: true
 prev: true
+sidebar:
+    label: 📟 ANSI Background
 ---
 
 # ANSI Background

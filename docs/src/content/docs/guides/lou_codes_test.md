@@ -3,6 +3,8 @@ title: Test Background
 description: Intro about Test, reasoning and usage.
 next: true
 prev: true
+sidebar:
+    label: ✅ Test Background
 ---
 
 # Test Background

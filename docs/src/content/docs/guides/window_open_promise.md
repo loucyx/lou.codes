@@ -2,6 +2,8 @@
 title: Window Open Promise Background
 description: Intro about Window Open Promise, reasoning and usage.
 prev: true
+sidebar:
+    label: 🪟 Window Open Promise Background
 ---
 
 # Window Open Promise Background

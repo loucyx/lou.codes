@@ -3,6 +3,8 @@ title: Parsers Background
 description: Intro about Parsers, reasoning and usage.
 next: true
 prev: true
+sidebar:
+    label: 👁️‍🗨️ Parsers Background
 ---
 
 # Parsers Background

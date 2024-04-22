@@ -42,19 +42,7 @@ html {
 }
 
 #logo {
-	@apply max-h-24 mb-6 mx-auto [&+p]:text-center [&+p]:[view-transition-name:badges] [&+p_img]:inline-block [&+p_img]:mt-0 [view-transition-name:logo];
-}
-
-starlight-toc {
-	@apply [view-transition-name:starlight-toc];
-}
-
-#starlight__sidebar {
-	@apply [view-transition-name:starlight-sidebar];
-}
-
-header {
-	@apply [view-transition-name:header];
+	@apply max-h-24 mb-6 mx-auto [&+p]:text-center [&+p_img]:inline-block [&+p_img]:mt-0;
 }
 
 main .content-panel:first-child:not(:only-child) {
@@ -65,26 +53,9 @@ main .content-panel:first-child:not(:only-child) + .content-panel {
 	@apply border-t-0;
 }
 
-/* Based on https://lou.cx/dark-plus-tailwind */
-:root {
-	--astro-code-color-background: theme("colors.gray.950");
-	--astro-code-token-function: theme("colors.amber.100");
-	--astro-code-color-text: theme("colors.sky.400");
-	--astro-code-token-string: theme("colors.red.300");
-	--astro-code-token-comment: theme("colors.green.700");
-	--astro-code-token-keyword: theme("colors.pink.400");
-	--astro-code-token-string-expression: theme("colors.red.300");
-	--astro-code-token-constant: theme("colors.sky.400");
-	--astro-code-token-punctuation: theme("colors.neutral.300");
-}
-
-.content .astro-code {
-	@apply rounded-xl p-8 [tab-size:4];
-}
-
 .hero img,
 .site-title img {
-	@apply rounded-full; /* bg-accent-600 dark:bg-accent-200; */
+	@apply rounded-full;
 }
 
 table {

@@ -3,6 +3,8 @@ title: Iterables Background
 description: Intro about Iterables, reasoning and usage.
 next: true
 prev: true
+sidebar:
+    label: 🔁 Iterables Background
 ---
 
 # Iterables Background

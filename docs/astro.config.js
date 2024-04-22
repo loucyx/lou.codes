@@ -22,10 +22,7 @@ export default defineConfig({
 			},
 			head: [
 				{
-					attrs: {
-						content: "same-origin",
-						name: "view-transition",
-					},
+					attrs: { content: "same-origin" },
 					tag: "meta",
 				},
 			],
@@ -38,6 +35,7 @@ export default defineConfig({
 			sidebar: [
 				{
 					autogenerate: { directory: "guides" },
+					collapsed: true,
 					label: "Guides",
 				},
 				{

@@ -26,8 +26,8 @@ export const formatPairedDocs = () =>
 						.toLocaleLowerCase(),
 					`${frontMatter({
 						description: packageFile.description,
-						title: packageFile.name,
 						isModule: moduleTypeDocFiles.length > 0,
+						title: packageFile.name,
 					})}\n\n${
 						readmeFile.content
 					}\n\n<!-- Start of auto-generated code by TypeDoc -->\n\n${[

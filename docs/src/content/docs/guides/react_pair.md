@@ -3,6 +3,8 @@ title: React Pair Background
 description: Intro about react Pair, reasoning and usage.
 next: true
 prev: true
+sidebar:
+    label: 🖇️ React Pair Background
 ---
 
 # React Pair Background

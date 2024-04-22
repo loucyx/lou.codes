@@ -47,6 +47,9 @@ ${stringify(
 				],
 			}
 		)),
+		sidebar: {
+			label: `${description.split(" ")[0]} ${packageNameToTitle(title)}`,
+		},
 		tableOfContents: { maxHeadingLevel: isModule ? 4 : 3 },
 		title: `${packageNameToTitle(title)} Reference`,
 	},

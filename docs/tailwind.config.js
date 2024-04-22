@@ -1,5 +1,4 @@
 import starlightPlugin from "@astrojs/starlight-tailwind";
-import colors from "tailwindcss/colors.js";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -9,19 +8,31 @@ export default {
 		extend: {
 			colors: {
 				accent: {
-					50: "oklch(98.12% 0.02 171.81)",
-					100: "oklch(95.32% 0.05 169.31)",
-					200: "oklch(91.24% 0.09 170.04)",
-					300: "oklch(85.71% 0.13 171.67)",
-					400: "oklch(78.96% 0.15 170.54)",
-					500: "oklch(71.66% 0.14 170.56)",
-					600: "oklch(65.73% 0.13 171.77)",
-					700: "oklch(52.36% 0.10 175.33)",
-					800: "oklch(44.35% 0.08 175.23)",
-					900: "oklch(38.66% 0.07 177.91)",
-					950: "oklch(26.73% 0.05 183.34)",
+					50: "#fff5f9",
+					100: "#ffe5f1",
+					200: "#ffc7df",
+					300: "#ffa3cb",
+					400: "#ff6bab",
+					500: "#ee0055",
+					600: "#d6005d",
+					700: "#b80050",
+					800: "#a30047",
+					900: "#750033",
+					950: "#520023",
 				},
-				gray: colors.gray,
+				gray: {
+					50: "#ECF2F9",
+					100: "#D5E3F1",
+					200: "#ABC7E3",
+					300: "#81ABD5",
+					400: "#5B91C8",
+					500: "#3B75B0",
+					600: "#2D5986",
+					700: "#1F3D5C",
+					800: "#112233",
+					900: "#09121B",
+					950: "#04080B",
+				},
 			},
 			fontFamily: {
 				mono: ["MonaspaceArgon, monospace"],

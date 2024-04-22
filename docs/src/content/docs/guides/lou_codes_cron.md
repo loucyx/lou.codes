@@ -3,6 +3,8 @@ title: Cron Background
 description: Intro about Cron, reasoning and usage.
 next: true
 prev: true
+sidebar:
+    label: ⏲️ Cron Background
 ---
 
 # Cron Background

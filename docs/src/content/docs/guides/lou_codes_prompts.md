@@ -3,6 +3,8 @@ title: Prompts Background
 description: Intro about Prompts, reasoning and usage.
 next: true
 prev: true
+sidebar:
+    label: ⁉️ Prompts Background
 ---
 
 # Prompts Background

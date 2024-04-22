@@ -3,6 +3,8 @@ title: Configs Background
 description: Intro about Configs, reasoning and usage.
 next: true
 prev: true
+sidebar:
+    label: ⚙️ Configs Background
 ---
 
 # Configs Background

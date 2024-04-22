@@ -3,6 +3,8 @@ title: Preact Pair Background
 description: Intro about Preact Pair, reasoning and usage.
 next: true
 prev: true
+sidebar:
+    label: 🖇️ Preact Pair Background
 ---
 
 # Preact Pair Background

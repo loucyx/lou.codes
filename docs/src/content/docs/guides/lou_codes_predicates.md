@@ -3,6 +3,8 @@ title: Predicates Background
 description: Intro about Predicates, reasoning and usage.
 next: true
 prev: true
+sidebar:
+    label: 🧐 Predicates Background
 ---
 
 # Predicates Background

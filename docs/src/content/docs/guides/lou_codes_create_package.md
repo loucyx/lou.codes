@@ -3,6 +3,8 @@ title: Create Package Background
 description: Intro about Create Package, reasoning and usage.
 next: true
 prev: true
+sidebar:
+    label: 🚧 Create Package Background
 ---
 
 # Create Package Background

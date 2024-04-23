@@ -3,13 +3,13 @@
 ![License][license-badge] ![NPM Version][npm-version-badge]
 ![Open Issues][open-issues-badge]
 
-🚧 [Lou's][lou.codes] monorepo package scaffolder script.
+🚧 [Lou's Code][lou.codes] monorepo package scaffolder script.
 
 ## What's included?
 
 -   An example function with example tests.
--   Shared [Lou's][lou.codes] [configurations][lou.codes-configs].
--   A lot of other assumptions made by [Lou][lou.codes].
+-   Shared [Lou's Code][lou.codes] [configurations][lou.codes-configs].
+-   A lot of other assumptions made for [Lou's Code][lou.codes].
 
 ## Usage
 

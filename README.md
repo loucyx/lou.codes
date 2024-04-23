@@ -1,6 +1,6 @@
 <img id="logo" alt="@lou.codes/ansi" src="https://lou.codes/logo.svg" height="72" />
 
-📚 [Lou's][lou.codes] libraries monorepo
+📚 [Lou's Code][lou.codes] libraries monorepo
 
 ## About Lou Cyx
 

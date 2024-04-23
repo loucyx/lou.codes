@@ -22,8 +22,9 @@ old, or to "class based". So I decided to make my own.
 ## How
 
 I built this library using [TypeScript][typescript], with configurations from my
-shared [configs][configs]. I made it ESM only as soon as Node started supporting
-ESM modules, and I made it tree-shakeable by using named exports.
+shared [configs][configs]. I made it ESM only because CJS no longer made sense
+when I created this (Node started supporting ESM modules a long time ago), and I
+made it tree-shakeable by using named exports.
 
 It took around 2 hours to be done, thanks to it relying on a lot of my other
 packages. I created with with [create-package][create-package], and I used ,

@@ -4,7 +4,7 @@
 ![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]
 ![Size][size-badge]
 
-⚒️ [Lou's][lou.codes] [TypeScript][typescript] [curried][currying]
+⚒️ [Lou's Code][lou.codes] [TypeScript][typescript] [curried][currying]
 [functional][functional-programming] utils.
 
 ## Usage

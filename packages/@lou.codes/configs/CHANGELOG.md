@@ -5,6 +5,7 @@
 ### Patch Changes
 
 -   🔧 change `engines.node` to `>=22`.
+-   ⬆️ dependency upgrade.
 
 ## 5.0.12
 

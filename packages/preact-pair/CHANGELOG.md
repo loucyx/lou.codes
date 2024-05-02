@@ -5,6 +5,7 @@
 ### Patch Changes
 
 -   🔧 change `engines.node` to `>=22`.
+-   ⬆️ dependency upgrade.
 -   ⬆️ upgrade `@lou.codes/types` to `v3.0.1`.
 
 ## 1.1.5

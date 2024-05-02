@@ -16,14 +16,13 @@ jobs:
             - name: Setup Node.js
               uses: actions/setup-node@v4
               with:
-                  node-version: 22
+                  node-version: 21
 
             - name: Setup pnpm
               uses: pnpm/action-setup@v3
               with:
                   version: 9
                   run_install: true
-                  standalone: true # TODO: Remove this once pnpm stops exploding with Node 22
 
             - name: Compile
               run: pnpm compile

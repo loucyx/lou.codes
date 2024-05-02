@@ -1,5 +1,11 @@
 # Change log
 
+## 1.0.2
+
+### Patch Changes
+
+-   🐛 add missing export for createPrecise.
+
 ## 1.0.1
 
 ### Patch Changes

@@ -18,12 +18,11 @@ import { preciseToNumber } from "./preciseToNumber.js";
  * @see {@link preciseMultiply}
  * @see {@link preciseToNumber}
  *
- * @param divisor Divisor {@link Precise} to use in the division.
- * @returns Curried function with `divisor` in context.
+ * @param divisorBase Divisor base to use in the division.
+ * @param divisorExponent Divisor exponent to use in the division.
+ * @returns Curried function with `divisorBase` and `divisorExponent` in context.
  */
-export const preciseDivide = (
-	...[divisorBase, divisorExponent = 0n]: Precise
-) =>
+export const preciseDivide = (divisorBase: bigint, divisorExponent = 0n) =>
 	(divisorBase === 0n ?
 		() => undefined
 	:	preciseMultiply(
@@ -31,4 +30,4 @@ export const preciseDivide = (
 				preciseToNumber(1n, -divisorExponent) /
 					preciseToNumber(divisorBase, 0n),
 			),
-		)) as (...[dividendBase, dividendExponent]: Precise) => Precise;
+		)) as (dividendBase: bigint, dividendExponent?: bigint) => Precise;

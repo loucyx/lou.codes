@@ -14,12 +14,13 @@ import { createPrecise } from "./createPrecise.js";
  * @see {@link createPrecise}
  * @see {@link Precise}
  *
- * @param multiplier Multiplier {@link Precise} to use in the multiplication.
- * @returns Curried function with `multiplier` in context.
+ * @param multiplierBase Multiplier base to use in the multiplication.
+ * @param multiplierExponent Multiplier exponent to use in the multiplication.
+ * @returns Curried function with `multiplierBase` and `multiplierExponent` in context.
  */
 export const preciseMultiply =
-	(...[multiplierBase, multiplierExponent = 0n]: Precise) =>
-	(...[multiplicandBase, multiplicandExponent = 0n]: Precise) =>
+	(multiplierBase: bigint, multiplierExponent = 0n) =>
+	(multiplicandBase: bigint, multiplicandExponent = 0n) =>
 		createPrecise(
 			multiplicandBase * multiplierBase,
 			multiplicandExponent + multiplierExponent,

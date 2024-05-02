@@ -18,12 +18,13 @@ import { preciseToNumber } from "./preciseToNumber.js";
  * @see {@link Precise}
  * @see {@link preciseToNumber}
  *
- * @param addendRight Addend {@link Precise} to use in the right side of the addition.
- * @returns Curried function with `addendRight` in context.
+ * @param addendRightBase Addend base to use in the right side of the addition.
+ * @param addendRightExponent Addend exponent to use in the right side of the addition.
+ * @returns Curried function with `addendRightBase` and `addendRightExponent` in context.
  */
 export const preciseAdd =
-	(...[addendRightBase, addendRightExponent = 0n]: Precise) =>
-	(...[addendLeftBase, addendLeftExponent = 0n]: Precise) => {
+	(addendRightBase: bigint, addendRightExponent = 0n) =>
+	(addendLeftBase: bigint, addendLeftExponent = 0n) => {
 		const commonExponent = bigIntMin(
 			addendLeftExponent,
 			addendRightExponent,

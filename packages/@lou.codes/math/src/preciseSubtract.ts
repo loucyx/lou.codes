@@ -14,12 +14,15 @@ import { preciseAdd } from "./preciseAdd.js";
  * @see {@link Precise}
  * @see {@link preciseAdd}
  *
- * @param subtrahend Subtrahend {@link Precise} to use in the subtraction.
- * @returns Curried function with `subtrahend` in context.
+ * @param subtrahendBase Subtrahend base to use in the subtraction.
+ * @param subtrahendExponent Subtrahend exponent to use in the subtraction.
+ * @returns Curried function with `subtrahendBase` and `subtrahendExponent` in context.
  */
 export const preciseSubtract = (
-	...[subtrahendBase, subtrahendExponent = 0n]: Precise
+	subtrahendBase: bigint,
+	subtrahendExponent = 0n,
 ) =>
 	preciseAdd(-subtrahendBase, subtrahendExponent) as (
-		...[minuendBase, minuendExponent]: Precise
+		minuendBase: bigint,
+		minuendExponent?: bigint,
 	) => Precise;

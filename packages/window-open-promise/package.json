@@ -1,7 +1,7 @@
 {
 	"name": "window-open-promise",
 	"description": "🪟 Promised Window.open();",
-	"version": "1.1.23",
+	"version": "1.1.24",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -19,7 +19,7 @@
 		"@lou.codes/utils": "workspace:*"
 	},
 	"engines": {
-		"node": ">=21",
+		"node": ">=22",
 		"pnpm": ">=9"
 	},
 	"exports": {

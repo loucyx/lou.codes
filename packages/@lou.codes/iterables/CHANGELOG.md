@@ -1,5 +1,15 @@
 # Change log
 
+## 3.0.6
+
+### Patch Changes
+
+-   🔧 change `engines.node` to `>=22`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v2.0.7`.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.0.3`.
+-   ⬆️ upgrade `@lou.codes/types` to `v3.0.1`.
+-   ⬆️ upgrade `@lou.codes/utils` to `v2.1.7`.
+
 ## 3.0.5
 
 ### Patch Changes

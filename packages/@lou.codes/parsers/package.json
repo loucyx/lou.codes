@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/parsers",
 	"description": "👁️‍🗨️ Parsers without nonsense",
-	"version": "1.0.21",
+	"version": "1.0.22",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -15,7 +15,7 @@
 		"@lou.codes/types": "workspace:*"
 	},
 	"engines": {
-		"node": ">=21",
+		"node": ">=22",
 		"pnpm": ">=9"
 	},
 	"exports": {

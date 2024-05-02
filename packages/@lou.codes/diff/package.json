@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/diff",
 	"description": "↔️ Deep diffing utility.",
-	"version": "3.0.4",
+	"version": "3.0.5",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -16,7 +16,7 @@
 		"@lou.codes/types": "workspace:*"
 	},
 	"engines": {
-		"node": ">=21",
+		"node": ">=22",
 		"pnpm": ">=9"
 	},
 	"exports": {

@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/create-package",
 	"description": "🚧 lou.codes package scaffolder script",
-	"version": "1.0.27",
+	"version": "1.0.28",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -19,7 +19,7 @@
 		"@lou.codes/types": "workspace:*"
 	},
 	"engines": {
-		"node": ">=21",
+		"node": ">=22",
 		"pnpm": ">=9"
 	},
 	"files": [

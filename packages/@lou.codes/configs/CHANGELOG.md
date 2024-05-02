@@ -1,5 +1,11 @@
 # Change log
 
+## 5.0.13
+
+### Patch Changes
+
+-   🔧 change `engines.node` to `>=22`.
+
 ## 5.0.12
 
 ### Patch Changes

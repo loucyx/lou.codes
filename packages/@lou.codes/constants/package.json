@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/constants",
 	"description": "🔢 Shared constants and aliases to static methods, values and symbols.",
-	"version": "2.0.2",
+	"version": "2.0.3",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -12,7 +12,7 @@
 		"url": "https://github.com/loucyx/lou.codes/issues"
 	},
 	"engines": {
-		"node": ">=21",
+		"node": ">=22",
 		"pnpm": ">=9"
 	},
 	"exports": {

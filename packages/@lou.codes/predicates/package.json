@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/predicates",
 	"description": "🧐 Predicate util functions",
-	"version": "2.0.6",
+	"version": "2.0.7",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -17,7 +17,7 @@
 		"@lou.codes/types": "workspace:*"
 	},
 	"engines": {
-		"node": ">=21",
+		"node": ">=22",
 		"pnpm": ">=9"
 	},
 	"exports": {

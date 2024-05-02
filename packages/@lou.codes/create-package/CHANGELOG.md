@@ -1,5 +1,16 @@
 # Change log
 
+## 1.0.28
+
+### Patch Changes
+
+-   🔧 change `engines.node` to `>=22`.
+-   ✏️ fix typo in `README.md` template.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.0.3`.
+-   ⬆️ upgrade `@lou.codes/prompts` to `v1.0.23`.
+-   ⬆️ upgrade `@lou.codes/types` to `v3.0.1`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.23`.
+
 ## 1.0.27
 
 ### Patch Changes

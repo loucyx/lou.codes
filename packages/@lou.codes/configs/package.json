@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/configs",
 	"description": "⚙️ Project configurations",
-	"version": "5.0.12",
+	"version": "5.0.13",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -41,7 +41,7 @@
 		"typescript": "~5.4.5"
 	},
 	"engines": {
-		"node": ">=21",
+		"node": ">=22",
 		"pnpm": ">=9"
 	},
 	"exports": {

@@ -75,7 +75,7 @@ Import \`${answers.name}\` using [esm.sh][esm.sh], and use it directly:
 [coverage]: https://coveralls.io/github/loucyx/lou.codes
 [documentation]: https://lou.codes/libraries/${answers.name
 	.replace("@", EMPTY_STRING)
-	.replaceAll(/[-/]/gu, "_")}/
+	.replaceAll(/[.-/]/gu, "_")}/
 [esm.sh]: https://esm.sh
 [license-badge]:
 	https://img.shields.io/npm/l/${answers.name}.svg?label=License&labelColor=666&color=0a8

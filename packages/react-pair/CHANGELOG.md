@@ -1,5 +1,13 @@
 # Change log
 
+## 4.0.9
+
+### Patch Changes
+
+-   🔧 change `engines.node` to `>=22`.
+-   ⬆️ upgrade `@lou.codes/types` to `v3.0.1`.
+-   ⬆️ upgrade `preact-pair` to `v1.1.6`.
+
 ## 4.0.8
 
 ### Patch Changes

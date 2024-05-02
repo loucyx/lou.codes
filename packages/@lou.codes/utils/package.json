@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/utils",
 	"description": "⚒️ Lou's Code curried functional utils",
-	"version": "2.1.6",
+	"version": "2.1.7",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -17,7 +17,7 @@
 		"@lou.codes/types": "workspace:*"
 	},
 	"engines": {
-		"node": ">=21",
+		"node": ">=22",
 		"pnpm": ">=9"
 	},
 	"exports": {

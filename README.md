@@ -20,40 +20,42 @@ and maintain a cohesive ecosystem of tools and components.
     React.
 -   [🖇️ preact-pair][preact_pair] - Util to help with the paired hook pattern in
     Preact.
--   [⏲️ @lou.codes/cron][cron] - Cron Quartz and Cron UNIX expression parser.
--   [↔️ @lou.codes/diff][diff] - Deep diffing utility.
 -   [🪟 window-open-promise][window-open-promise] - Promised
     `globalThis.open()`.
--   [📣 @lou.codes/notify][notify] - Minimalistic Pub/Sub implementation.
--   [🔁 @lou.codes/iterables][iterables] - Iterable and AsyncIterable utils.
--   [👁️‍🗨️ @lou.codes/parsers][parsers] - Parsers without nonsense.
--   [🧐 @lou.codes/predicates][predicates] - Predicate util functions
--   [⚒️ @lou.codes/utils][utils] - Functional utils.
--   [✅ @lou.codes/test][test] - Legible deep-equality tests.
 -   [📟 @lou.codes/ansi][ansi] - Functional CLI ANSI formatter.
--   [❓ @lou.codes/prompts][prompts] - CLI interactive prompts.
--   [🚧 @lou.codes/create-package][create-package] - Project creation script.
 -   [⚙️ @lou.codes/configs][configs] - Project configurations.
 -   [🔢 @lou.codes/constants][constants] - Shared constants.
+-   [🚧 @lou.codes/create-package][create-package] - Project creation script.
+-   [⏲️ @lou.codes/cron][cron] - Cron Quartz and Cron UNIX expression parser.
+-   [↔️ @lou.codes/diff][diff] - Deep diffing utility.
+-   [🔁 @lou.codes/iterables][iterables] - Iterable and AsyncIterable utils.
+-   [🧮 @lou.codes/math][math] - Precise basic math operations.
+-   [📣 @lou.codes/notify][notify] - Minimalistic Pub/Sub implementation.
+-   [👁️‍🗨️ @lou.codes/parsers][parsers] - Parsers without nonsense.
+-   [🧐 @lou.codes/predicates][predicates] - Predicate util functions
+-   [❓ @lou.codes/prompts][prompts] - CLI interactive prompts.
+-   [✅ @lou.codes/test][test] - Legible deep-equality tests.
 -   [🏷️ @lou.codes/types][types] - Shared types.
+-   [⚒️ @lou.codes/utils][utils] - Functional utils.
 
 <!-- Links -->
 
-[react_pair]: https://lou.codes/libraries/react_pair/
-[preact_pair]: https://lou.codes/libraries/preact_pair/
+[ansi]: https://lou.codes/libraries/lou_codes_ansi/
+[configs]: https://lou.codes/libraries/lou_codes_configs/
 [constants]: https://lou.codes/libraries/lou_codes_constants/
+[create-package]: https://lou.codes/libraries/lou_codes_create_package/
 [cron]: https://lou.codes/libraries/lou_codes_cron/
 [diff]: https://lou.codes/libraries/lou_codes_diff/
-[window-open-promise]: https://lou.codes/libraries/window_open_promise/
-[notify]: https://lou.codes/libraries/lou_codes_notify/
 [iterables]: https://lou.codes/libraries/lou_codes_iterables/
-[parsers]: https://lou.codes/libraries/lou_codes_parsers/
-[predicates]: https://lou.codes/libraries/lou_codes_predicates/
-[utils]: https://lou.codes/libraries/lou_codes_utils/
-[test]: https://lou.codes/libraries/lou_codes_test/
-[ansi]: https://lou.codes/libraries/lou_codes_ansi/
-[prompts]: https://lou.codes/libraries/lou_codes_prompts/
-[create-package]: https://lou.codes/libraries/lou_codes_create_package/
-[configs]: https://lou.codes/libraries/lou_codes_configs/
-[types]: https://lou.codes/libraries/lou_codes_types/
 [lou.codes]: https://lou.codes
+[math]: https://lou.codes/libraries/lou_codes_math/
+[notify]: https://lou.codes/libraries/lou_codes_notify/
+[parsers]: https://lou.codes/libraries/lou_codes_parsers/
+[preact_pair]: https://lou.codes/libraries/preact_pair/
+[predicates]: https://lou.codes/libraries/lou_codes_predicates/
+[prompts]: https://lou.codes/libraries/lou_codes_prompts/
+[react_pair]: https://lou.codes/libraries/react_pair/
+[test]: https://lou.codes/libraries/lou_codes_test/
+[types]: https://lou.codes/libraries/lou_codes_types/
+[utils]: https://lou.codes/libraries/lou_codes_utils/
+[window-open-promise]: https://lou.codes/libraries/window_open_promise/

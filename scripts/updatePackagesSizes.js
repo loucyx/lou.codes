@@ -9,6 +9,7 @@ void Promise.all(
 		"@lou.codes/cron",
 		"@lou.codes/diff",
 		"@lou.codes/iterables",
+		"@lou.codes/math",
 		"@lou.codes/notify",
 		"@lou.codes/parsers",
 		"@lou.codes/predicates",

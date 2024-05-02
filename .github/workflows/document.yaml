@@ -23,6 +23,7 @@ jobs:
               with:
                   version: 9
                   run_install: true
+                  standalone: true # TODO: Remove this once pnpm stops exploding with Node 22
 
             - name: Compile
               run: pnpm compile

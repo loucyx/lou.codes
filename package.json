@@ -48,7 +48,7 @@
 		"yaml": "^2.4.2"
 	},
 	"engines": {
-		"node": ">=21",
+		"node": ">=22",
 		"pnpm": ">=9"
 	},
 	"homepage": "https://lou.codes",

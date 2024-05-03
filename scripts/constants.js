@@ -4,7 +4,7 @@ export const SCRIPTS_DIRECTORY = new URL(".", import.meta.url).pathname;
 export const PACKAGES_DIRECTORY = resolve(SCRIPTS_DIRECTORY, "../packages");
 export const TYPE_DOC_FILES_DIRECTORY = resolve(
 	SCRIPTS_DIRECTORY,
-	"../docs/.typedoc/modules",
+	"../docs/.typedoc",
 );
 export const ASTRO_TARGET = resolve(
 	SCRIPTS_DIRECTORY,

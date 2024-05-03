@@ -17,7 +17,7 @@ import { createIterableIterator } from "./createIterableIterator.js";
  * [...pick(2)(random0To10)]; // Same two "random" values between 0 and 10
  * ```
  * @see [SubtleCrypto#digest](https://mdn.io/SubtleCrypto.digest)
- * @see [cryptoNumber](https://lou.codes/libraries/lou_codes_utils/#cryptoNumber)
+ * @see [cryptoNumber](https://lou.codes/libraries/lou_codes_utils/#cryptonumber)
  * @param seed Seed to be used to generate random numbers.
  * @returns Curried generator function with `seed` set in context.
  */

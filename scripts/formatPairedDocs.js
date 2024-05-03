@@ -47,26 +47,31 @@ export const formatPairedDocs = () =>
 						)
 						// Make the "defined in" nicer.
 						.replaceAll(
-							/#####? Defined in\n\n\[.+\]\((?<path>.+)\)/gu,
+							/#####? Source\n\n\[.+\]\((?<path>.+)\)/gu,
 							"> [View source]($1)",
 						)}`
 						// Make absolute references to the site relative
 						.replaceAll("https://lou.codes/", "/")
 						.replaceAll("https://lou.codes", "/")
-						// Turn all question marks next to properties into " (optional)"
-						.replaceAll(
-							/(?<optionalPropertyEnd>\?`)(?<spaces> +\|)/gu,
-							" (optional)`$2",
-						)
-						// Make function headers nicer
-						.replaceAll(
-							/(?<symbol>▸|Ƭ) (?<code>[^\n]*(?:\n[^\n]+)*)\n\n/gu,
-							`<div class="font-mono text-sm">\n\n$1 $2\n\n</div>\n\n`,
-						)
 						// Remove modules and namespaces links because we are inlining them
 						.replaceAll(
-							/## (?:Modules|Namespaces)\n\n-(?<moduleLink>.+\n)+\n/gu,
+							/## (?:Modules|Namespaces)\n\n-(?<moduleLink>.+\n)+/gu,
 							"",
+						)
+						// Files are inlined, let's remove this reference to a non-existing globals.md
+						.replaceAll(
+							(console.log(
+								packageFile.name,
+								new RegExp(
+									`${packageFile.name.replace(".", "\\.")}\\/.+#`,
+									"gu",
+								),
+							),
+							new RegExp(
+								`${packageFile.name.replace(".", "\\.")}\\/.+#`,
+								"gu",
+							)),
+							`#`,
 						),
 				]);
 			},

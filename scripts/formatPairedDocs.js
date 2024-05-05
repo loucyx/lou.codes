@@ -60,17 +60,10 @@ export const formatPairedDocs = () =>
 						)
 						// Files are inlined, let's remove this reference to a non-existing globals.md
 						.replaceAll(
-							(console.log(
-								packageFile.name,
-								new RegExp(
-									`${packageFile.name.replace(".", "\\.")}\\/.+#`,
-									"gu",
-								),
-							),
 							new RegExp(
-								`${packageFile.name.replace(".", "\\.")}\\/.+#`,
+								`${packageFile.name.replace(".", "\\.")}\\/globals.md#`,
 								"gu",
-							)),
+							),
 							`#`,
 						),
 				]);

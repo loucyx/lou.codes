@@ -1,5 +1,6 @@
 import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
+import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
 import { defineConfig } from "astro/config";
 import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
 import rehypeExternalLinks from "rehype-external-links";
@@ -10,9 +11,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			customCss: ["./src/tailwind.css"],
-			expressiveCode: false,
-			// TODO: Re-enable once expressive-code can render emoji again in Astro
-			/* {
+			expressiveCode: {
 				defaultProps: { wrap: false },
 				plugins: [pluginLineNumbers()],
 				styleOverrides: {
@@ -20,7 +19,7 @@ export default defineConfig({
 					uiFontFamily: "MonaspaceArgon, monospace",
 				},
 				tabWidth: 0,
-			} */
+			},
 			head: [
 				{
 					attrs: { content: "same-origin" },
@@ -57,7 +56,12 @@ export default defineConfig({
 	],
 	markdown: {
 		rehypePlugins: [
-			rehypeAccessibleEmojis,
+			[
+				rehypeAccessibleEmojis,
+				{
+					ignore: ["code", "math", "script", "style", "svg", "title"],
+				},
+			],
 			[
 				rehypeExternalLinks,
 				{ rel: "nofollow noopener noreferrer", target: "_blank" },

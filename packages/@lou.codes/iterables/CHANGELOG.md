@@ -1,5 +1,11 @@
 # Change log
 
+## 3.0.7
+
+### Patch Changes
+
+-   ⚡️ use for instead of while, making the lib 2 bits lighter.
+
 ## 3.0.6
 
 ### Patch Changes

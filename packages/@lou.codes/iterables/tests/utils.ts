@@ -12,8 +12,8 @@ export const iterateArray = function* <Item>(array: ReadOnlyArray<Item>) {
 };
 
 export const infiniteIterable = function* <Item>(item: Item) {
-	// eslint-disable-next-line functional/no-loop-statements, @typescript-eslint/no-unnecessary-condition
-	while (true) {
+	// eslint-disable-next-line functional/no-loop-statements
+	for (;;) {
 		yield item;
 	}
 };

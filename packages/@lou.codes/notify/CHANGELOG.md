@@ -1,5 +1,11 @@
 # Change log
 
+## 1.0.29
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/iterables` to `v3.0.7`.
+
 ## 1.0.28
 
 ### Patch Changes

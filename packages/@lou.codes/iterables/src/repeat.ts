@@ -19,8 +19,8 @@ export const repeat =
 		createIterableIterator(function* () {
 			// eslint-disable-next-line functional/no-conditional-statements
 			if (times === Infinity) {
-				// eslint-disable-next-line functional/no-loop-statements, @typescript-eslint/no-unnecessary-condition
-				while (true) {
+				// eslint-disable-next-line functional/no-loop-statements
+				for (;;) {
 					yield item;
 				}
 				// eslint-disable-next-line functional/no-conditional-statements

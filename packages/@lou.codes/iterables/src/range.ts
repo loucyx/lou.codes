@@ -17,26 +17,13 @@ export const range =
 	(from: Step extends bigint ? bigint : number) =>
 	(to: Step extends bigint ? bigint : number) =>
 		createIterableIterator(function* () {
-			// eslint-disable-next-line functional/no-let
-			let current = from as number;
-
-			yield current;
-
-			// eslint-disable-next-line functional/no-conditional-statements
-			if (from < to) {
-				// eslint-disable-next-line functional/no-loop-statements
-				while (current + (step as number) <= to) {
-					yield (current += step as number) as Step extends bigint ?
-						bigint
-					:	number;
-				}
-				// eslint-disable-next-line functional/no-conditional-statements
-			} else {
-				// eslint-disable-next-line functional/no-loop-statements
-				while (current - (step as number) >= to) {
-					yield (current -= step as number) as Step extends bigint ?
-						bigint
-					:	number;
-				}
+			// eslint-disable-next-line functional/no-loop-statements
+			for (
+				let current = from as number;
+				from < to ? current <= to : current >= to;
+				// eslint-disable-next-line @typescript-eslint/restrict-plus-operands
+				current += (from < to ? step : -step) as number
+			) {
+				yield current as Step extends bigint ? bigint : number;
 			}
 		});

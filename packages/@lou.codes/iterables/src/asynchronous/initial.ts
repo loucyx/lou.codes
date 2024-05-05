@@ -3,7 +3,6 @@ import type {
 	IsomorphicIterableItem,
 	IsomorphicIterableIterator,
 } from "@lou.codes/types";
-import { mutate } from "@lou.codes/utils";
 import { createIterableIterator } from "./createIterableIterator.js";
 import { getIterator } from "./getIterator.js";
 
@@ -24,21 +23,16 @@ export const initial = <Iterable extends IsomorphicIterable>(
 	createIterableIterator(async function* () {
 		const iterator = getIterator(iterable);
 
-		const item = {
-			done: false,
-			...(await iterator.next()),
-		};
+		// eslint-disable-next-line functional/no-let
+		let item = await iterator.next();
 
 		// eslint-disable-next-line functional/no-loop-statements
-		while (!item.done) {
-			const next = {
-				done: false,
-				...(await iterator.next()),
-			};
+		for (; !Boolean(item.done); ) {
+			const value = item.value;
+
+			item = await iterator.next();
 
 			// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-			next.done ? undefined : yield item.value;
-
-			void mutate(next)(item);
+			Boolean(item.done) ? undefined : yield value;
 		}
 	}) as IsomorphicIterableIterator<IsomorphicIterableItem<Iterable>>;

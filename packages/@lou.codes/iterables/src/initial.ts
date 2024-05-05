@@ -5,7 +5,6 @@ import type {
 	ReadOnlyIterable,
 	ReadOnlyIterableIterator,
 } from "@lou.codes/types";
-import { mutate } from "@lou.codes/utils";
 import { createIterableIterator } from "./createIterableIterator.js";
 import { getIterator } from "./getIterator.js";
 
@@ -26,22 +25,17 @@ export const initial = <Iterable extends ReadOnlyIterable>(
 	createIterableIterator(function* () {
 		const iterator = getIterator(iterable);
 
-		const item = {
-			done: false,
-			...iterator.next(),
-		};
+		// eslint-disable-next-line functional/no-let
+		let item = iterator.next();
 
 		// eslint-disable-next-line functional/no-loop-statements
-		while (!item.done) {
-			const next = {
-				done: false,
-				...iterator.next(),
-			};
+		for (; !Boolean(item.done); ) {
+			const value = item.value;
+
+			item = iterator.next();
 
 			// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-			next.done ? undefined : yield item.value;
-
-			void mutate(next)(item);
+			Boolean(item.done) ? undefined : yield value;
 		}
 	}) as ReadOnlyIterableIterator<
 		Iterable extends ReadOnlyArray ? Initial<Iterable>[number]

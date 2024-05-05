@@ -29,8 +29,8 @@ export const random =
 			const min = from < to ? from : to;
 			const max = from > to ? from : to;
 
-			// eslint-disable-next-line functional/no-loop-statements, @typescript-eslint/no-unnecessary-condition
-			while (true) {
+			// eslint-disable-next-line functional/no-loop-statements
+			for (;;) {
 				yield Math.min(
 					Math.max(
 						(state =

@@ -19,7 +19,6 @@ export const reduce =
 	<Item, Accumulator>(reducer: Reducer<Item, Accumulator>) =>
 	(initialValue: Accumulator) =>
 	(iterable: ReadOnlyIterable<Item>) => {
-		// eslint-disable-next-line functional/no-let
 		let accumulator: Accumulator = initialValue;
 
 		return (

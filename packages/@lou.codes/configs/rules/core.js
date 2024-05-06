@@ -238,14 +238,12 @@ export const coreRules =
 			/**
 			 * Disallow specified identifiers:
 			 *
-			 * -   `auth`: Write `authentication` (`authorization`?), is just a few more letters.
-			 * -   `btn`: Write `button`, is just a few more letters.
+			 * -   `auth`: Is it `authentication`? `authorization`? Just write the entire word.
 			 * -   `cb`: Write `callback`, is just a few more letters.
-			 * -   `char`: Write `character`, is just a few more letters.
 			 * -   `desc`: Write `description`, is just a few more letters.
 			 * -   `dest`: Write `destination`, is just a few more letters.
-			 * -   `dir`: Write `directory` (`direction`?), is just a few more letters.
-			 * -   `e`: What is this? Event? Error? Just type the entire word!
+			 * -   `dir`: Is it `directory`? `direction`? Just write the entire word.
+			 * -   `e`: Is it `event`? `error`? Just type the entire word.
 			 * -   `elem`: Write `element`, is just a few more letters.
 			 * -   `er`: Write `error`, is just a few  more letters.
 			 * -   `err`: Write `error`, is just a few  more letters.
@@ -253,18 +251,14 @@ export const coreRules =
 			 * -   `evt`: Write `event`, is just a few more letters.
 			 * -   `fn`: Write `callback`, is just a few more letters.
 			 * -   `i`: Write `index`, is just a few more letters.
-			 * -   `img`: Write `image`, is just a few more letters.
 			 * -   `obj`: Write `object`, is just a few more letters.
 			 * -   `opt`: Write `option`, is just a few more letters.
 			 * -   `opts`: Write `options`, is just a few more letters.
 			 * -   `param`: Write `parameter`, is just a few more letters.
 			 * -   `params`: Write `parameters`, is just a few more letters.
 			 * -   `prev`: Write `previous`, is just a few more letters.
-			 * -   `prop`: Write `property`, is just a few more letters.
-			 * -   `props`: Write `properties`, is just a few more letters.
 			 * -   `req`: Write `request`, is just a few more letters.
 			 * -   `res`: Write `response` (`resource`?), is just a few more letters.
-			 * -   `src`: Write `source`, is just a few more letters.
 			 * -   `str`: Write `string`, is just a few more letters.
 			 * -   `temp`: Write `temporary`, is just a few more letters.
 			 * -   `tmp`: Write `temporary`, is just a few more letters.
@@ -273,11 +267,9 @@ export const coreRules =
 			 * @see [id-denylist](https://eslint.org/docs/latest/rules/id-denylist)
 			 */
 			"id-denylist": [
-				ERROR,
+				WARN,
 				"auth",
-				"btn",
 				"cb",
-				"char",
 				"desc",
 				"dest",
 				"dir",
@@ -289,18 +281,14 @@ export const coreRules =
 				"evt",
 				"fn",
 				"i",
-				"img",
 				"obj",
 				"opt",
 				"opts",
 				"param",
 				"params",
 				"prev",
-				"prop",
-				"props",
 				"req",
 				"res",
-				"src",
 				"str",
 				"temp",
 				"tmp",

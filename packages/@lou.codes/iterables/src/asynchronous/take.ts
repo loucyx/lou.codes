@@ -1,4 +1,4 @@
-import type { IsomorphicIterable } from "@lou.codes/types";
+import type { IsomorphicIterable, Numeric } from "@lou.codes/types";
 import { createIterableIterator } from "./createIterableIterator.js";
 
 /**
@@ -14,10 +14,9 @@ import { createIterableIterator } from "./createIterableIterator.js";
  * @returns Curried function with `amount` in context.
  */
 export const take =
-	(amount: bigint | number) =>
+	(amount: Numeric) =>
 	<Item>(iterable: IsomorphicIterable<Item>) =>
 		createIterableIterator(async function* () {
-			// eslint-disable-next-line functional/no-let
 			let count = 0n;
 
 			// eslint-disable-next-line functional/no-conditional-statements

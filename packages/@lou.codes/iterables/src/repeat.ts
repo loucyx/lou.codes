@@ -1,3 +1,4 @@
+import type { Numeric } from "@lou.codes/types";
 import { createIterableIterator } from "./createIterableIterator.js";
 
 /**
@@ -14,8 +15,8 @@ import { createIterableIterator } from "./createIterableIterator.js";
  * @returns Curried function with `item` in context.
  */
 export const repeat =
-	(times: bigint | number) =>
-	<Item>(item: Item) =>
+	(times: Numeric) =>
+	<const Item>(item: Item) =>
 		createIterableIterator(function* () {
 			// eslint-disable-next-line functional/no-conditional-statements
 			if (times === Infinity) {
@@ -25,7 +26,7 @@ export const repeat =
 				}
 				// eslint-disable-next-line functional/no-conditional-statements
 			} else {
-				// eslint-disable-next-line functional/no-let, functional/no-loop-statements
+				// eslint-disable-next-line functional/no-loop-statements
 				for (let count = 0n; count < times; count += 1n) {
 					yield item;
 				}

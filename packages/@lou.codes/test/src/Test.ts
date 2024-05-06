@@ -16,7 +16,6 @@ import type { Awaitable } from "@lou.codes/types";
  *
  * @template Value Type of value being tested.
  */
-// eslint-disable-next-line functional/no-mixed-types
 export type Test<Value = unknown> = {
 	/** Description of the given value. */
 	readonly given: string;

@@ -20,7 +20,6 @@ import type { ReadOnlyRecord } from "./ReadOnlyRecord.js";
  * @template Item Type of the items in the array-like object.
  */
 
-// eslint-disable-next-line functional/no-mixed-types
 export type ArrayLike<
 	Item = unknown,
 	Length extends number = number,

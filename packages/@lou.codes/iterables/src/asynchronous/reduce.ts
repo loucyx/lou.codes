@@ -22,7 +22,6 @@ export const reduce =
 	) =>
 	(initialValue: Accumulator) =>
 	<Iterable extends IsomorphicIterable<Item>>(iterable: Iterable) => {
-		// eslint-disable-next-line functional/no-let
 		let accumulator: Accumulator = initialValue;
 
 		return awaitableHandler(_ => accumulator)(

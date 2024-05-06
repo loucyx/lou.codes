@@ -7,7 +7,7 @@ import { take } from "../../src/asynchronous/take.js";
 const take2 = take(2);
 const takeNone = take(0);
 const takeAll = take(Infinity);
-const repeatForever = repeat(Infinity)(0);
+const repeatZeroForever = repeat(Infinity)(0);
 
 export const takeTests = [
 	{
@@ -31,13 +31,13 @@ export const takeTests = [
 	{
 		given: "an iterable of infinite values and a take(2)",
 		must: "return a 2 items without hanging",
-		received: () => iterableToArray(take2(repeatForever)),
+		received: () => iterableToArray(take2(repeatZeroForever)),
 		wanted: () => [0, 0],
 	},
 	{
 		given: "an iterable of infinite values and a take(0)",
 		must: "return a no items without hanging",
-		received: () => iterableToArray(takeNone(repeatForever)),
+		received: () => iterableToArray(takeNone(repeatZeroForever)),
 		wanted: () => [],
 	},
 ] satisfies Tests<ReadOnlyArray<number>>;

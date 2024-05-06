@@ -23,6 +23,7 @@ export { prepend } from "./prepend.js";
 export { range } from "./range.js";
 export { reduce } from "./reduce.js";
 export { repeat } from "./repeat.js";
+export { setIterator } from "./setIterator.js";
 export { some } from "./some.js";
 export { take } from "./take.js";
 export { toIterable } from "./toIterable.js";

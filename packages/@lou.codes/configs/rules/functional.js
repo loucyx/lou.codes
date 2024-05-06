@@ -56,11 +56,21 @@ export const functionalRules =
 			],
 
 			/**
+			 * Avoid usage of `let` (allowing it in `for` and inside functions).
+			 *
+			 * @see [functional/no-let](https://github.com/eslint-functional/eslint-plugin-functional/blob/HEAD/docs/rules/no-let.md)
+			 */
+			"functional/no-let": [
+				ERROR,
+				{ allowInForLoopInit: true, allowInFunctions: true },
+			],
+
+			/**
 			 * Warn about mix of functions and values in objects.
 			 *
 			 * @see [functional/no-mixed-types](https://github.com/eslint-functional/eslint-plugin-functional/blob/HEAD/docs/rules/no-mixed-types.md)
 			 */
-			"functional/no-mixed-types": WARN,
+			"functional/no-mixed-types": [WARN, { checkTypeLiterals: false }],
 
 			/**
 			 * Allow returning `undefined`, but not `null`.

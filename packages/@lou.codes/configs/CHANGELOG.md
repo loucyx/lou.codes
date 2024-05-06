@@ -1,5 +1,13 @@
 # Change log
 
+## 5.0.14
+
+### Patch Changes
+
+-   🔧 update `functional/no-let` to allow inside functions and in `for`.
+-   🔧 update `functional/no-mixed-types` to allow `type` but not `interface`.
+-   🔧 update `id-denylist` to allow some common things like `src`.
+
 ## 5.0.13
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # Change log
 
+## 3.1.0
+
+### Minor Changes
+
+-   ✨ add `setAsyncIterator`.
+-   ✨ add `setIterator`.
+-   🏗️ update some utils simplifying implementation (resulting in a little
+    smaller footprint).
+
 ## 3.0.7
 
 ### Patch Changes

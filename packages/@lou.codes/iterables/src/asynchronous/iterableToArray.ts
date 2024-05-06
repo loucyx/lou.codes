@@ -1,4 +1,3 @@
-import { freeze } from "@lou.codes/constants/Object.js";
 import { EMPTY_ARRAY } from "@lou.codes/constants/empty.js";
 import type {
 	EmptyArray,
@@ -20,7 +19,7 @@ import { reduce } from "./reduce.js";
  * @returns Array made of iterable items.
  */
 export const iterableToArray = reduce<unknown, ReadOnlyArray | EmptyArray>(
-	item => (array: ReadOnlyArray) => freeze([...array, item]),
+	item => (array: ReadOnlyArray) => [...array, item],
 )(EMPTY_ARRAY) as <Iterable extends IsomorphicIterable>(
 	iterable: Iterable,
 ) => Promise<ReadOnlyArray<IsomorphicIterableItem<Iterable>>>;

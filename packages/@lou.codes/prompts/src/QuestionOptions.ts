@@ -3,7 +3,6 @@ import type { Maybe, Unary } from "@lou.codes/types";
 /**
  * Options object for the `question` function.
  */
-// eslint-disable-next-line functional/no-mixed-types
 export type QuestionOptions<FormattedValue = string> = {
 	/**
 	 * Function to format the question's answer given by the user.

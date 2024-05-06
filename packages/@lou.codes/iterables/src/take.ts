@@ -1,4 +1,4 @@
-import type { ReadOnlyIterable } from "@lou.codes/types";
+import type { Numeric, ReadOnlyIterable } from "@lou.codes/types";
 import { createIterableIterator } from "./createIterableIterator.js";
 
 /**
@@ -14,10 +14,9 @@ import { createIterableIterator } from "./createIterableIterator.js";
  * @returns Curried function with `amount` in context.
  */
 export const take =
-	(amount: bigint | number) =>
+	(amount: Numeric) =>
 	<Item>(iterable: ReadOnlyIterable<Item>) =>
 		createIterableIterator(function* () {
-			// eslint-disable-next-line functional/no-let
 			let count = 0n;
 
 			// eslint-disable-next-line functional/no-conditional-statements

@@ -22,8 +22,6 @@ export const initial = <Iterable extends IsomorphicIterable>(
 ) =>
 	createIterableIterator(async function* () {
 		const iterator = getIterator(iterable);
-
-		// eslint-disable-next-line functional/no-let
 		let item = await iterator.next();
 
 		// eslint-disable-next-line functional/no-loop-statements

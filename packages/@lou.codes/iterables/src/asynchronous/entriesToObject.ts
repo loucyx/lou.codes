@@ -1,4 +1,3 @@
-import { freeze } from "@lou.codes/constants/Object.js";
 import { EMPTY_OBJECT } from "@lou.codes/constants/empty.js";
 import type {
 	Entry,
@@ -7,6 +6,7 @@ import type {
 	IsomorphicIterable,
 	ReadOnlyRecord,
 } from "@lou.codes/types";
+import { set } from "@lou.codes/utils";
 import { reduce } from "./reduce.js";
 
 /**
@@ -25,8 +25,9 @@ import { reduce } from "./reduce.js";
  */
 export const entriesToObject = reduce(
 	<Key extends PropertyKey, Value>([key, value]: Entry<Key, Value>) =>
-		(object: ReadOnlyRecord<Key, Value>) =>
-			freeze({ ...object, [key]: value }) as ReadOnlyRecord<Key, Value>,
+		set(key)(value) as (
+			object: ReadOnlyRecord<Key, Value>,
+		) => typeof object,
 )(EMPTY_OBJECT) as <Item extends Entry>(
 	iterable: IsomorphicIterable<Item>,
 ) => Promise<ReadOnlyRecord<EntryKey<Item>, EntryValue<Item>>>;

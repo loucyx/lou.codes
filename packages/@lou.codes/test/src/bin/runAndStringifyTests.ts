@@ -36,7 +36,6 @@ export const runAndStringifyTests = async function* (
 ) {
 	// eslint-disable-next-line functional/prefer-immutable-types
 	const fails: Array<[url: ReadOnlyURL, resultString: string]> = [];
-	// eslint-disable-next-line functional/no-let
 	let lastPath = EMPTY_STRING as string;
 
 	// eslint-disable-next-line functional/no-loop-statements

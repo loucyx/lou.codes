@@ -1,5 +1,6 @@
-import type { ReadOnlyIterable } from "@lou.codes/types";
+import type { Numeric, ReadOnlyIterable } from "@lou.codes/types";
 import { createIterableIterator } from "./createIterableIterator.js";
+import { filter } from "./filter.js";
 
 /**
  * Drop the specified amount of items from the given iterable.
@@ -13,22 +14,17 @@ import { createIterableIterator } from "./createIterableIterator.js";
  * @param amount Amount of items to drop.
  * @returns Curried function with `amount` in context.
  */
-export const drop =
-	(amount: bigint | number) =>
-	<Item>(iterable: ReadOnlyIterable<Item>) =>
-		createIterableIterator(function* () {
-			// eslint-disable-next-line functional/no-let
-			let count = 0n;
+export const drop = (amount: Numeric) => {
+	const amountFilter = <Item>(iterable: ReadOnlyIterable<Item>) => {
+		let count = -1n;
 
-			// eslint-disable-next-line functional/no-conditional-statements
-			if (amount > 0) {
-				// eslint-disable-next-line functional/no-loop-statements
-				for (const item of iterable) {
-					// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-					count >= amount ? yield item : (count += 1n);
-				}
-				// eslint-disable-next-line functional/no-conditional-statements
-			} else {
-				yield* iterable;
-			}
+		return filter(() => (count += 1n) >= amount)(
+			iterable,
+		) as ReadOnlyIterable<Item>;
+	};
+
+	return <Item>(iterable: ReadOnlyIterable<Item>) =>
+		createIterableIterator(function* () {
+			yield* amount > 0 ? amountFilter(iterable) : iterable;
 		});
+};

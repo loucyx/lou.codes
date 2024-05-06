@@ -4,7 +4,7 @@ import { forEach } from "../../src/asynchronous/forEach.js";
 import { range } from "../../src/asynchronous/range.js";
 
 const forEachTest = <Item>(iterable: IsomorphicIterable<Item>) => {
-	// eslint-disable-next-line functional/no-let, functional/prefer-readonly-type
+	// eslint-disable-next-line functional/prefer-readonly-type
 	const output: Array<Item> = [];
 
 	// eslint-disable-next-line functional/immutable-data

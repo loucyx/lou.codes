@@ -11,7 +11,6 @@ const testQuestionNoPromise = question({
 
 const testQuestionRetry = question(
 	(() => {
-		// eslint-disable-next-line functional/no-let
 		let tries = 0;
 
 		return {

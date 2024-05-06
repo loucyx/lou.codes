@@ -25,7 +25,6 @@ export const initial = <Iterable extends ReadOnlyIterable>(
 	createIterableIterator(function* () {
 		const iterator = getIterator(iterable);
 
-		// eslint-disable-next-line functional/no-let
 		let item = iterator.next();
 
 		// eslint-disable-next-line functional/no-loop-statements

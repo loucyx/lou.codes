@@ -1,3 +1,4 @@
+import type { Numeric } from "@lou.codes/types";
 import { createIterableIterator } from "./createIterableIterator.js";
 
 /**
@@ -13,7 +14,7 @@ import { createIterableIterator } from "./createIterableIterator.js";
  * @returns Curried function with `step` set in context.
  */
 export const range =
-	<Step extends bigint | number>(step: Step) =>
+	<Step extends Numeric>(step: Step) =>
 	(from: Step extends bigint ? bigint : number) =>
 	(to: Step extends bigint ? bigint : number) =>
 		createIterableIterator(function* () {

@@ -1,5 +1,5 @@
 import type { Tests } from "@lou.codes/test";
-import type { ReadOnlyArray } from "@lou.codes/types";
+import type { Numeric, ReadOnlyArray } from "@lou.codes/types";
 import { iterableToArray } from "../../src/asynchronous/iterableToArray.js";
 import { range } from "../../src/asynchronous/range.js";
 
@@ -51,4 +51,4 @@ export const rangeTests = [
 		received: () => iterableToArray(rangeFrom0n(11n)),
 		wanted: () => [0n, 2n, 4n, 6n, 8n, 10n],
 	},
-] satisfies Tests<ReadOnlyArray<bigint | number>>;
+] satisfies Tests<ReadOnlyArray<Numeric>>;

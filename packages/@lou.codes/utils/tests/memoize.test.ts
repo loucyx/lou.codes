@@ -1,7 +1,7 @@
 import type { Test } from "@lou.codes/test";
 import { memoize } from "../src/memoize.js";
 
-// eslint-disable-next-line functional/no-let, prefer-const
+// eslint-disable-next-line functional/no-let
 let times = 0;
 const double = (value: number) => {
 	// eslint-disable-next-line functional/no-expression-statements

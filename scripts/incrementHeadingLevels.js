@@ -4,4 +4,4 @@
  * @returns
  */
 export const incrementHeadingLevels = markdown =>
-	markdown.replaceAll(/(?<level>#|##|###|####) (?<title>.+)/gu, "#$1 $2");
+	markdown.replaceAll(/\n(?<level>#|##|###|####) (?<title>.+)/gu, "#$1 $2");

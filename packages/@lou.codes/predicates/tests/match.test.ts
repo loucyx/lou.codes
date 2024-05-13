@@ -1,8 +1,9 @@
 import type { Tests } from "@lou.codes/test";
+import type { RegularExpression } from "@lou.codes/types";
 import { match } from "../src/match.js";
 import { wantedFalse, wantedTrue } from "./wanted.js";
 
-const matchNumbersString = match("/\\d+/u");
+const matchNumbersString = match(String.raw`/\d+/u` as RegularExpression);
 const matchNumbersRegExp = match(/\d+/u);
 const matchWithErrors = match("/('/u");
 

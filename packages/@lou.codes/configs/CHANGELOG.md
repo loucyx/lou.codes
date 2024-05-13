@@ -1,5 +1,15 @@
 # Change log
 
+## 5.1.0
+
+### Minor Changes
+
+-   🔧 update rules and add new internal tooling.
+
+### Patch Changes
+
+-   ⬆️ dependency upgrade.
+
 ## 5.0.15
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 import eslintPluginPrettier from "eslint-plugin-prettier";
-import { OFF } from "./levels.js";
+import { off } from "./off.js";
+import { typescriptNamespace } from "./typescript.js";
+
+/**
+ * ESLint TypeScript namespace.
+ */
+export const prettierNamespace = "prettier";
 
 /**
  * ESLint Prettier rules.
@@ -7,77 +13,17 @@ import { OFF } from "./levels.js";
  */
 export const prettierRules =
 	/** @type {const} @satisfies {import("eslint").Linter.FlatConfig} */ ({
-		plugins: { prettier: eslintPluginPrettier },
-		rules: {
-			/**
-			 * Handled by Prettier's `trailingComma`.
-			 *
-			 * @see [@typescript-eslint/comma-dangle](https://typescript-eslint.io/rules/comma-dangle/)
-			 * @see [trailingComma](https://prettier.io/docs/en/options.html#trailing-commas)
-			 */
-			"@typescript-eslint/comma-dangle": OFF,
-
-			/**
-			 * Handled by Prettier's `trailingComma`.
-			 *
-			 * @see [comma-dangle](https://eslint.org/docs/latest/rules/comma-dangle)
-			 */
-			"comma-dangle": OFF,
-
-			/**
-			 * Handled by Prettier.
-			 *
-			 * @see [eol-last](https://eslint.org/docs/latest/rules/eol-last)
-			 */
-			"eol-last": OFF,
-
-			/**
-			 * Handled by Prettier's `endOfLine`.
-			 *
-			 * @see [linebreak-style](https://eslint.org/docs/latest/rules/linebreak-style)
-			 */
-			"linebreak-style": OFF,
-
-			/**
-			 * Handled by Prettier's `printWidth`.
-			 *
-			 * @see [max-len](https://eslint.org/docs/latest/rules/max-len)
-			 */
-			"max-len": OFF,
-
-			/**
-			 * Handled by Prettier.
-			 *
-			 * @see [newline-per-chained-call](https://eslint.org/docs/latest/rules/newline-per-chained-call)
-			 */
-			"newline-per-chained-call": OFF,
-
-			/**
-			 * Disable this error because prettier uses mix of spaces and tabs.
-			 *
-			 * @see [no-mixed-spaces-and-tabs](https://eslint.org/docs/latest/rules/no-mixed-spaces-and-tabs)
-			 */
-			"no-mixed-spaces-and-tabs": OFF,
-
-			/**
-			 * Handled by Prettier.
-			 *
-			 * @see [no-trailing-spaces](https://eslint.org/docs/latest/rules/no-trailing-spaces)
-			 */
-			"no-trailing-spaces": OFF,
-
-			/**
-			 * Handled by Prettier.
-			 *
-			 * @see [no-unexpected-multiline](https://eslint.org/docs/latest/rules/no-unexpected-multiline)
-			 */
-			"no-unexpected-multiline": OFF,
-
-			/**
-			 * Handled by prettier.
-			 *
-			 * @see [quote-props](https://eslint.org/docs/latest/rules/quote-props)
-			 */
-			"quote-props": OFF,
-		},
+		plugins: { [prettierNamespace]: eslintPluginPrettier },
+		rules: off(
+			`${typescriptNamespace}/comma-dangle`,
+			"comma-dangle",
+			"eol-last",
+			"linebreak-style",
+			"max-len",
+			"newline-per-chained-call",
+			"no-mixed-spaces-and-tabs",
+			"no-trailing-spaces",
+			"no-unexpected-multiline",
+			"quote-props",
+		),
 	});

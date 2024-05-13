@@ -1,5 +1,11 @@
 import eslintPluginFunctional from "eslint-plugin-functional/flat";
 import { ERROR, OFF, WARN } from "./levels.js";
+import { typescriptNamespace } from "./typescript.js";
+
+/**
+ * ESLint functional programming namespace.
+ */
+export const functionalNamespace = "functional";
 
 /**
  * ESLint functional programming rules.
@@ -7,7 +13,7 @@ import { ERROR, OFF, WARN } from "./levels.js";
  */
 export const functionalRules =
 	/** @type {const} @satisfies {import("eslint").Linter.FlatConfig} */ ({
-		...eslintPluginFunctional.configs.recommended,
+		plugins: { [functionalNamespace]: eslintPluginFunctional },
 		rules: {
 			...eslintPluginFunctional.configs.recommended.rules,
 
@@ -17,14 +23,14 @@ export const functionalRules =
 			 * @see [@typescript-eslint/prefer-readonly-parameter-types](https://typescript-eslint.io/rules/prefer-readonly-parameter-types/)
 			 * @see [functional/prefer-immutable-types](https://github.com/eslint-functional/eslint-plugin-functional/blob/HEAD/docs/rules/prefer-immutable-types.md)
 			 */
-			"@typescript-eslint/prefer-readonly-parameter-types": OFF,
+			[`${typescriptNamespace}/prefer-readonly-parameter-types`]: OFF,
 
 			/**
 			 * This rule has good intentions, but generally we have `thunks`.
 			 *
 			 * @see [functional/functional-parameters](https://github.com/eslint-functional/eslint-plugin-functional/blob/HEAD/docs/rules/functional-parameters.md)
 			 */
-			"functional/functional-parameters": [
+			[`${functionalNamespace}/functional-parameters`]: [
 				ERROR,
 				{
 					allowArgumentsKeyword: false,
@@ -38,18 +44,18 @@ export const functionalRules =
 			 *
 			 * @see [functional/no-expression-statements](https://github.com/eslint-functional/eslint-plugin-functional/blob/HEAD/docs/rules/no-expression-statements.md)
 			 */
-			"functional/no-expression-statements": [
+			[`${functionalNamespace}/no-expression-statements`]: [
 				ERROR,
 				{
 					ignoreCodePattern: [
 						// Optional chained functions
-						"\\?\\.\\(",
+						String.raw`\?\.\(`,
 						// Yielded values
-						"\\s*yield",
+						String.raw`\s*yield`,
 						// Assignments (handled by other rules)
-						"\\w+\\s*=\\s*.",
+						String.raw`\w+\s*=\s*.`,
 						// Voided values
-						"\\s*void",
+						String.raw`\s*void`,
 					],
 					ignoreVoid: true,
 				},
@@ -60,7 +66,7 @@ export const functionalRules =
 			 *
 			 * @see [functional/no-let](https://github.com/eslint-functional/eslint-plugin-functional/blob/HEAD/docs/rules/no-let.md)
 			 */
-			"functional/no-let": [
+			[`${functionalNamespace}/no-let`]: [
 				ERROR,
 				{ allowInForLoopInit: true, allowInFunctions: true },
 			],
@@ -70,14 +76,17 @@ export const functionalRules =
 			 *
 			 * @see [functional/no-mixed-types](https://github.com/eslint-functional/eslint-plugin-functional/blob/HEAD/docs/rules/no-mixed-types.md)
 			 */
-			"functional/no-mixed-types": [WARN, { checkTypeLiterals: false }],
+			[`${functionalNamespace}/no-mixed-types`]: [
+				WARN,
+				{ checkTypeLiterals: false },
+			],
 
 			/**
 			 * Allow returning `undefined`, but not `null`.
 			 *
 			 * @see [functional/no-return-void](https://github.com/eslint-functional/eslint-plugin-functional/blob/HEAD/docs/rules/no-return-void.md)
 			 */
-			"functional/no-return-void": [
+			[`${functionalNamespace}/no-return-void`]: [
 				ERROR,
 				{
 					allowNull: false,
@@ -91,7 +100,7 @@ export const functionalRules =
 			 *
 			 * @see [functional/prefer-immutable-types](https://github.com/eslint-functional/eslint-plugin-functional/blob/HEAD/docs/rules/prefer-immutable-types.md)
 			 */
-			"functional/prefer-immutable-types": [
+			[`${functionalNamespace}/prefer-immutable-types`]: [
 				ERROR,
 				{
 					enforcement: "None",

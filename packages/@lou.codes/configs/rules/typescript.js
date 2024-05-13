@@ -1,6 +1,12 @@
 import typescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
 import typescriptParser from "@typescript-eslint/parser";
 import { ERROR, OFF } from "./levels.js";
+import { off } from "./off.js";
+
+/**
+ * ESLint TypeScript namespace.
+ */
+export const typescriptNamespace = "@typescript-eslint";
 
 /**
  * ESLint TypeScript rules.
@@ -38,7 +44,7 @@ export const typescriptRules =
 				sourceType: "module",
 			},
 		},
-		plugins: { "@typescript-eslint": typescriptEslintPlugin },
+		plugins: { [typescriptNamespace]: typescriptEslintPlugin },
 		rules: {
 			...typescriptEslintPlugin.configs.recommended.rules,
 
@@ -65,7 +71,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/adjacent-overload-signatures](https://typescript-eslint.io/rules/adjacent-overload-signatures/)
 			 */
-			"@typescript-eslint/adjacent-overload-signatures": ERROR,
+			[`${typescriptNamespace}/adjacent-overload-signatures`]: ERROR,
 
 			/**
 			 * Consistent array types using generics `Array` and `ReadonlyArray`.
@@ -82,7 +88,10 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/array-type](https://typescript-eslint.io/rules/array-type/)
 			 */
-			"@typescript-eslint/array-type": [ERROR, { default: "generic" }],
+			[`${typescriptNamespace}/array-type`]: [
+				ERROR,
+				{ default: "generic" },
+			],
 
 			/**
 			 * Avoid await on non thenable values.
@@ -97,7 +106,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/await-thenable](https://typescript-eslint.io/rules/await-thenable/)
 			 */
-			"@typescript-eslint/await-thenable": ERROR,
+			[`${typescriptNamespace}/await-thenable`]: ERROR,
 
 			/**
 			 * `@ts-comment` rules:
@@ -109,7 +118,7 @@ export const typescriptRules =
 			 *
 			 * @see [@typescript-eslint/ban-ts-comment](https://typescript-eslint.io/rules/ban-ts-comment/)
 			 */
-			"@typescript-eslint/ban-ts-comment": [
+			[`${typescriptNamespace}/ban-ts-comment`]: [
 				ERROR,
 				{
 					"ts-check": false,
@@ -124,7 +133,7 @@ export const typescriptRules =
 			 *
 			 * @see [@typescript-eslint/ban-tslint-comment](https://typescript-eslint.io/rules/ban-tslint-comment/)
 			 */
-			"@typescript-eslint/ban-tslint-comment": ERROR,
+			[`${typescriptNamespace}/ban-tslint-comment`]: ERROR,
 
 			/**
 			 * Ban some unwanted types:
@@ -137,7 +146,7 @@ export const typescriptRules =
 			 *
 			 * @see [@typescript-eslint/ban-types](https://typescript-eslint.io/rules/ban-types/)
 			 */
-			"@typescript-eslint/ban-types": [
+			[`${typescriptNamespace}/ban-types`]: [
 				ERROR,
 				{
 					types: {
@@ -181,7 +190,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/consistent-indexed-object-style](https://typescript-eslint.io/rules/consistent-indexed-object-style/)
 			 */
-			"@typescript-eslint/consistent-indexed-object-style": [
+			[`${typescriptNamespace}/consistent-indexed-object-style`]: [
 				ERROR,
 				"record",
 			],
@@ -224,7 +233,7 @@ export const typescriptRules =
 			 * @see [@typescript-eslint/consistent-return](https://typescript-eslint.io/rules/consistent-return)
 			 * @see [consistent-return](https://eslint.org/docs/latest/rules/consistent-return)
 			 */
-			"@typescript-eslint/consistent-return": ERROR,
+			[`${typescriptNamespace}/consistent-return`]: ERROR,
 
 			/**
 			 * Use `as` assertion.
@@ -239,7 +248,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/consistent-type-assertions](https://typescript-eslint.io/rules/consistent-type-assertions/)
 			 */
-			"@typescript-eslint/consistent-type-assertions": [
+			[`${typescriptNamespace}/consistent-type-assertions`]: [
 				ERROR,
 				{ assertionStyle: "as", objectLiteralTypeAssertions: "allow" },
 			],
@@ -257,7 +266,10 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/consistent-type-definitions](https://typescript-eslint.io/rules/consistent-type-definitions/)
 			 */
-			"@typescript-eslint/consistent-type-definitions": [ERROR, "type"],
+			[`${typescriptNamespace}/consistent-type-definitions`]: [
+				ERROR,
+				"type",
+			],
 
 			/**
 			 * Enforce "typed imports".
@@ -273,7 +285,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/consistent-type-imports](https://typescript-eslint.io/rules/consistent-type-imports/)
 			 */
-			"@typescript-eslint/consistent-type-imports": [
+			[`${typescriptNamespace}/consistent-type-imports`]: [
 				ERROR,
 				{ fixStyle: "inline-type-imports" },
 			],
@@ -292,7 +304,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/dot-notation](https://typescript-eslint.io/rules/dot-notation/)
 			 */
-			"@typescript-eslint/dot-notation": ERROR,
+			[`${typescriptNamespace}/dot-notation`]: ERROR,
 
 			/**
 			 * Rely on inference instead of making return type explicit.
@@ -307,7 +319,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/explicit-function-return-type](https://typescript-eslint.io/rules/explicit-function-return-type/)
 			 */
-			"@typescript-eslint/explicit-function-return-type": OFF,
+			[`${typescriptNamespace}/explicit-function-return-type`]: OFF,
 
 			/**
 			 * When working with classes, let's be explicit about accessibility.
@@ -325,7 +337,7 @@ export const typescriptRules =
 			 * }
 			 * @see [@typescript-eslint/explicit-member-accessibility](https://typescript-eslint.io/rules/explicit-member-accessibility/)
 			 */
-			"@typescript-eslint/explicit-member-accessibility": [
+			[`${typescriptNamespace}/explicit-member-accessibility`]: [
 				ERROR,
 				{
 					accessibility: "explicit",
@@ -349,7 +361,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/explicit-module-boundary-types](https://typescript-eslint.io/rules/explicit-module-boundary-types/)
 			 */
-			"@typescript-eslint/explicit-module-boundary-types": OFF,
+			[`${typescriptNamespace}/explicit-module-boundary-types`]: OFF,
 
 			/**
 			 * Don't declare stuff without giving it a value (even `undefined`).
@@ -357,14 +369,14 @@ export const typescriptRules =
 			 * @see [@typescript-eslint/init-declarations](https://typescript-eslint.io/rules/init-declarations/)
 			 * @see [init-declarations](https://eslint.org/docs/latest/rules/init-declarations)
 			 */
-			"@typescript-eslint/init-declarations": ERROR,
+			[`${typescriptNamespace}/init-declarations`]: ERROR,
 
 			/**
 			 * If we work with classes, let's make sure they are tidy by keeping its members ordered.
 			 *
 			 * @see [@typescript-eslint/member-ordering](https://typescript-eslint.io/rules/member-ordering/)
 			 */
-			"@typescript-eslint/member-ordering": ERROR,
+			[`${typescriptNamespace}/member-ordering`]: ERROR,
 
 			/**
 			 * Classes? Well, let's make those methods look like arrow functions at least.
@@ -385,7 +397,10 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/method-signature-style](https://typescript-eslint.io/rules/method-signature-style/)
 			 */
-			"@typescript-eslint/method-signature-style": [ERROR, "property"],
+			[`${typescriptNamespace}/method-signature-style`]: [
+				ERROR,
+				"property",
+			],
 
 			/**
 			 * Consistent naming:
@@ -397,7 +412,7 @@ export const typescriptRules =
 			 *
 			 * @see [@typescript-eslint/naming-convention](https://typescript-eslint.io/rules/naming-convention/)
 			 */
-			"@typescript-eslint/naming-convention": [
+			[`${typescriptNamespace}/naming-convention`]: [
 				ERROR,
 				{
 					// eslint-disable-next-line unicorn/no-null
@@ -452,7 +467,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-array-constructor](https://typescript-eslint.io/rules/no-array-constructor/)
 			 */
-			"@typescript-eslint/no-array-constructor": ERROR,
+			[`${typescriptNamespace}/no-array-constructor`]: ERROR,
 
 			/**
 			 * Avoid `.toString()` without a useful return type.
@@ -467,14 +482,14 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-base-to-string](https://typescript-eslint.io/rules/no-base-to-string/)
 			 */
-			"@typescript-eslint/no-base-to-string": ERROR,
+			[`${typescriptNamespace}/no-base-to-string`]: ERROR,
 
 			/**
 			 * TypeScript already takes care of this.
 			 *
 			 * @see [@typescript-eslint/no-dupe-class-members](https://typescript-eslint.io/rules/no-dupe-class-members/)
 			 */
-			"@typescript-eslint/no-dupe-class-members": OFF,
+			[`${typescriptNamespace}/no-dupe-class-members`]: OFF,
 
 			/**
 			 * Disallow duplicate enum member values.
@@ -495,14 +510,14 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-duplicate-enum-values](https://typescript-eslint.io/rules/no-duplicate-enum-values/)
 			 */
-			"@typescript-eslint/no-duplicate-enum-values": ERROR,
+			[`${typescriptNamespace}/no-duplicate-enum-values`]: ERROR,
 
 			/**
 			 * Avoid `delete` of dynamic properties.
 			 *
 			 * @see [@typescript-eslint/no-dynamic-delete](https://typescript-eslint.io/rules/no-dynamic-delete/)
 			 */
-			"@typescript-eslint/no-dynamic-delete": ERROR,
+			[`${typescriptNamespace}/no-dynamic-delete`]: ERROR,
 
 			/**
 			 * Empty functions don't make any sense, but still we should avoid confusing `() => {}`.
@@ -519,7 +534,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-empty-function](https://typescript-eslint.io/rules/no-empty-function/)
 			 */
-			"@typescript-eslint/no-empty-function": ERROR,
+			[`${typescriptNamespace}/no-empty-function`]: ERROR,
 
 			/**
 			 * An empty interface is useless.
@@ -536,14 +551,14 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-empty-interface](https://typescript-eslint.io/rules/no-empty-interface/)
 			 */
-			"@typescript-eslint/no-empty-interface": ERROR,
+			[`${typescriptNamespace}/no-empty-interface`]: ERROR,
 
 			/**
 			 * `any` is a really bad abstraction. Use `unknown` instead.
 			 *
 			 * @see [@typescript-eslint/no-explicit-any](https://typescript-eslint.io/rules/no-explicit-any/)
 			 */
-			"@typescript-eslint/no-explicit-any": ERROR,
+			[`${typescriptNamespace}/no-explicit-any`]: ERROR,
 
 			/**
 			 * A class with all statics can be turned into an object.
@@ -561,7 +576,7 @@ export const typescriptRules =
 			 * };
 			 * @see [@typescript-eslint/no-extraneous-class](https://typescript-eslint.io/rules/no-extraneous-class/)
 			 */
-			"@typescript-eslint/no-extraneous-class": ERROR,
+			[`${typescriptNamespace}/no-extraneous-class`]: ERROR,
 
 			/**
 			 * Let's avoid floating (unhandled) promises.
@@ -579,7 +594,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-floating-promises](https://typescript-eslint.io/rules/no-floating-promises/)
 			 */
-			"@typescript-eslint/no-floating-promises": ERROR,
+			[`${typescriptNamespace}/no-floating-promises`]: ERROR,
 
 			/**
 			 * Use `for/of`, or better yet `map` or `forEach`.
@@ -600,7 +615,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-for-in-array](https://typescript-eslint.io/rules/no-for-in-array/)
 			 */
-			"@typescript-eslint/no-for-in-array": ERROR,
+			[`${typescriptNamespace}/no-for-in-array`]: ERROR,
 
 			/**
 			 * This is super insecure, avoid it at all costs.
@@ -617,14 +632,14 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-implied-eval](https://typescript-eslint.io/rules/no-implied-eval/)
 			 */
-			"@typescript-eslint/no-implied-eval": ERROR,
+			[`${typescriptNamespace}/no-implied-eval`]: ERROR,
 
 			/**
 			 * We want to rely on inference.
 			 *
 			 * @see [@typescript-eslint/no-inferrable-types](https://typescript-eslint.io/rules/no-inferrable-types/)
 			 */
-			"@typescript-eslint/no-inferrable-types": OFF,
+			[`${typescriptNamespace}/no-inferrable-types`]: OFF,
 
 			/**
 			 * Avoid using `this` outside a class.
@@ -645,7 +660,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-invalid-this](https://typescript-eslint.io/rules/no-invalid-this/)
 			 */
-			"@typescript-eslint/no-invalid-this": ERROR,
+			[`${typescriptNamespace}/no-invalid-this`]: ERROR,
 
 			/**
 			 * Avoid `void` for types, use `undefined` instead.
@@ -660,7 +675,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-invalid-void-type](https://typescript-eslint.io/rules/no-invalid-void-type/)
 			 */
-			"@typescript-eslint/no-invalid-void-type": ERROR,
+			[`${typescriptNamespace}/no-invalid-void-type`]: ERROR,
 
 			/**
 			 * Avoid defining functions inside loops.
@@ -682,7 +697,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-loop-func](https://typescript-eslint.io/rules/no-loop-func/)
 			 */
-			"@typescript-eslint/no-loop-func": ERROR,
+			[`${typescriptNamespace}/no-loop-func`]: ERROR,
 
 			/**
 			 * Avoid loss of precision in numbers at runtime.
@@ -696,7 +711,7 @@ export const typescriptRules =
 			 * @see [@typescript-eslint/no-loss-of-precision](https://typescript-eslint.io/rules/no-loss-of-precision/)
 			 * @see [no-loss-of-precision](https://eslint.org/docs/latest/rules/no-loss-of-precision)
 			 */
-			"@typescript-eslint/no-loss-of-precision": ERROR,
+			[`${typescriptNamespace}/no-loss-of-precision`]: ERROR,
 
 			/**
 			 * Disallow the `void` operator except when used to discard a value.
@@ -711,7 +726,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-meaningless-void-operator](https://typescript-eslint.io/rules/no-meaningless-void-operator/)
 			 */
-			"@typescript-eslint/no-meaningless-void-operator": ERROR,
+			[`${typescriptNamespace}/no-meaningless-void-operator`]: ERROR,
 
 			/**
 			 * Avoid missuses of the `new` declaration.
@@ -730,7 +745,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-misused-new](https://typescript-eslint.io/rules/no-misused-new/)
 			 */
-			"@typescript-eslint/no-misused-new": ERROR,
+			[`${typescriptNamespace}/no-misused-new`]: ERROR,
 
 			/**
 			 * Avoid missuses of promises.
@@ -747,7 +762,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-misused-promises](https://typescript-eslint.io/rules/no-misused-promises/)
 			 */
-			"@typescript-eslint/no-misused-promises": ERROR,
+			[`${typescriptNamespace}/no-misused-promises`]: ERROR,
 
 			/**
 			 * Disallow enums from having both number and string members.
@@ -772,14 +787,14 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-mixed-enums](https://typescript-eslint.io/rules/no-mixed-enums/)
 			 */
-			"@typescript-eslint/no-mixed-enums": ERROR,
+			[`${typescriptNamespace}/no-mixed-enums`]: ERROR,
 
 			/**
 			 * Old TypeScript.
 			 *
 			 * @see [@typescript-eslint/no-namespace](https://typescript-eslint.io/rules/no-namespace/)
 			 */
-			"@typescript-eslint/no-namespace": ERROR,
+			[`${typescriptNamespace}/no-namespace`]: ERROR,
 
 			/**
 			 * Prevents using non-null assertion with nullish coalescing.
@@ -794,19 +809,20 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-non-null-asserted-nullish-coalescing](https://typescript-eslint.io/rules/no-non-null-asserted-nullish-coalescing/)
 			 */
-			"@typescript-eslint/no-non-null-asserted-nullish-coalescing": ERROR,
+			[`${typescriptNamespace}/no-non-null-asserted-nullish-coalescing`]:
+				ERROR,
 
 			/**
 			 * Avoid null assertion (`value!`), a really unsafe TypeScript operator.
 			 *
 			 * @see [@typescript-eslint/no-non-null-assertion](https://typescript-eslint.io/rules/no-non-null-assertion/)
 			 */
-			"@typescript-eslint/no-non-null-assertion": ERROR,
+			[`${typescriptNamespace}/no-non-null-assertion`]: ERROR,
 
 			/**
 			 * TypeScript already takes care of this.
 			 */
-			"@typescript-eslint/no-redeclare": OFF,
+			[`${typescriptNamespace}/no-redeclare`]: OFF,
 
 			/**
 			 * Disallow members of unions and intersections that do nothing or override type information.
@@ -829,14 +845,14 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-redundant-type-constituents](https://typescript-eslint.io/rules/no-redundant-type-constituents/)
 			 */
-			"@typescript-eslint/no-redundant-type-constituents": ERROR,
+			[`${typescriptNamespace}/no-redundant-type-constituents`]: ERROR,
 
 			/**
 			 * Use ECMAScript `import` and `export` instead of `require` and `module.exports`.
 			 *
 			 * @see [@typescript-eslint/no-require-imports](https://typescript-eslint.io/rules/no-require-imports/)
 			 */
-			"@typescript-eslint/no-require-imports": ERROR,
+			[`${typescriptNamespace}/no-require-imports`]: ERROR,
 
 			/**
 			 * Avoid name shadowing (`_` is allowed).
@@ -853,7 +869,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-shadow](https://typescript-eslint.io/rules/no-shadow/)
 			 */
-			"@typescript-eslint/no-shadow": [
+			[`${typescriptNamespace}/no-shadow`]: [
 				ERROR,
 				{ allow: ["_"], hoist: "all" },
 			],
@@ -878,7 +894,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-this-alias](https://typescript-eslint.io/rules/no-this-alias/)
 			 */
-			"@typescript-eslint/no-this-alias": ERROR,
+			[`${typescriptNamespace}/no-this-alias`]: ERROR,
 
 			/**
 			 * If it's a `boolean`, use it as such.
@@ -893,7 +909,8 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-unnecessary-boolean-literal-compare](https://typescript-eslint.io/rules/no-unnecessary-boolean-literal-compare/)
 			 */
-			"@typescript-eslint/no-unnecessary-boolean-literal-compare": ERROR,
+			[`${typescriptNamespace}/no-unnecessary-boolean-literal-compare`]:
+				ERROR,
 
 			/**
 			 * Avoid conditions with values that can't be falsy.
@@ -912,7 +929,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-unnecessary-condition](https://typescript-eslint.io/rules/no-unnecessary-condition/)
 			 */
-			"@typescript-eslint/no-unnecessary-condition": ERROR,
+			[`${typescriptNamespace}/no-unnecessary-condition`]: ERROR,
 
 			/**
 			 * If the type assertion is the same, skip it.
@@ -929,7 +946,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-unnecessary-type-arguments](https://typescript-eslint.io/rules/no-unnecessary-type-arguments/)
 			 */
-			"@typescript-eslint/no-unnecessary-type-arguments": ERROR,
+			[`${typescriptNamespace}/no-unnecessary-type-arguments`]: ERROR,
 
 			/**
 			 * Don't assert something that doesn't need assertion.
@@ -941,35 +958,35 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-unnecessary-type-assertion](https://typescript-eslint.io/rules/no-unnecessary-type-assertion/)
 			 */
-			"@typescript-eslint/no-unnecessary-type-assertion": ERROR,
+			[`${typescriptNamespace}/no-unnecessary-type-assertion`]: ERROR,
 
 			/**
 			 * Don't do `extends any` or `extends unknown`. That's the default.
 			 *
 			 * @see [@typescript-eslint/no-unnecessary-type-constraint](https://typescript-eslint.io/rules/no-unnecessary-type-constraint/)
 			 */
-			"@typescript-eslint/no-unnecessary-type-constraint": ERROR,
+			[`${typescriptNamespace}/no-unnecessary-type-constraint`]: ERROR,
 
 			/**
 			 * Disallows calling an function with an `any` type value.
 			 *
 			 * @see [@typescript-eslint/no-unsafe-argument](https://typescript-eslint.io/rules/no-unsafe-argument/)
 			 */
-			"@typescript-eslint/no-unsafe-argument": ERROR,
+			[`${typescriptNamespace}/no-unsafe-argument`]: ERROR,
 
 			/**
 			 * Avoid `any` assignments.
 			 *
 			 * @see [@typescript-eslint/no-unsafe-assignment](https://typescript-eslint.io/rules/no-unsafe-assignment/)
 			 */
-			"@typescript-eslint/no-unsafe-assignment": ERROR,
+			[`${typescriptNamespace}/no-unsafe-assignment`]: ERROR,
 
 			/**
 			 * Avoid calling `any`.
 			 *
 			 * @see [@typescript-eslint/no-unsafe-call](https://typescript-eslint.io/rules/no-unsafe-call/)
 			 */
-			"@typescript-eslint/no-unsafe-call": ERROR,
+			[`${typescriptNamespace}/no-unsafe-call`]: ERROR,
 
 			/**
 			 * Disallow comparing an enum value with a non-enum value.
@@ -996,21 +1013,21 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-unsafe-enum-comparison](https://typescript-eslint.io/rules/no-unsafe-enum-comparison/)
 			 */
-			"@typescript-eslint/no-unsafe-enum-comparison": ERROR,
+			[`${typescriptNamespace}/no-unsafe-enum-comparison`]: ERROR,
 
 			/**
 			 * Avoid accessing `any` members.
 			 *
 			 * @see [@typescript-eslint/no-unsafe-member-access](https://typescript-eslint.io/rules/no-unsafe-member-access/)
 			 */
-			"@typescript-eslint/no-unsafe-member-access": ERROR,
+			[`${typescriptNamespace}/no-unsafe-member-access`]: ERROR,
 
 			/**
 			 * Avoid returning `any`.
 			 *
 			 * @see [@typescript-eslint/no-unsafe-return](https://typescript-eslint.io/rules/no-unsafe-return/)
 			 */
-			"@typescript-eslint/no-unsafe-return": ERROR,
+			[`${typescriptNamespace}/no-unsafe-return`]: ERROR,
 
 			/**
 			 * Don't just leave expressions lying around! Use them!
@@ -1018,14 +1035,14 @@ export const typescriptRules =
 			 * @see [no-unused-expressions](https://eslint.org/docs/latest/rules/no-unused-expressions)
 			 * @see [@typescript-eslint/no-unused-expressions](https://typescript-eslint.io/rules/no-unused-expressions/)
 			 */
-			"@typescript-eslint/no-unused-expressions": ERROR,
+			[`${typescriptNamespace}/no-unused-expressions`]: ERROR,
 
 			/**
 			 * TypeScript already takes care of this.
 			 *
 			 * @see [@typescript-eslint/no-unused-vars](https://typescript-eslint.io/rules/no-unused-vars/)
 			 */
-			"@typescript-eslint/no-unused-vars": OFF,
+			[`${typescriptNamespace}/no-unused-vars`]: OFF,
 
 			/**
 			 * Avoid using something before is defined.
@@ -1033,7 +1050,7 @@ export const typescriptRules =
 			 * @see [no-use-before-define](https://eslint.org/docs/latest/rules/no-use-before-define)
 			 * @see [@typescript-eslint/no-use-before-define](https://typescript-eslint.io/rules/no-use-before-define/)
 			 */
-			"@typescript-eslint/no-use-before-define": ERROR,
+			[`${typescriptNamespace}/no-use-before-define`]: ERROR,
 
 			/**
 			 * When working with classes, let's not define useless constructors (constructors that only call `super`).
@@ -1041,7 +1058,7 @@ export const typescriptRules =
 			 * @see [no-useless-constructor](https://eslint.org/docs/latest/rules/no-useless-constructor)
 			 * @see [@typescript-eslint/no-useless-constructor](https://typescript-eslint.io/rules/no-useless-constructor/)
 			 */
-			"@typescript-eslint/no-useless-constructor": ERROR,
+			[`${typescriptNamespace}/no-useless-constructor`]: ERROR,
 
 			/**
 			 * Disallow empty exports that don't change anything in a module file.
@@ -1057,14 +1074,14 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/no-useless-empty-export](https://typescript-eslint.io/rules/no-useless-empty-export/)
 			 */
-			"@typescript-eslint/no-useless-empty-export": ERROR,
+			[`${typescriptNamespace}/no-useless-empty-export`]: ERROR,
 
 			/**
 			 * Use ECMAScript `import` and `export`.
 			 *
 			 * @see [@typescript-eslint/no-var-requires](https://typescript-eslint.io/rules/no-var-requires/)
 			 */
-			"@typescript-eslint/no-var-requires": ERROR,
+			[`${typescriptNamespace}/no-var-requires`]: ERROR,
 
 			/**
 			 * If you'll throw, throw errors, not literals.
@@ -1080,7 +1097,7 @@ export const typescriptRules =
 			 * @see [@typescript-eslint/only-throw-error](https://typescript-eslint.io/rules/only-throw-error/)
 			 * @see [no-throw-literal](https://eslint.org/docs/latest/rules/no-throw-literal)
 			 */
-			"@typescript-eslint/only-throw-error": ERROR,
+			[`${typescriptNamespace}/only-throw-error`]: ERROR,
 
 			/**
 			 * Use `as const` instead of writing `"value" as "value"`.
@@ -1097,7 +1114,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/prefer-as-const](https://typescript-eslint.io/rules/prefer-as-const/)
 			 */
-			"@typescript-eslint/prefer-as-const": ERROR,
+			[`${typescriptNamespace}/prefer-as-const`]: ERROR,
 
 			/**
 			 * Require each enum member value to be explicitly initialized.
@@ -1128,7 +1145,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/prefer-enum-initializers](https://typescript-eslint.io/rules/prefer-enum-initializers/)
 			 */
-			"@typescript-eslint/prefer-enum-initializers": ERROR,
+			[`${typescriptNamespace}/prefer-enum-initializers`]: ERROR,
 
 			/**
 			 * If you'll use a `for` loop on an array, use `for/of`.
@@ -1147,7 +1164,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/prefer-for-of](https://typescript-eslint.io/rules/prefer-for-of/)
 			 */
-			"@typescript-eslint/prefer-for-of": ERROR,
+			[`${typescriptNamespace}/prefer-for-of`]: ERROR,
 
 			/**
 			 * Use `() => Type` instead of other verbose alternatives.
@@ -1164,7 +1181,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/prefer-function-type](https://typescript-eslint.io/rules/prefer-function-type/)
 			 */
-			"@typescript-eslint/prefer-function-type": ERROR,
+			[`${typescriptNamespace}/prefer-function-type`]: ERROR,
 
 			/**
 			 * Avoid `indexOf` and use `includes` instead.
@@ -1179,7 +1196,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/prefer-includes](https://typescript-eslint.io/rules/prefer-includes/)
 			 */
-			"@typescript-eslint/prefer-includes": ERROR,
+			[`${typescriptNamespace}/prefer-includes`]: ERROR,
 
 			/**
 			 * Require all enum members to be literal values.
@@ -1207,7 +1224,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/prefer-includes](https://typescript-eslint.io/rules/prefer-includes/)
 			 */
-			"@typescript-eslint/prefer-literal-enum-member": [
+			[`${typescriptNamespace}/prefer-literal-enum-member`]: [
 				ERROR,
 				{ allowBitwiseExpressions: true },
 			],
@@ -1217,7 +1234,7 @@ export const typescriptRules =
 			 *
 			 * @see [@typescript-eslint/prefer-namespace-keyword](https://typescript-eslint.io/rules/prefer-namespace-keyword/)
 			 */
-			"@typescript-eslint/prefer-namespace-keyword": ERROR,
+			[`${typescriptNamespace}/prefer-namespace-keyword`]: ERROR,
 
 			/**
 			 * Use `??` instead of a ternary.
@@ -1232,7 +1249,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/prefer-nullish-coalescing](https://typescript-eslint.io/rules/prefer-nullish-coalescing/)
 			 */
-			"@typescript-eslint/prefer-nullish-coalescing": ERROR,
+			[`${typescriptNamespace}/prefer-nullish-coalescing`]: ERROR,
 
 			/**
 			 * Use `?.` instead of checking every property.
@@ -1247,7 +1264,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/prefer-optional-chain](https://typescript-eslint.io/rules/prefer-optional-chain/)
 			 */
-			"@typescript-eslint/prefer-optional-chain": ERROR,
+			[`${typescriptNamespace}/prefer-optional-chain`]: ERROR,
 
 			/**
 			 * In classes, private members should be read only.
@@ -1266,7 +1283,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/prefer-readonly](https://typescript-eslint.io/rules/prefer-readonly/)
 			 */
-			"@typescript-eslint/prefer-readonly": ERROR,
+			[`${typescriptNamespace}/prefer-readonly`]: ERROR,
 
 			/**
 			 * Enforce using type parameter when calling `Array#reduce` instead of casting.
@@ -1281,7 +1298,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/prefer-reduce-type-parameter](https://typescript-eslint.io/rules/prefer-reduce-type-parameter)
 			 */
-			"@typescript-eslint/prefer-reduce-type-parameter": ERROR,
+			[`${typescriptNamespace}/prefer-reduce-type-parameter`]: ERROR,
 
 			/**
 			 * Enforce using `String#startsWith` and `String#endsWith` over other equivalent methods of checking substrings.
@@ -1316,14 +1333,14 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/prefer-string-starts-ends-with](https://typescript-eslint.io/rules/prefer-string-starts-ends-with)
 			 */
-			"@typescript-eslint/prefer-string-starts-ends-with": ERROR,
+			[`${typescriptNamespace}/prefer-string-starts-ends-with`]: ERROR,
 
 			/**
 			 * Use `@ts-expect-error` instead of `@ts-ignore`.
 			 *
 			 * @see [@typescript-eslint/prefer-ts-expect-error](https://typescript-eslint.io/rules/prefer-ts-expect-error/)
 			 */
-			"@typescript-eslint/prefer-ts-expect-error": ERROR,
+			[`${typescriptNamespace}/prefer-ts-expect-error`]: ERROR,
 
 			/**
 			 * Always use `Array#sort` with a comparing function.
@@ -1338,7 +1355,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/require-array-sort-compare](https://typescript-eslint.io/rules/require-array-sort-compare/)
 			 */
-			"@typescript-eslint/require-array-sort-compare": ERROR,
+			[`${typescriptNamespace}/require-array-sort-compare`]: ERROR,
 
 			/**
 			 * Use `await` if you are using `async`.
@@ -1353,7 +1370,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/require-await](https://typescript-eslint.io/rules/require-await/)
 			 */
-			"@typescript-eslint/require-await": ERROR,
+			[`${typescriptNamespace}/require-await`]: ERROR,
 
 			/**
 			 * Use `+` with the same type (`number` or `string`).
@@ -1368,7 +1385,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/restrict-plus-operands](https://typescript-eslint.io/rules/restrict-plus-operands/)
 			 */
-			"@typescript-eslint/restrict-plus-operands": ERROR,
+			[`${typescriptNamespace}/restrict-plus-operands`]: ERROR,
 
 			/**
 			 * Only use strings or numbers inside template expressions.
@@ -1386,7 +1403,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/restrict-template-expressions](https://typescript-eslint.io/rules/restrict-template-expressions/)
 			 */
-			"@typescript-eslint/restrict-template-expressions": [
+			[`${typescriptNamespace}/restrict-template-expressions`]: [
 				ERROR,
 				{ allowNumber: true },
 			],
@@ -1406,21 +1423,21 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/strict-boolean-expressions](https://typescript-eslint.io/rules/strict-boolean-expressions/)
 			 */
-			"@typescript-eslint/strict-boolean-expressions": ERROR,
+			[`${typescriptNamespace}/strict-boolean-expressions`]: ERROR,
 
 			/**
 			 * If you'll use switch, make sure to cover every possible value.
 			 *
 			 * @see [@typescript-eslint/switch-exhaustiveness-check](https://typescript-eslint.io/rules/switch-exhaustiveness-check/)
 			 */
-			"@typescript-eslint/switch-exhaustiveness-check": ERROR,
+			[`${typescriptNamespace}/switch-exhaustiveness-check`]: ERROR,
 
 			/**
 			 * Old TypeScript.
 			 *
 			 * @see [@typescript-eslint/triple-slash-reference](https://typescript-eslint.io/rules/triple-slash-reference/)
 			 */
-			"@typescript-eslint/triple-slash-reference": ERROR,
+			[`${typescriptNamespace}/triple-slash-reference`]: ERROR,
 
 			/**
 			 * Bind stuff before using it.
@@ -1435,7 +1452,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/unbound-method](https://typescript-eslint.io/rules/unbound-method/)
 			 */
-			"@typescript-eslint/unbound-method": ERROR,
+			[`${typescriptNamespace}/unbound-method`]: ERROR,
 
 			/**
 			 * Unify signatures instead of overloading.
@@ -1451,7 +1468,7 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/unified-signatures](https://typescript-eslint.io/rules/unified-signatures/)
 			 */
-			"@typescript-eslint/unified-signatures": ERROR,
+			[`${typescriptNamespace}/unified-signatures`]: ERROR,
 
 			/**
 			 * Enforce typing arguments in `.catch()` callbacks as `unknown`.
@@ -1478,136 +1495,27 @@ export const typescriptRules =
 			 * ```
 			 * @see [@typescript-eslint/use-unknown-in-catch-callback-variable](https://typescript-eslint.io/rules/use-unknown-in-catch-callback-variable/)
 			 */
-			"@typescript-eslint/use-unknown-in-catch-callback-variable": ERROR,
+			[`${typescriptNamespace}/use-unknown-in-catch-callback-variable`]:
+				ERROR,
 
-			/**
-			 * Handled by `@typescript-eslint/naming-convention`.
-			 *
-			 * @see [@typescript-eslint/naming-convention](https://typescript-eslint.io/rules/naming-convention/)
-			 * @see [camelcase](https://eslint.org/docs/rules/camelcase)
-			 */
-			camelcase: OFF,
-
-			/**
-			 * Handled by `@typescript-eslint/consistent-return`.
-			 *
-			 * @see [@typescript-eslint/consistent-return](https://typescript-eslint.io/rules/consistent-return/)
-			 * @see [consistent-return](https://eslint.org/docs/rules/consistent-return)
-			 */
-			"consistent-return": OFF,
-
-			/**
-			 * Handled by `@typescript-eslint/dot-notation`.
-			 *
-			 * @see [@typescript-eslint/dot-notation](https://typescript-eslint.io/rules/dot-notation/)
-			 * @see [dot-notation](https://eslint.org/docs/rules/dot-notation)
-			 */
-			"dot-notation": OFF,
-
-			/**
-			 * Handled by `@typescript-eslint/naming-convention`.
-			 *
-			 * @see [@typescript-eslint/naming-convention](https://typescript-eslint.io/rules/naming-convention/)
-			 * @see [id-match](https://eslint.org/docs/rules/id-match)
-			 */
-			"id-match": OFF,
-
-			/**
-			 * Handled by `@typescript-eslint/init-declarations`.
-			 *
-			 * @see [@typescript-eslint/init-declarations](https://typescript-eslint.io/rules/init-declarations/)
-			 * @see [init-declarations](https://eslint.org/docs/rules/init-declarations)
-			 */
-			"init-declarations": OFF,
-
-			/**
-			 * Handled by TypeScript.
-			 */
-			"no-extra-boolean-cast": OFF,
-
-			/**
-			 * Handled by `@typescript-eslint/no-implied-eval`.
-			 *
-			 * @see [@typescript-eslint/no-implied-eval](https://typescript-eslint.io/rules/no-implied-eval/)
-			 * @see [no-implied-eval](https://eslint.org/docs/rules/no-implied-eval)
-			 */
-			"no-implied-eval": OFF,
-
-			/**
-			 * Handled by `@typescript-eslint/no-loop-func`.
-			 *
-			 * @see [@typescript-eslint/no-loop-func](https://typescript-eslint.io/rules/no-loop-func/)
-			 * @see [no-loop-func](https://eslint.org/docs/rules/no-loop-func)
-			 */
-			"no-loop-func": OFF,
-
-			/**
-			 * Handled by `@typescript-eslint/no-redeclare`.
-			 *
-			 * @see [@typescript-eslint/no-redeclare](https://typescript-eslint.io/rules/no-redeclare/)
-			 * @see [no-redeclare](https://eslint.org/docs/rules/no-redeclare)
-			 */
-			"no-redeclare": OFF,
-
-			/**
-			 * Handled by `@typescript-eslint/no-shadow`.
-			 *
-			 * @see [@typescript-eslint/no-shadow](https://typescript-eslint.io/rules/no-shadow/)
-			 * @see [no-shadow](https://eslint.org/docs/rules/no-shadow)
-			 */
-			"no-shadow": OFF,
-
-			/**
-			 * Handled by `@typescript-eslint/no-throw-literal`.
-			 *
-			 * @see [@typescript-eslint/no-throw-literal](https://typescript-eslint.io/rules/no-throw-literal/)
-			 * @see [no-throw-literal](https://eslint.org/docs/latest/rules/no-throw-literal)
-			 */
-			"no-throw-literal": OFF,
-
-			/**
-			 * Handled by TypeScript.
-			 */
-			"no-undef": OFF,
-
-			/**
-			 * Handled by `@typescript-eslint/init-declarations`.
-			 *
-			 * @see [@typescript-eslint/init-declarations](https://typescript-eslint.io/rules/init-declarations/)
-			 * @see [no-undef-init](https://eslint.org/docs/rules/no-undef-init)
-			 */
-			"no-undef-init": OFF,
-
-			/**
-			 * Handled by `@typescript-eslint/no-unused-expressions`.
-			 *
-			 * @see [@typescript-eslint/no-unused-expressions](https://typescript-eslint.io/rules/no-unused-expressions/)
-			 * @see [no-unused-expressions](https://eslint.org/docs/latest/rules/no-unused-expressions)
-			 */
-			"no-unused-expressions": OFF,
-
-			/**
-			 * Handled by `@typescript-eslint/no-use-before-define`.
-			 *
-			 * @see [@typescript-eslint/no-use-before-define](https://typescript-eslint.io/rules/no-use-before-define/)
-			 * @see [no-use-before-define](https://eslint.org/docs/latest/rules/no-use-before-define)
-			 */
-			"no-use-before-define": OFF,
-
-			/**
-			 * Handled by `@typescript-eslint/no-useless-constructor`.
-			 *
-			 * @see [@typescript-eslint/no-useless-constructor](https://typescript-eslint.io/rules/no-useless-constructor/)
-			 * @see [no-useless-constructor](https://eslint.org/docs/latest/rules/no-useless-constructor)
-			 */
-			"no-useless-constructor": OFF,
-
-			/**
-			 * Handled by `@typescript-eslint/require-await`.
-			 *
-			 * @see [@typescript-eslint/require-await](https://typescript-eslint.io/rules/require-await/)
-			 * @see [require-await](https://eslint.org/docs/latest/rules/require-await)
-			 */
-			"require-await": OFF,
+			...off(
+				"camelcase",
+				"consistent-return",
+				"dot-notation",
+				"id-match",
+				"init-declarations",
+				"no-extra-boolean-cast",
+				"no-implied-eval",
+				"no-loop-func",
+				"no-redeclare",
+				"no-shadow",
+				"no-throw-literal",
+				"no-undef",
+				"no-undef-init",
+				"no-unused-expressions",
+				"no-use-before-define",
+				"no-useless-constructor",
+				"require-await",
+			),
 		},
 	});

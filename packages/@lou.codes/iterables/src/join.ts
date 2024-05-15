@@ -16,11 +16,12 @@ import { reduce } from "./reduce.js";
  * @returns Curried function with `separator` in context.
  */
 export const join =
-	(separator: string) =>
+	<const Separator extends string>(separator: Separator) =>
 	<Item extends Strigifiable>(iterable: ReadOnlyIterable<Item>) =>
-		reduce<Item, Maybe<string>>(
+		(reduce<Item, Maybe<string>>(
 			item => string =>
 				`${string ?? EMPTY_STRING}${
 					string === undefined ? EMPTY_STRING : separator
 				}${item}`,
-		)(undefined)(iterable) ?? EMPTY_STRING;
+		)(undefined)(iterable) ??
+			EMPTY_STRING) as `${string}${Separator}${string}`;

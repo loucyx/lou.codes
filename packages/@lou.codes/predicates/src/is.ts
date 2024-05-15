@@ -15,6 +15,6 @@ import { is as objectIs } from "@lou.codes/constants/Object.js";
  * @returns Curried function with `expected` in context.
  */
 export const is =
-	<Expected>(expected: Expected) =>
+	<const Expected>(expected: Expected) =>
 	(actual: unknown): actual is Expected =>
 		objectIs(expected, actual);

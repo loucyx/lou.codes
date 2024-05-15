@@ -43,6 +43,6 @@
 		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'"
 	},
 	"sideEffects": false,
-	"size": "0.30",
+	"size": "0.31",
 	"type": "module"
 }

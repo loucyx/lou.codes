@@ -18,7 +18,7 @@ import { reduce } from "./reduce.js";
  * @returns Curried function with `separator` in context.
  */
 export const join =
-	(separator: string) =>
+	<Separator extends string>(separator: Separator) =>
 	<Iterable extends IsomorphicIterable>(iterable: Iterable) =>
 		awaitableHandler((string: Maybe<string>) => string ?? EMPTY_STRING)(
 			reduce<string, Maybe<string>>(
@@ -27,4 +27,6 @@ export const join =
 						string === undefined ? EMPTY_STRING : separator
 					}${item}`,
 			)(undefined)(iterable as IsomorphicIterable<string>),
-		) as Iterable extends AsyncIterable<unknown> ? Promise<string> : string;
+		) as Iterable extends AsyncIterable<unknown> ?
+			Promise<`${string}${Separator}${string}`>
+		:	`${string}${Separator}${string}`;

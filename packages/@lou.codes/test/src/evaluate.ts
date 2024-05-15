@@ -42,7 +42,12 @@ export const evaluate = async <Value>(testDescription: Test<Value>) => {
 			{
 				error:
 					error instanceof Error ?
-						`${error.name}: ${error.message}`
+						`${error.name}: ${error.message}${
+							error.stack
+								?.split("\n")[1]
+								?.trim()
+								.replace(/(?<stack>.+)/u, " ($1)") ?? ""
+						}`
 					:	error ?? UNKNOWN_ERROR,
 				kind: EXCEPTION,
 			},

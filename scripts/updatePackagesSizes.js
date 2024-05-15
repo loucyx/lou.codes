@@ -17,6 +17,7 @@ void Promise.all(
 		"@lou.codes/test",
 		"@lou.codes/types",
 		"@lou.codes/utils",
+		"cron-ast",
 		"preact-pair",
 		"react-pair",
 		"window-open-promise",

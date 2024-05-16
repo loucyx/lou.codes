@@ -51,7 +51,5 @@ export const construct =
 						() => bindInstance(instance[key] as Function),
 					]),
 			),
-		)<InstanceType<Constructor>>(instance) as Unbound<
-			InstanceType<Constructor>
-		>;
+		)(instance as object) as Unbound<InstanceType<Constructor>>;
 	};

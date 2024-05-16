@@ -1,5 +1,6 @@
 import { create } from "@lou.codes/constants/Object.js";
 import { ownKeys } from "@lou.codes/constants/Reflect.js";
+import { isFunction } from "@lou.codes/predicates";
 import type { ReadOnlyRecord, UnaryInput } from "@lou.codes/types";
 
 /**
@@ -23,9 +24,7 @@ import type { ReadOnlyRecord, UnaryInput } from "@lou.codes/types";
 export const intercept = <
 	const Interceptions extends ReadOnlyRecord<
 		PropertyKey,
-		<const ProxiedObject extends object = object>(
-			target: ProxiedObject,
-		) => unknown
+		(target: never) => unknown
 	>,
 >(
 	interceptions: Interceptions,
@@ -34,9 +33,14 @@ export const intercept = <
 	const cleanInterceptions = create<Interceptions>(interceptions);
 
 	const handler = {
-		get: (target, property) =>
-			cleanInterceptions[property]?.(target) ??
-			target[property as keyof typeof target],
+		get: (target, property) => {
+			const propertyValue = target[property as keyof typeof target];
+
+			return (cleanInterceptions[property]?.(target as never) ??
+				(isFunction(propertyValue) ?
+					(propertyValue as Function).bind(target)
+				:	propertyValue)) as unknown;
+		},
 		has: (target, property) =>
 			property in cleanInterceptions || property in target,
 		ownKeys: target => [
@@ -45,7 +49,8 @@ export const intercept = <
 	} as const satisfies ProxyHandler<object>;
 
 	return <
-		const Target extends UnaryInput<Interceptions[keyof Interceptions]>,
+		const Target extends object &
+			UnaryInput<Interceptions[keyof Interceptions]>,
 	>(
 		target: Target,
 	) =>

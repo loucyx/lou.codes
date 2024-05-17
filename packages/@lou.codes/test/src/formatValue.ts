@@ -16,4 +16,6 @@ import { formatValueDictionary } from "./formatValueDictionary.js";
  */
 export const formatValue = (value: unknown) =>
 	// eslint-disable-next-line unicorn/no-null
-	formatValueDictionary[value === null ? "null" : typeof value](value);
+	formatValueDictionary[value === null ? "null" : typeof value](
+		value as never,
+	);

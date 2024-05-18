@@ -17,6 +17,7 @@ export const {
 	getPrototypeOf,
 	hasOwn,
 	is,
+	keys,
 	values,
 } = ObjectAlias;
 

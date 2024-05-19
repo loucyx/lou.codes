@@ -69,6 +69,7 @@ export type { Replace } from "./Replace.js";
 export type { Seconds } from "./Seconds.js";
 export type { Single } from "./Single.js";
 export type { Strigifiable } from "./Strigifiable.js";
+export type { StringJoin } from "./StringJoin.js";
 export type { Tagger } from "./Tagger.js";
 export type { Tail } from "./Tail.js";
 export type { Truthy } from "./Truthy.js";

@@ -1,7 +1,7 @@
 {
 	"name": "functional-expression",
 	"description": "🧙 Functional Regular expression builder",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -26,7 +26,7 @@
 	"files": [
 		"dist"
 	],
-	"homepage": "https://lou.codes/libraries/functional-expression",
+	"homepage": "https://lou.codes/libraries/functional_expression",
 	"keywords": [
 		"functional",
 		"lou.codes",

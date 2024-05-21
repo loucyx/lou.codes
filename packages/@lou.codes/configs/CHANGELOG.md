@@ -1,5 +1,11 @@
 # Change log
 
+## 5.1.1
+
+### Patch Changes
+
+-   ⬆️ dependency upgrade.
+
 ## 5.1.0
 
 ### Minor Changes

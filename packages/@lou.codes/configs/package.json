@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/configs",
 	"description": "⚙️ Project configurations",
-	"version": "5.1.0",
+	"version": "5.1.1",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -18,10 +18,10 @@
 		"@changesets/types": "^6.0.0",
 		"@eslint/js": "^8.57.0",
 		"@types/eslint": "^8.56.10",
-		"@types/node": "^20.12.11",
-		"@typescript-eslint/eslint-plugin": "^7.9.0",
-		"@typescript-eslint/parser": "^7.9.0",
-		"@typescript-eslint/type-utils": "^7.9.0",
+		"@types/node": "^20.12.12",
+		"@typescript-eslint/eslint-plugin": "^7.10.0",
+		"@typescript-eslint/parser": "^7.10.0",
+		"@typescript-eslint/type-utils": "^7.10.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-import-resolver-node": "^0.3.9",
 		"eslint-plugin-functional": "6.5.1",

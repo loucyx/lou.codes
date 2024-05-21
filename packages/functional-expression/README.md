@@ -59,11 +59,11 @@ Import `functional-expression` using [esm.sh][esm.sh], and use it directly:
 <!-- Reference -->
 
 [changelog]:
-	https://github.com/loucyx/lou.codes/blob/main/packages/@loucyx/functional-expression/CHANGELOG.md
+	https://github.com/loucyx/lou.codes/blob/main/packages/functional-expression/CHANGELOG.md
 [coverage-badge]:
 	https://img.shields.io/coveralls/github/loucyx/lou.codes.svg?label=Test+Coverage&labelColor=666&color=0a8
 [coverage]: https://coveralls.io/github/loucyx/lou.codes
-[documentation]: https://lou.codes/libraries/functional-expression/
+[documentation]: https://lou.codes/libraries/functional_expression/
 [esm.sh]: https://esm.sh
 [license-badge]:
 	https://img.shields.io/npm/l/functional-expression.svg?label=License&labelColor=666&color=0a8

@@ -22,8 +22,6 @@ const thenSha256ToNumber = then(
  * seededRandom1 === seededRandom2; // true because it has the same seed
  * ```
  * @see [SubtleCrypto#digest](https://mdn.io/SubtleCrypto.digest)
- * @see {@link constructDataView}
- * @see {@link constructTextEncoder}
  * @param seed Seed to be used to generate random numbers.
  * @returns Pseudo-random number from seed.
  */

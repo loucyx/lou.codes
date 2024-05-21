@@ -44,7 +44,7 @@ Import `functional-expression` using [esm.sh][esm.sh], and use it directly:
 
 ```html
 <script type="module">
-	import { group, or } from "https://functional-expression";
+	import { group, or } from "https://esm.sh/functional-expression";
 
 	group(or("this", "that")); // "(?:this|that)"
 </script>

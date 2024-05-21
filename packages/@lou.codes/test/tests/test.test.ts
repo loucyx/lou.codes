@@ -58,12 +58,16 @@ export const testTests = [
 				must: "🟩",
 				received: () => {
 					// eslint-disable-next-line functional/no-throw-statements
-					throw new Error("❌");
+					throw Object.assign(new Error("❌"), {
+						stack: "\n\tat test.test.ts",
+					});
 				},
 				wanted: () => "🟩",
 			}),
 		wanted: () => ({
-			differences: [{ error: "Error: ❌", kind: EXCEPTION }],
+			differences: [
+				{ error: "Error: ❌ (at test.test.ts)", kind: EXCEPTION },
+			],
 			given: "🟢",
 			must: "🟩",
 		}),

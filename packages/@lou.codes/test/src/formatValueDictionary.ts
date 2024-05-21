@@ -43,15 +43,15 @@ export const formatValueDictionary: ReadOnlyRecord<
 			`${foregroundBrightGreen(
 				value.name,
 			)}(${foregroundBrightRed`"${value.message}"`})`
-		: iterator in value ? `${foregroundBrightGreen`Iterable`}([ ... ])`
-		: asyncIterator in value ?
-			`${foregroundBrightGreen`AsyncIterable`}([ ... ])`
 		:	`${foregroundBrightGreen(
 				(
 					value as {
 						readonly constructor?: { readonly name: string };
 					}
-				).constructor?.name ?? "Object",
+				).constructor?.name ??
+					(iterator in value ? "Iterable"
+					: asyncIterator in value ? "AsyncIterable"
+					: "Object"),
 			)}({ ${((
 				typeof (value as ReadonlyMap<unknown, unknown>).entries ===
 				"function"

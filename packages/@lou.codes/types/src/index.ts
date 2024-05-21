@@ -78,5 +78,4 @@ export type { TypeOfValue } from "./TypeOfValue.js";
 export type { Unary } from "./Unary.js";
 export type { UnaryInput } from "./UnaryInput.js";
 export type { UnaryOutput } from "./UnaryOutput.js";
-export type { Unbound } from "./Unbound.js";
 export type { ValueOf } from "./ValueOf.js";

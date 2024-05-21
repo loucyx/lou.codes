@@ -1,5 +1,4 @@
 import type { Tests } from "@lou.codes/test";
-import { constructRegExp } from "../src/constructRegExp.js";
 import { whenIsRegExp } from "../src/whenIsRegExp.js";
 
 const whenIsRegExpTest = whenIsRegExp(() => "truthy")(() => "falsy");
@@ -8,7 +7,7 @@ export const whenIsRegExpTests = [
 	{
 		given: "a whenIsRegExp with a RegExp",
 		must: "receive the truthy value",
-		received: () => whenIsRegExpTest(constructRegExp("")),
+		received: () => whenIsRegExpTest(/./u),
 		wanted: () => "truthy",
 	},
 	{

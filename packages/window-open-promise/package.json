@@ -1,7 +1,7 @@
 {
 	"name": "window-open-promise",
 	"description": "🪟 Promised Window.open();",
-	"version": "1.1.27",
+	"version": "1.1.28",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",

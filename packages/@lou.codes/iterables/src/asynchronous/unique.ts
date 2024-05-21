@@ -1,5 +1,4 @@
 import type { IsomorphicIterable } from "@lou.codes/types";
-import { constructSet } from "@lou.codes/utils";
 import { createIterableIterator } from "./createIterableIterator.js";
 
 /**
@@ -16,7 +15,7 @@ import { createIterableIterator } from "./createIterableIterator.js";
  */
 export const unique = <Item>(iterable: IsomorphicIterable<Item>) =>
 	createIterableIterator(async function* () {
-		const set = constructSet<Item>();
+		const set = new Set<Item>();
 
 		// eslint-disable-next-line functional/no-loop-statements
 		for await (const item of iterable) {

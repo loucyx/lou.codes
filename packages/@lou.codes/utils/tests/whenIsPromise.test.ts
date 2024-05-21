@@ -1,5 +1,4 @@
 import type { Tests } from "@lou.codes/test";
-import { constructPromise } from "../src/constructPromise.js";
 import { whenIsPromise } from "../src/whenIsPromise.js";
 
 const whenIsPromiseTest = whenIsPromise(() => "truthy")(() => "falsy");
@@ -8,7 +7,7 @@ export const whenIsPromiseTests = [
 	{
 		given: "a whenIsPromise with a Promise",
 		must: "receive the truthy value",
-		received: () => whenIsPromiseTest(constructPromise(() => undefined)),
+		received: () => whenIsPromiseTest(new Promise(() => undefined)),
 		wanted: () => "truthy",
 	},
 	{

@@ -1,10 +1,7 @@
 import { assign } from "@lou.codes/constants/Object.js";
-import type { intercept } from "./intercept.js";
 
 /**
  * Function to encapsulate object mutations.
- *
- * **⚠️ IMPORTANT:** Try to avoid this util, use {@link intercept} instead.
  *
  * @category Objects
  * @example

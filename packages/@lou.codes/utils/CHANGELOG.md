@@ -1,5 +1,16 @@
 # Change log
 
+## 3.0.0
+
+### Major Changes
+
+-   🔥 Remove all `construct` and `bind` utils, and also `intercept` 💩
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/types` to `v4.0.0`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v2.0.9`.
+
 ## 2.1.8
 
 ### Patch Changes

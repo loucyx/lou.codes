@@ -1,5 +1,5 @@
 import { EMPTY_OBJECT, EMPTY_STRING } from "@lou.codes/constants/empty.js";
-import { constructPromise, thunk, whenIsNull } from "@lou.codes/utils";
+import { thunk, whenIsNull } from "@lou.codes/utils";
 import type { WindowOpenPromiseOptions } from "./WindowOpenPromiseOptions.js";
 import { ERROR_MESSAGE } from "./constants.js";
 import { featureParser } from "./featureParser.js";
@@ -59,7 +59,7 @@ export const windowOpenPromise =
 		target = EMPTY_STRING,
 		...features
 	}: WindowOpenPromiseOptions = EMPTY_OBJECT) =>
-		constructPromise<Window>((resolve, reject) =>
+		new Promise<Window>((resolve, reject) =>
 			whenIsNull(thunk(reject)(new Error(ERROR_MESSAGE)))(resolve)(
 				global.open(url, target, featureParser(features)),
 			),

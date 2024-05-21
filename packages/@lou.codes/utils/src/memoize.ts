@@ -1,5 +1,4 @@
 import type { Unary, UnaryInput, UnaryOutput } from "@lou.codes/types";
-import { constructMap } from "./constructMap.js";
 
 /**
  * Memoize function return values for expensive operations.
@@ -28,8 +27,5 @@ export const memoize = <MemoizedFunction extends Unary<never, unknown>>(
 					unary(input as never) as UnaryOutput<MemoizedFunction>,
 				)
 				.get(input)) as unknown as MemoizedFunction)(
-		constructMap<
-			UnaryInput<MemoizedFunction>,
-			UnaryOutput<MemoizedFunction>
-		>(),
+		new Map<UnaryInput<MemoizedFunction>, UnaryOutput<MemoizedFunction>>(),
 	);

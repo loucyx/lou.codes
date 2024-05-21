@@ -1,5 +1,13 @@
 # Change log
 
+## 4.1.1
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/types` to `v4.0.0`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.25`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v3.0.7`.
+
 ## 4.1.0
 
 ### Minor Changes

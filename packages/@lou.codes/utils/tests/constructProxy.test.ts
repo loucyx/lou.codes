@@ -1,9 +1,0 @@
-import type { Test } from "@lou.codes/test";
-import { constructProxy } from "../src/constructProxy.js";
-
-export const constructProxyTest = {
-	given: "a constructProxy",
-	must: "return new instance of Proxy",
-	received: () => constructProxy({}, {}).constructor.name,
-	wanted: () => "Object", // We can't actually know if a Proxy is a Proxy.
-} satisfies Test<string>;

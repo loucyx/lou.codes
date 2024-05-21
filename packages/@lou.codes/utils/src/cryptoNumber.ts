@@ -1,12 +1,11 @@
 import type { Numeric } from "@lou.codes/types";
-import { constructDataView } from "./constructDataView.js";
-import { constructTextEncoder } from "./constructTextEncoder.js";
 import { then } from "./then.js";
 
-const { encode } = constructTextEncoder();
+const textEncoder = new TextEncoder();
+const encode = textEncoder.encode.bind(textEncoder);
 const thenSha256ToNumber = then(
 	(sha256: ArrayBuffer) =>
-		constructDataView(sha256).getUint32(0, true) / 0xff_ff_ff_ff,
+		new DataView(sha256).getUint32(0, true) / 0xff_ff_ff_ff,
 );
 
 /**

@@ -1,5 +1,12 @@
 # Change log
 
+## 4.0.12
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/types` to `v4.0.0`.
+-   ⬆️ upgrade `preact-pair` to `v1.1.8`.
+
 ## 4.0.11
 
 ### Patch Changes

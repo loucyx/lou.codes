@@ -1,5 +1,4 @@
 import type { ReadOnlyIterable } from "@lou.codes/types";
-import { constructSet } from "@lou.codes/utils";
 import { createIterableIterator } from "./createIterableIterator.js";
 
 /**
@@ -15,7 +14,7 @@ import { createIterableIterator } from "./createIterableIterator.js";
  */
 export const unique = <Item>(iterable: ReadOnlyIterable<Item>) =>
 	createIterableIterator(function* () {
-		const set = constructSet<Item>();
+		const set = new Set<Item>();
 
 		// eslint-disable-next-line functional/no-loop-statements
 		for (const item of iterable) {

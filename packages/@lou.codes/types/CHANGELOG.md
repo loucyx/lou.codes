@@ -1,5 +1,11 @@
 # Change log
 
+## 4.0.0
+
+### Major Changes
+
+-   🔥 removed `Unbound`.
+
 ## 3.1.0
 
 ### Minor Changes

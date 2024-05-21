@@ -1,5 +1,4 @@
 import type { Tests } from "@lou.codes/test";
-import { constructRegExp } from "../src/constructRegExp.js";
 import { whenIsPrototypeOfObject } from "../src/whenIsPrototypeOfObject.js";
 
 const whenIsPrototypeOfObjectTest = whenIsPrototypeOfObject(() => "truthy")(
@@ -22,7 +21,7 @@ export const whenIsPrototypeOfObjectTests = [
 	{
 		given: "a whenIsPrototypeOfObject with an object without the Object prototype.",
 		must: "receive the falsy value",
-		received: () => whenIsPrototypeOfObjectTest(constructRegExp("")),
+		received: () => whenIsPrototypeOfObjectTest(/./u),
 		wanted: () => "falsy",
 	},
 ] satisfies Tests<string>;

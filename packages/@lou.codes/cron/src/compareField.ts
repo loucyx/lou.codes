@@ -1,6 +1,6 @@
+import type { AllToken } from "./AllToken.js";
 import type { Field } from "./Field.js";
 import { compareRangeOrValue } from "./compareRangeOrValue.js";
-import { isAllToken } from "./isAllToken.js";
 import { isListField } from "./isListField.js";
 
 /**
@@ -22,8 +22,10 @@ import { isListField } from "./isListField.js";
  * @param field Field to compare.
  * @returns `true` if value is included in the given `field`, `false` if it isn't.
  */
-export const compareField = (value: number, field: Field<number>) =>
-	isAllToken(field) ||
-	(isListField(field) ?
+export const compareField = (
+	value: number,
+	field: Exclude<Field<number>, AllToken>,
+) =>
+	isListField(field) ?
 		field.some(compareRangeOrValue(value))
-	:	compareRangeOrValue(value)(field));
+	:	compareRangeOrValue(value)(field);

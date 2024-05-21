@@ -77,6 +77,8 @@ export const cronRegExp = join(
 				),
 			),
 		),
+		exists(WHITESPACE),
+		exists(NOT_WHITESPACE),
 	),
 	fieldRegExp(
 		"minute",

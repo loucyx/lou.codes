@@ -1,11 +1,10 @@
-import { entriesToObject, length } from "@lou.codes/iterables";
-import type { Maybe } from "@lou.codes/types";
+import { entriesToObject, length, objectToEntries } from "@lou.codes/iterables";
+import type { KeyOf, Maybe, ReadOnlyRecord } from "@lou.codes/types";
 import type { CronObject } from "./CronObject.js";
 import type { CronString } from "./CronString.js";
 import { cronRegExp } from "./cronRegExp.js";
 import { normalizeAliases } from "./normalizeAliases.js";
 import { parseFieldTuplesMap } from "./parseFieldTuplesMap.js";
-import { zipFieldNames } from "./zipFieldNames.js";
 
 /**
  * Parses a cron expression into an object representation.
@@ -20,7 +19,6 @@ import { zipFieldNames } from "./zipFieldNames.js";
  * parse("nope"); // undefined
  * ```
  * @see {@link parseFieldTuplesMap}
- * @see {@link zipFieldNames}
  * @see {@link normalizeAliases}
  *
  * @param expression Cron expression to be parsed.
@@ -29,10 +27,9 @@ import { zipFieldNames } from "./zipFieldNames.js";
  */
 export const parse = (expression: CronString) => {
 	const entries = parseFieldTuplesMap(
-		zipFieldNames(
-			new RegExp(cronRegExp, "iu")
-				.exec(normalizeAliases(expression))
-				?.slice(1) ?? [],
+		objectToEntries(
+			(new RegExp(cronRegExp, "iu").exec(normalizeAliases(expression))
+				?.groups ?? {}) as ReadOnlyRecord<KeyOf<CronObject>, string>,
 		),
 	);
 

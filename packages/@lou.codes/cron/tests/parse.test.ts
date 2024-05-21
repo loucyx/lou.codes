@@ -244,4 +244,26 @@ export const parseTests = [
 		received: () => parse(`* * ${februaryBadDayOfMonth} 2 *`),
 		wanted: () => undefined,
 	})),
+	...februaryBadDaysOfMonth.map(februaryBadDayOfMonth => ({
+		given: `* * ${februaryBadDayOfMonth} 2,3 *`,
+		must: "return valid date because 3 is included",
+		received: () =>
+			parse(`* * ${februaryBadDayOfMonth} 2,3 *`) ?
+				({
+					dayOfMonth: "*",
+					dayOfWeek: "*",
+					hour: "*",
+					minute: "*",
+					month: [2, 3],
+				} as const)
+			:	undefined,
+		wanted: () =>
+			({
+				dayOfMonth: "*",
+				dayOfWeek: "*",
+				hour: "*",
+				minute: "*",
+				month: [2, 3],
+			}) as const,
+	})),
 ] satisfies Tests<Maybe<CronObject>>;

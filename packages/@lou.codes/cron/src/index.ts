@@ -56,5 +56,4 @@ export {
 } from "./tokens.js";
 export { valueOrRangeRegExp } from "./valueOrRangeRegExp.js";
 export { valueRangeOrListRegExp } from "./valueRangeOrListRegExp.js";
-export { zipFieldNames } from "./zipFieldNames.js";
 export { zipRangeNames } from "./zipRangeNames.js";

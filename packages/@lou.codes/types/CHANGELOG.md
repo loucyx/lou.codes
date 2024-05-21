@@ -1,5 +1,15 @@
 # Change log
 
+## 3.1.0
+
+### Minor Changes
+
+-   ✨ Add `StringJoin`.
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.1.0`.
+
 ## 3.0.1
 
 ### Patch Changes

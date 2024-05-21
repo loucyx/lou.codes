@@ -1,5 +1,14 @@
 # Change log
 
+## 2.1.8
+
+### Patch Changes
+
+-   🐛 fix bug with `intercept` types.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.1.0`.
+-   ⬆️ upgrade `@lou.codes/types` to `v3.1.0`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v2.0.8`.
+
 ## 2.1.7
 
 ### Patch Changes

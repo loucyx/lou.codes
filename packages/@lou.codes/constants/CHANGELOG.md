@@ -1,5 +1,13 @@
 # Change log
 
+## 2.1.0
+
+### Minor Changes
+
+-   ✨ add `String.js` exporting utils such as `raw`.
+-   ✨ add `from` to `Array.js`.
+-   ✨ add `keys` to `Object.js`.
+
 ## 2.0.3
 
 ### Patch Changes

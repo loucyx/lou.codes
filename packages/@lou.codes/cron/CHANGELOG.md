@@ -1,5 +1,21 @@
 # Change log
 
+## 2.0.0
+
+### Major Changes
+
+-   🏗️ complete rework relying on a regular expressions.
+-   🔥 dropped support for cron quartz and other non-standards like "L" and "W".
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.1.0`.
+-   ⬆️ upgrade `@lou.codes/types` to `v3.1.0`.
+-   ⬆️ upgrade `@lou.codes/iterables` to `v3.2.0`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v2.0.8`.
+-   ⬆️ upgrade `functional-expression` to `v1.0.1`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.23`.
+
 ## 1.0.28
 
 ### Patch Changes

@@ -1,5 +1,19 @@
 # Change log
 
+## 4.1.0
+
+### Minor Changes
+
+-   🧑‍💻 improve errors by adding the file is coming from.
+-   🏷️ improve types for `formatValue`.
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.1.0`.
+-   ⬆️ upgrade `@lou.codes/types` to `v3.1.0`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.24`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v3.0.6`.
+
 ## 4.0.6
 
 ### Patch Changes

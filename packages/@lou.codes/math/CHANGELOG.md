@@ -1,5 +1,12 @@
 # Change log
 
+## 1.0.3
+
+### Patch Changes
+
+-   🔧 update `tsconfig.json` to only include `.ts` files.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.1.0`.
+
 ## 1.0.2
 
 ### Patch Changes

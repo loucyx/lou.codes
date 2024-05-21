@@ -1,5 +1,14 @@
 # Change log
 
+## 2.0.8
+
+### Patch Changes
+
+-   🐛 better types for `is`.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.1.0`.
+-   ⬆️ upgrade `@lou.codes/types` to `v3.1.0`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.0.23`.
+
 ## 2.0.7
 
 ### Patch Changes

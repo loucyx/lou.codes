@@ -1,5 +1,15 @@
 # Change log
 
+## 1.0.31
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.1.0`.
+-   ⬆️ upgrade `@lou.codes/types` to `v3.1.0`.
+-   ⬆️ upgrade `@lou.codes/utils` to `v2.1.8`.
+-   ⬆️ upgrade `@lou.codes/iterables` to `v3.2.0`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v2.0.8`.
+
 ## 1.0.30
 
 ### Patch Changes

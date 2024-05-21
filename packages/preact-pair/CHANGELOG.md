@@ -1,5 +1,11 @@
 # Change log
 
+## 1.1.7
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/types` to `v3.1.0`.
+
 ## 1.1.6
 
 ### Patch Changes

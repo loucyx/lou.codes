@@ -16,7 +16,8 @@
 		"@lou.codes/iterables": "workspace:*",
 		"@lou.codes/parsers": "workspace:*",
 		"@lou.codes/predicates": "workspace:*",
-		"@lou.codes/types": "workspace:*"
+		"@lou.codes/types": "workspace:*",
+		"functional-expression": "workspace:*"
 	},
 	"engines": {
 		"node": ">=22",
@@ -55,7 +56,7 @@
 		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
 	},
 	"sideEffects": false,
-	"size": "2.60",
+	"size": "1.96",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

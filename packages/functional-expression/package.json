@@ -1,0 +1,57 @@
+{
+	"name": "functional-expression",
+	"description": "🧙 Functional Regular expression builder",
+	"version": "1.0.0",
+	"author": {
+		"email": "contact@lou.codes",
+		"name": "Lou Cyx",
+		"url": "https://lou.codes"
+	},
+	"bugs": {
+		"email": "issues@lou.codes",
+		"url": "https://github.com/loucyx/lou.codes/issues"
+	},
+	"dependencies": {
+		"@lou.codes/constants": "workspace:*",
+		"@lou.codes/types": "workspace:*"
+	},
+	"engines": {
+		"node": ">=22",
+		"pnpm": ">=9"
+	},
+	"exports": {
+		".": "./dist/index.js",
+		"./*": "./dist/*"
+	},
+	"files": [
+		"dist"
+	],
+	"homepage": "https://lou.codes/libraries/functional-expression",
+	"keywords": [
+		"functional",
+		"lou.codes",
+		"loucyx",
+		"regexp",
+		"typescript"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/loucyx/lou.codes.git"
+	},
+	"scripts": {
+		"clean": "rimraf ./dist",
+		"compile": "tsc --project ./tsconfig.dist.json",
+		"git:pre-push": "run-s clean compile sanitize",
+		"lint": "eslint {src,tests}",
+		"lint:fix": "eslint {src,tests} --fix",
+		"prepublishOnly": "run-s clean compile prettify",
+		"prettify": "prettier --ignore-path=.prettierignore --log-level=warn --write './dist/**/*.{js,ts}'",
+		"sanitize": "run-p lint test",
+		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
+	},
+	"sideEffects": false,
+	"size": "0.59",
+	"type": "module",
+	"types": "./dist/index.d.ts"
+}

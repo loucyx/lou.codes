@@ -4,7 +4,7 @@
 ![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]
 ![Size][size-badge]
 
-⏲️ Cron Quartz and Cron UNIX expression parser.
+⏲️ Standard cron expression tools.
 
 ## Usage
 
@@ -23,22 +23,26 @@ yarn add @lou.codes/cron
 Import it and use it:
 
 ```typescript
-import { parseStringQuartz, parseCronQuartz } from "@lou.codes/cron";
+import { parse, stringify } from "@lou.codes/cron";
 
-const cron = parseStringQuartz("1-2/3 1-2,3,4 * 2W SEP,OCT 1L */10");
+const cron = parse("1-2,3,4 * 2 8,9 1");
 /*
 	{
-		seconds: { every: 3, start: { from: 1, to: 2 } },
 		minutes: [{ from: 1, to: 2 }, 3, 4],
 		hours: "*",
-		dayOfMonth: { nearest: 2 },
-		month: ["SEP", "OCT"],
-		dayOfWeek: { last: 1 },
-		year: { every: 10, start: "*" }
+		dayOfMonth: 2,
+		month: [8, 9],
+		dayOfWeek: 1
 	}
 */
 
-parseCronQuartz(cron); // "1-2/3 1-2,3,4 * 2W SEP,OCT 1L */10"
+stringify(cron); // "1-2,3,4 * 2 8,9 1"
+
+// Also works with partials:
+stringify({ hours: 13 }); // "* 13 * * *"
+
+// Only parses with valid dates:
+parse("* * 31 2 *"); // undefined because 2/31 is invalid
 ```
 
 ### 🦕 Deno
@@ -46,22 +50,26 @@ parseCronQuartz(cron); // "1-2/3 1-2,3,4 * 2W SEP,OCT 1L */10"
 Import `@lou.codes/cron` using the `npm:` prefix, and use it directly:
 
 ```typescript
-import { parseStringQuartz, parseCronQuartz } from "npm:@lou.codes/cron";
+import { parse, stringify } from "@lou.codes/cron";
 
-const cron = parseStringQuartz("1-2/3 1-2,3,4 * 2W SEP,OCT 1L */10");
+const cron = parse("1-2,3,4 * 2 8,9 1");
 /*
 	{
-		seconds: { every: 3, start: { from: 1, to: 2 } },
 		minutes: [{ from: 1, to: 2 }, 3, 4],
 		hours: "*",
-		dayOfMonth: { nearest: 2 },
-		month: ["SEP", "OCT"],
-		dayOfWeek: { last: 1 },
-		year: { every: 10, start: "*" }
+		dayOfMonth: 2,
+		month: [8, 9],
+		dayOfWeek: 1
 	}
 */
 
-parseCronQuartz(cron); // "1-2/3 1-2,3,4 * 2W SEP,OCT 1L */10"
+stringify(cron); // "1-2,3,4 * 2 8,9 1"
+
+// Also works with partials:
+stringify({ hours: 13 }); // "* 13 * * *"
+
+// Only parses with valid dates:
+parse("* * 31 2 *"); // undefined because 2/31 is invalid
 ```
 
 ### 🌎 Browser
@@ -70,25 +78,26 @@ Import `@lou.codes/cron` using [esm.sh][esm.sh], and use it directly:
 
 ```html
 <script type="module">
-	import {
-		parseStringQuartz,
-		parseCronQuartz,
-	} from "https://esm.sh/@lou.codes/cron";
+	import { parse, stringify } from "https://esm.sh/@lou.codes/cron";
 
-	const cron = parseStringQuartz("1-2/3 1-2,3,4 * 2W SEP,OCT 1L */10");
+	const cron = parse("1-2,3,4 * 2 8,9 1");
 	/*
-		{
-			seconds: { every: 3, start: { from: 1, to: 2 } },
-			minutes: [{ from: 1, to: 2 }, 3, 4],
-			hours: "*",
-			dayOfMonth: { nearest: 2 },
-			month: ["SEP", "OCT"],
-			dayOfWeek: { last: 1 },
-			year: { every: 10, start: "*" }
-		}
-	*/
+	{
+		minutes: [{ from: 1, to: 2 }, 3, 4],
+		hours: "*",
+		dayOfMonth: 2,
+		month: [8, 9],
+		dayOfWeek: 1
+	}
+*/
 
-	parseCronQuartz(cron); // "1-2/3 1-2,3,4 * 2W SEP,OCT 1L */10"
+	stringify(cron); // "1-2,3,4 * 2 8,9 1"
+
+	// Also works with partials:
+	stringify({ hours: 13 }); // "* 13 * * *"
+
+	// Only parses with valid dates:
+	parse("* * 31 2 *"); // undefined because 2/31 is invalid
 </script>
 ```
 
@@ -100,7 +109,17 @@ Import `@lou.codes/cron` using [esm.sh][esm.sh], and use it directly:
 
 ## To do
 
-A **big** change is coming with stricter types and a better DX. Stay tuned.
+Soon a human readable parser will be added, so we can do stuff like:
+
+```typescript
+readable("* * * * *"); // "Every minute"
+readable("5 * * * *"); // "Minute 5 of every hour"
+readable("* 5 * * *"); // "Every minute at 5 AM"
+readable("* * 5 * *"); // "Every minute at the 5th day of every month"
+readable("* * * 5 *"); // "Every minute in May"
+readable("* * * * 5"); // "Every minute on Friday"
+readable("5 5 5 5 5"); // "At 5:05 AM, the 5th day of May on Friday"
+```
 
 <!-- Reference -->
 

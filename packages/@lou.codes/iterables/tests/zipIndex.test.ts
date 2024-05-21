@@ -16,7 +16,7 @@ export const zipIndexTests = [
 	},
 	{
 		given: "an empty array",
-		must: "Empty iterable",
+		must: "empty iterable",
 		received: () => iterableToArray(zipIndex([])),
 		wanted: () => [],
 	},

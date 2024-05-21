@@ -55,7 +55,11 @@ main .content-panel:first-child:not(:only-child) + .content-panel {
 
 .hero img,
 .site-title img {
-	@apply rounded-full;
+	@apply rounded-full bg-[--sl-color-text-accent];
+}
+
+.hero img {
+	@apply my-8 md:my-auto;
 }
 
 table {

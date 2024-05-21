@@ -16,6 +16,8 @@ and maintain a cohesive ecosystem of tools and components.
 
 ## Libraries in this monorepo
 
+-   [🧙 functional-expression][functional_expression] - Functional Regular
+    expression builder
 -   [🖇️ react-pair][react_pair] - Util to help with the paired hook pattern in
     React.
 -   [🖇️ preact-pair][preact_pair] - Util to help with the paired hook pattern in
@@ -46,6 +48,7 @@ and maintain a cohesive ecosystem of tools and components.
 [create-package]: https://lou.codes/libraries/lou_codes_create_package/
 [cron]: https://lou.codes/libraries/lou_codes_cron/
 [diff]: https://lou.codes/libraries/lou_codes_diff/
+[functional_expression]: https://lou.codes/libraries/functional_expression/
 [iterables]: https://lou.codes/libraries/lou_codes_iterables/
 [lou.codes]: https://lou.codes
 [math]: https://lou.codes/libraries/lou_codes_math/

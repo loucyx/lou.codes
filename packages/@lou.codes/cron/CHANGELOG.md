@@ -1,5 +1,12 @@
 # Change log
 
+## 2.1.0
+
+### Minor Changes
+
+-   🐛 fix bug with parser and extra months
+-   🔥 removed some unused utils (relying on RegExp groups now).
+
 ## 2.0.3
 
 ### Patch Changes

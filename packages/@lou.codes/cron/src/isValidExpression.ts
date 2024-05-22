@@ -1,4 +1,5 @@
 import { match } from "@lou.codes/predicates";
+import { build } from "functional-expression";
 import type { CronString } from "./CronString.js";
 import { cronRegExp } from "./cronRegExp.js";
 
@@ -8,6 +9,6 @@ import { cronRegExp } from "./cronRegExp.js";
  * @category Cron String
  * @see {CronString}
  */
-export const isValidExpression = match(`/${cronRegExp}/iu`) as (
+export const isValidExpression = match(build("iu")(cronRegExp)) as (
 	string: string,
 ) => string is CronString;

@@ -1,5 +1,6 @@
 import { entriesToObject, length, objectToEntries } from "@lou.codes/iterables";
 import type { KeyOf, Maybe, ReadOnlyRecord } from "@lou.codes/types";
+import { build } from "functional-expression";
 import type { CronObject } from "./CronObject.js";
 import type { CronString } from "./CronString.js";
 import { cronRegExp } from "./cronRegExp.js";
@@ -28,7 +29,7 @@ import { parseFieldTuplesMap } from "./parseFieldTuplesMap.js";
 export const parse = (expression: CronString) => {
 	const entries = parseFieldTuplesMap(
 		objectToEntries(
-			(new RegExp(cronRegExp, "iu").exec(normalizeAliases(expression))
+			(build("iu")(cronRegExp).exec(normalizeAliases(expression))
 				?.groups ?? {}) as ReadOnlyRecord<KeyOf<CronObject>, string>,
 		),
 	);

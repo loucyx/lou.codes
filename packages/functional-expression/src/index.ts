@@ -1,6 +1,7 @@
 export type { HexadecimalDigit } from "./HexadecimalDigit.js";
 export type { UppercaseLetters } from "./UppercaseLetters.js";
 export { allow } from "./allow.js";
+export { build } from "./build.js";
 export { capture } from "./capture.js";
 export { captureNamed } from "./captureNamed.js";
 export { captureNext } from "./captureNext.js";
@@ -36,7 +37,6 @@ export { notCaptureNext } from "./notCaptureNext.js";
 export { notCapturePrevious } from "./notCapturePrevious.js";
 export { notSet } from "./notSet.js";
 export { notUnicodeCharacterClassEscape } from "./notUnicodeCharacterClassEscape.js";
-export { octal } from "./octal.js";
 export { optional } from "./optional.js";
 export { or } from "./or.js";
 export { quantity } from "./quantity.js";

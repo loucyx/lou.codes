@@ -1,5 +1,11 @@
 # Change log
 
+## 1.0.31
+
+### Patch Changes
+
+-   📝 update README.md.ts
+
 ## 1.0.30
 
 ### Patch Changes

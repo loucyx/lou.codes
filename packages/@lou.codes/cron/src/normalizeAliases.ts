@@ -1,6 +1,6 @@
 import { keys } from "@lou.codes/constants/Object.js";
 import type { KeyOf, ReadOnlyArray } from "@lou.codes/types";
-import { or } from "functional-expression";
+import { build, or } from "functional-expression";
 import type { FieldString } from "./FieldString.js";
 import { normalizeMap } from "./normalizeMap.js";
 
@@ -17,13 +17,12 @@ import { normalizeMap } from "./normalizeMap.js";
  */
 export const normalizeAliases = (expression: string) =>
 	expression.replaceAll(
-		new RegExp(
+		build("giu")(
 			or(
 				...(keys(normalizeMap) as ReadOnlyArray<
 					KeyOf<typeof normalizeMap>
 				>),
 			),
-			"giu",
 		),
 		alias =>
 			`${normalizeMap[alias.toLocaleLowerCase() as KeyOf<typeof normalizeMap>]}`,

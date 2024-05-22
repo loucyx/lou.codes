@@ -1,5 +1,12 @@
 # Change log
 
+## 2.0.0
+
+### Major Changes
+
+-   🔥 remove `octal` (it's deprecated in strict mode).
+-   ✨ add `build`.
+
 ## 1.0.3
 
 ### Patch Changes

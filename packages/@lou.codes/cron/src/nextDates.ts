@@ -1,6 +1,7 @@
 import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import { createIterableIterator } from "@lou.codes/iterables";
 import { isString, isUndefined } from "@lou.codes/predicates";
+import { DIGIT, build, escape, quantity } from "functional-expression";
 import type { CronObject } from "./CronObject.js";
 import type { CronString } from "./CronString.js";
 import { dateInCron } from "./dateInCron.js";
@@ -32,7 +33,16 @@ export const nextDates =
 			if (!isUndefined(cronObject)) {
 				const validDate = dateInCron(cronObject);
 				const now = new Date(
-					date.toISOString().replace(/\d{2}\.\d{3}/u, "00.000"),
+					date
+						.toISOString()
+						.replace(
+							build()(
+								quantity(2)(DIGIT),
+								escape("."),
+								quantity(3)(DIGIT),
+							),
+							"00.000",
+						),
 				);
 
 				// eslint-disable-next-line functional/no-loop-statements

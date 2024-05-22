@@ -1,5 +1,12 @@
 # Change log
 
+## 2.2.0
+
+### Minor Changes
+
+-   ✨ add new `valueOrListRegExp` and update `cronRegExp` to catch ranges
+    better.
+
 ## 2.1.0
 
 ### Minor Changes

@@ -54,6 +54,7 @@ export {
 	LIST_EXPRESSION_SEPARATOR_TOKEN,
 	RANGE_EXPRESSION_SEPARATOR_TOKEN,
 } from "./tokens.js";
+export { valueOrListRegExp } from "./valueOrListRegExp.js";
 export { valueOrRangeRegExp } from "./valueOrRangeRegExp.js";
 export { valueRangeOrListRegExp } from "./valueRangeOrListRegExp.js";
 export { zipRangeNames } from "./zipRangeNames.js";

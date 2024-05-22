@@ -248,15 +248,11 @@ export const parseTests = [
 		given: `* * ${februaryBadDayOfMonth} 2,3 *`,
 		must: "return valid date because 3 is included",
 		received: () =>
-			parse(`* * ${februaryBadDayOfMonth} 2,3 *`) ?
-				({
-					dayOfMonth: "*",
-					dayOfWeek: "*",
-					hour: "*",
-					minute: "*",
-					month: [2, 3],
-				} as const)
-			:	undefined,
+			({
+				...parse(`* * ${februaryBadDayOfMonth} 2,3 *`),
+				dayOfMonth: "*",
+				month: [2, 3],
+			}) as const,
 		wanted: () =>
 			({
 				dayOfMonth: "*",
@@ -266,4 +262,21 @@ export const parseTests = [
 				month: [2, 3],
 			}) as const,
 	})),
-] satisfies Tests<Maybe<CronObject>>;
+	...februaryBadDaysOfMonth.map(februaryBadDayOfMonth => ({
+		given: `* * ${februaryBadDayOfMonth} 2-4 *`,
+		must: "return valid date because 3 is included",
+		received: () =>
+			({
+				...parse(`* * ${februaryBadDayOfMonth} 2-4 *`),
+				dayOfMonth: "*",
+			}) as const,
+		wanted: () =>
+			({
+				dayOfMonth: "*",
+				dayOfWeek: "*",
+				hour: "*",
+				minute: "*",
+				month: { from: 2, to: 4 },
+			}) as const,
+	})),
+] satisfies Tests<Maybe<Partial<CronObject>>>;

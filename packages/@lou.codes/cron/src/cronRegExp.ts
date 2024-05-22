@@ -16,6 +16,7 @@ import {
 } from "functional-expression";
 import { fieldRegExp } from "./fieldRegExp.js";
 import { paddedRegExp } from "./paddedRegExp.js";
+import { valueOrListRegExp } from "./valueOrListRegExp.js";
 import { valueRangeOrListRegExp } from "./valueRangeOrListRegExp.js";
 
 /**
@@ -61,7 +62,7 @@ export const cronRegExp = join(
 				group(
 					valueRangeOrListRegExp(31),
 					exists(WHITESPACE),
-					valueRangeOrListRegExp(
+					valueOrListRegExp(
 						group(
 							or(
 								paddedRegExp(set(2, 4, 6, 9)),

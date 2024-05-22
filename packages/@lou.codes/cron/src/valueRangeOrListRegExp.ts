@@ -1,5 +1,4 @@
-import { exists, group, or } from "functional-expression";
-import { LIST_EXPRESSION_SEPARATOR_TOKEN } from "./tokens.js";
+import { valueOrListRegExp } from "./valueOrListRegExp.js";
 import { valueOrRangeRegExp } from "./valueOrRangeRegExp.js";
 
 /**
@@ -15,18 +14,4 @@ import { valueOrRangeRegExp } from "./valueOrRangeRegExp.js";
  */
 export const valueRangeOrListRegExp = <Value extends string | number>(
 	value: Value,
-) =>
-	group(
-		or(
-			valueOrRangeRegExp(value),
-			group(
-				exists(
-					group(
-						valueOrRangeRegExp(value),
-						LIST_EXPRESSION_SEPARATOR_TOKEN,
-					),
-				),
-				valueOrRangeRegExp(value),
-			),
-		),
-	);
+) => valueOrListRegExp(valueOrRangeRegExp(value));

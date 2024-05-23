@@ -47,4 +47,41 @@ export const nextDateTest = [
 		received: () => testDate("* * 29,30,31 2 *"),
 		wanted: () => new Date("1992-02-29T00:00:00.000"),
 	},
+	{
+		given: "* * * * * as an object",
+		must: "get next minute",
+		received: () =>
+			testDate({
+				dayOfMonth: "*",
+				dayOfWeek: "*",
+				hour: "*",
+				minute: "*",
+				month: "*",
+			}),
+		wanted: () => new Date("1989-10-13T10:16:00.000"),
+	},
+	{
+		given: "5 * * * * as an object",
+		must: "get next hour's minute 5",
+		received: () => testDate({ minute: 5 }),
+		wanted: () => new Date("1989-10-13T11:05:00.000"),
+	},
+	{
+		given: "5 10-13 * * * as an object",
+		must: "get next hour's minute 5",
+		received: () => testDate({ hour: { from: 10, to: 13 }, minute: 5 }),
+		wanted: () => new Date("1989-10-13T11:05:00.000"),
+	},
+	{
+		given: "* * 31 2 * as object",
+		must: "return nothing because it's an invalid date",
+		received: () => testDate({ dayOfMonth: 31, month: 2 }),
+		wanted: () => undefined,
+	},
+	{
+		given: "* * 29,30,31 2 * as an object",
+		must: "get first minute of next february 29",
+		received: () => testDate({ dayOfMonth: [29, 30, 31], month: 2 }),
+		wanted: () => new Date("1992-02-29T00:00:00.000"),
+	},
 ] satisfies Tests<Maybe<Date>>;

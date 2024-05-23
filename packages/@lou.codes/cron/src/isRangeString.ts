@@ -13,7 +13,7 @@ import { RANGE_EXPRESSION_SEPARATOR_TOKEN } from "./tokens.js";
  */
 export const isRangeString = (value: string): value is RangeString =>
 	rangeStringMatch(value) &&
-	(([from, to]) => from < to)(
+	(([from, to]) => from <= to)(
 		value.split(RANGE_EXPRESSION_SEPARATOR_TOKEN).map(parseDecimal) as [
 			from: number,
 			to: number,

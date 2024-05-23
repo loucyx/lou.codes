@@ -1,3 +1,4 @@
+import type { MaybeInfinity } from "./MaybeInfinity.js";
 import type { Precise } from "./Precise.js";
 import { bigIntMin } from "./bigIntMin.js";
 import { createPrecise } from "./createPrecise.js";
@@ -23,8 +24,8 @@ import { preciseToNumber } from "./preciseToNumber.js";
  * @returns Curried function with `addendRightBase` and `addendRightExponent` in context.
  */
 export const preciseAdd =
-	(addendRightBase: bigint, addendRightExponent = 0n) =>
-	(addendLeftBase: bigint, addendLeftExponent = 0n) => {
+	(addendRightBase: MaybeInfinity, addendRightExponent = 0n) =>
+	(addendLeftBase: MaybeInfinity, addendLeftExponent = 0n) => {
 		const commonExponent = bigIntMin(
 			addendLeftExponent,
 			addendRightExponent,

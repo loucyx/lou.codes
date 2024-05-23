@@ -1,3 +1,5 @@
+import { isBigInt } from "@lou.codes/predicates";
+import type { MaybeInfinity } from "./MaybeInfinity.js";
 import type { Precise } from "./Precise.js";
 import { createPrecise } from "./createPrecise.js";
 
@@ -19,9 +21,11 @@ import { createPrecise } from "./createPrecise.js";
  * @returns Curried function with `multiplierBase` and `multiplierExponent` in context.
  */
 export const preciseMultiply =
-	(multiplierBase: bigint, multiplierExponent = 0n) =>
-	(multiplicandBase: bigint, multiplicandExponent = 0n) =>
-		createPrecise(
-			multiplicandBase * multiplierBase,
-			multiplicandExponent + multiplierExponent,
-		);
+	(multiplierBase: MaybeInfinity, multiplierExponent = 0n) =>
+	(multiplicandBase: MaybeInfinity, multiplicandExponent = 0n) =>
+		isBigInt(multiplicandBase) && isBigInt(multiplierBase) ?
+			createPrecise(
+				multiplicandBase * multiplierBase,
+				multiplicandExponent + multiplierExponent,
+			)
+		:	createPrecise(Infinity);

@@ -1,5 +1,14 @@
 # Change log
 
+## 2.0.10
+
+### Patch Changes
+
+-   🏗️ use `@lou.codes/constants` for `Number` stuff.
+-   ⬆️ upgrade `@lou.codes/types` to `v4.0.1`.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.2.0`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.1.0`.
+
 ## 2.0.9
 
 ### Patch Changes

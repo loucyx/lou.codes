@@ -116,4 +116,10 @@ export const preciseDivideTests = [
 		received: () => preciseDivide(5n)(1n, -5n),
 		wanted: () => [2n, -6n],
 	},
+	{
+		given: "1 / 0",
+		must: "return Infinity",
+		received: () => preciseDivide(0n)(1n),
+		wanted: () => [Infinity],
+	},
 ] satisfies Tests<Precise>;

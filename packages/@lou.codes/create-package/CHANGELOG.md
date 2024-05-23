@@ -1,5 +1,14 @@
 # Change log
 
+## 1.0.32
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/types` to `v4.0.1`.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.2.0`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.26`.
+-   ⬆️ upgrade `@lou.codes/prompts` to `v1.0.26`.
+
 ## 1.0.31
 
 ### Patch Changes

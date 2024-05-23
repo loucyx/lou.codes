@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/cron",
 	"description": "⏲️ Cron Quartz and Cron UNIX expression parser",
-	"version": "2.2.1",
+	"version": "2.3.0",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",

@@ -1,5 +1,12 @@
 # Change log
 
+## 4.0.1
+
+### Patch Changes
+
+-   🐛 fix typing issues with auto-generated types.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.2.0`.
+
 ## 4.0.0
 
 ### Major Changes

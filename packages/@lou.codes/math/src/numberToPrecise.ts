@@ -1,3 +1,4 @@
+import { isFinite } from "@lou.codes/constants/Number.js";
 import { createPrecise } from "./createPrecise.js";
 
 /**
@@ -16,11 +17,15 @@ import { createPrecise } from "./createPrecise.js";
  * @returns A {@link Precise} representation of the given `number`.
  */
 export const numberToPrecise = (number: number) => {
-	const [base = "0", exponent = "0"] = `${number}`.split("e");
-	const [integral = "0", fractional = ""] = `${base}`.split(".");
+	if (isFinite(number)) {
+		const [base = "0", exponent = "0"] = `${number}`.split("e");
+		const [integral = "0", fractional = ""] = `${base}`.split(".");
 
-	return createPrecise(
-		BigInt(`${integral}${fractional}`),
-		-(BigInt(fractional.length) - BigInt(exponent)),
-	);
+		return createPrecise(
+			BigInt(`${integral}${fractional}`),
+			-(BigInt(fractional.length) - BigInt(exponent)),
+		);
+	} else {
+		return createPrecise(number);
+	}
 };

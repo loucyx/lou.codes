@@ -1,3 +1,6 @@
+import type { ITagData } from "vscode-html-languageservice";
+import type { Just } from "../Just.js";
+
 /**
  * Description can be a string or an object, this gets it in either format.
  *
@@ -6,5 +9,5 @@
  * @returns Description.
  */
 export const getDescription = (
-	description?: string | { readonly value: string },
-) => (typeof description === "string" ? description : description?.value ?? "");
+	description: Just<Readonly<ITagData["description"]>>,
+) => (typeof description === "string" ? description : description.value);

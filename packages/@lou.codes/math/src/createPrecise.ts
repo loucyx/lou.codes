@@ -1,5 +1,7 @@
 import { freeze } from "@lou.codes/constants/Object.js";
 import { EMPTY_ARRAY } from "@lou.codes/constants/empty.js";
+import { isBigInt } from "@lou.codes/predicates";
+import type { MaybeInfinity } from "./MaybeInfinity.js";
 import type { Precise } from "./Precise.js";
 
 /**
@@ -18,14 +20,21 @@ import type { Precise } from "./Precise.js";
  * @param exponent Exponent of the {@link Precise}.
  * @returns A normalized {@link Precise} value.
  */
-export const createPrecise = (base: bigint, exponent = 0n) => {
-	const stringBase = `${base}`;
-	const normalizedBase = stringBase.replace(/0+$/u, "");
-	const normalizedExponent =
-		BigInt(stringBase.length - normalizedBase.length) + exponent;
+export const createPrecise: {
+	(base: bigint, exponent?: bigint): Precise;
+	(base: number): Precise;
+} = (base: MaybeInfinity, exponent: bigint = 0n) => {
+	if (isBigInt(base)) {
+		const stringBase = `${base}`;
+		const normalizedBase = stringBase.replace(/0+$/u, "");
+		const normalizedExponent =
+			BigInt(stringBase.length - normalizedBase.length) + exponent;
 
-	return freeze([
-		BigInt(normalizedBase),
-		...(normalizedExponent === 0n ? EMPTY_ARRAY : [normalizedExponent]),
-	]) as Precise;
+		return freeze([
+			BigInt(normalizedBase),
+			...(normalizedExponent === 0n ? EMPTY_ARRAY : [normalizedExponent]),
+		]) as Precise;
+	} else {
+		return freeze([base]) as Precise;
+	}
 };

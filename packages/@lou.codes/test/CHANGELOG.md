@@ -1,5 +1,18 @@
 # Change log
 
+## 4.2.0
+
+### Minor Changes
+
+-   🐛 fix bugs with `formatValueDictionary`.
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/types` to `v4.0.1`.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.2.0`.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.26`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v3.0.8`.
+
 ## 4.1.1
 
 ### Patch Changes

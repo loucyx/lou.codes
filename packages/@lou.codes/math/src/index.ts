@@ -1,3 +1,4 @@
+export type { MaybeInfinity } from "./MaybeInfinity.js";
 export type { Precise } from "./Precise.js";
 export { add } from "./add.js";
 export { bigIntMin } from "./bigIntMin.js";

@@ -8,6 +8,14 @@ import { defineProperty } from "@lou.codes/constants/Object.js";
 import type { Tests } from "../src/Tests.js";
 import { formatValue } from "../src/formatValue.js";
 
+const iterable = function* () {
+	yield "test";
+};
+
+const asyncIterable = async function* () {
+	yield await Promise.resolve("test");
+};
+
 export const formatValueTests = [
 	{
 		given: "a BigInt",
@@ -139,5 +147,17 @@ export const formatValueTests = [
 		received: () => formatValue(new TypeError("Test")),
 		wanted: () =>
 			`${foregroundBrightGreen`TypeError`}(${foregroundBrightRed`"Test"`})`,
+	},
+	{
+		given: "an Iterable",
+		must: "return formatted Iterable",
+		received: () => formatValue(iterable()),
+		wanted: () => `${foregroundBrightGreen`Iterable`}({ … })`,
+	},
+	{
+		given: "an AsyncIterable",
+		must: "return formatted AsyncIterable",
+		received: () => formatValue(asyncIterable()),
+		wanted: () => `${foregroundBrightGreen`AsyncIterable`}({ … })`,
 	},
 ] satisfies Tests<string>;

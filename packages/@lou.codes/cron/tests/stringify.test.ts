@@ -146,4 +146,10 @@ export const stringifyTests = [
 		received: () => stringify({ hour: 13 }),
 		wanted: () => "* 13 * * *",
 	},
+	{
+		given: "an invalid value",
+		must: "return undefined",
+		received: () => stringify({ hour: 99 as 13 }),
+		wanted: () => undefined,
+	},
 ] as Tests<Maybe<CronString>>;

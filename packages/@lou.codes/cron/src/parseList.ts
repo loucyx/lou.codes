@@ -1,7 +1,8 @@
-import { parseDecimal } from "@lou.codes/parsers";
+import { iterableToArray, unique } from "@lou.codes/iterables";
 import type { Maybe } from "@lou.codes/types";
 import type { ListField } from "./ListField.js";
 import { isListString } from "./isListString.js";
+import { parseListMap } from "./parseListMap.js";
 import { parseRange } from "./parseRange.js";
 import { LIST_EXPRESSION_SEPARATOR_TOKEN } from "./tokens.js";
 
@@ -21,7 +22,7 @@ import { LIST_EXPRESSION_SEPARATOR_TOKEN } from "./tokens.js";
  */
 export const parseList = <Predicated extends number>(value: string) =>
 	(isListString(value) ?
-		value
-			.split(LIST_EXPRESSION_SEPARATOR_TOKEN)
-			.map(item => parseRange(item) ?? parseDecimal(item))
+		iterableToArray(
+			unique(parseListMap(value.split(LIST_EXPRESSION_SEPARATOR_TOKEN))),
+		)
 	:	undefined) as Maybe<ListField<Predicated>>;

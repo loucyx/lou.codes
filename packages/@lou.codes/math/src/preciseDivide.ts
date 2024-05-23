@@ -1,3 +1,4 @@
+import type { MaybeInfinity } from "./MaybeInfinity.js";
 import type { Precise } from "./Precise.js";
 import { numberToPrecise } from "./numberToPrecise.js";
 import { preciseMultiply } from "./preciseMultiply.js";
@@ -22,12 +23,18 @@ import { preciseToNumber } from "./preciseToNumber.js";
  * @param divisorExponent Divisor exponent to use in the division.
  * @returns Curried function with `divisorBase` and `divisorExponent` in context.
  */
-export const preciseDivide = (divisorBase: bigint, divisorExponent = 0n) =>
+export const preciseDivide = (
+	divisorBase: MaybeInfinity,
+	divisorExponent = 0n,
+) =>
 	(divisorBase === 0n ?
-		() => undefined
+		() => [Infinity]
 	:	preciseMultiply(
 			...numberToPrecise(
 				preciseToNumber(1n, -divisorExponent) /
 					preciseToNumber(divisorBase, 0n),
 			),
-		)) as (dividendBase: bigint, dividendExponent?: bigint) => Precise;
+		)) as (
+		dividendBase: MaybeInfinity,
+		dividendExponent?: bigint,
+	) => Precise;

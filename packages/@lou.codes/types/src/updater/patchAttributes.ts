@@ -1,6 +1,7 @@
 import { values } from "@lou.codes/constants/Object.js";
 import { EMPTY_OBJECT } from "@lou.codes/constants/empty.js";
 import type { IAttributeData } from "vscode-html-languageservice";
+import type { Just } from "../Just.js";
 import type { ReadOnlyArray } from "../ReadOnlyArray.js";
 import type { ReadOnlyRecord } from "../ReadOnlyRecord.js";
 import { getDescription } from "./getDescription.js";
@@ -23,9 +24,14 @@ export const patchAttributes = (attributes: ReadOnlyArray<IAttributeData>) =>
 						{
 							...patchedAttributes[attribute.name],
 							description: `${getDescription(
-								patchedAttributes[attribute.name]?.description,
+								patchedAttributes[attribute.name]
+									?.description as Just<
+									(typeof patchedAttributes)[string]["description"]
+								>,
 							)}\n\n---\n\n${getDescription(
-								attribute.description,
+								attribute.description as Just<
+									(typeof attribute)["description"]
+								>,
 							)}`,
 						}
 					:	attribute),

@@ -73,6 +73,25 @@ export const testTests = [
 		}),
 	},
 	{
+		given: "a throwing test (with no stack)",
+		must: "return object with error",
+		received: () =>
+			evaluate({
+				given: "🟢",
+				must: "🟩",
+				received: () => {
+					// eslint-disable-next-line functional/no-throw-statements
+					throw Object.assign(new Error("❌"), { stack: undefined });
+				},
+				wanted: () => "🟩",
+			}),
+		wanted: () => ({
+			differences: [{ error: "Error: ❌", kind: EXCEPTION }],
+			given: "🟢",
+			must: "🟩",
+		}),
+	},
+	{
 		given: "a unexpected error throwing test",
 		must: "return object with error",
 		received: () =>

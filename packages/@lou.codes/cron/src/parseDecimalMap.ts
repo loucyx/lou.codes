@@ -1,4 +1,7 @@
-import { map } from "@lou.codes/iterables";
-import { parseDecimal } from "@lou.codes/parsers";
+import { parseNumberMap } from "./parseNumberMap.js";
 
-export const parseDecimalMap = map(parseDecimal);
+/**
+ * @deprecated Use {@link parseNumberMap} instead.
+ */
+// eslint-disable-next-line unicorn/prefer-export-from
+export const parseDecimalMap = parseNumberMap;

@@ -1,3 +1,4 @@
+import type { MaybeInfinity } from "./MaybeInfinity.js";
 import type { Precise } from "./Precise.js";
 import { preciseAdd } from "./preciseAdd.js";
 
@@ -19,10 +20,10 @@ import { preciseAdd } from "./preciseAdd.js";
  * @returns Curried function with `subtrahendBase` and `subtrahendExponent` in context.
  */
 export const preciseSubtract = (
-	subtrahendBase: bigint,
+	subtrahendBase: MaybeInfinity,
 	subtrahendExponent = 0n,
 ) =>
 	preciseAdd(-subtrahendBase, subtrahendExponent) as (
-		minuendBase: bigint,
+		minuendBase: MaybeInfinity,
 		minuendExponent?: bigint,
 	) => Precise;

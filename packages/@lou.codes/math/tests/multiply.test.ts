@@ -115,4 +115,16 @@ export const multiplyTests = [
 		received: () => multiply(5)(0.000_01),
 		wanted: () => 0.000_05,
 	},
+	{
+		given: "Infinity * Infinity",
+		must: "return Infinity",
+		received: () => multiply(Infinity)(Infinity),
+		wanted: () => Infinity,
+	},
+	{
+		given: "13 * Infinity",
+		must: "return Infinity",
+		received: () => multiply(Infinity)(13),
+		wanted: () => Infinity,
+	},
 ] satisfies Tests<number>;

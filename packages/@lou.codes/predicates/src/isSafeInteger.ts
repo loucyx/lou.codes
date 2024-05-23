@@ -1,3 +1,4 @@
+import { isSafeInteger as numberIsSafeInteger } from "@lou.codes/constants/Number.js";
 import type { Unary } from "@lou.codes/types";
 
 /**
@@ -10,4 +11,4 @@ import type { Unary } from "@lou.codes/types";
  * isSafeInteger(10.13); // false
  * ```
  */
-export const isSafeInteger = Number.isSafeInteger as Unary<number, boolean>;
+export const isSafeInteger = numberIsSafeInteger as Unary<number, boolean>;

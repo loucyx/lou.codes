@@ -1,5 +1,27 @@
 # Change log
 
+## 2.3.0
+
+### Minor Changes
+
+-   ✨ add `parseListMap`.
+-   ✨ add `parseNumber`.
+-   ✨ add `parseNumberMap`.
+-   ✨ add `parseNumberMatch`.
+-   🐛 make `isRangeString` parse ranges with the same value in both fields.
+-   🏗️ make `nextDate` and `nextDates` take a partial `CronObject`.
+-   🗑️ deprecating `parseDecimalMap`.
+-   ⚡️ improve `parseList` to use iterables.
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/types` to `v4.0.1`.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.2.0`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v2.0.10`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.1.0`.
+-   ⬆️ upgrade `@lou.codes/iterables` to `v3.2.2`.
+-   ⬆️ upgrade `functional-expression` to `v2.0.1`.
+
 ## 2.2.1
 
 ### Patch Changes

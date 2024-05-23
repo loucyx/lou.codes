@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/math",
 	"description": "🧮 Precise basic math operations.",
-	"version": "1.0.3",
+	"version": "1.1.0",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -12,7 +12,8 @@
 		"url": "https://github.com/loucyx/lou.codes/issues"
 	},
 	"dependencies": {
-		"@lou.codes/constants": "workspace:*"
+		"@lou.codes/constants": "workspace:*",
+		"@lou.codes/predicates": "workspace:*"
 	},
 	"engines": {
 		"node": ">=22",
@@ -50,7 +51,7 @@
 		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
 	},
 	"sideEffects": false,
-	"size": "0.50",
+	"size": "0.55",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

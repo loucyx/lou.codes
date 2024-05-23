@@ -1,3 +1,4 @@
+import { isNaN } from "@lou.codes/constants/Number.js";
 import type { Maybe } from "@lou.codes/types";
 
 /**
@@ -21,4 +22,4 @@ export const undefineNaN = <Number extends number>(
 	// eslint-disable-next-line @typescript-eslint/ban-types
 	number: Number,
 	// eslint-disable-next-line @typescript-eslint/ban-types, @typescript-eslint/no-unnecessary-type-assertion
-) => (Number.isNaN(number) ? undefined : number) as Maybe<Number>;
+) => (isNaN(number) ? undefined : number) as Maybe<Number>;

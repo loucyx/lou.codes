@@ -3,35 +3,7 @@ import type { Maybe } from "@lou.codes/types";
 import type { CronObject } from "../src/CronObject.js";
 import type { CronString } from "../src/CronString.js";
 import { parse } from "../src/parse.js";
-
-const februaryBadDaysOfMonth = [
-	"30",
-	"31",
-	"30-30",
-	"30-31",
-	"31-30",
-	"31-31",
-	"30,30",
-	"30,31",
-	"31,30",
-	"31,31",
-	"30-30,30",
-	"30-30,31",
-	"30-31,30",
-	"30-31,31",
-	"31-30,30",
-	"31-30,31",
-	"31-31,30",
-	"31-31,31",
-	"30,30-30",
-	"30,31-30",
-	"31,30-30",
-	"31,31-30",
-	"30,30-31",
-	"30,31-31",
-	"31,30-31",
-	"31,31-31",
-] as const;
+import { februaryBadDaysOfMonth } from "./februaryBadDaysOfMonth.js";
 
 export const parseTests = [
 	{
@@ -279,4 +251,28 @@ export const parseTests = [
 				month: { from: 2, to: 4 },
 			}) as const,
 	})),
+	{
+		given: "a list with duplicated values",
+		must: "return flattened values",
+		received: () => parse("1,2,3,1 * * * *" as CronString),
+		wanted: () => ({
+			dayOfMonth: "*",
+			dayOfWeek: "*",
+			hour: "*",
+			minute: [1, 2, 3],
+			month: "*",
+		}),
+	},
+	{
+		given: "a list of ranges with duplicated values",
+		must: "return flattened values",
+		received: () => parse("1-1,2-2,3-3,1-1 * * * *" as CronString),
+		wanted: () => ({
+			dayOfMonth: "*",
+			dayOfWeek: "*",
+			hour: "*",
+			minute: [1, 2, 3],
+			month: "*",
+		}),
+	},
 ] satisfies Tests<Maybe<Partial<CronObject>>>;

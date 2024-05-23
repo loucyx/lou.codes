@@ -9,6 +9,7 @@ import { entries } from "@lou.codes/constants/Object.js";
 import { asyncIterator, iterator } from "@lou.codes/constants/Symbol.js";
 import { EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import type { ReadOnlyRecord, TypeOfValue } from "@lou.codes/types";
+import type { Maybe } from "@lou.codes/types/Maybe.js";
 import { formatValue } from "./formatValue.js";
 
 /**
@@ -44,28 +45,26 @@ export const formatValueDictionary: ReadOnlyRecord<
 				value.name,
 			)}(${foregroundBrightRed`"${value.message}"`})`
 		:	`${foregroundBrightGreen(
-				(
-					value as {
-						readonly constructor?: { readonly name: string };
-					}
-				).constructor?.name ??
+				((value.constructor as Maybe<Function>)?.name ?? "") ||
 					(iterator in value ? "Iterable"
 					: asyncIterator in value ? "AsyncIterable"
 					: "Object"),
-			)}({ ${((
-				typeof (value as ReadonlyMap<unknown, unknown>).entries ===
-				"function"
-			) ?
-				[...(value as ReadonlyMap<unknown, unknown>).entries()]
-			:	entries(value as ReadOnlyRecord)
-			)
-				.map(
-					([key, propertyValue]) =>
-						`${foregroundBrightRed`"${
-							key as string
-						}"`}: ${formatValue(propertyValue)}`,
+			)}({ ${
+				((
+					typeof (value as ReadonlyMap<unknown, unknown>).entries ===
+					"function"
+				) ?
+					[...(value as ReadonlyMap<unknown, unknown>).entries()]
+				:	entries(value as ReadOnlyRecord)
 				)
-				.join(", ")} })`,
+					.map(
+						([key, propertyValue]) =>
+							`${foregroundBrightRed`"${
+								key as string
+							}"`}: ${formatValue(propertyValue)}`,
+					)
+					.join(", ") || "…"
+			} })`,
 	string: (value: string) =>
 		foregroundBrightRed`"${value.replaceAll(
 			// eslint-disable-next-line no-control-regex

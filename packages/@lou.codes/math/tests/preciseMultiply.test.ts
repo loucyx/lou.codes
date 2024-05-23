@@ -116,4 +116,16 @@ export const preciseMultiplyTests = [
 		received: () => preciseMultiply(5n)(1n, -5n),
 		wanted: () => [5n, -5n],
 	},
+	{
+		given: "Infinity * Infinity",
+		must: "return [Infinity]",
+		received: () => preciseMultiply(Infinity)(Infinity),
+		wanted: () => [Infinity],
+	},
+	{
+		given: "13 * Infinity",
+		must: "return [Infinity]",
+		received: () => preciseMultiply(Infinity)(13),
+		wanted: () => [Infinity],
+	},
 ] satisfies Tests<Precise>;

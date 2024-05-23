@@ -73,7 +73,8 @@
 		"document:starlight": "cd docs && astro build",
 		"document:typedoc": "typedoc",
 		"document:typedoc-patch": "node ./scripts/writeFormattedDocs.js",
-		"git:pre-push": "pnpm --recursive git:pre-push",
+		"git:pre-push": "run-s update:sizes git:pre-push-recursive",
+		"git:pre-push-recursive": "pnpm --recursive git:pre-push",
 		"lint": "pnpm --recursive lint",
 		"prepare": "simple-git-hooks",
 		"prettify:changelogs": "prettier --ignore-path=.prettierignore --log-level=warn --write '**/CHANGELOG.md'",
@@ -84,7 +85,7 @@
 	},
 	"sideEffects": false,
 	"simple-git-hooks": {
-		"pre-push": "pnpm git:pre-push"
+		"pre-push": "run-s git:pre-push"
 	},
 	"type": "module"
 }

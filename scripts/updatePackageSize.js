@@ -87,34 +87,40 @@ export const updatePackageSize = packagePath => {
 		)
 		.then(fileContent => size(fileContent))
 		.then(bytesToKibBytes)
-		.then(
-			kibByteSize =>
-				(
-					// eslint-disable-next-line no-console
-					console.log(`${packagePath}: ${kibByteSize} KiB`),
-					Promise.all([
-						kibByteSize,
-						readFile(packageJsonLocation, "utf8").then(JSON.parse),
-					])
-				),
+		.then(kibByteSize =>
+			Promise.all([
+				kibByteSize,
+				readFile(packageJsonLocation, "utf8").then(JSON.parse),
+			]),
 		)
 		.then(
-			/** @param {[size: string, package: import("../package.json")]} packageJson */ ([
+			/** @param {[size: string, package: import("../package.json") & { size: string }]} packageJson */ ([
 				kibByteSize,
 				packageJson,
 			]) =>
-				Object.fromEntries(
-					Object.entries(packageJson).map(([key, value]) => [
-						key,
-						key === "size" ? kibByteSize : value,
-					]),
+				(
+					// eslint-disable-next-line no-console
+					console[packageJson.size === kibByteSize ? "log" : "error"](
+						`${packagePath}: ${kibByteSize} KiB`,
+					),
+					/** @type {const} */ ([
+						Object.fromEntries(
+							Object.entries(packageJson).map(([key, value]) => [
+								key,
+								key === "size" ? kibByteSize : value,
+							]),
+						),
+						packageJson.size !== kibByteSize,
+					])
 				),
 		)
-		.then(packageJson =>
+		.then(([packageJson, hasChanges]) =>
 			writeFile(
 				packageJsonLocation,
 				`${JSON.stringify(packageJson, undefined, "\t")}\n`,
 				"utf8",
+			).then(() =>
+				hasChanges ? Promise.reject(packageJson.name) : undefined,
 			),
 		);
 };

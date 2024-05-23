@@ -85,7 +85,7 @@
 	},
 	"sideEffects": false,
 	"simple-git-hooks": {
-		"pre-push": "run-s git:pre-push"
+		"pre-push": "pnpm git:pre-push"
 	},
 	"type": "module"
 }

@@ -1409,6 +1409,21 @@ export const typescriptRules =
 			],
 
 			/**
+			 * Enforce constituents of a type union/intersection to be sorted alphabetically.
+			 *
+			 * @example
+			 * ```typescript
+			 * // ❌ Incorrect
+			 * type T1 = B | A;
+			 *
+			 * // ✅ Correct
+			 * type T1 = A | B;
+			 * ```
+			 * @see [@typescript-eslint/sort-type-constituents](https://typescript-eslint.io/rules/sort-type-constituents/)
+			 */
+			[`${typescriptNamespace}/sort-type-constituents`]: ERROR,
+
+			/**
 			 * Comparisons should be applied to booleans only (not falsy/truthy).
 			 *
 			 * @example

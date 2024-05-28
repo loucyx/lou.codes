@@ -1,6 +1,6 @@
 import type { LocaleString } from "../src/LocaleString.js";
 
-type English = LocaleString<"en", "US" | "UK">;
+type English = LocaleString<"en", "UK" | "US">;
 type Spanish = LocaleString<"es", "AR" | "MX", "_">;
 
 export const enUS: English = "en-US";

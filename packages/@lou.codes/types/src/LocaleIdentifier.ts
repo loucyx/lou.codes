@@ -15,28 +15,91 @@ import type { LocaleString } from "./LocaleString.js";
  * @see {@link EmptyString}
  */
 export type LocaleIdentifier =
-	| "eo"
-	| "yue-Hant-HK"
-	| LocaleString<"af", `${"N" | "Z"}A`>
-	| LocaleString<"ak", "GH">
-	| LocaleString<"am", "ET">
 	| LocaleString<
 			"ar",
-			| `${"A" | "Y"}E`
 			| "BH"
 			| "DZ"
-			| `E${"G" | "H" | "R"}`
-			| `I${"L" | "Q"}`
 			| "JO"
 			| "KW"
-			| `I${"B" | "Y"}`
-			| `M${"A" | "R"}`
 			| "OM"
 			| "PS"
 			| "QA"
+			| `${"A" | "Y"}E`
+			| `E${"G" | "H" | "R"}`
+			| `I${"B" | "Y"}`
+			| `I${"L" | "Q"}`
+			| `M${"A" | "R"}`
 			| `S${"A" | "D" | "O" | "S" | "Y"}`
 			| `T${"D" | "N"}`
 	  >
+	| LocaleString<
+			"en",
+			| "CA"
+			| "HK"
+			| "IE"
+			| "JM"
+			| "SG"
+			| "TT"
+			| "VI"
+			| `A${"S" | "U"}`
+			| `B${"E" | "W" | "Z"}`
+			| `G${"B" | "U"}`
+			| `I${"L" | "N"}`
+			| `M${"H" | "P" | "T" | "U"}`
+			| `N${"A" | "Z"}`
+			| `P${"H" | "K"}`
+			| `U${"M" | "S"}`
+			| `Z${"A" | "W"}`
+	  >
+	| LocaleString<
+			"es",
+			| "419"
+			| "AR"
+			| "BO"
+			| "DO"
+			| "HN"
+			| "MX"
+			| "NI"
+			| "SV"
+			| "VE"
+			| `C${"L" | "O" | "R"}`
+			| `E${"C" | "S"}`
+			| `G${"Q" | "T"}`
+			| `P${"A" | "E" | "R" | "Y"}`
+			| `U${"S" | "Y"}`
+	  >
+	| LocaleString<
+			"fr",
+			| "DJ"
+			| "FR"
+			| "KM"
+			| "LU"
+			| "NE"
+			| "SN"
+			| `B${"E" | "F" | "I" | "J" | "L"}`
+			| `C${"A" | "D" | "F" | "G" | "H" | "I" | "M"}`
+			| `G${"A" | "N" | "P" | "Q"}`
+			| `M${"C" | "F" | "G" | "L" | "Q"}`
+			| `R${"E" | "W"}`
+			| `T${"D" | "G"}`
+	  >
+	| LocaleString<
+			"pa",
+			LocaleString<"Arab", "PK"> | LocaleString<"Guru", "IN">
+	  >
+	| LocaleString<
+			"uz",
+			LocaleString<"Arab", "AF"> | LocaleString<"Cyrl" | "Latn", "UZ">
+	  >
+	| LocaleString<
+			"zh",
+			| LocaleString<"Hans", "CN" | "SG">
+			| LocaleString<"Hant", "TW">
+			| LocaleString<`Han${"s" | "t"}`, "HK" | "MO">
+	  >
+	| LocaleString<"af", `${"N" | "Z"}A`>
+	| LocaleString<"ak", "GH">
+	| LocaleString<"am", "ET">
 	| LocaleString<"as", "IN">
 	| LocaleString<"asa", "TZ">
 	| LocaleString<"az", LocaleString<"Cyrl" | "Latn", "AZ">>
@@ -55,46 +118,10 @@ export type LocaleIdentifier =
 	| LocaleString<"cy", "GB">
 	| LocaleString<"da", "DK">
 	| LocaleString<"dav", "KE">
-	| LocaleString<"de", "AT" | `${"B" | "D"}E` | "CH" | `L${"I" | "U"}`>
+	| LocaleString<"de", "AT" | "CH" | `${"B" | "D"}E` | `L${"I" | "U"}`>
 	| LocaleString<"ebu", "KE">
 	| LocaleString<"ee", "GH" | "TG">
 	| LocaleString<"el", "CY" | "GR">
-	| LocaleString<
-			"en",
-			| `A${"S" | "U"}`
-			| `B${"E" | "W" | "Z"}`
-			| "CA"
-			| `G${"B" | "U"}`
-			| "HK"
-			| "IE"
-			| `I${"L" | "N"}`
-			| "JM"
-			| `M${"H" | "P" | "T" | "U"}`
-			| `N${"A" | "Z"}`
-			| `P${"H" | "K"}`
-			| "SG"
-			| "TT"
-			| `U${"M" | "S"}`
-			| "VI"
-			| `Z${"A" | "W"}`
-	  >
-	| LocaleString<
-			"es",
-			| "419"
-			| "AR"
-			| "BO"
-			| `C${"L" | "O" | "R"}`
-			| "DO"
-			| `E${"C" | "S"}`
-			| `G${"Q" | "T"}`
-			| "HN"
-			| "MX"
-			| "NI"
-			| `P${"A" | "E" | "R" | "Y"}`
-			| "SV"
-			| `U${"S" | "Y"}`
-			| "VE"
-	  >
 	| LocaleString<"et", "EE">
 	| LocaleString<"eu", "ES">
 	| LocaleString<"fa", "AF" | "IR">
@@ -102,21 +129,6 @@ export type LocaleIdentifier =
 	| LocaleString<"fi", "FI">
 	| LocaleString<"fil", "PH">
 	| LocaleString<"fo", "FO">
-	| LocaleString<
-			"fr",
-			| `B${"E" | "F" | "I" | "J" | "L"}`
-			| `C${"A" | "D" | "F" | "G" | "H" | "I" | "M"}`
-			| "DJ"
-			| "FR"
-			| `G${"A" | "N" | "P" | "Q"}`
-			| "KM"
-			| "LU"
-			| `M${"C" | "F" | "G" | "L" | "Q"}`
-			| "NE"
-			| `R${"E" | "W"}`
-			| "SN"
-			| `T${"D" | "G"}`
-	  >
 	| LocaleString<"ga", "IE">
 	| LocaleString<"gl", "ES">
 	| LocaleString<"gsw", "CH">
@@ -177,10 +189,6 @@ export type LocaleIdentifier =
 	| LocaleString<"nyn", "UG">
 	| LocaleString<"om", "ET" | "KE">
 	| LocaleString<"or", "IN">
-	| LocaleString<
-			"pa",
-			LocaleString<"Arab", "PK"> | LocaleString<"Guru", "IN">
-	  >
 	| LocaleString<"pl", "PL">
 	| LocaleString<"ps", "AF">
 	| LocaleString<"pt", "BR" | "GW" | "MZ" | "PT">
@@ -214,18 +222,10 @@ export type LocaleIdentifier =
 	| LocaleString<"tzm", LocaleString<"Latn", "MA">>
 	| LocaleString<"uk", "UA">
 	| LocaleString<"ur", "IN" | "PK">
-	| LocaleString<
-			"uz",
-			LocaleString<"Arab", "AF"> | LocaleString<"Cyrl" | "Latn", "UZ">
-	  >
 	| LocaleString<"vi", "VN">
 	| LocaleString<"vun", "TZ">
 	| LocaleString<"xog", "UG">
 	| LocaleString<"yo", "NG">
-	| LocaleString<
-			"zh",
-			| LocaleString<`Han${"s" | "t"}`, "HK" | "MO">
-			| LocaleString<"Hans", "CN" | "SG">
-			| LocaleString<"Hant", "TW">
-	  >
-	| LocaleString<"zu", "ZA">;
+	| LocaleString<"zu", "ZA">
+	| "eo"
+	| "yue-Hant-HK";

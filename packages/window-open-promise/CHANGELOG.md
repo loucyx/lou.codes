@@ -1,5 +1,14 @@
 # Change log
 
+## 1.1.30
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/iterables` to `v3.2.3`.
+-   ⬆️ upgrade `@lou.codes/types` to `v4.0.2`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v2.0.11`.
+-   ⬆️ upgrade `@lou.codes/utils` to `v3.0.2`.
+
 ## 1.1.29
 
 ### Patch Changes

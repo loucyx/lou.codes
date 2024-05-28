@@ -39,5 +39,5 @@ export const parseRange = <Predicated extends number>(value: string) => {
 	return (
 		maybeRange?.[FROM_NAME] === maybeRange?.[TO_NAME] ?
 			maybeRange?.[FROM_NAME]
-		:	maybeRange) as Maybe<RangeField<Predicated> | Predicated>;
+		:	maybeRange) as Maybe<Predicated | RangeField<Predicated>>;
 };

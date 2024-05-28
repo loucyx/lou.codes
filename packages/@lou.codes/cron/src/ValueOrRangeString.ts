@@ -5,4 +5,4 @@ import type { RangeString } from "./RangeString.js";
  *
  * @category Cron String
  */
-export type ValueOrRangeString = `${number}` | RangeString;
+export type ValueOrRangeString = RangeString | `${number}`;

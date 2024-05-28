@@ -1,5 +1,11 @@
 # Change log
 
+## 4.0.2
+
+### Patch Changes
+
+-   🚨 apply linting fixes.
+
 ## 4.0.1
 
 ### Patch Changes

@@ -17,5 +17,5 @@ import { nextDates } from "./nextDates.js";
 export const nextDate = (date: Readonly<Date>) => {
 	const nextDatesFor = nextDates(date);
 
-	return (cron: Partial<CronObject> | CronString) => head(nextDatesFor(cron));
+	return (cron: CronString | Partial<CronObject>) => head(nextDatesFor(cron));
 };

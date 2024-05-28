@@ -17,6 +17,6 @@ import type { Enumerate } from "./Enumerate.js";
  * @see [Date](https://mdn.io/Date)
  */
 export type ISODayOfMonth =
-	| `0${Exclude<Digit, 0>}`
 	| `${1 | 2}${Digit}`
+	| `0${Exclude<Digit, 0>}`
 	| `3${Enumerate<1>}`;

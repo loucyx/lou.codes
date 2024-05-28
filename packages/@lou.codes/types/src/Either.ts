@@ -15,4 +15,4 @@
  * @template Right The "correct" type.
  * @template Left The "error" type.
  */
-export type Either<Right, Left> = Right | Left;
+export type Either<Right, Left> = Left | Right;

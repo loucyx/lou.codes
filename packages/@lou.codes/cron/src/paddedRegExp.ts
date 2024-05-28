@@ -11,5 +11,5 @@ import { join, optional } from "functional-expression";
  * @param value Value to pad.
  * @returns RegExp to match value with padded `0`.
  */
-export const paddedRegExp = <Value extends string | number>(value: Value) =>
+export const paddedRegExp = <Value extends number | string>(value: Value) =>
 	join(optional(0), value);

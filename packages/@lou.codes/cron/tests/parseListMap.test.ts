@@ -14,4 +14,4 @@ export const parseListMapTests = [
 			),
 		wanted: () => [1, 5, 13, { from: 5, to: 13 }, 13, undefined, undefined],
 	},
-] satisfies Tests<ReadOnlyArray<Maybe<number | RangeField<number>>>>;
+] satisfies Tests<ReadOnlyArray<Maybe<RangeField<number> | number>>>;

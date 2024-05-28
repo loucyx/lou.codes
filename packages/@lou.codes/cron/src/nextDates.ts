@@ -21,7 +21,7 @@ import { stringify } from "./stringify.js";
  * @returns Curried function with date set.
  */
 export const nextDates =
-	(date: Readonly<Date>) => (cron: Partial<CronObject> | CronString) =>
+	(date: Readonly<Date>) => (cron: CronString | Partial<CronObject>) =>
 		createIterableIterator(function* () {
 			const cronObject = parse(
 				isString(cron) ? cron : (

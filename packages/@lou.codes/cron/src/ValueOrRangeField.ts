@@ -6,4 +6,4 @@ import type { RangeField } from "./RangeField.js";
  *
  * @category Cron Object
  */
-export type ValueOrRangeField<Value extends number> = Value | RangeField<Value>;
+export type ValueOrRangeField<Value extends number> = RangeField<Value> | Value;

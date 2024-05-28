@@ -12,6 +12,6 @@ import { valueOrRangeRegExp } from "./valueOrRangeRegExp.js";
  * @param value Value to match by itself, as a range or as a list.
  * @returns RegExp to match value, range or list.
  */
-export const valueRangeOrListRegExp = <Value extends string | number>(
+export const valueRangeOrListRegExp = <Value extends number | string>(
 	value: Value,
 ) => valueOrListRegExp(valueOrRangeRegExp(value));

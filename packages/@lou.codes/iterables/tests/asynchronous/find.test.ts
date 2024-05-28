@@ -4,7 +4,7 @@ import type { Maybe } from "@lou.codes/types";
 import { find } from "../../src/asynchronous/find.js";
 import { toIterable } from "../../src/asynchronous/toIterable.js";
 
-const findString = find<string | number>(isString);
+const findString = find<number | string>(isString);
 
 export const findTests = [
 	{

@@ -12,7 +12,7 @@ import { LIST_EXPRESSION_SEPARATOR_TOKEN } from "./tokens.js";
  * @param value Value to match by itself or as a list.
  * @returns RegExp to match value or list.
  */
-export const valueOrListRegExp = <Value extends string | number>(
+export const valueOrListRegExp = <Value extends number | string>(
 	value: Value,
 ) =>
 	group(

@@ -1,5 +1,16 @@
 # Change log
 
+## 2.3.1
+
+### Patch Changes
+
+-   🚨 apply linting fixes.
+-   ⬆️ upgrade `@lou.codes/iterables` to `v3.2.3`.
+-   ⬆️ upgrade `@lou.codes/types` to `v4.0.2`.
+-   ⬆️ upgrade `@lou.codes/parsers` to `v1.1.1`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v2.0.11`.
+-   ⬆️ upgrade `functional-expression` to `v2.0.2`.
+
 ## 2.3.0
 
 ### Minor Changes

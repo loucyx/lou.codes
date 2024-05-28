@@ -1,5 +1,11 @@
 # Change log
 
+## 1.1.1
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/predicates` to `v2.0.11`.
+
 ## 1.1.0
 
 ### Minor Changes

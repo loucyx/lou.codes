@@ -18,7 +18,7 @@ import { reduce } from "./reduce.js";
  * @param iterable Iterable to be turned into an array.
  * @returns Array made of iterable items.
  */
-export const iterableToArray = reduce<unknown, ReadOnlyArray | EmptyArray>(
+export const iterableToArray = reduce<unknown, EmptyArray | ReadOnlyArray>(
 	item => (array: ReadOnlyArray) => [...array, item],
 )(EMPTY_ARRAY) as <Iterable extends IsomorphicIterable>(
 	iterable: Iterable,

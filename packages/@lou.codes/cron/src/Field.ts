@@ -14,5 +14,5 @@ import type { ValueOrRangeField } from "./ValueOrRangeField.js";
  */
 export type Field<Value extends number> =
 	| AllToken
-	| ValueOrRangeField<Value>
-	| ListField<Value>;
+	| ListField<Value>
+	| ValueOrRangeField<Value>;

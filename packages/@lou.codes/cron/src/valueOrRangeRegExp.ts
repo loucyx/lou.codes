@@ -12,6 +12,6 @@ import { RANGE_EXPRESSION_SEPARATOR_TOKEN } from "./tokens.js";
  * @param value Value to match by itself or as a range.
  * @returns RegExp to match value or range.
  */
-export const valueOrRangeRegExp = <Value extends string | number>(
+export const valueOrRangeRegExp = <Value extends number | string>(
 	value: Value,
 ) => join(value, optional(group(RANGE_EXPRESSION_SEPARATOR_TOKEN, value)));

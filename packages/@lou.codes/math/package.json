@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/math",
 	"description": "🧮 Precise basic math operations.",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -51,7 +51,7 @@
 		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
 	},
 	"sideEffects": false,
-	"size": "0.55",
+	"size": "0.56",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

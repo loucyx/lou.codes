@@ -21,5 +21,5 @@ import type { MultiCharacterString } from "./MultiCharacterString.js";
 export type LocaleString<
 	LanguageCode extends MultiCharacterString,
 	CountryCodes extends MultiCharacterString,
-	Separator extends "-" | "_" = "-",
+	Separator extends "_" | "-" = "-",
 > = `${LanguageCode}${MaybeEmpty<`${Separator}${CountryCodes}`>}`;

@@ -1,5 +1,14 @@
 # Change log
 
+## 3.2.3
+
+### Patch Changes
+
+-   🚨 apply linting fixes.
+-   ⬆️ upgrade `@lou.codes/types` to `v4.0.2`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v2.0.11`.
+-   ⬆️ upgrade `@lou.codes/utils` to `v3.0.2`.
+
 ## 3.2.2
 
 ### Patch Changes

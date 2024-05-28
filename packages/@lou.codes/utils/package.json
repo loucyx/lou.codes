@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/utils",
 	"description": "⚒️ Lou's Code curried functional utils",
-	"version": "3.0.1",
+	"version": "3.0.2",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -61,7 +61,7 @@
 		"test": "NODE_OPTIONS='--import tsx' pnpm exec test"
 	},
 	"sideEffects": false,
-	"size": "1.07",
+	"size": "1.08",
 	"type": "module",
 	"types": "./dist/index.d.ts"
 }

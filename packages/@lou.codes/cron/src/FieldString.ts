@@ -12,4 +12,4 @@ import type { ValueOrRangeString } from "./ValueOrRangeString.js";
  * @see {@link ValueOrRangeString}
  * @see {@link ListString}
  */
-export type FieldString = AllToken | ValueOrRangeString | ListString;
+export type FieldString = AllToken | ListString | ValueOrRangeString;

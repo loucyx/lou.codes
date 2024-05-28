@@ -15,4 +15,4 @@ export const cryptoNumberTests = [
 			Promise.all([cryptoNumber("test"), cryptoNumber("test")]),
 		wanted: () => [0.507_088_102_285_537_9, 0.507_088_102_285_537_9],
 	},
-] satisfies Tests<number | Array<number>>;
+] satisfies Tests<Array<number> | number>;

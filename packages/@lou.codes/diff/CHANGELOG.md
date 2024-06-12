@@ -1,5 +1,12 @@
 # Change log
 
+## 3.0.10
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.2.1`.
+-   ⬆️ upgrade `@lou.codes/types` to `v4.0.3`.
+
 ## 3.0.9
 
 ### Patch Changes

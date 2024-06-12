@@ -23,4 +23,4 @@ import { on } from "./on.js";
  */
 export const broadcast = <Events extends EventTypeDictionary>(
 	eventRegistry = create<EventRegistry<Events>>(),
-) => ({ emit: emit(eventRegistry), on: on(eventRegistry) });
+) => create({ emit: emit(eventRegistry), on: on(eventRegistry) });

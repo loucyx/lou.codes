@@ -31,6 +31,6 @@ export const {
  * @returns Object with no prototype.
  */
 // eslint-disable-next-line @typescript-eslint/ban-types
-export const create = <OutputType = {}>(object?: object) =>
+export const create = <OutputType = {}>(object?: OutputType) =>
 	// eslint-disable-next-line unicorn/no-null
 	assign(ObjectAlias.create(null), object) as OutputType;

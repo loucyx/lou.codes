@@ -1,7 +1,7 @@
-import { EMPTY_ARRAY } from "@lou.codes/constants/empty.js";
 import { forEach } from "@lou.codes/iterables";
-import type { ReadOnlyIterable } from "@lou.codes/types";
-import { applyTo } from "@lou.codes/utils";
+import { has } from "@lou.codes/predicates";
+import type { Just } from "@lou.codes/types";
+import { applyTo, get } from "@lou.codes/utils";
 import type { Emitter } from "./Emitter.js";
 import type { EventListener } from "./EventListener.js";
 import type { EventRegistry } from "./EventRegistry.js";
@@ -40,7 +40,12 @@ export const emit =
 	 * @param event Event name (has to be a valid key of the `eventRegistry`).
 	 * @returns Curried function with `eventRegistry` and `event` in context.
 	 */
-	<Event extends keyof Events>(event: Event) =>
+	<Event extends keyof Events>(event: Event) => {
+		const getEvent = get(event) as (
+			eventRegistry: EventRegistry<Events>,
+		) => Just<EventRegistry<Events>[Event]>;
+		const hasEvent = has(event);
+
 		/**
 		 * Emits the `event` in context of the `eventRegistry` in context.
 		 *
@@ -53,9 +58,10 @@ export const emit =
 		 * ```
 		 * @param data Data to pass to the listeners.
 		 */
-		(data =>
-			forEach<EventListener<typeof data>>(applyTo(data))(
-				(eventRegistry[event] ?? EMPTY_ARRAY) as ReadOnlyIterable<
-					EventListener<typeof data>
-				>,
-			)) as Emitter<Events[Event]>;
+		return (data =>
+			hasEvent(eventRegistry) ?
+				forEach<EventListener<typeof data>>(applyTo(data))(
+					getEvent(eventRegistry),
+				)
+			:	undefined) as Emitter<Events[Event]>;
+	};

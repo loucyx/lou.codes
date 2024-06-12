@@ -1,5 +1,16 @@
 # Change log
 
+## 1.0.35
+
+### Patch Changes
+
+-   🏗️ use iterables instead of arrays more often.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.2.1`.
+-   ⬆️ upgrade `@lou.codes/iterables` to `v3.2.4`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v2.0.12`.
+-   ⬆️ upgrade `@lou.codes/types` to `v4.0.3`.
+-   ⬆️ upgrade `@lou.codes/utils` to `v3.0.3`.
+
 ## 1.0.34
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # Change log
 
+## 4.0.3
+
+### Patch Changes
+
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.2.1`.
+
 ## 4.0.2
 
 ### Patch Changes

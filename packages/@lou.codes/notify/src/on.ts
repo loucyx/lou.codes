@@ -1,7 +1,7 @@
-import { EMPTY_ARRAY } from "@lou.codes/constants/empty.js";
-import { filter } from "@lou.codes/iterables";
-import type { ReadOnlyArray } from "@lou.codes/types";
-import { mutate, set } from "@lou.codes/utils";
+import { append, filter, toIterable } from "@lou.codes/iterables";
+import { has } from "@lou.codes/predicates";
+import type { Just, ReadOnlyArray } from "@lou.codes/types";
+import { get, mutate, set } from "@lou.codes/utils";
 import type { EventListener } from "./EventListener.js";
 import type { EventRegistry } from "./EventRegistry.js";
 import type { EventTypeDictionary } from "./EventTypeDictionary.js";
@@ -46,36 +46,47 @@ export const on =
 	 * @param event Event name (has to be a valid key of the `eventRegistry`).
 	 * @returns Curried function with `eventRegistry` and `event` in context.
 	 */
-	<Event extends keyof Events>(event: Event) =>
-	/**
-	 * Listens for calls of the `event` in context of the `eventRegistry` in
-	 * context.
-	 *
-	 * @example
-	 * ```typescript
-	 * const eventRegistry = {};
-	 * const onRegistry = on(eventRegistry);
-	 * const onEvent = onRegistry("event");
-	 * const offEvent = onEvent(() => console.log("event called")); // 👈🏻 You are here
-	 * emit(eventRegistry)("event")(); // Logs "event called"
-	 * offEvent();
-	 * emit(eventRegistry)("event")(); // Nothing happens
-	 * ```
-	 * @param listener Listener to be called when the `event` is emitted.
-	 * @returns Function to remove the listener from the `eventRegistry`.
-	 */
-	(listener: EventListener<Events[Event]>) => (
-		mutate(
-			set(event)([...(eventRegistry[event] ?? EMPTY_ARRAY), listener])(
-				eventRegistry,
-			),
-		)(eventRegistry),
-		() =>
-			void mutate(
-				set(event)(
-					filter(currentListener => currentListener !== listener)(
-						eventRegistry[event] as ReadOnlyArray<Events[Event]>,
-					),
+	<Event extends keyof Events>(event: Event) => {
+		const getEvent = get(event) as (
+			eventRegistry: EventRegistry<Events>,
+		) => Just<EventRegistry<Events>[Event]>;
+		const setEvent = set(event);
+		const hasEvent = has(event);
+
+		/**
+		 * Listens for calls of the `event` in context of the `eventRegistry` in
+		 * context.
+		 *
+		 * @example
+		 * ```typescript
+		 * const eventRegistry = {};
+		 * const onRegistry = on(eventRegistry);
+		 * const onEvent = onRegistry("event");
+		 * const offEvent = onEvent(() => console.log("event called")); // 👈🏻 You are here
+		 * emit(eventRegistry)("event")(); // Logs "event called"
+		 * offEvent();
+		 * emit(eventRegistry)("event")(); // Nothing happens
+		 * ```
+		 * @param listener Listener to be called when the `event` is emitted.
+		 * @returns Function to remove the listener from the `eventRegistry`.
+		 */
+		return (listener: EventListener<Events[Event]>) => (
+			mutate(
+				setEvent(
+					hasEvent(eventRegistry) ?
+						append(toIterable(listener))(getEvent(eventRegistry))
+					:	toIterable(listener),
 				)(eventRegistry),
-			)(eventRegistry)
-	);
+			)(eventRegistry),
+			() =>
+				void mutate(
+					setEvent(
+						filter(currentListener => currentListener !== listener)(
+							eventRegistry[event] as ReadOnlyArray<
+								Events[Event]
+							>,
+						),
+					)(eventRegistry),
+				)(eventRegistry)
+		);
+	};

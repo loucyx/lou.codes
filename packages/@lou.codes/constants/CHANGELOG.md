@@ -1,5 +1,11 @@
 # Change log
 
+## 2.2.2
+
+### Patch Changes
+
+-   🔧 add provenance.
+
 ## 2.2.1
 
 ### Patch Changes

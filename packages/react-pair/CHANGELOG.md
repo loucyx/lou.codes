@@ -1,5 +1,13 @@
 # Change log
 
+## 4.0.17
+
+### Patch Changes
+
+-   🔧 add provenance.
+-   ⬆️ upgrade `@lou.codes/types` to `v4.0.4`.
+-   ⬆️ upgrade `preact-pair` to `v1.1.13`.
+
 ## 4.0.16
 
 ### Patch Changes

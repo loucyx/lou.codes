@@ -1,5 +1,12 @@
 # Change log
 
+## 4.0.4
+
+### Patch Changes
+
+-   🔧 add provenance.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.2.2`.
+
 ## 4.0.3
 
 ### Patch Changes

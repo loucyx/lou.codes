@@ -1,5 +1,15 @@
 # Change log
 
+## 4.2.3
+
+### Patch Changes
+
+-   🔧 add provenance.
+-   ⬆️ upgrade `@lou.codes/ansi` to `v1.0.29`.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.2.2`.
+-   ⬆️ upgrade `@lou.codes/diff` to `v3.0.11`.
+-   ⬆️ upgrade `@lou.codes/types` to `v4.0.4`.
+
 ## 4.2.2
 
 ### Patch Changes

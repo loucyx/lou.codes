@@ -1,5 +1,12 @@
 # Change log
 
+## 1.1.13
+
+### Patch Changes
+
+-   🔧 add provenance.
+-   ⬆️ upgrade `@lou.codes/types` to `v4.0.4`.
+
 ## 1.1.12
 
 ### Patch Changes

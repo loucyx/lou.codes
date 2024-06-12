@@ -1,5 +1,13 @@
 # Change log
 
+## 1.1.3
+
+### Patch Changes
+
+-   🔧 add provenance.
+-   ⬆️ upgrade `@lou.codes/constants` to `v2.2.2`.
+-   ⬆️ upgrade `@lou.codes/predicates` to `v2.0.13`.
+
 ## 1.1.2
 
 ### Patch Changes

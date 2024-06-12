@@ -1,9 +1,8 @@
 name: Publish
 on:
-    workflow_run:
-        workflows: ["Document", "Test"]
-        types:
-            - completed
+    push:
+        branches:
+            - main
 jobs:
     build:
         name: Build
@@ -31,6 +30,7 @@ jobs:
               run: pnpm compile
 
             - name: Publish
+              continue-on-error: true
               run: pnpm publish --provenance --recursive --access public
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

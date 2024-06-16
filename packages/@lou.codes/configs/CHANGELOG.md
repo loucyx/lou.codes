@@ -1,5 +1,12 @@
 # Change log
 
+## 5.1.5
+
+### Patch Changes
+
+-   ⬆️ dependency upgrade.
+-   🔧 add new `no-negation-in-equality-check` rule.
+
 ## 5.1.4
 
 ### Patch Changes

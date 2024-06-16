@@ -1,5 +1,11 @@
 # Change log
 
+## 4.0.18
+
+### Patch Changes
+
+-   ⬆️ upgrade `preact-pair` to `v1.1.14`.
+
 ## 4.0.17
 
 ### Patch Changes

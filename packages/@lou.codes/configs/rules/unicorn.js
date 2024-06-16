@@ -134,6 +134,13 @@ export const unicornRules =
 			[`${unicornNamespace}/no-negated-condition`]: ERROR,
 
 			/**
+			 * Disallow negated expression in equality check.
+			 *
+			 * @see [unicorn/no-negation-in-equality-check](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-negation-in-equality-check.md)
+			 */
+			[`${unicornNamespace}/no-negation-in-equality-check`]: ERROR,
+
+			/**
 			 * Disallow `new Array()`.
 			 *
 			 * @see [unicorn/no-new-array](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-new-array.md)

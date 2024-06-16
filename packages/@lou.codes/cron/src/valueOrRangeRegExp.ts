@@ -4,7 +4,7 @@ import { RANGE_EXPRESSION_SEPARATOR_TOKEN } from "./tokens.js";
 /**
  * Regular expression to match values or ranges.
  *
- * @category Regular Expression.
+ * @category Regular Expression
  * @example
  * ```typescript
  * valueOrRangeRegExp(13); // "13(?:-13)?"

@@ -4,7 +4,7 @@ import { valueOrRangeRegExp } from "./valueOrRangeRegExp.js";
 /**
  * Regular expression to match values, ranges or lists.
  *
- * @category Regular Expression.
+ * @category Regular Expression
  * @example
  * ```typescript
  * valueRangeOrListRegExp(13); // "(?:13(?:-13)?|(?:(?:13(?:-13)?,)+13(?:-13)?))"

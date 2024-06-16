@@ -3,7 +3,7 @@ import { join, optional } from "functional-expression";
 /**
  * Regular expression to match field with an optional `0` to it's left.
  *
- * @category Regular Expression.
+ * @category Regular Expression
  * @example
  * ```typescript
  * paddedRegExp(5); // "0?5"

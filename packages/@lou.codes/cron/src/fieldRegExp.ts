@@ -5,7 +5,7 @@ import { valueRangeOrListRegExp } from "./valueRangeOrListRegExp.js";
 /**
  * Regular expression to match a cron expression field.
  *
- * @category Regular Expression.
+ * @category Regular Expression
  * @example
  * ```typescript
  * fieldRegExp("example", 13); // "(?<example>\\*|(?:13(?:-13)?|(?:(?:13(?:-13)?,)+13(?:-13)?)))"

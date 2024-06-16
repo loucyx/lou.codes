@@ -4,7 +4,7 @@ import { LIST_EXPRESSION_SEPARATOR_TOKEN } from "./tokens.js";
 /**
  * Regular expression to match lists.
  *
- * @category Regular Expression.
+ * @category Regular Expression
  * @example
  * ```typescript
  * valueOrListRegExp(13); // "(?:13|(?:(?:13,)+13))"

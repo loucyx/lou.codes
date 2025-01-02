@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/types",
 	"description": "🏷️ Lou's Code shared types",
-	"version": "4.0.4",
+	"version": "4.0.5",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -19,7 +19,7 @@
 		"vscode-languageserver-types": "^3.17.5"
 	},
 	"engines": {
-		"node": ">=22",
+		"node": ">=23",
 		"pnpm": ">=9"
 	},
 	"exports": {

@@ -1,7 +1,7 @@
 {
 	"name": "preact-pair",
 	"description": "🖇️ Util to help with the paired hook pattern",
-	"version": "1.1.14",
+	"version": "1.1.15",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -19,7 +19,7 @@
 		"preact-render-to-string": "^6.5.5"
 	},
 	"engines": {
-		"node": ">=22",
+		"node": ">=23",
 		"pnpm": ">=9"
 	},
 	"exports": {

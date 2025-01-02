@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/iterables",
 	"description": "🔁 Iterable and AsyncIterable utils",
-	"version": "3.2.5",
+	"version": "3.2.6",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -18,7 +18,7 @@
 		"@lou.codes/utils": "workspace:*"
 	},
 	"engines": {
-		"node": ">=22",
+		"node": ">=23",
 		"pnpm": ">=9"
 	},
 	"exports": {

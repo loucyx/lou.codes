@@ -1,7 +1,7 @@
 {
 	"name": "@lou.codes/cron",
 	"description": "⏲️ Cron Quartz and Cron UNIX expression parser",
-	"version": "2.3.3",
+	"version": "2.3.4",
 	"author": {
 		"email": "contact@lou.codes",
 		"name": "Lou Cyx",
@@ -20,7 +20,7 @@
 		"functional-expression": "workspace:*"
 	},
 	"engines": {
-		"node": ">=22",
+		"node": ">=23",
 		"pnpm": ">=9"
 	},
 	"exports": {

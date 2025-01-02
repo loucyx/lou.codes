@@ -2,6 +2,13 @@
 
 📚 [Lou's Code][lou.codes] libraries monorepo
 
+> [!CAUTION]
+>
+> This monorepo is being migrated to [JSR](https://jsr.io) under the a new
+> brand: [Coven Engineering](https://coven.engineering). Once the migration is
+> done, all packages in this monorepo will be marked as deprecated and a
+> migration path will be offered.
+
 ## About Lou Cyx
 
 I'm Lou, a web developer, hobbyist DJ and casual gamer based in Chicago,
@@ -16,29 +23,28 @@ and maintain a cohesive ecosystem of tools and components.
 
 ## Libraries in this monorepo
 
--   [🧙 functional-expression][functional_expression] - Functional Regular
-    expression builder
--   [🖇️ react-pair][react_pair] - Util to help with the paired hook pattern in
-    React.
--   [🖇️ preact-pair][preact_pair] - Util to help with the paired hook pattern in
-    Preact.
--   [🪟 window-open-promise][window-open-promise] - Promised
-    `globalThis.open()`.
--   [📟 @lou.codes/ansi][ansi] - Functional CLI ANSI formatter.
--   [⚙️ @lou.codes/configs][configs] - Project configurations.
--   [🔢 @lou.codes/constants][constants] - Shared constants.
--   [🚧 @lou.codes/create-package][create-package] - Project creation script.
--   [⏲️ @lou.codes/cron][cron] - Cron Quartz and Cron UNIX expression parser.
--   [↔️ @lou.codes/diff][diff] - Deep diffing utility.
--   [🔁 @lou.codes/iterables][iterables] - Iterable and AsyncIterable utils.
--   [🧮 @lou.codes/math][math] - Precise basic math operations.
--   [📣 @lou.codes/notify][notify] - Minimalistic Pub/Sub implementation.
--   [👁️‍🗨️ @lou.codes/parsers][parsers] - Parsers without nonsense.
--   [🧐 @lou.codes/predicates][predicates] - Predicate util functions
--   [❓ @lou.codes/prompts][prompts] - CLI interactive prompts.
--   [✅ @lou.codes/test][test] - Legible deep-equality tests.
--   [🏷️ @lou.codes/types][types] - Shared types.
--   [⚒️ @lou.codes/utils][utils] - Functional utils.
+- [🧙 functional-expression][functional_expression] - Functional Regular
+  expression builder
+- [🖇️ react-pair][react_pair] - Util to help with the paired hook pattern in
+  React.
+- [🖇️ preact-pair][preact_pair] - Util to help with the paired hook pattern in
+  Preact.
+- [🪟 window-open-promise][window-open-promise] - Promised `globalThis.open()`.
+- [📟 @lou.codes/ansi][ansi] - Functional CLI ANSI formatter.
+- [⚙️ @lou.codes/configs][configs] - Project configurations.
+- [🔢 @lou.codes/constants][constants] - Shared constants.
+- [🚧 @lou.codes/create-package][create-package] - Project creation script.
+- [⏲️ @lou.codes/cron][cron] - Cron Quartz and Cron UNIX expression parser.
+- [↔️ @lou.codes/diff][diff] - Deep diffing utility.
+- [🔁 @lou.codes/iterables][iterables] - Iterable and AsyncIterable utils.
+- [🧮 @lou.codes/math][math] - Precise basic math operations.
+- [📣 @lou.codes/notify][notify] - Minimalistic Pub/Sub implementation.
+- [👁️‍🗨️ @lou.codes/parsers][parsers] - Parsers without nonsense.
+- [🧐 @lou.codes/predicates][predicates] - Predicate util functions
+- [❓ @lou.codes/prompts][prompts] - CLI interactive prompts.
+- [✅ @lou.codes/test][test] - Legible deep-equality tests.
+- [🏷️ @lou.codes/types][types] - Shared types.
+- [⚒️ @lou.codes/utils][utils] - Functional utils.
 
 <!-- Links -->
 

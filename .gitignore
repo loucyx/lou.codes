@@ -157,6 +157,9 @@ $RECYCLE.BIN/
 # Distribution directory
 dist/
 
+# PNPM
+.pnpm-store
+
 # Generated documentation files
 .typedoc/
 docs/src/content/docs/libraries/

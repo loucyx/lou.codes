@@ -2,13 +2,11 @@ import { EMPTY_ARRAY, EMPTY_STRING } from "@lou.codes/constants/empty.js";
 import { writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import webCustomData from "vscode-html-languageservice/lib/esm/languageFacts/data/webCustomData.js";
+import { htmlData } from "vscode-html-languageservice/lib/esm/languageFacts/data/webCustomData.js";
 import { generateAttributesType } from "./generateAttributesType.js";
 import { generateTagType } from "./generateTagType.js";
 
-const {
-	htmlData: { tags = EMPTY_ARRAY, globalAttributes },
-} = webCustomData;
+const { tags = EMPTY_ARRAY, globalAttributes } = htmlData;
 
 writeFile(
 	resolve(

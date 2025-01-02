@@ -70,12 +70,6 @@ export type HTMLElementTagGlobalAttributes = {
 
 	/**
 	 * The `[**id**](#attr-id)` of a [`<menu>`](https://developer.mozilla.org/docs/Web/HTML/Element/menu "The HTML <menu> element represents a group of commands that a user can perform or activate. This includes both list menus, which might appear across the top of a screen, as well as context menus, such as those that might appear underneath a button after it has been clicked.") to use as the contextual menu for this element.
-	 *
-	 * ---
-	 *
-	 * **References**
-	 *
-	 * @see [MDN Reference](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/contextmenu)
 	 */
 	readonly contextmenu?: string;
 
@@ -174,56 +168,26 @@ export type HTMLElementTagGlobalAttributes = {
 
 	/**
 	 * The unique, global identifier of an item.
-	 *
-	 * ---
-	 *
-	 * **References**
-	 *
-	 * @see [MDN Reference](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/itemid)
 	 */
 	readonly itemid?: string;
 
 	/**
 	 * Used to add properties to an item. Every HTML element may have an `itemprop` attribute specified, where an `itemprop` consists of a name and value pair.
-	 *
-	 * ---
-	 *
-	 * **References**
-	 *
-	 * @see [MDN Reference](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/itemprop)
 	 */
 	readonly itemprop?: string;
 
 	/**
 	 * Properties that are not descendants of an element with the `itemscope` attribute can be associated with the item using an `itemref`. It provides a list of element ids (not `itemid`s) with additional properties elsewhere in the document.
-	 *
-	 * ---
-	 *
-	 * **References**
-	 *
-	 * @see [MDN Reference](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/itemref)
 	 */
 	readonly itemref?: string;
 
 	/**
 	 * `itemscope` (usually) works along with `[itemtype](https://developer.mozilla.org/docs/Web/HTML/Global_attributes#attr-itemtype)` to specify that the HTML contained in a block is about a particular item. `itemscope` creates the Item and defines the scope of the `itemtype` associated with it. `itemtype` is a valid URL of a vocabulary (such as [schema.org](https://schema.org/)) that describes the item and its properties context.
-	 *
-	 * ---
-	 *
-	 * **References**
-	 *
-	 * @see [MDN Reference](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/itemscope)
 	 */
 	readonly itemscope?: string;
 
 	/**
 	 * Specifies the URL of the vocabulary that will be used to define `itemprop`s (item properties) in the data structure. `[itemscope](https://developer.mozilla.org/docs/Web/HTML/Global_attributes#attr-itemscope)` is used to set the scope of where in the data structure the vocabulary set by `itemtype` will be active.
-	 *
-	 * ---
-	 *
-	 * **References**
-	 *
-	 * @see [MDN Reference](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/itemtype)
 	 */
 	readonly itemtype?: string;
 

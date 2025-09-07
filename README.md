@@ -1,13 +1,8 @@
-<img id="logo" alt="@lou.codes/ansi" src="https://lou.codes/logo.svg" height="72" />
+> [!IMPORTANT]
+>
+> **This library is deprecated.** Go to [coven.engineering](https://coven.engineering) to see what we are doing nowadays.
 
 📚 [Lou's Code][lou.codes] libraries monorepo
-
-> [!CAUTION]
->
-> This monorepo is being migrated to [JSR](https://jsr.io) under the a new
-> brand: [Coven Engineering](https://coven.engineering). Once the migration is
-> done, all packages in this monorepo will be marked as deprecated and a
-> migration path will be offered.
 
 ## About Lou Cyx
 
